@@ -1,3 +1,3 @@
-Start
-=====
+:code:`start` action
+====================
 

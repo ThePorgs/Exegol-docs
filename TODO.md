@@ -1,1 +1,4 @@
 - tools list
+- add in dev doc: https://github.com/containerd/containerd/blob/269548fa27e0089a8b8278fc4fc781d7f65a939b/platforms/database.go#L83-L111
+- add zcat/zmore/z{whatever} to handle gzip log for the shell logging
+- add troubleshooting guide when using --vpn (ex "si update du fichier de conf mais que vpn a pas de dns config, plus de dns server dans container donc plus de resolution")

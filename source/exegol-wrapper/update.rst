@@ -1,2 +1,2 @@
-Update
-======
+:code:`update` action
+=====================

@@ -3,11 +3,14 @@ Installation
 
 Installing Exegol
 
-Linux
----------------
+Requirements
+~~~~~~~~~~~~
 
-MacOS
----------------
+Linux
+^^^^
+
+macOS
+^^^^^
 
 Windows
----------------
+^^^^^^^

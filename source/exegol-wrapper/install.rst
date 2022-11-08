@@ -1,3 +1,3 @@
-Install
-=======
+:code:`install` action
+======================
 

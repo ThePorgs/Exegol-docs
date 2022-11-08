@@ -1,3 +1,2 @@
-Version
-=======
-
+:code:`version` action
+======================

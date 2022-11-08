@@ -1,4 +1,4 @@
-Remove
-======
+:code:`remove` action
+=====================
 
 
