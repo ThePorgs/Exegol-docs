@@ -3,9 +3,13 @@ Installation
 
 Installing Exegol starts with installing the entrypoint to the whole project: the Python wrapper. Once the wrapper is installed, everything else can be managed from it.
 
+.. hint::
+
+   It is strongly advised to install Exegol on a Linux host, especially when planning on using Exegol for internal penetration tests. This is because Docker Desktop on Windows and macOS lacks a few features, mainly due to how these operating systems run Docker containers within an internal VM that doesn't share the host's network interfaces.
+
 Once the wrapper is installed, the second step in setting up Exegol on a device is to install at least one Exegol image, either with ``exegol start`` (documentation
-:doc:`here </exegol-wrapper/update>`), or with ``exegol install`` (documentation
-:doc:`here </exegol-wrapper/update>`). Both actions will guide the user in installing an image if needed.
+:doc:`here </exegol-wrapper/start>`), or with ``exegol install`` (documentation
+:doc:`here </exegol-wrapper/install>`). Both actions will guide the user in installing an image if needed.
 
 Requirements
 ~~~~~~~~~~~~
@@ -69,6 +73,8 @@ Windows
 ~~~~~~~
 
 Installing Exegol on Windows systems is very to similar to the Linux/macOS install. There is however and additional requirements: WSL2 (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_).
+
+For "GUI applications" support to work (i.e. X11 display sharing), Windows 11 is needed, and at least one WSL distribution must be installed as well (e.g. Debian).
 
 1. Wrapper installation
 ````````````````````
