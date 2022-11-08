@@ -18,7 +18,7 @@ Exegol fits pentesters, CTF players, bug bounty hunters, researchers, beginners 
 The Exegol project
 ------------------
 
-Exegol is many things in one. Try it, and you'll stop using your old, unstable and risky environment, no more Kali Linux as host or single VM.
+Exegol is many things in one. Try it, and you'll stop using your old, unstable and risky environment, no more monolithic system that gets messier, buggier and more at risk with time.
 
 * :doc:`Python wrapper <the-exegol-project/python-wrapper>`: makes everyone's life easier. This entrypoint to the whole Exegol project handles all docker and git operations so you don't have to. **Now's the time to have a clean environment** with one Docker container per engagement without the effort. Exegol handles multiple images and multiple containers. GUI apps, Wi-Fi, USB accessories, volume mounting and many more features are supported and easier to use than ever.
 * :doc:`Docker images <the-exegol-project/docker-images>`: a set of pre-built docker images and dockerfiles that include a neat choice of tools, zsh plugins for power users, pre-filled history ready to use with environment variables, awesome resources, custom configs and many more. Images can either be built locally or pulled from the official Dockerhub registry.
