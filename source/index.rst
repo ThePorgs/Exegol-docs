@@ -42,7 +42,7 @@ Have a bug report or feature request? Either open an issue on the `Exegol repo`_
 Wanna chat? Need help? Join us the `Exegol discord`_!
 
 .. _Exegol repo: https://github.com/ShutdownRepo/Exegol
-.. _Exegol discord: https://bloodhoundgang.herokuapp.com
+.. _Exegol discord: https://discord.gg/BcgXnRpqxd
 
 .. toctree::
    :maxdepth: 2
