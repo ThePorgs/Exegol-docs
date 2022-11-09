@@ -3,3 +3,6 @@
 - add zcat/zmore/z{whatever} to handle gzip log for the shell logging
 - add troubleshooting guide when using --vpn (ex "si update du fichier de conf mais que vpn a pas de dns config, plus de dns server dans container donc plus de resolution")
 - TODO 1min video presentation?
+- auto-generate tools list? resources list?
+- auto-generate command examples and options in exegol-wrapper/actions?
+- add screenshots
