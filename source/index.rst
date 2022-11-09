@@ -83,6 +83,7 @@ Wanna chat? Need help? Join us the `Exegol discord`_!
    :caption: Exegol image
 
    exegol-image/intro.rst
+   exegol-image/my-resources.rst
 
 .. toctree::
    :maxdepth: 2
