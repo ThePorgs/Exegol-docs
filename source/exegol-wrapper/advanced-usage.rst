@@ -63,6 +63,7 @@ The config section allows you to modify the default behavior of the Exegol wrapp
 * default_start_shell: Default shell command to start.  (Default: **zsh**)
 
 ..  _My-resources-wrapper:
+
 My-resources
 ============
 

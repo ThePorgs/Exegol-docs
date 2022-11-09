@@ -17,6 +17,7 @@ Below are the features offered by "My-resources", allowing users to extend Exego
 .. contents::
 
 .. _Custom-tools:
+
 Custom tools
 ------------
 .. seealso::
@@ -39,6 +40,7 @@ In the container, the ``/opt/my-resources/bin/`` folder (``~/.exegol/my-resource
 
 
 .. _Supported-setups:
+
 Supported setups
 ----------------
 
@@ -111,6 +113,7 @@ Exegol supports overloading its **tmux** configuration to allow all users to use
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
 
 .. _User-setup:
+
 User setup
 ----------
 .. seealso::
