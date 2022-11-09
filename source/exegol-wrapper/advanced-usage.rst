@@ -2,7 +2,9 @@
 Advanced Usages
 ===============
 
-Custom configuration
+.. _exegol_configuration:
+
+Exegol configuration
 ====================
 
 Introduction
