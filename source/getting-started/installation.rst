@@ -37,6 +37,8 @@ Linux & macOS
 
 The installation of Exegol on Linux and macOS are very similar. It can either be installed from pip (easiest, most user-friendly, but with a few limited features) or from sources (easy as well).
 
+.. _pip-install:
+
 1. (option a) Installing with pip
 `````````````````````````````````
 
@@ -49,6 +51,8 @@ Exegol's wrapper can be installed from pip. While this is the easiest and most u
 .. hint::
 
    Remember that pip installs binaries in ``~/.local/bin``, which then must be in the ``PATH`` environment variable. Adding ``export PATH=$HOME/.local/bin:$PATH`` to ``~/.zshrc`` or ``~/.bashrc`` (or equivalent) will do just that.
+
+.. _sources-install:
 
 1. (option b) Installing from sources
 `````````````````````````````````````
@@ -81,8 +85,8 @@ For "GUI applications" support to work (i.e. X11 display sharing), Windows 11 is
 
 The wrapper can then be installed
 
-* with pip: `follow Linux/macOS instructions <#installing-with-pip>`_
-* from sources: `follow Linux/macOS instructions <#installing-from-sources>`_
+* with pip: :ref:`follow Linux/macOS instructions <pip-install>`
+* from sources: :ref:`follow Linux/macOS instructions <sources-install>`
 
 2. Adding an alias
 ``````````````````

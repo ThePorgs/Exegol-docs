@@ -4,7 +4,7 @@ Exegol: professional hacking setup
 ==================================
 
 .. meta::
-   :description lang=en: Identify and execute attack paths in Active Directory
+   :description lang=en: Professional hacking setup
 
 .. image:: /assets/rounded_social_preview_with_border.png
    :align: center
