@@ -38,7 +38,7 @@ Linux & macOS
 The installation of Exegol on Linux and macOS are very similar. It can either be installed from pip (easiest, most user-friendly, but with a few limited features) or from sources (easy as well).
 
 1. (option a) Installing with pip
-```````````````````
+`````````````````````````````````
 
 Exegol's wrapper can be installed from pip. While this is the easiest and most user-friendly technique, for more advanced users it is advised to install from sources, as it allows to switch from release to dev branches easily and the auto-update feature is supported.
 
@@ -51,7 +51,7 @@ Exegol's wrapper can be installed from pip. While this is the easiest and most u
    Remember that pip installs binaries in ``~/.local/bin``, which then must be in the ``PATH`` environment variable. Adding ``export PATH=$HOME/.local/bin:$PATH`` to ``~/.zshrc`` or ``~/.bashrc`` (or equivalent) will do just that.
 
 1. (option b) Installing from sources
-```````````````````````
+`````````````````````````````````````
 
 Exegol's wrapper can also be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
 
@@ -61,7 +61,7 @@ Exegol's wrapper can also be installed from sources (with Git). The wrapper then
    python3 -m pip install --user --requirement "Exegol/requirements.txt"
 
 2. Adding Exegol to the ``PATH``
-`````````````````````````````
+````````````````````````````````
 
 Once this is taken care of, the exegol wrapper can then be added to the ``PATH`` with a symlink for direct access. This allows to call exegol from wherever, instead of to use the absolute path. Exegol can then be used with ``exegol <action>`` instead of ``python3 /path/to/Exegol/exegol.py <action>``.
 
@@ -77,7 +77,7 @@ Installing Exegol on Windows systems is very to similar to the Linux/macOS insta
 For "GUI applications" support to work (i.e. X11 display sharing), Windows 11 is needed, and at least one WSL distribution must be installed as well (e.g. Debian).
 
 1. Wrapper installation
-````````````````````
+```````````````````````
 
 The wrapper can then be installed
 
@@ -85,7 +85,7 @@ The wrapper can then be installed
 * from sources: `follow Linux/macOS instructions <#installing-from-sources>`_
 
 2. Adding an alias
-```````````````
+``````````````````
 
 Once this is taken care of, the exegol wrapper can then can be added as a PowerShell command alias and saved for persistence
 in ``$HOME\PowershellAliasesExport.txt``
