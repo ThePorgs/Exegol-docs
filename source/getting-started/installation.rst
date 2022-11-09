@@ -37,32 +37,35 @@ Linux & macOS
 
 The installation of Exegol on Linux and macOS are very similar. It can either be installed from pip (easiest, most user-friendly, but with a few limited features) or from sources (easy as well).
 
-.. _pip-install:
 
-1. (option a) Installing with pip
+1. Installation
 `````````````````````````````````
+.. _exegol-install:
 
-Exegol's wrapper can be installed from pip. While this is the easiest and most user-friendly technique, for more advanced users it is advised to install from sources, as it allows to switch from release to dev branches easily and the auto-update feature is supported.
+..  tabs::
 
-.. code-block:: bash
+    ..  tab:: Installing with pip
 
-   python3 -m pip install exegol
+        Exegol's wrapper can be installed from pip. While this is the easiest and most user-friendly technique, for more advanced users it is advised to install from sources, as it allows to switch from release to dev branches easily and the auto-update feature is supported.
 
-.. hint::
+        .. code-block:: bash
 
-   Remember that pip installs binaries in ``~/.local/bin``, which then must be in the ``PATH`` environment variable. Adding ``export PATH=$HOME/.local/bin:$PATH`` to ``~/.zshrc`` or ``~/.bashrc`` (or equivalent) will do just that.
+           python3 -m pip install exegol
 
-.. _sources-install:
+        .. hint::
 
-1. (option b) Installing from sources
-`````````````````````````````````````
+           Remember that pip installs binaries in ``~/.local/bin``, which then must be in the ``PATH`` environment variable. Adding ``export PATH=$HOME/.local/bin:$PATH`` to ``~/.zshrc`` or ``~/.bashrc`` (or equivalent) will do just that.
 
-Exegol's wrapper can also be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
 
-.. code-block:: bash
+    ..  tab:: Installing from sources
 
-   git clone "https://github.com/ShutdownRepo/Exegol"
-   python3 -m pip install --user --requirement "Exegol/requirements.txt"
+        Exegol's wrapper can also be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
+
+        .. code-block:: bash
+
+           git clone "https://github.com/ShutdownRepo/Exegol"
+           python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
 
 2. Adding Exegol to the ``PATH``
 ````````````````````````````````
@@ -83,10 +86,7 @@ For "GUI applications" support to work (i.e. X11 display sharing), Windows 11 is
 1. Wrapper installation
 ```````````````````````
 
-The wrapper can then be installed
-
-* with pip: :ref:`follow Linux/macOS instructions <pip-install>`
-* from sources: :ref:`follow Linux/macOS instructions <sources-install>`
+The wrapper can then be installed with pip or from sources like on Linux/macOS. You can :ref:`follow the instructions here<exegol-install>`.
 
 2. Adding an alias
 ``````````````````
