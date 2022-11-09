@@ -16,9 +16,9 @@ Requirements
 
 The following elements are required before Exegol can be installed, whatever the host's operating system is:
 
-* git (`Linux <https://github.com/git-guides/install-git#install-git-on-linux>`_ | `macOS <https://github.com/git-guides/install-git#install-git-on-mac>`_ | `Windows <https://github.com/git-guides/install-git#install-git-on-windows>`_)
-* python3 (`Linux <https://docs.python.org/3/using/unix.html#on-linux>`_ | `macOS <https://www.python.org/downloads/macos/>`_ | `Windows <https://www.python.org/downloads/windows/>`_)
-* docker (`Linux <https://docs.docker.com/engine/install/debian/>`_ | `macOS <https://docs.docker.com/desktop/install/mac-install/>`_ | `Windows <https://docs.docker.com/desktop/install/windows-install/>`_)
+* git (`Linux <https://github.com/git-guides/install-git#install-git-on-linux>`__ | `macOS <https://github.com/git-guides/install-git#install-git-on-mac>`__ | `Windows <https://github.com/git-guides/install-git#install-git-on-windows>`__)
+* python3 (`Linux <https://docs.python.org/3/using/unix.html#on-linux>`__ | `macOS <https://www.python.org/downloads/macos/>`__ | `Windows <https://www.python.org/downloads/windows/>`__)
+* docker (`Linux <https://docs.docker.com/engine/install/debian/>`__ | `macOS <https://docs.docker.com/desktop/install/mac-install/>`__ | `Windows <https://docs.docker.com/desktop/install/windows-install/>`__)
 * at least 20GB of free storage
 
 .. warning::
