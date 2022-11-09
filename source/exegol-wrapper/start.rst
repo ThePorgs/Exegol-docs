@@ -24,6 +24,15 @@ The ``start`` action can be used without any additional argument or option. the 
 Options
 -------
 
+A single option exist to target an Exegol container.
+If this container exists, it will be started if it is not already the case and a shell will be spawned to offer an interactive console to the user
+
+========================= ===============================
+ Option                   Description
+========================= ===============================
+``CONTAINER``             Tag used to target an Exegol container
+========================= ===============================
+
 Many options exist to customize the creation of exegol container.
 
 .. tip::
@@ -32,6 +41,7 @@ Many options exist to customize the creation of exegol container.
 =========================================================== ===============================
  Option                                                     Description
 =========================================================== ===============================
+``IMAGE``                                                   Tag of the exegol image to use to create a new exegol container
 ``-w WORKSPACE_PATH``, ``--workspace WORKSPACE_PATH``       The specified host folder will be linked to the /workspace folder in the container.
 ``-cwd``, ``--cwd-mount``                                   This option is a shortcut to set the /workspace folder to the user's current working directory (pwd).
 ``-fs``, ``--update-fs``                                    Modifies the permissions of folders and sub-folders shared in your workspace to access the files created within the container using your host user account. (default: Disabled)
