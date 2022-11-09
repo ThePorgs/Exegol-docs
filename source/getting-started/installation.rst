@@ -81,7 +81,12 @@ Windows
 
 Installing Exegol on Windows systems is very to similar to the Linux/macOS install. There is however and additional requirements: WSL2 (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_).
 
-For "GUI applications" support to work (i.e. X11 display sharing), Windows 11 is needed, and at least one WSL distribution must be installed as well (e.g. Debian).
+For "GUI applications" support to work (i.e. X11 display sharing):
+* Windows 11 is needed
+* Docker must run on WSL2 engine
+* `WSLg <https://github.com/microsoft/wslg#installing-wslg>`__ must be installed
+* at least one WSL distribution must be installed as well (e.g. Debian)
+    * with Docker integration enabled
 
 1. Wrapper installation
 ```````````````````````
@@ -94,6 +99,8 @@ The wrapper can then be installed with pip or from sources like on Linux/macOS. 
 Once this is taken care of, the exegol wrapper can then can be added as a PowerShell command alias and saved for persistence
 in ``$HOME\PowershellAliasesExport.txt``
 then loaded from ``$PROFILE`` script at PowerShell startup. Exegol can then be used with ``exegol <action>`` instead of ``python3 /path/to/Exegol/exegol.py <action>``.
+
+To create the alias file correctly, open a powershell and place yourself in the folder where exegol is located (applicable only for `from source` installations) and run the following commands:
 
 .. code-block:: powershell
 
