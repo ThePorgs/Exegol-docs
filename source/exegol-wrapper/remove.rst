@@ -12,7 +12,7 @@ If the workspace is **empty**, exegol will **automatically delete** the folder o
 Options
 =======
 
-The options of the remove action are limited to selecting the image(s) to be removed and forcing the removal without asking the user for interactive confirmation.
+The options of the remove action are limited to selecting the container(s) to be removed and forcing the removal without asking the user for interactive confirmation.
 
 ========================= =============
  Option                   Description
