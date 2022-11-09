@@ -19,6 +19,8 @@ The ``start`` action can be used without any additional argument or option. the 
 
    exegol start
 
+.. _start_options:
+
 Options
 -------
 
