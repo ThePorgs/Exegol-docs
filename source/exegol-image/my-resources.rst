@@ -1,5 +1,5 @@
 ============
-My Resources
+My resources
 ============
 
 "My-resources" brings great features allowing users to make Exegol their own and customize it even further. This feature relies on a simple volume shared between the host and all exegol containers, and an advanced integration in the Exegol images directly.

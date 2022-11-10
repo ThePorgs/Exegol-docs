@@ -82,7 +82,7 @@ Wanna chat? Need help? Join us the `Exegol discord`_!
    :hidden:
    :caption: Exegol image
 
-   exegol-image/intro.rst
+   exegol-image/credentials.rst
    exegol-image/my-resources.rst
 
 .. toctree::
@@ -101,3 +101,4 @@ Wanna chat? Need help? Join us the `Exegol discord`_!
    community/contributors.rst
    community/maintainers.rst
    community/sponsors.rst
+   community/credits.rst
