@@ -50,7 +50,7 @@ By default, the number of officially supported configuration files is limited, a
 .. hint::
     In order to see what configuration files are supported in your version, the ``/opt/supported_setups.md`` documentation file can be read from any container.
 
-This documentation references in detail all the official customizations available with the minimum image version required.
+This documentation will reference in detail all the supported customizations available over time, and the corresponding minimum image version required for each one.
 
 If a user wants to deploy tools and configurations that are not supported, or more advanced, they can opt for the :ref:`User setup solution <User-setup>`.
 

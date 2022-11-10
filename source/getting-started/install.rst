@@ -1,5 +1,5 @@
-Installation
-============
+Install
+========
 
 Installing Exegol starts with installing the entrypoint to the whole project: the Python wrapper. Once the wrapper is installed, everything else can be managed from it.
 
@@ -85,8 +85,7 @@ For "GUI applications" support to work (i.e. X11 display sharing):
 * Windows 11 is needed
 * Docker must run on WSL2 engine
 * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`__ must be installed
-* at least one WSL distribution must be installed as well (e.g. Debian)
-    * with Docker integration enabled
+* at least one WSL distribution must be installed as well (e.g. Debian), with Docker integration enabled
 
 1. Wrapper installation
 ```````````````````````

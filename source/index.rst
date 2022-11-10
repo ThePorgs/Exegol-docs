@@ -49,7 +49,7 @@ Wanna chat? Need help? Join us the `Exegol discord`_!
    :hidden:
    :caption: Getting started
 
-   getting-started/installation.rst
+   getting-started/install.rst
    getting-started/updates.rst
 
 .. toctree::
@@ -75,7 +75,7 @@ Wanna chat? Need help? Join us the `Exegol discord`_!
    exegol-wrapper/remove.rst
    exegol-wrapper/uninstall.rst
    exegol-wrapper/version.rst
-   exegol-wrapper/advanced-usage.rst
+   exegol-wrapper/advanced-uses.rst
 
 .. toctree::
    :maxdepth: 2
