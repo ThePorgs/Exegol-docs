@@ -5,90 +5,98 @@
 The info action aims to display all the information specific to Exegol on the current system.
 This action can also be used by targeting a specific container to display its configuration in detail.
 
-Verbosity options
-=================
+Depending on the verbosity level specified in the command-line, the information displayed will be more or less detailed accordingly.
 
-Different information / level of detail can be obtained with this action.
+.. tabs::
 
-Standard verbosity level (default)
-----------------------------------
+    .. tab:: Standard (default)
 
-Using: ``exegol info``
+        .. code-block:: bash
 
-* List of available Exegol Images
+            exegol info
 
-    * Name of the image
-    * Size of each image (disk space if the image is installed, otherwise its compressed size to download for installation)
-    * Status of each image
+        * List of available Exegol Images
 
-        * Not installed (Image available for download from dockerhub)
-        * Up to date (The latest version of the image is installed and ready to be used)
-        * Update available (A new version is available for download on dockerhub)
-        * Outdated (Old version of an image that has been updated since)
-        * Local image (Locally built image)
-        * Discontinued (if your image is no longer available on dockerhub)
+            * Name of the image
+            * Size of each image (disk space if the image is installed, otherwise its compressed size to download for installation)
+            * Status of each image
 
-* List of Exegol Containers
+                * Not installed (Image available for download from dockerhub)
+                * Up to date (The latest version of the image is installed and ready to be used)
+                * Update available (A new version is available for download on dockerhub)
+                * Outdated (Old version of an image that has been updated since)
+                * Local image (Locally built image)
+                * Discontinued (if your image is no longer available on dockerhub)
 
-    * Name of each container
-    * Container status (Stopped or running)
-    * Image name (Exegol image used as a base to create the container)
-    * Configurations (Display of non-default configurations)
+        * List of Exegol Containers
 
-Verbose level
--------------
+            * Name of each container
+            * Container status (Stopped or running)
+            * Image name (Exegol image used as a base to create the container)
+            * Configurations (Display of non-default configurations)
 
-Using: ``exegol info -v``
+    .. tab:: Verbose
 
-* Enumerate every user configuration (see details :ref:`here<exegol_configuration>`)
+        .. code-block:: bash
 
-* List of every available Exegol Images (with all previous information plus)
+            exegol info -v
 
-    * Image ID
-    * Build date
-    * Image architecture (AMD64 / ARM64)
+        In the verbose mode, the following additional elements are displayed. Everything from the lower verbosity level is still displayed.
 
-* List of Exegol Containers (with all previous information plus)
-    * Container id
-    * Full configuration
-    * List of non-technical volumes
-    * List of Devices
-    * List of Ports (Applicable if network sharing with host is not enabled)
-    * List of custom environment variables
+        * Enumerate every user configuration (see details :ref:`here<exegol_configuration>`)
 
-Advanced level
---------------
+        * In the list of available Exegol Images
 
-Using: ``exegol info -vv``
+            * Image ID
+            * Build date
+            * Image architecture (AMD64 / ARM64)
 
-* Enumerate every user configuration (see details :ref:`here<exegol_configuration>`)
+        * In the list of Exegol Containers
 
-* List the different exegol modules
+            * Container id
+            * Full configuration
+            * List of non-technical volumes
+            * List of Devices
+            * List of Ports (Applicable if network sharing with host is not enabled)
+            * List of custom environment variables
 
-    * Modules name
-    * Their update status
-    * Their git branch (if applicable)
+    .. tab:: Advanced
 
-* List of every available Exegol Images (with all previous information)
+        .. code-block::
 
-* List of Exegol Containers (with all previous information plus)
+            exegol info -vv
 
-    * List of every volumes
-    * List of every environment variables
+        In the advanced mode, the following additional elements are displayed. Everything from the lower verbosity levels is still displayed.
+
+        * Enumerate the settings from the user configuration at ``~/.exegol/config.yml`` (see details :ref:`here<exegol_configuration>`)
+
+        * List the different exegol modules
+
+            * Modules name
+            * Their update status
+            * Their git branch (if applicable)
+
+    .. tab:: Debug
+
+        .. code-block::
+
+            exegol info -vvv
+
+        In the debug mode, everything from the lower verbosity levels is still displayed, as well as logs from internal methods and functions. Those logs can be useful for maintainers and developers in case of bug, or for making sure everything works properly.
 
 
 Options
 =======
 
-The info action does not have many parameters, its use is relatively simple, it is only possible to target an exegol container to display its configuration.
+The info action does not have many parameters, its use is relatively simple. This action can either be used to gather general information (available images, containers, user configs, etc.), or gather information about a specific container and display its configuration.
 
 ========================= =============
  Option                   Description
 ========================= =============
-``CONTAINER``             Tag used to display configuration details of a targeted Exegol container
+``CONTAINER``             Optional positional argument to indicate the container tag of which to display the configuration.
 ========================= =============
 
-The general settings are still available and affect the behavior of every exegol action.
+Global options can still be used, like for any action.
 
 ========================= =============
  Option                   Description
@@ -101,8 +109,6 @@ The general settings are still available and affect the behavior of every exegol
 ``--arch {arm64,amd64}``  Overwrite default image architecture (default: host's arch)
 ========================= =============
 
-
-
 Command examples
 ================
 
@@ -111,7 +117,7 @@ Command examples
     # Print containers and images essentials information:
     exegol info
 
-    # Print the detailed configuration of the demo container:
+    # Print the detailed configuration of the "demo" container:
     exegol info demo
 
     # Print verbose information:

@@ -3,34 +3,25 @@
 
 This action allows you to run a single command in a single container instead of loading a full interactive shell.
 
-When this action is used it is possible to execute a command in:
+When this action is used it is possible to execute a command either in:
 
-* an **existing** and **persistent** container
+* a **temporary** container created especially to execute the command, and **automatically deleted** at the end of the execution: the name of an exegol **image** must be provided from which a temporary container will be created
+* a standard Exegol container (already existing, or not): the name of an exegol **container** must then be provided. This container will be created in interactive mode if it does not already exist
 
-    * the name of an exegol **container** must be provided, this container will be created in interactive mode if it does not already exist
-* a **temporary** container created especially to execute the command and **automatically deleted** at the end of the execution
+The executed command can be executed either:
 
-    * the name of an exegol **image** must be provided from which a temporary container will be created
-
-The executed command can be run:
-
-* in the **background** mode
-
-    * exegol **terminates immediately** after the command is launched and does not wait for its execution to be completed
-* in **standard mode**
-
-    * exegol will **wait** for the end of the command execution to finish the action
+* in the **background** mode (i.e. like a daemon): exegol **terminates immediately** after the command is launched and does not wait for its execution to be completed. No process is left hanging (useful when running GUI apps for instance).
+* in **standard mode**: exegol will **wait** for the end of the process to stop the container (and delete it if
 
 .. tip::
-    In standard execution mode, it is possible to ask exegol to display in your terminal the **output** (stdout/stderr) of the command sent by adding the parameter ``-v``
+    In standard execution mode, it is possible to ask exegol to display the command **output** (stdout/stderr) in the terminal by adding ``-v`` parameter.
 
 Options
 -------
 
-Because the exec action can also create containers, it shares the same parameters as the :ref:`start action<start_options>`.
+Since the exec action can also create containers, it shares the same parameters as the :ref:`start action<start_options>`.
 
-
-However, there are additional parameters unique to the use of the action exec:
+There are also additional parameters, unique to the ``exec`` action:
 
 ========================= =============
  Option                   Description
@@ -60,4 +51,7 @@ Command examples
 
     # Execute a command in background with a temporary container:
     exegol exec -b --tmp full bloodhound
+
+    # Execute Wireshark in background, in a privileged temporary container:
+    exegol exec --background --tmp --privileged "nightly" "wireshark"
 

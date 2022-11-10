@@ -21,6 +21,14 @@ The following elements are required before Exegol can be installed, whatever the
 * docker (`Linux <https://docs.docker.com/engine/install/debian/>`__ | `macOS <https://docs.docker.com/desktop/install/mac-install/>`__ | `Windows <https://docs.docker.com/desktop/install/windows-install/>`__)
 * at least 20GB of free storage
 
+.. tip::
+
+   From UNIX-like systems, Docker can be installed quickly and easily with the following command-line
+
+   .. code-block:: bash
+
+      curl -fsSL "https://get.docker.com/" -o get-docker.sh
+
 .. warning::
 
    To run exegol from the user environment without `sudo`, the user must have privileged rights equivalent to root.
@@ -35,7 +43,7 @@ The following elements are required before Exegol can be installed, whatever the
 Linux & macOS
 ~~~~~~~~~~~~~
 
-The installation of Exegol on Linux and macOS are very similar. It can either be installed from pip (easiest, most user-friendly, but with a few limited features) or from sources (easy as well).
+The installation of Exegol on Linux and macOS are very similar. It can either be installed from pip (easiest, most user-friendly, but with a few missing features) or from sources (easy as well, fully featured).
 
 
 1. Installation
@@ -82,6 +90,7 @@ Windows
 Installing Exegol on Windows systems is very to similar to the Linux/macOS install. There is however and additional requirements: WSL2 (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_).
 
 For "GUI applications" support to work (i.e. X11 display sharing):
+
 * Windows 11 is needed
 * Docker must run on WSL2 engine
 * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`__ must be installed

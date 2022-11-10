@@ -10,14 +10,13 @@ When this action is used, the following process is applied:
 * then, if the container to start doesn't already exist, it is created based on an Exegol image and a few settings to specify, and the process continues
 * then, the container is started and a shell is opened
 
-Interactive TUI
----------------
+.. hint::
 
-The ``start`` action can be used without any additional argument or option. the wrapper will then enter in an interactive TUI (Text-based User Interface) mode where the user will be asked to choose a few settings.
+    The ``start`` action can be used without any additional argument or option. the wrapper will then enter in an interactive TUI (Text-based User Interface) mode where the user will be asked to choose a few settings.
 
-.. code-block:: bash
+    .. code-block:: bash
 
-   exegol start
+       exegol start
 
 .. _start_options:
 

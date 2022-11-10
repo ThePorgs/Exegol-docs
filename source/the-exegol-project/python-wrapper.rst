@@ -46,7 +46,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 ====================== =============
 
 
-.. hint::
+.. note::
 
    Exegol uses Docker images and containers. Understanding the difference is essential to understand Exegol.
 

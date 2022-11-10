@@ -17,7 +17,7 @@ All images are available on `the official Dockerhub registry <https://hub.docker
   nightly      **(for developers and advanced users)** contains the latest updates. This image can be unstable!
 ============= =====================================================================================================
 
-.. hint::
+.. note::
 
    Exegol uses Docker images and containers. Understanding the difference is essential to understand Exegol.
 
