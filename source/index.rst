@@ -8,7 +8,7 @@ Exegol: professional hacking setup
 
 .. image:: /assets/rounded_social_preview_with_border.png
    :align: center
-   :scale: 50
+   :width: 600px
    :alt: Exegol logo
 
 Exegol is a community-driven hacking environment, powerful and yet simple enough to be used by anyone in day to day engagements. Exegol is the best solution to deploy powerful hacking environments securely, easily, professionally.
