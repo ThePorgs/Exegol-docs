@@ -46,7 +46,7 @@ Many options exist to customize the creation of exegol container.
 ``-fs``, ``--update-fs``                                    Modifies the permissions of folders and sub-folders shared in your workspace to access the files created within the container using your host user account. (default: Disabled)
 ``-V VOLUMES``, ``--volume VOLUMES``                        Share a new volume between host and exegol (format: --volume /path/on/host/:/path/in/container/).
 ``-p PORTS``, ``--port PORTS``                              Share a network port between host and exegol (format: --port [<host_ipv4>:]<host_port>[:<container_port>][:<protocol>]. This configuration will disable the shared network with the host.
-``--privileged``                                            (dangerous) give extended privileges at the container creation (e.g. needed to mount things, to use wifi or bluetooth)
+``--privileged``                                            **(dangerous)** give extended privileges at the container creation (e.g. needed to mount things, to use wifi or bluetooth)
 ``-d DEVICES``, ``--device DEVICES``                        Add host device(s) at the container creation (example: -d /dev/ttyACM0 -d /dev/bus/usb/).
 ``--disable-X11``                                           Disable display sharing to run GUI-based applications. (default: Enabled)
 ``--disable-my-resources``                                  Disable the mount of the shared resources (/opt/my-resources) from the host (/home/dramelac/.exegol/my-resources) (default: Enabled)
@@ -66,7 +66,7 @@ Just provide an ovpn configuration to exegol and the container will take care of
 ========================= ===============================
 
 .. warning::
-    Attention, all the options seen previously are taken into account **only** for the creation of a **new container**.
+    All the options seen previously are taken into account **only** for the creation of a **new container**.
     It is **not possible** to modify the configuration of an existing container.
     These options will be **ignored** if a container with the same name already exists.
 
