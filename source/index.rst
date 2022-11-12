@@ -74,7 +74,6 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    exegol-wrapper/remove.rst
    exegol-wrapper/uninstall.rst
    exegol-wrapper/version.rst
-   exegol-wrapper/features-details.rst
    exegol-wrapper/advanced-uses.rst
 
 .. toctree::

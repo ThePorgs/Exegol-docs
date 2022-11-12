@@ -1,7 +1,7 @@
 :code:`exec` action
 ===================
 
-This action allows you to run a single command in a single container instead of loading a full interactive shell.
+This action allows to run a single command in a single container instead of loading a full interactive shell.
 
 When this action is used it is possible to execute a command either in:
 
@@ -23,14 +23,14 @@ Since the exec action can also create containers, it shares the same parameters 
 
 There are also additional parameters, unique to the ``exec`` action:
 
-========================= =============
- Option                   Description
-========================= =============
- ``CONTAINER or IMAGE``   This option indicates the **container** name to use to execute the command. If the ``--tmp`` parameter is used, this name will be used to target an **image**.
- ``COMMAND``              Single command to execute in the container.
- ``-b``, ``--background`` Executes the command in background as a daemon.
- ``--tmp``                Creates a dedicated and temporary container to execute the command.
-========================= =============
+=========================== =============
+ Option                      Description
+=========================== =============
+ ``CONTAINER`` or ``IMAGE``  This option indicates the **container** name to use to execute the command. If the ``--tmp`` parameter is used, this name will be used to target an **image**.
+ ``COMMAND``                 Single command to execute in the container.
+ ``-b``, ``--background``    Executes the command in background as a daemon.
+ ``--tmp``                   Creates a dedicated and temporary container to execute the command.
+=========================== =============
 
 Command examples
 ----------------

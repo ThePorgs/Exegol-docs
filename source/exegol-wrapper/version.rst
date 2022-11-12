@@ -2,14 +2,14 @@
 :code:`version` action
 ======================
 
-The version action is mostly used for debugging purposes, it is only used to display.
+The ``version`` action is mostly used for debugging purposes, it only displays information about the Exegol setup on the system.
 
 In debug mode (``-vvv``), it also displays information about the system and wrapper installation context.
 
 Options
 =======
 
-The only options available for the version action are the general options that affect the behavior of every exegol action.
+The options available for the version action are the global options that affect the behavior of all exegol actions.
 
 ========================= =============
  Option                   Description

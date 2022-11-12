@@ -2,7 +2,7 @@
 :code:`info` action
 ===================
 
-The info action aims to display all the information specific to Exegol on the current system.
+The ``info`` action aims at displaying all the information specific to the Exegol project on the current system.
 This action can also be used by targeting a specific container to display its configuration in detail.
 
 Depending on the verbosity level specified in the command-line, the information displayed will be more or less detailed accordingly.
