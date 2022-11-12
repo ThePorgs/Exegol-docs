@@ -15,6 +15,10 @@ Exegol is a community-driven hacking environment, powerful and yet simple enough
 
 Exegol fits pentesters, CTF players, bug bounty hunters, researchers, beginners and advanced users, defenders, from stylish macOS users and corporate Windows pros to UNIX-like power users.
 
+.. warning::
+
+   This documentation is a work in progress. We are actively writing it, but if there are things you'd like to be documented in priority, feel free to request in on the `GitHub Repo <https://github.com/ShutdownRepo/Exegol-docs>`_ or in the `Discord server <https://discord.gg/BcgXnRpqxd>`_.
+
 The Exegol project
 ------------------
 
@@ -39,7 +43,7 @@ Community
 
 Have a bug report or feature request? Either open an issue on the `Exegol repo`_ or open a ticket on the `Exegol discord`_ (preferred, easier, more flexible).
 
-Wanna chat? Need help? Join us the `Exegol discord`_!
+Wanna chat? Need help? Join us on the `Exegol discord`_!
 
 .. _Exegol repo: https://github.com/ShutdownRepo/Exegol
 .. _Exegol discord: https://discord.gg/BcgXnRpqxd
