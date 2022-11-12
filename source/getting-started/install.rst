@@ -11,6 +11,8 @@ Once the wrapper is installed, the second step in setting up Exegol on a device 
 :doc:`here </exegol-wrapper/start>`), or with ``exegol install`` (documentation
 :doc:`here </exegol-wrapper/install>`). Both actions will guide the user in installing an image if needed.
 
+.. _install_requirements:
+
 Requirements
 ~~~~~~~~~~~~
 
@@ -39,6 +41,8 @@ The following elements are required before Exegol can be installed, whatever the
       sudo usermod -aG docker $(id -u -n)
 
    For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
+
+.. _install_linux_mac:
 
 Linux & macOS
 ~~~~~~~~~~~~~
@@ -83,6 +87,8 @@ Once this is taken care of, the exegol wrapper can then be added to the ``PATH``
 .. code-block:: bash
 
    sudo ln -s "$(pwd)/exegol.py" "/usr/local/bin/exegol"
+
+.. _install_windows:
 
 Windows
 ~~~~~~~

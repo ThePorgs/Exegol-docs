@@ -31,12 +31,7 @@ Exegol is many things in one. Try it, and you'll stop using your old, unstable a
 Getting started
 ---------------
 
-Wanna try Exegol and join our great community? You need to `install requirements`_ first, then proceed to the OS-specific instructions: `Linux`_ | `macOS`_ | `Windows`_
-
-.. _Linux: getting-started/installation.html#linux-macos
-.. _macOS: getting-started/installation.html#linux-macos
-.. _Windows: getting-started/installation.html#windows
-.. _install requirements: getting-started/installation.html#Requirements
+Wanna try Exegol and join our great community? You need to :ref:`install requirements <install_requirements>` first, then proceed to the OS-specific instructions: :ref:`Linux<install_linux_mac>` | :ref:`macOS<install_linux_mac>` | :ref:`Windows<install_windows>`
 
 Community
 ---------
