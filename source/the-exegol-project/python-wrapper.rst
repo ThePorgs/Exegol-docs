@@ -169,21 +169,32 @@ This mode can be disabled with the :ref:`start action options <start_options>` t
 Shared timezones
 ----------------
 
-WIP
+For convenience and precision in the date and time of the logs of each command, exegol allows to share the timezone of the host in the container.
+
+This feature is active by default and can be disabled with the :ref:`start action options <start_options>`.
 
 .. _feature_exegol_resources:
 
 Exegol-resources
 ----------------
 
-WIP
+To save time and have at hand many tools, scripts and other resources, exegol maintains a repository :ref:`exegol-resources <exegol-resources>` contains many updated tools that are available to the host and exegol containers.
+
+This module is not mandatory and can be downloaded later.
+
+.. hint::
+    If an antivirus is present on your host, be careful to exclude the destination folder of the ``exegol-resources`` module before downloading it.
+
+This feature is active and shared by default and can be disabled with the :ref:`start action options <start_options>`.
 
 .. _feature_my_resources:
 
 My-resources
 ------------
 
-WIP
+The my-resources feature is a space dedicated to the user and shared with all the containers. This space allows to store configurations and to install personal tools.
+
+More details on the functionality of the wrapper :ref:`here <My-resources-wrapper>` and how to take advantage of the customization system :doc:`here </exegol-image/my-resources>`.
 
 .. _feature_volume_sharing:
 
