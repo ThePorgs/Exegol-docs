@@ -144,47 +144,77 @@ The logs are automatically saved in the ``/workspace/logs`` folder. Each log fil
 Shared network
 --------------
 
+By default, containers created by Exegol are in ``host`` mode which means that the **network interfaces** of the host are **shared** with the container.
+
+This configuration is useful to:
+
+* dynamically open ports and services
+* have a low level access on a physical network (some operation might need privileged mode)
+* share a unique ip address on the target network
+* share a MAC address on the target network (to be considered as a single physical machine)
+
+This mode can be disabled with the :ref:`start action options <start_options>` to create a dedicated and isolated network instead.
+
+.. tip::
+    When host network sharing is disabled, ports can be  to expose services on the host machine's networks
+
+.. warning::
+    This mode is only available on **Linux** installations!
+    Windows and MacOS installations are subject to the constraints and limitations of `Docker Desktop <https://docs.docker.com/network/network-tutorial-host/#prerequisites>`__ .
+
+    You can still use the port :ref:`publishing feature <feature_port_sharing>` instead
 
 .. _feature_shared_tz:
 
 Shared timezones
 ----------------
 
+WIP
 
 .. _feature_exegol_resources:
 
 Exegol-resources
 ----------------
 
+WIP
 
 .. _feature_my_resources:
 
 My-resources
 ------------
 
+WIP
 
 .. _feature_volume_sharing:
 
 Volume sharing
 --------------
 
+WIP
 
 .. _feature_port_sharing:
 
 Port sharing
 ------------
 
+WIP
 
 .. _feature_env:
 
 Env. variables
 --------------
 
+WIP
 
 .. _feature_device_sharing:
 
 Device sharing
 --------------
+
+WIP
+
+.. warning::
+    Not supported by `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
 
 
 .. _feature_privileged:
@@ -192,36 +222,46 @@ Device sharing
 Privileged
 ----------
 
+WIP
 
 .. _feature_multi_arch:
 
 Multi-architecture
 ------------------
 
+WIP
 
 .. _feature_image_building:
 
 Local image building
 --------------------
 
+WIP
 
 .. _feature_image_pulling:
 
 Remote image pulling
 --------------------
 
+WIP
+
 .. _feature_exec:
 
 Command execution
 ------------------
+
+WIP
 
 .. _feature_exec_daemon:
 
 Daemon execution
 ~~~~~~~~~~~~~~~~
 
+WIP
 
 .. _feature_exec_tmp:
 
 Temporary containers
 ~~~~~~~~~~~~~~~~~~~~
+
+WIP
