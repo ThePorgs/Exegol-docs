@@ -12,6 +12,8 @@ Once the wrapper is installed, the second step in setting up Exegol on a device 
 :doc:`here </exegol-wrapper/start>`), or with ``exegol install`` (documentation
 :doc:`here </exegol-wrapper/install>`). Both actions will guide the user in installing an image if needed.
 
+.. contents::
+
 .. _install_requirements:
 
 Requirements
@@ -51,13 +53,17 @@ Additional dependencies may be required depending on your platform:
 
            For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
 
-    ..  tab:: MacOS
+    ..  tab:: macOS
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, etc.), additional dependencies and configuration are required:
 
         * `XQuartz <https://www.xquartz.org/>`__ must be installed
         * The XQuartz config ``Allow connections from network clients`` must be set to true
+        * Docker Desktop must be configured with default File Sharing (see screenshot below)
 
+        .. image:: /assets/install/macOS_resources_req.png
+            :align: center
+            :alt: macOS Docker Desktop resources requirement
     ..  group-tab:: Windows
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, etc.), additional dependencies and configuration are required:
