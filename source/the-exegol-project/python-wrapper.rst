@@ -229,6 +229,7 @@ When the host network is not shared, it is still possible to **publish** specifi
     This configuration is **compatible** even with installations based on Docker Desktop.
 
 This feature allows the user to select:
+
 * a specific network interface (for example 127.0.0.1) or by default all interfaces (0.0.0.0).
 * the port to open on the host interface.
 * the destination port to be linked in the container.
@@ -244,6 +245,7 @@ Env. variables
 Exegol can configure custom environment variables defined by the user.
 
 When the environment variables are defined at the first time of the container creation, these variables will be:
+
 * accessible in the container by all processes
 * present during the whole lifetime of the container
 
