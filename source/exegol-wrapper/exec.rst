@@ -16,6 +16,8 @@ The executed command can be executed either:
 .. tip::
     In standard execution mode, it is possible to ask exegol to display the command **output** (stdout/stderr) in the terminal by adding ``-v`` parameter.
 
+.. _exec_options:
+
 Options
 -------
 

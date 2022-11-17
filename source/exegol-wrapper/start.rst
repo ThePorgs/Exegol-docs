@@ -81,7 +81,8 @@ The options specific to the start of the interactive session
 =============================== ===============================
 
 .. tip::
-    If the ``-l``/``--log`` option is enabled when creating a **new** container, all future shells will be automatically logged for this container.
+    * When the ``-l``/``--log`` option is enabled during the **creation** of a **new** container, all future shells will be **automatically logged** for this container.
+    * The environment variables configured with ``--env ENVS`` during the **creation** of a **new** container will be available to **all** processes of the container during the **entire life cycle** of the container.
 
 Command examples
 ----------------
@@ -109,7 +110,7 @@ Command examples
    # Create a container app with custom volume
    exegol start app full -V "/var/app/:/app/"
 
-   # Get a tmux shell
+   # Get a shell based on tmux
    exegol start --shell tmux
 
    # Use a Proxmark

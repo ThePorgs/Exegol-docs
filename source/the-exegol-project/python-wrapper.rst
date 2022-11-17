@@ -69,7 +69,7 @@ By default exegol configures the new container and host to allow the execution t
 
 For example, if bloodhound is launched in an exegol container, the graphical window (GUI) will be displayed in the user's graphic environment.
 
-This feature can be disabled manually in the action start options.
+This feature can be disabled manually with the option ``--disable-X11`` of the :ref:`start action <start_options>`.
 
 .. _feature_workspace:
 
@@ -83,7 +83,9 @@ By default a folder will be created on the host and shared with the container. T
 .. tip::
     The default location of workspace volumes can be changed in the :ref:`configuration of Exegol<exegol_configuration>`.
 
-The user can also create an Exegol container with an **existing custom workspace folder** (with already existing data) regardless of its location in the file system. See the :ref:`action start options <start_options>` for more details.
+The user can also create an Exegol container with an **existing custom workspace folder** (with already existing data) regardless of its location in the file system.
+
+See the options ``-w WORKSPACE_PATH`` and ``-cwd`` of the :ref:`start action <start_options>` for more details.
 
 .. _feature_update_fs:
 
@@ -93,15 +95,18 @@ Update-fs
 The root user is used by default in Exegol containers which poses problems of permissions when accessing the project documents from the host.
 To remedy this without compromising, a **shared permission system** exists allowing the host user to have read and write access to files created from the container.
 
-This system is automatically activated when a new workspace is created.
+This system is **automatically activated** when a **new** default workspace is created.
 
 
 .. warning::
     When the user uses an existing custom folder as workspace, this system is **disabled** by default! This feature can be **enabled by default** by changing the :ref:`configuration of Exegol<exegol_configuration>`.
 
-    Its activation is possible manually (see the :ref:`action start options <start_options>`) but it will lead to the **modification** of file, folder and its sub-folders **permissions** (g+rw for files and g+rws for folders).
+    Its activation is possible manually (see the option ``--update-fs`` of the :ref:`start action <start_options>`) but it will lead to the **modification** of the folder and its sub-folders **permissions** (as ``g+rws``).
 
     If the user does not have the rights to perform such an operation, a **sudo command** will be proposed to the user that he will have to **execute manually** to apply the necessary permissions for the proper functioning of the functionality.
+
+.. tip::
+    When the default configuration of this feature is changed and the update will be **enabled by default**, the option ``--update-fs`` can still be used to manually **disable** the feature in specific cases.
 
 .. _feature_ovpn:
 
@@ -115,7 +120,7 @@ Exegol supports certificate authentication (all files should preferably be inclu
 .. tip::
     A folder can also be used in the case of a **multi-file configuration** (with **relative** paths!) and the configuration file must have the ``.ovpn`` extension (Only **one** .ovpn file will be loaded by exegol).
 
-See the :ref:`action start options <start_options>` for more details.
+See the options ``--vpn VPN`` and ``--vpn-auth VPN_AUTH`` of the :ref:`start action <start_options>` for more details.
 
 .. _feature_shell_logging:
 
@@ -134,10 +139,18 @@ The logs are automatically saved in the ``/workspace/logs`` folder. Each log fil
 
 .. warning::
     Shell logging saves **EVERYTHING** including keyboard shortcuts, display refreshes, etc.
+
     Complex graphical environments (such as tmux) can make it difficult to read the logs.
 
 .. tip::
-    Logs in ``.gz`` format can be viewed directly without unpacking them with the ``zcat <log file>`` command!
+    Logs in ``.gz`` format can be viewed directly **without unpacking** them with the ``zcat`` command!
+
+See the option ``--log`` of the :ref:`start action <start_options>` for more details.
+
+.. hint::
+    When the option is enabled upon **creation** of a new container, all shells created for this container **will be automatically logged**.
+
+    If the container was created **without** this option, the shells can still be logged **individually** by adding the option in the **start** command of **each** shell.
 
 .. _feature_shared_network:
 
@@ -153,16 +166,16 @@ This configuration is useful to:
 * share a unique ip address on the target network
 * share a MAC address on the target network (to be considered as a single physical machine)
 
-This mode can be disabled with the :ref:`start action options <start_options>` to create a dedicated and isolated network instead.
+This mode can be disabled with the option ``--disable-shared-network`` of the :ref:`start action <start_options>` to create a dedicated and isolated network instead.
 
 .. tip::
-    When host network sharing is disabled, ports can be  to expose services on the host machine's networks
+    When host network sharing is disabled, ports can be  to expose services on the host machine's networks.
 
 .. warning::
     This mode is only available on **Linux** installations!
     Windows and MacOS installations are subject to the constraints and limitations of `Docker Desktop <https://docs.docker.com/network/network-tutorial-host/#prerequisites>`__ .
 
-    You can still use the port :ref:`publishing feature <feature_port_sharing>` instead
+    You can still use the port :ref:`publishing feature <feature_port_sharing>` instead.
 
 .. _feature_shared_tz:
 
@@ -171,7 +184,7 @@ Shared timezones
 
 For convenience and precision in the date and time of the logs of each command, exegol allows to share the timezone of the host in the container.
 
-This feature is active by default and can be disabled with the :ref:`start action options <start_options>`.
+This feature is active by default and can be disabled with the option ``--disable-shared-timezones`` of the :ref:`start action <start_options>`.
 
 .. _feature_exegol_resources:
 
@@ -185,7 +198,7 @@ This module is not mandatory and can be downloaded later.
 .. hint::
     If an antivirus is present on your host, be careful to exclude the destination folder of the ``exegol-resources`` module before downloading it.
 
-This feature is active and shared by default and can be disabled with the :ref:`start action options <start_options>`.
+This feature is active and shared by default and can be disabled with the option ``--disable-exegol-resources`` of the :ref:`start action <start_options>`.
 
 .. _feature_my_resources:
 
@@ -201,28 +214,51 @@ More details on the functionality of the wrapper :ref:`here <My-resources-wrappe
 Volume sharing
 --------------
 
-WIP
+For specific needs, the exegol wrapper allows to add additional custom volumes (type bind mounts) when creating an exegol container.
+
+See the option ``--volume VOLUMES`` of the :ref:`action start <start_options>` for more details.
 
 .. _feature_port_sharing:
 
 Port sharing
 ------------
 
-WIP
+When the host network is not shared, it is still possible to **publish** specific ports to expose **services** or **port** ranges.
+
+.. hint::
+    This configuration is **compatible** even with installations based on Docker Desktop.
+
+This feature allows the user to select:
+* a specific network interface (for example 127.0.0.1) or by default all interfaces (0.0.0.0).
+* the port to open on the host interface.
+* the destination port to be linked in the container.
+* the protocol to use, docker supports ``TCP``, ``UDP`` and ``SCTP`` protocols (default is TCP).
+
+See the option ``--port PORTS`` of the :ref:`start action <start_options>` for more details.
 
 .. _feature_env:
 
 Env. variables
 --------------
 
-WIP
+Exegol can configure custom environment variables defined by the user.
+
+When the environment variables are defined at the first time of the container creation, these variables will be:
+* accessible in the container by all processes
+* present during the whole lifetime of the container
+
+The environment variables can be defined when opening a shell in an **existing** container and will be available **only** in the user's shell until it is closed.
+
+See the option ``--env ENVS`` of the :ref:`start action <start_options>` for more details.
 
 .. _feature_device_sharing:
 
 Device sharing
 --------------
 
-WIP
+For the needs of some applications running on physical hardware (such as proxmark3), exegol can supply the container with one or more physical devices.
+
+See the option ``--device DEVICES`` of the :ref:`start action <start_options>` for more details.
 
 .. warning::
     Not supported by `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
@@ -233,46 +269,82 @@ WIP
 Privileged
 ----------
 
-WIP
+For particular needs, it is sometimes necessary to have **privileged rights** to perform certain actions.
+If Exegol does **not** allow you to have specifically the rights necessary, you can configure your container in privileged mode to get **full administrator rights**.
+
+.. warning::
+    This configuration is particularly **dangerous** because it gives the container **full admin control** over the **kernel** of the **host** machine.
+
+    Use this option **only** if you know **exactly** what you are doing!!
+
+See the option ``--privileged`` of the :ref:`start action <start_options>` for more details.
 
 .. _feature_multi_arch:
 
 Multi-architecture
 ------------------
 
-WIP
+Exegol supports ``ARM64`` architecture (in addition to the classic ``AMD64``) since version ``4.1.0`` of the wrapper and ``3.0.0`` of the images.
+
+This support allows you to fully use exegol on hardware equipped with an **ARM** processor (such as Mac M1 / M2 but also some Raspberry Pi).
+
+.. warning::
+    Exegol only supports **64-bit ARM** architecture! If your ARM processor supports 64-bit, make sure your **OS** is also installed in **64-bit version** to use exegol!
+
+.. tip::
+    For experienced users or developers, it is possible to explicitly modify the architecture used by the Exegol wrapper with the :ref:`general option <general_options>` ``--arch ARCH``.
+
+    But be **careful**, the modification of this parameter can lead to **malfunctions**!
 
 .. _feature_image_building:
 
 Local image building
 --------------------
 
-WIP
+The wrapper allows users to locally build their images from the ``exegol-images`` sources.
+
+More information in the :ref:`advanced uses <local_build>` section.
 
 .. _feature_image_pulling:
 
 Remote image pulling
 --------------------
 
-WIP
+To save time, pre-built images are available for download from DockerHub.
+These images can be downloaded and installed / updated from the exegol wrapper with the :doc:`install </exegol-wrapper/install>` and :doc:`update </exegol-wrapper/update>` actions.
 
 .. _feature_exec:
 
 Command execution
 ------------------
 
-WIP
+The Exegol wrapper does not only allow the opening of interactive shells, it is also possible to execute **single commands** in several ways.
+
+.. tip::
+    To see the execution logs of the command, the user must add the parameter ``-v``.
+
+The details of this functionality are detailed in the :doc:`exec </exegol-wrapper/exec>` action.
 
 .. _feature_exec_daemon:
 
 Daemon execution
 ~~~~~~~~~~~~~~~~
 
-WIP
+One of the execution modes can be in the **background** like a daemon service.
+In this way the wrapper executes the **user's command**, for example an application such as bloodhound.
+The wrapper **launches** the task in an exegol container and **finishes immediately** without occupying the user's terminal, leaving the application **open**.
+
+See the option ``--background`` of the :ref:`exec action <exec_options>` for more details.
 
 .. _feature_exec_tmp:
 
 Temporary containers
 ~~~~~~~~~~~~~~~~~~~~
 
-WIP
+Another feature of the :doc:`exec </exegol-wrapper/exec>` action is the execution in a **temporary** container.
+
+In this mode, a **temporary** container will be created and **dedicated** to the execution of the command specified by the user.
+
+This mode can be useful to run a given command with the most **up-to-date** image already installed on the host, for any **test** or for special **privacy** needs.
+
+See the option ``--tmp`` of the :ref:`exec action <exec_options>` for more details.

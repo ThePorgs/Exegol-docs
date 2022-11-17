@@ -70,6 +70,8 @@ The host path of this volume can be changed from the configuration file ``~/.exe
     * Be careful **not** to use a folder with **existing data**, in which case their permissions will be automatically modified to enable access sharing.
     * This change will not be applied to already existing exegol containers.
 
+.. _local_build:
+
 Local builds
 ============
 

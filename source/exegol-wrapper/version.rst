@@ -6,6 +6,8 @@ The ``version`` action is mostly used for debugging purposes, it only displays i
 
 In debug mode (``-vvv``), it also displays information about the system and wrapper installation context.
 
+.. _general_options:
+
 Options
 =======
 
