@@ -267,8 +267,9 @@ For the needs of some applications running on physical hardware (such as proxmar
 See the option ``--device DEVICES`` of the :ref:`start action <start_options>` for more details.
 
 .. warning::
-    Not supported by `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
+    This feature is only available on **Linux** installations!
 
+    Windows and MacOS installations are subject to the constraints and limitations of `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
 
 .. _feature_capabilities:
 
