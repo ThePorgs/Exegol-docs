@@ -13,6 +13,8 @@ Preparation
 Git updates
 ~~~~~~~~~~~
 
+The first step is to update the project and sub-modules, meaning pointing the exegol-images and exegol-resources sub-modules to the latest master version.
+Even if the wrapper is able to auto-update itself, it is always better to keep the base reference at least up to date.
 
 ..  tabs::
 
