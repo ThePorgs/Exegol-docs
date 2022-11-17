@@ -17,6 +17,7 @@ The wrapper knows multiple actions.
 * Get help and advanced usage : ``exegol --help``
 * Help and examples can be obtained for each action directly from the wrapper with the following command: ``exegol <action> -h`` (action: ``install``/``start``/``stop``/etc.).
 
+.. contents::
 
 All actions are documented in the **exegol-wrapper** part of this doc (e.g. :doc:`info </exegol-wrapper/info>`, :doc:`start </exegol-wrapper/start>`, :doc:`version </exegol-wrapper/version>`, ...)
 

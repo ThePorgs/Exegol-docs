@@ -26,7 +26,7 @@ The following elements are required before Exegol can be installed, whatever the
 * docker (`Linux <https://docs.docker.com/engine/install/debian/>`__ | `macOS <https://docs.docker.com/desktop/install/mac-install/>`__ | `Windows <https://docs.docker.com/desktop/install/windows-install/>`__)
 * at least 20GB of free storage
 
-Additional dependencies may be required depending on your platform:
+Additional dependencies may be required depending on the host OS.
 
 ..  tabs::
 
@@ -55,22 +55,31 @@ Additional dependencies may be required depending on your platform:
 
     ..  tab:: macOS
 
-        To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, etc.), additional dependencies and configuration are required:
+        To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
         * `XQuartz <https://www.xquartz.org/>`__ must be installed
         * The XQuartz config ``Allow connections from network clients`` must be set to true
         * Docker Desktop must be configured with default File Sharing (see screenshot below)
 
-        .. image:: /assets/install/macOS_resources_req.png
+        .. figure:: /assets/install/macOS_xquartz_config.png
+            :align: center
+            :alt: macOS XQuartz configuration requirement
+
+            macOS XQuartz configuration requirement
+
+        .. figure:: /assets/install/macOS_resources_req.png
             :align: center
             :alt: macOS Docker Desktop resources requirement
+
+            macOS Docker Desktop resources requirement
+
     ..  group-tab:: Windows
 
-        To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, etc.), additional dependencies and configuration are required:
+        To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
         * Windows **11** is needed
         * Docker must run on **WSL2** engine (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_)
-        * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`__ must be installed
+        * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`_ must be installed
         * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** enabled
 
 .. _exegol_install:
