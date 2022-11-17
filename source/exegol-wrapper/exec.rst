@@ -57,3 +57,6 @@ Command examples
     # Execute Wireshark in background, in a privileged temporary container:
     exegol exec --background --tmp --privileged "nightly" "wireshark"
 
+    # Execute the command wireshark with network admin privileged:
+    exegol exec -b --tmp --cap NET_ADMIN full wireshark
+

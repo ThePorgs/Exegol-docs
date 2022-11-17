@@ -39,6 +39,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 :ref:`Port sharing<feature_port_sharing>`           Support for port publishing
 :ref:`Env. variables<feature_env>`                  Support for environment variable configuration
 :ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
+:ref:`Capabilities<feature_capabilities>`           Support for adding specific capabilities
 :ref:`Privileged<feature_privileged>`               Support of the privileged mode
 :ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
 :ref:`Local image<feature_image_building>`          Customized local image building
@@ -269,6 +270,24 @@ See the option ``--device DEVICES`` of the :ref:`start action <start_options>` f
     Not supported by `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
 
 
+.. _feature_capabilities:
+
+Capabilities
+------------
+
+Exegol supports adding **Linux capabilities** to the Exegol **container** to perform tasks that require **administrative** rights **without** allowing everything.
+
+This feature gives control to the user to configure his container but giving administrator rights remains a dangerous practice and should be used by experienced users only.
+
+For more details on the capabilities supported by docker `check here <https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities>`_.
+
+.. warning::
+    Not all Linux capabilities are allowed by the Exegol wrapper, here is the list of available capabilities:
+
+    SYS_RAWIO, SYS_MODULE, NET_BROADCAST, NET_ADMIN, SYS_CHROOT, MKNOD, NET_RAW, SYS_ADMIN, SETFCAP, SYS_PTRACE
+
+    For all other needs, consider the :ref:`privileged <feature_privileged>` mode.
+
 .. _feature_privileged:
 
 Privileged
@@ -281,6 +300,8 @@ If Exegol does **not** allow you to have specifically the rights necessary, you 
     This configuration is particularly **dangerous** because it gives the container **full admin control** over the **kernel** of the **host** machine.
 
     Use this option **only** if you know **exactly** what you are doing!!
+
+    If the need is specifically identified, consider adding :ref:`capabilities <feature_capabilities>` instead!
 
 See the option ``--privileged`` of the :ref:`start action <start_options>` for more details.
 
