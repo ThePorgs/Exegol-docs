@@ -23,31 +23,30 @@ All actions are documented in the **exegol-wrapper** part of this doc (e.g. :doc
 
 Below is a, non-exhaustive, list of what the wrapper supports:
 
-====================== =============
- Feature                Description
-====================== =============
- Display sharing        :ref:`Sharing of the graphic environment between the container and the host <feature_display_sharing>`
- Workspace              :ref:`Persistent and shared workspace with the host <feature_workspace>`
- Update-fs              :ref:`Permission sharing between the container and the host <feature_update_fs>`
- OpenVPN connection     :ref:`Opening an isolated VPN tunnel dedicated to the exegol container<feature_ovpn>`
- Shell logging          :ref:`Recording of sessions (input and output) in log files with date and time <feature_shell_logging>`
- Shared network         :ref:`Sharing the host's network interfaces <feature_shared_network>`
- Shared timezones       :ref:`Sharing the host's timezone configuration <feature_shared_tz>`
- Exegol-resources       :ref:`Easy access to a collection of resources and tools <feature_exegol_resources>`
- My-resources           :ref:`User space dedicated to customization <feature_my_resources>`
- Volume sharing         :ref:`Support for specific volume addition <feature_volume_sharing>`
- Port sharing           :ref:`Support for port publishing <feature_port_sharing>`
- Env. variables         :ref:`Support for environment variable configuration <feature_env>`
- Device sharing         :ref:`Support for hardware sharing <feature_device_sharing>`
- Privileged             :ref:`Support of the privileged mode <feature_privileged>`
- Multi-architecture     :ref:`Support for AMD64 and ARM64 architectures <feature_multi_arch>`
- Local image            :ref:`Customized local image building <feature_image_building>`
- Remote image           :ref:`Pre-built image available for download<feature_image_pulling>`
- Command execution      :ref:`Execution of specific command <feature_exec>`
- Daemon execution       :ref:`Support of the command execution in the background <feature_exec_daemon>`
- Temporary containers   :ref:`Support for command execution in a dedicated and temporary environment <feature_exec_tmp>`
-====================== =============
-
+=================================================== =============
+ Feature                                             Description
+=================================================== =============
+ :ref:`Display sharing<feature_display_sharing>`     Sharing of the graphic environment between the container and the host
+ :ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
+ :ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
+ :ref:`OpenVPN connection<feature_ovpn>`             Opening an isolated VPN tunnel dedicated to the exegol container
+ :ref:`Shell logging<feature_shell_logging>`         Recording of sessions (input and output) in log files with date and time
+ :ref:`Shared network<feature_shared_network>`       Sharing the host's network interfaces
+ :ref:`Shared timezones<feature_shared_tz>`          Sharing the host's timezone configuration
+ :ref:`Exegol-resources<feature_exegol_resources>`   Easy access to a collection of resources and tools
+ :ref:`My-resources<feature_my_resources>`           User space dedicated to customization
+ :ref:`Volume sharing<feature_volume_sharing>`       Support for specific volume addition
+ :ref:`Port sharing<feature_port_sharing>`           Support for port publishing
+ :ref:`Env. variables<feature_env>`                  Support for environment variable configuration
+ :ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
+ :ref:`Privileged<feature_privileged>`               Support of the privileged mode
+ :ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
+ :ref:`Local image<feature_image_building>`          Customized local image building
+ :ref:`Remote image<feature_image_pulling>`          Pre-built image available for download
+ :ref:`Command execution<feature_exec>`              Execution of specific command
+ :ref:`Daemon execution<feature_exec_daemon>`        Support of the command execution in the background
+ :ref:`Temporary containers<feature_exec_tmp>`       Support for command execution in a dedicated and temporary environment
+=================================================== =============
 
 .. note::
 
