@@ -26,26 +26,26 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 =================================================== =============
  Feature                                             Description
 =================================================== =============
- :ref:`Display sharing<feature_display_sharing>`     Sharing of the graphic environment between the container and the host
- :ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
- :ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
- :ref:`OpenVPN connection<feature_ovpn>`             Opening an isolated VPN tunnel dedicated to the exegol container
- :ref:`Shell logging<feature_shell_logging>`         Recording of sessions (input and output) in log files with date and time
- :ref:`Shared network<feature_shared_network>`       Sharing the host's network interfaces
- :ref:`Shared timezones<feature_shared_tz>`          Sharing the host's timezone configuration
- :ref:`Exegol-resources<feature_exegol_resources>`   Easy access to a collection of resources and tools
- :ref:`My-resources<feature_my_resources>`           User space dedicated to customization
- :ref:`Volume sharing<feature_volume_sharing>`       Support for specific volume addition
- :ref:`Port sharing<feature_port_sharing>`           Support for port publishing
- :ref:`Env. variables<feature_env>`                  Support for environment variable configuration
- :ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
- :ref:`Privileged<feature_privileged>`               Support of the privileged mode
- :ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
- :ref:`Local image<feature_image_building>`          Customized local image building
- :ref:`Remote image<feature_image_pulling>`          Pre-built image available for download
- :ref:`Command execution<feature_exec>`              Execution of specific command
- :ref:`Daemon execution<feature_exec_daemon>`        Support of the command execution in the background
- :ref:`Temporary containers<feature_exec_tmp>`       Support for command execution in a dedicated and temporary environment
+:ref:`Display sharing<feature_display_sharing>`     Sharing of the graphic environment between the container and the host
+:ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
+:ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
+:ref:`OpenVPN connection<feature_ovpn>`             Opening an isolated VPN tunnel dedicated to the exegol container
+:ref:`Shell logging<feature_shell_logging>`         Recording of sessions (input and output) in log files with date and time
+:ref:`Shared network<feature_shared_network>`       Sharing the host's network interfaces
+:ref:`Shared timezones<feature_shared_tz>`          Sharing the host's timezone configuration
+:ref:`Exegol-resources<feature_exegol_resources>`   Easy access to a collection of resources and tools
+:ref:`My-resources<feature_my_resources>`           User space dedicated to customization
+:ref:`Volume sharing<feature_volume_sharing>`       Support for specific volume addition
+:ref:`Port sharing<feature_port_sharing>`           Support for port publishing
+:ref:`Env. variables<feature_env>`                  Support for environment variable configuration
+:ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
+:ref:`Privileged<feature_privileged>`               Support of the privileged mode
+:ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
+:ref:`Local image<feature_image_building>`          Customized local image building
+:ref:`Remote image<feature_image_pulling>`          Pre-built image available for download
+:ref:`Command execution<feature_exec>`              Execution of specific command
+:ref:`Daemon execution<feature_exec_daemon>`        Support of the command execution in the background
+:ref:`Temporary containers<feature_exec_tmp>`       Support for command execution in a dedicated and temporary environment
 =================================================== =============
 
 .. note::
@@ -122,6 +122,9 @@ Exegol supports certificate authentication (all files should preferably be inclu
 
 See the options ``--vpn VPN`` and ``--vpn-auth VPN_AUTH`` of the :ref:`start action <start_options>` for more details.
 
+.. tip::
+    In case of problem, to troubleshoot a VPN connection, the log of OpenVPN can be retrieved within the container in the ``/var/log/exegol/vpn.log`` file
+
 .. _feature_shell_logging:
 
 Shell logging
@@ -143,7 +146,7 @@ The logs are automatically saved in the ``/workspace/logs`` folder. Each log fil
     Complex graphical environments (such as tmux) can make it difficult to read the logs.
 
 .. tip::
-    Logs in ``.gz`` format can be viewed directly **without unpacking** them with the ``zcat`` command!
+    Logs in ``.gz`` format can be viewed directly **without unpacking** them with the ``zcat``, ``zgrep``, ``zdiff`` or ``zmore`` command!
 
 See the option ``--log`` of the :ref:`start action <start_options>` for more details.
 

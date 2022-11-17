@@ -123,3 +123,13 @@ The ``/opt/my-resources/setup/load_user_setup.sh`` script is executed on the fir
 
 .. warning::
     It is strongly advised **not** to overwrite the configuration files provided by exegol (e.g. ``/root/.zshrc``, ``/opt/.exegol_aliases``, ...), official updates will not be applied otherwise.
+
+Troubleshooting
+---------------
+
+In case of problem, the customization system logs all actions in the ``/var/log/exegol/load_setups.log`` file.
+
+If the whole installation went smoothly the log file will be compressed by gunzip and will have the name ``/var/log/exegol/load_setups.log.gz``
+
+.. tip::
+    Logs in ``.gz`` format can be viewed directly **without unpacking** them with the ``zcat``, ``zgrep``, ``zdiff`` or ``zmore`` command!
