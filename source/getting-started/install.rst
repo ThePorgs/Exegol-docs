@@ -164,6 +164,11 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                       Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
+                .. tip::
+                    If you have installed Python3 manually and Windows opens the **Microsoft store** on the python page as soon as you type ``python3.exe``, try this:
+
+                    It is possible to disable this behavior in the Windows settings: ``Apps > Apps & features > App execution aliases`` and disable aliases for ``python.exe`` and ``python3.exe``.
+
 3. Installation of the first Exegol image
 -----------------------------------------
 
