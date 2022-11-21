@@ -29,5 +29,11 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+html_logo = "_static/rounded_social_preview.png"
+
+html_theme_options = {
+    "logo_only": True
+}
+
 # Tabs options
 sphinx_tabs_disable_tab_closing = True
