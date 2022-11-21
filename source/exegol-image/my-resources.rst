@@ -67,8 +67,19 @@ A system exists to easily install arbitrary APT packages in any new exegol conta
 * Importing custom repositories usually requires importing **GPG keys** as well, which can be done by entering trusted GPG keys download URLs in the ``/opt/my-resources/setup/apt/keys.list`` file
 * To install **APT packages** automatically (after updating the repository including the custom ones), just enter a list of package names in the ``/opt/my-resources/setup/apt/packages.list`` file
 
-:code:`zsh` (aliases, zshrc)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:code:`python3` (pip3)
+~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``3.0.0`` of any exegol image.
+
+A system exists to easily install arbitrary PIP3 packages in any new exegol container.
+
+The ``/opt/my-resources/setup/python3/requirements.txt`` file allows the user to list a set of packages to install with constraints just like a classic **requirements.txt** file.
+
+
+:code:`zsh` (aliases, zshrc, history)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``3.0.0`` of any exegol image.
 
@@ -77,6 +88,7 @@ additional configuration files will be automatically loaded by zsh to take into 
 
 * **aliases**: any custom alias can be defined in the ``/opt/my-resources/setup/zsh/aliases`` file. This file is automatically loaded by zsh.
 * **zshrc**: it is possible to add commands at the end of the zshrc routine in ``/opt/my-resources/setup/zsh/zshrc`` file.
+* **history**: it is possible to automatically add history commands at the end of ``~/.zsh_history`` from the file ``/opt/my-resources/setup/zsh/history``.
 
 .. tip::
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
