@@ -14,7 +14,7 @@ All images are available on `the official Dockerhub registry <https://hub.docker
   web          Includes tools for Web pentesting only.
   light        Includes the lightest and most used tools for various purposes.
   osint        Includes tools for OSINT.
-  nightly      **(for developers and advanced users)** contains the latest updates. This image can be unstable!
+  nightly      **(for developers and advanced users)** contains the latest updates. This image can be **unstable**!
 ============= =====================================================================================================
 
 .. note::
