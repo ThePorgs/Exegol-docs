@@ -4,3 +4,4 @@
 - auto-generate tools list? resources list?
 - auto-generate command examples and options in exegol-wrapper/actions?
 - add screenshots
+- requirement for runners : jq, perl, docker, etc.
