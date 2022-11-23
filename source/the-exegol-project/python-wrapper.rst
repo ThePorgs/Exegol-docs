@@ -130,29 +130,66 @@ Shell logging
 -------------
 
 Within the framework of a mission, it is necessary to **log all actions** performed during a pentest, red team etc.
-To meet this need, Exegol has a feature to **automatically record everything** that is displayed (stdout / stdout) but also all entries (stdin).
+To meet this need, Exegol has a feature to **automatically record everything** that is displayed (stdout / stderr) but also all entries (stdin).
 
-The date and time of each command is displayed thanks to the PS1 of ``zsh``.
-
-The logs are automatically saved in the ``/workspace/logs`` folder. Each log file is **automatically compressed** with ``gunzip`` at the end of the session to optimize disk space.
-
-.. warning::
-    The logs should **NOT** be consulted from the exegol container but **from the host** to avoid loops and duplication of data in the logs.
-
-.. warning::
-    Shell logging saves **EVERYTHING** including keyboard shortcuts, display refreshes, etc.
-
-    Complex graphical environments (such as tmux) can make it difficult to read the logs.
-
-.. tip::
-    Logs in ``.gz`` format can be viewed directly **without unpacking** them with the ``zcat``, ``zgrep``, ``zdiff`` or ``zmore`` command!
-
-See the option ``--log`` of the :ref:`start action <start_options>` for more details.
+See the option ``--log`` of the :ref:`start action <start_options>` to enable the feature.
 
 .. hint::
     When the option is enabled upon **creation** of a new container, all shells created for this container **will be automatically logged**.
 
     If the container was created **without** this option, the shells can still be logged **individually** by adding the option in the **start** command of **each** shell.
+
+The date and time of each command is displayed thanks to the PS1 of ``zsh``.
+
+The logs are automatically saved in the ``/workspace/logs`` folder. Each log file is **automatically compressed** with ``gzip`` at the end of the session to optimize disk space.
+The automatic compression of log files can be disabled manually with the :ref:`start action <start_options>` ``--log-compress`` parameter or by default in the :ref:`configuration file of Exegol <exegol_configuration>`.
+
+.. warning::
+    The logs should **NOT** be consulted from the exegol container but **from the host** to avoid loops and duplication of data in the logs.
+
+There are (since exegol images version ``3.0.0``) different methods of shell logging.
+The shell logging method can be selected manually with the :ref:`start action <start_options>` ``--log-method`` parameter or by default in the :ref:`configuration file of Exegol <exegol_configuration>`.
+
+.. tabs::
+
+    .. tab:: asciinema (default)
+
+        The shell logging method **asciinema** is available from exegol images version ``3.0.0``.
+        This new mode allows to consult sessions in **video** format taking into account the interactive environment.
+        It is also possible to **manually upload** and **share** recordings, useful for **demonstrations** for example
+
+        Here is a quick demonstration:
+
+        .. raw:: html
+
+            <div align="center">
+                <script id="asciicast-lZfOEQuCKonM2htTJEz9QDWPo" src="https://asciinema.org/a/lZfOEQuCKonM2htTJEz9QDWPo.js" async></script>
+            </div>
+
+        .. tip::
+            Logs in ``.gz`` format can be replay directly **without unpacking** them with the command: ``gunzip -c <filename_shell.asciinema.gz> | asciinema play -``
+
+        .. hint::
+            To display the whole session **without** the "video" mode, it is possible to use the command: ``asciinema cat <filename_shell.asciinema>``
+
+        .. warning::
+            Major disadvantage of this method, to view the logs from your host, you must **install** ``asciinema`` on your **host** machine to replay or share your records.
+
+        .. tip::
+            When you share or play an ``asciinema`` video, you can **copy** and **paste** any command/text it contains.
+
+    .. tab:: script
+        **script** is the "classic" method of session logging, it was also the only option available before version ``3.0.0`` of exegol images.
+        This method simply records **all** incoming (stdin) and outgoing (stdout/stderr) shell actions in a file.
+
+        .. tip::
+            Logs in ``.gz`` format can be viewed directly **without unpacking** them with the ``zcat``, ``zgrep``, ``zdiff`` or ``zmore`` command!
+
+        .. warning::
+            Shell logging saves **EVERYTHING** including keyboard shortcuts, display refreshes, etc.
+
+            Complex graphical environments (such as tmux) can make it difficult to read the logs.
+
 
 .. _feature_shared_network:
 

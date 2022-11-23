@@ -70,19 +70,31 @@ Just provide an ovpn configuration to exegol and the container will take care of
     It is **not possible** to modify the configuration of an existing container.
     These options will be **ignored** if a container with the same name already exists.
 
+One of the functions of exegol very useful in a professional context is the shell logging.
+This feature allows the user to record **everything** that happens in the exegol container (commands typed and responses).
+
+=============================== ===============================
+ Option                         Description
+=============================== ===============================
+``-l``, ``--log``               Enable shell logging (commands and outputs) on exegol to /workspace/logs/ (default: Disabled)
+``--log-method``                Select a shell logging method used to record the session (default: ``asciinema``)
+``--log-compress``              Enable or disable the automatic compression of log files at the end of the session (default: Enabled)
+=============================== ===============================
+
+.. tip::
+    When the ``-l``/``--log`` option is enabled during the **creation** of a **new** container, all future shells will be **automatically logged** for this container.
+
 The options specific to the start of the interactive session
 
 =============================== ===============================
  Option                         Description
 =============================== ===============================
 ``-e ENVS``, ``--env ENVS``     And an environment variable on Exegol (format: --env KEY=value). The variables configured during the creation of the container will be persistent in all shells. If the container already exists, the variable will be present only in the current shell.
-``-l``, ``--log``               Enable shell logging (commands and outputs) on exegol to /workspace/logs/ (default: Disabled)
-``-s SHELL``, ``--shell SHELL`` Select a shell environment to launch at startup (Default: zsh)
+``-s SHELL``, ``--shell SHELL`` Select a shell environment to launch at startup (default: zsh)
 =============================== ===============================
 
 .. tip::
-    * When the ``-l``/``--log`` option is enabled during the **creation** of a **new** container, all future shells will be **automatically logged** for this container.
-    * The environment variables configured with ``--env ENVS`` during the **creation** of a **new** container will be available to **all** processes of the container during the **entire life cycle** of the container.
+    The environment variables configured with ``--env ENVS`` during the **creation** of a **new** container will be available to **all** processes of the container during the **entire life cycle** of the container.
 
 Command examples
 ----------------
