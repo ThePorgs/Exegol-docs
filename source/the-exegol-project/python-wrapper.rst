@@ -142,7 +142,10 @@ See the option ``--log`` of the :ref:`start action <start_options>` to enable th
 The date and time of each command is displayed thanks to the PS1 of ``zsh``.
 
 The logs are automatically saved in the ``/workspace/logs`` folder. Each log file is **automatically compressed** with ``gzip`` at the end of the session to optimize disk space.
-The automatic compression of log files can be disabled manually with the :ref:`start action <start_options>` ``--log-compress`` parameter or by default in the :ref:`configuration file of Exegol <exegol_configuration>`.
+The automatic compression of log files can be **disabled** manually with the :ref:`start action <start_options>` ``--log-compress`` parameter or change the default behavior in the :ref:`Exegol configuration file <exegol_configuration>`.
+
+.. hint::
+    When the default configuration of the log compression is changed from the config file and the feature will be **disabled by default**, the option ``--log-compress`` can still be used to manually **enable** the feature in specific cases.
 
 .. warning::
     The logs should **NOT** be consulted from the exegol container but **from the host** to avoid loops and duplication of data in the logs.
