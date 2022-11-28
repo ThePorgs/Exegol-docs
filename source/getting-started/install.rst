@@ -111,7 +111,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
         .. code-block:: bash
 
-           git clone "https://github.com/ShutdownRepo/Exegol"
+           git clone "https://github.com/ThePorgs/Exegol"
            python3 -m pip install --user --requirement "Exegol/requirements.txt"
 
 

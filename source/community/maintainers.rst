@@ -30,10 +30,10 @@ Even if the wrapper is able to auto-update itself, it is always better to keep t
 
         .. code-block:: bash
 
-            git -C exegol-docker-build pull
             git -C exegol-docker-build checkout main
-            git -C exegol-resources pull
+            git -C exegol-docker-build pull
             git -C exegol-resources checkout main
+            git -C exegol-resources pull
 
     ..  tab:: With Exegol
 

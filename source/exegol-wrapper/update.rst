@@ -14,9 +14,9 @@ Modules updates
 
 This action make sure the local copies of the following repositories are up to date:
 
-* `Exegol <https://github.com/ShutdownRepo/Exegol>`_ (wrapper code). If the wrapper has been installed with Pip, it will not be able to self-update, updating the package through Pip will be required (e.g. ``python3 -m pip install --upgrade exegol``).
-* `Exegol-images <https://github.com/ShutdownRepo/Exegol-images>`_ (docker building files)
-* `Exegol-resources <https://github.com/ShutdownRepo/Exegol-resources>`_ (offline resources, :ref:`exegol-resources<exegol-resources>`). This module is optional, and users can choose to install/update it at any time.
+* `Exegol <https://github.com/ThePorgs/Exegol>`_ (wrapper code). If the wrapper has been installed with Pip, it will not be able to self-update, updating the package through Pip will be required (e.g. ``python3 -m pip install --upgrade exegol``).
+* `Exegol-images <https://github.com/ThePorgs/Exegol-images>`_ (docker building files)
+* `Exegol-resources <https://github.com/ThePorgs/Exegol-resources>`_ (offline resources, :ref:`exegol-resources<exegol-resources>`). This module is optional, and users can choose to install/update it at any time.
 
 .. tip::
     When running ``exegol update -v``, the user will be able to choose from what branch them module should be synchronized with, allowing to switch easily between release and dev versions.

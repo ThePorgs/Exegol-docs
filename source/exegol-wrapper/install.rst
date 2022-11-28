@@ -6,7 +6,7 @@ This action can be used to install an Exegol image. At least one Exegol image is
 When this action is used, the image can either be:
 
 * **downloaded** (i.e. "pulled" in Docker terms) from `the official Dockerhub registry <https://hub.docker.com/repository/docker/nwodtuhs/exegol>`_. In this case, a compressed and pre-built image is downloaded in the form of layers, and then uncompressed.
-* **built** locally by following the instructions of a Dockerfile offered on `the Exegol-images GitHub repo <https://github.com/ShutdownRepo/Exegol>`_. Here again, no need to download the dockerfile manually, all of them are already at ``/path/to/Exegol/exegol-docker-build/``.
+* **built** locally by following the instructions of a Dockerfile offered on `the Exegol-images GitHub repo <https://github.com/ThePorgs/Exegol>`_. Here again, no need to download the dockerfile manually, all of them are already at ``/path/to/Exegol/exegol-docker-build/``.
 
 .. hint::
 
