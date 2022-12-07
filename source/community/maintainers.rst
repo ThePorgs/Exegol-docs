@@ -90,7 +90,7 @@ After validation of the PR, we can upload the new version package to pypi.
 
 .. code-block:: bash
 
-    python3 -m twine upload -repository testpypi dist/* --verbose
+    python3 -m twine upload --repository testpypi dist/* --verbose
 
 * Upload to the production repository
 
