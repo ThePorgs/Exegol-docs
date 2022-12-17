@@ -12,13 +12,6 @@ Discord
 
 An Exegol discord has been created to facilitate exchanges between the community, open tickets, share ideas, vote on future features to prioritize etc..
 
-
-
-.. image:: /assets/sponsors/capgemini.png
-   :align: center
-   :width: 300px
-   :alt: Capgemini logo
-
 .. raw:: html
 
     <div align="center">
