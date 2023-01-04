@@ -100,7 +100,7 @@ This system is **automatically activated** when a **new** default workspace is c
 .. warning::
     When the user uses an existing custom folder as workspace, this system is **disabled** by default! This feature can be **enabled by default** by changing the :ref:`configuration of Exegol<exegol_configuration>`.
 
-    Its activation is possible manually (see the option ``--update-fs`` of the :ref:`start action <start_options>`) but it will lead to the **modification** of the folder and its sub-folders **permissions** (as ``g+s``).
+    Its activation is possible manually (see the option ``--update-fs`` of the :ref:`start action <start_options>`) but it will lead to the **modification** of the folder and its sub-folders **permissions** (as ``g+rws``).
 
     If the user does not have the rights to perform such an operation, a **sudo command** will be proposed to the user that he will have to **execute manually** to apply the necessary permissions for the proper functioning of the functionality (as ``chgrp`` + ``g+rws``).
 
