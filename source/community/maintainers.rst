@@ -134,7 +134,7 @@ Below are the hardware requirements for each runner:
 * enough CPU *(to be defined)*
 * enough free disk space (at least ~30GB)
 
-Before deploying a GHA agent on a runner, Docker must be installed.
+Before deploying a GHA agent on a runner, Docker must be installed. Note the following documentation focuses on deploying an agent on Linux systems.
 
 .. tip::
 
@@ -171,7 +171,22 @@ Once the runner is ready, the agent can be deployed as follows (with sufficient 
     * name of work folder: *up to you*
 
 * start the runner with the ``run.sh`` script
+* (option) configure the agent as a service if it is to be run unattended/headless with ``sudo ./svc.sh install <user>``, more info at https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service
 
+
+.. note::
+
+    When configuring the agent as a service, it will be enabled, meaning it will start at boot. The ``systemctl is-enabled`` command should return ``enabled``.
+
+    .. code-block:: bash
+
+        sudo systemctl is-enabled actions.runner.ThePorgs-Exegol-images.<runner-name>.service
+
+    In order to start the service, either reboot the runner, or use ``systemctl``.
+
+    .. code-block:: bash
+
+        sudo systemctl start actions.runner.ThePorgs-Exegol-images.<runner-name>.service
 
 .. image:: /assets/maintainers/gha_deployment/step_1.png
    :align: center
