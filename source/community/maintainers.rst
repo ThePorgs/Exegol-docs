@@ -167,7 +167,7 @@ Once the runner is ready, the agent can be deployed as follows (with sufficient 
 
     * name of the runner group: Default
     * name of the runner: *up to you*
-    * additional labels: ``builder,tester`` (adapt this if the runner is to be used for only one of those actions)
+    * additional labels: ``builder,tester`` (adapt this if the runner is to be used for only one of those actions). If the runner is an X64/AMD64, the ``AMD64`` tag needs to be set as well. If the runner is ARM64, the right tag will be set automatically.
     * name of work folder: *up to you*
 
 * start the runner with the ``run.sh`` script
