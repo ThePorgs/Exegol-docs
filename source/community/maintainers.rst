@@ -157,9 +157,12 @@ Below are the hardware requirements for each runner:
 
 * enough RAM *(to be defined)*
 * enough CPU *(to be defined)*
-* enough free disk space (at least ~30GB, bare minimum)
+* enough free disk space (at least ~100GB, bare minimum)
 
-Before deploying a GHA agent on a runner, Docker must be installed. Note the following documentation focuses on deploying an agent on Linux and macOS systems, as the Exegol runners don't use Windows.
+Before deploying a GHA agent on a runner, software requirements must be met:
+
+- Docker (or Docker Desktop for Windows and macOS)
+- jq (lightweight and flexible command-line JSON processor)
 
 ..  tabs::
 
@@ -239,6 +242,16 @@ Before deploying a GHA agent on a runner, Docker must be installed. Note the fol
 
         For macOS, **Docker Desktop** must be installed: https://docs.docker.com/desktop/install/mac-install/.
 
+        The **jq** tool can be installed as follows.
+
+        .. code-block:: bash
+
+            # install brew
+            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+
+            # install jq
+            brew install jq
+
         **Xcode Command Line Tools** are also required, and they can be installed with the following command line.
 
         .. code-block:: bash
@@ -270,3 +283,8 @@ Before deploying a GHA agent on a runner, Docker must be installed. Note the fol
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Go to https://github.com/ThePorgs/Exegol-images/settings/actions/runners
+
+4. Understanding the pipelines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**TODO** explain the pipelines, include diagrams.
