@@ -24,6 +24,8 @@ Exegol: professional hacking setup
       <br><br>
       <a href="https://twitter.com/intent/follow?screen_name=_nwodtuhs" title="Follow"><img src="https://img.shields.io/twitter/follow/_nwodtuhs?label=Shutdown&style=social" alt="Twitter Shutdown"></a>
       <a href="https://twitter.com/intent/follow?screen_name=Dramelac_" title="Follow"><img src="https://img.shields.io/twitter/follow/Dramelac_?label=Dramelac&style=social" alt="Twitter Dramelac"></a>
+      <br>
+      <img alt="Black Hat Europe 2022" src="https://img.shields.io/badge/Black%20Hat%20Arsenal-Europe%202022-blueviolet">
       <br><br>
       <a href="https://discord.gg/cXThyp7D6P" title="Join us on Discord"><img src="https://raw.githubusercontent.com/ThePorgs/Exegol-docs/main/.assets/discord_join_us.png" width="150" alt="Join us on Discord"></a>
       <br><br>
@@ -40,11 +42,23 @@ Exegol fits pentesters, CTF players, bug bounty hunters, researchers, beginners 
 The Exegol project
 ------------------
 
+.. image:: /assets/overviews_techs.png
+   :align: center
+   :alt: Structure overview
+
+
 Exegol is many things in one. Try it, and you'll stop using your old, unstable and risky environment, no more monolithic system that gets messier, buggier and more at risk with time.
 
 * :doc:`Python wrapper </the-exegol-project/python-wrapper>`: makes everyone's life easier. This entrypoint to the whole Exegol project handles all docker and git operations so you don't have to. **Now's the time to have a clean environment** with one Docker container per engagement without the effort. Exegol handles multiple images and multiple containers. GUI apps, Wi-Fi, USB accessories, volume mounting and many more features are supported and easier to use than ever.
 * :doc:`Docker images </the-exegol-project/docker-images>`: a set of pre-built docker images and dockerfiles that include a neat choice of tools, zsh plugins for power users, pre-filled history ready to use with environment variables, awesome resources, custom configs and many more. Images can either be built locally or pulled from the official Dockerhub registry.
 * :doc:`Offline resources </the-exegol-project/offline-resources>`: Tired of always having to search github for your favorite privesc enumeration script? Exegol includes a set of resources, shared with all exegol containers and your host, including LinPEAS, WinPEAS, LinEnum, PrivescCheck, SysinternalsSuite, mimikatz, Rubeus, PowerSploit and many more.
+
+
+.. image:: /assets/overviews_structure.png
+   :align: center
+   :alt: Structure overview
+
+
 
 Getting started
 ---------------

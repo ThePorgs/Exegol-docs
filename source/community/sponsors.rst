@@ -20,5 +20,14 @@ Dramelac and I work at **Capgemini** and we thank them for allocating some time 
 
 |
 
-We also thank **HackTheBox** for continuously supporting the community and for helping us financially to acquire the necessary hardware for supporting multiple architectures (AMD64, ARM64). Show some love at https://www.hackthebox.com/ !
+We thank **HackTheBox** for continuously supporting the community and for helping us financially to acquire the necessary hardware for supporting multiple architectures (AMD64, ARM64). Show some love at https://www.hackthebox.com/ !
 
+
+.. image:: https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png
+   :align: center
+   :width: 200px
+   :alt: JetBrains logo
+
+|
+
+We thank **JetBrains** for supporting this community project through its OpenSource support program. More information at https://jb.gg/OpenSourceSupport !

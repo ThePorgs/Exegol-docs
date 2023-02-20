@@ -41,15 +41,20 @@ Additional dependencies may be required depending on the host OS.
            .. code-block:: bash
 
               curl -fsSL "https://get.docker.com/" -o get-docker.sh
+              sh get-docker.sh
 
         .. warning::
 
-           To run exegol from the user environment without `sudo`, the user must have privileged rights equivalent to root.
+           To run exegol from the user environment without ``sudo``, the user must have privileged rights equivalent to root.
            To grant yourself these rights, you can use the following command
 
            .. code-block:: bash
 
+              # add the sudo group to the user
               sudo usermod -aG docker $(id -u -n)
+
+              # "reload" the user groups
+              newgrp
 
            For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
 

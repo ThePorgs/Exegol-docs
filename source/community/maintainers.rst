@@ -4,14 +4,16 @@ Maintainers
 
 This part of the documentation is meant for Exegol maintainers.
 
+.. contents::
+
 Exegol Release checklist
 ========================
 
 Preparation
 -----------
 
-Git updates
-~~~~~~~~~~~
+1. Git updates
+~~~~~~~~~~~~~~
 
 The first step is to update the project and sub-modules, meaning pointing the exegol-images and exegol-resources sub-modules to the latest master version.
 Even if the wrapper is able to auto-update itself, it is always better to keep the base reference at least up to date.
@@ -43,8 +45,8 @@ Even if the wrapper is able to auto-update itself, it is always better to keep t
 
             exegol update -v
 
-Configs
-~~~~~~~
+2. Config reviews
+~~~~~~~~~~~~~~~~~
 
 * Review exegol.utils.ConstantConfig variables
 
@@ -105,3 +107,166 @@ Post-Deploy
 * Create new github release with new version tag
 * Fast-forward dev branch to the latest master commit
 * Change the wrapper version on the dev branch to ``x.y.zb1``
+
+CI/CD Pipeline
+==============
+
+The Exegol project relies on a continuous integration and continuous deployment (CI/CD) pipeline for multiple scenarios. At the time of writing, Tue 31 Jan 2023, the pipeline is structured as follows:
+
+* the GitHub Actions platform is used on :doc:`the Exegol-images submodule </the-exegol-project/docker-images>`. Its workflows allow to build and push images on `the official Dockerhub registry <https://hub.docker.com/repository/docker/nwodtuhs/exegol>`_, run tests to make sure the tools are installed properly, run tests to help review pull requests, etc. GitHub Actions workflows are also being developped for packaging and publishing the Python wrapper on PyPI (`Exegol on PyPI <https://pypi.org/project/Exegol>`_).
+* no pipeline(s) yet on the Python wrapper, resources, docs, etc. But it's definitely in the roadmap.
+
+GitHub Actions
+--------------
+
+The GitHub Actions pipeline(s) need runners to operate the various jobs configured for each workflow. The Exegol project relies on self-hosted runners instead of the GitHub-hosted runners mainly for costing reasons.
+
+At the time of writing, Tue 31 Jan 2023, the Exegol-images pipeline(s) require ARM64 and AMD64 runners in order to build, and run corresponding architectured images.
+
+1. Setting up secrets
+~~~~~~~~~~~~~~~~~~~~~
+
+There are some operations that the runner will operate that will require authentication, including:
+- pushing Python packages on PyPI
+- pushing Docker images on Dockerhub
+
+In order to allow this, GitHub Actions can be set up with secrets that the runner will be able to use later on. This part of the documentation shows what secrets must be set up and how.
+
+..  tabs::
+
+    ..  tab:: PyPI
+
+        API Tokens can be created in the maintainer account's `PyPI account settings <https://pypi.org/manage/account/>`_, in the **API Tokens** part. The scope must be set to ``Project: Exegol``. The tokens are linked to the personal PyPI account.
+
+    ..  tab:: Dockerhub
+
+        Access Tokens can be created in the maintainer account's `Dockerhub security settings <https://hub.docker.com/settings/security>`_. Permissions must be set to ``Read, Write, Delete``. The tokens are linked to the personal Dockerhub account.
+
+Once the token is created, it can be added as follows:
+
+- For Exegol-images, go to the `Exegol-images repo settings > secrets > actions <https://github.com/ThePorgs/Exegol-images/settings/secrets/actions>`_. At the time of writing, 11 Feb. 2023, Dockerhub secrets are named ``DOCKER_USERNAME`` and ``DOCKER_PASSWORD`` in the workflows.
+
+- For the Python wrapper, go to the `Exegol repo settings > secrets > actions <https://github.com/ThePorgs/Exegol/settings/secrets/actions>`_. At the time of writing, 11 Feb. 2023, the PyPI token is named ``PYPI_API_TOKEN`` in the workflows.
+
+2. Deploying a runner
+~~~~~~~~~~~~~~~~~~~~~
+
+The runner can either run on macOS, Linux, or Windows, as those three operating systems are supporting by the GHA (GitHub Action) platform. x64 and ARM64 are supported for macOS and Windows, and for Linux, ARM is supported as well.
+
+Below are the hardware requirements for each runner:
+
+* enough RAM *(to be defined)*
+* enough CPU *(to be defined)*
+* enough free disk space (at least ~30GB, bare minimum)
+
+Before deploying a GHA agent on a runner, Docker must be installed. Note the following documentation focuses on deploying an agent on Linux and macOS systems, as the Exegol runners don't use Windows.
+
+..  tabs::
+
+    ..  tab:: Linux
+
+        For Linux systems, Docker is required in order to have the GitHub Actions agent running.
+
+        .. tip::
+
+            Docker can be installed quickly and easily with the following command-line:
+
+            .. code-block:: bash
+
+                curl -fsSL "https://get.docker.com/" -o get-docker.sh
+                sh get-docker.sh
+
+        .. warning::
+
+            To run exegol from the user environment without ``sudo``, the user must have privileged rights equivalent to root.
+            To grant yourself these rights, you can use the following command
+
+            .. code-block:: bash
+
+                # add the sudo group to the user
+                sudo usermod -aG docker $(id -u -n)
+
+                # "reload" the user groups
+                newgrp
+
+        Once the requirements are met, the agent can be deployed as follows (with sufficient permissions in the GitHub repository):
+
+        * go to https://github.com/ThePorgs/Exegol-images/settings/actions/runners
+        * click on "New self-hosted runner"
+        * select ``Linux`` as operating system, as well as the right architecture and follow the instructions
+        * when running the ``config.sh`` script, the following settings must be set
+
+            * name of the runner group: Default
+            * name of the runner: *up to you*
+            * additional labels: ``builder,tester`` (adapt this if the runner is to be used for only one of those actions). If the runner is an X64/AMD64, the ``AMD64`` tag needs to be set as well. If the runner is ARM64, the right tag will be set automatically.
+            * name of work folder: *up to you*
+
+        * start the runner with the ``run.sh`` script
+        * (option) configure the agent as a service if it is to be run unattended/headless with ``sudo ./svc.sh install <user>``, more info at https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service
+
+
+        .. note::
+
+            When configuring the agent as a service, it will be enabled, meaning it will start at boot. The ``systemctl is-enabled`` command should return ``enabled``.
+
+            .. code-block:: bash
+
+                sudo systemctl is-enabled actions.runner.ThePorgs-Exegol-images.<runner-name>.service
+
+            In order to start the service, either reboot the runner, or use ``systemctl``.
+
+            .. code-block:: bash
+
+                sudo systemctl start actions.runner.ThePorgs-Exegol-images.<runner-name>.service
+
+        .. image:: /assets/maintainers/gha_deployment/step_1.png
+           :align: center
+           :alt: Created a new runner
+
+        .. image:: /assets/maintainers/gha_deployment/step_2.png
+           :align: center
+           :alt: Configuring the runner (GitHub)
+
+        .. image:: /assets/maintainers/gha_deployment/step_3.png
+           :align: center
+           :alt: Configuring the runner (Local)
+
+
+        .. note::
+
+            Screenshots annotated with https://annotely.com/
+    ..  tab:: macOS
+
+        For macOS, **Docker Desktop** must be installed: https://docs.docker.com/desktop/install/mac-install/.
+
+        **Xcode Command Line Tools** are also required, and they can be installed with the following command line.
+
+        .. code-block:: bash
+
+            xcode-select --install
+
+        Once the requirements are met, the agent can be deployed as follows (with sufficient permissions in the GitHub repository):
+
+        * go to https://github.com/ThePorgs/Exegol-images/settings/actions/runners
+        * click on "New self-hosted runner"
+        * select ``macOS`` as operating system, as well as the right architecture and follow the instructions
+        * when running the ``config.sh`` script, the following settings must be set
+
+            * name of the runner group: Default
+            * name of the runner: *up to you*
+            * additional labels: ``builder,tester`` (adapt this if the runner is to be used for only one of those actions). If the runner is an X64/AMD64, the ``AMD64`` tag needs to be set as well. If the runner is ARM64, the right tag will be set automatically.
+            * name of work folder: *up to you*
+
+        * start the runner with the ``run.sh`` script
+        * (option) configure the agent as a service if it is to be run unattended/headless with ``./svc.sh install``, more info at https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service
+
+        .. note::
+
+            **TODO** : how to make that service run at boot unattended ?
+
+
+
+3. Checking runners status
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Go to https://github.com/ThePorgs/Exegol-images/settings/actions/runners
