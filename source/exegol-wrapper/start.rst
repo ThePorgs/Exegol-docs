@@ -46,6 +46,8 @@ Many options exist to customize the creation of exegol container.
 ``-fs``, ``--update-fs``                                    Modifies the permissions of folders and sub-folders shared in your workspace to access the files created within the container using your host user account. (default: Disabled)
 ``-V VOLUMES``, ``--volume VOLUMES``                        Share a new volume between host and exegol (format: --volume /path/on/host/:/path/in/container/).
 ``-p PORTS``, ``--port PORTS``                              Share a network port between host and exegol (format: --port [<host_ipv4>:]<host_port>[:<container_port>][:<protocol>]. This configuration will disable the shared network with the host.
+``--hostname HOSTNAME``                                     Set a custom hostname to the exegol container (default: exegol-<name>)
+``--cap CAPABILITIES``                                      **(dangerous)** Capabilities allow to add specific privileges to the container (e.g. need to mount volumes, perform low-level operations on the network, etc).
 ``--privileged``                                            **(dangerous)** give extended privileges at the container creation (e.g. needed to mount things, to use wifi or bluetooth)
 ``-d DEVICES``, ``--device DEVICES``                        Add host device(s) at the container creation (example: -d /dev/ttyACM0 -d /dev/bus/usb/).
 ``--disable-X11``                                           Disable display sharing to run GUI-based applications. (default: Enabled)
