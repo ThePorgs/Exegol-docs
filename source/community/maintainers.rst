@@ -6,8 +6,8 @@ This part of the documentation is meant for Exegol maintainers.
 
 .. contents::
 
-Exegol Release checklist
-========================
+Wrapper release
+===============
 
 Preparation
 -----------
@@ -107,6 +107,59 @@ Post-Deploy
 * Create new github release with new version tag
 * Fast-forward dev branch to the latest master commit
 * Change the wrapper version on the dev branch to ``x.y.zb1``
+
+Images release
+==============
+
+Prepare changes
+---------------
+
+The first step consists in preparing the ``dev`` branch for merge.
+
+1. create a pull request ``dev -> main`` named ``Release X.Y.Z`` (``Release X.Y.ZbI`` is also accepted, X, Y, Z and I being numbers. Creating this pull request will trigger the **pre-release** wrkflows. The PR comment must indicate all major changes.
+
+2. edit the ``dev`` branch until the pull requests checks (pipeline) all pass, effectively publishing all images to the preproduction Dockerhub registry
+
+3. once all checks are good, the PR needs to be approved by a maintainer.
+
+Merge changes
+-------------
+
+Once the PR is approved and ready for merge, it can be merged
+
+1. merge the PR with **Create a merge commit**
+
+2. maintainer then needs to switch to SmartGit/PyCharm/whatever and pull all changes
+
+3. checkout to ``dev`` branch
+
+4. select the merge commit on the ``main`` branch, and do a **fast-forward merge** to have the ``dev`` and ``main`` branches point to the same commit.
+
+5. push the fast-forward merge commit (to dev)
+
+New tag
+-------
+
+The ``X.Y.Z`` (or ``X.Y.ZbI``) tag then needs to be placed on the same commit the ``dev`` and ``main`` branches point to. The "Annotated Tag Message" can be set to the PR initial comment.
+
+Puhing this tag will trigger the **release** workflow. Simply put, the workflow will migrate the images from preprod registry to production registry.
+
+Maintainers needs to make sure workflow goes as planned and images end up in the prod Dockerhub registry.
+
+Publish release
+---------------
+
+The final step is to create a "release" in github (https://github.com/ThePorgs/Exegol-images/releases/new).
+
+1. The release must point to the tag created before.
+
+2. The release must be named ``Exegol images X.Y.Z``.
+
+3. The release notes can be created with the **Generate releases notes** button.
+
+4. Set it as **latest release**.
+
+5. Publish
 
 CI/CD Pipeline
 ==============
