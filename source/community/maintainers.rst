@@ -245,6 +245,12 @@ Before deploying a GHA agent on a runner, software requirements must be met:
                 # "reload" the user groups
                 newgrp
 
+        The ``jq`` utility is also required and can be installed with the following command line:
+
+        .. code-block:: bash
+
+            apt install jq
+
         Once the requirements are met, the agent can be deployed as follows (with sufficient permissions in the GitHub repository):
 
         * go to https://github.com/ThePorgs/Exegol-images/settings/actions/runners
