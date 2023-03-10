@@ -116,7 +116,7 @@ Prepare changes
 
 The first step consists in preparing the ``dev`` branch for merge.
 
-1. create a pull request ``dev -> main`` named ``Release X.Y.Z`` (``Release X.Y.ZbI`` is also accepted, X, Y, Z and I being numbers. Creating this pull request will trigger the **pre-release** wrkflows. The PR comment must indicate all major changes.
+1. create a pull request ``dev -> main`` named ``Release X.Y.Z`` (``Release X.Y.ZbI`` is also accepted, X, Y, Z and I being numbers. Creating this pull request will trigger the **pre-release** workflows. The PR comment must indicate all major changes.
 
 2. edit the ``dev`` branch until the pull requests checks (pipeline) all pass, effectively publishing all images to the preproduction Dockerhub registry
 
@@ -129,13 +129,14 @@ Once the PR is approved and ready for merge, it can be merged
 
 1. merge the PR with **Create a merge commit**
 
-2. maintainer then needs to switch to SmartGit/PyCharm/whatever and pull all changes
+2. Synchronize the ``dev`` branch with the latest ``main`` update with a **fast-forward merge**
 
-3. checkout to ``dev`` branch
+.. code-block:: bash
 
-4. select the merge commit on the ``main`` branch, and do a **fast-forward merge** to have the ``dev`` and ``main`` branches point to the same commit.
-
-5. push the fast-forward merge commit (to dev)
+    git pull --all
+    git checkout dev
+    git merge --ff-only main
+    git push
 
 New tag
 -------
