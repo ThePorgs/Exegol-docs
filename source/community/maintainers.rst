@@ -141,11 +141,18 @@ Once the PR is approved and ready for merge, it can be merged
 New tag
 -------
 
-The ``X.Y.Z`` (or ``X.Y.ZbI``) tag then needs to be placed on the same commit the ``dev`` and ``main`` branches point to. The "Annotated Tag Message" can be set to the PR initial comment.
+The ``X.Y.Z`` (or ``X.Y.ZbI``) tag then needs to be placed on the same commit the ``dev`` and ``main`` branches point to.
+
+Optionally, the "Annotated Tag Message" can be set to the PR initial comment with the ``--file message.txt`` argument in the ``git tag`` command below.
+
+.. code-block:: bash
+
+    git tag "X.Y.Z"
+    git push origin --tags
 
 Puhing this tag will trigger the **release** workflow. Simply put, the workflow will migrate the images from preprod registry to production registry.
 
-Maintainers needs to make sure workflow goes as planned and images end up in the prod Dockerhub registry.
+Maintainers needs to make sure workflow goes as planned and images end up in the prod Dockerhub registry. If the release fails for some reason, the tag can be deleted, changes pushed, and then the tag can be created again to trigger the release again (``git tag -d "X.Y.Z" && git push --delete origin "X.Y.Z"``).
 
 Publish release
 ---------------
