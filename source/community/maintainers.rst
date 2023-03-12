@@ -9,6 +9,9 @@ This part of the documentation is meant for Exegol maintainers.
 Wrapper release
 ===============
 
+.. hint::
+    The wrapper documentation must be aligned with the wrapper features. Make sure to add code to the appropriate `Exegol docs <https://github.com/ThePorgs/Exegol-docs>`_ branch and have a pull request ready. The docs PR can be merged once the wrapper is released.
+
 Preparation
 -----------
 
@@ -110,6 +113,9 @@ Post-Deploy
 
 Images release
 ==============
+
+.. hint::
+    The images documentation must be aligned with the images features. Make sure to add code to the appropriate `Exegol docs <https://github.com/ThePorgs/Exegol-docs>`_ branch and have a pull request ready. The docs PR can be merged once the images are released.
 
 Prepare changes
 ---------------
