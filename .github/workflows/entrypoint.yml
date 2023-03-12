@@ -1,4 +1,4 @@
-name: Nightly build
+name: Build
 
 on:
   push:
@@ -15,7 +15,6 @@ jobs:
   build:
     name: Prepare runner
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - uses: actions/checkout@master
         with:
