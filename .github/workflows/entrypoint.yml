@@ -1,9 +1,9 @@
-name: Build
+name: Build doc
 
 on:
   push:
     paths-ignore:
-#      - ".github/**"
+      - ".github/**"
       - "**.md"
   pull_request:
     paths-ignore:
@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Prepare runner
+    name: Build doc
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
