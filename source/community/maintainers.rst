@@ -6,8 +6,11 @@ This part of the documentation is meant for Exegol maintainers.
 
 .. contents::
 
-Exegol Release checklist
-========================
+Wrapper release
+===============
+
+.. hint::
+    The wrapper documentation must be aligned with the wrapper features. Make sure to add code to the appropriate `Exegol docs <https://github.com/ThePorgs/Exegol-docs>`_ branch and have a pull request ready. The docs PR can be merged once the wrapper is released.
 
 Preparation
 -----------
@@ -108,6 +111,70 @@ Post-Deploy
 * Fast-forward dev branch to the latest master commit
 * Change the wrapper version on the dev branch to ``x.y.zb1``
 
+Images release
+==============
+
+.. hint::
+    The images documentation must be aligned with the images features. Make sure to add code to the appropriate `Exegol docs <https://github.com/ThePorgs/Exegol-docs>`_ branch and have a pull request ready. The docs PR can be merged once the images are released.
+
+Prepare changes
+---------------
+
+The first step consists in preparing the ``dev`` branch for merge.
+
+1. create a pull request ``dev -> main`` named ``Release X.Y.Z`` (``Release X.Y.ZbI`` is also accepted, X, Y, Z and I being numbers. Creating this pull request will trigger the **pre-release** workflows. The PR comment must indicate all major changes.
+
+2. edit the ``dev`` branch until the pull requests checks (pipeline) all pass, effectively publishing all images to the preproduction Dockerhub registry
+
+3. once all checks are good, the PR needs to be approved by a maintainer.
+
+Merge changes
+-------------
+
+Once the PR is approved and ready for merge, it can be merged
+
+1. merge the PR with **Create a merge commit**
+
+2. Synchronize the ``dev`` branch with the latest ``main`` update with a **fast-forward merge**
+
+.. code-block:: bash
+
+    git pull --all
+    git checkout dev
+    git merge --ff-only main
+    git push
+
+New tag
+-------
+
+The ``X.Y.Z`` (or ``X.Y.ZbI``) tag then needs to be placed on the same commit the ``dev`` and ``main`` branches point to.
+
+Optionally, the "Annotated Tag Message" can be set to the PR initial comment with the ``--file message.txt`` argument in the ``git tag`` command below.
+
+.. code-block:: bash
+
+    git tag "X.Y.Z"
+    git push origin --tags
+
+Puhing this tag will trigger the **release** workflow. Simply put, the workflow will migrate the images from preprod registry to production registry.
+
+Maintainers needs to make sure workflow goes as planned and images end up in the prod Dockerhub registry. If the release fails for some reason, the tag can be deleted, changes pushed, and then the tag can be created again to trigger the release again (``git tag -d "X.Y.Z" && git push --delete origin "X.Y.Z"``).
+
+Publish release
+---------------
+
+The final step is to create a "release" in github (https://github.com/ThePorgs/Exegol-images/releases/new).
+
+1. The release must point to the tag created before.
+
+2. The release must be named ``Exegol images X.Y.Z``.
+
+3. The release notes can be created with the **Generate releases notes** button.
+
+4. Set it as **latest release**.
+
+5. Publish
+
 CI/CD Pipeline
 ==============
 
@@ -191,6 +258,12 @@ Before deploying a GHA agent on a runner, software requirements must be met:
 
                 # "reload" the user groups
                 newgrp
+
+        The ``jq`` utility is also required and can be installed with the following command line:
+
+        .. code-block:: bash
+
+            apt install jq
 
         Once the requirements are met, the agent can be deployed as follows (with sufficient permissions in the GitHub repository):
 

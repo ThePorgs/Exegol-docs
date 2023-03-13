@@ -37,6 +37,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 :ref:`Port sharing<feature_port_sharing>`           Support for port publishing
 :ref:`Env. variables<feature_env>`                  Support for environment variable configuration
 :ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
+:ref:`Custom hostname<feature_hostname>`            Support for customizing a specific container hostname
 :ref:`Capabilities<feature_capabilities>`           Support for adding specific capabilities
 :ref:`Privileged<feature_privileged>`               Support of the privileged mode
 :ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
@@ -100,7 +101,7 @@ This system is **automatically activated** when a **new** default workspace is c
 .. warning::
     When the user uses an existing custom folder as workspace, this system is **disabled** by default! This feature can be **enabled by default** by changing the :ref:`configuration of Exegol<exegol_configuration>`.
 
-    Its activation is possible manually (see the option ``--update-fs`` of the :ref:`start action <start_options>`) but it will lead to the **modification** of the folder and its sub-folders **permissions** (as ``g+s``).
+    Its activation is possible manually (see the option ``--update-fs`` of the :ref:`start action <start_options>`) but it will lead to the **modification** of the folder and its sub-folders **permissions** (as ``g+rws``).
 
     If the user does not have the rights to perform such an operation, a **sudo command** will be proposed to the user that he will have to **execute manually** to apply the necessary permissions for the proper functioning of the functionality (as ``chgrp`` + ``g+rws``).
 
@@ -309,6 +310,16 @@ See the option ``--device DEVICES`` of the :ref:`start action <start_options>` f
 
     Windows and MacOS installations are subject to the constraints and limitations of `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
 
+.. _feature_hostname:
+
+Custom hostname
+---------------
+
+In some environments with OPSEC requirements, it may be necessary to change the hostname of your exegol container.
+
+See the option ``--hostname HOSTNAME`` of the :ref:`start action <start_options>` for more details.
+device
+
 .. _feature_capabilities:
 
 Capabilities
@@ -323,7 +334,7 @@ For more details on the capabilities supported by docker `check here <https://do
 .. warning::
     Not all Linux capabilities are allowed by the Exegol wrapper, here is the list of available capabilities:
 
-    SYS_RAWIO, SYS_MODULE, NET_BROADCAST, NET_ADMIN, SYS_CHROOT, MKNOD, NET_RAW, SYS_ADMIN, SETFCAP, SYS_PTRACE
+    NET_ADMIN, NET_BROADCAST, SYS_MODULE, SYS_PTRACE, SYS_RAWIO, SYS_ADMIN, LINUX_IMMUTABLE, MAC_ADMIN, SYSLOG
 
     For all other needs, consider the :ref:`privileged <feature_privileged>` mode.
 
