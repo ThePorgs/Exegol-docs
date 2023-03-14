@@ -45,16 +45,15 @@ Additional dependencies may be required depending on the host OS.
 
         .. warning::
 
-           To run exegol from the user environment without ``sudo``, the user must have privileged rights equivalent to root.
-           To grant yourself these rights, you can use the following command
+           By default, ``sudo`` will be required when running docker, hence needed as well for Exegol. For security reasons, it should stay that way, but it's possible to change that. In order to run exegol from the user environment without ``sudo``, the user must have the appropriate rights. You can use the following command to grant them to the current user:
 
            .. code-block:: bash
 
               # add the sudo group to the user
               sudo usermod -aG docker $(id -u -n)
 
-              # "reload" the user groups
-              newgrp
+              # "reload" the user groups with the newly added docker group
+              newgrp docker
 
            For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
 
