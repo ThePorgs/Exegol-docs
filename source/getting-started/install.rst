@@ -1,6 +1,6 @@
-=======
-Install
-=======
+==============
+Install Exegol
+==============
 
 Installing Exegol starts with installing the entrypoint to the whole project: the Python wrapper. Once the wrapper is installed, everything else can be managed from it.
 
@@ -116,7 +116,26 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
         .. code-block:: bash
 
            git clone "https://github.com/ThePorgs/Exegol"
-           python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
+        If you have access to docker directly as a user, you can install the requirements only for your current user
+        otherwise the requirements must be installed as root to run Exegol with sudo.
+
+        .. tabs::
+
+            .. tab:: With sudo
+
+                .. code-block:: bash
+
+                   sudo python3 -m pip install --requirement "Exegol/requirements.txt"
+
+            .. tab:: Directly as user
+
+                .. code-block:: bash
+
+                   python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
+
+
 
 
 2. Adding Exegol to the ``PATH``
