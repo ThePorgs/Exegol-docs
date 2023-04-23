@@ -1,6 +1,6 @@
-=======
-Install
-=======
+==============
+Install Exegol
+==============
 
 Installing Exegol starts with installing the entrypoint to the whole project: the Python wrapper. Once the wrapper is installed, everything else can be managed from it.
 
@@ -174,7 +174,66 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                     It is possible to disable this behavior in the Windows settings: ``Apps > Apps & features > App execution aliases`` and disable aliases for ``python.exe`` and ``python3.exe``.
 
-3. Installation of the first Exegol image
+3. (Optional) Using Exegol auto-completion
+------------------------------------------
+
+Exegol supports autocompletion in many shell environments but there is a configuration to add for this feature to work.
+
+.. tip::
+
+    If you have a source installation, make sure you have installed (or updated) the ``requirements.txt`` packages before using the completer.
+
+..  tabs::
+    ..  tabs::
+        .. tab:: Bash
+
+            Add the following command in your ``~/.bashrc`` config:
+
+            .. code-block:: bash
+
+                eval "$(register-python-argcomplete exegol)"
+
+            .. tip::
+                If you have multiple tools using ``argcomplete`` you can also use the `global completion <https://kislyuk.github.io/argcomplete/#global-completion>`__ method (need bash >= 4.2).
+
+        .. tab:: Zsh
+
+            To activate completions for zsh you need to have ``bashcompinit`` enabled in zsh:
+
+            .. code-block:: bash
+
+                autoload -U bashcompinit
+                bashcompinit
+
+            Afterwards you can enable completion by adding the following command in your ``~/.zshrc`` config:
+
+            .. code-block:: bash
+
+                eval "$(register-python-argcomplete exegol)"
+
+        .. tab:: Fish
+
+            To activate completions for fish use:
+
+            .. code-block:: bash
+
+                register-python-argcomplete --shell fish exegol | source
+
+            or create new completion file, e.g:
+
+            .. code-block:: bash
+
+                register-python-argcomplete --shell fish exegol > ~/.config/fish/completions/exegol.fish
+
+        .. tab:: Tcsh
+
+            To activate completions for tcsh use:
+
+            .. code-block:: bash
+
+                eval `register-python-argcomplete --shell tcsh exegol`
+
+4. Installation of the first Exegol image
 -----------------------------------------
 
 Once the exegol wrapper is installed, you can download your first docker image with the following command:
