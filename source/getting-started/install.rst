@@ -1,6 +1,6 @@
-=======
-Install
-=======
+==============
+Install Exegol
+==============
 
 Installing Exegol starts with installing the entrypoint to the whole project: the Python wrapper. Once the wrapper is installed, everything else can be managed from it.
 
@@ -45,16 +45,15 @@ Additional dependencies may be required depending on the host OS.
 
         .. warning::
 
-           To run exegol from the user environment without ``sudo``, the user must have privileged rights equivalent to root.
-           To grant yourself these rights, you can use the following command
+           By default, ``sudo`` will be required when running docker, hence needed as well for Exegol. For security reasons, it should stay that way, but it's possible to change that. In order to run exegol from the user environment without ``sudo``, the user must have the appropriate rights. You can use the following command to grant them to the current user:
 
            .. code-block:: bash
 
               # add the sudo group to the user
               sudo usermod -aG docker $(id -u -n)
 
-              # "reload" the user groups
-              newgrp
+              # "reload" the user groups with the newly added docker group
+              newgrp docker
 
            For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
 
@@ -117,7 +116,26 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
         .. code-block:: bash
 
            git clone "https://github.com/ThePorgs/Exegol"
-           python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
+        If you have access to docker directly as a user, you can install the requirements only for your current user
+        otherwise the requirements must be installed as root to run Exegol with sudo.
+
+        .. tabs::
+
+            .. tab:: With sudo
+
+                .. code-block:: bash
+
+                   sudo python3 -m pip install --requirement "Exegol/requirements.txt"
+
+            .. tab:: Directly as user
+
+                .. code-block:: bash
+
+                   python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
+
+
 
 
 2. Adding Exegol to the ``PATH``
