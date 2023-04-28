@@ -209,7 +209,7 @@ Exegol supports autocompletion in many shell environments but there is a configu
 
             .. code-block:: bash
 
-                eval "$(register-python-argcomplete exegol)"
+                eval "$(register-python-argcomplete --no-defaults exegol)"
 
             .. tip::
                 If you have multiple tools using ``argcomplete`` you can also use the `global completion <https://kislyuk.github.io/argcomplete/#global-completion>`__ method (need bash >= 4.2).
@@ -227,7 +227,7 @@ Exegol supports autocompletion in many shell environments but there is a configu
 
             .. code-block:: bash
 
-                eval "$(register-python-argcomplete exegol)"
+                eval "$(register-python-argcomplete --no-defaults exegol)"
 
         .. tab:: Fish
 
@@ -235,13 +235,13 @@ Exegol supports autocompletion in many shell environments but there is a configu
 
             .. code-block:: bash
 
-                register-python-argcomplete --shell fish exegol | source
+                register-python-argcomplete --no-defaults --shell fish exegol | source
 
             or create new completion file, e.g:
 
             .. code-block:: bash
 
-                register-python-argcomplete --shell fish exegol > ~/.config/fish/completions/exegol.fish
+                register-python-argcomplete --no-defaults --shell fish exegol > ~/.config/fish/completions/exegol.fish
 
         .. tab:: Tcsh
 
@@ -249,7 +249,7 @@ Exegol supports autocompletion in many shell environments but there is a configu
 
             .. code-block:: bash
 
-                eval `register-python-argcomplete --shell tcsh exegol`
+                eval `register-python-argcomplete --no-defaults --shell tcsh exegol`
 
 4. Installation of the first Exegol image
 -----------------------------------------
