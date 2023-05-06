@@ -107,6 +107,7 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    exegol-wrapper/exec.rst
    exegol-wrapper/update.rst
    exegol-wrapper/stop.rst
+   exegol-wrapper/restart.rst
    exegol-wrapper/remove.rst
    exegol-wrapper/uninstall.rst
    exegol-wrapper/version.rst
