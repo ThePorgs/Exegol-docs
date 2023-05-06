@@ -1,3 +1,4 @@
+import datetime
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -7,7 +8,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Exegol'
-copyright = '2022, Shutdown & Dramelac'
+copyright = f'{datetime.datetime.now().year}, Shutdown & Dramelac'
 author = 'Shutdown & Dramelac'
 release = '4.1.0'
 
