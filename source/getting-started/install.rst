@@ -195,7 +195,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 3. (Optional) Using Exegol auto-completion
 ------------------------------------------
 
-Exegol supports autocompletion in many shell environments but there is a configuration to add for this feature to work.
+Exegol supports auto-completion in many shell environments but there is a configuration to add for this feature to work.
 
 .. tip::
 
@@ -205,11 +205,34 @@ Exegol supports autocompletion in many shell environments but there is a configu
     ..  tabs::
         .. tab:: Bash
 
-            Add the following command in your ``~/.bashrc`` config:
+            You can enable Exegol auto-completion for your **current user** with your ``.bashrc`` or you can enable the auto-completion **system-wide** with ``bash-completion``.
 
-            .. code-block:: bash
+            ..  tabs::
 
-                eval "$(register-python-argcomplete --no-defaults exegol)"
+                .. tab:: Via bash-completion
+
+                    To setup the auto-completion system-wide you first need to install ``bash-completion`` on your system (if not already installed).
+
+                    .. code-block:: bash
+
+                        sudo apt update && sudo apt install bash-completion
+
+                    At this point you should have a ``/etc/bash_completion.d/`` folder. It's in there that you can add any auto-completion module that you want.
+
+                    To generate and install the exegol completion configuration you can execute the following command with ``register-python-argcomplete``:
+
+                    .. code-block:: bash
+
+                        register-python-argcomplete --no-defaults exegol | sudo tee /etc/bash_completion.d/exegol > /dev/null
+
+                .. tab:: Via .bashrc
+
+                    Add the following command in your ``~/.bashrc`` config:
+
+                    .. code-block:: bash
+
+                        eval "$(register-python-argcomplete --no-defaults exegol)"
+
 
             .. tip::
                 If you have multiple tools using ``argcomplete`` you can also use the `global completion <https://kislyuk.github.io/argcomplete/#global-completion>`__ method (need bash >= 4.2).
