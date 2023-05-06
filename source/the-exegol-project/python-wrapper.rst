@@ -38,6 +38,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 :ref:`Env. variables<feature_env>`                  Support for environment variable configuration
 :ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
 :ref:`Custom hostname<feature_hostname>`            Support for customizing a specific container hostname
+:ref:`Comments <feature_comment>`                    User can add any text comments to the container
 :ref:`Capabilities<feature_capabilities>`           Support for adding specific capabilities
 :ref:`Privileged<feature_privileged>`               Support of the privileged mode
 :ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
@@ -318,7 +319,16 @@ Custom hostname
 In some environments with OPSEC requirements, it may be necessary to change the hostname of your exegol container.
 
 See the option ``--hostname HOSTNAME`` of the :ref:`start action <start_options>` for more details.
-device
+
+.. _feature_comment:
+
+Comments
+--------
+
+To add more context information about an exegol container, it is possible to add **comments** to each Exegol container.
+The comment of an exegol container can be displayed with the command ``exegol info <container_name>``
+
+See the option ``--comment COMMENT`` of the :ref:`start action <start_options>` for more details.
 
 .. _feature_capabilities:
 
