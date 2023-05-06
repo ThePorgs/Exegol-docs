@@ -77,6 +77,12 @@ Additional dependencies may be required depending on the host OS.
 
             macOS Docker Desktop resources requirement
 
+        .. tip::
+
+            **OrbStack** for **Mac** is supported by Exegol wrapper from ``v4.1.2``.
+
+            This support is still in beta, feel free to open issues on `GitHub <https://github.com/ThePorgs/Exegol/issues/new/choose>`__ if you encounter any bugs.
+
     ..  group-tab:: Windows
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
