@@ -79,7 +79,7 @@ Additional dependencies may be required depending on the host OS.
 
         .. tip::
 
-            **OrbStack** for **Mac** is supported by Exegol wrapper from ``v4.1.2``.
+            `OrbStack <https://orbstack.dev/>`__ for **Mac** is supported by Exegol wrapper from ``v4.1.2``.
 
             This support is still in beta, feel free to open issues on `GitHub <https://github.com/ThePorgs/Exegol/issues/new/choose>`__ if you encounter any bugs.
 
