@@ -127,9 +127,9 @@ Command examples
    # Get a shell based on tmux
    exegol start --shell tmux
 
-   # Use a Proxmark
+   # Share a specific hardware device (like Proxmark)
    exegol start -d "/dev/ttyACM0"
 
-   # Use an HackRF One
+   # Share every USB device connected to the host
    exegol start -d "/dev/bus/usb/"
 
