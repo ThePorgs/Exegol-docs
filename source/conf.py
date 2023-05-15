@@ -17,7 +17,8 @@ release = '4.1.0'
 
 extensions = ['myst_parser',
               'sphinx_tabs.tabs',
-              'sphinx_copybutton']
+              'sphinx_copybutton',
+              "sphinxcontrib.jquery"]
 
 templates_path = ['_templates']
 exclude_patterns = []
