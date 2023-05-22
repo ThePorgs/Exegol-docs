@@ -207,9 +207,9 @@ Exegol supports auto-completion in many shell environments but there is a config
 
     If you have a source installation, make sure you have installed (or updated) the ``requirements.txt`` packages before using the completer.
 
-    .. important::
+.. important::
 
-        The following configurations must be made in your **host** environment.
+    The following configurations must be made in your **host** environment.
 
 ..  tabs::
     ..  tabs::

@@ -38,7 +38,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 :ref:`Env. variables<feature_env>`                  Support for environment variable configuration
 :ref:`Device sharing<feature_device_sharing>`       Support for hardware sharing
 :ref:`Custom hostname<feature_hostname>`            Support for customizing a specific container hostname
-:ref:`Comments<feature_comment>`                   User can add any text comments to the container
+:ref:`Comments<feature_comment>`                    User can add any text comments to the container
 :ref:`Capabilities<feature_capabilities>`           Support for adding specific capabilities
 :ref:`Privileged<feature_privileged>`               Support of the privileged mode
 :ref:`Multi-architecture<feature_multi_arch>`       Support for AMD64 and ARM64 architectures
