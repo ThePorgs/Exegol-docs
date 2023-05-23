@@ -1,0 +1,35 @@
+name: Auto-update dev branch
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+jobs:
+  update-branchs:
+    if: github.event.pull_request.merged == true
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set Git config
+      run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions"
+          git fetch --unshallow
+    # TODO handling conflict / skip etc
+    - name: Merge main back to dev
+      run: |
+          git checkout dev
+          git pull
+          git merge main -ff -m "Auto-update dev from main" && git push
+    - name: Merge main back to dev-wrapper
+      run: |
+          git checkout dev-wrapper
+          git pull
+          git merge main -ff -m "Auto-update dev-wrapper from main" && git push
+    - name: Merge main back to dev-images
+      run: |
+          git checkout dev-images
+          git pull
+          git merge main -ff -m "Auto-update dev-images from main" && git push
