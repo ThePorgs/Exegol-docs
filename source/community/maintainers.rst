@@ -48,6 +48,9 @@ Even if the wrapper is able to auto-update itself, it is always better to keep t
 
             exegol update -v
 
+.. important::
+    Don't forget to **reload and commit** any **submodule update** at this step !
+
 2. Config reviews
 ~~~~~~~~~~~~~~~~~
 
@@ -59,6 +62,12 @@ Even if the wrapper is able to auto-update itself, it is always better to keep t
 
 Tests & build
 -------------
+
+First, test the code with mypy:
+
+.. code-block:: bash
+
+    mypy exegol.py --ignore-missing-imports --check-untyped-defs
 
 You can execute this one-liner to check the project and build it.
 
@@ -83,8 +92,13 @@ Post build
 * Publish PR
 * Wait for review and merge
 
-Upload
-------
+Manual Upload
+-------------
+
+.. important::
+    PyPi packaging and upload is now handle by **GitHub action**. It will be triggered with the creation of the **new tag** in the next-step with the release creation.
+
+    **This step is no longer needed.**
 
 After validation of the PR, we can upload the new version package to pypi.
 
@@ -107,7 +121,7 @@ After validation of the PR, we can upload the new version package to pypi.
 Post-Deploy
 -----------
 
-* Create new github release with new version tag
+* Create new github **release** with **new** version tag
 * Fast-forward dev branch to the latest master commit
 * Change the wrapper version on the dev branch to ``x.y.zb1``
 
