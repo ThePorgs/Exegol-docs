@@ -22,14 +22,14 @@ jobs:
       run: |
           git checkout dev
           git pull
-          git merge main -ff -m "Auto-update dev from main" && git push
+          git merge main --ff -m "Auto-update dev from main" && git push || echo "Unable to automatically merge dev"
     - name: Merge main back to dev-wrapper
       run: |
           git checkout dev-wrapper
           git pull
-          git merge main -ff -m "Auto-update dev-wrapper from main" && git push
+          git merge main --ff -m "Auto-update dev-wrapper from main" && git push || echo "Unable to automatically merge dev-wrapper"
     - name: Merge main back to dev-images
       run: |
           git checkout dev-images
           git pull
-          git merge main -ff -m "Auto-update dev-images from main" && git push
+          git merge main --ff -m "Auto-update dev-images from main" && git push || echo "Unable to automatically merge dev-images"
