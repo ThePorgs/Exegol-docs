@@ -415,10 +415,11 @@ When handling pull requests, maintainers may need to `synchronize a contributor'
 
 .. code-block:: bash
 
-    git clone "git@github.com:USER/FORK"
+    git clone "git@github.com:USER/FORK" "dest_dir"
+    cd dest_dir
     git remote add upstream "git@github.com:ThePorgs/REPO"
     git fetch upstream
-    git checkout <your_branch>
-    git merge upstream/dev
+    git checkout "TARGET_FORK_BRANCH"
+    git merge --no-edit upstream/"ORIGIN_BRANCH"
     # solve conflicts if any
     git push
