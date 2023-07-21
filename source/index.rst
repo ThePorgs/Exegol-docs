@@ -123,6 +123,7 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    :hidden:
    :caption: Exegol image
 
+   exegol-image/tools.rst
    exegol-image/credentials.rst
    exegol-image/my-resources.rst
 
