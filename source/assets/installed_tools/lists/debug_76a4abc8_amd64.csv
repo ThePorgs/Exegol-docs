@@ -1,0 +1,5 @@
+Tool,Link,Description
+rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables making it possible to edit and re-run input history
+imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose or convert bitmap images.
+ascii,https://github.com/moul/ascii,ASCII command-line tool to replace images with color-coded ASCII art.
+rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
