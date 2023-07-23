@@ -1,5 +1,5 @@
 Image tag,Version,Arch,Build date,Tools list
-nightly,0301ab7e,arm64,2023-07-22T22:31:50Z,:download:`nightly_0301ab7e_arm64.csv     </assets/installed_tools/lists/nightly_0301ab7e_arm64.csv>`
+nightly,fa9fd39b,arm64,2023-07-23T09:48:26Z,:download:`nightly_fa9fd39b_arm64.csv     </assets/installed_tools/lists/nightly_fa9fd39b_arm64.csv>`
 debug,5da4a4b9,amd64,2023-07-21T04:16:42Z,:download:`debug_5da4a4b9_amd64.csv </assets/installed_tools/lists/debug_5da4a4b9_amd64.csv>`
 debug,5da4a4b9,arm64,2023-07-21T04:16:38Z,:download:`debug_5da4a4b9_arm64.csv </assets/installed_tools/lists/debug_5da4a4b9_arm64.csv>`
 debug,283bf9a7,arm64,2023-07-21T04:06:10Z,:download:`debug_283bf9a7_arm64.csv </assets/installed_tools/lists/debug_283bf9a7_arm64.csv>`
