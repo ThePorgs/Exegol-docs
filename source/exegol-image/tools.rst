@@ -1,9 +1,6 @@
 Tools list
 ===========
 
-.. warning::
-    This page is still a Work-in-Progress, things may be missing, we're on it: `item tracked here <https://github.com/orgs/ThePorgs/projects/1/views/1?pane=issue&itemId=21406532>`_
-
 Click :ref:`here <latest_nightly>` to see the lists of tools featured in the latest nightly images.
 
 .. hint::
