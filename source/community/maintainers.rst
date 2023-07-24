@@ -406,3 +406,20 @@ _____________
 When there's not enough
 
 You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 62 MB
+
+
+Pull Requests
+=============
+
+When handling pull requests, maintainers may need to `synchronize a contributor's fork with latests changes <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_. In command-line, this can be achieved as follows.
+
+.. code-block:: bash
+
+    git clone "git@github.com:USER/FORK" "dest_dir"
+    cd dest_dir
+    git remote add upstream "git@github.com:ThePorgs/REPO"
+    git fetch upstream
+    git checkout "TARGET_FORK_BRANCH"
+    git merge --no-edit upstream/"ORIGIN_BRANCH"
+    # solve conflicts if any
+    git push
