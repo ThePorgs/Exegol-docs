@@ -15,11 +15,6 @@ Click :ref:`here <latest_nightly>` to see the lists of tools featured in the lat
 
 .. _latest_nightly:
 
-Here are the lists of tools featured in the latest nightly images
-
-* :download:`latest_nightly_amd64.csv </assets/installed_tools/latest_nightly_amd64.csv>`
-* :download:`latest_nightly_arm64.csv </assets/installed_tools/latest_nightly_arm64.csv>`
-
 Below is the list of tools featured in the latest nightly (AMD64) image.
 
 .. csv-table::
