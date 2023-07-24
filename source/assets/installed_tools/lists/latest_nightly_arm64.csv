@@ -22,8 +22,8 @@ bettercap,https://github.com/bettercap/bettercap,The Swiss Army knife for 802.11
 binwalk,https://github.com/ReFirmLabs/binwalk,Binwalk is a tool for analyzing / reverse engineering / and extracting firmware images.
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 bloodhound-import,https://github.com/fox-it/BloodHound.py,Import data into BloodHound for analyzing active directory trust relationships
-bloodhound-py,https://github.com/fox-it/BloodHound.py,Trust relationship analysis tool for Active Directory environments.
 bloodhound-quickwin,https://github.com/kaluche/bloodhound-quickwin,A tool for BloodHounding on Windows machines without .NET or Powershell installed
+bloodhound.py,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
 bolt,https://github.com/s0md3v/bolt,TODO
 bqm,https://github.com/Acceis/bqm
 brakeman,https://github.com/presidentbeef/brakeman,Static analysis tool for Ruby on Rails applications
@@ -236,7 +236,7 @@ rsactftool,https://github.com/RsaCtfTool/RsaCtfTool,The rsactftool tool is used 
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 rtl-433,https://github.com/merbanan/rtl_433,Tool for decoding various wireless protocols/ signals such as those used by weather stations
 ruler,https://github.com/sensepost/ruler,Outlook Rules exploitation framework.
-rusthound,https://github.com/OPENCYBER-FR/RustHound,Rusthound is a tool for searching through git repositories for secrets and sensitive information.
+rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
 scout,https://github.com/nccgroup/ScoutSuite,Scout Suite is an open source multi-cloud security-auditing tool which enables security posture assessment of cloud environments.
 searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
