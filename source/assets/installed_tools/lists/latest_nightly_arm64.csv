@@ -239,6 +239,7 @@ ruler,https://github.com/sensepost/ruler,Outlook Rules exploitation framework.
 rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
 scout,https://github.com/nccgroup/ScoutSuite,Scout Suite is an open source multi-cloud security-auditing tool which enables security posture assessment of cloud environments.
+scrcpy,https://github.com/Genymobile/scrcpy,Display and control your Android device.
 searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
 seclists,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
 semgrep,https://github.com/returntocorp/semgrep/,Static analysis tool that supports multiple languages and can find a variety of vulnerabilities and coding errors.
