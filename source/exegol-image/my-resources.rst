@@ -67,6 +67,23 @@ A system exists to easily install arbitrary APT packages in any new exegol conta
 * Importing custom repositories usually requires importing **GPG keys** as well, which can be done by entering trusted GPG keys download URLs in the ``/opt/my-resources/setup/apt/keys.list`` file
 * To install **APT packages** automatically (after updating the repository including the custom ones), just enter a list of package names in the ``/opt/my-resources/setup/apt/packages.list`` file
 
+:code:`bloodhound` (customqueries, config)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``3.1.0`` of any exegol AD image.
+
+A system exists to easily add one or **several** bloodhound customqueries files, or change its configuration file in any new exegol container.
+
+To automatically:
+
+* overwrite the ``~/.config/bloodhound/config.json`` configuration file, simply create the file ``/opt/my-resources/setup/bloodhound/config.json``
+* replace the default exegol customqueries, place one or several valid customqueries files into the folder ``/opt/my-resources/setup/bloodhound/customqueries_replacement/``.
+* merge with the default exegol customqueries by placing one or several valid customqueries files into the folder ``/opt/my-resources/setup/bloodhound/customqueries_merge/``
+
+.. tip::
+    To be considered for replacing or merging, the customqueries files must be **valid** and bear the ``.json`` extension. The file names do not matter.
+    The output will be saved into the single file ``~/.config/bloodhound/customqueries.json``.
+
 
 :code:`firefox` (addons)
 ~~~~~~~~~~~~~~~~~~~~~~~~
