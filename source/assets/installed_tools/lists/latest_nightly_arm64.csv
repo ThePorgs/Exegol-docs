@@ -39,6 +39,7 @@ cewl,https://digi.ninja/projects/cewl.php,Generates custom wordlists by spiderin
 checksec-py,https://github.com/Wenzel/checksec.py,Python wrapper script for checksec.sh from paX.
 chisel,https://github.com/jpillora/chisel,Go based TCP tunnel with authentication and encryption support
 cloudfail,https://github.com/m0rtem/CloudFail,a reconnaissance tool for identifying misconfigured CloudFront domains.
+cloudmapper,https://github.com/duo-labs/cloudmapper,CloudMapper helps you analyze your Amazon Web Services (AWS) environments.
 cloudsplaining,https://github.com/salesforce/cloudsplaining,AWS IAM Security Assessment tool that identifies violations of least privilege and generates a risk-prioritized report.
 cloudsploit,https://github.com/aquasecurity/cloudsploit,Cloud Security Posture Management
 clusterd,https://github.com/hatRiot/clusterd,A tool to distribute and remotely manage Hacking Team's RCS agents.
