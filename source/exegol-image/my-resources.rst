@@ -70,7 +70,7 @@ A system exists to easily install arbitrary APT packages in any new exegol conta
 :code:`bloodhound` (customqueries, config)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
-    Available from version ``3.1.0`` of any exegol AD (or full) image.
+    Available from version ``3.1.0`` of the ``ad`` and ``full`` images.
 
 A system exists to easily add one or **several** bloodhound customqueries files, or change its configuration file in any new exegol container.
 
