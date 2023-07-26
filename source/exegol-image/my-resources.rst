@@ -71,6 +71,34 @@ A system exists to easily install arbitrary APT packages in any new exegol conta
 * Importing custom repositories usually requires importing **GPG keys** as well, which can be done by entering trusted GPG keys download URLs in the ``/opt/my-resources/setup/apt/keys.list`` file
 * To install **APT packages** automatically (after updating the repository including the custom ones), just enter a list of package names in the ``/opt/my-resources/setup/apt/packages.list`` file
 
+:code:`bloodhound` (customqueries, config)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``3.1.0`` of the ``ad`` and ``full`` images.
+
+A system exists to easily add one or **several** bloodhound customqueries files, or change its configuration file in any new exegol container.
+
+To automatically:
+
+* overwrite the ``~/.config/bloodhound/config.json`` configuration file, simply create the file ``/opt/my-resources/setup/bloodhound/config.json``
+* replace the default exegol customqueries, place one or several valid customqueries files into the folder ``/opt/my-resources/setup/bloodhound/customqueries_replacement/``.
+* merge with the default exegol customqueries by placing one or several valid customqueries files into the folder ``/opt/my-resources/setup/bloodhound/customqueries_merge/``
+
+.. tip::
+    To be considered for replacing or merging, the customqueries files must be **valid** and bear the ``.json`` extension. The file names do not matter.
+    The output will be saved into the single file ``~/.config/bloodhound/customqueries.json``.
+
+
+:code:`firefox` (addons)
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``3.0.2`` of any exegol image.
+
+A system exists to easily install arbitrary firefox addons in any new exegol container.
+
+The ``/opt/my-resources/setup/firefox/addons.txt`` file allows the user to list addons to install from online sources. It must be filled with their links in Mozilla's shop (for example https://addons.mozilla.org/fr/firefox/addon/foxyproxy-standard/ ).
+The ``.xpi`` files in ``/opt/my-resources/setup/firefox/addons/`` folder will be installed as well.
+
 
 :code:`python3` (pip3)
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -82,17 +110,14 @@ A system exists to easily install arbitrary PIP3 packages in any new exegol cont
 The ``/opt/my-resources/setup/python3/requirements.txt`` file allows the user to list a set of packages to install with constraints just like a classic **requirements.txt** file.
 
 
-:code:`zsh` (aliases, zshrc, history)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:code:`tmux` (conf)
+~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``3.0.0`` of any exegol image.
 
-To not change the configuration for the proper functioning of exegol but allow the user to add aliases and custom commands to zshrc,
-additional configuration files will be automatically loaded by zsh to take into account the customization of the user .
+Exegol supports overloading its **tmux** configuration to allow all users to use their personal configuration.
 
-* **aliases**: any custom alias can be defined in the ``/opt/my-resources/setup/zsh/aliases`` file. This file is automatically loaded by zsh.
-* **zshrc**: it is possible to add commands at the end of the zshrc routine in ``/opt/my-resources/setup/zsh/zshrc`` file.
-* **history**: it is possible to automatically add history commands at the end of ``~/.zsh_history`` from the file ``/opt/my-resources/setup/zsh/history``.
+* To automatically overwrite the ``~/.tmux.conf`` configuration file, simply create the file ``/opt/my-resources/setup/tmux/tmux.conf``
 
 .. tip::
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
@@ -116,29 +141,24 @@ Exegol supports overwriting its **vim** configuration to allow all users to use 
 .. tip::
     It is possible to install **plugins** with :ref:`the APT customization system <custom_apt>`.
 
-:code:`tmux` (conf)
-~~~~~~~~~~~~~~~~~~~
+
+:code:`zsh` (aliases, zshrc, history)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``3.0.0`` of any exegol image.
 
-Exegol supports overloading its **tmux** configuration to allow all users to use their personal configuration.
+To not change the configuration for the proper functioning of exegol but allow the user to add aliases and custom commands to zshrc,
+additional configuration files will be automatically loaded by zsh to take into account the customization of the user .
 
-* To automatically overwrite the ``~/.tmux.conf`` configuration file, simply create the file ``/opt/my-resources/setup/tmux/tmux.conf``
+* **aliases**: any custom alias can be defined in the ``/opt/my-resources/setup/zsh/aliases`` file. This file is automatically loaded by zsh.
+* **zshrc**: it is possible to add commands at the end of the zshrc routine in ``/opt/my-resources/setup/zsh/zshrc`` file.
+* **history**: it is possible to automatically add history commands at the end of ``~/.zsh_history`` from the file ``/opt/my-resources/setup/zsh/history``.
 
 .. tip::
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
 
+
 .. _User-setup:
-
-:code:`firefox` (addons)
-~~~~~~~~~~~~~~~~~~~~~~~~
-.. seealso::
-    Available from version ``3.0.2`` of any exegol image.
-
-A system exists to easily install arbitrary firefox addons in any new exegol container.
-
-The ``/opt/my-resources/setup/firefox/addons.txt`` file allows the user to list addons to install from online sources. It must be filled with their links in Mozilla's shop (for example https://addons.mozilla.org/fr/firefox/addon/foxyproxy-standard/ ).
-The ``.xpi`` files in ``/opt/my-resources/setup/firefox/addons/`` folder will be installed as well.
 
 User setup
 ----------
