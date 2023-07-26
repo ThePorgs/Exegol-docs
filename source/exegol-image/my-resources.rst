@@ -14,7 +14,7 @@ Below are the features offered by "My-resources", allowing users to extend Exego
 ..
     _TODO: add ref to images tools list
 
-* :ref:`Custom tools <Custom-tools>`: users can store add their own custom standalone tools, binaries and scripts in the "my-resources" volume. This volume is accessible from all containers at ``/opt/my-resources``.
+* :ref:`Custom tools <Custom-tools>`: users can place their own custom standalone tools, binaries and scripts in the "my-resources" volume. This volume is accessible from all containers at ``/opt/my-resources``.
 * :ref:`Supported setups <Supported-setups>`: users can customize their exegol environments automatically and transparently without having to manually setting things up for each and every new Exegol container they create. In this functionality, a pre-set list of supported custom configuration is set, and will improve with time. It's the easier and most user-friendly approach to customizing a few configurations.
 * :ref:`User setup <User-setup>`: In this functionality, a shell script can be populated with every command a user wishes its containers to run at their creation.
 
