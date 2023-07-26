@@ -3,6 +3,10 @@ My resources
 ============
 
 "My-resources" brings great features allowing users to make Exegol their own and customize it even further. This feature relies on a simple volume shared between the host and all exegol containers, and an advanced integration in the Exegol images directly.
+
+.. warning::
+    The "my-resources" feature will do what it's told to do. If users choose to use that feature to replace files or configuration, those replacements should take place. So if there are some additions to Exegol you're not getting, it could be because you have a "my-resources" setup that replaces it.
+
 To learn more about the volume options, details are available :ref:`here <My-resources-wrapper>`.
 
 Below are the features offered by "My-resources", allowing users to extend Exegol beyond what is initially included (`tools <todo>`_, `resources </exegol-resources/intro>`_).
