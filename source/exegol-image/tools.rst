@@ -3,6 +3,10 @@ Tools list
 
 Click :ref:`here <latest_nightly>` to see the lists of tools featured in the latest nightly images.
 
+
+.. error::
+   [August 5th, 2023] - The lists descriptions were AI-generated for this first version of the tools list in order to get the list shipped quickly. Many descriptions are wrong and will be fixed very soon.
+
 .. hint::
     The lists featured here are automatically generated. Exegol features CI/CD pipelines that build the images. At build, most tools are tested. If at least one test fails, the image doesn't get published.
 
