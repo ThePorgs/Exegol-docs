@@ -1,4 +1,5 @@
 Image tag,Version,Arch,Build date,Tools list
+osint,2ad874d0,arm64,2023-08-08T22:36:13Z,:download:`osint_2ad874d0_arm64.csv     </assets/installed_tools/lists/osint_2ad874d0_arm64.csv>`
 web,2ad874d0,amd64,2023-08-08T22:27:32Z,:download:`web_2ad874d0_amd64.csv     </assets/installed_tools/lists/web_2ad874d0_amd64.csv>`
 web,2ad874d0,arm64,2023-08-08T22:02:46Z,:download:`web_2ad874d0_arm64.csv     </assets/installed_tools/lists/web_2ad874d0_arm64.csv>`
 nightly,1a697417,amd64,2023-07-25T21:55:32Z,:download:`nightly_1a697417_amd64.csv     </assets/installed_tools/lists/latest_nightly_amd64.csv>`
