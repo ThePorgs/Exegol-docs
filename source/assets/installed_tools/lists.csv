@@ -1,4 +1,5 @@
 Image tag,Version,Arch,Build date,Tools list
+osint,6dc2d712,arm64,2023-08-09T10:48:56Z,:download:`osint_6dc2d712_arm64.csv     </assets/installed_tools/lists/osint_6dc2d712_arm64.csv>`
 full,6dc2d712,arm64,2023-08-09T09:12:21Z,:download:`full_6dc2d712_arm64.csv     </assets/installed_tools/lists/full_6dc2d712_arm64.csv>`
 light,6dc2d712,amd64,2023-08-09T02:53:53Z,:download:`light_6dc2d712_amd64.csv     </assets/installed_tools/lists/light_6dc2d712_amd64.csv>`
 ad,6dc2d712,amd64,2023-08-09T02:53:35Z,:download:`ad_6dc2d712_amd64.csv     </assets/installed_tools/lists/ad_6dc2d712_amd64.csv>`
