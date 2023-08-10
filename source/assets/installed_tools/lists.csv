@@ -1,4 +1,5 @@
 Image tag,Version,Arch,Build date,Tools list
+ad,3.1.0,arm64,2023-08-10T00:11:36Z,:download:`ad_3.1.0_arm64.csv     </assets/installed_tools/lists/ad_3.1.0_arm64.csv>`
 web,6dc2d712,amd64,2023-08-09T11:12:12Z,:download:`web_6dc2d712_amd64.csv     </assets/installed_tools/lists/web_6dc2d712_amd64.csv>`
 web,6dc2d712,arm64,2023-08-09T11:11:33Z,:download:`web_6dc2d712_arm64.csv     </assets/installed_tools/lists/web_6dc2d712_arm64.csv>`
 osint,6dc2d712,amd64,2023-08-09T10:50:11Z,:download:`osint_6dc2d712_amd64.csv     </assets/installed_tools/lists/osint_6dc2d712_amd64.csv>`
