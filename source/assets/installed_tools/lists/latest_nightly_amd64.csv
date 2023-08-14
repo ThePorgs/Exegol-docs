@@ -90,6 +90,7 @@ frida,https://github.com/frida/frida,Dynamic instrumentation toolkit
 fuxploider,https://github.com/almandin/fuxploider,a Python tool for finding and exploiting file upload forms/directories.
 gau,https://github.com/lc/gau,Fast tool for fetching URLs
 genusernames,https://gitlab.com/-/snippets/2480505/raw/main/bash,GenUsername is a Python tool for generating a list of usernames based on a name or email address.
+geowordlists,https://github.com/p0dalirius/GeoWordlists,tool to generate wordlists of passwords containing cities at a defined distance around the client city.
 gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
 ghidra,https://github.com/NationalSecurityAgency/ghidra,Software reverse engineering suite of tools.
 git-dumper,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
@@ -205,6 +206,7 @@ phoneinfoga,https://github.com/sundowndev/PhoneInfoga,Information gathering & OS
 photon,https://github.com/s0md3v/Photon,a fast web crawler which extracts URLs / files / intel & endpoints from a target.
 PHP filter chain generator,https://github.com/synacktiv/php_filter_chain_generator,A CLI to generate PHP filters chain / get your RCE without uploading a file if you control entirely the parameter passed to a require or an include in PHP!
 phpggc,https://github.com/ambionics/phpggc,Exploit generation tool for the PHP platform.
+pkcrack,https://github.com/keyunluo/pkcrack,tool to generate wordlists of passwords containing cities at a defined distance around the client city
 pkinittools,https://github.com/dirkjanm/PKINITtools,Pkinit support tools
 polenum,https://github.com/Wh1t3Fox/polenum,Polenum is a Python script which uses the Impacket library to extract user information through the SMB protocol.
 powershell,https://github.com/PowerShell/PowerShell,a command-line shell and scripting language designed for system administration and automation
