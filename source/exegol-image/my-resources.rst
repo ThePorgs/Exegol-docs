@@ -138,6 +138,14 @@ Exegol supports overwriting its **vim** configuration to allow all users to use 
     * ``/opt/my-resources/setup/vim/plugged/*`` --> ``~/.vim/plugged/``
     * ``/opt/my-resources/setup/vim/bundle/*`` --> ``~/.vim/bundle/``
 
+:code:`neovim` (.config/nvim)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``dev`` of any exegol image.
+
+Exegol supports overwriting its **neovim** configuration to allow all users to use their personal configuration.
+* To automatically overwrite the ``~/.config/nvim/`` configuration, copy your config in  ``/opt/my-resources/setup/nvim/``
+
 .. tip::
     It is possible to install **plugins** with :ref:`the APT customization system <custom_apt>`.
 
