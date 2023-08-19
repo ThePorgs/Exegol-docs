@@ -88,6 +88,7 @@ foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for reco
 freerdp2-x11,https://github.com/FreeRDP/FreeRDP,FreeRDP is a free implementation of the Remote Desktop Protocol (RDP) released under the Apache license.
 frida,https://github.com/frida/frida,Dynamic instrumentation toolkit
 fuxploider,https://github.com/almandin/fuxploider,a Python tool for finding and exploiting file upload forms/directories.
+fzf,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
 gau,https://github.com/lc/gau,Fast tool for fetching URLs
 genusernames,https://gitlab.com/-/snippets/2480505/raw/main/bash,GenUsername is a Python tool for generating a list of usernames based on a name or email address.
 geowordlists,https://github.com/p0dalirius/GeoWordlists,tool to generate wordlists of passwords containing cities at a defined distance around the client city.
