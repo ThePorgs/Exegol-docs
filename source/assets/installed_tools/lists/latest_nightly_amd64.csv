@@ -181,6 +181,7 @@ name-that-hash,https://github.com/HashPals/Name-That-Hash,Online tool for identi
 nasm,https://github.com/netwide-assembler/nasm,NASM is an 80x86 assembler designed for portability and modularity.
 nbtscan,https://github.com/charlesroelli/nbtscan,NBTscan is a program for scanning IP networks for NetBIOS name information.
 neo4j,https://github.com/neo4j/neo4j,Database.
+neovim,https://neovim.io/,hyperextensible Vim-based text editor
 netdiscover,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
