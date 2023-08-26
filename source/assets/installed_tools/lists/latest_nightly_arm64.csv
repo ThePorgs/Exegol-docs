@@ -141,6 +141,7 @@ KeePwn,https://github.com/Orange-Cyberdefense/KeePwn,KeePwn is a tool that extra
 kerbrute,https://github.com/ropnop/kerbrute,A tool to perform Kerberos pre-auth bruteforcing
 kiterunner,https://github.com/assetnote/kiterunner,Tool for operating Active Directory environments.
 Kraken,https://github.com/kraken-ng/Kraken.git,Kraken is a modular multi-language webshell focused on web post-exploitation and defense evasion. It supports three technologies (PHP / JSP and ASPX) and is core is developed in Python.
+krbjack,https://github.com/almandin/krbjack,A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
 krbrelayx,https://github.com/dirkjanm/krbrelayx,a tool for performing Kerberos relay attacks
 kubectl,https://kubernetes.io/docs/reference/kubectl/overview/,Command-line interface for managing Kubernetes clusters.
 ldapdomaindump,https://github.com/dirkjanm/ldapdomaindump,A tool for dumping domain data from an LDAP service
@@ -177,6 +178,7 @@ naabu,https://github.com/projectdiscovery/naabu,A fast and reliable port scanner
 name-that-hash,https://github.com/HashPals/Name-That-Hash,Online tool for identifying hashes.
 nbtscan,https://github.com/charlesroelli/nbtscan,NBTscan is a program for scanning IP networks for NetBIOS name information.
 neo4j,https://github.com/neo4j/neo4j,Database.
+neovim,https://neovim.io/,hyperextensible Vim-based text editor
 netdiscover,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
