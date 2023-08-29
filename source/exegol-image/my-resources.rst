@@ -142,7 +142,7 @@ Exegol supports overwriting its **vim** configuration to allow all users to use 
     It is possible to install **plugins** with :ref:`the APT customization system <custom_apt>`.
 
 :code:`neovim` (.config/nvim)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``dev`` of any exegol image.
 
