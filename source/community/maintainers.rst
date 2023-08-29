@@ -202,7 +202,12 @@ The Exegol project relies on a continuous integration and continuous deployment 
 
     ..  tab:: images
 
-        The GitHub Actions platform is used on :doc:`the Exegol-images submodule </the-exegol-project/docker-images>`. Its workflows allow to build and push images on `the official Dockerhub registry <https://hub.docker.com/repository/docker/nwodtuhs/exegol>`_, run tests to make sure the tools are installed properly, automatically export tools list to the documentaiton, run tests to help review pull requests, etc.
+        The GitHub Actions platform is used on :doc:`the Exegol-images submodule </the-exegol-project/docker-images>`. Its workflows run for internal and external pull requests, new commits, new tags, and allow to:
+
+        * build AMD64 and ARM64 images on self-hosted runners
+        * run tests to make sure the tools are installed properly
+        * automatically export tools list to the documentation
+        * push the images on `the official Dockerhub registry <https://hub.docker.com/repository/docker/nwodtuhs/exegol>`_
 
         .. image:: /assets/gh_pipelines.png
             :align: center
@@ -210,7 +215,9 @@ The Exegol project relies on a continuous integration and continuous deployment 
 
     ..  tab:: docs
 
-        The GitHub Actions platform is used for the documentation you're reading. Its workflows are used to build on every commit to make sure everything works as it should, but also automatically merge changes between the various branches in order to help with development.
+        The GitHub Actions platform is used for the documentation you're reading. Its workflows are used to build on every commit and pull request to make sure everything works as it should, but also automatically merge changes between the various branches in order to help with development.
+
+        ReadTheDocs then builds the final version on every commit for multiple branches (main, dev, dev-images, dev-wrapper) and hosts it online at https://exegol.readthedocs.io/.
 
 
 GitHub Actions
