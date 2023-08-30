@@ -45,6 +45,7 @@ cloudsploit,https://github.com/aquasecurity/cloudsploit,Cloud Security Posture M
 clusterd,https://github.com/hatRiot/clusterd,A tool to distribute and remotely manage Hacking Team's RCS agents.
 cmsmap,https://github.com/Dionach/CMSmap,Tool for security audit of web content management systems.
 coercer,https://github.com/p0dalirius/coercer,DFS-R target coercion tool
+constellation,https://github.com/constellation-app/Constellation,Find and exploit vulnerabilities in mobile applications.
 corscanner,https://github.com/chenjj/CORScanner,a Python script for finding CORS misconfigurations.
 cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline dictionary attacks against WPA-PSK (Pre-Shared Key) networks.
 crackhound,https://github.com/trustedsec/crackhound.git,A fast WPA/WPA2/WPA3 WiFi Handshake capture / password recovery and analysis tool
@@ -87,10 +88,8 @@ foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for reco
 freerdp2-x11,https://github.com/FreeRDP/FreeRDP,FreeRDP is a free implementation of the Remote Desktop Protocol (RDP) released under the Apache license.
 frida,https://github.com/frida/frida,Dynamic instrumentation toolkit
 fuxploider,https://github.com/almandin/fuxploider,a Python tool for finding and exploiting file upload forms/directories.
-fzf,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
 gau,https://github.com/lc/gau,Fast tool for fetching URLs
 genusernames,https://gitlab.com/-/snippets/2480505/raw/main/bash,GenUsername is a Python tool for generating a list of usernames based on a name or email address.
-geowordlists,https://github.com/p0dalirius/GeoWordlists,tool to generate wordlists of passwords containing cities at a defined distance around the client city.
 gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
 ghidra,https://github.com/NationalSecurityAgency/ghidra,Software reverse engineering suite of tools.
 git-dumper,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
@@ -123,6 +122,7 @@ httpmethods,https://github.com/ShutdownRepo/httpmethods,Tool for exploiting HTTP
 httprobe,https://github.com/tomnomnom/httprobe,A simple utility for enumerating HTTP and HTTPS servers.
 httpx,https://github.com/projectdiscovery/httpx,A tool for identifying web technologies and vulnerabilities / including outdated software versions and weak encryption protocols.
 hydra,https://github.com/vanhauser-thc/thc-hydra,Hydra is a parallelized login cracker which supports numerous protocols to attack.
+ida,https://www.hex-rays.com/products/ida/,Interactive disassembler for software analysis.
 ignorant,https://github.com/megadose/ignorant,holehe but for phone numbers.
 imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose / or convert bitmap images.
 impacket,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
@@ -141,7 +141,6 @@ KeePwn,https://github.com/Orange-Cyberdefense/KeePwn,KeePwn is a tool that extra
 kerbrute,https://github.com/ropnop/kerbrute,A tool to perform Kerberos pre-auth bruteforcing
 kiterunner,https://github.com/assetnote/kiterunner,Tool for operating Active Directory environments.
 Kraken,https://github.com/kraken-ng/Kraken.git,Kraken is a modular multi-language webshell focused on web post-exploitation and defense evasion. It supports three technologies (PHP / JSP and ASPX) and is core is developed in Python.
-krbjack,https://github.com/almandin/krbjack,A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
 krbrelayx,https://github.com/dirkjanm/krbrelayx,a tool for performing Kerberos relay attacks
 kubectl,https://kubernetes.io/docs/reference/kubectl/overview/,Command-line interface for managing Kubernetes clusters.
 ldapdomaindump,https://github.com/dirkjanm/ldapdomaindump,A tool for dumping domain data from an LDAP service
@@ -158,6 +157,7 @@ linkedin2username,https://github.com/initstring/linkedin2username,Generate a lis
 linkfinder,https://github.com/GerbenJavado/LinkFinder,a Python script that finds endpoints and their parameters in JavaScript files.
 lnkup,https://github.com/Plazmaz/lnkUp,This tool will allow you to generate LNK payloads. Upon rendering or being run they will exfiltrate data.
 lsassy,https://github.com/Hackndo/lsassy,Windows secrets and passwords extraction tool.
+ltrace,https://github.com/dkogan/ltrace,ltrace is a debugging program for Linux and Unix that intercepts and records dynamic library calls that are called by an executed process.
 maigret,https://github.com/soxoj/maigret,Collects information about a target email (or domain) from Google and Bing search results
 maltego,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 manspider,https://github.com/blacklanternsecurity/MANSPIDER,Manspider will crawl every share on every target system. If provided creds don't work it will fall back to 'guest' then to a null session.
@@ -176,9 +176,9 @@ mousejack,https://github.com/BastilleResearch/mousejack,Exploit to take over a w
 msprobe,https://github.com/puzzlepeaches/msprobe,msprobe is a tool to identify Microsoft Windows hosts and servers that are running certain services.
 naabu,https://github.com/projectdiscovery/naabu,A fast and reliable port scanner that can detect open ports and services.
 name-that-hash,https://github.com/HashPals/Name-That-Hash,Online tool for identifying hashes.
+nasm,https://github.com/netwide-assembler/nasm,NASM is an 80x86 assembler designed for portability and modularity.
 nbtscan,https://github.com/charlesroelli/nbtscan,NBTscan is a program for scanning IP networks for NetBIOS name information.
 neo4j,https://github.com/neo4j/neo4j,Database.
-neovim,https://neovim.io/,hyperextensible Vim-based text editor
 netdiscover,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
@@ -205,7 +205,6 @@ phoneinfoga,https://github.com/sundowndev/PhoneInfoga,Information gathering & OS
 photon,https://github.com/s0md3v/Photon,a fast web crawler which extracts URLs / files / intel & endpoints from a target.
 PHP filter chain generator,https://github.com/synacktiv/php_filter_chain_generator,A CLI to generate PHP filters chain / get your RCE without uploading a file if you control entirely the parameter passed to a require or an include in PHP!
 phpggc,https://github.com/ambionics/phpggc,Exploit generation tool for the PHP platform.
-pkcrack,https://github.com/keyunluo/pkcrack,tool to generate wordlists of passwords containing cities at a defined distance around the client city
 pkinittools,https://github.com/dirkjanm/PKINITtools,Pkinit support tools
 polenum,https://github.com/Wh1t3Fox/polenum,Polenum is a Python script which uses the Impacket library to extract user information through the SMB protocol.
 powershell,https://github.com/PowerShell/PowerShell,a command-line shell and scripting language designed for system administration and automation
@@ -216,6 +215,7 @@ prowler,https://github.com/prowler-cloud/prowler,Perform Cloud Security best pra
 proxmark3,https://github.com/Proxmark/proxmark3,Open source RFID research toolkit.
 proxychains,https://github.com/rofl0r/proxychains,Proxy chains - redirect connections through proxy servers.
 pst-utils,https://manpages.debian.org/jessie/pst-utils/readpst.1,pst-utils is a set of tools for working with Outlook PST files.
+pth-tools,https://github.com/byt3bl33d3r/pth-toolkit,A toolkit to perform pass-the-hash attacks
 pwncat,https://github.com/calebstewart/pwncat,A lightweight and versatile netcat alternative that includes various additional features.
 pwndb,https://github.com/davidtavarez/pwndb,A command-line tool for searching the pwndb database of compromised credentials.
 pwndbg,https://github.com/pwndbg/pwndbg,a GDB plugin that makes debugging with GDB suck less
@@ -277,6 +277,7 @@ ssrfmap,https://github.com/swisskyrepo/SSRFmap,a tool for testing SSRF vulnerabi
 steghide,https://github.com/StefanoDeVuono/steghide,steghide is a steganography program that is able to hide data in various kinds of image and audio files.
 stegolsb,https://github.com/KyTn/STEGOLSB,Steganography tool to hide data in BMP images using least significant bit algorithm
 stegosuite,https://github.com/osde8info/stegosuite,Stegosuite is a free steganography tool that allows you to hide data in image and audio files.
+strace,https://github.com/strace/strace,strace is a debugging utility for Linux that allows you to monitor and diagnose system calls made by a process.
 subfinder,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
 sublist3r,https://github.com/aboul3la/Sublist3r,a Python tool designed to enumerate subdomains of websites.
 swaks,https://github.com/jetmore/swaks,Swaks is a featureful flexible scriptable transaction-oriented SMTP test tool.
@@ -304,6 +305,7 @@ username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for g
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
 volatility3,https://github.com/volatilityfoundation/volatility3,Advanced memory forensics framework
 vulny-code-static-analysis,https://github.com/swisskyrepo/Vulny-Code-Static-Analysis,Static analysis tool for C code
+wabt,https://github.com/WebAssembly/wabt,The WebAssembly Binary Toolkit (WABT) is a suite of tools for WebAssembly (Wasm) including assembler and disassembler / a syntax checker / and a binary format validator.
 wafw00f,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to identify and fingerprint web application firewall (WAF) products.
 waybackurls,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
 webclientservicescanner,https://github.com/Hackndo/webclientservicescanner,Scans for web service endpoints

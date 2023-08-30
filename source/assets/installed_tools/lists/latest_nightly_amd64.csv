@@ -24,8 +24,8 @@ bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security 
 bloodhound-import,https://github.com/fox-it/BloodHound.py,Import data into BloodHound for analyzing active directory trust relationships
 bloodhound-quickwin,https://github.com/kaluche/bloodhound-quickwin,A tool for BloodHounding on Windows machines without .NET or Powershell installed
 bloodhound.py,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
-bolt,https://github.com/s0md3v/bolt,TODO
-bqm,https://github.com/Acceis/bqm
+bolt,https://github.com/s0md3v/bolt,Bolt crawls the target website to the specified depth and stores all the HTML forms found in a database for further processing.
+bqm,https://github.com/Acceis/bqm,Tool to deduplicate custom BloudHound queries from different datasets and merge them in one file.
 brakeman,https://github.com/presidentbeef/brakeman,Static analysis tool for Ruby on Rails applications
 bruteforce-luks,https://github.com/glv2/bruteforce-luks,A tool to help recover encrypted LUKS2 containers
 bully,https://github.com/aanarchyy/bully,bully is a tool for brute-forcing WPS (Wireless Protected Setup) PINs.
@@ -51,7 +51,7 @@ cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline di
 crackhound,https://github.com/trustedsec/crackhound.git,A fast WPA/WPA2/WPA3 WiFi Handshake capture / password recovery and analysis tool
 crackmapexec,https://github.com/mpgn/CrackMapExec,Network scanner.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
-cupp,https://github.com/Mebus/cupp,TODO
+cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
 cyperoth,https://github.com/seajaysec/cypheroth,Automated extensible toolset that runs cypher queries against Bloodhound's Neo4j backend and saves output to spreadsheets.
 darkarmour,https://github.com/bats3c/darkarmour,a tool to detect and evade common antivirus products
 dex2jar,https://github.com/pxb1988/dex2jar,A tool to convert Android's dex files to Java's jar files
@@ -83,12 +83,16 @@ fierce,https://github.com/mschwager/fierce,A DNS reconnaissance tool for locatin
 finalrecon,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
 finduncommonshares,https://github.com/p0dalirius/FindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
+firefox,https://www.mozilla.org,A web browser
 foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for recovering files based on their headers / footers / and internal data structures.
 freerdp2-x11,https://github.com/FreeRDP/FreeRDP,FreeRDP is a free implementation of the Remote Desktop Protocol (RDP) released under the Apache license.
 frida,https://github.com/frida/frida,Dynamic instrumentation toolkit
 fuxploider,https://github.com/almandin/fuxploider,a Python tool for finding and exploiting file upload forms/directories.
+fzf,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
 gau,https://github.com/lc/gau,Fast tool for fetching URLs
 genusernames,https://gitlab.com/-/snippets/2480505/raw/main/bash,GenUsername is a Python tool for generating a list of usernames based on a name or email address.
+geowordlists,https://github.com/p0dalirius/GeoWordlists,tool to generate wordlists of passwords containing cities at a defined distance around the client city.
+gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
 ghidra,https://github.com/NationalSecurityAgency/ghidra,Software reverse engineering suite of tools.
 git-dumper,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
 githubemail,https://github.com/paulirish/github-email,a command-line tool to retrieve a user's email from Github.
@@ -106,7 +110,7 @@ gron,https://github.com/tomnomnom/gron,Make JSON greppable!
 h2csmuggler,https://github.com/BishopFox/h2csmuggler,HTTP Request Smuggling tool using H2C upgrade
 h8mail,https://github.com/khast3x/h8mail,Email OSINT and breach hunting.
 hackrf,https://github.com/mossmann/hackrf,Low cost software defined radio platform
-haiti,https://github.com/noraj/haiti is a A CLI tool (and library) to identify hash types (hash type identifier).
+haiti,https://github.com/noraj/haiti,haiti is a A CLI tool (and library) to identify hash types (hash type identifier).
 hakrawler,https://github.com/hakluke/hakrawler,a fast web crawler for gathering URLs and other information from websites
 hakrevdns,https://github.com/hakluke/hakrevdns,Reverse DNS lookup utility that can help with discovering subdomains and other information.
 hashcat,https://hashcat.net/hashcat,A tool for advanced password recovery
@@ -139,6 +143,7 @@ KeePwn,https://github.com/Orange-Cyberdefense/KeePwn,KeePwn is a tool that extra
 kerbrute,https://github.com/ropnop/kerbrute,A tool to perform Kerberos pre-auth bruteforcing
 kiterunner,https://github.com/assetnote/kiterunner,Tool for operating Active Directory environments.
 Kraken,https://github.com/kraken-ng/Kraken.git,Kraken is a modular multi-language webshell focused on web post-exploitation and defense evasion. It supports three technologies (PHP / JSP and ASPX) and is core is developed in Python.
+krbjack,https://github.com/almandin/krbjack,A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
 krbrelayx,https://github.com/dirkjanm/krbrelayx,a tool for performing Kerberos relay attacks
 kubectl,https://kubernetes.io/docs/reference/kubectl/overview/,Command-line interface for managing Kubernetes clusters.
 ldapdomaindump,https://github.com/dirkjanm/ldapdomaindump,A tool for dumping domain data from an LDAP service
@@ -162,6 +167,7 @@ manspider,https://github.com/blacklanternsecurity/MANSPIDER,Manspider will crawl
 mariadb-client,https://github.com/MariaDB/server,MariaDB is a community-developed fork of the MySQL relational database management system. The mariadb-client package includes command-line utilities for interacting with a MariaDB server.
 masky,https://github.com/Z4kSec/masky,masky is a tool to mask sensitive data / such as credit card numbers / in logs and other files.
 masscan,https://github.com/robertdavidgraham/masscan,Masscan is an Internet-scale port scanner
+mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 mfcuk,https://github.com/nfc-tools/mfcuk,Implementation of an attack on Mifare Classic and Plus RFID cards
 mfdread,https://github.com/zhovner/mfdread,Tool for reading/writing Mifare RFID tags
@@ -176,7 +182,8 @@ name-that-hash,https://github.com/HashPals/Name-That-Hash,Online tool for identi
 nasm,https://github.com/netwide-assembler/nasm,NASM is an 80x86 assembler designed for portability and modularity.
 nbtscan,https://github.com/charlesroelli/nbtscan,NBTscan is a program for scanning IP networks for NetBIOS name information.
 neo4j,https://github.com/neo4j/neo4j,Database.
-netdiscover,https://github.com/netdiscover-scanner/netdiscover is an active/passive address reconnaissance tool
+neovim,https://neovim.io/,hyperextensible Vim-based text editor
+netdiscover,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
 nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
@@ -200,8 +207,9 @@ peepdf,https://github.com/jesparza/peepdf,peepdf is a Python tool to explore PDF
 petitpotam,https://github.com/topotam/PetitPotam,Windows machine account manipulation
 phoneinfoga,https://github.com/sundowndev/PhoneInfoga,Information gathering & OSINT framework for phone numbers.
 photon,https://github.com/s0md3v/Photon,a fast web crawler which extracts URLs / files / intel & endpoints from a target.
-PHP filter chain generator,https://github.com/synacktiv/php_filter_chain_generator,TODO
+PHP filter chain generator,https://github.com/synacktiv/php_filter_chain_generator,A CLI to generate PHP filters chain / get your RCE without uploading a file if you control entirely the parameter passed to a require or an include in PHP!
 phpggc,https://github.com/ambionics/phpggc,Exploit generation tool for the PHP platform.
+pkcrack,https://github.com/keyunluo/pkcrack,tool to generate wordlists of passwords containing cities at a defined distance around the client city
 pkinittools,https://github.com/dirkjanm/PKINITtools,Pkinit support tools
 polenum,https://github.com/Wh1t3Fox/polenum,Polenum is a Python script which uses the Impacket library to extract user information through the SMB protocol.
 powershell,https://github.com/PowerShell/PowerShell,a command-line shell and scripting language designed for system administration and automation
@@ -232,6 +240,7 @@ reaver,https://github.com/t6x/reaver-wps-fork-t6x,reaver is a tool for brute-for
 recon-ng,https://github.com/lanmaster53/recon-ng,External recon tool.
 recondog,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
 redis-tools,https://github.com/antirez/redis-tools,redis-tools is a collection of Redis client utilities including redis-cli and redis-benchmark.
+remmina,https://github.com/FreeRDP/Remmina,Remote desktop client.
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
 roastinthemiddle,https://github.com/Tw1sm/RITM,RoastInTheMiddle is a tool to intercept and relay NTLM authentication requests.
@@ -255,6 +264,7 @@ shuffledns,https://github.com/projectdiscovery/shuffledns,A fast and customizabl
 simplyemail,https://github.com/SimplySecurity/SimplyEmail,a scriptable command line tool for sending emails
 sipvicious,https://github.com/enablesecurity/sipvicious,Enumeration and MITM tool for SIP devices
 sleuthkit,https://github.com/sleuthkit/sleuthkit,Forensic toolkit to analyze volume and file system data
+sliver,https://github.com/BishopFox/sliver.git,Open source / cross-platform and extensible C2 framework
 smali,https://github.com/JesusFreke/smali,A tool to disassemble and assemble Android's dex files
 smartbrute,https://github.com/ShutdownRepo/SmartBrute,The smart password spraying and bruteforcing tool for Active Directory Domain Services.
 smbclient,https://github.com/samba-team/samba,SMBclient is a command-line utility that allows you to access Windows shared resources
@@ -296,7 +306,7 @@ trilium,https://github.com/zadam/trilium,Personal knowledge management system.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
-username-anarchy,https://github.com/urbanadventurer/username-anarchy,TODO
+username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
 volatility3,https://github.com/volatilityfoundation/volatility3,Advanced memory forensics framework
 vulny-code-static-analysis,https://github.com/swisskyrepo/Vulny-Code-Static-Analysis,Static analysis tool for C code
@@ -314,7 +324,7 @@ windapsearch-go,https://github.com/ropnop/go-windapsearch/,Active Directory enum
 wireshark,https://github.com/wireshark/wireshark,Wireshark is a network protocol analyzer that lets you see what’s happening on your network at a microscopic level.
 wpscan,https://github.com/wpscanteam/wpscan,A tool to enumerate WordPress-based websites
 wuzz,https://github.com/asciimoo/wuzz,a command-line tool for interacting with HTTP(S) web services
-xspear,https://github.com/hahwul/XSpear,a powerful XSS scanning and exploitation tool.
+XSpear,https://github.com/hahwul/XSpear,a powerful XSS scanning and exploitation tool.
 xsrfprobe,https://github.com/0xInfection/XSRFProbe,a tool for detecting and exploiting Cross-Site Request Forgery (CSRF) vulnerabilities
 xsser,https://github.com/epsylon/xsser,XSS scanner.
 xsstrike,https://github.com/s0md3v/XSStrike,a Python tool for detecting and exploiting XSS vulnerabilities.
