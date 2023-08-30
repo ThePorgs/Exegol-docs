@@ -170,18 +170,23 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
             ..  group-tab:: Windows
 
-                Once this is taken care of, the exegol wrapper can then can be added as a PowerShell command alias and saved for persistence
-                in ``$HOME\PowershellAliasesExport.txt``
-                then loaded from ``$PROFILE`` script at PowerShell startup. Exegol can then be used with ``exegol <action>`` instead of ``python3 /path/to/Exegol/exegol.py <action>``.
+                Once this is taken care of, the exegol wrapper can then can be added as a PowerShell command alias. Exegol can then be used with ``exegol <action>`` instead of ``python3 /path/to/Exegol/exegol.py <action>``.
 
-                To create the alias file correctly, open a powershell and place yourself in the folder where exegol is located (applicable only for `from source` installations) and run the following commands:
+                To create the alias file correctly, open a PowerShell and place yourself in the folder where exegol is located (applicable only for `from source` installations) and run the following commands:
+
+                Create `$PROFILE` file if it doesn't exist:
 
                 .. code-block:: powershell
 
-                   $AliasFile = "$HOME\PowershellAliasesExport.txt"
-                   Set-Alias -Name exegol -Value "$(pwd)\exegol.py"
-                   Get-Alias -Name "exegol" | Export-Alias -Path $AliasFile
-                   echo "Import-Alias '$AliasFile'" >> $PROFILE
+                    if (!(Test-Path -Path $PROFILE)) {
+                        New-Item -ItemType File -Path $PROFILE -Force
+                    }
+                
+                Create alias for Exegol in `$PROFILE`:
+
+                .. code-block:: powershell
+
+                    echo "Set-Alias -Name exegol -Value '$(pwd)\exegol.py'" >> $PROFILE
 
                 .. warning::
 
@@ -283,6 +288,32 @@ Exegol supports auto-completion in many shell environments but there is a config
             .. code-block:: bash
 
                 eval `register-python-argcomplete --no-defaults --shell tcsh exegol`
+
+        .. tab:: PowerShell
+
+            To activate completions for PowerShell, first generate completion file :
+
+            .. code-block:: powershell
+
+                python $HOME\AppData\Roaming\Python\Python311\Scripts\register-python-argcomplete --no-defaults --shell powershell exegol > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
+
+            .. important::
+
+                `Python311` can be modified and depends on the version of Python you have installed
+            
+            Then import this completion file in `$PROFILE`:
+
+            .. code-block:: powershell
+
+                echo "Import-Module '$HOME\Documents\WindowsPowerShell\exegol_completion.psm1'" >> $PROFILE
+            
+            .. tip::
+                
+                You can have Zsh style completion in PowerShell using this:
+
+                .. code-block:: powershell
+
+                    echo "Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete" >> $PROFILE
 
 4. Installation of the first Exegol image
 -----------------------------------------
