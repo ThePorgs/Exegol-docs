@@ -185,8 +185,8 @@ Other standards
 
 If your tool opens ports, or if there are credentials at play, please take a look at the corresponding documentations
 
-* :doc:`Credentials </exegol-images/credentials>`
-* :doc:`Ports & services </exegol-images/services>`
+* :doc:`Credentials </exegol-image/credentials>`
+* :doc:`Ports & services </exegol-image/services>`
 
 Multi-architecture builds
 -------------------------
@@ -218,6 +218,20 @@ Submitting the pull request
 
     Once all your changes are over, and before submitting a pull request, it is advised to test your installation process locally.
     The Exegol wrapper can be used to build local images. Run ``exegol install --help`` to see some examples.
+    You can also run the unit tests yourself by creating
+
+    ..  code-block:: bash
+
+        # build the local image
+        exegol install "testimage" "full" --build-log "/tmp/testimage.log"
+
+        # create and start a container for the tests
+        exegol start "testcontainer" "testimage"
+
+        # run the tests (from the container)
+        cat /.exegol/build_pipeline_tests/all_commands.txt | grep -vE "^\s*$" | sort -u > /.exegol/build_pipeline_tests/all_commands.sorted.txt
+        python3 /.exegol/build_pipeline_tests/run_tests.py
+        cat /.exegol/build_pipeline_tests/failed_commands.log
 
 .. warning::
 
