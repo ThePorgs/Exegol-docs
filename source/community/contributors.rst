@@ -2,24 +2,242 @@
 Contributors
 ============
 
-Opening issues
+This part of the documentation is meant for Exegol contributors, those who write code and open pull requests. If adds up to the :doc:`users </community/users>` documentation.
+
+First things first, once you know on what module you want to contribute (`wrapper <https://github.com/ThePorgs/Exegol>`_, `images <https://github.com/ThePorgs/Exegol-images>`_, `documentation <https://github.com/ThePorgs/Exegol-docs>`_, `resources <https://github.com/ThePorgs/Exegol-resources>`_, etc.) `fork it <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_, `checkout <https://git-scm.com/docs/git-checkout>`_ to the ``dev`` branch, then come back to this page to start coding.
+
+.. contents::
+
+Documentation
+==============
+
+A new feature, whether it's on the wrapper, images, or any other module, must be documented accordingly. Make sure to open a pull request to the appropriate `Exegol docs <https://github.com/ThePorgs/Exegol-docs>`_ branch on top of your wrapper/images/whatever pull request.
+
+..  list-table:: Exegol-docs branches
+    :header-rows: 1
+
+    * - Branch
+      - Purpose
+    * - main
+      - nothing gets pushed there. This branch is made to merge with the other branches.
+    * - dev-wrapper
+      - Related to the wrapper (`Exegol <https://github.com/ThePorgs/Exegol>`_ )
+    * - dev-images
+      - Related to the images (`Exegol-images <https://github.com/ThePorgs/Exegol-images>`_ )
+    * - dev
+      - General purpose
+
+Images
+======
+
+The Docker images are the heart of the Exegol project. A neat choice of tools, configurations, aliases, history commands, and various customizations are prepared in multiple images adapted for multiple uses: web hacking, Active Directory, OSINT (Open Source INTelligence), etc.
+
+If you want to contribute to this part of the project, there are some things you need to know and some rules you need to follow.
+
+Adding a new tool
+~~~~~~~~~~~~~~~~~
+
+In order to add a new tool to an image, here is how it goes. First, you need to figure out in what package your tool installation function must go to: `packages <https://github.com/ThePorgs/Exegol-images/tree/main/sources/install>`_.
+
+Function structure
+------------------
+
+When preparing the install function to the package, don't forget to include the following functions:
+
+* ``colorecho "Installing yourtool"``: this is needed to raise logs inside the CI/CD pipeline
+
+* ``add-aliases yourtool``: if your tool needs to have one or multiple aliases to work properly. You will need to create the aliases file in `/sources/assets/zsh/aliases.d/ <https://github.com/ThePorgs/Exegol-images/tree/main/sources/assets/zsh/aliases.d>`_ named after your tool. This file must contain the alias(es) to set as follows.
+
+    .. code-block:: bash
+
+        alias tool.py='python3 /opt/tools/thetool/tool.py'
+
+* ``add-history yourtool``: if it's relevant to give some command example of your tool. No need to populate the history with a command that's very short or never used. Using long arguments is preferred. Using environment variables is preferred (e.g. ``$USER``, ``$PASSWORD``, ``$TARGET``, etc.). You will need to create the history file in `/sources/assets/zsh/history.d/ <https://github.com/ThePorgs/Exegol-images/tree/main/sources/assets/zsh/history.d>`_ named after your tool. This file must contain the history command(s) like the example below.
+
+    .. code-block:: bash
+
+        yourtool.py --user "$USER" --password "$PASS"WORD --target "$TARG"ET
+        yourtool.py --mode enum --user "$USER" --target "$TARG"ET
+        yourtool.py --mode unauthenticated
+
+* ``add-test-command "testcommand"``: this is needed by the CI/CD pipeline to conduct unit tests for all tools to make sure they are installed properly before publishing new images. The test command needs to return ``0`` if the tool works properly, anything else if it doesn't. For instance, something like ``yourtool.py --help`` usually works, but not always! In order to find what command can be used for unit tests, you can do something like ``yourtool.py --help; echo $?`` to see what code is returned after the command is executed. Once trick that can be used when the ``--help`` command returns something ``!=0`` is to do some grep like ``yourtool.py --help|& grep 'Usage:'``.
+
+* ``add-to-list "yourtool,https://link.to/the/tool,description"``: this is used by the CI/CD pipeline to automatically export tools in the :doc:`Tools list </exegol-image/tools>`. The format of the entry is standard 3-columns CSV (comma separated values). The first column is the tool name, then the link to the tool, then the description. Be careful to not have more than 2 commas and replace any comma in the description by something else.
+
+In case your tool doesn't need aliases or history commands, add the following comment at the beggining of the tool install function: ``# CODE-CHECK-WHITELIST=``. Then add a comma-separated list of the exclusions. Below are some examples.
+
+.. code-block:: bash
+
+    # CODE-CHECK-WHITELIST=add-aliases
+    # CODE-CHECK-WHITELIST=add-aliases,add-history
+
+In-fine, your tool installation function should look something like this:
+
+.. code-block:: bash
+
+    function install_yourtool() {
+        colorecho "Installing yourtool"
+        # tool install commands
+        add-aliases yourtool
+        add-history yourtool
+        add-test-command "yourtool.py --help"
+        add-to-list "yourtool,https://link.to/the/tool,description"
+    }
+
+Install standards
+-----------------
+
+When installing a tool, depending on how it gets installed, here are the rules.
+
+* Most tools have their virtual environment, in order to avoid dependencies conflicts.
+* Most tools are installed either in their own directory in ``/opt/tools/`` or have the binary (or a symlink) in ``/opt/tools/bin/``.
+* Disk space being limited, we're not pull every code source around. When possible, add the ``--depth 1`` option to your usual ``git clone`` command.
+
+..  tabs::
+
+    ..  tab:: Python (pipx)
+
+        The easiest way to install a Python tool is to use pipx.
+
+        .. code-block:: bash
+
+            # from github.com example
+            python3 -m pipx install git+https://github.com/pathto/tool
+
+            # from local sources
+            git -C /opt/tools/ clone --depth 1 https://github.com/pathto/yourtool.git
+            python3 -m pipx install /opt/tools/yourtool/
+
+        But some tools cannot be installed this way, either because they're missing the ``setup.py`` or for any other obscure reason. In that case, opt for the "Python (venv)" solution.
+
+    ..  tab:: Python3 (venv)
+
+        In this example, the tool sources are downloaded, a virtual python environment is set up, and an alias is created.
+
+        .. code-block:: bash
+
+            git -C /opt/tools/ clone --depth 1 https://github.com/pathto/yourtool.git
+            cd /opt/tools/yourtool
+            python3 -m venv /opt/tools/yourtool/venv/
+            /opt/tools/yourtool/venv/bin/python3 -m pip install -r /opt/tools/yourtool/requirements.txt
+            add-aliases yourtool
+
+        And add the following alias to your new alias file in /sources/assets/zsh/aliases.d/
+
+        .. code-block:: bash
+
+            alias yourtool='/opt/tools/yourtool/venv/bin/python3 /opt/tools/yourtool/yourtool.py'
+
+    ..  tab:: APT install
+
+        APT installations are regrouped to go faster and save some bandwith. In the ``package_whatever.sh`` file you're editing, look for a function called ``install_*_apt_tools()``.
+        The package you want to install needs to be added there, along with the ``add-history``, ``add-test-command`` and ``add-to-list`` instructions.
+
+    ..  tab:: Go
+
+        Go tools can be installed with a standard ``go install -v github.com/pathto/yourtool@latest`` command.
+
+    ..  tab:: Ruby
+
+        A typical Ruby tool install will look like this:
+
+        .. code-block:: bash
+
+            function install_yourtool() {
+                colorecho "Installing yourtool"
+                rvm use 3.0.0@yourtool --create
+                gem install yourtool
+                rvm use 3.0.0@default
+                add-aliases yourtool
+                add-history yourtool
+                add-test-command "yourtool --help"
+                add-to-list "yourtool,https://github.com/pathto/yourtool,description"
+            }
+
+        And the alias file will look something like this.
+
+        .. code-block:: bash
+
+            alias yourtool='/usr/local/rvm/gems/ruby-3.0.0@yourtool/wrappers/ruby /usr/local/rvm/gems/ruby-3.0.0@yourtool/bin/yourtool'
+
+    ..  tab:: Binary
+
+        When installing a binary tool (pre-compiled or compiled live), it needs to be moved or linked in ``/opt/tools/bin``.
+        Below is an example of tool compilation and installation.
+
+        .. code-block:: bash
+
+            function install_yourtool() {
+                colorecho "Installing yourtool"
+                git -C /opt/tools/ clone --depth 1 https://github.com/pathto/yourtool
+                cd /opt/tools/yourtool
+                ./configure
+                make
+                ln -s "/opt/tools/yourtool/bin/yourtool" "/opt/tools/bin/yourtool"
+                add-history yourtool
+                add-test-command "yourtool --help"
+                add-test-command "yourtool"
+                add-to-list "yourtool,https://github.com/pathto/yourtool,description"
+            }
+
+Other standards
 ---------------
 
-Create an issue in the correct repository:
+If your tool opens ports, or if there are credentials at play, please take a look at the corresponding documentations
 
-* For any problem concerning `Exegol WRAPPER <https://github.com/ThePorgs/Exegol/issues>`__ (the exegol command).
-* For any problem concerning `Exegol IMAGE <https://github.com/ThePorgs/Exegol-images/issues>`__ (the exegol environment).
-* For any problem concerning `Exegol RESOURCE <https://github.com/ThePorgs/Exegol-resources/issues>`__ (the exegol offline resources).
+* :doc:`Credentials </exegol-images/credentials>`
+* :doc:`Ports & services </exegol-images/services>`
 
-Opening pull request
---------------------
+Multi-architecture builds
+-------------------------
 
-Every PRs are welcome!
+Know that Exegol images are build by and for AMD64 and ARM64 systems. Most systems are AMD64 (x86_64), but some other people use ARM64 (M1/M2 Apple Sillicon chips, 64bits Raspberry-Pies, ...).
+Whenever possible, try to make sure your tool install function works for both architectures.
+Rest assured, if you don't have both architectures at your disposal it's perfectly fine, we'll take care of this part for you.
 
-Describe your addition / bug fix and configure your PR to the **dev** branch.
+Calling the install function
+----------------------------
 
-Dev docs
---------
+Once the install function is over with, it needs to be called in the function that holds the same name as the package.
+For instance, if you're adding your tool install function in the ``package_web.sh`` package, you'll need to call that function in the ``package_ad()`` function (usually at the bottom of that file).
 
-WIP : Coming 'soon'
+It will look something like this.
 
+.. code-block:: bash
+
+    function package_web() {
+        [...]
+        install_yourtool
+        [...]
+    }
+
+Submitting the pull request
+---------------------------
+
+.. hint::
+
+    Once all your changes are over, and before submitting a pull request, it is advised to test your installation process locally.
+    The Exegol wrapper can be used to build local images. Run ``exegol install --help`` to see some examples.
+
+.. warning::
+
+    Your pull request needs to be made against the ``dev`` branch.
+
+Once you submit your pull request, and once the various changes that may be requested are made, a CI/CD pipeline will run to make sure your code is compliant and that the tool is installed and works as intended.
+The pipeline may raise some issues, but if they're not related to your tool (e.g. network issues are common) don't worry about it. If the errors are due to your tool install, then you'll need to make the necessary changes to make your install work.
+
+Once everything works, the pull request will be merged, the pipeline will run again in order to test, build and publish a new ``nightly`` image. Congrats, you're now an Exegol contributor!
+
+Adding to my-resources
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. hint::
+
+    This documentation is not written yet... Please contact us if you would like to contribute to this part and don't know how.
+
+Wrapper
+=======
+
+.. hint::
+
+    This documentation is not written yet... Please contact us if you would like to contribute to this part and don't know how.
