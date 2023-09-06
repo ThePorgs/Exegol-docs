@@ -104,6 +104,7 @@ gopherus,https://github.com/tarunkant/Gopherus,Gopherus is a simple command line
 gosecretsdump,https://github.com/c-sto/gosecretsdump,Implements NTLMSSP network authentication protocol in Go
 goshs,https://github.com/patrickhener/goshs,Goshs is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S with either self-signed certificate or user provided certificate and you can use HTTP basic auth.
 gowitness,https://github.com/sensepost/gowitness,A website screenshot utility written in Golang.
+GPOddity,https://github.com/synacktiv/GPOddity,Aiming at automating GPO attack vectors through NTLM relaying (and more)
 gpp-decrypt,https://github.com/t0thkr1s/gpp-decrypt,A tool to decrypt Group Policy Preferences passwords
 gqrx,https://github.com/csete/gqrx,Software defined radio receiver powered by GNU Radio and Qt
 gron,https://github.com/tomnomnom/gron,Make JSON greppable!
