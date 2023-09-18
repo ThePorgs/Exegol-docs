@@ -242,6 +242,37 @@ The pipeline may raise some issues, but if they're not related to your tool (e.g
 
 Once everything works, the pull request will be merged, the pipeline will run again in order to test, build and publish a new ``nightly`` image. Congrats, you're now an Exegol contributor!
 
+Temporary fixing a tool
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Tools sometimes have their own issues along their development. A temporary fix can be added as follows, in order to let builds pass successfully, while the respective tool is not fixed. The fix depends on the way the tool is supposed to be installed.
+
+.. tabs::
+
+    .. tab:: Git
+
+        Applying the temporary fix for a tool installed through git goes as follows
+
+        #. Find the commit id that made the tool install fail. This can be found in a try & repeat manner by installing the tool in an exegol container, checking out on a commit ID, try installing again, and repeat until it works.
+        #. Comment out the inital ``git clone`` command.
+        #. Add the temporary fix (``git clone`` and ``git checkout``) in a if statement that makes sure the fix won't stay there forever. The error message will be raised and noticed in the pipeline.
+        #. (bonus) create an issue on the repo (if it doesn't exist already) with the appropriate logs to help the tool's maintainers notice the installation error and fix it.
+
+        .. code-block:: bash
+
+            function install_TOOL() {
+                [...]
+                # git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
+                local TEMP_FIX_LIMIT="YYYY-MM-DD"
+                if [ "$(date +%Y%m%d)" -gt "$(date -d $TEMP_FIX_LIMIT +%Y%m%d)" ]; then
+                  criticalecho "Temp fix expired. Exiting."
+                else
+                  git -C /opt/tools/ clone https://github.com/REPO/TOOL.git
+                  git -C /opt/tools/TOOL checkout 774f1c33efaaccf633ede6e704800345eb313878
+                fi
+                [...]
+            }
+
 Adding to my-resources
 ~~~~~~~~~~~~~~~~~~~~~~
 
