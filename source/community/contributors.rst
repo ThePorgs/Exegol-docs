@@ -55,18 +55,20 @@ When preparing the install function to the package, don't forget to include the 
 
 * ``colorecho "Installing yourtool"``: this is needed to raise logs inside the CI/CD pipeline
 
+* ``catch_and_retry <some command>``: this one is optional. When a command uses the Internet and could potentially fail randomly, the ``catch_and_retry`` wrapper is here to retry that commands multiple times with increasing time intervals in order to avoid having a whole build fail because of one temporary network error. Nota bene: most standard Internet-involved commands are transparently put behind a ``catch_and_retry`` (e.g. ``git``, ``wget``, ``curl``, ``go``, etc.).
+
 * ``add-aliases yourtool``: if your tool needs to have one or multiple aliases to work properly. You will need to create the aliases file in `/sources/assets/zsh/aliases.d/ <https://github.com/ThePorgs/Exegol-images/tree/main/sources/assets/zsh/aliases.d>`_ named after your tool. This file must contain the alias(es) to set as follows.
 
     .. code-block:: bash
 
-        alias tool.py='python3 /opt/tools/thetool/tool.py'
+        alias tool.py='python3 /opt/tools/yourtool/tool.py'
 
 * ``add-history yourtool``: if it's relevant to give some command example of your tool. No need to populate the history with a command that's very short or never used. Using long arguments is preferred. Using environment variables is preferred (e.g. ``$USER``, ``$PASSWORD``, ``$TARGET``, etc.). You will need to create the history file in `/sources/assets/zsh/history.d/ <https://github.com/ThePorgs/Exegol-images/tree/main/sources/assets/zsh/history.d>`_ named after your tool. This file must contain the history command(s) like the example below.
 
     .. code-block:: bash
 
-        yourtool.py --user "$USER" --password "$PASS"WORD --target "$TARG"ET
-        yourtool.py --mode enum --user "$USER" --target "$TARG"ET
+        yourtool.py --user "$USER" --password "$PASSWORD" --target "$TARGET"
+        yourtool.py --mode enum --user "$USER" --target "$TARGET"
         yourtool.py --mode unauthenticated
 
 * ``add-test-command "testcommand"``: this is needed by the CI/CD pipeline to conduct unit tests for all tools to make sure they are installed properly before publishing new images. The test command needs to return ``0`` if the tool works properly, anything else if it doesn't. For instance, something like ``yourtool.py --help`` usually works, but not always! In order to find what command can be used for unit tests, you can do something like ``yourtool.py --help; echo $?`` to see what code is returned after the command is executed. Once trick that can be used when the ``--help`` command returns something ``!=0`` is to do some grep like ``yourtool.py --help|& grep 'Usage:'``.
@@ -80,13 +82,13 @@ In case your tool doesn't need aliases or history commands, add the following co
     # CODE-CHECK-WHITELIST=add-aliases
     # CODE-CHECK-WHITELIST=add-aliases,add-history
 
-In-fine, your tool installation function should look something like this:
+**TL;DR**, your tool installation function should look something like this:
 
 .. code-block:: bash
 
     function install_yourtool() {
         colorecho "Installing yourtool"
-        # tool install commands
+        # tool install commands [...]
         add-aliases yourtool
         add-history yourtool
         add-test-command "yourtool.py --help"
@@ -104,31 +106,35 @@ When installing a tool, depending on how it gets installed, here are the rules.
 
 ..  tabs::
 
-    ..  tab:: Python (pipx)
+    ..  tab:: Python sources (pipx)
 
         The easiest way to install a Python tool is to use pipx.
 
         .. code-block:: bash
 
             # from github.com example
-            python3 -m pipx install git+https://github.com/pathto/tool
+            python3 -m pipx install git+https://github.com/AUTHOR/REPO
 
             # from local sources
-            git -C /opt/tools/ clone --depth 1 https://github.com/pathto/yourtool.git
+            git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
             python3 -m pipx install /opt/tools/yourtool/
 
         But some tools cannot be installed this way, either because they're missing the ``setup.py`` or for any other obscure reason. In that case, opt for the "Python (venv)" solution.
 
-    ..  tab:: Python3 (venv)
+    ..  tab:: Python sources (venv)
 
-        In this example, the tool sources are downloaded, a virtual python environment is set up, and an alias is created.
+        In this example, the tool sources are downloaded, a virtual python environment is set up, requirements are installed, and an alias is created.
+
+        **Nota bene 1**: when the requirements are installed, it's better to have the command put behind a ``catch_and_retry`` so that if their is a temporary network outage during the build, the command will be tried multiple times with increased delays to avoid having the whole build fail.
+
+        **Nota bene 2**: there is no need to put standard ``git``, ``wget``, ``curl``, ``go``, and similar commands behind a ``catch_and_retry`` as its already handled transparently.
 
         .. code-block:: bash
 
-            git -C /opt/tools/ clone --depth 1 https://github.com/pathto/yourtool.git
-            cd /opt/tools/yourtool
-            python3 -m venv /opt/tools/yourtool/venv/
-            /opt/tools/yourtool/venv/bin/python3 -m pip install -r /opt/tools/yourtool/requirements.txt
+            git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
+            cd /opt/tools/yourtool || exit
+            python3 -m venv ./venv/
+            catch_and_retry ./venv/bin/python3 -m pip install -r requirements.txt
             add-aliases yourtool
 
         And add the following alias to your new alias file in /sources/assets/zsh/aliases.d/
@@ -144,7 +150,7 @@ When installing a tool, depending on how it gets installed, here are the rules.
 
     ..  tab:: Go
 
-        Go tools can be installed with a standard ``go install -v github.com/pathto/yourtool@latest`` command.
+        Go tools can be installed with a standard ``go install -v github.com/AUTHOR/REPO@latest`` command.
 
     ..  tab:: Ruby
 
@@ -160,7 +166,7 @@ When installing a tool, depending on how it gets installed, here are the rules.
                 add-aliases yourtool
                 add-history yourtool
                 add-test-command "yourtool --help"
-                add-to-list "yourtool,https://github.com/pathto/yourtool,description"
+                add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
             }
 
         And the alias file will look something like this.
@@ -169,7 +175,7 @@ When installing a tool, depending on how it gets installed, here are the rules.
 
             alias yourtool='/usr/local/rvm/gems/ruby-3.0.0@yourtool/wrappers/ruby /usr/local/rvm/gems/ruby-3.0.0@yourtool/bin/yourtool'
 
-    ..  tab:: Binary
+    ..  tab:: Compile sources
 
         When installing a binary tool (pre-compiled or compiled live), it needs to be moved or linked in ``/opt/tools/bin``.
         Below is an example of tool compilation and installation.
@@ -178,15 +184,36 @@ When installing a tool, depending on how it gets installed, here are the rules.
 
             function install_yourtool() {
                 colorecho "Installing yourtool"
-                git -C /opt/tools/ clone --depth 1 https://github.com/pathto/yourtool
+                git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
                 cd /opt/tools/yourtool
                 ./configure
                 make
                 ln -s "/opt/tools/yourtool/bin/yourtool" "/opt/tools/bin/yourtool"
                 add-history yourtool
                 add-test-command "yourtool --help"
-                add-test-command "yourtool"
-                add-to-list "yourtool,https://github.com/pathto/yourtool,description"
+                add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+            }
+
+    .. tab:: Download compiled binary
+
+        It's not uncommon to have tools already compiled, sometimes available in the "releases" section of a GitHub repository.
+        In the following example, the latest .tar.xz release archive is dynamically fecthed from the repo, by grepping the right strings to match the name of the file and extracted. And then a symbolic link is created.
+        The extact context can differ for each and every tool, but the example function below can serve as codebase. Trying to find similar examples in the code could also help a contributor find similar contexts and how they got implemented.
+
+        .. code-block:: bash
+
+            function install_yourtool() {
+                colorecho "Installing yourtool"
+                local URL
+                URL=$(curl --location --silent "https://api.github.com/repos/AUTHOR/REPO/releases/latest" | grep 'browser_download_url.*somestring.*tar.xz"' | grep -o 'https://[^"]*')
+                curl --location -o /tmp/tool.tar.xz "$URL"
+                tar -xf /tmp/yourtool.tar.xz --directory /tmp
+                rm /tmp/yourtool.tar.xz
+                mv /tmp/yourtool* /opt/tools/yourtool
+                ln -s "/opt/tools/yourtool/bin/yourtool" "/opt/tools/bin/yourtool"
+                add-history yourtool
+                add-test-command "yourtool --help"
+                add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
             }
 
 Other standards
@@ -200,9 +227,22 @@ If your tool opens ports, or if there are credentials at play, please take a loo
 Multi-architecture builds
 -------------------------
 
-Know that Exegol images are build by and for AMD64 and ARM64 systems. Most systems are AMD64 (x86_64), but some other people use ARM64 (M1/M2 Apple Sillicon chips, 64bits Raspberry-Pies, ...).
+Know that Exegol images are built by, and for, AMD64 and ARM64 systems. Most systems are AMD64 (x86_64), but some other people use ARM64 (M1/M2 Apple Sillicon chips, 64bits Raspberry-Pies, ...).
 Whenever possible, try to make sure your tool install function works for both architectures.
 Rest assured, if you don't have both architectures at your disposal it's perfectly fine, we'll take care of this part for you.
+If you do, and if your tool installation function includes some commands that differ wether they run on an ARM64 or AMD64 host, you can use the following structure.
+
+.. code-block:: bash
+
+    if [[ $(uname -m) = 'x86_64' ]]
+    then
+        # command for AMD64
+    elif [[ $(uname -m) = 'aarch64' ]]
+    then
+        # command for ARM64
+    else
+        criticalecho-noexit "This installation function doesn't support architecture $(uname -m)" && return
+    fi
 
 Calling the install function
 ----------------------------
