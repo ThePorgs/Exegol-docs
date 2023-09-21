@@ -27,6 +27,15 @@ A new feature, whether it's on the wrapper, images, or any other module, must be
     * - dev
       - General purpose
 
+Before pushing a pull request on the documentation repository, it is advised to try and compile locally to make sure there are no errors and everything renders as expected. First, the requirements listed in ``requirements.txt`` must be installed (e.g. ``pip install --user -r ./requirements.txt``). Then, the one-liner below can be used to remove any previous build, compile again and open the build in a browser.
+
+.. code-block:: bash
+
+    rm -r build; make html; open "build/html/community/contributors.html"
+
+**Nota bene**: in the example above, the ``open`` command opens an Internet browser (it's a macOS command), but it can be replaced by anything else that fits the contributor's environement (e.g. ``firefox``).
+
+
 Images
 ======
 
