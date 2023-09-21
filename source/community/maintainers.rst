@@ -426,9 +426,11 @@ In order to avoid that error, the runner was started interactively with ``./run.
 2. Disk space
 _____________
 
-When there's not enough
+When there's not enough disk space, the following error is usually raised by the pipelines.
 
-You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 62 MB
+.. code-block::
+
+    You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 62 MB
 
 
 Pull Requests
