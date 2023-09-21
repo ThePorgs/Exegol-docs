@@ -108,5 +108,5 @@ ENV/
 .build.log
 
 # draw.io backup files
-.bkp
-.dtmp
+*.drawio.bkp
+*.drawio.dtmp
