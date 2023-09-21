@@ -249,9 +249,9 @@ Tools sometimes have their own issues along their development. A temporary fix c
 
 .. tabs::
 
-    .. tab:: Git
+    .. tab:: Git (checkout)
 
-        Applying the temporary fix for a tool installed through git goes as follows
+        Applying the temporary fix for a tool installed through git goes as follows when checking out a previous commit
 
         #. Find the commit id that made the tool install fail. This can be found in a try & repeat manner by installing the tool in an exegol container, checking out on a commit ID, try installing again, and repeat until it works.
         #. Comment out the inital ``git clone`` command.
@@ -269,6 +269,31 @@ Tools sometimes have their own issues along their development. A temporary fix c
                 else
                   git -C /opt/tools/ clone https://github.com/REPO/TOOL.git
                   git -C /opt/tools/TOOL checkout 774f1c33efaaccf633ede6e704800345eb313878
+                fi
+                [...]
+            }
+
+    .. tab:: Git (merge PRs)
+
+        When merging PRs on the fly, the temp fix goes like this
+
+        #. Find the PRs the need to be merged. **Warning: only PRs from trusted authors must be hot-merged in this manner**.
+        #. List the PR numbers in the ``PRS`` array
+        #. Merge. In the example below the ``--strategy-option theirs`` strategy is chosen, but it can be changed if needed.
+
+        .. code-block:: bash
+
+            function install_TOOL() {
+                [...]
+                git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
+                local TEMP_FIX_LIMIT="YYYY-MM-DD"
+                if [ "$(date +%Y%m%d)" -gt "$(date -d $TEMP_FIX_LIMIT +%Y%m%d)" ]; then
+                    criticalecho "Temp fix expired. Exiting."
+                else
+                    git config --local user.email "local"
+                    git config --local user.name "local"
+                    local PRS=("111" "222" "333")
+                    for PR in "${PRS[@]}"; do git fetch origin "pull/$PR/head:pull/$PR" && git merge --strategy-option theirs --no-edit "pull/$PR"; done
                 fi
                 [...]
             }
