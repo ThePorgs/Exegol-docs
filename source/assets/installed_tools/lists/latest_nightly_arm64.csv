@@ -133,7 +133,6 @@ hydra,https://github.com/vanhauser-thc/thc-hydra,Hydra is a parallelized login c
 ignorant,https://github.com/megadose/ignorant,holehe but for phone numbers.
 imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose / or convert bitmap images.
 impacket,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
-infoga,https://github.com/m4ll0k/Infoga,Information gathering tool for hacking.
 ipinfo,https://github.com/ipinfo/cli,Get information about an IP address or hostname.
 iptables,https://linux.die.net/man/8/iptables,Userspace command line tool for configuring kernel firewall
 jackit,https://github.com/insecurityofthings/jackit,Exploit to take over a wireless mouse and keyboard
@@ -314,6 +313,7 @@ trilium,https://github.com/zadam/trilium,Personal knowledge management system.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
+upx,https://github.com/upx/upx,UPX is an advanced executable packer
 username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
 volatility3,https://github.com/volatilityfoundation/volatility3,Advanced memory forensics framework
