@@ -146,4 +146,3 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    community/contributors.rst
    community/maintainers.rst
    community/sponsors.rst
-   community/credits.rst
