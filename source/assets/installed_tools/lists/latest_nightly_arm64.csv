@@ -77,6 +77,7 @@ exif,https://exiftool.org/,Utility to read / write and edit metadata in image / 
 exifprobe,https://github.com/hfiguiere/exifprobe,Exifprobe is a command-line tool to parse EXIF data from image files.
 exiftool,https://github.com/exiftool/exiftool,ExifTool is a Perl library and command-line tool for reading / writing and editing meta information in image / audio and video files.
 exiv2,https://github.com/Exiv2/exiv2,Image metadata library and toolset
+ExtractBitlockerKeys,https://github.com/p0dalirius/ExtractBitlockerKeys,A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
 eyewitness,https://github.com/FortyNorthSecurity/EyeWitness,a tool to take screenshots of websites / provide some server header info / and identify default credentials if possible.
 fcrackzip,https://github.com/hyc/fcrackzip,Password cracker for zip archives.
 fdisk,https://github.com/karelzak/util-linux,Collection of basic system utilities / including fdisk partitioning tool
@@ -187,6 +188,7 @@ nbtscan,https://github.com/charlesroelli/nbtscan,NBTscan is a program for scanni
 neo4j,https://github.com/neo4j/neo4j,Database.
 neovim,https://neovim.io/,hyperextensible Vim-based text editor
 netdiscover,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
+netexec,https://github.com/Pennyw0rth/NetExec,Network scanner (Crackmapexec updated).
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
 nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
