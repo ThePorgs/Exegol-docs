@@ -178,6 +178,7 @@ mfdread,https://github.com/zhovner/mfdread,Tool for reading/writing Mifare RFID 
 mfoc,https://github.com/nfc-tools/mfoc,Implementation of 'offline nested' attack by Nethemba
 minicom,https://doc.ubuntu-fr.org/minicom,Minicom is a text-based serial communication program for Unix-like operating systems.
 mitm6,https://github.com/fox-it/mitm6,Tool to conduct a man-in-the-middle attack against IPv6 protocols.
+mobsf,https://github.com/MobSF/Mobile-Security-Framework-MobSF,Automated and all-in-one mobile application (Android/iOS/Windows) pen-testing malware analysis and security assessment framework
 moodlescan,https://github.com/inc0d3/moodlescan,Scan Moodle sites for information and vulnerabilities.
 mousejack,https://github.com/BastilleResearch/mousejack,Exploit to take over a wireless mouse and keyboard
 msprobe,https://github.com/puzzlepeaches/msprobe,msprobe is a tool to identify Microsoft Windows hosts and servers that are running certain services.
@@ -192,6 +193,7 @@ netexec,https://github.com/Pennyw0rth/NetExec,Network scanner (Crackmapexec upda
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
 nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
+nmap-parse-ouptut,https://github.com/ernw/nmap-parse-output,Converts/manipulates/extracts data from a Nmap scan output.
 noPac,https://github.com/Ridter/noPac,Exploiting CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user.
 nosqlmap,https://github.com/codingo/NoSQLMap,a Python tool for testing NoSQL databases for security vulnerabilities.
 ntlmv1-multi,https://github.com/evilmog/ntlmv1-multi,Exploit a vulnerability in Microsoft Windows to gain system-level access.
