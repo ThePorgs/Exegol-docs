@@ -155,6 +155,7 @@ ldapdomaindump,https://github.com/dirkjanm/ldapdomaindump,A tool for dumping dom
 ldaprelayscan,https://github.com/zyn3rgy/LdapRelayScan,Check Domain Controllers for LDAP server protections regarding the relay of NTLM authentication.
 ldapsearch,https://wiki.debian.org/LDAP/LDAPUtils,Search for and display entries (ldap)
 ldapsearch-ad,https://github.com/yaap7/ldapsearch-ad,LDAP search utility with AD support
+LDAPWordlistHarvester,https://github.com/p0dalirius/LDAPWordlistHarvester,Generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts
 ldeep,https://github.com/franc-pentest/ldeep,ldeep is a tool to discover hidden paths on Web servers.
 libmspack,https://github.com/kyz/libmspack,C library for Microsoft compression formats.
 libnfc,https://github.com/grundid/nfctools,Library for Near Field Communication (NFC) devices
