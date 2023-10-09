@@ -87,39 +87,39 @@ Additional dependencies may be required depending on the host OS.
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
-        * Windows **10** with minimum `KB5020030 <https://support.microsoft.com/en-gb/topic/november-15-2022-kb5020030-os-builds-19042-2311-19043-2311-19044-2311-and-19045-2311-preview-237a9048-f853-4e29-a3a2-62efdbea95e2>`_ or Windows **11** is required
+        * Windows **10** (with `KB5020030 <https://support.microsoft.com/en-gb/topic/november-15-2022-kb5020030-os-builds-19042-2311-19043-2311-19044-2311-and-19045-2311-preview-237a9048-f853-4e29-a3a2-62efdbea95e2>`_), or Windows **11**, is required
         * Docker must run on **WSL2** engine (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_)
         * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`_ must be installed
         * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** and **Systemd** enabled
 
         .. tip::
-            To check if Systemd is enabled on your distribution under WSL, follow these steps:
+            To check if ``systemd`` is enabled on the distribution under WSL, the command below can be used.
 
             .. code-block:: bash
                 
                 sudo systemctl status
             
-            To enable Systemd, follow these steps:
+            To enable ``systemd``, the steps below can be followed.
 
             .. code-block:: bash
 
                 sudo -e /etc/wsl.conf
             
-            Add the following:
+            Add the following content:
 
             .. code-block:: bash
 
                 [boot]
                 systemd=true
             
-            Then restart your distribution under WSL and should show your Systemd services:
+            Then restart the distribution under WSL, and make sure ``systemd`` is enabled.
 
             .. code-block:: bash
 
                 sudo systemctl status
 
         .. important::
-            To support graphical applications, your distribution under WSL must have x11-xserver-utils installed.
+            To support graphical applications, the distribution under WSL must have ``x11-xserver-utils`` installed.
 
             .. code-block:: bash
 
