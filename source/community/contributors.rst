@@ -136,7 +136,9 @@ When installing a tool, depending on how it gets installed, here are the rules.
             git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
             cd /opt/tools/yourtool || exit
             python3 -m venv ./venv/
-            catch_and_retry ./venv/bin/python3 -m pip install -r requirements.txt
+            source ./venv/bin/activate
+            pip3 install -r requirements.txt
+            deactivate
             add-aliases yourtool
 
         And add the following alias to your new alias file in /sources/assets/zsh/aliases.d/
