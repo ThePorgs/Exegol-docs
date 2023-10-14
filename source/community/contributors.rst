@@ -43,6 +43,8 @@ The Docker images are the heart of the Exegol project. A neat choice of tools, c
 
 If you want to contribute to this part of the project, there are some things you need to know and some rules you need to follow.
 
+.. _adding_a_tool:
+
 Adding a new tool
 ~~~~~~~~~~~~~~~~~
 
