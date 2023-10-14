@@ -2,7 +2,7 @@
 Maintainers
 ===========
 
-This part of the documentation is meant for Exegol maintainers.
+This part of the documentation is meant for Exegol maintainers. It adds up to the :doc:`contributors </community/contributors>` documentation.
 
 .. contents::
 
@@ -10,7 +10,7 @@ Wrapper release
 ===============
 
 .. hint::
-    The wrapper documentation must be aligned with the wrapper features. Make sure to add code to the appropriate `Exegol docs <https://github.com/ThePorgs/Exegol-docs>`_ branch and have a pull request ready. The docs PR can be merged once the wrapper is released.
+    The wrapper documentation must be aligned with the wrapper features. . The docs PR can be merged once the wrapper is released.
 
 Preparation
 -----------
@@ -426,9 +426,11 @@ In order to avoid that error, the runner was started interactively with ``./run.
 2. Disk space
 _____________
 
-When there's not enough
+When there's not enough disk space, the following error is usually raised by the pipelines.
 
-You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 62 MB
+.. code-block::
+
+    You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 62 MB
 
 
 Pull Requests

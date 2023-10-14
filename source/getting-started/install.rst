@@ -87,10 +87,43 @@ Additional dependencies may be required depending on the host OS.
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
-        * Windows **11** is needed
+        * Windows **10** (with `KB5020030 <https://support.microsoft.com/en-gb/topic/november-15-2022-kb5020030-os-builds-19042-2311-19043-2311-19044-2311-and-19045-2311-preview-237a9048-f853-4e29-a3a2-62efdbea95e2>`_), or Windows **11**, is required
         * Docker must run on **WSL2** engine (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_)
         * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`_ must be installed
-        * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** enabled
+        * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** and **Systemd** enabled
+
+        .. tip::
+            To check if ``systemd`` is enabled on the distribution under WSL, the command below can be used.
+
+            .. code-block:: bash
+                
+                sudo systemctl status
+            
+            To enable ``systemd``, the steps below can be followed.
+
+            .. code-block:: bash
+
+                sudo -e /etc/wsl.conf
+            
+            Add the following content:
+
+            .. code-block:: bash
+
+                [boot]
+                systemd=true
+            
+            Then restart the distribution under WSL, and make sure ``systemd`` is enabled.
+
+            .. code-block:: bash
+
+                sudo systemctl status
+
+        .. important::
+            To support graphical applications, the distribution under WSL must have ``x11-xserver-utils`` installed.
+
+            .. code-block:: bash
+
+                sudo apt-get install x11-xserver-utils
 
 .. _exegol_install:
 
@@ -170,18 +203,23 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
             ..  group-tab:: Windows
 
-                Once this is taken care of, the exegol wrapper can then can be added as a PowerShell command alias and saved for persistence
-                in ``$HOME\PowershellAliasesExport.txt``
-                then loaded from ``$PROFILE`` script at PowerShell startup. Exegol can then be used with ``exegol <action>`` instead of ``python3 /path/to/Exegol/exegol.py <action>``.
+                Once this is taken care of, the exegol wrapper can then can be added as a PowerShell command alias. Exegol can then be used with ``exegol <action>`` instead of ``python3 /path/to/Exegol/exegol.py <action>``.
 
-                To create the alias file correctly, open a powershell and place yourself in the folder where exegol is located (applicable only for `from source` installations) and run the following commands:
+                To create the alias file correctly, open a PowerShell and place yourself in the folder where exegol is located (applicable only for `from source` installations) and run the following commands:
+
+                Create `$PROFILE` file if it doesn't exist:
 
                 .. code-block:: powershell
 
-                   $AliasFile = "$HOME\PowershellAliasesExport.txt"
-                   Set-Alias -Name exegol -Value "$(pwd)\exegol.py"
-                   Get-Alias -Name "exegol" | Export-Alias -Path $AliasFile
-                   echo "Import-Alias '$AliasFile'" >> $PROFILE
+                    if (!(Test-Path -Path $PROFILE)) {
+                        New-Item -ItemType File -Path $PROFILE -Force
+                    }
+                
+                Create alias for Exegol in `$PROFILE`:
+
+                .. code-block:: powershell
+
+                    echo "Set-Alias -Name exegol -Value '$(pwd)\exegol.py'" >> $PROFILE
 
                 .. warning::
 
@@ -283,6 +321,32 @@ Exegol supports auto-completion in many shell environments but there is a config
             .. code-block:: bash
 
                 eval `register-python-argcomplete --no-defaults --shell tcsh exegol`
+
+        .. tab:: PowerShell
+
+            To activate completions for PowerShell, first generate completion file :
+
+            .. code-block:: powershell
+
+                python $HOME\AppData\Roaming\Python\Python311\Scripts\register-python-argcomplete --no-defaults --shell powershell exegol > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
+
+            .. important::
+
+                `Python311` can be modified and depends on the version of Python you have installed
+            
+            Then import this completion file in `$PROFILE`:
+
+            .. code-block:: powershell
+
+                echo "Import-Module '$HOME\Documents\WindowsPowerShell\exegol_completion.psm1'" >> $PROFILE
+            
+            .. tip::
+                
+                You can have Zsh style completion in PowerShell using this:
+
+                .. code-block:: powershell
+
+                    echo "Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete" >> $PROFILE
 
 4. Installation of the first Exegol image
 -----------------------------------------

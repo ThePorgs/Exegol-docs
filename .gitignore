@@ -106,3 +106,7 @@ ENV/
 
 # Build logs for debugging
 .build.log
+
+# draw.io backup files
+*.drawio.bkp
+*.drawio.dtmp
