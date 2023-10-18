@@ -39,6 +39,7 @@ Censys,https://github.com/censys/censys-python,An easy-to-use and lightweight AP
 certipy,https://github.com/ly4k/Certipy,Python tool to create and sign certificates
 certsync,https://github.com/zblurx/certsync,certsync is a tool that helps you synchronize certificates between two directories.
 cewl,https://digi.ninja/projects/cewl.php,Generates custom wordlists by spidering a target's website and parsing the results
+cewler,https://github.com/roys/cewler,CeWL alternative in Python
 chainsaw,https://github.com/WithSecureLabs/chainsaw,Rapidly Search and Hunt through Windows Forensic Artefacts
 checksec-py,https://github.com/Wenzel/checksec.py,Python wrapper script for checksec.sh from paX.
 chisel,https://github.com/jpillora/chisel,Go based TCP tunnel with authentication and encryption support
@@ -245,6 +246,7 @@ pykek,https://github.com/preempt/pykek,PyKEK (Python Kerberos Exploitation Kit) 
 pylaps,https://github.com/p0dalirius/pylaps,Utility for enumerating and querying LDAP servers.
 pypykatz,https://github.com/skelsec/pypykatz,a Python library for mimikatz-like functionality
 pyrit,https://github.com/JPaulMora/Pyrit,Python-based WPA/WPA2-PSK attack tool.
+pywerview,https://github.com/the-useless-one/pywerview,A (partial) Python rewriting of PowerSploit's PowerView.
 pywhisker,https://github.com/ShutdownRepo/pywhisker,PyWhisker is a Python equivalent of the original Whisker made by Elad Shamir and written in C#. This tool allows users to manipulate the msDS-KeyCredentialLink attribute of a target user/computer to obtain full control over that object. It's based on Impacket and on a Python equivalent of Michael Grafnetter's DSInternals called PyDSInternals made by podalirius.
 pywsus,https://github.com/GoSecure/pywsus,Python implementation of a WSUS client
 radare2,https://github.com/radareorg/radare2,A complete framework for reverse-engineering and analyzing binaries
