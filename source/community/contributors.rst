@@ -59,13 +59,13 @@ When preparing the install function to the package, don't forget to include the 
 
 * ``catch_and_retry <some command>``: this one is optional. When a command uses the Internet and could potentially fail randomly, the ``catch_and_retry`` wrapper is here to retry that commands multiple times with increasing time intervals in order to avoid having a whole build fail because of one temporary network error. Nota bene: most standard Internet-involved commands are transparently put behind a ``catch_and_retry`` (e.g. ``git``, ``wget``, ``curl``, ``go``, etc.).
 
-* ``add-aliases yourtool``: if your tool needs to have one or multiple aliases to work properly. You will need to create the aliases file in `/sources/assets/zsh/aliases.d/ <https://github.com/ThePorgs/Exegol-images/tree/main/sources/assets/zsh/aliases.d>`_ named after your tool. This file must contain the alias(es) to set as follows.
+* ``add-aliases yourtool``: if your tool needs to have one or multiple aliases to work properly. You will need to create the aliases file in ``/sources/assets/shells/aliases.d/`` named after your tool. This file must contain the alias(es) to set as follows.
 
     .. code-block:: bash
 
         alias tool.py='python3 /opt/tools/yourtool/tool.py'
 
-* ``add-history yourtool``: if it's relevant to give some command example of your tool. No need to populate the history with a command that's very short or never used. Using long arguments is preferred. Using environment variables is preferred (e.g. ``$USER``, ``$PASSWORD``, ``$TARGET``, etc.). You will need to create the history file in `/sources/assets/zsh/history.d/ <https://github.com/ThePorgs/Exegol-images/tree/main/sources/assets/zsh/history.d>`_ named after your tool. This file must contain the history command(s) like the example below.
+* ``add-history yourtool``: if it's relevant to give some command example of your tool. No need to populate the history with a command that's very short or never used. Using long arguments is preferred. Using environment variables is preferred (e.g. ``$USER``, ``$PASSWORD``, ``$TARGET``, etc.). You will need to create the history file in ``/sources/assets/shells/history.d/`` named after your tool. This file must contain the history command(s) like the example below.
 
     .. code-block:: bash
 
@@ -141,7 +141,7 @@ When installing a tool, depending on how it gets installed, here are the rules.
             deactivate
             add-aliases yourtool
 
-        And add the following alias to your new alias file in /sources/assets/zsh/aliases.d/
+        And add the following alias to your new alias file in ``/sources/assets/shells/aliases.d/``
 
         .. code-block:: bash
 
