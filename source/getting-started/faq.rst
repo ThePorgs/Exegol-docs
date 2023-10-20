@@ -86,7 +86,18 @@ Yes. And you have multiple choices.
 Can I customize Exegol?
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Yes, please refer to the :doc:`"my-resources" documentation </exegol-image/my-resources>`.
+Yes, please refer to the :doc:`"my-resources" documentation </exegol-image/my-resources>` that explains how to automatically setup your changes to your Exegol containers.
+Also, see the :doc:`"wrapper's advanced-uses" documentation </exegol-wrapper/advanced-uses>` to see how to edit Exegol's conf among other things.
+You could also want to :ref:`make your own Exegol image <custom_image>`
+
+.. _custom_image:
+
+Can I make my own Exegol image?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes. You will need to create a dockerfile (e.g. ``CUSTOM.dockerfile``) at the root of the exegol-images module next to the other dockerfiles (i.e. ``/path/to/Exegol/exegol-docker-build/``) containing the instructions you want the build process to follow.
+
+Then, run something like ``exegol install "myimagename" "CUSTOM"`` to build the image locally. See the ``install`` documentation: :doc:`install action </exegol-wrapper/install>`.
 
 How to install Exegol on an external drive?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
