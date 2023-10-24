@@ -35,6 +35,30 @@ Before pushing a pull request on the documentation repository, it is advised to 
 
 **Nota bene**: in the example above, the ``open`` command opens an Internet browser (it's a macOS command), but it can be replaced by anything else that fits the contributor's environement (e.g. ``firefox``).
 
+Signing commits
+===============
+
+To make the project as secure as possible, signed commits are now required to contribute to the project.
+Using PGP (Pretty Good Privacy) signatures for commits on GitHub serves several important purposes :
+
+* Authentication : It verifies the authenticity of the commit, ensuring that it was indeed made by the person claiming to have made it.
+* Integrity : It ensures that the commit hasn't been tampered with since it was signed. Any changes to the commit after it has been signed will invalidate the signature.
+* Trust : This ensures that all contributions come from trusted sources.
+* Visibility : On GitHub, signed commits are marked with a "verified" label, giving users and collaborators confidence in the commit's origin and integrity.
+
+PGP signatures on commits add an extra layer of security and trust to the codebase, making it harder for malicious actors to introduce unauthorized changes.
+
+CLI
+~~~~~~~~~
+TODO
+
+Gitkraken
+~~~~~~~~~
+
+
+YubiKey
+~~~~~~~~~
+TODO
 
 Images
 ======
