@@ -99,6 +99,11 @@ A system exists to easily install arbitrary firefox addons in any new exegol con
 The ``/opt/my-resources/setup/firefox/addons.txt`` file allows the user to list addons to install from online sources. It must be filled with their links in Mozilla's shop (for example https://addons.mozilla.org/fr/firefox/addon/foxyproxy-standard/ ).
 The ``.xpi`` files in ``/opt/my-resources/setup/firefox/addons/`` folder will be installed as well.
 
+.. seealso::
+    Below, available from version ``3.2.0`` of any exegol image.
+
+The ``.der`` files in ``/opt/my-resources/setup/firefox/certs/`` folder will be trusted .
+
 
 :code:`python3` (pip3)
 ~~~~~~~~~~~~~~~~~~~~~~
