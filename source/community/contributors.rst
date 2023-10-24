@@ -48,17 +48,97 @@ Using PGP (Pretty Good Privacy) signatures for commits on GitHub serves several 
 
 PGP signatures on commits add an extra layer of security and trust to the codebase, making it harder for malicious actors to introduce unauthorized changes.
 
-CLI
-~~~~~~~~~
-TODO
+Source : https://docs.github.com/fr/authentication/managing-commit-signature-verification/signing-commits
 
-Gitkraken
-~~~~~~~~~
+..  tabs::
+
+    ..  tab:: CLI
+        A PGP key must be generated on the user's machine in order to sign commits.
+        The following command generates a PGP key that can be used to sign commits and push them to Github :
+        
+        .. code-block:: bash
+            
+            gpg --quick-generate-key "Github Key <github@exegol.info>" ed25519 sign 0
+
+        You will be asked for a password to secure the key. We recommend a password of at least 12 characters.
+        Once the key has been generated, you need to export the public key in order to import it on Github.
+
+        .. code-block:: bash
+            
+            gpg --list-secret-keys --keyid-format=long|grep -B 2 "Github Key"
+
+        In this case, the keyid is : 32D13F09040009D0
+
+        .. code-block:: bash
+            
+            sec   ed25519/32D13F09040009D0 2023-10-24 [SC]
+
+        The following command exports the public key.
+
+        .. code-block:: bash
+            
+            gpg --armor --export 32D13F09040009D0
+        
+            -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+            mDMEZTe5EBYJKwYBBAHaRw8BAQdA+x6jx+b4kkuiXC4A1EyjnpG41CEul58UfXLR
+            MvNXop60H0dpdGh1YiBLZXkgPGdpdGh1YkBleGVnb2wuaW5mbz6IkwQTFgoAOxYh
+            BI6il4NXf4jf5xnaMjLRP0kEVTnQBQJlN7kQAhsDBQsJCAcCAiICBhUKCQgLAgQW
+            AgMBAh4HAheAAAoJEDLRP0kEVTnQp7MA/1/pGKwBhdP6GC73HnhlE+dWIOYUHCg/
+            x38Xd6AgPnB9AP9JAHTNgyAeRJo6kjrnpVn+V4z4KVMD3gUgI9lPIH1cBQ==
+            =tp25
+            -----END PGP PUBLIC KEY BLOCK-----
+
+        The public key must be registered on your Github account so that it can verify that you are the author of the commits you make.
+
+        .. figure:: /assets/contributors/github_homepage_settings.png
+            :align: center
+            :alt: Github settings page
+
+            Github settings page
+
+        .. figure:: /assets/contributors/github_new_gpg_key.png
+            :align: center
+            :alt: Github new key
+
+            Github new key
+
+        .. figure:: /assets/contributors/github_add_gpg_key.png
+            :align: center
+            :alt: Github add key
+
+            Github add key
+
+        To force the git CLI to sign commits, you can use the following command, which will only take effect in the repo you're in. If you want to force it globally, you can follow the official Github documentation.
+
+        .. code-block:: bash
+            
+            git config commit.gpgsign true
+            git add .
+            git commit -S -m "YOUR_COMMIT_MESSAGE"
+            git push
 
 
-YubiKey
-~~~~~~~~~
-TODO
+    ..  tab:: Gitkraken
+        Once your signature key has been generated, the Gitkraken tool will be able to detect it. Simply select it from the Settings -> GPG drop-down list.
+
+        .. figure:: /assets/contributors/gpg_preferences_gitkraken.png
+            :align: center
+            :alt: Gitkraken GPG settings
+
+            Gitkraken GPG settings
+
+        When you push a commit, Gitkraken will ask you for your key's passphrase, which will sign the commit.
+
+        .. figure:: /assets/contributors/gpg_proof.png
+            :align: center
+            :alt: Signature verification
+
+            Signature verification
+
+
+    ..  tab:: YubiKey
+        TODO
 
 Images
 ======
