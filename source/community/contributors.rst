@@ -95,19 +95,19 @@ Source : https://docs.github.com/fr/authentication/managing-commit-signature-ver
             :align: center
             :alt: Github settings page
 
-            Github settings page
+            Github homepage
 
         .. figure:: /assets/contributors/github_new_gpg_key.png
             :align: center
             :alt: Github new key
 
-            Github new key
+            Github settings page
 
         .. figure:: /assets/contributors/github_add_gpg_key.png
             :align: center
             :alt: Github add key
 
-            Github add key
+            Create a new Github PGP key
 
         To force the git CLI to sign commits, you can use the following command, which will only take effect in the repo you're in. If you want to force it globally, you can follow the official Github documentation.
 
@@ -120,7 +120,7 @@ Source : https://docs.github.com/fr/authentication/managing-commit-signature-ver
 
 
     ..  tab:: Gitkraken
-        Once your signature key has been generated, the Gitkraken tool will be able to detect it. Simply select it from the Settings -> GPG drop-down list.
+        Once your signature key has been generated, the Gitkraken tool will be able to detect it. Simply select it from the Settings -> GPG drop-down list and check the options to sign commits by default.
 
         .. figure:: /assets/contributors/gpg_preferences_gitkraken.png
             :align: center
