@@ -19,6 +19,7 @@ Below are the features offered by "My-resources", allowing users to extend Exego
 * :ref:`User setup <User-setup>`: In this functionality, a shell script can be populated with every command a user wishes its containers to run at their creation.
 
 .. contents::
+    :local:
 
 .. _Custom-tools:
 

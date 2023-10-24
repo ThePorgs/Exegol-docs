@@ -13,6 +13,7 @@ Once the wrapper is installed, the second step in setting up Exegol on a device 
 :doc:`here </exegol-wrapper/install>`). Both actions will guide the user in installing an image if needed.
 
 .. contents::
+    :local:
 
 .. _install_requirements:
 

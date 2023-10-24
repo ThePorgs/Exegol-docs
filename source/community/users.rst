@@ -5,6 +5,7 @@ Users
 This part of the documentation is meant for Exegol users, those who want to understand the project a bit more, open issues, get in touch with the community, etc..
 
 .. contents::
+    :local:
 
 Opening issues
 ==============

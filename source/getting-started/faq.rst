@@ -5,7 +5,7 @@ Frequently asked questions
 Below are the frequently asked questions regarding either features, the overall project or troubleshooting matters.
 
 .. contents::
-   :local:
+    :local:
 
 ..
   Frequently asked questions should be questions that actually got asked.
