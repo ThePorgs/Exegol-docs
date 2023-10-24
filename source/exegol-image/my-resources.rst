@@ -89,7 +89,7 @@ To automatically:
     The output will be saved into the single file ``~/.config/bloodhound/customqueries.json``.
 
 
-:code:`firefox` (addons)
+:code:`firefox` (addons, certs)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``3.0.2`` of any exegol image.
@@ -97,6 +97,7 @@ To automatically:
 A system exists to easily install arbitrary firefox addons in any new exegol container.
 
 The ``/opt/my-resources/setup/firefox/addons.txt`` file allows the user to list addons to install from online sources. It must be filled with their links in Mozilla's shop (for example https://addons.mozilla.org/fr/firefox/addon/foxyproxy-standard/ ).
+
 The ``.xpi`` files in ``/opt/my-resources/setup/firefox/addons/`` folder will be installed as well.
 
 .. seealso::
