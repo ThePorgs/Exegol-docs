@@ -56,6 +56,7 @@ crackhound,https://github.com/trustedsec/crackhound,A fast WPA/WPA2/WPA3 WiFi Ha
 crackmapexec,https://github.com/Porchetta-Industries/CrackMapExec,Network scanner.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
+CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 cyperoth,https://github.com/seajaysec/cypheroth,Automated extensible toolset that runs cypher queries against Bloodhound's Neo4j backend and saves output to spreadsheets.
 darkarmour,https://github.com/bats3c/darkarmour,a tool to detect and evade common antivirus products
 dex2jar,https://github.com/pxb1988/dex2jar,A tool to convert Android's dex files to Java's jar files
@@ -71,6 +72,7 @@ donpapi,https://github.com/login-securite/DonPAPI,Dumping revelant information o
 droopescan,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
 drupwn,https://github.com/immunIT/drupwn,Drupal security scanner.
 eaphammer,https://github.com/s0lst1c3/eaphammer,EAPHammer is a toolkit for performing targeted evil twin attacks against WPA2-Enterprise networks.
+empire,https://github.com/BC-SECURITY/Empire,post-exploitation and adversary emulation framework
 enum4linux-ng,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
 enyx,https://github.com/trickster0/enyx,Framework for building offensive security tools.
 evilwinrm,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
