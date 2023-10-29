@@ -317,8 +317,8 @@ Tools sometimes have their own issues along their development. A temporary fix c
             function install_TOOL() {
                 [...]
                 # git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
-                local TEMP_FIX_LIMIT="YYYY-MM-DD"
-                if [ "$(date +%Y%m%d)" -gt "$(date -d $TEMP_FIX_LIMIT +%Y%m%d)" ]; then
+                local temp_fix_limit="YYYY-MM-DD"
+                if [ "$(date +%Y%m%d)" -gt "$(date -d $temp_fix_limit +%Y%m%d)" ]; then
                   criticalecho "Temp fix expired. Exiting."
                 else
                   git -C /opt/tools/ clone https://github.com/REPO/TOOL.git
@@ -340,8 +340,8 @@ Tools sometimes have their own issues along their development. A temporary fix c
             function install_TOOL() {
                 [...]
                 git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
-                local TEMP_FIX_LIMIT="YYYY-MM-DD"
-                if [ "$(date +%Y%m%d)" -gt "$(date -d $TEMP_FIX_LIMIT +%Y%m%d)" ]; then
+                local temp_fix_limit="YYYY-MM-DD"
+                if [ "$(date +%Y%m%d)" -gt "$(date -d $temp_fix_limit +%Y%m%d)" ]; then
                     criticalecho "Temp fix expired. Exiting."
                 else
                     git config --local user.email "local"
