@@ -27,8 +27,9 @@ There are multiple checks to do to make sure Docker works properly.
     .. tab:: Docker service
 
         The Docker service must installed up and running.
-        For Windows users, Docker Desktop for Windows must be up and running.
-        For macOS users, Docker Desktop for Mac (or `OrbStack <https://orbstack.dev/>`_) must be up and running.
+
+        - For Windows users: Docker Desktop for Windows must be up and running.
+        - For macOS users: Docker Desktop for Mac (or `OrbStack <https://orbstack.dev/>`_) must be up and running.
 
     .. tab:: Docker permissions
 
@@ -127,5 +128,15 @@ For macOS users, XQuartz is needed. It's listed in the :ref:`install requirement
 .. note::
 
     Exegol's wrapper automatically starts XQuartz on macOS hosts when needed. But if for some reason it gets manually closed by the users while a container is running, X11 sharing will not work. Restarting the container with ``exegol restart <container>`` will restart XQuartz automatically if needed.
+
+Can I install docker directly on my WSL2 distro instead of Docker Desktop ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes, it's possible to install docker directly on WSL2 rather than using Docker Desktop, but you'll be restricted to your WSL2 environment and its constraints.
+
+Although Docker Desktop is incomplete, it does offer a few advantages (exegol can be used from powershell / cmd, windows folder sharing with the exegol workstation, etc).
+We therefore recommend **Docker Desktop as the official support** for Exegol.
+
+We do **not** guarantee wrapper stability with a directly installed WSL docker.
 
 .. TODO: add a note, when the Desktop feature is in prod, that explains the ups and dows of X11 vs. Desktop mode.
