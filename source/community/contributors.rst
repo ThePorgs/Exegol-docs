@@ -7,6 +7,7 @@ This part of the documentation is meant for Exegol contributors, those who write
 First things first, once you know on what module you want to contribute (`wrapper <https://github.com/ThePorgs/Exegol>`_, `images <https://github.com/ThePorgs/Exegol-images>`_, `documentation <https://github.com/ThePorgs/Exegol-docs>`_, `resources <https://github.com/ThePorgs/Exegol-resources>`_, etc.) `fork it <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_, `checkout <https://git-scm.com/docs/git-checkout>`_ to the ``dev`` branch, then come back to this page to start coding.
 
 .. contents::
+    :local:
 
 Documentation
 ==============
@@ -316,8 +317,8 @@ Tools sometimes have their own issues along their development. A temporary fix c
             function install_TOOL() {
                 [...]
                 # git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
-                local TEMP_FIX_LIMIT="YYYY-MM-DD"
-                if [ "$(date +%Y%m%d)" -gt "$(date -d $TEMP_FIX_LIMIT +%Y%m%d)" ]; then
+                local temp_fix_limit="YYYY-MM-DD"
+                if [ "$(date +%Y%m%d)" -gt "$(date -d $temp_fix_limit +%Y%m%d)" ]; then
                   criticalecho "Temp fix expired. Exiting."
                 else
                   git -C /opt/tools/ clone https://github.com/REPO/TOOL.git
@@ -339,8 +340,8 @@ Tools sometimes have their own issues along their development. A temporary fix c
             function install_TOOL() {
                 [...]
                 git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
-                local TEMP_FIX_LIMIT="YYYY-MM-DD"
-                if [ "$(date +%Y%m%d)" -gt "$(date -d $TEMP_FIX_LIMIT +%Y%m%d)" ]; then
+                local temp_fix_limit="YYYY-MM-DD"
+                if [ "$(date +%Y%m%d)" -gt "$(date -d $temp_fix_limit +%Y%m%d)" ]; then
                     criticalecho "Temp fix expired. Exiting."
                 else
                     git config --local user.email "local"

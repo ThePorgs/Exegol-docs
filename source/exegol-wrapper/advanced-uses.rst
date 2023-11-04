@@ -3,6 +3,7 @@ Advanced uses
 ===============
 
 .. contents::
+    :local:
 
 .. _exegol_configuration:
 

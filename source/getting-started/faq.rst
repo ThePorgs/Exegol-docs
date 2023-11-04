@@ -5,7 +5,7 @@ Frequently asked questions
 Below are the frequently asked questions regarding either features, the overall project or troubleshooting matters.
 
 .. contents::
-   :local:
+    :local:
 
 ..
   Frequently asked questions should be questions that actually got asked.
@@ -27,8 +27,9 @@ There are multiple checks to do to make sure Docker works properly.
     .. tab:: Docker service
 
         The Docker service must installed up and running.
-        For Windows users, Docker Desktop for Windows must be up and running.
-        For macOS users, Docker Desktop for Mac (or `OrbStack <https://orbstack.dev/>`_) must be up and running.
+
+        - For Windows users: Docker Desktop for Windows must be up and running.
+        - For macOS users: Docker Desktop for Mac (or `OrbStack <https://orbstack.dev/>`_) must be up and running.
 
     .. tab:: Docker permissions
 
@@ -86,7 +87,18 @@ Yes. And you have multiple choices.
 Can I customize Exegol?
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Yes, please refer to the :doc:`"my-resources" documentation </exegol-image/my-resources>`.
+Yes, please refer to the :doc:`"my-resources" documentation </exegol-image/my-resources>` that explains how to automatically setup your changes to your Exegol containers.
+Also, see the :doc:`"wrapper's advanced-uses" documentation </exegol-wrapper/advanced-uses>` to see how to edit Exegol's conf among other things.
+You could also want to :ref:`make your own Exegol image <custom_image>`
+
+.. _custom_image:
+
+Can I make my own Exegol image?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes. You will need to create a dockerfile (e.g. ``CUSTOM.dockerfile``) at the root of the exegol-images module next to the other dockerfiles (i.e. ``/path/to/Exegol/exegol-docker-build/``) containing the instructions you want the build process to follow.
+
+Then, run something like ``exegol install "myimagename" "CUSTOM"`` to build the image locally. See the ``install`` documentation: :doc:`install action </exegol-wrapper/install>`.
 
 How to install Exegol on an external drive?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,5 +139,15 @@ For macOS users, XQuartz is needed. It's listed in the :ref:`install requirement
 .. note::
 
     Exegol's wrapper automatically starts XQuartz on macOS hosts when needed. But if for some reason it gets manually closed by the users while a container is running, X11 sharing will not work. Restarting the container with ``exegol restart <container>`` will restart XQuartz automatically if needed.
+
+Can I install docker directly on my WSL2 distro instead of Docker Desktop ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes, it's possible to install docker directly on WSL2 rather than using Docker Desktop, but you'll be restricted to your WSL2 environment and its constraints.
+
+Although Docker Desktop is incomplete, it does offer a few advantages (exegol can be used from powershell / cmd, windows folder sharing with the exegol workstation, etc).
+We therefore recommend **Docker Desktop as the official support** for Exegol.
+
+We do **not** guarantee wrapper stability with a directly installed WSL docker.
 
 .. TODO: add a note, when the Desktop feature is in prod, that explains the ups and dows of X11 vs. Desktop mode.
