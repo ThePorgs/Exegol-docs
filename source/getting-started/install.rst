@@ -88,7 +88,7 @@ Additional dependencies may be required depending on the host OS.
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
         * Windows **10** (up to date), or Windows **11**, is required
-        * You have **Docker Desktop** installed on your Windows host
+        * **Docker Desktop** installed on the Windows host
         * Docker Desktop must be configured to run on **WSL2** engine (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_)
         * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`_ must be installed to support graphical application
         * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** enabled (see screenshot below)
