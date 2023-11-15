@@ -181,7 +181,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                 .. code-block:: bash
 
-                   sudo ln -s "$(pwd)/exegol.py" "/usr/local/bin/exegol"
+                   sudo ln -s "$(pwd)/Exegol/exegol.py" "/usr/local/bin/exegol"
 
             ..  group-tab:: Windows
 
