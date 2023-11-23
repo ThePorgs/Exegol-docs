@@ -221,7 +221,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 3. (Optional) Using Exegol auto-completion
 ------------------------------------------
 
-Exegol supports auto-completion in many shell environments but there is a configuration to add for this feature to work.
+Exegol (wrapper) supports auto-completion in many shell environments but there is a configuration to add (on the host) for this feature to work.
 
 .. tip::
 
