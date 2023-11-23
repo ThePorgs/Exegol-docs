@@ -14,7 +14,7 @@ This section lists the services that can be used in Exegol containers and their 
     +----------------------+--------+--------------------------+-----------------------------------------------------------------------------------------------+
     | Service              | Port   | Commands                 | Comments                                                                                      |
     +======================+========+==========================+===============================================================================================+
-    | neo4j                | 7687   | ``neo4j start``,         | Used by BloodHound, and BloodHound-related projects.                                          |
+    | neo4j                |        | ``neo4j start``,         | Used by BloodHound, and BloodHound-related projects.                                          |
     |                      |        | ``neo4j stop``,          |                                                                                               |
     | * bolt               | 7687   | ``neo4j restart``        |                                                                                               |
     |                      |        |                          |                                                                                               |
@@ -29,7 +29,7 @@ This section lists the services that can be used in Exegol containers and their 
     +----------------------+--------+--------------------------+-----------------------------------------------------------------------------------------------+
     | Starkiller (Empire)  | TBD    | ``ps-empire server``     | GUI for the Empire post-exploit framework (https://github.com/BC-SECURITY/Empire)             |
     +----------------------+--------+--------------------------+-----------------------------------------------------------------------------------------------+
-    | Desktop              | 6336   | ``desktop-start``,       | Remote graphical desktop feature (beta). Used with the ``--desktop`` from up-to-date wrapper. |
+    | Desktop              |        | ``desktop-start``,       | Remote graphical desktop feature (beta). Used with the ``--desktop`` from up-to-date wrapper. |
     |                      |        | ``desktop-stop``,        |                                                                                               |
     | * vnc                | 6336   | ``desktop-restart``      |                                                                                               |
     |                      |        |                          |                                                                                               |
