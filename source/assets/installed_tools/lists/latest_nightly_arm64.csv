@@ -240,6 +240,7 @@ pwntools,https://github.com/Gallopsled/pwntools,a CTF framework and exploit deve
 pygpoabuse,https://github.com/Hackndo/pyGPOAbuse,A tool for abusing GPO permissions to escalate privileges
 pykek,https://github.com/preempt/pykek,PyKEK (Python Kerberos Exploitation Kit) a python library to manipulate KRB5-related data.
 pylaps,https://github.com/p0dalirius/pylaps,Utility for enumerating and querying LDAP servers.
+pymeta,https://github.com/m8sec/pymeta,Google and Bing scraping osint tool
 pypykatz,https://github.com/skelsec/pypykatz,a Python library for mimikatz-like functionality
 pyrit,https://github.com/JPaulMora/Pyrit,Python-based WPA/WPA2-PSK attack tool.
 pywerview,https://github.com/the-useless-one/pywerview,A (partial) Python rewriting of PowerSploit's PowerView.
