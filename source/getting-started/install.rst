@@ -13,6 +13,7 @@ Once the wrapper is installed, the second step in setting up Exegol on a device 
 :doc:`here </exegol-wrapper/install>`). Both actions will guide the user in installing an image if needed.
 
 .. contents::
+    :local:
 
 .. _install_requirements:
 
@@ -23,7 +24,7 @@ The following elements are required before Exegol can be installed, whatever the
 
 * git (`Linux <https://github.com/git-guides/install-git#install-git-on-linux>`__ | `macOS <https://github.com/git-guides/install-git#install-git-on-mac>`__ | `Windows <https://github.com/git-guides/install-git#install-git-on-windows>`__)
 * python3 (`Linux <https://docs.python.org/3/using/unix.html#on-linux>`__ | `macOS <https://www.python.org/downloads/macos/>`__ | `Windows <https://www.python.org/downloads/windows/>`__)
-* docker (`Linux <https://docs.docker.com/engine/install/debian/>`__ | `macOS <https://docs.docker.com/desktop/install/mac-install/>`__ | `Windows <https://docs.docker.com/desktop/install/windows-install/>`__)
+* docker (`Linux <https://docs.docker.com/engine/install/debian/>`__) or Docker Desktop (`macOS <https://docs.docker.com/desktop/install/mac-install/>`__ | `Windows <https://docs.docker.com/desktop/install/windows-install/>`__)
 * at least 20GB of free storage
 
 Additional dependencies may be required depending on the host OS.
@@ -87,43 +88,24 @@ Additional dependencies may be required depending on the host OS.
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
-        * Windows **10** (with `KB5020030 <https://support.microsoft.com/en-gb/topic/november-15-2022-kb5020030-os-builds-19042-2311-19043-2311-19044-2311-and-19045-2311-preview-237a9048-f853-4e29-a3a2-62efdbea95e2>`_), or Windows **11**, is required
-        * Docker must run on **WSL2** engine (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_)
-        * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`_ must be installed
-        * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** and **Systemd** enabled
+        * Windows **10** (up to date), or Windows **11**, is required
+        * **Docker Desktop** installed on the Windows host
+        * Docker Desktop must be configured to run on **WSL2** engine (`how to <https://learn.microsoft.com/en-us/windows/wsl/install>`_)
+        * `WSLg <https://github.com/microsoft/wslg#installing-wslg>`_ must be installed to support graphical application
+        * at least one WSL distribution must be **installed** as well (e.g. Debian), with **Docker integration** enabled (see screenshot below)
 
-        .. tip::
-            To check if ``systemd`` is enabled on the distribution under WSL, the command below can be used.
 
-            .. code-block:: bash
-                
-                sudo systemctl status
-            
-            To enable ``systemd``, the steps below can be followed.
+        .. figure:: /assets/install/windows_dockerdesktop_wsl_config.png
+            :align: center
+            :alt: Windows Docker Desktop WSL integration configuration
 
-            .. code-block:: bash
+            Windows Docker Desktop WSL integration configuration
 
-                sudo -e /etc/wsl.conf
-            
-            Add the following content:
+        In a Windows environment, the Exegol wrapper can be installed **either** in a **WSL shell** or directly in your Windows environment with **Powershell**.
 
-            .. code-block:: bash
+        .. warning::
 
-                [boot]
-                systemd=true
-            
-            Then restart the distribution under WSL, and make sure ``systemd`` is enabled.
-
-            .. code-block:: bash
-
-                sudo systemctl status
-
-        .. important::
-            To support graphical applications, the distribution under WSL must have ``x11-xserver-utils`` installed.
-
-            .. code-block:: bash
-
-                sudo apt-get install x11-xserver-utils
+            Please note that it is **not** advisable to use Exegol from both environments at the same time, as this could lead to conflicts and Exegol does not officially support this configuration.
 
 .. _exegol_install:
 
@@ -199,7 +181,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                 .. code-block:: bash
 
-                   sudo ln -s "$(pwd)/exegol.py" "/usr/local/bin/exegol"
+                   sudo ln -s "$(pwd)/Exegol/exegol.py" "/usr/local/bin/exegol"
 
             ..  group-tab:: Windows
 
@@ -239,7 +221,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 3. (Optional) Using Exegol auto-completion
 ------------------------------------------
 
-Exegol supports auto-completion in many shell environments but there is a configuration to add for this feature to work.
+Exegol (wrapper) supports auto-completion in many shell environments but there is a configuration to add (on the host) for this feature to work.
 
 .. tip::
 

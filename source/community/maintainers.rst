@@ -5,6 +5,7 @@ Maintainers
 This part of the documentation is meant for Exegol maintainers. It adds up to the :doc:`contributors </community/contributors>` documentation.
 
 .. contents::
+    :local:
 
 Wrapper release
 ===============
