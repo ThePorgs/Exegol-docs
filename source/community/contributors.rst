@@ -391,8 +391,8 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
         .. code-block:: bash
 
             # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
-            gpg --quick-generate-key "NAME <EMAIL>" ed25519 sign 0
-            gpg --list-secret-keys --keyid-format=long | grep -B 2 "Github Key"
+            gpg --quick-generate-key "YOUR_NAME <ID+Name@users.noreply.github.com>" ed25519 sign 0
+            gpg --list-secret-keys --keyid-format=long
             gpg --armor --export $KEYID
 
         Once the GPG key is generated, it can be added to the contributor's GitHub profile. Again, GitHub's documentation explains how to achieve that (`adding a GPG key to your GitHub account <https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account>`_).
@@ -403,7 +403,7 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
         .. code-block:: bash
 
-            gpg --list-secret-keys --keyid-format=long | grep -B 2 "Github Key"
+            gpg --list-secret-keys --keyid-format=long
             git config --global user.signingkey $KEYID
 
             # (option 1) configure locally on a specific repo
@@ -422,20 +422,24 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
         .. code-block:: bash
 
             # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
-            ssh-keygen -t ed25519 -C "your_email@example.com"
+            ssh-keygen -t ed25519 -C "YOUR_NAME <ID+Name@users.noreply.github.com>"
 
         Once the SSH key is generated, the public part can be added to the contributor's GitHub profile. Again, GitHub's documentation explains how to achieve that (`adding a new SSH key to your GitHub account <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_).
 
-        Once the SSH key is generated and associated to the GitHub account, it can be used to authenticate and sign commits. In order to achieve that, the contributor must configure ssh and git properly on his machine (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
+        Once the SSH key is generated and associated to the GitHub account, it can be used to authenticate and sign commits. In order to achieve that, the contributor must configure ``ssh`` and ``git`` properly on his machine (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
 
         TL;DR: the commands look something like this:
+
+        .. hint::
+
+            The ``git`` client version must be 2.34 or later.
 
         .. code-block:: bash
 
             # if setting up for the first time, configure git
             git config --global user.name "YOUR_NAME"
             # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
-            git config --global user.email "YOUR_EMAIL"
+            git config --global user.email "ID+Name@users.noreply.github.com"
 
             git config --global gpg.format ssh
             # replace the public key path if needed, below is an example
@@ -447,19 +451,24 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
             # verify commits locally, associate SSH public keys with users
             mkdir -p ~/.config/git
-            echo "$(git config --get user.email) $(cat ~/.ssh/id_ed25519_sk.pub)" | tee ~/.config/git/allowed_signers
+            echo "$(git config --get user.email) $(cat ~/.ssh/id_ed25519.pub)" | tee ~/.config/git/allowed_signers
             git config --global gpg.ssh.allowedSignersFile "$HOME/.config/git/allowed_signers"
 
         The SSH connection can then be tested as follows (`testing your SSH connection <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection>`_).
 
         .. code-block:: bash
 
+            # load the SSH agent into the current shell
             eval "$(ssh-agent -s)"
+
+            # test the SSH authentication to GitHub servers
             ssh -T git@github.com
 
     ..  tab:: SSH (+ FIDO2)
 
-        This part of the doc explains how to setup and use security keys that support FIDO2 resident keys, such as YubiKeys (5, 5 FIPS, etc.). First of all, a new YubiKey can be configured as follows to set up a PIN.
+        This part of the doc explains how to setup and use FIDO2 security keys, such as YubiKeys, Google's Titan, etc.
+
+        First of all, a new FIDO2 key can be configured as follows to set up a PIN.
 
         .. code-block:: bash
 
@@ -471,42 +480,60 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
         Then, a `resident key <https://developers.yubico.com/WebAuthn/WebAuthn_Developer_Guide/Resident_Keys.html>`_ can be created and stored on the YubiKey as follows (see `Yubico's documentation <https://www.yubico.com/blog/github-now-supports-ssh-security-keys/>`_).
 
+        .. hint::
+
+            Some FIDO2 keys (e.g. recent YubiKeys, and probably others) support **resident keys**. A resident key is stored on the hardware key itself and easier to import to a new computer because it can be loaded directly from the security key.
+            In order to use that feature, the ``-O resident`` option can be added to the ``ssh-keygen`` command chosen below.
+
         .. code-block:: bash
 
-            # (preferred) touch
-            ssh-keygen -t ed25519-sk -O resident
-
-            # PIN
-            ssh-keygen -t ed25519-sk -O resident -O verify-required -O no-touch-required
+            # (default) touch only
+            ssh-keygen -t ed25519-sk
 
             # PIN + touch
-            ssh-keygen -t ed25519-sk -O resident -O verify-required
+            ssh-keygen -t ed25519-sk -O verify-required
+
+            # nothing (could be unsupported by some OpenSSH clients)
+            ssh-keygen -t ed25519-sk -O no-touch-required
+
+            # PIN (could be unsupported by some OpenSSH clients)
+            ssh-keygen -t ed25519-sk -O verify-required -O no-touch-required
 
         Once the SSH key is generated, the public part can be added to the contributor's GitHub profile. GitHub's documentation explains how to achieve that (`adding a new SSH key to your GitHub account <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_).
 
-        Once a key is created and stored on the YubiKey, and added on GitHub, it can be added to the contributor's machine SSH environment as follows. Note that those steps shouldn't be needed when the key has just been created, as the keys should automatically be added to ``~/.ssh``. The commands below are mostly relevant when using existing resident keys on a new system.
+        Once a key is created and added on GitHub, it can be added to the contributor's machine SSH environment as follows. This is as easy as copy-pasting the public and private key parts to ``~/.ssh``.
 
-        .. code-block:: bash
+        .. hint::
 
-            # temporary
-            # needs to be done again after a reboot
-            ssh-add -K
+            If you opted for a **resident key** setup, the SSH key can be loaded from the hardware key itself.
 
-            # permanent
-            # will download the private and public resident security keys in the current directory
-            # private key is to be moved in ~/.ssh (physical yubikey will always be needed)
-            ssh-keygen -K
-            mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
-            mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
+            Note that those steps shouldn't be needed when the key has just been created, as the keys should automatically be added to ``~/.ssh``. The commands below are mostly relevant when using **existing** resident keys on **a new system**.
+
+            .. code-block:: bash
+
+                # temporary
+                # needs to be done again after a reboot
+                ssh-add -K
+
+                # permanent
+                # will download the private and public resident security keys in the current directory
+                # private key is to be moved in ~/.ssh (physical FIDO2 key will always be needed)
+                ssh-keygen -K
+                mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
+                mv id_ed25519_sk_rk.pub ~/.ssh/id_ed25519_sk.pub
 
         Once the SSH environment is ready, ``git`` CLI can be configured to rely on the security key for signing commits and authenticating (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
+
+        .. hint::
+
+            The ``git`` client version must be 2.34 or later.
 
         .. code-block:: bash
 
             # if setting up for the first time, configure git
             git config --global user.name "YOUR_NAME"
             # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
-            git config --global user.email "YOUR_EMAIL"
+            git config --global user.email "ID+Name@users.noreply.github.com"
 
             git config --global gpg.format ssh
             # replace the public key path if needed, below is an example
@@ -525,7 +552,10 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
         .. code-block:: bash
 
+            # load the SSH agent into the current shell
             eval "$(ssh-agent -s)"
+
+            # test the SSH authentication to GitHub servers
             ssh -T git@github.com
 
 .. hint::
