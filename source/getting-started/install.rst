@@ -155,7 +155,20 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                    python3 -m pip install --user --requirement "Exegol/requirements.txt"
 
+    ..  tab:: Installing with pipx
 
+        Exegol's wrapper can also be installed with pipx either from sources or PyPI, which allows to install Exegol in a virtual environment of its own.
+
+        .. code-block:: bash
+
+            # install pipx if not already installed
+            python3 -m pip install pipx
+
+            # from sources
+            pipx install git+https://github.com/ThePorgs/Exegol
+
+            # packaged from PyPI
+            pipx install exegol
 
 
 
