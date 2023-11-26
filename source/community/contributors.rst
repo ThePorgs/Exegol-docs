@@ -392,24 +392,24 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
             # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
             gpg --quick-generate-key "NAME <EMAIL>" ed25519 sign 0
-            gpg --list-secret-keys --keyid-format=long|grep -B 2 "Github Key"
+            gpg --list-secret-keys --keyid-format=long | grep -B 2 "Github Key"
             gpg --armor --export $KEYID
 
         Once the GPG key is generated, it can be added to the contributor's GitHub profile. Again, GitHub's documentation explains how to achieve that (`adding a GPG key to your GitHub account <https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account>`_).
 
-        Once the GPG key is generated and associated to the GitHub account, it can be used to sign commits. In order to achieve that, the contributor must configure git properly on his machine (`telling git about your GPG key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key>`_).
+        Once the GPG key is generated and associated to the GitHub account, it can be used to sign commits. In order to achieve that, the contributor must configure ``git` properly on his machine (`telling git about your GPG key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key>`_).
 
         TL;DR: the commands look something like this to set it up for ``git`` CLI:
 
         .. code-block:: bash
 
-            gpg --list-secret-keys --keyid-format=long|grep -B 2 "Github Key"
+            gpg --list-secret-keys --keyid-format=long | grep -B 2 "Github Key"
             git config --global user.signingkey $KEYID
 
-            # configure locally on a specific repo
+            # (option 1) configure locally on a specific repo
             cd /path/to/repository && git config commit.gpgsign true
 
-            # configure for all git operations
+            # (option 2) configure for all git operations
             git config --global commit.gpgsign true
 
         To set it up on IDEs, proper official documentations can be followed (e.g. `GitKraken <https://help.gitkraken.com/gitkraken-client/commit-signing-with-gpg/#configure-gpg-in-gitkraken>`_, `PyCharm <https://www.jetbrains.com/help/pycharm/set-up-GPG-commit-signing.html#enable-commit-signing>`_).
@@ -527,3 +527,7 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
             eval "$(ssh-agent -s)"
             ssh -T git@github.com
+
+.. hint::
+
+    The contributor's GitHub account can be configured to mark unsigned commits as unverified or partially verified. While it's not mandatory regarding contributions to Exegol since the requirement is managed on Exegol repositories directly, it's a nice thing to do. See GitHub's documentation on `Vigilante mode <https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits>`_.
