@@ -35,111 +35,6 @@ Before pushing a pull request on the documentation repository, it is advised to 
 
 **Nota bene**: in the example above, the ``open`` command opens an Internet browser (it's a macOS command), but it can be replaced by anything else that fits the contributor's environement (e.g. ``firefox``).
 
-Signing commits
-===============
-
-To make the project as secure as possible, signed commits are now required to contribute to the project.
-Using PGP (Pretty Good Privacy) signatures for commits on GitHub serves several important purposes :
-
-* Authentication : It verifies the authenticity of the commit, ensuring that it was indeed made by the person claiming to have made it.
-* Integrity : It ensures that the commit hasn't been tampered with since it was signed. Any changes to the commit after it has been signed will invalidate the signature.
-* Trust : This ensures that all contributions come from trusted sources.
-* Visibility : On GitHub, signed commits are marked with a "verified" label, giving users and collaborators confidence in the commit's origin and integrity.
-
-PGP signatures on commits add an extra layer of security and trust to the codebase, making it harder for malicious actors to introduce unauthorized changes.
-
-Source : https://docs.github.com/fr/authentication/managing-commit-signature-verification/signing-commits
-
-..  tabs::
-
-    ..  tab:: CLI
-        A PGP key must be generated on the user's machine in order to sign commits.
-        The following command generates a PGP key that can be used to sign commits and push them to Github :
-        
-        .. code-block:: bash
-            
-            gpg --quick-generate-key "Github Key <github@exegol.info>" ed25519 sign 0
-
-        You will be asked for a password to secure the key. We recommend a password of at least 12 characters.
-        Once the key has been generated, you need to export the public key in order to import it on Github.
-
-        .. code-block:: bash
-            
-            gpg --list-secret-keys --keyid-format=long|grep -B 2 "Github Key"
-
-        In this case, the keyid is : 32D13F09040009D0
-
-        .. code-block:: bash
-            
-            sec   ed25519/32D13F09040009D0 2023-10-24 [SC]
-
-        The following command exports the public key.
-
-        .. code-block:: bash
-            
-            gpg --armor --export 32D13F09040009D0
-        
-            -----BEGIN PGP PUBLIC KEY BLOCK-----
-
-            mDMEZTe5EBYJKwYBBAHaRw8BAQdA+x6jx+b4kkuiXC4A1EyjnpG41CEul58UfXLR
-            MvNXop60H0dpdGh1YiBLZXkgPGdpdGh1YkBleGVnb2wuaW5mbz6IkwQTFgoAOxYh
-            BI6il4NXf4jf5xnaMjLRP0kEVTnQBQJlN7kQAhsDBQsJCAcCAiICBhUKCQgLAgQW
-            AgMBAh4HAheAAAoJEDLRP0kEVTnQp7MA/1/pGKwBhdP6GC73HnhlE+dWIOYUHCg/
-            x38Xd6AgPnB9AP9JAHTNgyAeRJo6kjrnpVn+V4z4KVMD3gUgI9lPIH1cBQ==
-            =tp25
-            -----END PGP PUBLIC KEY BLOCK-----
-
-        The public key must be registered on your Github account so that it can verify that you are the author of the commits you make.
-
-        .. figure:: /assets/contributors/github_homepage_settings.png
-            :align: center
-            :alt: Github settings page
-
-            Github homepage
-
-        .. figure:: /assets/contributors/github_new_gpg_key.png
-            :align: center
-            :alt: Github new key
-
-            Github settings page
-
-        .. figure:: /assets/contributors/github_add_gpg_key.png
-            :align: center
-            :alt: Github add key
-
-            Create a new Github PGP key
-
-        To force the git CLI to sign commits, you can use the following command, which will only take effect in the repo you're in. If you want to force it globally, you can follow the official Github documentation.
-
-        .. code-block:: bash
-            
-            git config commit.gpgsign true
-            git add .
-            git commit -S -m "YOUR_COMMIT_MESSAGE"
-            git push
-
-
-    ..  tab:: Gitkraken
-        Once your signature key has been generated, the Gitkraken tool will be able to detect it. Simply select it from the Settings -> GPG drop-down list and check the options to sign commits by default.
-
-        .. figure:: /assets/contributors/gpg_preferences_gitkraken.png
-            :align: center
-            :alt: Gitkraken GPG settings
-
-            Gitkraken GPG settings
-
-        When you push a commit, Gitkraken will ask you for your key's passphrase, which will sign the commit.
-
-        .. figure:: /assets/contributors/gpg_proof.png
-            :align: center
-            :alt: Signature verification
-
-            Signature verification
-
-
-    ..  tab:: YubiKey
-        TODO
-
 Images
 ======
 
@@ -468,3 +363,167 @@ Wrapper
 .. hint::
 
     This documentation is not written yet... Please contact us if you would like to contribute to this part and don't know how.
+
+Signing commits
+===============
+
+To make the project as secure as possible, signed commits are now required to contribute to the project.
+Using signatures for commits on GitHub serves several important purposes :
+
+* **Authentication**: it verifies the authenticity of the commit, ensuring that it was indeed made by the person claiming to have made it.
+* **Integrity**: it ensures that the commit hasn't been tampered with since it was signed. Any changes to the commit after it has been signed will invalidate the signature.
+* **Trust**: this ensures that all contributions come from trusted sources.
+* **Visibility**: on GitHub, signed commits are marked with a "verified" label, giving users and collaborators confidence in the commit's origin and integrity.
+
+GitHub offers `an official documentation <https://docs.github.com/fr/authentication/managing-commit-signature-verification/signing-commits>`_ on the matter that can be followed to setup and sign commits properly. Exegol's documentation will sum it up briefly and link to it whenever it's needed.
+
+While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing capabilities (knowledge + hardware possession factors), people that don't have the required hardware can proceed with GPG or SSH.
+
+..  tabs::
+
+    ..  tab:: GPG
+
+        Generating a GPG key can be done by following GitHub's official documentation on the matter (`generating a new GPG key <https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key>`_).
+        TL;DR, the commands look something like this:
+
+        .. code-block:: bash
+
+            # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
+            gpg --quick-generate-key "NAME <EMAIL>" ed25519 sign 0
+            gpg --list-secret-keys --keyid-format=long|grep -B 2 "Github Key"
+            gpg --armor --export $KEYID
+
+        Once the GPG key is generated, it can be added to the contributor's GitHub profile. Again, GitHub's documentation explains how to achieve that (`adding a GPG key to your GitHub account <https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account>`_).
+
+        Once the GPG key is generated and associated to the GitHub account, it can be used to sign commits. In order to achieve that, the contributor must configure git properly on his machine (`telling git about your GPG key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key>`_).
+
+        TL;DR: the commands look something like this to set it up for ``git`` CLI:
+
+        .. code-block:: bash
+
+            gpg --list-secret-keys --keyid-format=long|grep -B 2 "Github Key"
+            git config --global user.signingkey $KEYID
+
+            # configure locally on a specific repo
+            cd /path/to/repository && git config commit.gpgsign true
+
+            # configure for all git operations
+            git config --global commit.gpgsign true
+
+        To set it up on IDEs, proper official documentations can be followed (e.g. `GitKraken <https://help.gitkraken.com/gitkraken-client/commit-signing-with-gpg/#configure-gpg-in-gitkraken>`_, `PyCharm <https://www.jetbrains.com/help/pycharm/set-up-GPG-commit-signing.html#enable-commit-signing>`_).
+
+    ..  tab:: SSH
+
+        Generating an SSH key can be done by following GitHub's official documentation on the matter (`generating a new SSH key <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_).
+        TL;DR, the commands look something like this:
+
+        .. code-block:: bash
+
+            # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
+            ssh-keygen -t ed25519 -C "your_email@example.com"
+
+        Once the SSH key is generated, the public part can be added to the contributor's GitHub profile. Again, GitHub's documentation explains how to achieve that (`adding a new SSH key to your GitHub account <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_).
+
+        Once the SSH key is generated and associated to the GitHub account, it can be used to authenticate and sign commits. In order to achieve that, the contributor must configure ssh and git properly on his machine (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
+
+        TL;DR: the commands look something like this:
+
+        .. code-block:: bash
+
+            # if setting up for the first time, configure git
+            git config --global user.name "YOUR_NAME"
+            # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
+            git config --global user.email "YOUR_EMAIL"
+
+            git config --global gpg.format ssh
+            # replace the public key path if needed, below is an example
+            git config --global user.signingkey "$HOME/.ssh/id_ed25519.pub"
+
+            # configure git to sign commits and tags by default
+            git config --global commit.gpgsign true
+            git config --global tag.gpgsign true
+
+            # verify commits locally, associate SSH public keys with users
+            mkdir -p ~/.config/git
+            echo "$(git config --get user.email) $(cat ~/.ssh/id_ed25519_sk.pub)" | tee ~/.config/git/allowed_signers
+            git config --global gpg.ssh.allowedSignersFile "$HOME/.config/git/allowed_signers"
+
+        The SSH connection can then be tested as follows (`testing your SSH connection <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection>`_).
+
+        .. code-block:: bash
+
+            eval "$(ssh-agent -s)"
+            ssh -T git@github.com
+
+    ..  tab:: SSH (+ FIDO2)
+
+        This part of the doc explains how to setup and use security keys that support FIDO2 resident keys, such as YubiKeys (5, 5 FIPS, etc.). First of all, a new YubiKey can be configured as follows to set up a PIN.
+
+        .. code-block:: bash
+
+            # list FIDO2 devices
+            fido2-token -L
+
+            # set a PIN for the device
+            fido2-token -S $device
+
+        Then, a `resident key <https://developers.yubico.com/WebAuthn/WebAuthn_Developer_Guide/Resident_Keys.html>`_ can be created and stored on the YubiKey as follows (see `Yubico's documentation <https://www.yubico.com/blog/github-now-supports-ssh-security-keys/>`_).
+
+        .. code-block:: bash
+
+            # (preferred) touch
+            ssh-keygen -t ed25519-sk -O resident
+
+            # PIN
+            ssh-keygen -t ed25519-sk -O resident -O verify-required -O no-touch-required
+
+            # PIN + touch
+            ssh-keygen -t ed25519-sk -O resident -O verify-required
+
+        Once the SSH key is generated, the public part can be added to the contributor's GitHub profile. GitHub's documentation explains how to achieve that (`adding a new SSH key to your GitHub account <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_).
+
+        Once a key is created and stored on the YubiKey, and added on GitHub, it can be added to the contributor's machine SSH environment as follows. Note that those steps shouldn't be needed when the key has just been created, as the keys should automatically be added to ``~/.ssh``. The commands below are mostly relevant when using existing resident keys on a new system.
+
+        .. code-block:: bash
+
+            # temporary
+            # needs to be done again after a reboot
+            ssh-add -K
+
+            # permanent
+            # will download the private and public resident security keys in the current directory
+            # private key is to be moved in ~/.ssh (physical yubikey will always be needed)
+            ssh-keygen -K
+            mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
+            mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
+
+        Once the SSH environment is ready, ``git`` CLI can be configured to rely on the security key for signing commits and authenticating (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
+
+        .. code-block:: bash
+
+            # if setting up for the first time, configure git
+            git config --global user.name "YOUR_NAME"
+            # for the email, indicate your public email (ID+Name@users.noreply.github.com) from https://github.com/settings/emails
+            git config --global user.email "YOUR_EMAIL"
+
+            git config --global gpg.format ssh
+            # replace the public key path if needed, below is an example
+            git config --global user.signingkey "$HOME/.ssh/id_ed25519_sk.pub"
+
+            # configure git to sign commits and tags by default
+            git config --global commit.gpgsign true
+            git config --global tag.gpgsign true
+
+            # verify commits locally, associate SSH public keys with users
+            mkdir -p ~/.config/git
+            echo "$(git config --get user.email) $(cat ~/.ssh/id_ed25519_sk.pub)" | tee ~/.config/git/allowed_signers
+            git config --global gpg.ssh.allowedSignersFile "$HOME/.config/git/allowed_signers"
+
+        The SSH connection can then be tested as follows (`testing your SSH connection <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection>`_).
+
+        .. code-block:: bash
+
+            eval "$(ssh-agent -s)"
+            ssh -T git@github.com
+
+
