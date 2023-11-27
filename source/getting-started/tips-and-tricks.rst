@@ -1,6 +1,6 @@
-===============
-Tips and tricks
-===============
+=============
+Tips & tricks
+=============
 
 Below are some of the tips and tricks that are good to keep in mind when using Exegol.
 
@@ -13,11 +13,23 @@ Change a container's time
 Changing a container's time with ``date`` requires elevated permissions on the container, and messes up with the host's time.
 There is however and alternative, using ``faketime`` (see `faketime ubuntu manpage <https://manpages.ubuntu.com/manpages/trusty/man1/faketime.1.html>`_) that allows to change the time of the container easily, without needing particular permissions, without affecting the host. This is especially useful when working with Kerberos targets that are out of sync.
 
-Faketime manipulates the system time for a given child command (e.g. ``zsh``).
+Faketime manipulates the system time for a given child command. For example with ``zsh``, a new shell is opened with a spoofed time that will only be spoofed for this extact shell session and commands executed in it.
 
 .. code-block:: bash
 
     faketime 'YYYY-MM-DD hh:mm:ss' zsh
+
+.. note::
+
+    Here is an example of how ``faketime`` can be used.
+
+    When doing Active Directory attacks against Kerberos targets, a clock skew error could be raised such as ``KRB_AP_ERR_SKEW``. This means the authenticating machine (operator) and the destination (Key Distribution Center, a.k.a. KDC) are not in sync, clock-wise.
+
+    Running any `Impacket <https://github.com/fortra/impacket>`_ with the ``-debug`` flag will print the server time. The operator can then use ``faketime`` to open a new ``zsh`` shell with the right time and timezone and conduct the scenario as previously intended.
+
+    The following command can be used to print the time in UTC format and compare it with the server time: ``date --utc``.
+
+    *Note: careful with the timezones. If they differ between the operator and the KDC, the delta needs to be taken into account*
 
 Share files or notes with targets and collaborators
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,6 +44,13 @@ Many commands in the pre-filled history rely on environment variables such as ``
 Those variables can be set manually or by using the ``profile.sh`` file in ``/opt/tools/Exegol-history/``.
 The proper lines can be filled and uncommented, and then the shell can be reloaded with ``exec zsh`` in order to apply the changes.
 This allows users to easily look for, and use, commands in the history, without changing the values every time.
+
+The best reverse shells
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* ``shellerator`` can be used to generate a reverse shell command dynmically
+* on the attacker's side, a reverse shell obtained through a ``netcat`` tunnel can be improved (see `ropnop.com <https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/>`_ or `0xffsec.com <https://0xffsec.com/handbook/shells/full-tty/>`_)
+* instead of using ``netcat`` and "upgrade" the shell manually, ``pwncat-cs`` (`calebstewart/pwncat <https://github.com/calebstewart/pwncat>`_) can be used to obtain an even better reverse shell experience (especially with UNIX-like targets).
 
 Keyboard shortcuts
 ~~~~~~~~~~~~~~~~~~
