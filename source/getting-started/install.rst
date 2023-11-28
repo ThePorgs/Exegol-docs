@@ -58,6 +58,10 @@ Additional dependencies may be required depending on the host OS.
 
            For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
 
+        .. warning::
+
+            `Docker "Rootless mode" <https://docs.docker.com/engine/security/rootless/>`_ is not supported by Exegol as of yet. Please follow the install procedure mentionned above.
+
     ..  tab:: macOS
 
         To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
