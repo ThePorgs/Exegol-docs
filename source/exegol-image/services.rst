@@ -22,6 +22,10 @@ This section lists the services that can be used in Exegol containers and their 
     |                      |        |                          |                                                                                               |
     | * https              | 7373   |                          |                                                                                               |
     +----------------------+--------+--------------------------+-----------------------------------------------------------------------------------------------+
+    | BloodHound-CE        | 1030   | ``bloodhound-ce``        | BloodHound Community Edition Web Interface                                                    |
+    |                      |        | ``bloodhound-ce-reset``  |                                                                                               |
+    |                      |        | ``bloodhound-ce-stop``   |                                                                                               |
+    +----------------------+--------+--------------------------+-----------------------------------------------------------------------------------------------+
     | Trilium              | 1991   | ``trilium-start``,       | Collaborative note taking app. https://github.com/zadam/trilium                               |
     |                      |        | ``trilium-stop``         |                                                                                               |
     +----------------------+--------+--------------------------+-----------------------------------------------------------------------------------------------+
