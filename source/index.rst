@@ -136,7 +136,7 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    :hidden:
    :caption: Exegol resources
 
-   exegol-resources/intro.rst
+   exegol-resources/resources.rst
 
 .. toctree::
    :maxdepth: 2

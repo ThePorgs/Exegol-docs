@@ -18,3 +18,4 @@ Resources list
 .. csv-table::
    :file: /assets/exegol_resources/resources_list.csv
    :header-rows: 1
+   :class: tight-table
