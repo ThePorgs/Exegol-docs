@@ -35,3 +35,6 @@ html_favicon = '_static/logo_round.ico'
 
 # Tabs options
 sphinx_tabs_disable_tab_closing = True
+
+def setup(app):
+  app.add_css_file("css/custom.css")
