@@ -397,7 +397,7 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
 
         Once the GPG key is generated, it can be added to the contributor's GitHub profile. Again, GitHub's documentation explains how to achieve that (`adding a GPG key to your GitHub account <https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account>`_).
 
-        Once the GPG key is generated and associated to the GitHub account, it can be used to sign commits. In order to achieve that, the contributor must configure ``git` properly on his machine (`telling git about your GPG key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key>`_).
+        Once the GPG key is generated and associated to the GitHub account, it can be used to sign commits. In order to achieve that, the contributor must configure ``git`` properly on his machine (`telling git about your GPG key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key>`_).
 
         TL;DR: the commands look something like this to set it up for ``git`` CLI:
 

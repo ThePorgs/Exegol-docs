@@ -9,7 +9,7 @@ My resources
 
 To learn more about the volume options, details are available :ref:`here <My-resources-wrapper>`.
 
-Below are the features offered by "My-resources", allowing users to extend Exegol beyond what is initially included (`tools <todo>`_, `resources </exegol-resources/intro>`_).
+Below are the features offered by "My-resources", allowing users to extend Exegol beyond what is initially included (`tools <todo>`_, `resources </exegol-resources/resources>`_).
 
 ..
     _TODO: add ref to images tools list
