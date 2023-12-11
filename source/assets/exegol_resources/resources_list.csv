@@ -1,0 +1,35 @@
+Resource,Link,Description
+SysInternals,https://learn.microsoft.com/en-us/sysinternals,Windows utilities signed by Microsoft
+pspy,https://github.com/DominicBreuker/pspy,Monitor linux processes without root permissions
+PEASS-ng,https://github.com/carlospolop/PEASS-ng,Privilege Escalation Awesome Scripts SUITE
+linux-smart-enumeration (lse.sh),https://github.com/diego-treitos/linux-smart-enumeration,Linux enumeration tool for pentesting and CTFs with verbosity levels
+LinEnum,https://github.com/rebootuser/LinEnum,Scripted Local Linux Enumeration & Privilege Escalation Checks
+Linux Exploit Suggester,https://github.com/The-Z-Labs/linux-exploit-suggester,Linux privilege escalation auditing tool
+Mimikatz,https://github.com/gentilkiwi/mimikatz,A little tool to play with Windows security
+SharpHound.exe,https://github.com/BloodHoundAD/BloodHound,C# ingestor for BloodHound
+JuicyPotato.exe,https://github.com/ohpe/juicy-potato,https://github.com/ohpe/juicy-potato
+static netcat (linux),https://github.com/andrew-d/static-binaries,Utility to establish TCP or UDP connections
+static netcat (windows),https://gitlab.com/onemask/pentest-tools,Utility to establish TCP or UDP connections
+SpoolSample.exe,https://gitlab.com/onemask/pentest-tools,PoC tool to coerce Windows hosts authenticate to other machines
+DiagHub.exe,https://gitlab.com/onemask/pentest-tools,Diagnostics Hub Standard Collector Service
+LaZagne,https://github.com/AlessandroZ/LaZagne,Credentials recovery project
+Sublinacl.exe,https://gitlab.com/onemask/pentest-tools,Modify Access Control Entries
+plink.exe,https://www.cog-genomics.org/plink/,Network connection tool
+deepce,https://github.com/stealthcopter/deepce,Docker Enumeration Escalation of Privileges and Container Escapes
+Some webshells,,PHP and ASPX webshells
+ysoserial,https://github.com/pwntester/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization
+http-put-server,https://gist.githubusercontent.com/mildred/67d22d7289ae8f16cae7/raw/214c213c9415da18a471d1ed04660022cce059ef/server.py,HTTP PUT Server
+Chisel,https://github.com/jpillora/chisel,A fast TCP/UDP tunnel over HTTP
+ligolo-ng,https://github.com/nicocha30/ligolo-ng,Advanced yet simple tunneling/pivoting tool that uses a TUN interface
+bitleaker,https://github.com/kkamagui/bitleaker,This tool can decrypt a BitLocker-locked partition with the TPM vulnerability
+napper,https://github.com/kkamagui/napper-for-tpm,TPM vulnerability checking tool for CVE-2018-6622
+mimipenguin,https://github.com/huntergregal/mimipenguin,A tool to dump the login password from the current linux user
+p0wny-shell,https://github.com/flozz/p0wny-shell,Single-file PHP shell
+Inveigh,https://github.com/Kevin-Robertson/Inveigh,.NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
+MailSniper,https://github.com/dafthack/MailSniper,Penetration testing tool for searching through email in a Microsoft Exchange
+PowerSploit,https://github.com/PowerShellMafia/PowerSploit,A PowerShell Post-Exploitation Framework
+PrivescCheck,https://github.com/itm4n/PrivescCheck,Privilege Escalation Enumeration Script for Windows
+SharpCollection,https://github.com/Flangvik/SharpCollection,Nightly builds of common C# offensive tools
+WinEnum,https://github.com/neox41/WinEnum,Script for Local Windows Enumeration
+impacket-examples-windows,https://github.com/maaaaz/impacket-examples-windows,The great impacket example scripts compiled for Windows
+nishang,https://github.com/samratashok/nishang,Offensive PowerShell for red team

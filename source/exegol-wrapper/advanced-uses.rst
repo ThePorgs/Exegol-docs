@@ -37,7 +37,7 @@ Within the ``~/.exegol/config.yml`` file, several settings can be configured to 
         ..  _private_workspace_path:
 
         * ``my_resources_path``: the "my-resources" volume is a storage space dedicated to the user to customize his environment and tools. This volume is, by default, shared across all exegol containers. See :ref:`details about it <My-resources-wrapper>`.
-        * ``exegol_resources_path``: exegol-resources are data and static tools downloaded in addition to docker images. These tools are complementary and are accessible directly from the host. See :doc:`details </exegol-resources/intro>`.
+        * ``exegol_resources_path``: exegol-resources are data and static tools downloaded in addition to docker images. These tools are complementary and are accessible directly from the host. See :doc:`details </exegol-resources/resources>`.
         * ``private_workspace_path``: when containers do not have an explicitly declared workspace at their creation (i.e. with ``--cwd-mount``, or ``--workspace``), a dedicated folder will be created at this location to share the workspace with the host but also to save the data after deleting the container.
 
     ..  tab:: Config

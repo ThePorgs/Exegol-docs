@@ -58,6 +58,10 @@ Additional dependencies may be required depending on the host OS.
 
            For more information, official Docker documentation shows `how to manage docker as a non root user <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-userm>`_.
 
+        .. warning::
+
+            `Docker "Rootless mode" <https://docs.docker.com/engine/security/rootless/>`_ is not supported by Exegol as of yet. Please follow the install procedure mentionned above.
+
     ..  tab:: macOS
 
         To support graphical applications (:ref:`display sharing functionality <feature_x11_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
@@ -159,7 +163,20 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                    python3 -m pip install --user --requirement "Exegol/requirements.txt"
 
+    ..  tab:: Installing with pipx
 
+        Exegol's wrapper can also be installed with pipx either from sources or PyPI, which allows to install Exegol in a virtual environment of its own.
+
+        .. code-block:: bash
+
+            # install pipx if not already installed
+            python3 -m pip install pipx
+
+            # from sources
+            pipx install git+https://github.com/ThePorgs/Exegol
+
+            # packaged from PyPI
+            pipx install exegol
 
 
 
@@ -185,7 +202,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                 .. code-block:: bash
 
-                   sudo ln -s "$(pwd)/exegol.py" "/usr/local/bin/exegol"
+                   sudo ln -s "$(pwd)/Exegol/exegol.py" "/usr/local/bin/exegol"
 
             ..  group-tab:: Windows
 
@@ -225,7 +242,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 3. (Optional) Using Exegol auto-completion
 ------------------------------------------
 
-Exegol supports auto-completion in many shell environments but there is a configuration to add for this feature to work.
+Exegol (wrapper) supports auto-completion in many shell environments but there is a configuration to add (on the host) for this feature to work.
 
 .. tip::
 

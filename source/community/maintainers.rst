@@ -214,6 +214,10 @@ The Exegol project relies on a continuous integration and continuous deployment 
             :align: center
             :alt: Pipelines (GitHub)
 
+    ..  tab:: resources
+
+        The GitHub Actions platform is used on :doc:`the Exegol-resources submodule </the-exegol-project/offline-resources>`. Its workflows are used to automatically update the resources (monthly) and automatically export the list of resources to the documentation.
+
     ..  tab:: docs
 
         The GitHub Actions platform is used for the documentation you're reading. Its workflows are used to build on every commit and pull request to make sure everything works as it should, but also automatically merge changes between the various branches in order to help with development.
