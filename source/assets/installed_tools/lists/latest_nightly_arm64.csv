@@ -12,6 +12,7 @@ apksigner,https://source.android.com/security/apksigning,arguably the most impor
 apktool,https://github.com/iBotPeaches/Apktool,It is a tool for reverse engineering 3rd party / closed / binary Android apps.
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
 arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for penetration testing.
+asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
 autoconf,https://www.gnu.org/software/autoconf/autoconf.html,Tool for producing shell scripts to configure source code packages
 autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnaissance tool which performs automated enumeration of services.
@@ -23,6 +24,7 @@ binwalk,https://github.com/ReFirmLabs/binwalk,Binwalk is a tool for analyzing / 
 Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 BloodHound-CE,https://github.com/SpecterOps/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments (Community Edition)
+bloodhound-ce.py,https://github.com/fox-it/BloodHound.py,BloodHound-CE ingestor in Python.
 bloodhound-import,https://github.com/fox-it/BloodHound.py,Import data into BloodHound for analyzing active directory trust relationships
 bloodhound-quickwin,https://github.com/kaluche/bloodhound-quickwin,A tool for BloodHounding on Windows machines without .NET or Powershell installed
 bloodhound.py,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
@@ -126,6 +128,7 @@ hakrawler,https://github.com/hakluke/hakrawler,a fast web crawler for gathering 
 hakrevdns,https://github.com/hakluke/hakrevdns,Reverse DNS lookup utility that can help with discovering subdomains and other information.
 hashcat,https://hashcat.net/hashcat,A tool for advanced password recovery
 hashonymize,https://github.com/ShutdownRepo/hashonymize,This small tool is aimed at anonymizing hashes files for offline but online cracking like Google Collab for instance (see https://github.com/ShutdownRepo/google-colab-hashcat).
+Havoc,https://github.com/HavocFramework/Havoc,Command & Control Framework
 hcxdumptool,https://github.com/ZerBea/hcxdumptool,Small tool to capture packets from wlan devices.
 hcxtools,https://github.com/ZerBea/hcxtools,Tools for capturing and analyzing packets from WLAN devices.
 hexedit,https://github.com/pixel/hexedit,View and edit binary files
@@ -161,6 +164,7 @@ ldapsearch,https://wiki.debian.org/LDAP/LDAPUtils,Search for and display entries
 ldapsearch-ad,https://github.com/yaap7/ldapsearch-ad,LDAP search utility with AD support
 LDAPWordlistHarvester,https://github.com/p0dalirius/LDAPWordlistHarvester,Generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts
 ldeep,https://github.com/franc-pentest/ldeep,ldeep is a tool to discover hidden paths on Web servers.
+legba,https://github.com/evilsocket/legba,a multiprotocol credentials bruteforcer / password sprayer and enumerator built with Rust
 libmspack,https://github.com/kyz/libmspack,C library for Microsoft compression formats.
 libnfc,https://github.com/grundid/nfctools,Library for Near Field Communication (NFC) devices
 libnfc-crypto1-crack,https://github.com/droidnewbie2/acr122uNFC,Implementation of cryptographic attack on Mifare Classic RFID cards
@@ -202,6 +206,7 @@ nmap-parse-ouptut,https://github.com/ernw/nmap-parse-output,Converts/manipulates
 noPac,https://github.com/Ridter/noPac,Exploiting CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user.
 nosqlmap,https://github.com/codingo/NoSQLMap,a Python tool for testing NoSQL databases for security vulnerabilities.
 ntlmv1-multi,https://github.com/evilmog/ntlmv1-multi,Exploit a vulnerability in Microsoft Windows to gain system-level access.
+ntlm_theft,https://github.com/Greenwolf/ntlm_theft,A tool for generating multiple types of NTLMv2 hash theft files
 nuclei,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
 oaburl,https://gist.githubusercontent.com/snovvcrash/4e76aaf2a8750922f546eed81aa51438/raw/96ec2f68a905eed4d519d9734e62edba96fd15ff/oaburl.py,Find Open redirects and other vulnerabilities.
 objection,https://github.com/sensepost/objection,Runtime mobile exploration
@@ -266,6 +271,7 @@ rsactftool,https://github.com/RsaCtfTool/RsaCtfTool,The rsactftool tool is used 
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 rtl-433,https://github.com/merbanan/rtl_433,Tool for decoding various wireless protocols/ signals such as those used by weather stations
 ruler,https://github.com/sensepost/ruler,Outlook Rules exploitation framework.
+rusthound (v2),https://github.com/OPENCYBER-FR/RustHound,BloodHound-CE ingestor in Rust.
 rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
@@ -326,6 +332,7 @@ uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-l
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
 upx,https://github.com/upx/upx,UPX is an advanced executable packer
 username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
+Villain,https://github.com/t3l3machus/Villain,Command & Control Framework
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
 volatility3,https://github.com/volatilityfoundation/volatility3,Advanced memory forensics framework
 vulny-code-static-analysis,https://github.com/swisskyrepo/Vulny-Code-Static-Analysis,Static analysis tool for C code
