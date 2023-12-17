@@ -1,5 +1,6 @@
 Tool,Link,Description
 arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for penetration testing.
+asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
 Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 buster,https://github.com/sham00n/Buster,Advanced OSINT tool
