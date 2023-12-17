@@ -1,6 +1,6 @@
 Image tag,Version,Arch,Build date,Tools list
+light,3.1.2,amd64,2023-12-17T12:39:15Z,:download:`light_3.1.2_amd64.csv       </assets/installed_tools/lists/light_3.1.2_amd64.csv>`
 light,3.1.2,arm64,2023-12-17T12:38:17Z,:download:`light_3.1.2_arm64.csv       </assets/installed_tools/lists/light_3.1.2_arm64.csv>`
-light,3.1.2,amd64,2023-12-17T12:09:32Z,:download:`light_3.1.2_amd64.csv       </assets/installed_tools/lists/light_3.1.2_amd64.csv>`
 web,3.1.2,arm64,2023-12-17T07:13:57Z,:download:`web_3.1.2_arm64.csv       </assets/installed_tools/lists/web_3.1.2_arm64.csv>`
 full,3.1.2,arm64,2023-12-17T07:08:56Z,:download:`full_3.1.2_arm64.csv       </assets/installed_tools/lists/full_3.1.2_arm64.csv>`
 osint,3.1.2,arm64,2023-12-17T06:57:11Z,:download:`osint_3.1.2_arm64.csv       </assets/installed_tools/lists/osint_3.1.2_arm64.csv>`
