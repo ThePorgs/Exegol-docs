@@ -3,6 +3,7 @@ amass,https://github.com/OWASP/Amass,A DNS enumeration / attack surface mapping 
 anew,https://github.com/tomnomnom/anew,A simple tool for filtering and manipulating text data / such as log files and other outputs.
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
 arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for penetration testing.
+asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
 Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 bolt,https://github.com/s0md3v/bolt,Bolt crawls the target website to the specified depth and stores all the HTML forms found in a database for further processing.
