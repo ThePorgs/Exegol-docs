@@ -133,6 +133,9 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
            python3 -m pip install exegol
 
+        .. warning::
+
+            You may want to disable Windows Defender during the installation, as Exegol will download pre-built remote shells. You should also add the folder ``C:\Users\<user>\.exegol\exegol-resources`` to the exclution list.
 
     ..  group-tab:: Installing from sources
 
