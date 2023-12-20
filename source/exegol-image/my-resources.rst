@@ -148,6 +148,7 @@ Exegol supports overwriting its **vim** configuration to allow all users to use 
     Will be available from version ``3.1.2`` of any exegol image.
 
 Exegol supports overwriting its **neovim** configuration to allow all users to use their personal configuration.
+
 * To automatically overwrite the ``~/.config/nvim/`` configuration, copy your config in  ``/opt/my-resources/setup/nvim/``
 
 .. tip::
