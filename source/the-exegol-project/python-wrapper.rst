@@ -25,6 +25,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
  Feature                                             Description
 =================================================== =============
 :ref:`Display sharing<feature_display_sharing>`     Sharing of the graphic environment between the container and the host
+:ref:`Desktop<feature_desktop>`                     Hosts a complete graphics environment available via a web page or VNC
 :ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
 :ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
 :ref:`OpenVPN connection<feature_ovpn>`             Opening an isolated VPN tunnel dedicated to the exegol container
@@ -71,6 +72,23 @@ By default exegol configures the new container and host to allow the execution t
 For example, if bloodhound is launched in an exegol container, the graphical window (GUI) will be displayed in the user's graphic environment.
 
 This feature can be disabled manually with the option ``--disable-X11`` of the :ref:`start action <start_options>`.
+
+.. _feature_desktop:
+
+Desktop
+-------
+
+On some systems, it may be difficult to have or share an X11 environment. Some users prefer to have a full graphical desktop environment rather than just graphical applications.
+
+To meet this need, Exegol is able to host a complete graphical environment within its container since version ``4.3.0`` of the wrapper and ``3.1.2`` of the images.
+
+This environment can then be made available to others in a variety of ways. The default protocol is currently **HTTP**, but the user can change the configuration to use the **VNC** alternative.
+
+This feature can be enabled manually with the option ``--desktop`` of the :ref:`start action <start_options>`.
+
+.. tip::
+
+    The default behavior and configuration of the desktop mode can be changed in the :ref:`configuration of Exegol<exegol_configuration>`.
 
 .. _feature_workspace:
 
