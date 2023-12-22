@@ -90,7 +90,7 @@ To automatically:
     The output will be saved into the single file ``~/.config/bloodhound/customqueries.json``.
 
 
-:code:`firefox` (addons, certs)
+:code:`firefox` (addons, CA)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``3.0.2`` of any exegol image.
@@ -104,7 +104,7 @@ The ``.xpi`` files in ``/opt/my-resources/setup/firefox/addons/`` folder will be
 .. seealso::
     Below, available from version ``3.2.0`` of any exegol image.
 
-The ``.der`` files in ``/opt/my-resources/setup/firefox/certs/`` folder will be trusted .
+The ``.der`` files in ``/opt/my-resources/setup/firefox/CA/`` folder will be trusted .
 
 
 :code:`python3` (pip3)

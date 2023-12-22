@@ -25,6 +25,7 @@ Options
  ``IMAGE``           Optional positional argument to indicate the image to install (if downloading), or the name of the image to build (if building locally).
  ``BUILD_PROFILE``   Optional positional argument to indicate the source profile to use if building locally.
  ``--build-log``     Write logs to the path specified if building locally.
+ ``--build-path``    Custom path to the dockerfiles and sources.
 =================== =============
 
 

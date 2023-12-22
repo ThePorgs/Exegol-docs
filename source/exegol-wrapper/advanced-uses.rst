@@ -58,6 +58,14 @@ Within the ``~/.exegol/config.yml`` file, several settings can be configured to 
                 * ``logging_method``: Choice of the method used to record the sessions, ``script`` or ``asciinema``. (Default: ``asciinema``)
                 * ``enable_log_compression``: Enable automatic compression of log files (with gzip). (Default: ``True``)
 
+            ..  tab:: Desktop
+
+                Change the configuration of the virtual Desktop feature.
+
+                * ``enabled_by_default``: Enables or not the desktop mode by default. If this attribute is set to True, then using the CLI ``--desktop`` option will be inverted and will **DISABLE** the feature (Default: ``False``)
+                * ``default_protocol``: Default desktop protocol,can be ``http``, or ``vnc`` depending on your wrapper / image version. (Default: ``http``)
+                * ``localhost_by_default``: Desktop service is exposed on localhost by default. If set to true, services will be exposed on ``localhost`` (127.0.0.1) otherwise it will be exposed on ``0.0.0.0``. This setting can be overwritten with :doc:`--desktop-config </exegol-wrapper/start>`. (Default: ``True``)
+
 
 
 My-resources

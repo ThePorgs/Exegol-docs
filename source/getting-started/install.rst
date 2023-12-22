@@ -68,7 +68,7 @@ Additional dependencies may be required depending on the host OS.
 
         .. hint::
 
-            The XQuartz requirement below is now optional if using the (beta) Graphical Remote Desktop feature instead of X11 sharing (join our Discord to know more about this beta feature).
+            The XQuartz requirement below is now optional if using the (beta) :ref:`Graphical Remote Desktop feature <feature_desktop>` instead of X11 sharing (join our Discord to know more about this beta feature).
 
         * `XQuartz <https://www.xquartz.org/>`__ must be installed
         * The XQuartz config ``Allow connections from network clients`` must be set to true
@@ -139,7 +139,9 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
         .. warning::
 
-            You may want to disable Windows Defender during the installation, as Exegol will download pre-built remote shells. You should also add the folder ``C:\Users\<user>\.exegol\exegol-resources`` to the exclution list.
+            You may want to disable Windows Defender during the installation, as Exegol will download pre-built remote shells (or temporarily exclude ``C:\Users\<username>\AppData\Local\Temp``).
+
+            You should also add the folder ``C:\Users\<user>\.exegol\exegol-resources`` to the exclution list.
 
     ..  group-tab:: Installing from sources
 
@@ -148,6 +150,14 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
         .. code-block:: bash
 
            git clone "https://github.com/ThePorgs/Exegol"
+
+        .. tip::
+
+            If you want a **light** clone of Exegol (and **never** use the **dev** branch), you can use the following command:
+
+            .. code-block:: bash
+
+                git clone --shallow-since="2023/05/08" "https://github.com/ThePorgs/Exegol"
 
         If you have access to docker directly as a user, you can install the requirements only for your current user
         otherwise the requirements must be installed as root to run Exegol with sudo.
@@ -334,11 +344,13 @@ Exegol (wrapper) supports auto-completion in many shell environments but there i
 
             .. code-block:: powershell
 
-                python $HOME\AppData\Roaming\Python\Python311\Scripts\register-python-argcomplete --no-defaults --shell powershell exegol > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
+                register-python-argcomplete --no-defaults --shell powershell exegol > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
 
-            .. important::
+            .. warning::
 
-                `Python311` can be modified and depends on the version of Python you have installed
+                If the command ``register-python-argcomplete`` is not found, that means that python pip script are not in your PATH.
+                You can ty to fix your pip installation: `Linux <https://stackoverflow.com/a/62823029>`__ | `MacOS <https://stackoverflow.com/a/43368894>`__ | `Windows <https://builtin.com/software-engineering-perspectives/pip-command-not-found>`__
+                Or find the direct Python script path, it might be something like:  ``$HOME\AppData\Roaming\Python\Python311\Scripts\register-python-argcomplete`` (``Python311`` PATH depends on the version of Python you have installed, it must be updated to match your local setup).
             
             Then import this completion file in `$PROFILE`:
 
