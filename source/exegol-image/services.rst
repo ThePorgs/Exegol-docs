@@ -35,6 +35,8 @@ This section lists the services that can be used in Exegol containers and their 
     +----------------------+--------+------------------------------+-----------------------------------------------------------------------------------------------+
     | Starkiller (Empire)  | TBD    | ``ps-empire server``         | GUI for the Empire post-exploit framework (https://github.com/BC-SECURITY/Empire)             |
     +----------------------+--------+------------------------------+-----------------------------------------------------------------------------------------------+
+    | Havoc                | 40056  | ``havoc client/server``      | C2 Framework in GO (https://github.com/HavocFramework/Havoc)                                  |
+    +----------------------+--------+------------------------------+-----------------------------------------------------------------------------------------------+
     | Desktop              |        | ``desktop-start``,           | Remote graphical desktop feature (beta). Used with the ``--desktop`` from up-to-date wrapper. |
     |                      |        | ``desktop-stop``,            |                                                                                               |
     | * vnc                | 6336   | ``desktop-restart``          |                                                                                               |

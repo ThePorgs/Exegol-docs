@@ -24,7 +24,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 =================================================== =============
  Feature                                             Description
 =================================================== =============
-:ref:`Display sharing<feature_display_sharing>`     Sharing of the graphic environment between the container and the host
+:ref:`Display sharing<feature_x11_sharing>`     Sharing of the graphic environment between the container and the host
 :ref:`Desktop<feature_desktop>`                     Hosts a complete graphics environment available via a web page or VNC
 :ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
 :ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
@@ -62,12 +62,12 @@ Features
 
 The Exegol wrapper has many features to automatically and transparently manage different configurations to facilitate the use and creation of docker containers.
 
-.. _feature_display_sharing:
+.. _feature_x11_sharing:
 
-Display sharing
----------------
+X11 sharing (GUI)
+-----------------
 
-By default exegol configures the new container and host to allow the execution to the display of graphical window launched from an exegol container.
+By default exegol configures the new container and host to allow the execution to the display of graphical window launched from an exegol container. This is achieved to X11 sharing.
 
 For example, if bloodhound is launched in an exegol container, the graphical window (GUI) will be displayed in the user's graphic environment.
 

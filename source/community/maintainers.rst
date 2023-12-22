@@ -154,8 +154,10 @@ Once the PR is approved and ready for merge, it can be merged
 
 .. code-block:: bash
 
+    git checkout main
     git pull --all
     git checkout dev
+    git pull --all
     git merge --ff-only main
     git push
 
