@@ -68,7 +68,7 @@ Additional dependencies may be required depending on the host OS.
 
         .. hint::
 
-            The XQuartz requirement below is now optional if using the (beta) Graphical Remote Desktop feature instead of X11 sharing (join our Discord to know more about this beta feature).
+            The XQuartz requirement below is now optional if using the (beta) :ref:`Graphical Remote Desktop feature <feature_desktop>` instead of X11 sharing (join our Discord to know more about this beta feature).
 
         * `XQuartz <https://www.xquartz.org/>`__ must be installed
         * The XQuartz config ``Allow connections from network clients`` must be set to true

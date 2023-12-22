@@ -67,7 +67,7 @@ The Exegol wrapper has many features to automatically and transparently manage d
 X11 sharing (GUI)
 -----------------
 
-By default exegol configures the new container and host to allow the execution to the display of graphical window launched from an exegol container. This is achieved to X11 sharing.
+By default exegol configures the new container and host to allow the execution to the display of graphical window launched from an exegol container. This is achieved through X11 sharing.
 
 For example, if bloodhound is launched in an exegol container, the graphical window (GUI) will be displayed in the user's graphic environment.
 
