@@ -22,16 +22,16 @@ jobs:
       run: |
           git checkout dev
           git pull
-          git merge main --ff -m "Auto-update dev from main" && git push || (echo "Unable to automatically merge dev" && git merge --abort && exit 1)
+          git merge main --ff -m "Auto-update dev from main" && git push || (echo "Unable to automatically merge dev" && git merge --abort; exit 1)
     - name: Merge main back to dev-wrapper
       continue-on-error: true
       run: |
           git checkout dev-wrapper
           git pull
-          git merge main --ff -m "Auto-update dev-wrapper from main" && git push || (echo "Unable to automatically merge dev-wrapper" && git merge --abort && exit 1)
+          git merge main --ff -m "Auto-update dev-wrapper from main" && git push || (echo "Unable to automatically merge dev-wrapper" && git merge --abort; exit 1)
     - name: Merge main back to dev-images
       continue-on-error: true
       run: |
           git checkout dev-images
           git pull
-          git merge main --ff -m "Auto-update dev-images from main" && git push || (echo "Unable to automatically merge dev-images" && git merge --abort && exit 1)
+          git merge main --ff -m "Auto-update dev-images from main" && git push || (echo "Unable to automatically merge dev-images" && git merge --abort; exit 1)
