@@ -64,7 +64,11 @@ Additional dependencies may be required depending on the host OS.
 
     ..  tab:: macOS
 
-        To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
+        To support graphical applications (:ref:`display sharing functionality <feature_x11_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
+
+        .. hint::
+
+            The XQuartz requirement below is now optional if using the (beta) Graphical Remote Desktop feature instead of X11 sharing (join our Discord to know more about this beta feature).
 
         * `XQuartz <https://www.xquartz.org/>`__ must be installed
         * The XQuartz config ``Allow connections from network clients`` must be set to true
@@ -90,7 +94,7 @@ Additional dependencies may be required depending on the host OS.
 
     ..  group-tab:: Windows
 
-        To support graphical applications (:ref:`display sharing functionality <feature_display_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
+        To support graphical applications (:ref:`display sharing functionality <feature_x11_sharing>`, e.g. Bloodhound, Wireshark, Burp, etc.), additional dependencies and configuration are required:
 
         * Windows **10** (up to date), or Windows **11**, is required
         * **Docker Desktop** installed on the Windows host

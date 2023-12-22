@@ -129,9 +129,9 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    :caption: Exegol image
 
    exegol-image/tools.rst
-   exegol-image/services.rst
-   exegol-image/credentials.rst
    exegol-image/my-resources.rst
+   exegol-image/credentials.rst
+   exegol-image/services.rst
 
 .. toctree::
    :maxdepth: 2
