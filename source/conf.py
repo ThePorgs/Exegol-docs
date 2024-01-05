@@ -10,7 +10,7 @@ import datetime
 project = 'Exegol'
 copyright = f'{datetime.datetime.now().year}, Shutdown & Dramelac'
 author = 'Shutdown & Dramelac'
-release = '4.1.0'
+# release = '4.1.0'  # Disable version for doc
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
