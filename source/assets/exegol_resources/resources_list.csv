@@ -8,6 +8,8 @@ Linux Exploit Suggester,https://github.com/The-Z-Labs/linux-exploit-suggester,Li
 Mimikatz,https://github.com/gentilkiwi/mimikatz,A little tool to play with Windows security
 SharpHound.exe,https://github.com/BloodHoundAD/BloodHound,C# ingestor for BloodHound
 JuicyPotato.exe,https://github.com/ohpe/juicy-potato,https://github.com/ohpe/juicy-potato
+PrintSpoofer,https://github.com/itm4n/PrintSpoofer,Abusing SeImpersonatePrivilege from LOCAL/NETWORK SERVICE
+GodPotato,https://github.com/BeichenDream/GodPotato,Abusing SeImpersonatePrivilege on recent Windows OS (up to W11 and Server 2022)
 static netcat (linux),https://github.com/andrew-d/static-binaries,Utility to establish TCP or UDP connections
 static netcat (windows),https://gitlab.com/onemask/pentest-tools,Utility to establish TCP or UDP connections
 SpoolSample.exe,https://gitlab.com/onemask/pentest-tools,PoC tool to coerce Windows hosts authenticate to other machines
