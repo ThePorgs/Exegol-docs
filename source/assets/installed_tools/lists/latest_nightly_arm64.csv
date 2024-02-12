@@ -1,4 +1,5 @@
 Tool,Link,Description
+abuseACL,https://github.com/AetherBlack/abuseACL,A python script to automatically list vulnerable Windows ACEs/ACLs.
 aclpwn,https://github.com/aas-n/aclpwn.py,Tool for testing the security of Active Directory access controls.
 adidnsdump,https://github.com/dirkjanm/adidnsdump,Active Directory Integrated DNS dump utility
 aircrack-ng,https://www.aircrack-ng.org,A suite of tools for wireless penetration testing
@@ -232,6 +233,7 @@ polenum,https://github.com/Wh1t3Fox/polenum,Polenum is a Python script which use
 powershell,https://github.com/PowerShell/PowerShell,a command-line shell and scripting language designed for system administration and automation
 pp-finder,https://github.com/yeswehack/pp-finder,Prototype pollution finder tool for javascript. pp-finder lets you find prototype pollution candidates in your code.
 pre2k,https://github.com/garrettfoster13/pre2k,pre2k is a tool to check if a Windows domain has any pre-2000 Windows 2000 logon names still in use.
+pretender,https://github.com/RedTeamPentesting/pretender,an mitm tool for helping with relay attacks.
 prips,https://manpages.ubuntu.com/manpages/focal/man1/prips.1.html,A utility for quickly generating IP ranges or enumerating hosts within a specified range.
 privexchange,https://github.com/dirkjanm/PrivExchange,a tool to perform attacks against Microsoft Exchange server using NTLM relay techniques
 prowler,https://github.com/prowler-cloud/prowler,Perform Cloud Security best practices assessments / audits / incident response / compliance / continuous monitoring / hardening and forensics readiness.
