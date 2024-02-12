@@ -519,8 +519,13 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
                 # will download the private and public resident security keys in the current directory
                 # private key is to be moved in ~/.ssh (physical FIDO2 key will always be needed)
                 ssh-keygen -K
+                # it's on purpose, the "_rk" part is removed, otherwise it doesn't work.
                 mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
                 mv id_ed25519_sk_rk.pub ~/.ssh/id_ed25519_sk.pub
+
+            .. warning::
+
+                While the ``ssh-keygen -K`` command saves names files ``id_ed25519_sk_rk[.pub]``, it's on purpose the ``_rk`` part is then removed on the host. Otherwise, SSH fails at handling the keys. The files must be named ``id_ed25519_sk[.pub]`` on the system.
 
         Once the SSH environment is ready, ``git`` CLI can be configured to rely on the security key for signing commits and authenticating (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
 
