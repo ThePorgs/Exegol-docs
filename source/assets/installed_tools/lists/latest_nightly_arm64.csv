@@ -300,7 +300,7 @@ SoapUI,https://github.com/SmartBear/soapui,SoapUI is the world's leading testing
 spiderfoot,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
 sprayhound,https://github.com/Hackndo/Sprayhound,Active Directory password audit tool.
 sqlmap,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
-ssh-audit,https://github.com/arthepsy/ssh-audit,ssh-audit is a tool to test SSH server configuration for best practices.
+ssh-audit,https://github.com/jtesta/ssh-audit,ssh-audit is a tool to test SSH server configuration for best practices.
 sshuttle,https://github.com/sshuttle/sshuttle,Transparent proxy server that tunnels traffic through an SSH server
 sslscan,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
 ssrfmap,https://github.com/swisskyrepo/SSRFmap,a tool for testing SSRF vulnerabilities.
