@@ -15,6 +15,7 @@ Create an issue in the correct repository:
 * For any problem concerning `Exegol WRAPPER <https://github.com/ThePorgs/Exegol/issues>`__ (the exegol command).
 * For any problem concerning `Exegol IMAGE <https://github.com/ThePorgs/Exegol-images/issues>`__ (the exegol environment).
 * For any problem concerning `Exegol RESOURCE <https://github.com/ThePorgs/Exegol-resources/issues>`__ (the exegol offline resources).
+* For any problem concerning `Exegol DOCUMENTATION <https://github.com/ThePorgs/Exegol-docs/issues>`__ (the exegol documentation).
 
 Roadmap
 =======
