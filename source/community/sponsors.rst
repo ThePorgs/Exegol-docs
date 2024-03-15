@@ -9,7 +9,7 @@ Sponsors
 
 |
 
-Dramelac and I work at **Capgemini** and we thank them for allocating some time for us to develop and maintain Exegol! Visit Capgemini website at https://www.capgemini.com/.
+Dramelac and I work at `Capgemini <https://www.capgemini.com/>`_ and we thank them for believing in the project since day 1, and for allowing us to have this personal initiative keep going.
 
 |
 
