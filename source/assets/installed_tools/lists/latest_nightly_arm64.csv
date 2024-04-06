@@ -5,7 +5,6 @@ adidnsdump,https://github.com/dirkjanm/adidnsdump,Active Directory Integrated DN
 aircrack-ng,https://www.aircrack-ng.org,A suite of tools for wireless penetration testing
 amass,https://github.com/OWASP/Amass,A DNS enumeration / attack surface mapping & external assets discovery tool
 amber,https://github.com/EgeBalci/amber,Forensic tool to recover browser history / cookies and credentials
-androguard,https://github.com/androguard/androguard,Reverse engineering and analysis of Android applications
 android-tools-adb,https://developer.android.com/studio/command-line/adb,A collection of tools for debugging Android applications
 anew,https://github.com/tomnomnom/anew,A simple tool for filtering and manipulating text data / such as log files and other outputs.
 angr,https://github.com/angr/angr,a platform-agnostic binary analysis framework
@@ -29,6 +28,7 @@ bloodhound-ce.py,https://github.com/fox-it/BloodHound.py,BloodHound-CE ingestor 
 bloodhound-import,https://github.com/fox-it/BloodHound.py,Import data into BloodHound for analyzing active directory trust relationships
 bloodhound-quickwin,https://github.com/kaluche/bloodhound-quickwin,A tool for BloodHounding on Windows machines without .NET or Powershell installed
 bloodhound.py,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
+bloodyAD,https://github.com/CravateRouge/bloodyAD,bloodyAD is an Active Directory privilege escalation swiss army knife.
 bolt,https://github.com/s0md3v/bolt,Bolt crawls the target website to the specified depth and stores all the HTML forms found in a database for further processing.
 bqm,https://github.com/Acceis/bqm,Tool to deduplicate custom BloudHound queries from different datasets and merge them in one file.
 brakeman,https://github.com/presidentbeef/brakeman,Static analysis tool for Ruby on Rails applications
@@ -72,6 +72,7 @@ dnschef,https://github.com/iphelix/dnschef,Tool for DNS MITM attacks
 dnsenum,https://github.com/fwaeytens/dnsenum,dnsenum is a tool for enumerating DNS information about a domain.
 dnsx,https://github.com/projectdiscovery/dnsx,A tool for DNS reconnaissance that can help identify subdomains and other related domains.
 donpapi,https://github.com/login-securite/DonPAPI,Dumping revelant information on compromised targets without AV detection
+dploot,https://github.com/zblurx/dploot,dploot is Python rewrite of SharpDPAPI written un C#.
 droopescan,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
 drupwn,https://github.com/immunIT/drupwn,Drupal security scanner.
 eaphammer,https://github.com/s0lst1c3/eaphammer,EAPHammer is a toolkit for performing targeted evil twin attacks against WPA2-Enterprise networks.
@@ -179,7 +180,7 @@ maigret,https://github.com/soxoj/maigret,Collects information about a target ema
 maltego,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 manspider,https://github.com/blacklanternsecurity/MANSPIDER,Manspider will crawl every share on every target system. If provided creds don't work it will fall back to 'guest' then to a null session.
 mariadb-client,https://github.com/MariaDB/server,MariaDB is a community-developed fork of the MySQL relational database management system. The mariadb-client package includes command-line utilities for interacting with a MariaDB server.
-masky,https://github.com/Z4kSec/masky,masky is a tool to mask sensitive data / such as credit card numbers / in logs and other files.
+masky,https://github.com/Z4kSec/Masky,Masky is a python library providing an alternative way to remotely dump domain users' credentials thanks to an ADCS. A command line tool has been built on top of this library in order to easily gather PFX or NT hashes and TGT on a larger scope
 masscan,https://github.com/robertdavidgraham/masscan,Masscan is an Internet-scale port scanner
 mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
@@ -277,6 +278,8 @@ rusthound (v2),https://github.com/OPENCYBER-FR/RustHound,BloodHound-CE ingestor 
 rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
+sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying, profiling, and attacking SCCM related assets in an Active Directory domain.
+sccmwtf,https://github.com/xpn/sccmwtf,This code is designed for exploring SCCM in a lab.
 scout,https://github.com/nccgroup/ScoutSuite,Scout Suite is an open source multi-cloud security-auditing tool which enables security posture assessment of cloud environments.
 scrcpy,https://github.com/Genymobile/scrcpy,Display and control your Android device.
 searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
