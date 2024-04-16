@@ -13,6 +13,7 @@ apktool,https://github.com/iBotPeaches/Apktool,It is a tool for reverse engineer
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
 arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for penetration testing.
 asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
+asrepcatcher,https://github.com/Yaxxine7/ASRepCatcher,Make your VLAN ASREProastable.
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
 autoconf,https://www.gnu.org/software/autoconf/autoconf.html,Tool for producing shell scripts to configure source code packages
 autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnaissance tool which performs automated enumeration of services.
@@ -57,6 +58,7 @@ corscanner,https://github.com/chenjj/CORScanner,a Python script for finding CORS
 cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline dictionary attacks against WPA-PSK (Pre-Shared Key) networks.
 crackhound,https://github.com/trustedsec/crackhound,A fast WPA/WPA2/WPA3 WiFi Handshake capture / password recovery and analysis tool
 crackmapexec,https://github.com/Porchetta-Industries/CrackMapExec,Network scanner.
+creds,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement, this document has several products default login/password gathered from multiple sources.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
