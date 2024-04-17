@@ -16,11 +16,23 @@ Click :ref:`here <latest_nightly>` to see the lists of tools featured in the lat
     :widths: 7 7 8 28 50
     :class: tight-table
 
-.. csv-table::
-    :file: /assets/installed_tools/releases.csv
-    :header-rows: 1
-    :widths: 7 10 8 30 45
-    :class: tight-table
+..  tabs::
+
+    ..  tab:: AMD64
+
+        .. csv-table::
+            :file: /assets/installed_tools/releases_amd64.csv
+            :header-rows: 1
+            :widths: 7 7 28 50
+            :class: tight-table
+
+    ..  tab:: ARM64
+
+        .. csv-table::
+            :file: /assets/installed_tools/releases_arm64.csv
+            :header-rows: 1
+            :widths: 7 7 28 50
+            :class: tight-table
 
 .. _latest_nightly:
 
