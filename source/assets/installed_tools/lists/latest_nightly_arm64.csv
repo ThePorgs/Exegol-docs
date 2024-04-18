@@ -58,7 +58,7 @@ corscanner,https://github.com/chenjj/CORScanner,a Python script for finding CORS
 cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline dictionary attacks against WPA-PSK (Pre-Shared Key) networks.
 crackhound,https://github.com/trustedsec/crackhound,A fast WPA/WPA2/WPA3 WiFi Handshake capture / password recovery and analysis tool
 crackmapexec,https://github.com/Porchetta-Industries/CrackMapExec,Network scanner.
-creds,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement, this document has several products default login/password gathered from multiple sources.
+creds,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
@@ -280,7 +280,7 @@ rusthound (v2),https://github.com/OPENCYBER-FR/RustHound,BloodHound-CE ingestor 
 rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
-sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying, profiling, and attacking SCCM related assets in an Active Directory domain.
+sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain.
 sccmwtf,https://github.com/xpn/sccmwtf,This code is designed for exploring SCCM in a lab.
 scout,https://github.com/nccgroup/ScoutSuite,Scout Suite is an open source multi-cloud security-auditing tool which enables security posture assessment of cloud environments.
 scrcpy,https://github.com/Genymobile/scrcpy,Display and control your Android device.
