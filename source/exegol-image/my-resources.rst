@@ -91,7 +91,7 @@ To automatically:
 
 
 :code:`firefox` (addons, CA)
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. seealso::
     Available from version ``3.0.2`` of any exegol image.
 

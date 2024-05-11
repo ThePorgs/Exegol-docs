@@ -24,7 +24,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 =================================================== =============
  Feature                                             Description
 =================================================== =============
-:ref:`Display sharing<feature_x11_sharing>`     Sharing of the graphic environment between the container and the host
+:ref:`Display sharing<feature_x11_sharing>`         Sharing of the graphic environment between the container and the host
 :ref:`Desktop<feature_desktop>`                     Hosts a complete graphics environment available via a web page or VNC
 :ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
 :ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
