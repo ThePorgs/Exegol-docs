@@ -41,8 +41,7 @@ Additional dependencies may be required depending on the host OS.
 
            .. code-block:: bash
 
-              curl -fsSL "https://get.docker.com/" -o get-docker.sh
-              sh get-docker.sh
+              curl -fsSL "https://get.docker.com/" | sh
 
         .. warning::
 
