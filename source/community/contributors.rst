@@ -102,7 +102,7 @@ Install standards
 
 When installing a tool, depending on how it gets installed, here are the rules.
 
-* Most tools have their virtual environment, in order to avoid dependencies conflicts.
+* Most tools have their virtual environment, in order to avoid dependencies conflicts. Python virtual environments must have access to the system site-packages, to avoid redunduncy on already install common dependencies.
 * Most tools are installed either in their own directory in ``/opt/tools/`` or have the binary (or a symlink) in ``/opt/tools/bin/``.
 * Disk space being limited, we're not pull every code source around. When possible, add the ``--depth 1`` option to your usual ``git clone`` command.
 
@@ -119,7 +119,7 @@ When installing a tool, depending on how it gets installed, here are the rules.
 
             # from local sources
             git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
-            python3 -m pipx install /opt/tools/yourtool/
+            python3 -m pipx install --system-site-packages /opt/tools/yourtool/
 
         But some tools cannot be installed this way, either because they're missing the ``setup.py`` or for any other obscure reason. In that case, opt for the "Python (venv)" solution.
 
@@ -135,7 +135,7 @@ When installing a tool, depending on how it gets installed, here are the rules.
 
             git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
             cd /opt/tools/yourtool || exit
-            python3 -m venv ./venv/
+            python3 -m venv --system-site-packages ./venv/
             source ./venv/bin/activate
             pip3 install -r requirements.txt
             deactivate
@@ -519,8 +519,13 @@ While **SSH (+ FIDO2)** is preferred since it offers better multi-factor signing
                 # will download the private and public resident security keys in the current directory
                 # private key is to be moved in ~/.ssh (physical FIDO2 key will always be needed)
                 ssh-keygen -K
+                # it's on purpose, the "_rk" part is removed, otherwise it doesn't work.
                 mv id_ed25519_sk_rk ~/.ssh/id_ed25519_sk
                 mv id_ed25519_sk_rk.pub ~/.ssh/id_ed25519_sk.pub
+
+            .. warning::
+
+                While the ``ssh-keygen -K`` command saves names files ``id_ed25519_sk_rk[.pub]``, it's on purpose the ``_rk`` part is then removed on the host. Otherwise, SSH fails at handling the keys. The files must be named ``id_ed25519_sk[.pub]`` on the system.
 
         Once the SSH environment is ready, ``git`` CLI can be configured to rely on the security key for signing commits and authenticating (`telling git about your SSH key <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>`_).
 

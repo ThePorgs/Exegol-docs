@@ -5,7 +5,6 @@ adidnsdump,https://github.com/dirkjanm/adidnsdump,Active Directory Integrated DN
 aircrack-ng,https://www.aircrack-ng.org,A suite of tools for wireless penetration testing
 amass,https://github.com/OWASP/Amass,A DNS enumeration / attack surface mapping & external assets discovery tool
 amber,https://github.com/EgeBalci/amber,Forensic tool to recover browser history / cookies and credentials
-androguard,https://github.com/androguard/androguard,Reverse engineering and analysis of Android applications
 android-tools-adb,https://developer.android.com/studio/command-line/adb,A collection of tools for debugging Android applications
 anew,https://github.com/tomnomnom/anew,A simple tool for filtering and manipulating text data / such as log files and other outputs.
 angr,https://github.com/angr/angr,a platform-agnostic binary analysis framework
@@ -14,7 +13,6 @@ apktool,https://github.com/iBotPeaches/Apktool,It is a tool for reverse engineer
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
 arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for penetration testing.
 asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
-asrepcatcher,https://github.com/Yaxxine7/ASRepCatcher,Make your VLAN ASREProastable.
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
 autoconf,https://www.gnu.org/software/autoconf/autoconf.html,Tool for producing shell scripts to configure source code packages
 autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnaissance tool which performs automated enumeration of services.
@@ -55,12 +53,10 @@ cloudsploit,https://github.com/aquasecurity/cloudsploit,Cloud Security Posture M
 clusterd,https://github.com/hatRiot/clusterd,A tool to distribute and remotely manage Hacking Team's RCS agents.
 cmsmap,https://github.com/Dionach/CMSmap,Tool for security audit of web content management systems.
 coercer,https://github.com/p0dalirius/coercer,DFS-R target coercion tool
-constellation,https://github.com/constellation-app/Constellation,Find and exploit vulnerabilities in mobile applications.
 corscanner,https://github.com/chenjj/CORScanner,a Python script for finding CORS misconfigurations.
 cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline dictionary attacks against WPA-PSK (Pre-Shared Key) networks.
 crackhound,https://github.com/trustedsec/crackhound,A fast WPA/WPA2/WPA3 WiFi Handshake capture / password recovery and analysis tool
 crackmapexec,https://github.com/Porchetta-Industries/CrackMapExec,Network scanner.
-creds,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
@@ -144,7 +140,6 @@ httpmethods,https://github.com/ShutdownRepo/httpmethods,Tool for exploiting HTTP
 httprobe,https://github.com/tomnomnom/httprobe,A simple utility for enumerating HTTP and HTTPS servers.
 httpx,https://github.com/projectdiscovery/httpx,A tool for identifying web technologies and vulnerabilities / including outdated software versions and weak encryption protocols.
 hydra,https://github.com/vanhauser-thc/thc-hydra,Hydra is a parallelized login cracker which supports numerous protocols to attack.
-ida,https://www.hex-rays.com/products/ida/,Interactive disassembler for software analysis.
 ignorant,https://github.com/megadose/ignorant,holehe but for phone numbers.
 imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose / or convert bitmap images.
 impacket,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
@@ -181,7 +176,6 @@ linkedin2username,https://github.com/initstring/linkedin2username,Generate a lis
 linkfinder,https://github.com/GerbenJavado/LinkFinder,a Python script that finds endpoints and their parameters in JavaScript files.
 lnkup,https://github.com/Plazmaz/lnkUp,This tool will allow you to generate LNK payloads. Upon rendering or being run they will exfiltrate data.
 lsassy,https://github.com/Hackndo/lsassy,Windows secrets and passwords extraction tool.
-ltrace,https://github.com/dkogan/ltrace,ltrace is a debugging program for Linux and Unix that intercepts and records dynamic library calls that are called by an executed process.
 maigret,https://github.com/soxoj/maigret,Collects information about a target email (or domain) from Google and Bing search results
 maltego,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 manspider,https://github.com/blacklanternsecurity/MANSPIDER,Manspider will crawl every share on every target system. If provided creds don't work it will fall back to 'guest' then to a null session.
@@ -202,7 +196,6 @@ msprobe,https://github.com/puzzlepeaches/msprobe,msprobe is a tool to identify M
 MurMurHash,https://github.com/QU35T-code/MurMurHash,This little tool is to calculate a MurmurHash value of a favicon to hunt phishing websites on the Shodan platform.
 naabu,https://github.com/projectdiscovery/naabu,A fast and reliable port scanner that can detect open ports and services.
 name-that-hash,https://github.com/HashPals/Name-That-Hash,Online tool for identifying hashes.
-nasm,https://github.com/netwide-assembler/nasm,NASM is an 80x86 assembler designed for portability and modularity.
 nbtscan,https://github.com/charlesroelli/nbtscan,NBTscan is a program for scanning IP networks for NetBIOS name information.
 neo4j,https://github.com/neo4j/neo4j,Database.
 neovim,https://neovim.io/,hyperextensible Vim-based text editor
@@ -248,7 +241,6 @@ prowler,https://github.com/prowler-cloud/prowler,Perform Cloud Security best pra
 proxmark3,https://github.com/Proxmark/proxmark3,Open source RFID research toolkit.
 proxychains,https://github.com/rofl0r/proxychains,Proxy chains - redirect connections through proxy servers.
 pst-utils,https://manpages.debian.org/jessie/pst-utils/readpst.1,pst-utils is a set of tools for working with Outlook PST files.
-pth-tools,https://github.com/byt3bl33d3r/pth-toolkit,A toolkit to perform pass-the-hash attacks
 pwncat,https://github.com/calebstewart/pwncat,A lightweight and versatile netcat alternative that includes various additional features.
 pwndb,https://github.com/davidtavarez/pwndb,A command-line tool for searching the pwndb database of compromised credentials.
 pwndbg,https://github.com/pwndbg/pwndbg,a GDB plugin that makes debugging with GDB suck less
@@ -286,7 +278,7 @@ rusthound (v2),https://github.com/OPENCYBER-FR/RustHound,BloodHound-CE ingestor 
 rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
-sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain.
+sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying, profiling, and attacking SCCM related assets in an Active Directory domain.
 sccmwtf,https://github.com/xpn/sccmwtf,This code is designed for exploring SCCM in a lab.
 scout,https://github.com/nccgroup/ScoutSuite,Scout Suite is an open source multi-cloud security-auditing tool which enables security posture assessment of cloud environments.
 scrcpy,https://github.com/Genymobile/scrcpy,Display and control your Android device.
@@ -318,7 +310,6 @@ ssrfmap,https://github.com/swisskyrepo/SSRFmap,a tool for testing SSRF vulnerabi
 steghide,https://github.com/StefanoDeVuono/steghide,steghide is a steganography program that is able to hide data in various kinds of image and audio files.
 stegolsb,https://github.com/KyTn/STEGOLSB,Steganography tool to hide data in BMP images using least significant bit algorithm
 stegosuite,https://github.com/osde8info/stegosuite,Stegosuite is a free steganography tool that allows you to hide data in image and audio files.
-strace,https://github.com/strace/strace,strace is a debugging utility for Linux that allows you to monitor and diagnose system calls made by a process.
 subfinder,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
 sublist3r,https://github.com/aboul3la/Sublist3r,a Python tool designed to enumerate subdomains of websites.
 swaks,https://github.com/jetmore/swaks,Swaks is a featureful flexible scriptable transaction-oriented SMTP test tool.
@@ -349,7 +340,6 @@ username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for g
 Villain,https://github.com/t3l3machus/Villain,Command & Control Framework
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
 volatility3,https://github.com/volatilityfoundation/volatility3,Advanced memory forensics framework
-wabt,https://github.com/WebAssembly/wabt,The WebAssembly Binary Toolkit (WABT) is a suite of tools for WebAssembly (Wasm) including assembler and disassembler / a syntax checker / and a binary format validator.
 wafw00f,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to identify and fingerprint web application firewall (WAF) products.
 waybackurls,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
 webclientservicescanner,https://github.com/Hackndo/webclientservicescanner,Scans for web service endpoints
