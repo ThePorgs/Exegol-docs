@@ -283,8 +283,8 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
                     It is possible to disable this behavior in the Windows settings: ``Apps > Apps & features > App execution aliases`` and disable aliases for ``python.exe`` and ``python3.exe``.
 
 
-3. (Optional) Run Exegol with appropriate privileges
-----------------------------------------------------
+3. Run Exegol with appropriate privileges
+-----------------------------------------
 
 
 ..  tabs::
@@ -344,7 +344,17 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
         Exegol should **NOT** be used as admin on Windows. Docker Desktop doesn't require administrator privileges.
 
 
-4. (Optional) Using Exegol auto-completion
+4. Installation of the first Exegol image
+-----------------------------------------
+
+Once the exegol wrapper is installed, you can download your first docker image with the following command:
+
+.. code-block:: bash
+
+   exegol install
+
+
+5. (Optional) Using Exegol auto-completion
 ------------------------------------------
 
 Exegol (wrapper) supports auto-completion in many shell environments but there is a configuration to add (on the host) for this feature to work.
@@ -468,13 +478,3 @@ Exegol (wrapper) supports auto-completion in many shell environments but there i
                 .. code-block:: powershell
 
                     echo "Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete" >> $PROFILE
-
-5. Installation of the first Exegol image
------------------------------------------
-
-Once the exegol wrapper is installed, you can download your first docker image with the following command:
-
-.. code-block:: bash
-
-   exegol install
-
