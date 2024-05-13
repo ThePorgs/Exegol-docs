@@ -106,7 +106,6 @@ Shell
 * ``xcopy``: Copy a file to clipboard
 * ``xpaste``: Create a file from clipboard
 * ``xshow``: Print clipboard
-* ``xshow``: Print clipboard
 * ``sed-empty-line``: Removes empty lines
 * ``sed-comment-line``: Removes commented lines
 
@@ -128,4 +127,3 @@ Tools optimization
 * ``nse``: Find nmap NSE script
 * ``urlencode``: Encodes arguments in URL format
 * ``urldecode``: Decodes arguments from URL format
-
