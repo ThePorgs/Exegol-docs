@@ -87,6 +87,9 @@ Useful aliases
 
         alias <alias_name>
 
+.. warning::
+
+    Some aliases are not available before image ``3.1.5``.
 
 Here's a list of useful aliases designed to save you time:
 
@@ -108,6 +111,7 @@ Shell
 * ``xshow``: Print clipboard
 * ``sed-empty-line``: Removes empty lines
 * ``sed-comment-line``: Removes commented lines
+* ``history-dump``: Export full history of commands with **date and time** of execution
 
 
 Quick service
