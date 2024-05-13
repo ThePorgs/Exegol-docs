@@ -35,7 +35,8 @@ Share files or notes with targets and collaborators
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following tools or commands can be used to pop a temporary file or http server: ``updog``, ``goshs``, ``http-server``, ``http-put-server``, ``ftp-server``, ``smbserver.py``.
-In order to shares notes during an engagement, ``trilium`` (https://github.com/zadam/trilium) can be used.
+
+In order to **shares notes** during an engagement, ``trilium`` (https://github.com/zadam/trilium) can be used.
 
 Dynamic history commands
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,4 +66,66 @@ Keyboard shortcuts
 * ``ctrl + →``: move one word forward
 * ``ctrl + l``: clear the screen
 
+
+Useful aliases
+~~~~~~~~~~~~~~
+
+
+.. tip::
+
+    To see every alias in your exegol image, run the command:
+
+    .. code-block::
+
+        alias
+
+.. tip::
+
+    You can see the complete command configured for an alias with the command:
+
+    .. code-block::
+
+        alias <alias_name>
+
+
+Here's a list of useful aliases designed to save you time:
+
+Network related
+---------------
+
+* ``ipa``: List network interfaces in short and colorful way
+* ``ipr``: List network routes in short and colorful way
+* ``pc``: Shortcut to ``proxychains``
+* ``ncvz``: Shortcut to test an open TCP port
+
+Shell
+-----
+
+* ``ws``: Shortcut to ``cd /workspace``
+* ``_``: Shortcut to ``sudo``
+* ``xcopy``: Copy a file to clipboard
+* ``xpaste``: Create a file from clipboard
+* ``xshow``: Print clipboard
+* ``xshow``: Print clipboard
+* ``sed-empty-line``: Removes empty lines
+* ``sed-comment-line``: Removes commented lines
+
+
+Quick service
+-------------
+
+* ``http-put-server``: Python web server ``put`` capable
+* ``http-server``: Shortcut to classic Python web server
+* ``php-server``: Server a PHP webserver on current directory using port 8080
+
+
+Tools optimization
+------------------
+
+* ``hcat``: Automatic hashcat format solver with fuzzy finder wordlist
+* ``hjohn``: Automatic john the ripper format solver with fuzzy finder wordlist
+* ``scan-range``: Nmap shortcut to find host in a specified network range
+* ``nse``: Find nmap NSE script
+* ``urlencode``: Encodes arguments in URL format
+* ``urldecode``: Decodes arguments from URL format
 
