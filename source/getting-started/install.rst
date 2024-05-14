@@ -143,41 +143,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 -------------------------
 
 ..  tabs::
-
-   ..  group-tab:: Installing from sources (recommended)
-   
-           Exegol's wrapper can be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
-   
-           .. code-block:: bash
-   
-              git clone "https://github.com/ThePorgs/Exegol"
-   
-           .. tip::
-   
-               If you want a **light** clone of Exegol (and **never** use the **dev** branch), you can use the following command:
-   
-               .. code-block:: bash
-   
-                   git clone --shallow-since="2023/05/08" "https://github.com/ThePorgs/Exegol"
-   
-           If you have access to docker directly as a user, you can install the requirements only for your current user
-           otherwise the requirements must be installed as root to run Exegol with sudo.
-   
-           .. tabs::
-   
-               .. tab:: With sudo
-   
-                   .. code-block:: bash
-   
-                      sudo python3 -m pip install --requirement "Exegol/requirements.txt"
-   
-               .. tab:: Directly as user
-   
-                   .. code-block:: bash
-   
-                      python3 -m pip install --user --requirement "Exegol/requirements.txt"
-
-    ..  group-tab:: Installing with pipx
+    ..  group-tab:: Installing with pipx (preferred)
 
         The pre-compiled Exegol’s wrapper can be installed from the PyPI repository.
         While this is the easiest and most user-friendly technique, it is advised to install from sources, as it allows to switch from release to dev branches easily and it supports the auto-update feature.
@@ -203,6 +169,39 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
             # Or from sources directly
             pipx install git+https://github.com/ThePorgs/Exegol
 
+    ..  group-tab:: Installing from sources
+
+        Exegol's wrapper can be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
+
+        .. code-block:: bash
+
+            git clone "https://github.com/ThePorgs/Exegol"
+
+        .. tip::
+
+           If you want a **light** clone of Exegol (and **never** use the **dev** branch), you can use the following command:
+
+           .. code-block:: bash
+
+               git clone --shallow-since="2023/05/08" "https://github.com/ThePorgs/Exegol"
+
+        If you have access to docker directly as a user, you can install the requirements only for your current user
+        otherwise the requirements must be installed as root to run Exegol with sudo.
+
+        .. tabs::
+
+           .. tab:: With sudo
+
+               .. code-block:: bash
+
+                  sudo python3 -m pip install --requirement "Exegol/requirements.txt"
+
+           .. tab:: Directly as user
+
+               .. code-block:: bash
+
+                  python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
     ..  group-tab:: Installing with pip
 
         The pre-compiled Exegol’s wrapper can be installed from the PyPI repository.
@@ -212,13 +211,27 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
            python3 -m pip install exegol
 
+        .. warning::
+
+            Since Python **3.11**, it is no longer possible to add a pip package system wide. In such cases, it is preferable to use ``pipx``.
+
 
 2. Adding Exegol to the ``PATH``
 --------------------------------
 
 ..  tabs::
 
-   ..  group-tab:: Installing from sources (recommended)
+    ..  group-tab:: Installing with pipx (preferred)
+
+        In order to use pipx applications, the pipx environment must be set in your PATH:
+
+        .. code-block:: bash
+
+            pipx ensurepath
+
+        Dont forget to open a **new terminal** to reload your PATH before continuing.
+
+    ..  group-tab:: Installing from sources
 
         ..  tabs::
             .. tab:: Linux & MacOS
@@ -242,7 +255,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
                     if (!(Test-Path -Path $PROFILE)) {
                         New-Item -ItemType File -Path $PROFILE -Force
                     }
-                
+
                 Create alias for Exegol in `$PROFILE`:
 
                 .. code-block:: powershell
@@ -264,16 +277,6 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                     It is possible to disable this behavior in the Windows settings: ``Apps > Apps & features > App execution aliases`` and disable aliases for ``python.exe`` and ``python3.exe``.
 
-    ..  group-tab:: Installing with pipx
-
-        In order to use pipx applications, the pipx environment must be set in your PATH:
-
-        .. code-block:: bash
-
-            pipx ensurepath
-
-        Dont forget to open a **new terminal** to reload your PATH before continuing.
-
     ..  group-tab:: Installing with pip
 
         If your pip installation is correct and functional, you have nothing more to do and you can already use the command ``exegol``.
@@ -294,7 +297,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
         ..  tabs::
 
-            .. tab:: Run as root (recommended)
+            .. tab:: Run as root (preferred)
 
                 To run Exegol as root with sudo, you must use a specific sudo command. For a better user experience, we recommend using an alias:
 
