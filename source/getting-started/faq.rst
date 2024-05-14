@@ -150,8 +150,8 @@ We therefore recommend **Docker Desktop as the official support** for Exegol.
 
 We do **not** guarantee wrapper stability with a directly installed WSL docker.
 
-How to retrieve your desktop login details
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to retrieve your desktop login details ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The container's root password can be obtained with ``exegol info <container>`` (i.e. this is needed when using the :doc:`desktop </the-exegol-project/python-wrapper>` feature)
 
