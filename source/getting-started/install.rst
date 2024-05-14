@@ -179,7 +179,8 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
     ..  group-tab:: Installing with pipx
 
-        The pre-compiled Exegol’s wrapper can be installed from the PyPI repository. While this is the easiest and most user-friendly technique, it is advised to install from sources, as it allows to switch from release to dev branches easily and it supports the auto-update feature.
+        The pre-compiled Exegol’s wrapper can be installed from the PyPI repository.
+        While this is the easiest and most user-friendly technique, it is advised to install from sources, as it allows to switch from release to dev branches easily and it supports the auto-update feature.
 
         Using ``pipx`` allows you to install Exegol in an **isolated** virtual environment **dedicated** to it.
 
@@ -205,7 +206,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
     ..  group-tab:: Installing with pip
 
         The pre-compiled Exegol’s wrapper can be installed from the PyPI repository.
-        While this is the easiest and most user-friendly technique, for more advanced users it is advised to install from sources, as it allows to switch from release to dev branches easily and it support the auto-update feature.
+        While this is the easiest and most user-friendly technique, it is advised to install from sources, as it allows to switch from release to dev branches easily and it supports the auto-update feature.
 
         .. code-block:: bash
 
