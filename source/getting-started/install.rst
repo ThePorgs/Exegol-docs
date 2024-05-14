@@ -144,9 +144,42 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
 ..  tabs::
 
+   ..  group-tab:: Installing from sources (recommended)
+   
+           Exegol's wrapper can be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
+   
+           .. code-block:: bash
+   
+              git clone "https://github.com/ThePorgs/Exegol"
+   
+           .. tip::
+   
+               If you want a **light** clone of Exegol (and **never** use the **dev** branch), you can use the following command:
+   
+               .. code-block:: bash
+   
+                   git clone --shallow-since="2023/05/08" "https://github.com/ThePorgs/Exegol"
+   
+           If you have access to docker directly as a user, you can install the requirements only for your current user
+           otherwise the requirements must be installed as root to run Exegol with sudo.
+   
+           .. tabs::
+   
+               .. tab:: With sudo
+   
+                   .. code-block:: bash
+   
+                      sudo python3 -m pip install --requirement "Exegol/requirements.txt"
+   
+               .. tab:: Directly as user
+   
+                   .. code-block:: bash
+   
+                      python3 -m pip install --user --requirement "Exegol/requirements.txt"
+
     ..  group-tab:: Installing with pipx
 
-        Exegol’s wrapper can be installed pre-compiled from pypi repository. While this is the easiest and most user-friendly technique, for more advanced users it is advised to install from sources, as it allows to switch from release to dev branches easily and it support the auto-update feature.
+        The pre-compiled Exegol’s wrapper can be installed from the PyPI repository. While this is the easiest and most user-friendly technique, it is advised to install from sources, as it allows to switch from release to dev branches easily and it supports the auto-update feature.
 
         Using ``pipx`` allows you to install Exegol in an **isolated** virtual environment **dedicated** to it.
 
@@ -171,46 +204,12 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
     ..  group-tab:: Installing with pip
 
-        Exegol’s wrapper can be installed pre-compiled from pypi repository.
+        The pre-compiled Exegol’s wrapper can be installed from the PyPI repository.
         While this is the easiest and most user-friendly technique, for more advanced users it is advised to install from sources, as it allows to switch from release to dev branches easily and it support the auto-update feature.
 
         .. code-block:: bash
 
            python3 -m pip install exegol
-
-    ..  group-tab:: Installing from sources
-
-        Exegol's wrapper can also be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
-
-        .. code-block:: bash
-
-           git clone "https://github.com/ThePorgs/Exegol"
-
-        .. tip::
-
-            If you want a **light** clone of Exegol (and **never** use the **dev** branch), you can use the following command:
-
-            .. code-block:: bash
-
-                git clone --shallow-since="2023/05/08" "https://github.com/ThePorgs/Exegol"
-
-        If you have access to docker directly as a user, you can install the requirements only for your current user
-        otherwise the requirements must be installed as root to run Exegol with sudo.
-
-        .. tabs::
-
-            .. tab:: With sudo
-
-                .. code-block:: bash
-
-                   sudo python3 -m pip install --requirement "Exegol/requirements.txt"
-
-            .. tab:: Directly as user
-
-                .. code-block:: bash
-
-                   python3 -m pip install --user --requirement "Exegol/requirements.txt"
-
 
 
 2. Adding Exegol to the ``PATH``
@@ -218,25 +217,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
 ..  tabs::
 
-    ..  group-tab:: Installing with pipx
-
-        In order to use pipx applications, the pipx environment must be set in your PATH:
-
-        .. code-block:: bash
-
-            pipx ensurepath
-
-        Dont forget to open a **new terminal** to reload your PATH before continuing.
-
-    ..  group-tab:: Installing with pip
-
-        If your pip installation is correct and functional, you have nothing more to do and you can already use the command ``exegol``.
-
-        If not, remember that pip installs binaries in a **dedicated** local folder, which then **must** be in the ``PATH`` environment variable.
-        Try to fix your pip installation: `Linux <https://stackoverflow.com/a/62823029>`__ | `MacOS <https://stackoverflow.com/a/43368894>`__ | `Windows <https://builtin.com/software-engineering-perspectives/pip-command-not-found>`__
-
-
-    ..  group-tab:: Installing from sources
+   ..  group-tab:: Installing from sources (recommended)
 
         ..  tabs::
             .. tab:: Linux & MacOS
@@ -281,6 +262,23 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
                     If you have installed Python3 manually and Windows opens the **Microsoft store** on the python page as soon as you type ``python3.exe``, try this:
 
                     It is possible to disable this behavior in the Windows settings: ``Apps > Apps & features > App execution aliases`` and disable aliases for ``python.exe`` and ``python3.exe``.
+
+    ..  group-tab:: Installing with pipx
+
+        In order to use pipx applications, the pipx environment must be set in your PATH:
+
+        .. code-block:: bash
+
+            pipx ensurepath
+
+        Dont forget to open a **new terminal** to reload your PATH before continuing.
+
+    ..  group-tab:: Installing with pip
+
+        If your pip installation is correct and functional, you have nothing more to do and you can already use the command ``exegol``.
+
+        If not, remember that pip installs binaries in a **dedicated** local folder, which then **must** be in the ``PATH`` environment variable.
+        Try to fix your pip installation: `Linux <https://stackoverflow.com/a/62823029>`__ | `MacOS <https://stackoverflow.com/a/43368894>`__ | `Windows <https://builtin.com/software-engineering-perspectives/pip-command-not-found>`__
 
 
 3. Run Exegol with appropriate privileges
