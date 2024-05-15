@@ -213,7 +213,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
         .. warning::
 
-            Since Python **3.11**, it is no longer possible to add a pip package system wide. In such cases, it is preferable to use ``pipx``.
+            In some cases, it is no longer possible to add a pip package system-wide (PEP 668). In such cases, it is preferable to use ``pipx``.
 
 
 2. Adding Exegol to the ``PATH``
