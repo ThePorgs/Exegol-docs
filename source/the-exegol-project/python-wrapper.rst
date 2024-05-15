@@ -24,7 +24,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 =================================================== =============
  Feature                                             Description
 =================================================== =============
-:ref:`Display sharing<feature_x11_sharing>`     Sharing of the graphic environment between the container and the host
+:ref:`Display sharing<feature_x11_sharing>`         Sharing of the graphic environment between the container and the host
 :ref:`Desktop<feature_desktop>`                     Hosts a complete graphics environment available via a web page or VNC
 :ref:`Workspace<feature_workspace>`                 Persistent and shared workspace with the host
 :ref:`Update-fs<feature_update_fs>`                 Permission sharing between the container and the host
@@ -78,6 +78,10 @@ This feature can be disabled manually with the option ``--disable-X11`` of the :
 Desktop
 -------
 
+.. image:: /assets/desktop.png
+           :align: center
+           :alt: Exegol Desktop Overview
+
 On some systems, it may be difficult to have or share an X11 environment. Some users prefer to have a full graphical desktop environment rather than just graphical applications.
 
 To meet this need, Exegol is able to host a complete graphical environment within its container since version ``4.3.0`` of the wrapper and ``3.1.2`` of the images.
@@ -89,6 +93,32 @@ This feature can be enabled manually with the option ``--desktop`` of the :ref:`
 .. tip::
 
     The default behavior and configuration of the desktop mode can be changed in the :ref:`configuration of Exegol<exegol_configuration>`.
+
+Desktop access is protected by **PAM authentication**. To log in, it is essential to retrieve the login credentials and the **URL** where the desktop is accessible.
+These details can be obtained from the container's information, either at the time of container launch or by using the following command :
+
+.. code-block:: bash
+    
+    exegol info CONTAINER_NAME
+
+.. code-block:: bash
+    
+    ⭐ Container summary                                        
+    ┌──────────────────┬───────────────────────────────────────┐
+    │             Name │ gui                                   │
+    │            Image │ nightly - v.9060fa56 (Up to date)     │
+    ├──────────────────┼───────────────────────────────────────┤
+    │      Credentials │ root : iozLHIjJFxoOLTTaNymO50uKT2RlvI │
+    │   Remote Desktop │ http://localhost:58089                │
+    │      Console GUI │ On ✔ (X11)                            │
+    │          Network │ host                                  │
+    │         Timezone │ Off 🪓                                │
+    │ Exegol resources │ On ✔ (/opt/resources)                 │
+    │     My resources │ On ✔ (/opt/my-resources)              │
+    │    Shell logging │ Off 🪓                                │
+    │       Privileged │ Off ✔                                 │
+    │        Workspace │ Dedicated (/workspace)                │
+    └──────────────────┴───────────────────────────────────────┘
 
 .. _feature_workspace:
 
