@@ -49,7 +49,7 @@ This allows users to easily look for, and use, commands in the history, without 
 The best reverse shells
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``shellerator`` can be used to generate a reverse shell command dynmically
+* ``shellerator`` can be used to generate a reverse shell command dynamically
 * on the attacker's side, a reverse shell obtained through a ``netcat`` tunnel can be improved (see `ropnop.com <https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/>`_ or `0xffsec.com <https://0xffsec.com/handbook/shells/full-tty/>`_)
 * simple alternative way to have an upgrade netcat reverse shell: use ``rlwrap <netcat listener command>``
 * instead of using ``netcat`` and "upgrade" the shell manually, ``pwncat-cs`` (`calebstewart/pwncat <https://github.com/calebstewart/pwncat>`_) can be used to obtain an even better reverse shell experience (especially with UNIX-like targets).
