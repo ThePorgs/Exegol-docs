@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-16T09:45:49.309Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0" etag="Y_ZFZ-6qeFQWOMgPCSD1" version="24.4.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-05-16T09:48:21.525Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0" etag="anPQuPjwXaay4Mwrhwaw" version="24.4.0" type="github" pages="3">
   <diagram id="l7Ng9qnX4u8ULg11-bzS" name="techs">
     <mxGraphModel dx="4554" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -83,95 +83,6 @@
           <mxGeometry x="-1191.89" y="408.36" width="153.77" height="41.99" as="geometry" />
         </mxCell>
         <mxCell id="6eGMG3VIlo7N3lYu_ds0-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://read-the-docs-guidelines.readthedocs-hosted.com/_downloads/d9606423d87d78fcceae4ee2af883b12/logo-wordmark-dark.png;" parent="1" vertex="1">
-          <mxGeometry x="-1190" y="570" width="150" height="30" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="techs (dark)" id="rlS39eSYizt-XhcBy4M3">
-    <mxGraphModel dx="4554" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-0" />
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-1" parent="FGv4LUBKUd237mMUdDTZ-0" />
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-2" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2;fillColor=#1F1F1F;strokeColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1417" y="150" width="797" height="570" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-3" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#4496f4;fillColor=default;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-820" y="287.55" width="170" height="152.45" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-4" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=https://opennebula.io/wp-content/uploads/2020/05/DockerHub.png;fillColor=#CCE5FF;clipPath=inset(11.33% 4% 10% 2.33%);" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-817.59" y="304" width="165.18" height="34.68192170818506" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-5" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#4496f4&quot;&gt;Registries&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#4496f4&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;production&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;font color=&quot;#4496f4&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;pre-production&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;control&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#4496f4&quot;&gt;•&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;development&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-782.5" y="353.55" width="95" height="74" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-6" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#0279d7;fillColor=default;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1010" y="460" width="250" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-7" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;&quot;&gt;Supported systems&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Linux / macOS / Windows&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;AMD64 (x86_64), ARM64 (aarch64)&lt;/span&gt;&lt;font color=&quot;#4d4d4d&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-990" y="540" width="210" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-8" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.redhat.com/cms/managed-files/tux-327x360.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-980" y="472" width="43.38" height="53.75" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-9" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Windows_logo_-_2012_%28dark_blue%29.svg/2048px-Windows_logo_-_2012_%28dark_blue%29.svg.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-832" y="472" width="52" height="52" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-10" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacOS_logo_%282017%29.svg/2060px-MacOS_logo_%282017%29.svg.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-917.24" y="466.01" width="64.49" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-11" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#FFD847;fillColor=default;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1389.31" y="300.35" width="170" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-12" value="" style="group" vertex="1" connectable="0" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1407.31" y="314.5" width="180.55" height="135.85" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-13" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://logo-marque.com/wp-content/uploads/2021/10/Python-Symbole.jpg;clipPath=inset(0.3% 20.67% 1.48% 25.33%);" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-12">
-          <mxGeometry x="27.31" width="73.19277108433735" height="75" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-14" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#4d4d4d&quot;&gt;Entrypoint&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#4d4d4d&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Packaged&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#4d4d4d&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;• Open-s&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ource&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-12">
-          <mxGeometry x="54.559999999999945" y="85.85" width="90" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-15" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://miro.medium.com/max/660/1*2FrV8q6rPdz6w2ShV6y7bw.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-12">
-          <mxGeometry x="110" y="4.420000000000016" width="70.55" height="62" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-16" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#000000;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1010" y="230" width="170" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-17" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://logos-marques.com/wp-content/uploads/2021/03/GitHub-Logo.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-995" y="240.00000000000003" width="140" height="79.15" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-18" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Repos&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;wrapper&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;images&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;resources&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;•&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;docs&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;history&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-997.5" y="329" width="80" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-19" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Pipelines&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;build&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;• control&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;versioning&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-932.5" y="330" width="80" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-20" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#2597ED;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1200" y="170" width="170" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-21" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1158.63" y="180" width="88.63" height="75.85" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-22" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#2597ed&quot;&gt;Dedicated images&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#2597ed&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;(dev) all&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(37, 151, 237); background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;color: rgb(37, 151, 237); background-color: initial;&quot;&gt;&amp;nbsp;(prod) all&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;font color=&quot;#2597ed&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;• (prod)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ad&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;• (prod) light&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;• (prod) web&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(37, 151, 237);&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(37, 151, 237); background-color: initial;&quot;&gt;(...)&lt;/span&gt;&lt;span style=&quot;color: rgb(37, 151, 237);&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1170" y="270.35" width="120" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-23" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#5566F5;fillColor=default;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1200" y="400" width="170" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-24" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#5566f5&quot;&gt;Documentation&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#5566f5&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Tickets &amp;amp; support&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#5566f5&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Community&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#5566f5&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Announcements&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1175" y="460" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-25" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#32322A;fillColor=default;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1200" y="560" width="170" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-26" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#32322a&quot;&gt;Documentation&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#32322a&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Users&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#32322a&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Contributors&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#32322a&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;•&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Maintainers &amp;amp; devs&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1177.5" y="620" width="130" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-27" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/fr/thumb/9/98/Discord_logo.svg/2560px-Discord_logo.svg.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
-          <mxGeometry x="-1191.89" y="408.36" width="153.77" height="41.99" as="geometry" />
-        </mxCell>
-        <mxCell id="FGv4LUBKUd237mMUdDTZ-28" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://read-the-docs-guidelines.readthedocs-hosted.com/_downloads/d9606423d87d78fcceae4ee2af883b12/logo-wordmark-dark.png;" vertex="1" parent="FGv4LUBKUd237mMUdDTZ-1">
           <mxGeometry x="-1190" y="570" width="150" height="30" as="geometry" />
         </mxCell>
       </root>
