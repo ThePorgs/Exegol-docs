@@ -55,6 +55,7 @@ cloudsploit,https://github.com/aquasecurity/cloudsploit,Cloud Security Posture M
 clusterd,https://github.com/hatRiot/clusterd,A tool to distribute and remotely manage Hacking Team's RCS agents.
 cmsmap,https://github.com/Dionach/CMSmap,Tool for security audit of web content management systems.
 coercer,https://github.com/p0dalirius/coercer,DFS-R target coercion tool
+conpass,https://github.com/login-securite/conpass,Python tool for continuous password spraying taking into account the password policy.
 constellation,https://github.com/constellation-app/Constellation,Find and exploit vulnerabilities in mobile applications.
 corscanner,https://github.com/chenjj/CORScanner,a Python script for finding CORS misconfigurations.
 cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline dictionary attacks against WPA-PSK (Pre-Shared Key) networks.
@@ -156,8 +157,10 @@ jd-gui,https://github.com/java-decompiler/jd-gui,A standalone Java Decompiler GU
 jdwp,https://github.com/IOActive/jdwp-shellifier,This exploitation script is meant to be used by pentesters against active JDWP service / in order to gain Remote Code Execution.
 john,https://github.com/openwall/john,John the Ripper password cracker.
 joomscan,https://github.com/rezasp/joomscan,A tool to enumerate Joomla-based websites
+jsluice,https://github.com/BishopFox/jsluice,Extract URLs / paths / secrets and other interesting data from JavaScript source code.
 jwt,https://github.com/ticarpi/jwt_tool,a command-line tool for working with JSON Web Tokens (JWTs)
 kadimus,https://github.com/P0cL4bs/Kadimus,a tool for detecting and exploiting file upload vulnerabilities
+katana,https://github.com/projectdiscovery/katana,A next-generation crawling and spidering framework.
 KeePwn,https://github.com/Orange-Cyberdefense/KeePwn,KeePwn is a tool that extracts passwords from KeePass 1.x and 2.x databases.
 kerbrute,https://github.com/ropnop/kerbrute,A tool to perform Kerberos pre-auth bruteforcing
 kiterunner,https://github.com/assetnote/kiterunner,Tool for operating Active Directory environments.
@@ -238,6 +241,7 @@ phpggc,https://github.com/ambionics/phpggc,Exploit generation tool for the PHP p
 pkcrack,https://github.com/keyunluo/pkcrack,tool to generate wordlists of passwords containing cities at a defined distance around the client city
 pkinittools,https://github.com/dirkjanm/PKINITtools,Pkinit support tools
 polenum,https://github.com/Wh1t3Fox/polenum,Polenum is a Python script which uses the Impacket library to extract user information through the SMB protocol.
+postman,https://www.postman.com/,API platform for testing APIs
 powershell,https://github.com/PowerShell/PowerShell,a command-line shell and scripting language designed for system administration and automation
 pp-finder,https://github.com/yeswehack/pp-finder,Prototype pollution finder tool for javascript. pp-finder lets you find prototype pollution candidates in your code.
 pre2k,https://github.com/garrettfoster13/pre2k,pre2k is a tool to check if a Windows domain has any pre-2000 Windows 2000 logon names still in use.
@@ -304,6 +308,7 @@ sliver,https://github.com/BishopFox/sliver,Open source / cross-platform and exte
 smali,https://github.com/JesusFreke/smali,A tool to disassemble and assemble Android's dex files
 smartbrute,https://github.com/ShutdownRepo/SmartBrute,The smart password spraying and bruteforcing tool for Active Directory Domain Services.
 smbclient,https://github.com/samba-team/samba,SMBclient is a command-line utility that allows you to access Windows shared resources
+smbclient-ng,https://github.com/p0dalirius/smbclient-ng,smbclient-ng is a fast and user friendly way to interact with SMB shares.
 smbmap,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and check for null sessions
 smtp-user-enum,https://github.com/pentestmonkey/smtp-user-enum,A tool to enumerate email addresses via SMTP
 smuggler,https://github.com/defparam/smuggler,Smuggler is a tool that helps pentesters and red teamers to smuggle data into and out of the network even when there are multiple layers of security in place.
@@ -344,6 +349,7 @@ trilium,https://github.com/zadam/trilium,Personal knowledge management system.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
+uploader,https://github.com/Frozenka/uploader,Tool for quickly downloading files to a remote machine based on the target operating system
 upx,https://github.com/upx/upx,UPX is an advanced executable packer
 username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
 Villain,https://github.com/t3l3machus/Villain,Command & Control Framework
