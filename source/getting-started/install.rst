@@ -159,15 +159,12 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
             # OR from pip
             python3 -m pip install pipx
 
-        Exegol's wrapper can be installed with ``pipx`` either from **sources** or pre-compiled from **PyPI**:
+        Exegol's wrapper can be installed with ``pipx`` from **PyPI**:
 
         .. code-block:: bash
 
             # You can now install Exegol package from PyPI
             pipx install exegol
-
-            # Or from sources directly
-            pipx install git+https://github.com/ThePorgs/Exegol
 
     ..  group-tab:: Installing from sources
 
