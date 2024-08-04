@@ -419,8 +419,8 @@ Exegol (wrapper) supports auto-completion in many shell environments but there i
 
             .. code-block:: bash
 
-                autoload -U bashcompinit
-                bashcompinit
+                autoload -U compinit
+                compinit
 
             Afterwards you can enable completion by adding the following command in your ``~/.zshrc`` config:
 
