@@ -340,7 +340,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
     ..  group-tab:: Windows
 
-        Exegol should **NOT** be used as admin on Windows. Docker Desktop doesn't require administrator privileges.
+        Exegol should **NOT** be used as admin on Windows and **NOT** as root in a WSL instance. Docker Desktop doesn't require administrator privileges.
 
 
 4. Installation of the first Exegol image
