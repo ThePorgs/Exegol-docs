@@ -245,7 +245,7 @@ pretender,https://github.com/RedTeamPentesting/pretender,an mitm tool for helpin
 prips,https://manpages.ubuntu.com/manpages/focal/man1/prips.1.html,A utility for quickly generating IP ranges or enumerating hosts within a specified range.
 privexchange,https://github.com/dirkjanm/PrivExchange,a tool to perform attacks against Microsoft Exchange server using NTLM relay techniques
 prowler,https://github.com/prowler-cloud/prowler,Perform Cloud Security best practices assessments / audits / incident response / compliance / continuous monitoring / hardening and forensics readiness.
-proxmark3,https://github.com/Proxmark/proxmark3,Open source RFID research toolkit.
+proxmark3,https://github.com/RfidResearchGroup/proxmark3,Open source RFID research toolkit.
 proxychains,https://github.com/rofl0r/proxychains,Proxy chains - redirect connections through proxy servers.
 pst-utils,https://manpages.debian.org/jessie/pst-utils/readpst.1,pst-utils is a set of tools for working with Outlook PST files.
 pwncat,https://github.com/calebstewart/pwncat,A lightweight and versatile netcat alternative that includes various additional features.
@@ -269,7 +269,6 @@ reaver,https://github.com/t6x/reaver-wps-fork-t6x,reaver is a tool for brute-for
 recon-ng,https://github.com/lanmaster53/recon-ng,External recon tool.
 recondog,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
 redis-tools,https://github.com/antirez/redis-tools,redis-tools is a collection of Redis client utilities including redis-cli and redis-benchmark.
-remmina,https://github.com/FreeRDP/Remmina,Remote desktop client.
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
 ROADtools,https://github.com/dirkjanm/ROADtools,ROADtools is a framework to interact with Azure AD. It consists of a library (roadlib) with common components / the ROADrecon Azure AD exploration tool and the ROADtools Token eXchange (roadtx) tool.
@@ -281,8 +280,8 @@ rsactftool,https://github.com/RsaCtfTool/RsaCtfTool,The rsactftool tool is used 
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 rtl-433,https://github.com/merbanan/rtl_433,Tool for decoding various wireless protocols/ signals such as those used by weather stations
 ruler,https://github.com/sensepost/ruler,Outlook Rules exploitation framework.
-rusthound (v2),https://github.com/OPENCYBER-FR/RustHound,BloodHound-CE ingestor in Rust.
-rusthound,https://github.com/OPENCYBER-FR/RustHound,BloodHound ingestor in Rust.
+rusthound (v2),https://github.com/NH-RED-TEAM/RustHound,BloodHound-CE ingestor in Rust.
+rusthound,https://github.com/NH-RED-TEAM/RustHound,BloodHound ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
 sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain.
