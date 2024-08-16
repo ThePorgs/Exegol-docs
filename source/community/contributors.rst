@@ -102,9 +102,9 @@ Install standards
 
 When installing a tool, depending on how it gets installed, here are the rules.
 
-* Most tools have their virtual environment, in order to avoid dependencies conflicts. Python virtual environments must have access to the system site-packages, to avoid redunduncy on already install common dependencies.
+* Most tools have their virtual environment, in order to avoid dependencies conflicts. Python virtual environments must have access to the system site-packages, to avoid redundancy on already install common dependencies.
 * Most tools are installed either in their own directory in ``/opt/tools/`` or have the binary (or a symlink) in ``/opt/tools/bin/``.
-* Disk space being limited, we're not pull every code source around. When possible, add the ``--depth 1`` option to your usual ``git clone`` command.
+* Disk space being limited, we're not pulling every code source around. When possible, add the ``--depth 1`` option to your usual ``git clone`` command.
 
 ..  tabs::
 
