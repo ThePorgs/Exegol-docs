@@ -281,6 +281,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
         If not, remember that pip installs binaries in a **dedicated** local folder, which then **must** be in the ``PATH`` environment variable.
         Try to fix your pip installation: `Linux <https://stackoverflow.com/a/62823029>`__ | `MacOS <https://stackoverflow.com/a/43368894>`__ | `Windows <https://builtin.com/software-engineering-perspectives/pip-command-not-found>`__
 
+.. _install_exegol_privileges:
 
 3. Run Exegol with appropriate privileges
 -----------------------------------------
@@ -340,7 +341,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
     ..  group-tab:: Windows
 
-        Exegol should **NOT** be used as admin on Windows. Docker Desktop doesn't require administrator privileges.
+        Exegol should **NOT** be used as admin on Windows and **NOT** as root in a WSL instance. Docker Desktop doesn't require administrator privileges.
 
 
 4. Installation of the first Exegol image
@@ -415,12 +416,12 @@ Exegol (wrapper) supports auto-completion in many shell environments but there i
 
         .. group-tab:: Zsh
 
-            To activate completions for zsh you need to have ``bashcompinit`` enabled in zsh:
+            To activate completions for zsh you need to have ``compinit`` enabled in zsh:
 
             .. code-block:: bash
 
-                autoload -U bashcompinit
-                bashcompinit
+                autoload -U compinit
+                compinit
 
             Afterwards you can enable completion by adding the following command in your ``~/.zshrc`` config:
 
