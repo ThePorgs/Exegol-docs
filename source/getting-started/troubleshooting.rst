@@ -23,7 +23,10 @@ There are multiple checks to do to make sure Docker works properly.
 
     .. tab:: Docker permissions
 
-        Make sure the Docker permissions are consistent with the Exegol permissions. For instance, if you need ``sudo`` rights to use Docker, you'll most likely need ``sudo`` to run Exegol smoothly. See :doc:`the Exegol install guidance</getting-started/install>`.
+        Make sure the Docker permissions are consistent with the Exegol permissions.
+        For instance, if you need ``sudo`` rights to use Docker, you'll most likely need ``sudo`` to run Exegol smoothly.
+
+        See :ref:`the Exegol install guidance<install_exegol_privileges>` to use exegol correctly with sudo.
 
     .. tab:: Docker socket
 
