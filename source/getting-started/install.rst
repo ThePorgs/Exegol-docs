@@ -281,6 +281,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
         If not, remember that pip installs binaries in a **dedicated** local folder, which then **must** be in the ``PATH`` environment variable.
         Try to fix your pip installation: `Linux <https://stackoverflow.com/a/62823029>`__ | `MacOS <https://stackoverflow.com/a/43368894>`__ | `Windows <https://builtin.com/software-engineering-perspectives/pip-command-not-found>`__
 
+.. _install_exegol_privileges:
 
 3. Run Exegol with appropriate privileges
 -----------------------------------------
