@@ -16,9 +16,6 @@ Wrapper release
 Preparation
 -----------
 
-1. Git updates
-~~~~~~~~~~~~~~
-
 The first step is to update the project and sub-modules, meaning pointing the exegol-images and exegol-resources sub-modules to the latest master version.
 Even if the wrapper is able to auto-update itself, it is always better to keep the base reference at least up to date.
 
@@ -52,17 +49,9 @@ Even if the wrapper is able to auto-update itself, it is always better to keep t
 .. important::
     Don't forget to **reload and commit** any **submodule update** at this step !
 
-2. Config reviews
-~~~~~~~~~~~~~~~~~
 
-* Review exegol.utils.ConstantConfig variables
-
-    * Change version number ! (remove the alpha or beta tag at the end of the version number)
-* Review documentation
-* Review README.md
-
-Tests & build
--------------
+Local tests & build
+~~~~~~~~~~~~~~~~~~~
 
 First, test the code with mypy:
 
@@ -84,47 +73,62 @@ You can execute this one-liner to check the project and build it.
        (rm -rf Exegol.egg-info && python3 -m build --sdist) || \
        echo "Some tests failed, check your code and requirements before publishing!"
 
+Config reviews
+~~~~~~~~~~~~~~
 
-Post build
-----------
+* Review exegol.config.ConstantConfig variables
 
-* Upgrade tests.test_exegol.py version number to the next version build to avoid future mistake
-* Commit updates
-* Publish PR
-* Wait for review and merge
+    * Change version number ! (remove the alpha or beta tag at the end of the version number)
+* Review exegol.utils.imgsync.spawn.sh version
 
-Manual Upload
--------------
+    * Must contain a line with the script current version in the following format: ``# Spawn Version:2`` (without alpha or beta letter)
+* Review documentation on Exegol-docs/dev-wrapper
+* Review README.md
+
+* Create PR (or put it out of draft mode)
 
 .. important::
-    PyPi packaging and upload is now handle by **GitHub action**. It will be triggered with the creation of the **new tag** in the next-step with the release creation.
+    The Pull-Request must be **already** created and **NOT** be in draft state before pushing the latest stable version.
 
-    **This step is no longer needed.**
+* Commit and push stable latest config
 
-After validation of the PR, we can upload the new version package to pypi.
+Review and publish
+------------------
 
-.. warning::
-    **Require** `twine <https://packaging.python.org/en/latest/tutorials/packaging-projects/#uploading-the-distribution-archives>`__ package installed and token configured on ``~/.pypirc``!
+The PR is now ready to be peer-review and then merge on Github.
 
-* Check package upload on the test repository (optional)
+Once merged to master, a tag must be deploy to run the release pipeline. The github action pipeline will automatically build and publish:
 
-.. code-block:: bash
-
-    python3 -m twine upload --repository testpypi dist/* --verbose
-
-* Upload to the production repository
+Exemple to release version ``4.3.5``:
 
 .. code-block:: bash
 
-    python3 -m twine upload dist/*
+    git checkout master
+    git pull
+    git tag -s 4.3.5 -m '4.3.5'
+    git push --tags
 
+Check if the release pipeline works as expected: `Release pipeline <https://github.com/ThePorgs/Exegol/actions/workflows/entrypoint_release.yml>`_
 
-Post-Deploy
+Post deploy
 -----------
 
 * Create new github **release** with **new** version tag
-* Fast-forward dev branch to the latest master commit
+
+After releasing a new stable version on the wrapper, we must update the dev version to stay in a beta version
+
+* Fast-forward dev branch to the latest master commit:
+
+.. code-block:: bash
+
+    git checkout dev
+    git merge master --ff-only
+    git push
+
 * Change the wrapper version on the dev branch to ``x.y.zb1``
+
+* Upgrade tests.test_exegol.py version number to the next version build to avoid future mistake
+* Commit updates
 
 Images release
 ==============
