@@ -93,6 +93,7 @@ Wanna chat? Need help? Join us on the `Exegol discord`_!
    :caption: Getting started
 
    getting-started/install.rst
+   getting-started/troubleshooting.rst
    getting-started/updates.rst
    getting-started/faq.rst
    getting-started/tips-and-tricks.rst
