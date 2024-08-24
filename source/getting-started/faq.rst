@@ -155,4 +155,28 @@ How to retrieve your desktop login details ?
 
 The container's root password can be obtained with ``exegol info <container>`` (i.e. this is needed when using the :doc:`desktop </the-exegol-project/python-wrapper>` feature)
 
+How to fix CRLF errors on Windows ?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have cloned the Exegol repository on Windows, you may encounter errors when launching your container, for example:
+
+.. code-block::
+
+    /.exegol/entrypoint.sh: line 3: trap: SIGTERM
+    : invalid signal specification
+    /.exegol/entrypoint.sh: line 4: $'\r': command not found
+    /.exegol/entrypoint.sh: line 5: syntax error near unexpected token $'{\r''
+    /.exegol/entrypoint.sh: line 5: function exegol_init() {
+
+This is caused by the automatic addition of CRLF linefeed by Windows to ensure compatibility.
+To correct this problem, simply disable this feature on the Exegol repository and reload the file of the repository:
+
+.. code-block:: bash
+
+    cd ./Exegol
+    git config core.autocrlf false
+    git rm -rf --cached .
+    git reset --hard HEAD
+
+
 .. TODO: add a note, when the Desktop feature is in prod, that explains the ups and dows of X11 vs. Desktop mode.
