@@ -415,7 +415,7 @@ Exegol (wrapper) supports auto-completion in many shell environments but there i
 
         .. group-tab:: Zsh
 
-            To activate completions for zsh you need to have ``bashcompinit`` enabled in zsh:
+            To activate completions for zsh you need to have ``compinit`` enabled in zsh:
 
             .. code-block:: bash
 
