@@ -175,6 +175,15 @@ additional configuration files will be automatically loaded by zsh to take into 
 .. tip::
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
 
+:code:`arsenal` (cheats)
+~~~~~~~~~~~~~~~~~~~
+
+Exegol supports adding its own arsenal **cheatsheets** file (rst or md file).
+
+* To automatically add all your cheatsheets into Exegol, simply put all of them in the folder ``/opt/my-resources/setup/cheatsheet/``
+
+.. tip::
+    You can create a structure with folders if you want some organization
 
 .. _User-setup:
 
