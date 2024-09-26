@@ -178,7 +178,7 @@ additional configuration files will be automatically loaded by zsh to take into 
 :code:`arsenal` (cheats)
 ~~~~~~~~~~~~~~~~~~~
 
-Exegol supports adding its own arsenal **cheatsheets** file (rst or md file).
+Exegol supports adding your own arsenal **cheatsheets** file (rst or md file).
 
 * To automatically add all your cheatsheets into Exegol, simply put all of them in the folder ``/opt/my-resources/setup/my-cheats/``
 
