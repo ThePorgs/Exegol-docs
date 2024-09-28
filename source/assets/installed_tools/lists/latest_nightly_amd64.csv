@@ -1,6 +1,7 @@
 Tool,Link,Description
 abuseACL,https://github.com/AetherBlack/abuseACL,A python script to automatically list vulnerable Windows ACEs/ACLs.
 aclpwn,https://github.com/aas-n/aclpwn.py,Tool for testing the security of Active Directory access controls.
+AD-miner,https://github.com/Mazars-Tech/AD_Miner,Active Directory audit tool that leverages cypher queries.
 adidnsdump,https://github.com/dirkjanm/adidnsdump,Active Directory Integrated DNS dump utility
 aircrack-ng,https://www.aircrack-ng.org,A suite of tools for wireless penetration testing
 amass,https://github.com/OWASP/Amass,A DNS enumeration / attack surface mapping & external assets discovery tool
@@ -60,7 +61,6 @@ constellation,https://github.com/constellation-app/Constellation,Find and exploi
 corscanner,https://github.com/chenjj/CORScanner,a Python script for finding CORS misconfigurations.
 cowpatty,https://github.com/joswr1ght/cowpatty,cowpatty is a tool for offline dictionary attacks against WPA-PSK (Pre-Shared Key) networks.
 crackhound,https://github.com/trustedsec/crackhound,A fast WPA/WPA2/WPA3 WiFi Handshake capture / password recovery and analysis tool
-crackmapexec,https://github.com/Porchetta-Industries/CrackMapExec,Network scanner.
 creds,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
