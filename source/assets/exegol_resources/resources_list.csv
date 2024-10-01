@@ -36,3 +36,4 @@ SharpCollection,https://github.com/Flangvik/SharpCollection,Nightly builds of co
 WinEnum,https://github.com/neox41/WinEnum,Script for Local Windows Enumeration
 impacket-examples-windows,https://github.com/maaaaz/impacket-examples-windows,The great impacket example scripts compiled for Windows
 nishang,https://github.com/samratashok/nishang,Offensive PowerShell for red team
+PowerSharpPack,https://github.com/S3cur3Th1sSh1t/PowerSharpPack,Many useful offensive CSharp Projects wraped into Powershell for easy usage.
