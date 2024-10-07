@@ -175,6 +175,15 @@ additional configuration files will be automatically loaded by zsh to take into 
 .. tip::
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
 
+:code:`arsenal` (cheats)
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``3.1.5`` of any exegol image.
+
+Exegol supports adding a custom cheatsheets file (rst or md file) for Arsenal (https://github.com/Orange-Cyberdefense/arsenal) by moving them in the folder ``/opt/my-resources/setup/arsenal-cheats/``.
+
+.. tip::
+    You can create a structure with folders if you want some organization
 
 .. _User-setup:
 
