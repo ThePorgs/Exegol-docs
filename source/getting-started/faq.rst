@@ -103,7 +103,7 @@ How to retrieve your desktop login details ?
 The container's root password can be obtained with ``exegol info <container>`` (i.e. this is needed when using the :doc:`desktop </the-exegol-project/python-wrapper>` feature)
 
 WSL 2 consumes massive amounts of RAM and CPU power. How can I deal with this issue ?
-============================================
+====================================================================================
 
 Users might experience excessive memory consumption when using Exegol. This is caused by WSL 2 not freeing up RAM even when processes are finished, causing large amounts of unused memory to remain allocated. This leads to high memory usage on the host system and reduced performance. More information about this issue can be found [at this GitHub issue](https://github.com/microsoft/WSL/issues/4166). A simple workaround is to create a `%UserProfile%\.wslconfig` file in Windows and use it to limit memory assigned to WSL 2 VM.
 
