@@ -70,6 +70,33 @@ Docker image downloads may be time-sensitive. In the case of dual-boot systems, 
 
 To correct the problem, check that your computer's date and time are correct.
 
+How to fix ``Docker download error: no space left on device``
+=============================================================
+
+``Docker Desktop`` is a tool used for running Docker containers on ``Windows`` and ``macOS``. However, it uses a ``virtual disk`` to store Docker images, containers, and volumes. The virtual disk used by Docker Desktop is not dynamic; it has a fixed size, which by default is set to ``64GB``.
+
+.. image:: /assets/troubleshooting/dd_default_disk_size.png
+           :align: center
+           :alt: Docker Desktop default disk size
+
+.. raw:: html
+
+    <br>
+
+Exegol images can be quite large, with some reaching over ``50GB``. This can quickly exceed the available virtual disk space, even if your physical disk still has free space. To resolve this issue, you need to allocate more space to the Docker Desktop virtual disk.
+
+To increase the ``virtual disk size``, open Docker Desktop and go to ``Settings -> Resources -> Advanced``. Locate the ``Virtual disk limit`` option and increase the allocated size. Make sure to choose a value that provides enough space for your images and containers, such as ``128GB`` or more depending on your needs.
+
+Apply the changes and then ``restart`` Docker Desktop to ensure the new configuration takes effect.
+
+.. warning::
+
+   If you decide to ``reduce the size of the virtual disk``, be aware that Docker Desktop will completely ``delete the virtual disk image``. This action will remove all Docker images, containers, and volumes stored on the disk. Therefore, before reducing the disk size, make sure to back up any important data or export your Docker images to avoid data loss.
+
+    .. image:: /assets/troubleshooting/dd_shrink.png
+           :align: center
+           :alt: Docker Desktop shrink disk image
+
 How to fix CRLF errors on Windows
 =================================
 
@@ -92,4 +119,3 @@ To correct this problem, simply disable this feature on the Exegol repository an
     git config core.autocrlf false
     git rm -rf --cached .
     git reset --hard HEAD
-
