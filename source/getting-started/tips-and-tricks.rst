@@ -54,6 +54,21 @@ The best reverse shells
 * simple alternative way to have an upgrade netcat reverse shell: use ``rlwrap <netcat listener command>``
 * instead of using ``netcat`` and "upgrade" the shell manually, ``pwncat-cs`` (`calebstewart/pwncat <https://github.com/calebstewart/pwncat>`_) can be used to obtain an even better reverse shell experience (especially with UNIX-like targets).
 
+Installing new tools ?
+~~~~~~~~~~~~~~~~~~~~~~~
+To manage tool versions, we use ``asdf`` (`asdf-vm/asdf <https://github.com/asdf-vm/asdf>`_), a version management tool that allows the installation and management of multiple versions of various programming languages and tools across different projects. ``asdf`` uses a system of shims to ensure that the correct version of a tool is used based on your project's configuration.
+
+Currently, on Exegol, asdf only manages the ``Go`` programming language (``golang``). If you choose to install a new golang tool in your container using the ``go install ...`` command, you will need to follow it up with the ``asdf reshim golang`` command. This additional step is necessary for asdf to recognize and integrate the newly installed tool into the environment.
+
+Here is an example of usage :
+
+.. code-block:: bash
+
+    go install -v github.com/patrickhener/goshs@latest
+    asdf reshim golang
+    goshs --help
+
+
 Keyboard shortcuts
 ~~~~~~~~~~~~~~~~~~
 
