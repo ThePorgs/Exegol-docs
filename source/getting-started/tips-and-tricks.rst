@@ -19,6 +19,16 @@ Faketime manipulates the system time for a given child command. For example with
 
     faketime 'YYYY-MM-DD hh:mm:ss' zsh
 
+The following examples automate the synchronization of a remote domain controller's clock to initiate a corresponding zsh session.
+
+.. code-block:: bash
+
+    faketime "$(rdate -n $DC_IP -p | awk '{print $2, $3, $4}' | date -f - "+%Y-%m-%d %H:%M:%S")" zsh
+
+.. code-block:: bash
+
+    faketime "$(date +'%Y-%m-%d') $(net time -S $DC_IP | awk '{print $4}')"
+
 .. note::
 
     Here is an example of how ``faketime`` can be used.
