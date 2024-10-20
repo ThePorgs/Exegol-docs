@@ -106,6 +106,9 @@ When installing a tool, depending on how it gets installed, here are the rules.
 * Most tools are installed either in their own directory in ``/opt/tools/`` or have the binary (or a symlink) in ``/opt/tools/bin/``.
 * Disk space being limited, we're not pulling every code source around. When possible, add the ``--depth 1`` option to your usual ``git clone`` command.
 
+To manage tool versions, we use ``asdf`` (`asdf-vm/asdf <https://github.com/asdf-vm/asdf>`_), a version management tool that allows the installation and management of multiple versions of various programming languages and tools across different projects. ``asdf`` uses a system of shims to ensure that the correct version of a tool is used based on your project's configuration. Currently, on Exegol, asdf only manages the ``Go`` programming language (``golang``).
+
+
 ..  tabs::
 
     ..  tab:: Python sources (pipx)
@@ -153,8 +156,14 @@ When installing a tool, depending on how it gets installed, here are the rules.
         The package you want to install needs to be added there, along with the ``add-history``, ``add-test-command`` and ``add-to-list`` instructions.
 
     ..  tab:: Go
+        If you choose to install a new golang tool in your container using the ``go install -v github.com/AUTHOR/REPO@latest`` command, you will need to follow it up with the ``asdf reshim golang`` command. This additional step is necessary for asdf to recognize and integrate the newly installed tool into the environment.
 
-        Go tools can be installed with a standard ``go install -v github.com/AUTHOR/REPO@latest`` command.
+        .. code-block:: bash
+
+            go install -v github.com/patrickhener/goshs@latest
+            asdf reshim golang
+            goshs --help
+
 
     ..  tab:: Ruby
 

@@ -92,6 +92,8 @@ Additional dependencies may be required depending on the host OS.
             If you install Exegol from the python pip package, this folder is located where the python packages are installed.
             The path to this folder depends on how you installed python. When creating your first container, you may get an error disclosing the exegol installation folder, which will have to be added as an authorized resource.
 
+            By default, you can try to add the path: ``/Library/Frameworks/Python.framework`` to the Docker Desktop File sharing allowlist.
+
 
         .. tip::
 
