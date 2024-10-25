@@ -195,6 +195,7 @@ mfdread,https://github.com/zhovner/mfdread,Tool for reading/writing Mifare RFID 
 mfoc,https://github.com/nfc-tools/mfoc,Implementation of 'offline nested' attack by Nethemba
 minicom,https://doc.ubuntu-fr.org/minicom,Minicom is a text-based serial communication program for Unix-like operating systems.
 mitm6,https://github.com/fox-it/mitm6,Tool to conduct a man-in-the-middle attack against IPv6 protocols.
+mitmproxy,https://github.com/mitmproxy/mitmproxy,mitmproxy is an interactive SSL/TLS-capable intercepting proxy with a console interface for HTTP/1 HTTP/2 and WebSockets.
 mobsf,https://github.com/MobSF/Mobile-Security-Framework-MobSF,Automated and all-in-one mobile application (Android/iOS/Windows) pen-testing malware analysis and security assessment framework
 moodlescan,https://github.com/inc0d3/moodlescan,Scan Moodle sites for information and vulnerabilities.
 mousejack,https://github.com/BastilleResearch/mousejack,Exploit to take over a wireless mouse and keyboard
@@ -269,6 +270,7 @@ reaver,https://github.com/t6x/reaver-wps-fork-t6x,reaver is a tool for brute-for
 recon-ng,https://github.com/lanmaster53/recon-ng,External recon tool.
 recondog,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
 redis-tools,https://github.com/antirez/redis-tools,redis-tools is a collection of Redis client utilities including redis-cli and redis-benchmark.
+remmina,https://github.com/FreeRDP/Remmina,Remote desktop client.
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
 ROADtools,https://github.com/dirkjanm/ROADtools,ROADtools is a framework to interact with Azure AD. It consists of a library (roadlib) with common components / the ROADrecon Azure AD exploration tool and the ROADtools Token eXchange (roadtx) tool.
@@ -280,8 +282,8 @@ rsactftool,https://github.com/RsaCtfTool/RsaCtfTool,The rsactftool tool is used 
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 rtl-433,https://github.com/merbanan/rtl_433,Tool for decoding various wireless protocols/ signals such as those used by weather stations
 ruler,https://github.com/sensepost/ruler,Outlook Rules exploitation framework.
-rusthound (v2),https://github.com/NH-RED-TEAM/RustHound,BloodHound-CE ingestor in Rust.
 rusthound,https://github.com/NH-RED-TEAM/RustHound,BloodHound ingestor in Rust.
+rusthound-ce,https://github.com/g0h4n/RustHound-CE,BloodHound-CE ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
 sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain.
