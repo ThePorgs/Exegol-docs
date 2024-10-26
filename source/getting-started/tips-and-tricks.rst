@@ -110,6 +110,8 @@ Network related
 * ``ipr``: List network routes in short and colorful way
 * ``pc``: Shortcut to ``proxychains``
 * ``ncvz``: Shortcut to test an open TCP port
+* ``tun0``: IP address of the tun0 interface
+* ``eth0``: IP address of the eth0 interface
 
 Shell
 -----
