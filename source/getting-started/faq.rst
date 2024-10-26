@@ -103,3 +103,8 @@ How to retrieve your desktop login details ?
 The container's root password can be obtained with ``exegol info <container>`` (i.e. this is needed when using the :doc:`desktop </the-exegol-project/python-wrapper>` feature)
 
 .. TODO: add a note, when the Desktop feature is in prod, that explains the ups and dows of X11 vs. Desktop mode.
+
+Fixing Responder's limited packet capture on macOS
+==================================================
+
+To resolve this issue, use the ``--externalip=$YourLocalIP`` option. This option allows Responder to capture all packets on your local network, rather than limiting itself to local broadcast protocols like NetBIOS.
