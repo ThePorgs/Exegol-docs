@@ -359,6 +359,11 @@ See the option ``--device DEVICES`` of the :ref:`start action <start_options>` f
 
     Windows and MacOS installations are subject to the constraints and limitations of `Docker Desktop <https://docs.docker.com/desktop/faqs/#can-i-pass-through-a-usb-device-to-a-container>`__.
 
+.. warning::
+    Docker only load shared device at container **startup**. If you have to unplug / plug again your device it might **no longer works** until you **restart** the container with ``exegol restart <container_name>``.
+
+    This bug occurs even if the ``/dev/ttyACM0`` device is still present in your container.
+
 .. _feature_hostname:
 
 Custom hostname
