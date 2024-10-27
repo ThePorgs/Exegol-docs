@@ -48,6 +48,7 @@ Within the ``~/.exegol/config.yml`` file, several settings can be configured to 
         * ``auto_remove_image``: automatically remove outdated image when they are no longer used. (Default: ``True``)
         * ``auto_update_workspace_fs``: automatically modifies the permissions of folders and sub-folders in your workspace by default to enable file sharing between the container with your host user. (Default: ``False``)
         * ``default_start_shell``: default shell command to start. (Default: ``zsh``)
+        * ``enable_exegol_resources``: Enables or not the exegol resources module by default on any new container. (Default: ``True``)
 
         ..  tabs::
 
