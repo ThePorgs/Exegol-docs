@@ -36,12 +36,17 @@ In the container, the ``/opt/my-resources/bin/`` folder (``~/.exegol/my-resource
 
    .. code-block:: bash
 
-      # Example for a standalone binary
+      # Example for a standalone binary on your host
       cp /path/to/tool ~/.exegol/my-resources/bin/
+      # or for a standalone binary on your exegol container
+      cp /path/to/tool /opt/my-resources/bin/
 
-      # Example for a symbolic link
+      # Example for a symbolic link from your host
       git -C ~/.exegol/my-resources/ clone "https://github.com/someauthor/sometool"
-      ln -s ~/.exegol/my-resources/sometool/script.py ~/.exegol/my-resources/bin/script.py
+      ln -s ../sometool/script.py ~/.exegol/my-resources/bin/script.py
+      # or from your exegol container
+      git -C /opt/my-resources/ clone "https://github.com/someauthor/sometool"
+      ln -s /opt/my-resources/sometool/script.py /opt/my-resources/bin/script.py
 
 
 .. _Supported-setups:
