@@ -102,8 +102,8 @@ How to retrieve your desktop login details ?
 
 The container's root password can be obtained with ``exegol info <container>`` (i.e. this is needed when using the :doc:`desktop </the-exegol-project/python-wrapper>` feature)
 
-WSL 2 consumes massive amounts of RAM and CPU power. How can I deal with this issue ?
-====================================================================================
+WSL 2 consumes massive amounts of RAM, CPU power, and Disk Space. How can I deal with this issue ?
+==================================================================================================
 
 Users might experience excessive memory consumption when using Exegol. This is caused by WSL 2 not freeing up RAM even when processes are finished, causing large amounts of unused memory to remain allocated. This leads to high memory usage on the host system and reduced performance. More information about this issue can be found [at this GitHub issue](https://github.com/microsoft/WSL/issues/4166). A simple workaround is to create a `%UserProfile%\.wslconfig` file in Windows and use it to limit memory assigned to WSL 2 VM.
 
@@ -112,5 +112,14 @@ Users might experience excessive memory consumption when using Exegol. This is c
 memory=8GB   # Limits VM memory in WSL 2 up to 3GB
 processors=2 # Makes the WSL 2 VM use two virtual processors
 ```
+
+When using Docker with the WSL2 backend, resource limits are managed by Windows. There might be cases, for example after updating an Exegol image, where Docker might take double the disk space the image needs. To deal with this problem, users should find the `Disk image location` in Docker Desktop (`Settings -> Resources -> Advanced`). It will be in the following format `C:\Users\<USER>\AppData\Local\Docker\wsl`. The Virtual Hard Disk can be located in the following path, `C:\Users\<USER>\AppData\Local\Docker\wsl\disk`. Users can use the `diskpart` tool to shrink the Virtual Hard Disk using the following instructions based on directions [here](https://stackoverflow.com/questions/70946140/docker-desktop-wsl-ext4-vhdx-too-large).
+- Stop Docker Desktop
+- Start an administrative CMD or PowerShell session
+- Stop WSL2: `wsl --shutdown`
+- Start the diskpart tool: `diskpart`
+- Select the Virtual Hard Disk: `select vdisk file="C:\Users\<USER>\AppData\Local\Docker\wsl\disk\docker_data.vhdx"`. A message `DiskPart successfully selected the virtual disk file.` should appear.
+- Shrink the Virtual Hard Disk: `compact vdisk`
+- Wait for the proccess to reach 100 completion (might take some time)
 
 .. TODO: add a note, when the Desktop feature is in prod, that explains the ups and dows of X11 vs. Desktop mode.
