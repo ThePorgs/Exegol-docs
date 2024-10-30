@@ -17,6 +17,7 @@ arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for pene
 asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 asrepcatcher,https://github.com/Yaxxine7/ASRepCatcher,Make your VLAN ASREProastable.
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
+autobloody,https://github.com/CravateRouge/autobloody,Automatically exploit Active Directory privilege escalation paths shown by BloodHound.
 autoconf,https://www.gnu.org/software/autoconf/autoconf.html,Tool for producing shell scripts to configure source code packages
 autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnaissance tool which performs automated enumeration of services.
 avrdude,https://github.com/avrdudes/avrdude,AVRDUDE is a command-line program that allows you to download/upload/manipulate the ROM and EEPROM contents of AVR microcontrollers using the in-system programming technique (ISP).
@@ -361,6 +362,7 @@ wafw00f,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to id
 waybackurls,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
 webclientservicescanner,https://github.com/Hackndo/webclientservicescanner,Scans for web service endpoints
 weevely,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
+wesng,https://github.com/bitsadmin/wesng,WES-NG is a tool based on the output of Windows's systeminfo utility which provides the list of vulnerabilities the OS is vulnerable to including any exploits for these vulnerabilities.
 wfuzz,https://github.com/xmendez/wfuzz,WFuzz is a web application vulnerability scanner that allows you to find vulnerabilities using a wide range of attack payloads and fuzzing techniques
 whatportis,https://github.com/ncrocfer/whatportis,Command-line tool to lookup port information
 whatweb,https://github.com/urbanadventurer/WhatWeb,Next generation web scanner that identifies what websites are running.
