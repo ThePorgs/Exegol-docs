@@ -256,6 +256,7 @@ pwndbg,https://github.com/pwndbg/pwndbg,a GDB plugin that makes debugging with G
 pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Check if a password has been leaked in a data breach.
 pwninit,https://github.com/io12/pwninit,A tool for automating starting binary exploit challenges
 pwntools,https://github.com/Gallopsled/pwntools,a CTF framework and exploit development library
+pyftpdlib,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
 pygpoabuse,https://github.com/Hackndo/pyGPOAbuse,A tool for abusing GPO permissions to escalate privileges
 pykek,https://github.com/preempt/pykek,PyKEK (Python Kerberos Exploitation Kit) a python library to manipulate KRB5-related data.
 pylaps,https://github.com/p0dalirius/pylaps,Utility for enumerating and querying LDAP servers.
