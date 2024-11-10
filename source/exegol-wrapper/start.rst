@@ -73,6 +73,8 @@ By default, a web interface gives users access to their own containerized graphi
 ``--desktop-config``      Configure your exegol desktop (vnc or http) and its exposure (format: proto[:ip[:port]]) (default: http:127.0.0.1:<random>)
 ========================= ===============================
 
+.. _vpn:
+
 VPN
 ~~~
 
