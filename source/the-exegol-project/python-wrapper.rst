@@ -189,10 +189,10 @@ When preparing your VPN configuration file:
         exegol start --vpn ./my_vpn
 
 - If you're using a login / password authentication, prepare an **auth file** to enable passive authentification with Exegol (See the option ``--vpn-auth VPN_AUTH``)
-- Password protected certificat key are **not supported** for passive authentification
-- Once the container created, you **cannot move or rename** your VPN configuration file
+- Password protected certificate keys are **not supported** for passive authentification
+- Once the container is created, you **cannot move or rename** your VPN configuration file
 - If you want to **update your VPN configuration**, you can update the same ``.ovpn`` file on your host and restart the container with ``exegol restart``
-- If you want your Exegol container to automatically update it's **DNS** configuration according to the **VPN server** settings, add this configuration to your ``.ovpn`` file:
+- If you want your Exegol container to automatically update its **DNS** configuration according to the **VPN server** settings, add this configuration to your ``.ovpn`` file:
 
 .. code-block::
 
@@ -204,7 +204,7 @@ When preparing your VPN configuration file:
 See the options ``--vpn VPN`` and ``--vpn-auth VPN_AUTH`` of the :ref:`start action <vpn>` for more details.
 
 .. tip::
-    In case of problem, to troubleshoot a VPN connection, the log of OpenVPN can be retrieved within the container in the ``/var/log/exegol/vpn.log`` file.
+    In the case of a problem, to troubleshoot a VPN connection, OpenVPN logs can be retrieved within the container in the file ``/var/log/exegol/vpn.log``.
 
 .. tip::
     If you want to create a container that is able to start **VPN manually**, you can create your container with the following parameters:
