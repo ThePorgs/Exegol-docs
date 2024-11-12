@@ -121,3 +121,7 @@ To correct this problem, simply disable this feature on the Exegol repository an
     git rm -rf --cached .
     git reset --hard HEAD
 
+Fixing Responder's limited packet capture on macOS
+==================================================
+
+To resolve this issue, use the ``--externalip=$YourLocalIP`` option. This option allows Responder to capture all packets on your local network, rather than limiting itself to local broadcast protocols like NetBIOS.
