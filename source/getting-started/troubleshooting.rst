@@ -121,3 +121,58 @@ To correct this problem, simply disable this feature on the Exegol repository an
     git rm -rf --cached .
     git reset --hard HEAD
 
+How to fix the error ``This environment is externally managed``
+======================================================================
+When installing exegol with ``python3 -m pip install exegol``, you may encounter the following error:
+
+.. code-block:: 
+
+    This environment is externally managed
+    To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.11/README.venv for more information.
+
+    hint: See PEP 668 for the detailed specification.
+
+As the error message suggests, this error occurs when you try to install Python packages system-wide.
+To resolve this issue, you have two options :
+
+1. Create a virtual environment using ``python3 -m venv path/to/venv`` and install the package in the virtual environment.
+
+    .. code-block:: bash
+
+        python3 -m venv path/to/venv
+        source path/to/venv/bin/activate
+        python3 -m pip install exegol
+
+2. Use ``pipx`` to install the package in a virtual environment managed by ``pipx``.
+    
+    .. code-block:: bash
+    
+        pipx install exegol
+
+3. Install in the user site directory using the ``--user`` flag.
+
+    .. code-block:: bash
+
+        python3 -m pip install --user exegol 
+4. Use ``break-system-site-packages`` to ignore restrictions by the environment.
+
+    .. code-block:: bash
+
+        python3 -m pip install exegol --break-system-site-packages
+
+.. warning:: 
+
+    The two last options are not recommended as they can lead to conflicts with the system packages.
