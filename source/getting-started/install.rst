@@ -308,7 +308,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
                         .. code-block:: bash
 
                             echo "alias exegol='sudo -E $(which exegol)'" >> ~/.bash_aliases
-                            source ~/.bashrc
+                            source ~/.bash_aliases
 
                     .. group-tab:: Zsh
 
