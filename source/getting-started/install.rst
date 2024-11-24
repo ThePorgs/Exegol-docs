@@ -308,7 +308,7 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
                         .. code-block:: bash
 
                             echo "alias exegol='sudo -E $(which exegol)'" >> ~/.bash_aliases
-                            source ~/.bash_aliases
+                            source ~/.bashrc
 
                     .. group-tab:: Zsh
 
@@ -316,6 +316,16 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
 
                             echo "alias exegol='sudo -E $(which exegol)'" >> ~/.zshrc
                             source ~/.zshrc
+
+                    .. tip::distribution
+
+                        Please note that on most Linux distros, .bash_aliases is included in .bashrc. However, this is not the case in some distributions (i.e. Arch Linux). If this is your case, it is recommended to include .bash_aliases in .bashrc by adding these lines in your .bashrc file (for more details, please follow the documentation of your Linux distribution): 
+
+                        .. code-block:: bash
+
+                            if [ -f ~/.bash_aliases ]; then
+                                . ~/.bash_aliases
+                            fi
 
             .. tab:: Run as user
 
