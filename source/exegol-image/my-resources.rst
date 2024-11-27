@@ -103,9 +103,9 @@ A system exists to easily personalise firefox in any new exegol container.
 
 The file ``/opt/my-resources/setup/firefox/policy.json.template`` can be modified to apply a Firefox policy (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
 
-Once the modifications are done, one can rename the file ``/opt/my-resources/setup/firefox/policy.json.template`` into ``/opt/my-resources/setup/firefox/policy.json`` and the policy will be applied.
+Once the modifications are done, the template file can be renamed to ``/opt/my-resources/setup/firefox/policy.json`` and the policy will be applied.
 
-In order to install a specific addon, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add  the extensions in the JSON file:
+In order to install a specific addon, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add the extension in the JSON file:
 
 .. code-block:: json
 "ExtensionSettings": {
@@ -134,7 +134,7 @@ or you can add a new folder:
     ]
 }
 
-:code:`firefox` (addons, CA)
+:code:`firefox` (addons, CA) (old)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. warning::
     This is the old way of personalising Firefox, the new way use :ref:`policy <`firefox` (policy)>`.
