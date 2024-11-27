@@ -120,7 +120,7 @@ To add a bookmark you can add a children to an existing folder in the ``ManagedB
 {
     "url": "https://www.thehacker.recipes/",
     "name": "THR"
-},
+}
 
 or you can add a new folder:
 .. code-block:: json
@@ -132,7 +132,7 @@ or you can add a new folder:
         "name": "Regex101"
         }
     ]
-},
+}
 
 :code:`firefox` (addons, CA)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
