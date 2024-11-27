@@ -94,9 +94,54 @@ To automatically:
     To be considered for replacing or merging, the customqueries files must be **valid** and bear the ``.json`` extension. The file names do not matter.
     The output will be saved into the single file ``~/.config/bloodhound/customqueries.json``.
 
+:code:`firefox` (policy)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``3.1.6`` of any exegol image.
+
+A system exists to easily personalise firefox in any new exegol container.
+
+The file ``/opt/my-resources/setup/firefox/policy.json.template`` can be modified to apply a Firefox policy (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
+
+Once the modifications are done, one can rename the file ``/opt/my-resources/setup/firefox/policy.json.template`` into ``/opt/my-resources/setup/firefox/policy.json`` and the policy will be applied.
+
+In order to install a specific addon, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for erxample for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add  the extensioins in the JSON file:
+
+```json
+"ExtensionSettings": {
+    "addon@darkreader.org": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/addon@darkreader.org/latest.xpi"
+    },
+}
+```
+
+To add a bookmark you can add a children to an existing folder in the ``ManagedBookmarks`` directive:
+```json
+{
+    "url": "https://www.thehacker.recipes/",
+    "name": "THR"
+},
+```
+
+or you can add a new folder:
+```json
+{
+    "name": "New folder",
+    "children": [
+        {
+        "url": "https://regex101.com/",
+        "name": "Regex101"
+        }
+    ]
+},
+```
 
 :code:`firefox` (addons, CA)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. warning::
+    This is the old way of personalising Firefox, the new way use :ref:`policy <`firefox` (policy)>`.
+
 .. seealso::
     Available from version ``3.0.2`` of any exegol image.
 
