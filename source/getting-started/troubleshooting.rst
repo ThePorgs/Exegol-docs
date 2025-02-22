@@ -121,6 +121,77 @@ To correct this problem, simply disable this feature on the Exegol repository an
     git rm -rf --cached .
     git reset --hard HEAD
 
+How to fix the error ``This environment is externally managed``
+===============================================================
+When installing exegol with ``python3 -m pip install exegol`` on modern operating systems (Ubuntu 23.04 and higher, Debian 12 and higher, macOS 14+), you may encounter the following error:
+
+.. code-block::
+
+    This environment is externally managed
+    To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+
+    See /usr/share/doc/python3.11/README.venv for more information.
+
+    hint: See PEP 668 for the detailed specification.
+
+As the error message suggests, this error occurs when you try to install Python packages system-wide.
+To resolve this issue, you have two options :
+
+.. tabs::
+
+   .. tab:: Recommended Methods
+
+      **Using pipx (Preferred)**
+
+      The recommended way to install Exegol is using ``pipx``, which automatically handles virtual environment creation:
+
+      .. code-block:: bash
+
+          pipx install exegol
+
+      **Manual Virtual Environment**
+
+      Alternatively, you can create and manage a virtual environment manually:
+
+      .. code-block:: bash
+
+          python3 -m venv path/to/venv
+          source path/to/venv/bin/activate
+          python3 -m pip install exegol
+
+   .. tab:: Other Methods
+
+      .. warning::
+
+          The following methods are not recommended as they can lead to conflicts with system packages.
+
+      **User Site Installation**
+
+      Install in the user site directory:
+
+      .. code-block:: bash
+
+          python3 -m pip install --user exegol
+
+      **System-wide Installation**
+
+      Override system restrictions (not recommended):
+
+      .. code-block:: bash
+
+          python3 -m pip install exegol --break-system-site-packages
+
 Arsenal needs TIOCSTI enable for running
 ========================================
 
