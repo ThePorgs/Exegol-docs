@@ -134,10 +134,10 @@ or you can add a new folder:
     ]
 }
 
-:code:`firefox` (addons, CA) (old)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:code:`firefox` (addons, CA) (deprecated)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. warning::
-    This is the old way of personalising Firefox, the new way use :ref:`policy <`firefox` (policy)>`.
+    This covers the previous method for personalizing Firefox; the current approach utilizes :ref:`policy <`firefox` (policy)>`.
 
 .. seealso::
     Available from version ``3.0.2`` of any exegol image.
