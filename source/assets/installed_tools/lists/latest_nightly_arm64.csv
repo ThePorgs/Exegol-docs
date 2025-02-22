@@ -39,7 +39,6 @@ brakeman,https://github.com/presidentbeef/brakeman,Static analysis tool for Ruby
 bruteforce-luks,https://github.com/glv2/bruteforce-luks,A tool to help recover encrypted LUKS2 containers
 bully,https://github.com/aanarchyy/bully,bully is a tool for brute-forcing WPS (Wireless Protected Setup) PINs.
 burpsuite,https://portswigger.net/burp,Web application security testing tool.
-buster,https://github.com/sham00n/Buster,Advanced OSINT tool
 byp4xx,https://github.com/lobuhi/byp4xx,A Swiss Army knife for bypassing web application firewalls and filters.
 carbon14,https://github.com/Lazza/carbon14,OSINT tool for estimating when a web page was written.
 Censys,https://github.com/censys/censys-python,An easy-to-use and lightweight API wrapper for Censys APIs
