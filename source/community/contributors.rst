@@ -304,8 +304,8 @@ The pipeline may raise some issues, but if they're not related to your tool (e.g
 
 Once everything works, the pull request will be merged, the pipeline will run again in order to test, build and publish a new ``nightly`` image. Congrats, you're now an Exegol contributor!
 
-Temporary fixing a tool
-~~~~~~~~~~~~~~~~~~~~~~~
+Temporary fixing a tool (a.k.a. tempfix)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tools sometimes have their own issues along their development. A temporary fix can be added as follows, in order to let builds pass successfully, while the respective tool is not fixed. The fix depends on the way the tool is supposed to be installed.
 
