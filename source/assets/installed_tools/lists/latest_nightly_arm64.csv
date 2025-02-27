@@ -345,7 +345,7 @@ trid,https://mark0.net/soft-trid-e.html,File identifier
 trilium,https://github.com/zadam/trilium,Personal knowledge management system.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
-udpx,https://github.com/nullt3r/udpx, Fast and lightweight, UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
+udpx,https://github.com/nullt3r/udpx, Fast and lightweight - UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
 uploader,https://github.com/Frozenka/uploader,Tool for quickly downloading files to a remote machine based on the target operating system
 upx,https://github.com/upx/upx,UPX is an advanced executable packer
