@@ -273,7 +273,8 @@ redis-tools,https://github.com/antirez/redis-tools,redis-tools is a collection o
 remmina,https://github.com/FreeRDP/Remmina,Remote desktop client.
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
-ROADtools,https://github.com/dirkjanm/ROADtools,ROADtools is a framework to interact with Azure AD. It consists of a library (roadlib) with common components / the ROADrecon Azure AD exploration tool and the ROADtools Token eXchange (roadtx) tool.
+ROADrecon,https://github.com/dirkjanm/ROADtools#roadrecon,Azure AD recon for red and blue.
+ROADtx,https://github.com/dirkjanm/ROADtools#roadtools-token-exchange-roadtx,ROADtools Token eXchange.
 roastinthemiddle,https://github.com/Tw1sm/RITM,RoastInTheMiddle is a tool to intercept and relay NTLM authentication requests.
 robotstester,https://github.com/p0dalirius/robotstester,Utility for testing whether a website's robots.txt file is correctly configured.
 routersploit,https://github.com/threat9/routersploit,Security audit tool for routers.
@@ -344,6 +345,7 @@ trid,https://mark0.net/soft-trid-e.html,File identifier
 trilium,https://github.com/zadam/trilium,Personal knowledge management system.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
+udpx,https://github.com/nullt3r/udpx, Fast and lightweight, UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
 uploader,https://github.com/Frozenka/uploader,Tool for quickly downloading files to a remote machine based on the target operating system
 upx,https://github.com/upx/upx,UPX is an advanced executable packer
@@ -374,6 +376,7 @@ Yalis,https://github.com/EatonChips/yalis,Yet Another LinkedIn Scraper
 youtubedl,https://github.com/ytdl-org/youtube-dl,Download videos from YouTube and other sites.
 ysoserial,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
 yt-dlp,https://github.com/yt-dlp/yt-dlp,A youtube-dl fork with additional features and fixes
+Zed Attack Proxy (ZAP),https://www.zaproxy.org/,Web application security testing tool.
 zerologon,https://github.com/SecuraBV/CVE-2020-1472,Exploit for the Zerologon vulnerability (CVE-2020-1472).
 zipalign,https://developer.android.com/studio/command-line/zipalign,arguably the most important step to optimize your APK file
 zsteg,https://github.com/zed-0xff/zsteg,Detect steganography hidden in PNG and BMP images
