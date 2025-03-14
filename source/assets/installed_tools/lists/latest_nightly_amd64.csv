@@ -84,6 +84,7 @@ empire,https://github.com/BC-SECURITY/Empire,post-exploitation and adversary emu
 enum4linux-ng,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
 enyx,https://github.com/trickster0/enyx,Framework for building offensive security tools.
 evilwinrm,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
+exegol-history,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
 exif,https://exiftool.org/,Utility to read / write and edit metadata in image / audio and video files
 exifprobe,https://github.com/hfiguiere/exifprobe,Exifprobe is a command-line tool to parse EXIF data from image files.
 exiftool,https://github.com/exiftool/exiftool,ExifTool is a Perl library and command-line tool for reading / writing and editing meta information in image / audio and video files.
@@ -97,7 +98,6 @@ ffuf,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
 fierce,https://github.com/mschwager/fierce,A DNS reconnaissance tool for locating non-contiguous IP space
 finalrecon,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
-finduncommonshares,https://github.com/p0dalirius/FindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
 firefox,https://www.mozilla.org,A web browser
 foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for recovering files based on their headers / footers / and internal data structures.
 freeipscanner,https://github.com/scrt/freeipscanner,A simple bash script to enumerate stale ADIDNS entries
@@ -138,6 +138,7 @@ Havoc,https://github.com/HavocFramework/Havoc,Command & Control Framework
 hcxdumptool,https://github.com/ZerBea/hcxdumptool,Small tool to capture packets from wlan devices.
 hcxtools,https://github.com/ZerBea/hcxtools,Tools for capturing and analyzing packets from WLAN devices.
 hexedit,https://github.com/pixel/hexedit,View and edit binary files
+Hob0Rules rules,https://github.com/praetorian-inc/Hob0Rules,Password cracking rules for Hashcat based on statistics and industry patterns
 holehe,https://github.com/megadose/holehe,mail osint tool finding out if it is used on websites.
 hping3,https://github.com/antirez/hping,A network tool able to send custom TCP/IP packets
 httpmethods,https://github.com/ShutdownRepo/httpmethods,Tool for exploiting HTTP methods (e.g. PUT / DELETE / etc.)
@@ -217,6 +218,7 @@ nmap,https://nmap.org,The Network Mapper - a powerful network discovery and secu
 nmap-parse-ouptut,https://github.com/ernw/nmap-parse-output,Converts/manipulates/extracts data from a Nmap scan output.
 noPac,https://github.com/Ridter/noPac,Exploiting CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user.
 nosqlmap,https://github.com/codingo/NoSQLMap,a Python tool for testing NoSQL databases for security vulnerabilities.
+NSAKEY rules,https://github.com/NSAKEY/nsa-rules,Password cracking rules and masks for hashcat
 ntlmv1-multi,https://github.com/evilmog/ntlmv1-multi,Exploit a vulnerability in Microsoft Windows to gain system-level access.
 ntlm_theft,https://github.com/Greenwolf/ntlm_theft,A tool for generating multiple types of NTLMv2 hash theft files
 nuclei,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
@@ -224,8 +226,10 @@ oaburl,https://gist.githubusercontent.com/snovvcrash/4e76aaf2a8750922f546eed81aa
 objection,https://github.com/sensepost/objection,Runtime mobile exploration
 objectwalker,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
 oneforall,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
+onelistforall,https://github.com/six2dez/OneListForAll,Rockyou for web fuzzing
 onesixtyone,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
 osrframework,https://github.com/i3visio/osrframework,Include references to a bunch of different applications related to username checking / DNS lookups / information leaks research / deep web search / regular expressions extraction and many others.
+Pantagrule rules,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
 pass,https://github.com/hashcat/hashcat,TODO
 PassTheCert,https://github.com/AlmondOffSec/PassTheCert,PassTheCert is a tool to extract Active Directory user password hashes from a domain controller's local certificate store.
 patator,https://github.com/lanjelot/patator,Login scanner.
@@ -259,6 +263,7 @@ pwndbg,https://github.com/pwndbg/pwndbg,a GDB plugin that makes debugging with G
 pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Check if a password has been leaked in a data breach.
 pwninit,https://github.com/io12/pwninit,A tool for automating starting binary exploit challenges
 pwntools,https://github.com/Gallopsled/pwntools,a CTF framework and exploit development library
+pyFindUncommonShares,https://github.com/p0dalirius/pyFindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
 pyftpdlib,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
 pygpoabuse,https://github.com/Hackndo/pyGPOAbuse,A tool for abusing GPO permissions to escalate privileges
 pykek,https://github.com/preempt/pykek,PyKEK (Python Kerberos Exploitation Kit) a python library to manipulate KRB5-related data.
@@ -348,7 +353,7 @@ toutatis,https://github.com/megadose/Toutatis,Toutatis is a tool that allows you
 traceroute,https://github.com/iputils/iputils,Traceroute is a command which can show you the path a packet of information takes from your computer to one you specify.
 trevorspray,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
 trid,https://mark0.net/soft-trid-e.html,File identifier
-trilium,https://github.com/zadam/trilium,Personal knowledge management system.
+TriliumNext,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 udpx,https://github.com/nullt3r/udpx, Fast and lightweight - UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
