@@ -112,6 +112,7 @@ gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common 
 ghidra,https://github.com/NationalSecurityAgency/ghidra,Software reverse engineering suite of tools.
 git-dumper,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
 githubemail,https://github.com/paulirish/github-email,a command-line tool to retrieve a user's email from Github.
+gitleaks,https://github.com/trufflesecurity/gitleaks,Gitleaks scans hardcoded secrets in git repositories and folders.
 gittools,https://github.com/internetwache/GitTools,A collection of Git tools including a powerful Dumper for dumping Git repositories.
 gmsadumper,https://github.com/micahvandeusen/gMSADumper,A tool for extracting credentials and other information from a Microsoft Active Directory domain.
 gobuster,https://github.com/OJ/gobuster,Tool to discover hidden files and directories.
@@ -349,6 +350,7 @@ traceroute,https://github.com/iputils/iputils,Traceroute is a command which can 
 trevorspray,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
 trid,https://mark0.net/soft-trid-e.html,File identifier
 TriliumNext,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
+trufflehog,https://github.com/trufflesecurity/trufflehog,Find, verify, and analyze hardcoded secrets in git repositories, folders, buckets, and more.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 udpx,https://github.com/nullt3r/udpx, Fast and lightweight - UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
