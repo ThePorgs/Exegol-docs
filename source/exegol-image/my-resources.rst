@@ -108,31 +108,36 @@ Once the modifications are done, the template file can be renamed to ``/opt/my-r
 In order to install a specific addon, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add the extension in the JSON file:
 
 .. code-block:: json
-"ExtensionSettings": {
-    "addon@darkreader.org": {
-        "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/addon@darkreader.org/latest.xpi"
-    },
-}
+
+    "ExtensionSettings": {
+        "addon@darkreader.org": {
+            "installation_mode": "force_installed",
+            "install_url": "https://addons.mozilla.org/firefox/downloads/latest/addon@darkreader.org/latest.xpi"
+        },
+    }
 
 To add a bookmark you can add a children to an existing folder in the ``ManagedBookmarks`` directive:
+
 .. code-block:: json
-{
-    "url": "https://www.thehacker.recipes/",
-    "name": "THR"
-}
+
+    {
+        "url": "https://www.thehacker.recipes/",
+        "name": "THR"
+    }
 
 or you can add a new folder:
+
 .. code-block:: json
-{
-    "name": "New folder",
-    "children": [
-        {
-        "url": "https://regex101.com/",
-        "name": "Regex101"
-        }
-    ]
-}
+
+    {
+        "name": "New folder",
+        "children": [
+            {
+            "url": "https://regex101.com/",
+            "name": "Regex101"
+            }
+        ]
+    }
 
 :code:`firefox` (addons, CA) (deprecated)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,7 +145,7 @@ or you can add a new folder:
     This covers the previous method for personalizing Firefox; the current approach utilizes :ref:`policy <`firefox` (policy)>`.
 
 .. seealso::
-    Available from version ``3.0.2`` of any exegol image.
+    Available from version ``3.0.2`` to ``3.1.5`` of any exegol image.
 
 A system exists to easily install arbitrary firefox addons in any new exegol container.
 
