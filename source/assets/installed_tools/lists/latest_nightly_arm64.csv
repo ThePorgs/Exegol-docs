@@ -350,7 +350,7 @@ traceroute,https://github.com/iputils/iputils,Traceroute is a command which can 
 trevorspray,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
 trid,https://mark0.net/soft-trid-e.html,File identifier
 TriliumNext,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
-trufflehog,https://github.com/trufflesecurity/trufflehog,Find, verify, and analyze hardcoded secrets in git repositories, folders, buckets, and more.
+trufflehog,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 udpx,https://github.com/nullt3r/udpx, Fast and lightweight - UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
