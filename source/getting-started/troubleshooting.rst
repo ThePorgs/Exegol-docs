@@ -195,7 +195,7 @@ To resolve this issue, you have two options :
 Arsenal needs TIOCSTI enable for running
 ========================================
 
-The arsenal tool needs the ``TIOCSTI`` functionality enabled. A GitHub exit exists to request an evolution: https://github.com/Orange-Cyberdefense/arsenal/issues/77.
+The arsenal tool needs the ``TIOCSTI`` functionality enabled. A GitHub issue exists to request an evolution: https://github.com/Orange-Cyberdefense/arsenal/issues/77.
 
 This feature cannot be enabled only in exegol containers (docker limitation), it must be configured in the host with the following command:
 
