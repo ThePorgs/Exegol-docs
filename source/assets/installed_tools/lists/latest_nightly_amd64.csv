@@ -25,7 +25,6 @@ awscli,https://aws.amazon.com/cli/,Command-line interface for Amazon Web Service
 azure-cli,https://github.com/Azure/azure-cli,A great cloud needs great tools; we're excited to introduce Azure CLI our next generation multi-platform command line experience for Azure.
 bettercap,https://github.com/bettercap/bettercap,The Swiss Army knife for 802.11 / BLE / and Ethernet networks reconnaissance and MITM attacks.
 binwalk,https://github.com/ReFirmLabs/binwalk,Binwalk is a tool for analyzing / reverse engineering / and extracting firmware images.
-Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 BloodHound-CE,https://github.com/SpecterOps/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments (Community Edition)
 bloodhound-ce.py,https://github.com/fox-it/BloodHound.py,BloodHound-CE ingestor in Python.
@@ -85,6 +84,7 @@ empire,https://github.com/BC-SECURITY/Empire,post-exploitation and adversary emu
 enum4linux-ng,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
 enyx,https://github.com/trickster0/enyx,Framework for building offensive security tools.
 evilwinrm,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
+exegol-history,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
 exif,https://exiftool.org/,Utility to read / write and edit metadata in image / audio and video files
 exifprobe,https://github.com/hfiguiere/exifprobe,Exifprobe is a command-line tool to parse EXIF data from image files.
 exiftool,https://github.com/exiftool/exiftool,ExifTool is a Perl library and command-line tool for reading / writing and editing meta information in image / audio and video files.
@@ -98,7 +98,6 @@ ffuf,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
 fierce,https://github.com/mschwager/fierce,A DNS reconnaissance tool for locating non-contiguous IP space
 finalrecon,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
-finduncommonshares,https://github.com/p0dalirius/FindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
 firefox,https://www.mozilla.org,A web browser
 foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for recovering files based on their headers / footers / and internal data structures.
 freeipscanner,https://github.com/scrt/freeipscanner,A simple bash script to enumerate stale ADIDNS entries
@@ -114,6 +113,7 @@ gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common 
 ghidra,https://github.com/NationalSecurityAgency/ghidra,Software reverse engineering suite of tools.
 git-dumper,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
 githubemail,https://github.com/paulirish/github-email,a command-line tool to retrieve a user's email from Github.
+gitleaks,https://github.com/trufflesecurity/gitleaks,Gitleaks scans hardcoded secrets in git repositories and folders.
 gittools,https://github.com/internetwache/GitTools,A collection of Git tools including a powerful Dumper for dumping Git repositories.
 gmsadumper,https://github.com/micahvandeusen/gMSADumper,A tool for extracting credentials and other information from a Microsoft Active Directory domain.
 gobuster,https://github.com/OJ/gobuster,Tool to discover hidden files and directories.
@@ -139,6 +139,7 @@ Havoc,https://github.com/HavocFramework/Havoc,Command & Control Framework
 hcxdumptool,https://github.com/ZerBea/hcxdumptool,Small tool to capture packets from wlan devices.
 hcxtools,https://github.com/ZerBea/hcxtools,Tools for capturing and analyzing packets from WLAN devices.
 hexedit,https://github.com/pixel/hexedit,View and edit binary files
+Hob0Rules rules,https://github.com/praetorian-inc/Hob0Rules,Password cracking rules for Hashcat based on statistics and industry patterns
 holehe,https://github.com/megadose/holehe,mail osint tool finding out if it is used on websites.
 hping3,https://github.com/antirez/hping,A network tool able to send custom TCP/IP packets
 httpmethods,https://github.com/ShutdownRepo/httpmethods,Tool for exploiting HTTP methods (e.g. PUT / DELETE / etc.)
@@ -172,7 +173,7 @@ ldapdomaindump,https://github.com/dirkjanm/ldapdomaindump,A tool for dumping dom
 ldaprelayscan,https://github.com/zyn3rgy/LdapRelayScan,Check Domain Controllers for LDAP server protections regarding the relay of NTLM authentication.
 ldapsearch,https://wiki.debian.org/LDAP/LDAPUtils,Search for and display entries (ldap)
 ldapsearch-ad,https://github.com/yaap7/ldapsearch-ad,LDAP search utility with AD support
-LDAPWordlistHarvester,https://github.com/p0dalirius/LDAPWordlistHarvester,Generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts
+LDAPWordlistHarvester,https://github.com/p0dalirius/pyLDAPWordlistHarvester,Generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts
 ldeep,https://github.com/franc-pentest/ldeep,ldeep is a tool to discover hidden paths on Web servers.
 legba,https://github.com/evilsocket/legba,a multiprotocol credentials bruteforcer / password sprayer and enumerator built with Rust
 libmspack,https://github.com/kyz/libmspack,C library for Microsoft compression formats.
@@ -218,6 +219,7 @@ nmap,https://nmap.org,The Network Mapper - a powerful network discovery and secu
 nmap-parse-ouptut,https://github.com/ernw/nmap-parse-output,Converts/manipulates/extracts data from a Nmap scan output.
 noPac,https://github.com/Ridter/noPac,Exploiting CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user.
 nosqlmap,https://github.com/codingo/NoSQLMap,a Python tool for testing NoSQL databases for security vulnerabilities.
+NSAKEY rules,https://github.com/NSAKEY/nsa-rules,Password cracking rules and masks for hashcat
 ntlmv1-multi,https://github.com/evilmog/ntlmv1-multi,Exploit a vulnerability in Microsoft Windows to gain system-level access.
 ntlm_theft,https://github.com/Greenwolf/ntlm_theft,A tool for generating multiple types of NTLMv2 hash theft files
 nuclei,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
@@ -225,8 +227,11 @@ oaburl,https://gist.githubusercontent.com/snovvcrash/4e76aaf2a8750922f546eed81aa
 objection,https://github.com/sensepost/objection,Runtime mobile exploration
 objectwalker,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
 oneforall,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
+onelistforall,https://github.com/six2dez/OneListForAll,Rockyou for web fuzzing
+OneRuleToRuleThemStill rules,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 onesixtyone,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
 osrframework,https://github.com/i3visio/osrframework,Include references to a bunch of different applications related to username checking / DNS lookups / information leaks research / deep web search / regular expressions extraction and many others.
+Pantagrule rules,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
 pass,https://github.com/hashcat/hashcat,TODO
 PassTheCert,https://github.com/AlmondOffSec/PassTheCert,PassTheCert is a tool to extract Active Directory user password hashes from a domain controller's local certificate store.
 patator,https://github.com/lanjelot/patator,Login scanner.
@@ -260,6 +265,7 @@ pwndbg,https://github.com/pwndbg/pwndbg,a GDB plugin that makes debugging with G
 pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Check if a password has been leaked in a data breach.
 pwninit,https://github.com/io12/pwninit,A tool for automating starting binary exploit challenges
 pwntools,https://github.com/Gallopsled/pwntools,a CTF framework and exploit development library
+pyFindUncommonShares,https://github.com/p0dalirius/pyFindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
 pyftpdlib,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
 pygpoabuse,https://github.com/Hackndo/pyGPOAbuse,A tool for abusing GPO permissions to escalate privileges
 pykek,https://github.com/preempt/pykek,PyKEK (Python Kerberos Exploitation Kit) a python library to manipulate KRB5-related data.
@@ -279,7 +285,8 @@ redis-tools,https://github.com/antirez/redis-tools,redis-tools is a collection o
 remmina,https://github.com/FreeRDP/Remmina,Remote desktop client.
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
-ROADtools,https://github.com/dirkjanm/ROADtools,ROADtools is a framework to interact with Azure AD. It consists of a library (roadlib) with common components / the ROADrecon Azure AD exploration tool and the ROADtools Token eXchange (roadtx) tool.
+ROADrecon,https://github.com/dirkjanm/ROADtools#roadrecon,Azure AD recon for red and blue.
+ROADtx,https://github.com/dirkjanm/ROADtools#roadtools-token-exchange-roadtx,ROADtools Token eXchange.
 roastinthemiddle,https://github.com/Tw1sm/RITM,RoastInTheMiddle is a tool to intercept and relay NTLM authentication requests.
 robotstester,https://github.com/p0dalirius/robotstester,Utility for testing whether a website's robots.txt file is correctly configured.
 routersploit,https://github.com/threat9/routersploit,Security audit tool for routers.
@@ -341,15 +348,18 @@ tig,https://github.com/jonas/tig,Tig is an ncurses-based text-mode interface for
 timing,https://github.com/ffleming/timing_attack,Tool to generate a timing profile for a given command.
 tls-map,https://github.com/sec-it/tls-map,tls-map is a library for mapping TLS cipher algorithm names.
 tls-scanner,https://github.com/tls-attacker/tls-scanner,a simple script to check the security of a remote TLS/SSL web server
+token-exploiter,https://github.com/psyray/token-exploiter,Token Exploiter is a tool designed to analyze GitHub Personal Access Tokens.
 tomcatwardeployer,https://github.com/mgeeky/tomcatwardeployer,Script to deploy war file in Tomcat.
 tor,https://github.com/torproject/tor,Anonymity tool that can help protect your privacy and online identity by routing your traffic through a network of servers.
 toutatis,https://github.com/megadose/Toutatis,Toutatis is a tool that allows you to extract information from instagrams accounts such as e-mails / phone numbers and more.
 traceroute,https://github.com/iputils/iputils,Traceroute is a command which can show you the path a packet of information takes from your computer to one you specify.
 trevorspray,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
 trid,https://mark0.net/soft-trid-e.html,File identifier
-trilium,https://github.com/zadam/trilium,Personal knowledge management system.
+TriliumNext,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
+trufflehog,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
 tshark,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
+udpx,https://github.com/nullt3r/udpx, Fast and lightweight - UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
 uploader,https://github.com/Frozenka/uploader,Tool for quickly downloading files to a remote machine based on the target operating system
 upx,https://github.com/upx/upx,UPX is an advanced executable packer
@@ -381,6 +391,7 @@ Yalis,https://github.com/EatonChips/yalis,Yet Another LinkedIn Scraper
 youtubedl,https://github.com/ytdl-org/youtube-dl,Download videos from YouTube and other sites.
 ysoserial,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
 yt-dlp,https://github.com/yt-dlp/yt-dlp,A youtube-dl fork with additional features and fixes
+Zed Attack Proxy (ZAP),https://www.zaproxy.org/,Web application security testing tool.
 zerologon,https://github.com/SecuraBV/CVE-2020-1472,Exploit for the Zerologon vulnerability (CVE-2020-1472).
 zipalign,https://developer.android.com/studio/command-line/zipalign,arguably the most important step to optimize your APK file
 zsteg,https://github.com/zed-0xff/zsteg,Detect steganography hidden in PNG and BMP images
