@@ -156,6 +156,7 @@ oaburl,https://gist.githubusercontent.com/snovvcrash/4e76aaf2a8750922f546eed81aa
 objectwalker,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
 oneforall,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
 onelistforall,https://github.com/six2dez/OneListForAll,Rockyou for web fuzzing
+OneRuleToRuleThemStill rules,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 onesixtyone,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
 Pantagrule rules,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
 pass,https://github.com/hashcat/hashcat,TODO
