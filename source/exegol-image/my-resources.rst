@@ -101,7 +101,7 @@ To automatically:
 
 A system exists to easily personalise firefox in any new exegol container.
 
-The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be used as a template in order to create your own Firefox policy. Your policy can then be copied to the location ``/opt/my-resources/setup/firefox/policies.json`` to apply it (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
+The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be used as a template in order to create your own Firefox policy. Your policy can then be copied to the location ``/opt/my-resources/setup/firefox/policies.json`` to apply it in the next container deployment (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
 
 .. hint::
     Your custom policy will overwrite the default policy created by Exegol.
@@ -109,7 +109,9 @@ The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be used as a te
 The default policy applied by Exegol:
 Add a few bookmarks:
 .. code-block:: json
-"ManagedBookmarks": [
+{
+  "policies": {
+    "ManagedBookmarks": [
       {
         "toplevel_name": "Exegol Bookmarks"
       },
@@ -131,35 +133,45 @@ Add a few bookmarks:
           }
         ]
       }
-],
+    ]
+}
 
 Install a few extensions:
 .. code-block:: json
-"ExtensionSettings": {
+{
+  "policies": {
+    "ExtensionSettings": {
       "foxyproxy@eric.h.jung": {
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi"
       },
       [...]
-},
+    }
+}
 
 Disable a few Firefox features such as the telemetry:
 .. code-block:: json
-"DisableTelemetry": true,
-"DisplayBookmarksToolbar": "always",
-"UserMessaging": {
+{
+  "policies": {
+    "DisableTelemetry": true,
+    "DisplayBookmarksToolbar": "always",
+    "UserMessaging": {
       "WhatsNew": false,
       "ExtensionRecommendations": false,
       "FeatureRecommendations": false,
       "UrlbarInterventions": false,
       "SkipOnboarding": true,
       "MoreFromMozilla": false
-},
+    }
+}
 
 Apply the CA of Burpsuite:
 .. code-block:: json
-"Certificates": {
-    "Install": ["/opt/tools/firefox/cacert.der"]
+{
+  "policies": {
+    "Certificates": {
+        "Install": ["/opt/tools/firefox/cacert.der"]
+    }
 }
 
 In order to install a specific addon in your own policy, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add the extension in your policy file:
