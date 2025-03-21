@@ -106,8 +106,10 @@ The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be used as a te
 .. hint::
     Your custom policy will overwrite the default policy created by Exegol.
 
-The default policy applied by Exegol:
-Add a few bookmarks:
+The default policy applied by Exegol will do the following actions:
+
+`Add a few bookmarks`
+
 .. code-block:: json
 {
   "policies": {
@@ -136,7 +138,8 @@ Add a few bookmarks:
     ]
 }
 
-Install a few extensions:
+`Install a few extensions`
+
 .. code-block:: json
 {
   "policies": {
@@ -149,7 +152,8 @@ Install a few extensions:
     }
 }
 
-Disable a few Firefox features such as the telemetry:
+`Disable a few Firefox features such as the telemetry`
+
 .. code-block:: json
 {
   "policies": {
@@ -165,7 +169,8 @@ Disable a few Firefox features such as the telemetry:
     }
 }
 
-Apply the CA of Burpsuite:
+`Apply the CA of Burpsuite`
+
 .. code-block:: json
 {
   "policies": {
