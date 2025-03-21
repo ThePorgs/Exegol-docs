@@ -101,7 +101,7 @@ To automatically:
 
 A system exists to easily personalise firefox in any new exegol container.
 
-The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be used as a template in order to create your own Firefox policy. Your policy can then be copied to the location ``/opt/my-resources/setup/firefox/policy.json`` to apply it (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
+The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be used as a template in order to create your own Firefox policy. Your policy can then be copied to the location ``/opt/my-resources/setup/firefox/policies.json`` to apply it (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
 
 .. hint::
     Your custom policy will overwrite the default policy created by Exegol.
