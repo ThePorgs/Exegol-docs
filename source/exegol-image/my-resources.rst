@@ -101,11 +101,15 @@ To automatically:
 
 A system exists to easily personalise firefox in any new exegol container.
 
-The file ``/opt/my-resources/setup/firefox/policy.json.template`` can be modified to apply a Firefox policy (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
+The file ``/usr/lib/firefox-esr/distribution/policies.json`` can be modified and copied to the location ``/opt/my-resources/setup/firefox/policy.json`` to apply a custom Firefox policy (https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson), all available directives can be found here: https://mozilla.github.io/policy-templates/.
 
-Once the modifications are done, the template file can be renamed to ``/opt/my-resources/setup/firefox/policy.json`` and the policy will be applied.
+The default policy applied by Exegol:
+- Add a few bookmarks
+- Install a few extensions
+- Apply the CA of Burpsuite
+- Disable a few Firefox features such as the telemetry
 
-In order to install a specific addon, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add the extension in the JSON file:
+In order to install a specific addon in your own policy, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add the extension in your policy file:
 
 .. code-block:: json
 
@@ -142,7 +146,7 @@ or you can add a new folder:
 :code:`firefox` (addons, CA) (deprecated)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. warning::
-    This covers the previous method for personalizing Firefox; the current approach utilizes :ref:`policy <`firefox` (policy)>`.
+    This covers the previous method for personalizing Firefox; the current approach utilizes :ref:`policy <\`firefox\` (policy)>`.
 
 .. seealso::
     Available from version ``3.0.2`` to ``3.1.5`` of any exegol image.
