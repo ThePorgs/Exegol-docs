@@ -111,73 +111,77 @@ The default policy applied by Exegol will do the following actions:
 `Add a few bookmarks`
 
 .. code-block:: json
-{
-  "policies": {
-    "ManagedBookmarks": [
-      {
-        "toplevel_name": "Exegol Bookmarks"
-      },
-      {
-        "url": "https://exegol.readthedocs.io/en/latest/",
-        "name": "Exegol Doc"
-      },
-      {
-        "name": "References / Guides",
-        "children": [
+
+    {
+      "policies": {
+        "ManagedBookmarks": [
           {
-            "url": "https://www.thehacker.recipes/",
-            "name": "THR"
+            "toplevel_name": "Exegol Bookmarks"
           },
-          [...]
           {
-            "url": "https://lolol.farm/",
-            "name": "LOLOL Farm"
+            "url": "https://exegol.readthedocs.io/en/latest/",
+            "name": "Exegol Doc"
+          },
+          {
+            "name": "References / Guides",
+            "children": [
+              {
+                "url": "https://www.thehacker.recipes/",
+                "name": "THR"
+              },
+              [...]
+              {
+                "url": "https://lolol.farm/",
+                "name": "LOLOL Farm"
+              }
+            ]
           }
         ]
-      }
-    ]
-}
+    }
 
 `Install a few extensions`
 
 .. code-block:: json
-{
-  "policies": {
-    "ExtensionSettings": {
-      "foxyproxy@eric.h.jung": {
-        "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi"
-      },
-      [...]
+
+    {
+      "policies": {
+        "ExtensionSettings": {
+          "foxyproxy@eric.h.jung": {
+            "installation_mode": "force_installed",
+            "install_url": "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi"
+          },
+          [...]
+        }
     }
-}
 
 `Disable a few Firefox features such as the telemetry`
 
 .. code-block:: json
-{
-  "policies": {
-    "DisableTelemetry": true,
-    "DisplayBookmarksToolbar": "always",
-    "UserMessaging": {
-      "WhatsNew": false,
-      "ExtensionRecommendations": false,
-      "FeatureRecommendations": false,
-      "UrlbarInterventions": false,
-      "SkipOnboarding": true,
-      "MoreFromMozilla": false
+
+    {
+      "policies": {
+        "DisableTelemetry": true,
+        "DisplayBookmarksToolbar": "always",
+        "UserMessaging": {
+          "WhatsNew": false,
+          "ExtensionRecommendations": false,
+          "FeatureRecommendations": false,
+          "UrlbarInterventions": false,
+          "SkipOnboarding": true,
+          "MoreFromMozilla": false
+        }
     }
-}
 
 `Apply the CA of Burpsuite`
 
 .. code-block:: json
-{
-  "policies": {
-    "Certificates": {
-        "Install": ["/opt/tools/firefox/cacert.der"]
+
+    {
+      "policies": {
+        "Certificates": {
+            "Install": ["/opt/tools/firefox/cacert.der"]
+        }
     }
-}
 
 In order to install a specific addon in your own policy, you can go to the Firefox addon webpage, and search for the addon GUID in the page HTML source code by searching for the JSON field ``"guid":``, for example for the Dark Reader addon, the GUID is ``addon@darkreader.org``, you can then add the extension in your policy file:
 
