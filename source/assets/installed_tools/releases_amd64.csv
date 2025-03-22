@@ -1,4 +1,9 @@
 Image tag,Version,Build date,Tools list
+full,3.1.6,2025-03-20T03:56:44Z,:download:`full_3.1.6_amd64.csv       </assets/installed_tools/lists/full_3.1.6_amd64.csv>`
+ad,3.1.6,2025-03-20T03:11:46Z,:download:`ad_3.1.6_amd64.csv       </assets/installed_tools/lists/ad_3.1.6_amd64.csv>`
+osint,3.1.6,2025-03-20T03:07:31Z,:download:`osint_3.1.6_amd64.csv       </assets/installed_tools/lists/osint_3.1.6_amd64.csv>`
+light,3.1.6,2025-03-20T03:07:16Z,:download:`light_3.1.6_amd64.csv       </assets/installed_tools/lists/light_3.1.6_amd64.csv>`
+web,3.1.6,2025-03-20T03:06:56Z,:download:`web_3.1.6_amd64.csv       </assets/installed_tools/lists/web_3.1.6_amd64.csv>`
 osint,3.1.5,2024-10-18T11:13:54Z,:download:`osint_3.1.5_amd64.csv       </assets/installed_tools/lists/osint_3.1.5_amd64.csv>`
 full,3.1.5,2024-10-18T11:10:19Z,:download:`full_3.1.5_amd64.csv       </assets/installed_tools/lists/full_3.1.5_amd64.csv>`
 ad,3.1.5,2024-10-18T10:59:04Z,:download:`ad_3.1.5_amd64.csv       </assets/installed_tools/lists/ad_3.1.5_amd64.csv>`
