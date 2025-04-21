@@ -24,6 +24,7 @@ http-put-server,https://gist.githubusercontent.com/mildred/67d22d7289ae8f16cae7/
 Chisel,https://github.com/jpillora/chisel,A fast TCP/UDP tunnel over HTTP
 WinPwn,https://github.com/S3cur3Th1sSh1t/WinPwn,Automation for AD pentesting
 ligolo-ng,https://github.com/nicocha30/ligolo-ng,Advanced yet simple tunneling/pivoting tool that uses a TUN interface
+pyexe,https://github.com/manthey/pyexe,Standalone Windows Python 3.7 64 bits executable
 bitleaker,https://github.com/kkamagui/bitleaker,This tool can decrypt a BitLocker-locked partition with the TPM vulnerability
 napper,https://github.com/kkamagui/napper-for-tpm,TPM vulnerability checking tool for CVE-2018-6622
 mimipenguin,https://github.com/huntergregal/mimipenguin,A tool to dump the login password from the current linux user
