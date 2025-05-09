@@ -22,6 +22,7 @@ Some webshells,,PHP and ASPX webshells
 ysoserial,https://github.com/pwntester/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization
 http-put-server,https://gist.githubusercontent.com/mildred/67d22d7289ae8f16cae7/raw/214c213c9415da18a471d1ed04660022cce059ef/server.py,HTTP PUT Server
 Chisel,https://github.com/jpillora/chisel,A fast TCP/UDP tunnel over HTTP
+Rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 WinPwn,https://github.com/S3cur3Th1sSh1t/WinPwn,Automation for AD pentesting
 ligolo-ng,https://github.com/nicocha30/ligolo-ng,Advanced yet simple tunneling/pivoting tool that uses a TUN interface
 pyexe,https://github.com/manthey/pyexe,Standalone Windows Python 3.7 64 bits executable
