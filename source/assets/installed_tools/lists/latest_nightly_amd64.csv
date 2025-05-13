@@ -273,6 +273,7 @@ pylaps,https://github.com/p0dalirius/pylaps,Utility for enumerating and querying
 pymeta,https://github.com/m8sec/pymeta,Google and Bing scraping osint tool
 pypykatz,https://github.com/skelsec/pypykatz,a Python library for mimikatz-like functionality
 pyrit,https://github.com/JPaulMora/Pyrit,Python-based WPA/WPA2-PSK attack tool.
+pysnaffler,https://github.com/skelsec/pysnaffler,Snaffler. But in python.
 pywerview,https://github.com/the-useless-one/pywerview,A (partial) Python rewriting of PowerSploit's PowerView.
 pywhisker,https://github.com/ShutdownRepo/pywhisker,PyWhisker is a Python equivalent of the original Whisker made by Elad Shamir and written in C#. This tool allows users to manipulate the msDS-KeyCredentialLink attribute of a target user/computer to obtain full control over that object. It's based on Impacket and on a Python equivalent of Michael Grafnetter's DSInternals called PyDSInternals made by podalirius.
 pywsus,https://github.com/GoSecure/pywsus,Python implementation of a WSUS client
