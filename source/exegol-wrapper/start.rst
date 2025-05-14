@@ -151,7 +151,7 @@ Command examples
    # Create a container app with custom volume
    exegol start app full -V "/var/app/:/app/"
 
-   # Get a shell based on tmux
+   # Get a shell based on tmux or zellij
    exegol start --shell tmux
 
    # Share a specific hardware device (like Proxmark)
@@ -159,4 +159,3 @@ Command examples
 
    # Share every USB device connected to the host
    exegol start -d "/dev/bus/usb/"
-
