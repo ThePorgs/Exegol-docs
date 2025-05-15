@@ -342,7 +342,6 @@ theharvester,https://github.com/laramies/theHarvester,Tool for gathering e-mail 
 tig,https://github.com/jonas/tig,Tig is an ncurses-based text-mode interface for git.
 timing,https://github.com/ffleming/timing_attack,Tool to generate a timing profile for a given command.
 tls-map,https://github.com/sec-it/tls-map,tls-map is a library for mapping TLS cipher algorithm names.
-tls-scanner,https://github.com/tls-attacker/tls-scanner,a simple script to check the security of a remote TLS/SSL web server
 token-exploiter,https://github.com/psyray/token-exploiter,Token Exploiter is a tool designed to analyze GitHub Personal Access Tokens.
 tomcatwardeployer,https://github.com/mgeeky/tomcatwardeployer,Script to deploy war file in Tomcat.
 tor,https://github.com/torproject/tor,Anonymity tool that can help protect your privacy and online identity by routing your traffic through a network of servers.
