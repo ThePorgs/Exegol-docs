@@ -259,6 +259,14 @@ Exegol supports overloading its **tmux** configuration to allow all users to use
 .. tip::
     It is possible to install **plugins** with the APT customization system, details :ref:`here <custom_apt>`.
 
+:code:`zellij` (conf)
+~~~~~~~~~~~~~~~~~~~
+.. seealso::
+    Available from version ``X.X.X`` of any exegol image.
+
+Exegol supports overloading its **zellij** configuration to allow all users to use their personal configuration.
+
+* To automatically overwrite the ``~/.config/zellij/config.kdl`` configuration file, simply create the file ``/opt/my-resources/setup/zellij/config.kdl``
 
 :code:`vim` (vimrc, configs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -278,7 +278,7 @@ The shell logging method can be selected manually with the :ref:`start action <s
         .. warning::
             Shell logging saves **EVERYTHING** including keyboard shortcuts, display refreshes, etc.
 
-            Complex graphical environments (such as tmux) can make it difficult to read the logs.
+            Complex graphical environments (such as tmux or zellij) can make it difficult to read the logs.
 
 
 .. _feature_shared_network:
