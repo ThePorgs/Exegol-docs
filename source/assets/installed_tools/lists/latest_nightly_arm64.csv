@@ -296,6 +296,7 @@ rusthound-ce,https://github.com/g0h4n/RustHound-CE,BloodHound-CE ingestor in Rus
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
 sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain.
+sccmsecrets,https://github.com/synacktiv/SCCMSecrets,SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting and initial access and lateral movement.
 sccmwtf,https://github.com/xpn/sccmwtf,This code is designed for exploring SCCM in a lab.
 scout,https://github.com/nccgroup/ScoutSuite,Scout Suite is an open source multi-cloud security-auditing tool which enables security posture assessment of cloud environments.
 scrcpy,https://github.com/Genymobile/scrcpy,Display and control your Android device.
