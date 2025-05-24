@@ -45,18 +45,18 @@ Command examples
     # Execute the command 'nmap -h' with console output in the container demo:
     exegol exec -v demo 'nmap -h'
 
-    # Execute a command in background within the demo container:
+    # Execute the command bloodhound in background within the demo container:
     exegol exec -b demo bloodhound
 
-    # Execute the command bloodhound in a temporary container based on the full image:
-    exegol exec --tmp full bloodhound
+    # Execute the command bloodhound with neo4j in a temporary container based on the full image:
+    exegol exec --tmp full 'neo4j start && bloodhound'
 
-    # Execute a command in background with a temporary container:
-    exegol exec -b --tmp full bloodhound
+    # Execute the command bloodhound with neo4j in background with a temporary container:
+    exegol exec -b --tmp full 'neo4j start && bloodhound'
 
     # Execute Wireshark in background, in a privileged temporary container:
-    exegol exec --background --tmp --privileged "nightly" "wireshark"
+    exegol exec --background --tmp --privileged nightly wireshark
 
-    # Execute the command wireshark with network admin privileged:
+    # Execute the command wireshark with network admin privileges:
     exegol exec -b --tmp --cap NET_ADMIN full wireshark
 
