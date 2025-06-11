@@ -168,6 +168,30 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
             # You can now install Exegol package from PyPI
             pipx install exegol
 
+..  group-tab:: Installing with uv
+
+        The pre-compiled Exegol’s wrapper can be installed from the PyPI repository.
+        While this is the easiest and most user-friendly technique, it is advised to install from sources, as it allows to switch from release to dev branches easily and it supports the auto-update feature.
+
+        Using ``uv`` allows you to install Exegol in an **isolated** virtual environment **dedicated** to it.
+
+        First, ``uv`` must be installed on your host system:
+
+        .. code-block:: bash
+
+            # install uv if not already installed:
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            # OR from pip
+            python3 -m pip install uv
+            # OR https://docs.astral.sh/uv/getting-started/installation/
+
+        Exegol's wrapper can be installed with ``uv tool`` from **PyPI**:
+
+        .. code-block:: bash
+
+            # You can now install Exegol package from PyPI
+            uv tool install exegol
+
     ..  group-tab:: Installing from sources
 
         Exegol's wrapper can be installed from sources (with Git). The wrapper then knows how to self-update, and switching from release and development branches is possible and very easy.
@@ -229,6 +253,10 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
             pipx ensurepath
 
         Dont forget to open a **new terminal** to reload your PATH before continuing.
+
+    ..  group-tab:: Installing with uv
+
+        ``uv tool`` automatically adds the application to PATH.
 
     ..  group-tab:: Installing from sources
 
@@ -317,6 +345,12 @@ The installation of Exegol on Linux, macOS and Windows are very similar. It can 
                             echo "alias exegol='sudo -E $(which exegol)'" >> ~/.zshrc
                             source ~/.zshrc
 
+                    .. group-tab:: Fish
+
+                        .. code-block:: bash
+
+                            alias exegol='sudo -E $(which exegol)' --save
+
                     .. tip::distribution
 
                         Please note that on most Linux distros, .bash_aliases is included in .bashrc. However, this is not the case in some distributions (i.e. Arch Linux). If this is your case, it is recommended to include .bash_aliases in .bashrc by adding these lines in your .bashrc file (for more details, please follow the documentation of your Linux distribution): 
@@ -389,6 +423,9 @@ Exegol (wrapper) supports auto-completion in many shell environments but there i
 
         # Or using pipx (check if pipx packages are included in your $PATH)
         pipx install argcomplete
+
+        # Or using uv
+        uv tool install argcomplete
 
 ..  tabs::
     ..  tabs::
