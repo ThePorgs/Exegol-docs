@@ -1,7 +1,0 @@
-- tools list
-- add in dev doc: https://github.com/containerd/containerd/blob/269548fa27e0089a8b8278fc4fc781d7f65a939b/platforms/database.go#L83-L111
-- TODO 1min video presentation?
-- auto-generate tools list? resources list?
-- auto-generate command examples and options in exegol-wrapper/actions?
-- add screenshots
-- requirement for runners : jq, docker, etc.
