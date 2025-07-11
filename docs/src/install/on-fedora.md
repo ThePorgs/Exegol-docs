@@ -8,9 +8,6 @@ Exegol is installed through two main steps:
 1. Install the Python wrapper (the "brains")
 2. Install at least one Exegol image (the "muscle")
 
-> [!WARNING]
-> SELinux is usually enabled by default on Fedora and is not supported by Exegol (yet). You may need to disable it on Docker, or set it to permissive mode for Exegol to work properly. Refer to the [Configure SELinux](#configure-selinux) part down at the bottom if needed.
-
 ## 1. Requirements
 
 Git, Python3 and Pipx can be installed with the following command:
@@ -67,69 +64,3 @@ echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/
 ## 3. The rest
 
 Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
-
-## Configure SELinux
-
-Create the following files
-
-::: code-group
-
-
-```te [exegol_bint.te]
-module exegol_bint 1.0;
-
-require {
-    type container_t;
-    type bin_t;
-    class dir { create write getattr search open add_name };
-    class file { create write getattr open execute };
-}
-
-# Allow container to perform all operations on directories labeled as bin_t
-allow container_t bin_t:dir { create write getattr search open add_name };
-
-# Allow container to perform all operations on files labeled as bin_t
-allow container_t bin_t:file { create write getattr open execute };
-```
-
-```te [exegol_home.te]
-module exegol_home 1.0;
-
-require {
-    type container_t;
-    type data_home_t;
-    class file { ioctl entrypoint open execute read write getattr };
-}
-
-#============= container_t ==============
-allow container_t data_home_t:file { ioctl entrypoint open execute read write getattr };
-```
-
-```te [exegol_connectto.te]
-module exegol_connectto 1.0;
-
-require {
-    type container_t;
-    type unconfined_t;
-    class unix_stream_socket { connectto };
-}
-
-# Allow container to perform connectto operation on unix_stream_socket
-allow container_t unconfined_t:unix_stream_socket { connectto };
-```
-:::
-
-Run the following commands
-```
-checkmodule -M -m -o exegol_bint.mod exegol_bint.te
-semodule_package -o exegol_bint.pp -m exegol_bint.mod
-sudo semodule -i exegol_file-bint.pp
-
-checkmodule -M -m -o exegol_home.mod exegol_home.te
-semodule_package -o exegol_home.pp -m exegol_home.mod
-sudo semodule -i exegol_home.pp
-
-checkmodule -M -m -o exegol_ connectto.mod exegol_connectto.te
-semodule_package -o exegol_connectto.pp -m exegol_connectto.mod
-sudo semodule -i exegol_connectto.pp
-```
