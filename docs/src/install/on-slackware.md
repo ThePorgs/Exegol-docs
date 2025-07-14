@@ -1,10 +1,10 @@
 # Installing Exegol on Slackware 15.0+ -current
 
 
-> [!NOTE] NOTE
+> [!NOTE] 
 > This page was brought to you by a community member and wasn't "mass-tested" yet. Feedback on whether it works properly (or not) would be greatly appreciated (please head over to our Discord server for that).
 
->[!DANGER]
+> [!DANGER]
 >This guide is intended for Slackware 15.0+ `(-current)`, tested with [AlienBOB's ISO](https://slackware.uk/people/alien-current-iso/slackware64-current-iso/). The stable 15.0 release is not recommended due to outdated kernel and package versions that cause compatibility issues.
 
 Exegol is installed through two main steps:
