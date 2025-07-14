@@ -1,7 +1,7 @@
 # Installing Exegol on Void Linux
 
 
-> [!NOTE] NOTE
+> [!NOTE] 
 > This page was brought to you by a community member and wasn't "mass-tested" yet. Feedback on whether it works properly (or not) would be greatly appreciated (please head over to our Discord server for that).
 
 Exegol is installed through two main steps:
