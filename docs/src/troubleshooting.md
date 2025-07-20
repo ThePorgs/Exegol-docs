@@ -279,3 +279,15 @@ sudo iptables -t nat -A POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
 `192.168.80.0/24` is the default subnet of the `virbr0` bridge used by KVM/libvirt and `eth0` is the network interface.
 
 This ensures KVM virtual machines can access the internet even when Exogol is running.
+
+## Error When Mounting NFS
+
+When attempting to mount an NFS share inside Exegol, you may encounter the following error:
+
+```
+mount.nfs: rpc.statd is not running but is required for remote locking.
+mount.nfs: Either use '-o nolock' to keep locks local, or start statd.
+mount.nfs: Operation not permitted
+```
+
+This occurs because the NFS mount operation requires `rpc.statd` for file locking, and the container lacks the necessary privileges and services to support this by default. To resolve this, run Exegol with `--privileged` mode, which grants the container extended privileges needed for NFS and `rpc.statd` support.
