@@ -161,7 +161,7 @@ When installing exegol with `python3 -m pip install exegol` on modern
 operating systems (Ubuntu 23.04 and higher, Debian 12 and higher, macOS
 14+), you may encounter the following error:
 
-``` 
+```
 This environment is externally managed
 To install Python packages system-wide, try apt install
 python3-xyz, where xyz is the package you are trying to
@@ -184,7 +184,7 @@ hint: See PEP 668 for the detailed specification.
 As the error message suggests, this error occurs when you try to install
 Python packages system-wide. To resolve this issue, you have two options :
 
-:::tabs 
+:::tabs
 
 === Recommended Methods
 
@@ -265,3 +265,17 @@ echo "dev.tty.legacy_tiocsti=1" >> /etc/sysctl.conf
 ```
 
 For more information about installation, see the [installation section](/wrapper/cli/install).
+
+## Exegol Breaks KVM Internet Access
+
+When Exegol(docker) is installed alongside KVM/libvirt, Docker modifies iptables rules that conflict with libvirt’s virtual bridge (`virbr0`). This causes KVM virtual machines to lose internet connectivity. To restore connectivity in KVM, manually allow forwarding between KVM bridge (`virbr0`) and your physical interface
+
+```bash
+# Enable NAT for KVM VMs (virbr0 network) through your physical interface
+sudo iptables -t nat -C POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
+```
+
+`192.168.80.0/24` is the default subnet of the `virbr0` bridge used by KVM/libvirt and `eth0` is the network interface.
+
+This ensures KVM virtual machines can access the internet even when Exogol is running.
