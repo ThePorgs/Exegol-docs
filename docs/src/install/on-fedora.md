@@ -35,7 +35,7 @@ Once docker is installed, it needs to be started.
 
 ```bash
 # start docker
-sudo systemctl start docker 
+sudo systemctl start docker
 
 # configure docker to start at boot
 sudo systemctl enable --now docker
@@ -53,12 +53,24 @@ Before using Exegol, you will need to read and accept the [End User License Agre
 
 To interact with docker, the wrapper needs proper permissions. You must either run Exegol with sudo (preferred), or have your user be a member of the docker group (which dangerously allows your user to basically have root permissions all the time).
 
-The following command shows how to do that with bash, but it can be adapted to any shell. Once the alias is set, you can apply it your current session.
+Check your current shell by running `echo $SHELL`, then apply the commands for the matching shell accordingly.
 
-Add the following alias to your `~/.bashrc` file:
+:::tabs ::
+
+=== Bash
+
+Add the following alias to your `~/.bashrc` file by running the following command:
 
 ```bash
 echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+```
+
+=== Zsh
+
+Add the following alias to your `~/.zshrc` file by running the following command:
+
+```bash
+echo "alias exegol='sudo HOME=\$HOME \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
 ```
 
 ## 3. The rest
