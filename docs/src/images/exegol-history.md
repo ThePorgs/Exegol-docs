@@ -43,6 +43,6 @@ Import multiple credentials from a CSV file
 exh import creds --file creds.csv --format CSV
 ```
 
-## Configuration (advanced)
-The `config.toml` file can be used to customise the database name, keybinds and theme for the TUI.
-The file can be found on the GitHub repo of the Exegol-history project, [go to file](https://github.com/ThePorgs/Exegol-history/blob/main/exegol_history/config/config.toml).
+## Advanced variables
+
+If you have other custom variables to configure, you can manually update the file `/opt/tools/Exegol-history/profile.sh` and reload your current shell with the commnad `exec $SHELL`.
