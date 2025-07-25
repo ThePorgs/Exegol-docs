@@ -281,6 +281,10 @@ function sidebarMain(): SidebarItemWithBadge[] {
           link: "images/my-resources.md"
         },
         {
+          text: "Exegol history",
+          link: "images/exegol-history.md"
+        },
+        {
           text: "Credentials",
           link: "images/credentials.md"
         },
