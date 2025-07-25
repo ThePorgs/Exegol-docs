@@ -64,8 +64,7 @@ In order to **shares notes** during an engagement, `trilium`
 ## Dynamic history commands
 
 Many commands in the pre-filled history rely on environment variables
-such as `$DOMAIN`, `$USER`, `$PASSWORD`, etc. Those variables can be set using the tool `exh`, manually or by using the `profile.sh` file in
-`/opt/tools/Exegol-history/`. The proper lines can be filled and
+such as `$DOMAIN`, `$USER`, `$PASSWORD`, etc. Those variables can be set using the [Exegol-history](images/exegol-history) utility `exh`, or by manually using the `/opt/tools/Exegol-history/profile.sh` file. The proper lines can be filled and
 uncommented, and then the shell can be reloaded with `exec zsh` in order
 to apply the changes. This allows users to easily look for, and use,
 commands in the history, without changing the values every time.
