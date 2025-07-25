@@ -1,4 +1,4 @@
-# `activate` action <Badge type="pro"/>
+# `activate` action <Badge type="pro"/> <Badge type="enterprise"/>
 
 The `activate` action is used to activate Exegol with a valid Pro/Enterprise license. This action is required to use
 Exegol in a professional environment. Without activation, Exegol will run in Community edition mode with limited

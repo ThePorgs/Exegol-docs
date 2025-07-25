@@ -2,49 +2,49 @@
 
 Below is a, non-exhaustive, list of what the wrapper supports:
 
-| Feature | Description |
-|---------|-------------|
-| [Graphical desktop](#desktop) | Hosts a complete graphics environment available via a web page or VNC |
-| [X11 sharing](#x11-sharing-gui) | Sharing of the graphic environment between the container and the host |
-| [Workspace](#workspace) | Persistent and shared workspace with the host |
-| [Update-fs](#update-fs) | Permission sharing between the container and the host |
-| [OpenVPN connection](#openvpn-connection) | Opening an isolated VPN tunnel dedicated to the Exegol container |
-| [Shell logging](#shell-logging) | Recording of sessions (input and output) in log files with date and time |
-| [Network modes](#network-modes) | Different network configurations for container isolation and connectivity |
-| [Shared timezones](#shared-timezones) | Sharing the host's timezone configuration |
-| [Exegol-resources](#exegol-resources) | Easy access to a collection of resources and tools |
-| [My-resources](#my-resources) | User space dedicated to customization |
-| [Volume sharing](#volume-sharing) | Support for specific volume addition |
-| [Port sharing](#port-sharing) | Support for port publishing |
-| [Env. variables](#env-variables) | Support for environment variable configuration |
-| [Device sharing](#device-sharing) | Support for hardware sharing |
-| [Custom hostname](#custom-hostname) | Support for customizing a specific container hostname |
-| [Comments](#comments) | User can add any text comments to the container |
-| [Capabilities](#capabilities) | Support for adding specific capabilities |
-| [Privileged](#privileged) | Support of the privileged mode |
-| [Multi-architecture](#multi-architecture) | Support for AMD64 and ARM64 architectures |
-| [Local image](#local-image-building) | Customized local image building |
-| [Remote image](#remote-image-pulling) | Pre-built image available for download |
-| [Custom images](#custom-images) | <Badge type="enterprise"/> Using different images names |
-| [Custom registry](#custom-registry) | <Badge type="enterprise"/> Pre-built image available for download |
-| [Command execution](#command-execution) | Execution of specific command |
-| [Daemon execution](#daemon-execution) | Support of the command execution in the background |
-| [Temporary containers](#temporary-containers) | Support for command execution in a dedicated and temporary environment |
-
+| Feature                                       | Description                                                                                                                 |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| [Graphical desktop](#desktop)                 | Hosts a complete graphics environment available via a web page or VNC                                                       |
+| [X11 sharing](#x11-sharing-gui)               | Sharing of the graphic environment between the container and the host                                                       |
+| [Workspace](#workspace)                       | Persistent and shared workspace with the host                                                                               |
+| [Update-fs](#update-fs)                       | Permission sharing between the container and the host                                                                       |
+| [OpenVPN connection](#openvpn-connection)     | Opening an isolated OpenVPN tunnel dedicated to the Exegol container                                                        |
+| [WireGuard VPN connection](#wireguard-vpn)    | <Badge type="pro" /> <Badge type="enterprise" /> Opening an isolated WireGuard VPN tunnel dedicated to the Exegol container |
+| [Shell logging](#shell-logging)               | Recording of sessions (input and output) in log files with date and time                                                    |
+| [Network modes](#network-modes)               | Different network configurations for container isolation and connectivity                                                   |
+| [Shared timezones](#shared-timezones)         | Sharing the host's timezone configuration                                                                                   |
+| [Exegol-resources](#exegol-resources)         | Easy access to a collection of resources and tools                                                                          |
+| [My-resources](#my-resources)                 | User space dedicated to customization                                                                                       |
+| [Volume sharing](#volume-sharing)             | Support for specific volume addition                                                                                        |
+| [Port sharing](#port-sharing)                 | Support for port publishing                                                                                                 |
+| [Env. variables](#env-variables)              | Support for environment variable configuration                                                                              |
+| [Device sharing](#device-sharing)             | Support for hardware sharing                                                                                                |
+| [Custom hostname](#custom-hostname)           | Support for customizing a specific container hostname                                                                       |
+| [Comments](#comments)                         | User can add any text comments to the container                                                                             |
+| [Capabilities](#capabilities)                 | Support for adding specific capabilities                                                                                    |
+| [Privileged](#privileged)                     | Support of the privileged mode                                                                                              |
+| [Multi-architecture](#multi-architecture)     | Support for AMD64 and ARM64 architectures                                                                                   |
+| [Local image](#local-image-building)          | Customized local image building                                                                                             |
+| [Remote image](#remote-image-pulling)         | Pre-built image available for download                                                                                      |
+| [Custom images](#custom-images)               | <Badge type="enterprise"/> Using different images names                                                                     |
+| [Custom registry](#custom-registry)           | <Badge type="enterprise"/> Pre-built image available for download                                                           |
+| [Command execution](#command-execution)       | Execution of specific command                                                                                               |
+| [Daemon execution](#daemon-execution)         | Support of the command execution in the background                                                                          |
+| [Temporary containers](#temporary-containers) | Support for command execution in a dedicated and temporary environment                                                      |
 
 > [!TIP]
 > Exegol uses Docker images and containers. Understanding the difference
 > is essential to understand Exegol.
 >
 > - **image**: think of it as an immutable template. They cannot be
->   executed as-is and serve as input for containers. It's not possible
->   to open a shell in an image.
+    > executed as-is and serve as input for containers. It's not possible
+    > to open a shell in an image.
 > - **container**: a container rests upon an image. A container is
->   created for a certain image at a certain time. It's possible to open
->   a shell in a container. Careful though, once a container is created,
->   updating the image it was created upon won't have any impact on the
->   container. In order to enjoy the new things, a new container must be
->   created upon that updated image.
+    > created for a certain image at a certain time. It's possible to open
+    > a shell in a container. Careful though, once a container is created,
+    > updating the image it was created upon won't have any impact on the
+    > container. In order to enjoy the new things, a new container must be
+    > created upon that updated image.
 
 ## Features
 
@@ -199,7 +199,6 @@ When preparing your VPN configuration file:
 >
 > And the exegol wrapper command: `exegol start --vpn ./my_vpn`
 
-
 - If you're using a login / password authentication, prepare an **auth
   file** to enable passive authentification with Exegol (See the option
   `--vpn-auth VPN_AUTH`)
@@ -221,8 +220,8 @@ down /etc/openvpn/update-resolv-conf"
 ```
 
 See the options `--vpn VPN` and `--vpn-auth VPN_AUTH` of the
-[start action](./cli/start#options) for more details.
- 
+[start action](./cli/start#vpn) for more details.
+
 > [!TIP]
 > In the case of a problem, to troubleshoot a VPN connection, OpenVPN
 > logs can be retrieved within the container in the file
@@ -231,7 +230,24 @@ See the options `--vpn VPN` and `--vpn-auth VPN_AUTH` of the
 > [!TIP]
 > If you want to create a container that is able to start **VPN
 > manually**, you can create your container with the following
-> parameters: `exegol start -d /dev/net/tun --cap NET_ADMIN`
+> parameters: `exegol start --vpn ''`
+
+### WireGuard VPN <Badge type="pro" /> <Badge type="enterprise" />
+
+Exegol supports WireGuard VPN tunnel configuration to **automatically**
+establish a VPN tunnel at container **startup** (since Exegol images version `3.1.8`).
+
+To configure a WireGuard VPN, your configuration file must have the `.conf` extension.
+
+See the options `--vpn VPN.conf` of the [start action](./cli/start#vpn) for more details.
+
+> [!NOTE] Troubleshooting
+> WireGuard logs can be retrieved within the container in the `/var/log/exegol/vpn.log` file.
+
+> [!TIP]
+> If you want to create a container that is able to start **VPN
+> manually**, you can create your container with the following
+> parameters: `exegol start --vpn ''`
 
 ### Shell logging
 
@@ -245,7 +261,7 @@ See the option `--log` of the [start action](./cli/start#options) to enable the 
 > [!SUCCESS] Hint
 > When the option is enabled upon **creation** of a new container, all
 > shells created for this container **will be automatically logged**.
-> 
+>
 > If the container was created **without** this option, the shells can
 > still be logged **individually** by adding the option in the **start**
 > command of **each** shell.
@@ -266,7 +282,7 @@ can be **disabled** manually with the [start action](./cli/start#options)
 > When the default configuration of the log compression is changed from
 > the config file and the feature will be **disabled by default**, the
 > option `--log-compress` can still be used to manually **enable** the
- >feature in specific cases.
+> feature in specific cases.
 
 
 > [!WARNING]
@@ -276,7 +292,7 @@ can be **disabled** manually with the [start action](./cli/start#options)
 There are (since exegol images version `3.0.0`) different methods of
 shell logging. The shell logging method can be selected manually with
 the [start action](./cli/start#options)
- `--log-method` parameter or by
+`--log-method` parameter or by
 default in the [configuration file of Exegol](/wrapper/features#exegol-configuration).
 
 :::tabs ::
@@ -296,15 +312,13 @@ Here is a quick demonstration:
 To view/replay the logs from your host, you must **install** `asciinema` on your **host** machine.
 
 > [!TIP]
-> - Logs in `.gz` format can be replay directly **without unpacking**
-> them with the command: `gunzip -c <filename_shell.asciinema.gz> | asciinema play -`
-> - To display the whole session **without** the "video" mode, it is
-> possible to use the command: `asciinema cat <filename_shell.asciinema>`
-> - When you share or play an `asciinema` video, you can **copy** and
-> **paste** any command/text it contains.
+> - Logs in `.gz` format can be replay directly **without unpacking** them with the command: `gunzip -c <filename_shell.asciinema.gz> | asciinema play -`
+> - To display the whole session **without** the "video" mode, it is possible to use the command: `asciinema cat <filename_shell.asciinema>`
+> - When you share or play an `asciinema` video, you can **copy** and **paste** any command/text it contains.
 
 
 === script  
+
 **script** is the "classic" method of session logging, it was also the
 only option available before version `3.0.0` of exegol images. This
 method simply records **all** incoming (stdin) and outgoing
@@ -325,9 +339,11 @@ method simply records **all** incoming (stdin) and outgoing
 
 ### Network modes
 
-By default, containers created by Exegol use the `host` network mode, which means that the **network interfaces** of the host are **shared** with the container.
+By default, containers created by Exegol use the `host` network mode, which means that the **network interfaces** of the
+host are **shared** with the container.
 
 This configuration is useful to:
+
 - dynamically open ports and services
 - have a low level access on a physical network (some operation might need privileged mode)
 - share a unique ip address on the target network
@@ -338,9 +354,13 @@ This configuration is useful to:
 
 However, Exegol supports different network modes to suit various use cases:
 
-- `host`: Container shares host's network interfaces, just like as a classic host process. Use for direct interface access, low-level operations, or sharing host IP/MAC.
-- `docker`: Uses Docker's default bridge network where all containers (not just Exegol) share the same network space and can communicate with each other. Use for standard cases requiring basic network isolation and port control.
-- `nat` : <Badge type="pro"/><Badge type="enterprise"/> Creates an isolated network with a dedicated /28 subnet (14 IP addresses available) for each container, providing complete isolation from other containers. Use for sensitive operations requiring dedicated network with isolation.
+- `host`: Container shares host's network interfaces, just like as a classic host process. Use for direct interface
+  access, low-level operations, or sharing host IP/MAC.
+- `docker`: Uses Docker's default bridge network where all containers (not just Exegol) share the same network space and
+  can communicate with each other. Use for standard cases requiring basic network isolation and port control.
+- `nat` : <Badge type="pro"/><Badge type="enterprise"/> Creates an isolated network with a dedicated /28 subnet (14 IP
+  addresses available) for each container, providing complete isolation from other containers. Use for sensitive
+  operations requiring dedicated network with isolation.
 - `disable`: Blocks all network connectivity. Use for maximum isolation or offline operations.
 
 See the `--network` option of the [start action](/wrapper/cli/start#network-modes) for more details.
@@ -348,7 +368,8 @@ See the `--network` option of the [start action](/wrapper/cli/start#network-mode
 > [!WARNING]
 > Full sharing of host network interfaces is only possible on Linux.
 >
-> Adaptations of this mode exist on Windows and Mac with Docker Desktop or Orbstack, but there might be some **limitations**.
+> Adaptations of this mode exist on Windows and Mac with Docker Desktop or Orbstack, but there might be some *
+*limitations**.
 
 ### Shared timezones
 
@@ -535,12 +556,14 @@ This support allows you to fully use exegol on hardware equipped with an
 ### Local image building
 
 The wrapper allows users to build custom Exegol images locally. This feature is useful for:
+
 - Customizing the image with specific tools or configurations
 - Building for a different architecture than your host
 - Testing new features or modifications
 
 > [!WARNING]
-> Building images locally can be challenging and time-consuming. We recommend using pre-built images (`exegol install`) unless you have a specific need to build locally.
+> Building images locally can be challenging and time-consuming. We recommend using pre-built images (`exegol install`)
+> unless you have a specific need to build locally.
 
 See the [build action](/wrapper/cli/build) for detailed usage and options.
 
@@ -551,7 +574,9 @@ the exegol wrapper with the [install](/wrapper/cli/install) and [update](/wrappe
 
 ### Custom images <Badge type="new"/><Badge type="enterprise"/>
 
-Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to identify and work with Exegol images that have different names than the official ones. Useful for sharing customized images with your team through a private registry.
+Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to
+identify and work with Exegol images that have different names than the official ones. Useful for sharing customized
+images with your team through a private registry.
 
 To configure custom images, add them to your [Exegol configuration file](/wrapper/configuration#configuration-file):
 
@@ -559,7 +584,8 @@ Note that images must be pulled manually as they may be in private registries re
 
 ### Custom registry <Badge type="new"/><Badge type="enterprise"/>
 
-For organizations requiring a complete private registry solution, we offer a managed Exegol private registry service. This enterprise solution includes:
+For organizations requiring a complete private registry solution, we offer a managed Exegol private registry service.
+This enterprise solution includes:
 
 - A fully managed private Docker registry for Exegol images
 - Custom Exegol images maintained and updated by our team
@@ -569,6 +595,7 @@ For organizations requiring a complete private registry solution, we offer a man
 - The appropriate NDA and IP agreements, to protect your knowledge and content
 
 This service is ideal for organizations that need:
+
 - Complete control over their Exegol image distribution
 - Private, organization-specific Exegol images
 - Full integration with their existing infrastructure
@@ -581,7 +608,7 @@ Contact us for a quote and to discuss your organization's specific requirements.
 The Exegol wrapper does not only allow the opening of interactive
 shells, it is also possible to execute **single commands** in several
 ways.
- 
+
 > [!TIP]
 > To see the execution logs of the command, the user must add the
 > parameter `-v`.

@@ -349,6 +349,11 @@ function sidebarMain(): SidebarItemWithBadge[] {
               link: "wrapper/cli/update.md"
             },
             {
+              text: "upgrade",
+              link: "wrapper/cli/upgrade.md",
+              badge: "pro"
+            },
+            {
               text: "version",
               link: "wrapper/cli/version.md"
             }

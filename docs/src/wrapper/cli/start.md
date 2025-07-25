@@ -27,7 +27,7 @@ will be spawned to offer an interactive console to the user
 Many options exist to customize the creation of exegol container.
 
 > [!TIP]
-> The default options of some commands can be changed in
+> The default options of some parameters can be changed in
 > the [exegol configuration file](/wrapper/features#exegol-configuration).
 
 ### Global options
@@ -41,14 +41,47 @@ Many options exist to customize the creation of exegol container.
 | `-V VOLUMES`, `--volume VOLUMES`                  | Share a new volume between host and exegol (format: --volume /path/on/host/:/path/in/container/\[:ro\|rw\]).                                                                                                                         |
 | `-p PORTS`, `--port PORTS`                        | Share a network port between host and exegol (format: `--port [<host_ipv4>:]<host_port>[-<end_host_port>][:<container_port>[-<end_container_port>]][:<protocol>]`. This configuration will disable the shared network with the host. |
 | `--hostname HOSTNAME`                             | Set a custom hostname to the exegol container (default: exegol-\<name\>)                                                                                                                                                             |
-| `--cap CAPABILITIES`                              | **(dangerous)** Capabilities allow to add specific privileges to the container (e.g. need to mount volumes, perform low-level operations on the network, etc).                                                                       |
-| `--privileged`                                    | **(dangerous)** give extended privileges at the container creation (e.g. needed to mount things, to use wifi or bluetooth)                                                                                                           |
-| `-d DEVICES`, `--device DEVICES`                  | Add host device(s) at the container creation (example: -d /dev/ttyACM0 -d /dev/bus/usb/).                                                                                                                                            |
 | `--disable-X11`                                   | Disable X11 sharing to run GUI-based applications. (default: Enabled)                                                                                                                                                                |
 | `--disable-my-resources`                          | Disable the mount of the shared resources (/opt/my-resources) from the host (/home/dramelac/.exegol/my-resources) (default: Enabled)                                                                                                 |
 | `--disable-exegol-resources`                      | Disable the mount of the exegol resources (/opt/resources) from the host (/home/dramelac/Documents/tools/Exegol/exegol-resources) (default: Enabled)                                                                                 |
 | `--network NETWORK`                               | <Badge type="new"/> Configure the container's network mode (default: host). See [Network Modes](#network-modes) for details.                                                                                                         |
 | `--disable-shared-timezones`                      | Disable the sharing of the host's time and timezone configuration with exegol (default: Enabled)                                                                                                                                     |
+
+### Privileges
+
+By default, the Exegol container will receive the minimum permissions required by the enabled features.
+
+> [!NOTE] Automatic permissions
+> Permissions will be added automatically if required. For example, when the `--vpn` parameter is used,
+devices and capabilities are automatically added to enable the VPN to operate with the least privileges possible.
+
+| Option                           | Description                                                                                                                                                    |
+|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-d DEVICES`, `--device DEVICES` | Add host device(s) at the container creation (example: -d /dev/ttyACM0 -d /dev/bus/usb/).                                                                      |
+| `--cap CAPABILITIES`             | **(dangerous)** Capabilities allow to add specific privileges to the container (e.g. need to mount volumes, perform low-level operations on the network, etc). |
+| `--privileged`                   | **(dangerous)** Give extended privileges at the container **creation** (e.g. needed to mount things, to use Wi-Fi or Bluetooth)                                |
+
+> [!CAUTION] Avoid using privileged mode unless absolutely necessary
+> This flag grants the container nearly unrestricted access to the host, effectively breaking most security boundaries 
+> Docker puts in place (all Linux kernel capabilities are enabled; seccomp, AppArmor and SELinux protections are disabled; 
+> the container can access all host devices; and major mounts become read-write).
+
+#### New container
+
+When a new container is created, it is possible to:
+
+- Add the specific [capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html) needed with `--cap`, among the following list: `NET_ADMIN`, `NET_BROADCAST`, `SYS_MODULE`, `SYS_PTRACE`, `SYS_RAWIO`,
+      `SYS_ADMIN`, `LINUX_IMMUTABLE`, `MAC_ADMIN`, `SYSLOG`. `ALL` is a special value that sets them all (all capabilities supported by Docker, [read more](https://docs.docker.com/engine/containers/run/#runtime-privilege-and-linux-capabilities)).
+- Identify which devices are required and add specific devices with `-d`/`--device`.
+- If you need "root access" (i.e., all capabilities, and access to all devices, hardware and kernel of the host) the `--privileged` option can be used.
+
+> [!WARNING]
+> The privileges configured when creating the container will be given to all processes in that container for the entirety of its lifetime.
+
+#### Existing container <Badge type="new"/>
+
+When the container already exists, you cannot change the default privileges mode, capabilities or share new devices.
+However, it is possible to spawn a **single** shell session with **all capabilities** with `--cap ALL`. The capabilities won't be added to the container itself and will only be valid for the specific shell the flag was enabled for.
 
 ### Network modes <Badge type="new"/>
 
@@ -132,18 +165,25 @@ users a full-featured desktop experience directly from their browser.
 
 ### VPN
 
-An additional feature of Exegol is the VPN tunnel option (OpenVPN). Just provide an ovpn configuration to exegol and the
-container will take care of starting the tunnel at each startup.
+An additional feature of Exegol is the managed VPN tunnel. Compatible with OpenVPN and WireGuard since Exegol image version `3.1.8`.
+
+- To configure an OpenVPN tunnel, your configuration file must have the `.ovpn` extension or the directory must contain an `.ovpn` file.
+- To configure a WireGuard VPN, your configuration file must have the `.conf` extension.
+
+The container will take care of starting the tunnel at each startup.
+
+> [!IMPORTANT] WrireGuard support
+> WireGuard VPN support is currently in beta and exclusive to <Badge type="pro" /> and <Badge type="enterprise" /> users at this time.
 
 > [!INFO]
 > When using the `--vpn` feature, network mode defaults to `docker`, or `nat` if the user has a
-> valid <Badge type="pro" /> or <Badge type="enterprise" /> subscription. This isolates the container. The VPN connection
-> is not opened directly on the host's network interface. It protects the host.
+> valid <Badge type="pro" /> or <Badge type="enterprise" /> subscription. This isolates the container. The VPN
+> connection is not opened directly on the host's network interface. It protects the host.
 
-| Option                | Description                                                                                                                                                                   |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--vpn VPN`           | Setup an OpenVPN connection at the container creation (example: `--vpn /home/user/vpn/conf.ovpn`)                                                                             |
-| `--vpn-auth VPN_AUTH` | Enter the credentials with a file (first line: username, second line: password) to establish the VPN connection automatically (example: `--vpn-auth /home/user/vpn/auth.txt`) |
+| Option                | Description                                                                                                                                                                       |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--vpn VPN`           | Setup an OpenVPN or WireGuard connection at the container creation (examples: `--vpn /home/user/openvpn/conf.ovpn`, `--vpn /home/user/wireguard.conf`)                            |
+| `--vpn-auth VPN_AUTH` | Enter the credentials with a file (first line: username, second line: password) to establish the VPN connection automatically (example: `--vpn-auth /home/user/openvpn/auth.txt`) |
 
 > [!IMPORTANT]
 > All the options seen previously are taken into account **only** for
