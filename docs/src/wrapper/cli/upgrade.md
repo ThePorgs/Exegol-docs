@@ -14,15 +14,15 @@ in recreating a new container with a new image:
 > [!IMPORTANT] Backups
 > When the outdated container is kept as a backup, the original container is **renamed** by appending `-bak`. 
 > 
-> It will be deleted together with the new upgraded container when using the [remove](wrapper/cli/remove) option.
+> It will be deleted together with the new upgraded container when using the [remove](/wrapper/cli/remove) option.
 
 ## Data transferred during upgrade
 
 The following data will migrate to the new upgraded container:
-- Your [my-resources](images/my-resources) customization
+- Your [my-resources](/images/my-resources) customization
 - The container `/workspace` directory
 - The **Zsh** and **Bash** command history
-- (From Exegol images `3.1.8`) The [exegol-history](images/exegol-history) database
+- (From Exegol images `3.1.8`) The exegol-history database
 - The [TriliumNext](https://github.com/TriliumNext/Trilium) notes database
 - The following files:
   - `/etc/hosts`
