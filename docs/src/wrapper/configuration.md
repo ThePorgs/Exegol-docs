@@ -60,6 +60,7 @@ The config section allows you to modify the default behavior of the Exegol wrapp
 
 #### Shell logging
 Change the configuration of the shell logging functionality.
+- `always_enable`: Always enable shell logging in all Exegol shells. (Default: `False`)
 - `logging_method`: Choice of the method used to record the sessions, `script` or `asciinema`. (Default: `asciinema`)
 - `enable_log_compression`: Enable automatic compression of log files (with gzip). (Default: `True`)
 
