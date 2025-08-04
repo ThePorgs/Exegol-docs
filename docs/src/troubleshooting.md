@@ -266,9 +266,9 @@ echo "dev.tty.legacy_tiocsti=1" >> /etc/sysctl.conf
 
 For more information about installation, see the [installation section](/wrapper/cli/install).
 
-## Exegol Breaks KVM Internet Access
+## Docker Breaks KVM Internet Access
 
-When Exegol(docker) is installed alongside KVM/libvirt, Docker modifies iptables rules that conflict with libvirt’s virtual bridge (`virbr0`). This causes KVM virtual machines to lose internet connectivity. To restore connectivity in KVM, manually allow forwarding between KVM bridge (`virbr0`) and your physical interface
+When docker is installed alongside KVM/libvirt, Docker modifies iptables rules that conflict with libvirt’s virtual bridge (`virbr0`). This causes KVM virtual machines to lose internet connectivity. To restore connectivity in KVM, manually allow forwarding between KVM bridge (`virbr0`) and your physical interface
 
 ```bash
 # Enable NAT for KVM VMs (virbr0 network) through your physical interface
@@ -290,4 +290,4 @@ mount.nfs: Either use '-o nolock' to keep locks local, or start statd.
 mount.nfs: Operation not permitted
 ```
 
-This occurs because the NFS mount operation requires `rpc.statd` for file locking, and the container lacks the necessary privileges and services to support this by default. To resolve this, run Exegol with `--privileged` mode, which grants the container extended privileges needed for NFS and `rpc.statd` support.
+This occurs because the NFS mount operation requires `rpc.statd` for file locking, and the container lacks the necessary privileges and services to support this by default. To resolve this, run Exegol with `--cap SYS_ADMIN`, which grants the container the privilege needed for NFS and `rpc.statd` support.
