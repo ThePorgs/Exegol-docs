@@ -38,7 +38,7 @@ environment.systemPackages = with pkgs; [
 ```
 
 > [!WARNING]
-> The exegol package in nixpkgs is not maintained by the Exegol team. Packaging issues should be reported to the nixpkgs maintainers. You can still ask on Discord, but support for this specific packaging path is best-effort.
+> The exegol package in nixpkgs is not maintained by the Exegol team. Packaging issues should be reported to the `nixpkgs` maintainers. Questions may be asked on Discord, but support for this packaging path is provided on a best-effort basis.
 
 Save the file with [CTRL] + [O], press [ENTER], and exit with [CTRL] + [X]. Then rebuild your system:
 
@@ -47,7 +47,7 @@ sudo nixos-rebuild switch
 ```
 
 > [!TIP]
-> Using flakes ? Add `pkgs.exegol` and `pkgs.git` in your flake’s NixOS module the same way, then:
+> Using flakes ? Add `pkgs.exegol` and `pkgs.git` in the flake’s NixOS module in the same way, then:
 > ```bash
 > sudo nixos-rebuild switch --flake .#your-host
 > ```
@@ -56,7 +56,7 @@ sudo nixos-rebuild switch
 
 From most stable to least stable option:
 
-1. Use a newer channel (e.g., `nixos-unstable`) for just this package:
+1. A newer channel (e.g., `nixos-unstable`) can be used for just this package:
   ```nix
   let
     unstable = import <nixos-unstable> { };
@@ -66,9 +66,9 @@ From most stable to least stable option:
     ];
   }
   ```
-  > You can also switch your whole system to `nixos-unstable`, but that affects everything.
-2. If your target version isn't in `nixpkgs` yet:
-  - Copy the Exegol derivation from a PR or a staging branch into your config
+  > The whole system can also be switched to `nixos-unstable`, but that affects everything.
+2. If the target version is not yet present in `nixpkgs`:
+  - The Exegol derivation can be copied from a PR or a staging branch into the configuration.
   - Write your own derivation pointing to the desired source/version
 
 > [!NOTE]
@@ -112,7 +112,7 @@ sudo nixos-rebuild switch
 ```
 
 > [!TIP]
-> Using flakes ? Add `pkgs.git`, `pkgs.python3` and `pkgs.pipx` in your flake’s NixOS module the same way, then:
+> Using flakes ? Add `pkgs.git`, `pkgs.python3` and `pkgs.pipx` in the flake’s NixOS module in the same way, then:
 > ```bash
 > sudo nixos-rebuild switch --flake .#your-host
 > ```
