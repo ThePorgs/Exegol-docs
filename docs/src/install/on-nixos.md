@@ -28,13 +28,17 @@ Add the following lines (or merge with your existing configuration):
 ```bash
 environment.systemPackages = with pkgs; [
   exegol
-  git
 ];
   virtualisation.docker = {
   enable = true;
   # Do NOT enable rootless here — Exegol doesn’t support Docker rootless mode
   rootless.enable = false; # (false is the default)
 };
+```
+
+To run Exegol without sudo, the user must be a member of the docker group. This can be declared in the NixOS configuration:
+```nix
+users.users.<user>.extraGroups = [ "docker" ];
 ```
 
 > [!WARNING]
@@ -51,6 +55,8 @@ sudo nixos-rebuild switch
 > ```bash
 > sudo nixos-rebuild switch --flake .#your-host
 > ```
+
+After rebuilding, log out and back in (or run newgrp docker) so the new group membership takes effect.
 
 ### Need a newer Exegol wrapper via `nixpkgs`?
 
