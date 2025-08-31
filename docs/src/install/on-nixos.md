@@ -17,7 +17,7 @@ This approach keeps your system declarative and reproducible: all changes live i
 
 ### Enable Docker & install Exegol
 
-`git`, `exegol` and the Docker engine can be installed by editing your NixOS configuration:
+`exegol` and the Docker engine can be installed by editing your NixOS configuration:
 
 ```bash
 sudo nano /etc/nixos/configuration.nix
