@@ -51,7 +51,7 @@ sudo nixos-rebuild switch
 ```
 
 > [!TIP]
-> Using flakes ? Add `pkgs.exegol` and `pkgs.git` in the flake’s NixOS module in the same way, then:
+> Using flakes ? Add `pkgs.exegol` in the flake’s NixOS module in the same way, then:
 > ```bash
 > sudo nixos-rebuild switch --flake .#your-host
 > ```
