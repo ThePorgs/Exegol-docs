@@ -29,7 +29,7 @@ Add the following lines (or merge with your existing configuration):
 environment.systemPackages = with pkgs; [
   exegol
 ];
-  virtualisation.docker = {
+virtualisation.docker = {
   enable = true;
   # Do NOT enable rootless here — Exegol doesn’t support Docker rootless mode
   rootless.enable = false; # (false is the default)
@@ -106,7 +106,14 @@ environment.systemPackages = with pkgs; [
 ];
 virtualisation.docker = {
   enable = true;
+  # Do NOT enable rootless here — Exegol doesn’t support Docker rootless mode
+  rootless.enable = false; # (false is the default)
 };
+```
+
+To run Exegol without sudo, the user must be a member of the docker group. This can be declared in the NixOS configuration:
+```nix
+users.users.<user>.extraGroups = [ "docker" ];
 ```
 
 Save the file with [CTRL] + [O], press [ENTER], and exit with [CTRL] + [X].
