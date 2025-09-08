@@ -246,6 +246,9 @@ A quick-fix may be to add the custom CA to Exegol's virtual env's certifi's CA b
 cat custom_ca.crt >> $(~/.local/pipx/venvs/exegol/bin/python -c "import certifi; print(certifi.where())")
 ```
 
+> [!WARNING]
+> Make sure to trust the whole chain, if applicable
+
 ## Arsenal TIOCSTI requirement
 
 The arsenal tool needs the `TIOCSTI` functionality enabled. A GitHub
