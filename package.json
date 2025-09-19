@@ -5,6 +5,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "rollup": "^4.50.2",
+    "vitepress": "^1.6.4",
     "vitepress-plugin-tabs": "^0.5.0"
   },
   "dependencies": {
