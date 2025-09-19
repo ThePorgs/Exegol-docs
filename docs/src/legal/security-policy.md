@@ -31,7 +31,7 @@ The following is a non-exhaustive list of examples considered out of scope:
 
 ## 3. How to report a vulnerability
 
-Please contact us primarily through our dedicated email address: [contact@exegol.com](mailto:contact@exegol.com)
+Please contact us primarily through our dedicated email address: contact@exegol.com
 
 When reporting, please:
 - Provide a clear description of the issue

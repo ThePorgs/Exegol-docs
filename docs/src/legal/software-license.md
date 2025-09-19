@@ -2,7 +2,7 @@
 
 ## Preamble
 
-The Exegol software suite ("Exegol") is developed by Execorp to serve the needs of cybersecurity professionals. While certain elements of the source code, scripts, documentation, or containers may be made publicly accessible, such availability is intended to foster transparency, community trust, and collaboration.
+The Exegol software suite ("Exegol") is developed by Execorp, with valuable contributions from the community, to serve the needs of cybersecurity professionals. While certain elements of the source code, scripts, documentation, or containers may be made publicly accessible, such availability is intended to foster transparency, community trust, and collaboration.
 
 This public access does not imply a waiver of Execorp's intellectual property rights, nor does it authorize unrestricted or commercial use of the software.
 
@@ -10,7 +10,7 @@ This public access does not imply a waiver of Execorp's intellectual property ri
 
 Exegol is transitioning from the GNU General Public License version 3 (GPL3) to the Execorp Software License (ESL). This transition is governed by the following rules:
 
-- All code released prior to June 5th, 2025 remains under GPL3 (i.e., [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://www.gnu.org/licenses/gpl-3.0.en.html))
+- All code released prior to June 5th, 2025 remains under GPL3 (i.e., GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 - https://www.gnu.org/licenses/gpl-3.0.en.html)
 - Code released since June 5th, 2025 (the start date of this dual-license mechanism) will be under either:
   - The Exegol Software License (ESL)
   - or GPL3 (if it contains or is derived from GPL3-licensed code)

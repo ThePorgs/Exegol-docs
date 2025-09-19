@@ -4,7 +4,7 @@
 
 The data controller for the data collected on exegol.com and its subdomains is:
 Execorp, SAS with a capital of 10,000 euros, whose registered office is located at 122 rue Amelot, 75011 Paris, France.
-Contact email: [contact@exegol.com](mailto:contact@exegol.com)
+Contact email: contact@exegol.com
 
 ## 2. Data collected
 
@@ -71,7 +71,7 @@ In accordance with applicable regulations, users have the following rights:
 - Right to restriction of processing
 - Right to data portability
 
-To exercise these rights, users can send a request to: [contact@exegol.com](mailto:contact@exegol.com)
+To exercise these rights, users can send a request to: contact@exegol.com
 
 ## 10. Data breach notification
 
@@ -93,7 +93,7 @@ We will communicate through email, account notifications, or other direct means 
 ## 11. GDPR compliance
 
 Execorp processes personal data in accordance with the General Data Protection Regulation (GDPR - Regulation (EU) 2016/679).
-Users also have the right to lodge a complaint with the competent supervisory authority, the CNIL (Commission Nationale de l'Informatique et des Libertés), accessible via the website: [www.cnil.fr](https://www.cnil.fr).
+Users also have the right to lodge a complaint with the competent supervisory authority, the CNIL (Commission Nationale de l'Informatique et des Libertés), accessible via the website www.cnil.fr.
 
 ## 12. Modifications
 
