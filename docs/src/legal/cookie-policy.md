@@ -63,4 +63,4 @@ We may update this cookie policy from time to time. Significant changes will be 
 
 ## 6. Contact
 
-If you have questions about our cookie practices, please contact [contact@exegol.com](mailto:contact@exegol.com). 
+If you have questions about our cookie practices, please contact contact@exegol.com. 

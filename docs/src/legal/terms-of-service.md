@@ -1,14 +1,25 @@
-# Terms of service
+# Terms of Service and Sale
 
-Execorp SAS – headquartered at 122 rue Amelot, 75011 Paris, France, and registered under registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536, provides services including the Exegol Suite (websites, applications, software) under the following terms.
+Execorp SAS – headquartered at 122 rue Amelot, 75011 Paris, France, and registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536, provides services including the Exegol Suite (websites, applications, software) under the following terms.
 
-By creating an account, subscribing, accessing, or using any part of the Exegol Suite, you agree to these Terms of Service ("Terms"). If you do not accept these Terms, you must not use the Services.
+This document constitutes both our Terms of Service and Terms of Sale, governing the use of our services as well as the purchase of subscriptions, licenses, and other related offerings.
+
+By creating an account, subscribing, accessing, or using any part of the Exegol Suite, you agree to these Terms of Service and Sale ("Terms"). If you do not accept these Terms, you must not use the Services.
 
 ## 1. Acceptance of terms
 
 By using any Exegol service (creating an account, using the dashboard, downloading software, purchasing subscriptions), you accept these Terms. Execorp may update these Terms occasionally. Updates will be posted online, and continued use after updates means acceptance.
 
-Additional policies, such as the Privacy Policy and the Security Policy, are incorporated by reference.
+Additional policies are incorporated by reference and form an integral part of these Terms:
+- Privacy Policy (https://docs.exegol.com/legal/privacy-policy) - governing data collection and processing
+- Security Policy (https://docs.exegol.com/legal/security-policy) - governing responsible disclosure and security practices
+- End User License Agreement (EULA) (https://docs.exegol.com/legal/eula) - governing use of our software
+- Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license) - governing use of our open-source code
+- Cookie Policy (https://docs.exegol.com/legal/cookie-policy) - governing cookie usage on our websites
+
+### 1.1 Hierarchy of Legal Terms
+
+These Terms of Service and Sale take precedence over all other legal documents, policies, or terms unless explicitly stated otherwise in a specific written agreement signed by both parties. In case of conflict between different legal documents.
 
 ## 2. Services offered
 
@@ -17,13 +28,13 @@ Execorp offers the Exegol Suite through several plans:
 - **Pro plan**: Paid, for commercial use by individuals, limited to two active licenses
 - **Enterprise plan**: Paid, designed for businesses with floating licenses, team management, and custom options
 
-Plan and pricing details are available on the public landing page at [exegol.com](https://exegol.com) and may evolve over time.
+Plan and pricing details are available on the public landing page at https://exegol.com and may evolve over time.
 
 ## 3. Account creation and security
 
 Users must create an account to access certain services. You must provide accurate information, keep your credentials secure, and assume responsibility for all activities under your account.
 
-Execorp encourages the use of strong passwords and two-factor authentication (2FA). If you suspect a security issue with your account, notify [contact@exegol.com](mailto:contact@exegol.com) immediately.
+Execorp encourages the use of strong passwords and two-factor authentication (2FA). If you suspect a security issue with your account, notify contact@exegol.com immediately.
 
 ### 3.1 Age requirements
 
@@ -57,7 +68,7 @@ Execorp may modify prices, billing models, or features. Changes affecting existi
 
 ## 6. Referral program
 
-Execorp may offer a referral program to Pro users. Referrals can grant rewards or discounts according to the rules available on [exegol.com](https://exegol.com).
+Execorp may offer a referral program to Pro users. Details, eligibility, and the most current terms of the referral program are described on the dedicated referral page(s). Rewards or discounts for successful referrals are subject to the rules and conditions outlined there.
 
 Execorp reserves the right to modify or discontinue the referral program without notice. Abuse of the program may result in disqualification and account suspension. Rewards are not exchangeable for cash unless explicitly stated.
 
@@ -82,9 +93,15 @@ Upon termination, you lose access to Services, and no refunds are owed except as
 
 All software, documentation, trademarks, graphics, and other content related to the Exegol Suite are the property of Execorp or its licensors.
 
-You receive a personal, limited, non-exclusive, non-transferable license to use the Services, subject to compliance with these Terms.
+The Exegol software suite is subject to specific licensing terms. 
 
-You may not copy, sell, distribute, reverse-engineer, or create derivative works based on the Services without express written permission.
+Certain parts of Exegol are open-source and governed by the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license) and, where applicable, the GNU General Public License version 3 (GPL3). Code released prior to June 5th, 2025 remains under GPL3, while code released since that date may be under either ESL or GPL3.
+
+All non open-source components of Exegol are governed by the End User License Agreement (EULA), which can be found at https://docs.exegol.com/legal/eula.
+
+You receive a personal, limited, non-exclusive, non-transferable license to use the Services, subject to compliance with these Terms and the applicable software licenses. Exceptions for authorized resellers may apply, as specified in separate reseller terms or agreements attached to quotes, invoices, or other relevant documents.
+
+You may not copy, sell, distribute, reverse-engineer, or create derivative works based on the Services without express written permission, except as expressly permitted by the applicable software licenses for open-source components.
 
 Feedback or suggestions you submit may be freely used by Execorp without compensation.
 
@@ -101,7 +118,7 @@ Execorp reserves the right to refuse service to anyone believed to be in violati
 
 ## 11. Security and responsible disclosure
 
-Execorp encourages responsible disclosure of security vulnerabilities. Researchers are invited to report findings to [contact@exegol.com](mailto:contact@exegol.com) as described in our Responsible Disclosure Policy.
+Execorp encourages responsible disclosure of security vulnerabilities. Researchers are invited to report findings to contact@exegol.com as described in our Security Policy (https://docs.exegol.com/legal/security-policy).
 
 Execorp implements industry-standard security practices but does not guarantee absolute security.
 
@@ -109,7 +126,9 @@ Execorp implements industry-standard security practices but does not guarantee a
 
 Execorp processes personal data in compliance with applicable laws, including the GDPR and CCPA where applicable.
 
-Please refer to our Privacy Policy available on [exegol.com](https://exegol.com) for detailed information on data collection, use, rights, and protections.
+Please refer to our Privacy Policy (https://docs.exegol.com/legal/privacy-policy) for detailed information on data collection, use, rights, and protections.
+
+For information about our use of cookies and similar technologies, please refer to our Cookie Policy (https://docs.exegol.com/legal/cookie-policy).
 
 ### 12.1 Data breach notification
 
@@ -158,4 +177,4 @@ If mandatory local consumer protection laws apply, they are not affected by this
 
 ## 16. Contact
 
-For all communications, including legal notices, user support, or security disclosures, please contact: [contact@exegol.com](mailto:contact@exegol.com) 
+For all communications, including legal notices, user support, or security disclosures, please contact: contact@exegol.com 

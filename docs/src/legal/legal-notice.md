@@ -2,7 +2,7 @@
 
 ## 1. Website publisher
 
-The website [https://exegol.com](https://exegol.com) and all its subdomains are published by Execorp, a Simplified Joint Stock Company (SAS) with a capital of 10,000 euros, registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536. Registered office: 122 rue Amelot, 75011 Paris, France. Contact email: [contact@exegol.com](mailto:contact@exegol.com)
+The website https://exegol.com and all its subdomains are published by Execorp, a Simplified Joint Stock Company (SAS) with a capital of 10,000 euros, registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536. Registered office: 122 rue Amelot, 75011 Paris, France. Contact email: contact@exegol.com
 
 ## 2. Publishing director
 
@@ -10,9 +10,9 @@ The publishing director is the President of Execorp, namely MONKEY 513, a Single
 
 ## 3. Hosting
 
-The website [https://exegol.com](https://exegol.com) and all its subdomains are primarily hosted by Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, United States. Website: [https://www.cloudflare.com](https://www.cloudflare.com)
+The website https://exegol.com and all its subdomains are primarily hosted by Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, United States. Website: www.cloudflare.com.
 
-Certain data, particularly user databases, are stored by Supabase, Inc., 970 Toa Payoh North, #07-04, Singapore 318992. Website: [https://supabase.com](https://supabase.com). The database itself is in France.
+Certain data, particularly user databases, are stored by Supabase, Inc., 970 Toa Payoh North, #07-04, Singapore 318992. Website: https://supabase.com. The database itself is in France.
 
 ## 4. Intellectual property
 
