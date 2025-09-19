@@ -78,7 +78,7 @@ From most stable to least stable option:
   - Write your own derivation pointing to the desired source/version
 
 > [!NOTE]
-> Prefer these Nix-friendly options over [`pipx`](/on-nixos#_2-portable-alternative) only if you care about reproducibility. 
+> Prefer these Nix-friendly options over [`pipx`](/install/on-nixos#_2-portable-alternative) only if you care about reproducibility. 
 
 ### Next
 
