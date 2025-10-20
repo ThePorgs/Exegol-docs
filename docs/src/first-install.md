@@ -14,7 +14,7 @@ Exegol is installed through two main steps:
 
 This page details the installation steps for the most common operating systems Ubuntu/Debian, macOS or Windows.
 
-If you're using another operating system in the following list, click on it to be redirected to the proper installation page: [Arch](/install/on-arch), [Fedora](/install/on-fedora), [Gentoo](/install/on-gentoo), [NixOS](/install/on-nixos), [openSUSE](/install/on-opensuse), [Void](/install/on-void), [Slackware](/install/on-slackware).
+If you're using another operating system in the following list, click on it to be redirected to the proper installation page: [Arch](/install/on-arch), [Fedora](/install/on-fedora), [Gentoo](/install/on-gentoo), [NixOS](/install/on-nixos), [openSUSE](/install/on-opensuse), [Slackware](/install/on-slackware).
 
 If your operating system is not covered here or in the list above, it should work nonetheless, but we probably didn't have the time to document it yet (you're welcome to help if you'd like).
 
