@@ -222,8 +222,8 @@ function sidebarLegal(): SidebarItemWithBadge[] {
           link: "legal-notice"
         },
         {
-          text: "Terms of Service",
-          link: "terms-of-service"
+          text: "Terms of Sale and Service",
+          link: "terms-of-sale-and-service"
         },
         {
           text: "End User License Agreement",

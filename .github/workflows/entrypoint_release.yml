@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@main
       - name: Build
         run: npm install && npm run docs:build
+      - name: Copy redirects file
+        run: cp cloudflare_redirects docs/.vitepress/dist/_redirects
       - name: Publish
         uses: cloudflare/wrangler-action@v3
         with:
