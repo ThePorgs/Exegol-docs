@@ -33,7 +33,7 @@ This requirement may not apply to certain Enterprise licenses, on a case-by-case
 Except where expressly permitted by the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license), other applicable open-source licenses, or by law, you agree that you will not:
 
 - Copy, distribute, sell, sublicense, lease, or otherwise transfer the Software to any third party
-- Modify, adapt, create derivative works from, or translate the Software, except for personal use or community contribution, provided such modification is not intended to circumvent license verification or other technical restrictions; any commercial use of modifications is only permitted in accordance with your subscription plan (Pro or Enterprise) and is subject to this Agreement, the [Terms of Sale](https://docs.exegol.com/legal/terms-of-sale), and the [Terms of Service](https://docs.exegol.com/legal/terms-of-service); any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp.
+- Modify, adapt, create derivative works from, or translate the Software, except for personal use or community contribution, provided such modification is not intended to circumvent license verification or other technical restrictions; any commercial use of modifications is only permitted in accordance with your subscription plan (Pro or Enterprise) and is subject to this Agreement, and the [Terms of Sale and Service](https://docs.exegol.com/legal/terms-of-sale-and-service); any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp.
 - Reverse engineer, decompile, disassemble, or otherwise attempt to discover the source code of the Software, except as expressly permitted by applicable law and then only after prior written notice to Execorp
 - Remove, obscure, or alter any proprietary notices, labels, or marks on the Software
 - Use the Software for illegal activities
@@ -59,7 +59,7 @@ This Agreement does not grant You any rights to trademarks or service marks of E
 
 Certain components of the Software may be open-source and subject to additional licensing terms, including the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license) and, where applicable, the GNU General Public License version 3 (GPL3). You must comply with all applicable open-source licenses in addition to this EULA.
 
-For open-source components, the terms of the applicable open-source license take precedence over conflicting terms in this EULA, except for commercial use restrictions which remain subject to our Terms of Service and Sale, and commercial exploitation which is strictly prohibited without a separate written agreement with Execorp.
+For open-source components, the terms of the applicable open-source license take precedence over conflicting terms in this EULA, except for commercial use restrictions which remain subject to our Terms of Sale and Service, and commercial exploitation which is strictly prohibited without a separate written agreement with Execorp.
 
 ## 5. Updates and modifications
 
