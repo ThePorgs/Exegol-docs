@@ -10,7 +10,7 @@ Our main legal document that governs both the use of our services and the purcha
 - :white_check_mark: **Can:** create account, use Exegol as specified in your plan, cancel anytime
 - :x: **Can't:** use for illegal activities, share account credentials, use Community (i.e., free) plan commercially
 - :warning: **Must:** be 18+ or supervised by a parent/guardian, comply with export laws
-- Read more [here](./terms-of-service.md)
+- Read more [here](./terms-of-sale-and-service.md)
 
 ## End User License Agreement 
 The license agreement that governs the use of our software components, including installation, usage rights, and restrictions.
