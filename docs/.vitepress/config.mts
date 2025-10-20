@@ -222,7 +222,7 @@ function sidebarLegal(): SidebarItemWithBadge[] {
           link: "legal-notice"
         },
         {
-          text: "Terms of Service",
+          text: "Terms of Sale and Service",
           link: "terms-of-sale-and-service"
         },
         {

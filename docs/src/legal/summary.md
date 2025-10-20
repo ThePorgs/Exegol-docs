@@ -4,7 +4,7 @@ icon: scale
 
 # Legal
 
-## Terms of Service and Sale
+## Terms of Sale and Service
 Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings.
 
 - :white_check_mark: **Can:** create account, use Exegol as specified in your plan, cancel anytime

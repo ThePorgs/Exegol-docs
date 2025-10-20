@@ -30,7 +30,7 @@ The collected data is used for:
 ## 4. Legal basis for processing
 
 Data processing is based on:
-- Contract execution (acceptance of Terms of Service)
+- Contract execution (acceptance of Terms of Sale and Service)
 - Execorp's legitimate interest (service improvement, security)
 - Compliance with legal obligations
 
