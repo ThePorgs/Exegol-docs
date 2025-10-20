@@ -41,7 +41,7 @@ Except where expressly permitted by the Exegol Software License (ESL) (https://d
 
 ## 3. Commercial use
 
-Commercial use of the Software, including but not limited to:
+Commercial use of the Software, including:
 - Using the Software in a professional or revenue-generating environment
 - Providing services to third parties
 
