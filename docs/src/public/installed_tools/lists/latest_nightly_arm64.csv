@@ -201,6 +201,7 @@ maltego,https://www.paterva.com/web7/downloads.php,A tool used for open-source i
 mariadb-client,https://github.com/MariaDB/server,MariaDB is a community-developed fork of the MySQL relational database management system. The mariadb-client package includes command-line utilities for interacting with a MariaDB server.
 masky,https://github.com/Z4kSec/Masky,Masky is a python library providing an alternative way to remotely dump domain users' credentials thanks to an ADCS. A command line tool has been built on top of this library in order to easily gather PFX or NT hashes and TGT on a larger scope
 masscan,https://github.com/robertdavidgraham/masscan,Masscan is an Internet-scale port scanner
+massdns,https://github.com/blechschmidt/massdns,MassDNS is a simple high-performance DNS stub resolver targeting those who seek to resolve a massive amount of domain names in the order of millions or even billions.
 mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 mfcuk,https://github.com/nfc-tools/mfcuk,Implementation of an attack on Mifare Classic and Plus RFID cards
