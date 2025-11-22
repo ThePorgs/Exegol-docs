@@ -71,19 +71,10 @@ commands in the history, without changing the values every time.
 
 ## The best reverse shells
 
-- `shellerator` can be used to generate a reverse shell command
-  dynamically
-- on the attacker's side, a reverse shell obtained through a `netcat`
-  tunnel can be improved (see
-  [ropnop.com](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/)
-  or [0xffsec.com](https://0xffsec.com/handbook/shells/full-tty/))
-- simple alternative way to have an upgrade netcat reverse shell: use
-  `rlwrap <netcat listener command>`
-- instead of using `netcat` and "upgrade" the shell manually,
-  `pwncat-cs`
-  ([calebstewart/pwncat](https://github.com/calebstewart/pwncat)) can be
-  used to obtain an even better reverse shell experience (especially
-  with UNIX-like targets).
+- `shellerator` can be used to generate a reverse-shell command dynamically.
+- On the attacker's side, a reverse shell obtained through a `netcat` tunnel can be improved (see [ropnop.com](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/) or [0xffsec.com](https://0xffsec.com/handbook/shells/full-tty/)).
+- A simple alternative to upgrading a netcat reverse shell is to use `rlwrap <netcat listener command>`.
+- Instead of using `netcat` and "upgrading" the shell manually, `pwncat-cs` ([calebstewart/pwncat](https://github.com/calebstewart/pwncat)) can be used to obtain an even better reverse-shell experience, especially with UNIX-like targets.
 
 ## Keyboard shortcuts
 
@@ -107,7 +98,7 @@ commands in the history, without changing the values every time.
 > [!SUCCESS] Tip
 > To see every alias in your exegol image, run the command:
 >
-> ``` 
+> ```
 > alias
 > ```
 
@@ -115,7 +106,7 @@ commands in the history, without changing the values every time.
 > You can see the complete command configured for an alias with the
 > command:
 >
-> ``` 
+> ```
 > alias <alias_name>
 > ```
 
