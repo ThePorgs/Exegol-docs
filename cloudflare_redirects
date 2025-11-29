@@ -1,0 +1,8 @@
+# https://developers.cloudflare.com/pages/configuration/redirects/
+# [source]  [destination]   [code?]
+
+# Static redirects
+/legal/terms-of-service   /legal/terms-of-sale-and-service
+
+# Dynamic redirects
+# /source/*   /destination/:splat

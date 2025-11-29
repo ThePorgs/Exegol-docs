@@ -28,6 +28,7 @@ BBOT,https://github.com/blacklanternsecurity/bbot,BEE·bot is a multipurpose sca
 bettercap,https://github.com/bettercap/bettercap,The Swiss Army knife for 802.11 / BLE / and Ethernet networks reconnaissance and MITM attacks.
 binaryninja,https://binary.ninja,An interactive decompiler - disassembler - debugger and binary analysis platform built by reverse engineers for reverse engineers.
 binwalk,https://github.com/ReFirmLabs/binwalk,Binwalk is a tool for analyzing / reverse engineering / and extracting firmware images.
+Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 BloodHound-CE,https://github.com/SpecterOps/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments (Community Edition)
 bloodhound-ce.py,https://github.com/fox-it/BloodHound.py,BloodHound-CE ingestor in Python.
@@ -120,6 +121,7 @@ GeoPincer,https://github.com/tloja/GeoPincer,GeoPincer is a script that leverage
 geowordlists,https://github.com/p0dalirius/GeoWordlists,tool to generate wordlists of passwords containing cities at a defined distance around the client city.
 gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
 ghidra,https://github.com/NationalSecurityAgency/ghidra,Software reverse engineering suite of tools.
+GHunt,https://github.com/mxrch/GHunt,Investigate Google Accounts with emails
 git-dumper,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
 githubemail,https://github.com/paulirish/github-email,a command-line tool to retrieve a user's email from Github.
 gitleaks,https://github.com/trufflesecurity/gitleaks,Gitleaks scans hardcoded secrets in git repositories and folders.
@@ -162,6 +164,7 @@ ida,https://www.hex-rays.com/products/ida/,Interactive disassembler for software
 ignorant,https://github.com/megadose/ignorant,holehe but for phone numbers.
 imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose / or convert bitmap images.
 impacket,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
+Instaloader,https://github.com/instaloader/instaloader,Download content/captions/metadata from Instagram
 ipinfo,https://github.com/ipinfo/cli,Get information about an IP address or hostname.
 iptables,https://linux.die.net/man/8/iptables,Userspace command line tool for configuring kernel firewall
 jackit,https://github.com/insecurityofthings/jackit,Exploit to take over a wireless mouse and keyboard
@@ -206,7 +209,9 @@ manspider,https://github.com/blacklanternsecurity/MANSPIDER,Manspider will crawl
 mariadb-client,https://github.com/MariaDB/server,MariaDB is a community-developed fork of the MySQL relational database management system. The mariadb-client package includes command-line utilities for interacting with a MariaDB server.
 masky,https://github.com/Z4kSec/Masky,Masky is a python library providing an alternative way to remotely dump domain users' credentials thanks to an ADCS. A command line tool has been built on top of this library in order to easily gather PFX or NT hashes and TGT on a larger scope
 masscan,https://github.com/robertdavidgraham/masscan,Masscan is an Internet-scale port scanner
+massdns,https://github.com/blechschmidt/massdns,MassDNS is a simple high-performance DNS stub resolver targeting those who seek to resolve a massive amount of domain names in the order of millions or even billions.
 mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
+Metagoofil,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
 metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 mfcuk,https://github.com/nfc-tools/mfcuk,Implementation of an attack on Mifare Classic and Plus RFID cards
 mfdread,https://github.com/zhovner/mfdread,Tool for reading/writing Mifare RFID tags
@@ -246,7 +251,6 @@ onelistforall,https://github.com/six2dez/OneListForAll,Rockyou for web fuzzing
 OneRuleToRuleThemStill rules,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 onesixtyone,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
 OpenVPN,https://openvpn.net/,Fast and Easy Zero-Trust VPN Fully in Your Control
-osrframework,https://github.com/i3visio/osrframework,Include references to a bunch of different applications related to username checking / DNS lookups / information leaks research / deep web search / regular expressions extraction and many others.
 Pantagrule rules,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
 pass,https://github.com/hashcat/hashcat,TODO
 PassTheCert,https://github.com/AlmondOffSec/PassTheCert,PassTheCert is a tool to extract Active Directory user password hashes from a domain controller's local certificate store.
@@ -418,6 +422,7 @@ Yalis,https://github.com/EatonChips/yalis,Yet Another LinkedIn Scraper
 youtubedl,https://github.com/ytdl-org/youtube-dl,Download videos from YouTube and other sites.
 ysoserial,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
 yt-dlp,https://github.com/yt-dlp/yt-dlp,A youtube-dl fork with additional features and fixes
+Zehef,https://github.com/N0rz3/Zehef,Zehef is an osint tool to track emails
 zerologon,https://github.com/SecuraBV/CVE-2020-1472,Exploit for the Zerologon vulnerability (CVE-2020-1472).
 zipalign,https://developer.android.com/studio/command-line/zipalign,arguably the most important step to optimize your APK file
 zsteg,https://github.com/zed-0xff/zsteg,Detect steganography hidden in PNG and BMP images

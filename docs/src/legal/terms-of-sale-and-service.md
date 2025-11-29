@@ -1,10 +1,10 @@
-# Terms of Service and Sale
+# Terms of Sale and Service
 
 Execorp SAS – headquartered at 122 rue Amelot, 75011 Paris, France, and registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536, provides services including the Exegol Suite (websites, applications, software) under the following terms.
 
 This document constitutes both our Terms of Service and Terms of Sale, governing the use of our services as well as the purchase of subscriptions, licenses, and other related offerings.
 
-By creating an account, subscribing, accessing, or using any part of the Exegol Suite, you agree to these Terms of Service and Sale ("Terms"). If you do not accept these Terms, you must not use the Services.
+By creating an account, subscribing, accessing, or using any part of the Exegol Suite, you agree to these Terms of Sale and Service ("Terms"). If you do not accept these Terms, you must not use the Services.
 
 ## 1. Acceptance of terms
 
@@ -19,7 +19,7 @@ Additional policies are incorporated by reference and form an integral part of t
 
 ### 1.1 Hierarchy of Legal Terms
 
-These Terms of Service and Sale take precedence over all other legal documents, policies, or terms unless explicitly stated otherwise in a specific written agreement signed by both parties. In case of conflict between different legal documents.
+These Terms of Sale and Service take precedence over all other legal documents, policies, or terms unless explicitly stated otherwise in a specific written agreement signed by both parties. In case of conflict between different legal documents.
 
 ## 2. Services offered
 
