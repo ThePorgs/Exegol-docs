@@ -227,6 +227,7 @@ neovim,https://neovim.io/,hyperextensible Vim-based text editor
 netdiscover,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
 netexec,https://github.com/Pennyw0rth/NetExec,Network scanner (Crackmapexec updated).
 nfct,https://github.com/grundid/nfctools,Tool for Near Field Communication (NFC) devices
+nfsshell,https://github.com/Supermathie/nfsshell,NFSShell is a tool for interacting with NFS shares without mounting them.
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
 nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
 nmap-parse-ouptut,https://github.com/ernw/nmap-parse-output,Converts/manipulates/extracts data from a Nmap scan output.
