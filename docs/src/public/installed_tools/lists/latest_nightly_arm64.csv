@@ -70,6 +70,7 @@ crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can sp
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 cyperoth,https://github.com/seajaysec/cypheroth,Automated extensible toolset that runs cypher queries against Bloodhound's Neo4j backend and saves output to spreadsheets.
+daclsearch,https://github.com/uknowsec/daclsearch,Exhaustive search and flexible filtering of Active Directory ACEs
 darkarmour,https://github.com/bats3c/darkarmour,a tool to detect and evade common antivirus products
 dex2jar,https://github.com/pxb1988/dex2jar,A tool to convert Android's dex files to Java's jar files
 dfscoerce,https://github.com/Wh04m1001/dfscoerce,DFS-R target coercion tool
@@ -329,6 +330,7 @@ searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search
 seclists,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
 semgrep,https://github.com/returntocorp/semgrep/,Static analysis tool that supports multiple languages and can find a variety of vulnerabilities and coding errors.
 shadowcoerce,https://github.com/ShutdownRepo/shadowcoerce,Utility for bypassing the Windows Defender antivirus by hiding a process within a legitimate process.
+sharker,https://github.com/synacktiv/sharker,A fast and reliable network capture analyzer
 shellerator,https://github.com/ShutdownRepo/Shellerator,a simple command-line tool for generating shellcode
 Sherlock,https://github.com/sherlock-project/sherlock,Hunt down social media accounts by username across social networks.
 shuffledns,https://github.com/projectdiscovery/shuffledns,A fast and customizable DNS resolver that can be used for subdomain enumeration and other tasks.
