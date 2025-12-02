@@ -21,9 +21,11 @@ in recreating a new container with a new image:
 The following data will migrate to the new upgraded container:
 - Your [my-resources](/images/my-resources) customization
 - The container `/workspace` directory
-- The **Zsh** and **Bash** command history
+- The **Zsh**, **Bash** and **python3** command history
 - (From Exegol images `3.1.8`) The exegol-history database
+- The **NetExec** and **Responder** database and configuration files
 - The [TriliumNext](https://github.com/TriliumNext/Trilium) notes database
+- The **Hashcat** and **John** "potfiles"
 - The following files:
   - `/etc/hosts`
   - `/etc/resolv.conf`
