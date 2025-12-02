@@ -278,7 +278,7 @@ sudo iptables -t nat -A POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
 
 `192.168.80.0/24` is the default subnet of the `virbr0` bridge used by KVM/libvirt and `eth0` is the network interface.
 
-This ensures KVM virtual machines can access the internet even when Exogol is running.
+This ensures KVM virtual machines can access the internet even when Exegol is running.
 
 ## Error When Mounting NFS
 
