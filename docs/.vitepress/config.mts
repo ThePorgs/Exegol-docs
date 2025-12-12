@@ -102,6 +102,7 @@ export default defineConfig({
     }
   },
   markdown: {
+    math: true,
     config(md) {
         md.use(tabsMarkdownPlugin);
         md.use(githubAlertsPlugin);
