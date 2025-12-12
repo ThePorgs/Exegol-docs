@@ -20,23 +20,35 @@ This article comes nearly six years after Exegol began and takes a straightforwa
 
 ### Installation and update hassles
 
-We all waste too much time just getting our tools installed and up to date. There are so many different ways to install things: package managers, cloning Git repos, downloading binaries, or compiling by hand. Tools get updated often, so we’re constantly re-installing, reading instructions that might be out of date, and running into new errors. If documentation is missing or confusing, we end up searching forums and random blog posts for help.
+We all waste too much time just getting our tools installed and up to date. There are so many different ways to install things: package managers, cloning Git repos, downloading binaries, or compiling by hand. Tools get updated often, so we're constantly re-installing, reading instructions that might be out of date, and running into new errors. When something doesn't work after an update, you spend hours researching why, applying temporary patches, or finding workarounds. If documentation is missing or confusing, we end up searching forums and random blog posts for help.
 
 ### Dependency hell
 
-When you install several tools, their dependencies can end up in conflict. Maybe you need a specific version of Python for one tool, and a different version for another. Modern Python, for example, insists on using virtual environments to prevent breaking system packages. This is helpful, but it also means spending extra time creating, activating, and managing those environments for each project. The same headache exists with Ruby, Rust, or other languages that have their own environment managers. Sometimes you have to compile tools from source, which requires tracking down even more dependencies and handling strange errors that depend on your operating system. All of this troubleshooting often takes longer than actually using the tool.
+When you install several tools, their dependencies can end up in conflict. Maybe you need a specific version of Python for one tool, and a different version for another. Modern Python, for example, insists on using virtual environments to prevent breaking system packages. This is helpful, but it also means spending extra time creating, activating, and managing those environments for each project. The same headache exists with Ruby, Rust, Go, or other languages that have their own environment managers. Sometimes you have to compile tools from source, which requires tracking down even more dependencies and handling strange errors that depend on your operating system. All of this troubleshooting often takes longer than actually using the tool.
+
+### Learning new tools and environments
+
+Every time you need to use a tool written in a language you're not familiar with, or work with a new environment, there's a learning curve. You have to figure out how Go modules work, understand Ruby's gem system, learn Rust's cargo, or get comfortable with whatever ecosystem the tool uses. This isn't just about installation—it's about understanding the tool's ecosystem well enough to troubleshoot when things go wrong.
 
 ### Team misalignment and repeating setups
 
-In a team, everyone can end up with different versions installed, which leads to confusion and "it works on my machine" moments. Setting up the same environment on multiple machines means repeating configs, working around hardware differences, and troubleshooting again and again. People using virtual machines have to manage and revert snapshots, which takes even more time. If you mess up a snapshot, you might even lose data.
+In a team, everyone can end up with different versions installed, which leads to confusion and "it works on my machine" moments. Setting up the same environment on multiple machines means repeating configs, working around hardware differences, and troubleshooting again and again. When you change machines, switch companies, or need to reinstall, you're starting from scratch—recreating all your configurations, reinstalling tools, and rebuilding your workflow. People using virtual machines have to manage and revert snapshots, which takes even more time. If you mess up a snapshot, you might even lose data.
 
 ### Environments slowly breaking down
 
-Over time, your setup gets messy. You collect unused dependencies, settings change, and things get less stable. On bare metal, you might eventually wipe everything and start over. If you use containers, you have to understand Docker commands and configuration files, which involves its own learning curve. If your distro is missing certain tools or configs, you end up writing your own scripts or playbooks, which adds more work.
+Over time, your setup gets messy. You collect unused dependencies, settings change, and things get less stable. On bare metal, you might eventually wipe everything and start over. If you use containers, you have to understand Docker commands and configuration files, which involves its own learning curve. If your distro is missing certain tools or configs, you end up writing your own scripts or playbooks, which adds more work. And when you make a mistake—maybe you accidentally delete something important or break a critical configuration—you're looking at a full reinstall or rollback, which can take hours.
 
 ### Managing assets and unexpected breakdowns
 
-You also spend time finding, downloading, and organizing wordlists, scripts, and other resources. Sometimes, a tool update breaks your setup right in the middle of an engagement, forcing you to stop and fix things quickly. Virtual machines can take forever to boot or randomly fail when the hypervisor has issues, which interrupts your work.
+You also spend time finding, downloading, and organizing wordlists, scripts, and other resources. But where are they? Without centralized documentation or organization, you're constantly searching for that wordlist you downloaded last month, or trying to remember where you put those custom rules. Sometimes, a tool update breaks your setup right in the middle of an engagement, forcing you to stop and fix things quickly. When a command doesn't work during an audit, you waste precious time searching for an equivalent alternative instead of making progress. Virtual machines can take forever to boot or randomly fail when the hypervisor has issues, which interrupts your work.
+
+### Manual logging and documentation overhead
+
+Most of us manually log our actions and commands, which is time-consuming and error-prone. You're copying commands into a document, trying to remember when you ran them, and manually adding timestamps. When you need to reference past commands, you're scrolling through pages of notes or searching through terminal history. And if you've hardcoded credentials in your history or logs, you're spending extra time finding and replacing them before sharing anything. Screenshots may need editing to blur sensitive information, adding another layer of manual work.
+
+### End-of-mission cleanup
+
+After an engagement, you need to clean up all the data, scripts, and artifacts you've created. This isn't just about deleting files—it's about ensuring nothing sensitive remains, and organizing what needs to be kept. Without proper workspace organization, this becomes a tedious hunt through scattered directories and files.
 
 ### Upgrade anxiety and accidental sysadmin chores
 
@@ -46,18 +58,25 @@ After enough breakages, you start worrying that any upgrade might break your set
 
 We've tackled most of these pain points head-on. Here's how:
 
-- **Pre-configured Docker images with ready-to-use tools**, eliminating manual installations, compilation, dependency resolutions, and troubleshooting. Exegol users have outsourced this issue to us, the Exegol maintainers—and we like that deal. Our [images](/images/types) come with hundreds of tools pre-installed and configured, ready to go.
+- **Pre-configured Docker images with ready-to-use tools**, eliminating manual installations, compilation, dependency resolutions, and troubleshooting. Exegol users have outsourced this issue to us, the Exegol maintainers—and we like that deal. Our [images](/images/types) come with hundreds of tools pre-installed and configured, ready to go. No more researching why something doesn't work or applying temporary patches—we handle that.
 
-- **Tools installed in isolated virtual environments by default**, following our [installation standards](/contribute/images#installation-standards). Each Python tool is installed in its own virtualenv, Ruby tools are organized with rbenv, NodeJS tools in their own npm-managed sandboxes, and Rust tools are separated via cargo, all ensuring dependencies remain clean and never conflict. This means you can update or use any tool without worrying about overwriting something else or breaking your environment—the right version for every tool, automatically and reliably.
+- **Tools installed in isolated virtual environments by default**, following our [installation standards](/contribute/images#installation-standards) ensuring dependencies remain clean and never conflict. This means you can install, update or use tools without worrying about overwriting something else or breaking your environment—the right version for every tool, automatically and reliably.
 
-- **Containers that mean way less overhead than VMs**, with a [wrapper](/wrapper/features) to avoid the complexity of using containers. Easy, fast, and dedicated environments. No more hypervisor headaches or snapshot management nightmares.
+- **Containers that mean way less overhead than VMs**, with a [wrapper](/wrapper/features) to avoid the complexity of using containers. Easy, fast, and dedicated environments. No more hypervisor headaches or snapshot management nightmares. When you make a mistake or need a new environment, just spin up a fresh container in seconds.
 
 - **Cross-platform and cross-OS support**, so that you can keep your own OS without having your infosec toolbox break every now and then. Whether you're on Linux, macOS, or Windows, [Exegol works](/first-install).
 
-- **Pre-loaded offline resources** like wordlists, dictionaries, and scripts, streamlining sourcing and organization. Our [resources system](/resources/list) ensures you have what you need, when you need it, without hunting through GitHub repos or outdated forums.
+- **Pre-loaded offline resources** like wordlists, dictionaries, and scripts, all centralized in `/opt/resources`. Our [resources system](/resources/list) ensures you have what you need, when you need it, without hunting through GitHub repos or outdated forums. No more wondering where that wordlist went.
+
+- **Built-in command history with context**, featuring hundreds of pre-loaded commands with examples. Instead of searching for syntax and parameters every time, you can use Ctrl+R to browse through working examples. When a command doesn't work, you have alternatives ready in your history.
+
+- **Credential management with [Exegol-history](/images/exegol-history)** (aliased as `exh`), avoiding hardcoded credentials in your history. Credentials are stored securely and accessed via environment variables, so when you need to share logs or reports, there's no manual find-and-replace needed. This also saves a lot of time, allowing you to run commands without editing the username/password/domain everytime.
+
+- **Workspace-based organization** with persistent, dedicated folders per container. Each engagement gets its own workspace that persists even after container deletion. No more scattered files across your system—everything for a mission is organized in one place, making end-of-mission cleanup straightforward and secure.
+
+- **Shell logging** with timestamps and timezone information. Your sessions can be recorded if you enable it, so you know exactly when commands were executed without manual logging overhead.
 
 - **Mid-engagement breakdowns happen way less often**, if at all anymore. And on the rare occasion they do, spinning up a brand new environment takes seconds. No more scrambling to fix a broken setup while a client waits.
-
 
 The bottom line? We've shifted the burden of environment management from you to us. We build, so you can hack.
 
