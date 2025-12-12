@@ -221,6 +221,16 @@ cat /.exegol/build_pipeline_tests/all_commands.txt | grep -vE "^\s*$" | sort -u 
 python3 /.exegol/build_pipeline_tests/run_tests.py
 cat /.exegol/build_pipeline_tests/failed_commands.log
 ```
+> [!TIP] Recover disk space after failed custom image builds
+>  
+> When building a custom Exegol image, failed builds can leave intermediate layers and artifacts on the system. These leftovers are not automatically removed and can consume a significant amount of disk space.
+>  
+> To safely free up space, use the following command:
+>  
+> ```bash
+> docker image prune          # remove dangling images
+> ```
+> 
 
 ## My-resources
 
