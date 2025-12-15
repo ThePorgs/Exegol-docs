@@ -70,8 +70,8 @@ export default defineConfig({
       '/': { base: '/', items: sidebarMain() }
     },
     socialLinks: [
-      { icon: 'discord', link: 'https://discord.gg/cXThyp7D6P' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/company/exegol' },
+      { icon: 'discord', link: 'https://discord.exegol.com' },
+      { icon: 'linkedin', link: 'https://linkedin.exegol.com' },
       { icon: 'x', link: 'https://x.com/exegogol' },
       { icon: 'youtube', link: 'https://www.youtube.com/@exegogol' },
       { icon: 'github', link: 'https://github.com/ThePorgs/Exegol' },
@@ -102,6 +102,7 @@ export default defineConfig({
     }
   },
   markdown: {
+    math: true,
     config(md) {
         md.use(tabsMarkdownPlugin);
         md.use(githubAlertsPlugin);

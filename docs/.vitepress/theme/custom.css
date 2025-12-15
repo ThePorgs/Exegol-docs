@@ -792,3 +792,10 @@ html.dark .dark-theme-image {
   color: var(--vp-c-text-subtle);
   font-size: 14px;
 }
+
+/* MATH EQUATIONS (KaTeX) */
+
+.vp-doc mjx-container {
+  color: var(--vp-c-text-secondary);
+  font-size: 14px;
+}
