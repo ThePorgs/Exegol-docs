@@ -50,31 +50,35 @@ Most of us manually log our actions and commands, which is time-consuming and er
 
 After an engagement, you need to clean up all the data, scripts, and artifacts you've created. This isn't just about deleting files—it's about ensuring nothing sensitive remains, and organizing what needs to be kept. Without proper workspace organization, this becomes a tedious hunt through scattered directories and files.
 
-### Upgrade anxiety and accidental sysadmin chores
+### Upgrade anxiety and sysadmin chores
 
 After enough breakages, you start worrying that any upgrade might break your setup. Most of us have a horror story about running `apt upgrade`. For teams, someone always ends up maintaining the shared infrastructure, doing sysadmin chores instead of offensive security work.
+
+![](/assets/blog/running_apt_upgrade.png)
 
 ## Have we solved those issues?
 
 We've tackled most of these pain points head-on. Here's how:
 
-- **Pre-configured Docker images with ready-to-use tools**, eliminating manual installations, compilation, dependency resolutions, and troubleshooting. Exegol users have outsourced this issue to us, the Exegol maintainers—and we like that deal. Our [images](/images/types) come with hundreds of tools pre-installed and configured, ready to go. No more researching why something doesn't work or applying temporary patches—we handle that.
+- **Pre-configured Docker images with ready-to-use and unit-tested tools**, eliminating manual installations, compilation, dependency resolutions, and troubleshooting. Exegol users have outsourced this issue to us, the Exegol maintainers—and we like that deal. Our [images](/images/types) come with hundreds of tools pre-installed, tested and configured, ready to go. No more researching why something doesn't work or applying temporary patches—we handle that.
 
 - **Tools installed in isolated virtual environments by default**, following our [installation standards](/contribute/images#installation-standards) ensuring dependencies remain clean and never conflict. This means you can install, update or use tools without worrying about overwriting something else or breaking your environment—the right version for every tool, automatically and reliably.
 
 - **Containers that mean way less overhead than VMs**, with a [wrapper](/wrapper/features) to avoid the complexity of using containers. Easy, fast, and dedicated environments. No more hypervisor headaches or snapshot management nightmares. When you make a mistake or need a new environment, just spin up a fresh container in seconds.
 
-- **Cross-platform and cross-OS support**, so that you can keep your own OS without having your infosec toolbox break every now and then. Whether you're on Linux, macOS, or Windows, [Exegol works](/first-install).
+- **Customization options** that let users integrate their own tools and configurations right at container creation. Proving useful when switching machines, among other things.
+
+- **Seamless cross-platform compatibility**, ensuring your infosec toolbox fits smoothly with your operating system. Whether it is Linux, macOS, or Windows, Exegol installs on your platform of choice without cluttering your system. Everything stays tidy, and you get the same powerful experience everywhere.
 
 - **Pre-loaded offline resources** like wordlists, dictionaries, and scripts, all centralized in `/opt/resources`. Our [resources system](/resources/list) ensures you have what you need, when you need it, without hunting through GitHub repos or outdated forums. No more wondering where that wordlist went.
 
-- **Built-in command history with context**, featuring hundreds of pre-loaded commands with examples. Instead of searching for syntax and parameters every time, you can use Ctrl+R to browse through working examples. When a command doesn't work, you have alternatives ready in your history.
+- **Built-in command history with context**, featuring hundreds of pre-loaded commands with examples. Instead of searching for syntax and parameters every time, you can use Ctrl+R to browse through working examples.
 
-- **Credential management with [Exegol-history](/images/exegol-history)** (aliased as `exh`), avoiding hardcoded credentials in your history. Credentials are stored securely and accessed via environment variables, so when you need to share logs or reports, there's no manual find-and-replace needed. This also saves a lot of time, allowing you to run commands without editing the username/password/domain everytime.
+- **Credential management with [Exegol-history](/images/exegol-history)** (aliased as `exh`), avoiding hardcoded credentials in your history commands. Credentials are stored securely and accessed via environment variables, so when you need to share logs or reports, there's no manual find-and-replace needed. This also saves a lot of time, allowing you to run commands without editing the username/password/domain everytime.
 
 - **Workspace-based organization** with persistent, dedicated folders per container. Each engagement gets its own workspace that persists even after container deletion. No more scattered files across your system—everything for a mission is organized in one place, making end-of-mission cleanup straightforward and secure.
 
-- **Shell logging** with timestamps and timezone information. Your sessions can be recorded if you enable it, so you know exactly when commands were executed without manual logging overhead.
+- **Shell logging** with timestamps and timezone information. Your terminal sessions can be recorded if you enable it, so you know exactly what commands were executed, when they were, and what output they produced.
 
 - **Mid-engagement breakdowns happen way less often**, if at all anymore. And on the rare occasion they do, spinning up a brand new environment takes seconds. No more scrambling to fix a broken setup while a client waits.
 
@@ -97,11 +101,14 @@ Considering the [1% rule](https://en.wikipedia.org/wiki/1%25_rule) or the [90-9-
 
 ## How much time have we saved?
 
-Let's do some math. Say the solutions Exegol implements saves its users 5 minutes per work day, 200 days per year. That's 1,000 minutes (or about 16.67 hours) saved per user annually.
+Let's do some math. Say the solutions Exegol implements saves its users 5 minutes per work day, 200 days per year. That's 1,000 minutes (or about 16.67 hours) saved per user annually. Actual savings are likely higher than this conservative estimate, but without measured data supporting it let's use this baseline for illustration.
 
 Say we started with 1 user in 2020, and ended up with 20k by the end of 2025.
 
 If we assume that the growth has been linear (which is how we felt it, but there's no actual data supporting that), it's a total of 1M hours. If we assume it was an exponential growth, it's a total of 200k hours.
+
+![](/assets/blog/1M_hours_dark.png){data-theme="dark"}
+![](/assets/blog/1M_hours_light.png){data-theme="light"}
 
 **The calculations:**
 
