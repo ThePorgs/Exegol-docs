@@ -90,8 +90,8 @@ Here’s a snapshot of our community and ecosystem impact as of this writing:
 
 - 360,000+ DockerHub pulls
 - 140,000+ PyPI installs (since April 2022)
-- 3,000+ [Discord](discord.exegol.com) members (community launched in October 2022)
-- 3,000+ [LinkedIn](linkedin.exegol.com) group members (launched February 2025)
+- 3,000+ [Discord](https://discord.exegol.com) members (community launched in October 2022)
+- 3,000+ [LinkedIn](https://linkedin.exegol.com) group members (launched February 2025)
 - 50+ GitHub contributors, with around 10 considered "active"
 
 
