@@ -44,10 +44,11 @@ The volume section allows to change the default path for various volumes.
 > containers will not be affected by the update and will keep the
 > original paths they were created with.
 
-- `my_resources_path`: the "my-resources" volume is a storage space
-  dedicated to the user to customize his environment and tools. This volume is, by default, shared across all exegol containers. See [details about it](/wrapper/features#exegol-configuration). Be careful **not** to use a folder with **existing data**, in which case their permissions will be automatically modified to enable access sharing. This change will not be applied to already existing exegol containers.
+- `my_resources_path`: the "my-resources" volume is a storage space dedicated to the user to customize his environment
+ and tools. This volume is, by default, shared across all exegol containers. See [details about it](/wrapper/features#exegol-configuration). Be careful **not** to use a folder with **existing data**, in which case their permissions will be automatically modified to enable access sharing. This change will not be applied to already existing exegol containers.
 - `exegol_resources_path`: exegol-resources are data and static tools downloaded in addition to docker images. These tools are complementary and are accessible directly from the host. See [details](/resources/list).
 - `private_workspace_path`: when containers do not have an explicitly declared workspace at their creation (i.e. with `--cwd-mount`, or `--workspace`), a dedicated folder will be created at this location to share the workspace with the host but also to save the data after deleting the container.
+- `json_shell_logging_path`: folder in which the JSON logs of all new containers will be stored. See [details about it](/wrapper/features#json-shell-logging).
 
 ### Config
 
@@ -59,10 +60,19 @@ The config section allows you to modify the default behavior of the Exegol wrapp
 - `enable_exegol_resources`: Enables or not the exegol resources module by default on any new container. (Default: `True`)
 
 #### Shell logging
+
 Change the configuration of the shell logging functionality.
 - `always_enable`: Always enable shell logging in all Exegol shells. (Default: `False`)
 - `logging_method`: Choice of the method used to record the sessions, `script` or `asciinema`. (Default: `asciinema`)
 - `enable_log_compression`: Enable automatic compression of log files (with gzip). (Default: `True`)
+
+#### JSON shell logging <Badge type="enterprise" />
+
+Change the configuration of the JSON shell logging functionality.
+- `always_enable`: Always enable shell logging in all Exegol shells. (Default: `False`)
+- `log_group_gid`: If the logs agent (e.g. Splunk Universal Forwarder, Elastic lightweight data shipper, Fluentd data collector etc) belongs to a different group than the user,
+  it is possible to share the log files in read-only mode with another group. Only available for UNIX systems.
+  (Default to `-1` to refer to the group of the user who is using exegol)
 
 #### Desktop
 

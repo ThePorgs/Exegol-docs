@@ -2,35 +2,36 @@
 
 Below is a, non-exhaustive, list of what the wrapper supports:
 
-| Feature                                       | Description                                                                                                                 |
-|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| [Graphical desktop](#desktop)                 | Hosts a complete graphics environment available via a web page or VNC                                                       |
-| [X11 sharing](#x11-sharing-gui)               | Sharing of the graphic environment between the container and the host                                                       |
-| [Workspace](#workspace)                       | Persistent and shared workspace with the host                                                                               |
-| [Update-fs](#update-fs)                       | Permission sharing between the container and the host                                                                       |
-| [OpenVPN connection](#openvpn-connection)     | Opening an isolated OpenVPN tunnel dedicated to the Exegol container                                                        |
-| [WireGuard VPN connection](#wireguard-vpn)    | <Badge type="pro" /> <Badge type="enterprise" /> Opening an isolated WireGuard VPN tunnel dedicated to the Exegol container |
-| [Shell logging](#shell-logging)               | Recording of sessions (input and output) in log files with date and time                                                    |
-| [Network modes](#network-modes)               | Different network configurations for container isolation and connectivity                                                   |
-| [Shared timezones](#shared-timezones)         | Sharing the host's timezone configuration                                                                                   |
-| [Exegol-resources](#exegol-resources)         | Easy access to a collection of resources and tools                                                                          |
-| [My-resources](#my-resources)                 | User space dedicated to customization                                                                                       |
-| [Volume sharing](#volume-sharing)             | Support for specific volume addition                                                                                        |
-| [Port sharing](#port-sharing)                 | Support for port publishing                                                                                                 |
-| [Env. variables](#env-variables)              | Support for environment variable configuration                                                                              |
-| [Device sharing](#device-sharing)             | Support for hardware sharing                                                                                                |
-| [Custom hostname](#custom-hostname)           | Support for customizing a specific container hostname                                                                       |
-| [Comments](#comments)                         | User can add any text comments to the container                                                                             |
-| [Capabilities](#capabilities)                 | Support for adding specific capabilities                                                                                    |
-| [Privileged](#privileged)                     | Support of the privileged mode                                                                                              |
-| [Multi-architecture](#multi-architecture)     | Support for AMD64 and ARM64 architectures                                                                                   |
-| [Local image](#local-image-building)          | Customized local image building                                                                                             |
-| [Remote image](#remote-image-pulling)         | Pre-built image available for download                                                                                      |
-| [Custom images](#custom-images)               | <Badge type="enterprise"/> Using different images names                                                                     |
-| [Custom registry](#custom-registry)           | <Badge type="enterprise"/> Pre-built image available for download                                                           |
-| [Command execution](#command-execution)       | Execution of specific command                                                                                               |
-| [Daemon execution](#daemon-execution)         | Support of the command execution in the background                                                                          |
-| [Temporary containers](#temporary-containers) | Support for command execution in a dedicated and temporary environment                                                      |
+| Feature                                       | Description                                                                                                                                            |
+|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Graphical desktop](#desktop)                 | Hosts a complete graphics environment available via a web page or VNC                                                                                  |
+| [X11 sharing](#x11-sharing-gui)               | Sharing of the graphic environment between the container and the host                                                                                  |
+| [Workspace](#workspace)                       | Persistent and shared workspace with the host                                                                                                          |
+| [Update-fs](#update-fs)                       | Permission sharing between the container and the host                                                                                                  |
+| [OpenVPN connection](#openvpn-connection)     | Opening an isolated OpenVPN tunnel dedicated to the Exegol container                                                                                   |
+| [WireGuard VPN connection](#wireguard-vpn)    | Opening an isolated WireGuard VPN tunnel dedicated to the Exegol container                                                                             |
+| [Shell logging](#shell-logging)               | Recording of sessions (input and output) in log files with date and time                                                                               |
+| [JSON shell logging](#json-shell-logging)     | <Badge type="enterprise" /> Records every command in an Exegol container as **JSON** for easy ingestion and parsing in log platforms (Splunk/Elastic). |
+| [Network modes](#network-modes)               | Different network configurations for container isolation and connectivity                                                                              |
+| [Shared timezones](#shared-timezones)         | Sharing the host's timezone configuration                                                                                                              |
+| [Exegol-resources](#exegol-resources)         | Easy access to a collection of resources and tools                                                                                                     |
+| [My-resources](#my-resources)                 | User space dedicated to customization                                                                                                                  |
+| [Volume sharing](#volume-sharing)             | Support for specific volume addition                                                                                                                   |
+| [Port sharing](#port-sharing)                 | Support for port publishing                                                                                                                            |
+| [Env. variables](#env-variables)              | Support for environment variable configuration                                                                                                         |
+| [Device sharing](#device-sharing)             | Support for hardware sharing                                                                                                                           |
+| [Custom hostname](#custom-hostname)           | Support for customizing a specific container hostname                                                                                                  |
+| [Comments](#comments)                         | User can add any text comments to the container                                                                                                        |
+| [Capabilities](#capabilities)                 | Support for adding specific capabilities                                                                                                               |
+| [Privileged](#privileged)                     | Support of the privileged mode                                                                                                                         |
+| [Multi-architecture](#multi-architecture)     | Support for AMD64 and ARM64 architectures                                                                                                              |
+| [Local image](#local-image-building)          | Customized local image building                                                                                                                        |
+| [Remote image](#remote-image-pulling)         | Pre-built image available for download                                                                                                                 |
+| [Custom images](#custom-images)               | <Badge type="enterprise"/> Using different images names                                                                                                |
+| [Custom registry](#custom-registry)           | <Badge type="enterprise"/> Pre-built image available for download                                                                                      |
+| [Command execution](#command-execution)       | Execution of specific command                                                                                                                          |
+| [Daemon execution](#daemon-execution)         | Support of the command execution in the background                                                                                                     |
+| [Temporary containers](#temporary-containers) | Support for command execution in a dedicated and temporary environment                                                                                 |
 
 > [!TIP]
 > Exegol uses Docker images and containers. Understanding the difference
@@ -232,7 +233,7 @@ See the options `--vpn VPN` and `--vpn-auth VPN_AUTH` of the
 > manually**, you can create your container with the following
 > parameters: `exegol start --vpn ''`
 
-### WireGuard VPN <Badge type="pro" /> <Badge type="enterprise" />
+### WireGuard VPN
 
 Exegol supports WireGuard VPN tunnel configuration to **automatically**
 establish a VPN tunnel at container **startup** (since Exegol images version `3.1.8`).
@@ -317,7 +318,7 @@ To view/replay the logs from your host, you must **install** `asciinema` on your
 > - When you share or play an `asciinema` video, you can **copy** and **paste** any command/text it contains.
 
 
-=== script  
+=== script
 
 **script** is the "classic" method of session logging, it was also the
 only option available before version `3.0.0` of exegol images. This
@@ -336,6 +337,47 @@ method simply records **all** incoming (stdin) and outgoing
 > read the logs.
 
 :::
+
+### JSON shell logging <Badge type="new"/><Badge type="enterprise" />
+
+JSON Shell Logging is an additional logging capability that complements the existing Shell logging feature.
+
+Instead of (or in addition to) recording an interactive session as "terminal output", it focuses on recording **each user command** as a **structured JSON line**, making it easier to ingest, parse, and centralize operational traces in SIEM/log platforms (e.g., Splunk, Elastic, or any internal log pipeline).
+
+Traditional session logging is great for replaying or auditing a terminal session, but it’s not always ideal for automated processing. With JSON output, each command becomes a clean, machine-friendly event that can be:
+- shipped reliably to a log collector,
+- indexed with consistent fields,
+- queried efficiently,
+- correlated with other telemetry sources.
+
+Each command generates a single-line JSON entry that contains:
+- Execution start timestamp
+- Execution end timestamp
+- Current working directory (CWD)
+- Command exit code
+- User-entered command (as typed)
+- Fully resolved command (aliases expanded and environment variables resolved)
+- Shell type (Zsh)
+- Container name
+- Hostname
+
+This structure is designed to reduce ambiguity and accelerate downstream parsing and enrichment.
+
+> [!WARNING] Confidentiality
+> JSON logs may contain sensitive information (commands, paths, environment-derived values, credentials, password, secrets, etc). They must be handled with great care:
+> - store them only on trusted and secured systems,
+> - apply strict access controls,
+> - treat them as high-sensitivity audit data.
+
+> [!INFO] Shell compatibility
+> 
+> Only **ZSH** is officially supported.
+> Bash can work in a degraded mode, but it is not officially supported.
+
+From the [Exegol configuration file](/wrapper/configuration#configuration-file), you can:
+- Enable JSON Shell Logging by default for all newly created containers
+- Change the directory where JSON logs for containers are stored
+- Configure a Unix group that will have read permissions on the log files (Unix-only)
 
 ### Network modes
 

@@ -83,7 +83,7 @@ When a new container is created, it is possible to:
 When the container already exists, you cannot change the default privileges mode, capabilities or share new devices.
 However, it is possible to spawn a **single** shell session with **all capabilities** with `--cap ALL`. The capabilities won't be added to the container itself and will only be valid for the specific shell the flag was enabled for.
 
-### Network modes <Badge type="new"/>
+### Network modes
 
 Exegol supports different network modes to suit various use cases:
 
@@ -206,6 +206,17 @@ to record **everything** that happens in the exegol container (commands typed an
 > When the `-l`/`--log` option is enabled during the **creation** of a
 > **new** container, all future shells will be **automatically logged**
 > for this container.
+
+### JSON shell logging <Badge type="new"/><Badge type="enterprise"/>
+
+This feature records every command executed in an Exegol container and writes it as structured JSON entries (with rich metadata)
+to streamline automated log shipping and parsing in central platforms such as Splunk or Elastic.
+See more details in the [Exegol features documentation](/wrapper/features#json-shell-logging).
+
+Can be enabled with the `--log-json` / `-js` option or through your [Exegol configuration file](/wrapper/configuration#configuration-file).
+
+> [!WARNING]
+> You cannot enable JSON shell logging on an already existing container.
 
 ### Session specific
 
