@@ -5,11 +5,12 @@ icon: scale
 # Legal
 
 ## Terms of Sale and Service
-Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings.
+Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings. Includes detailed information about subscription plans (Community, Pro, Enterprise) and their limitations.
 
 - :white_check_mark: **Can:** create account, use Exegol as specified in your plan, cancel anytime
-- :x: **Can't:** use for illegal activities, share account credentials, use Community (i.e., free) plan commercially
+- :x: **Can't:** use for illegal activities, share account credentials, use Community (i.e., free) plan commercially, can't resell/repackage/etc. without separate agreement (i.e., commercial exploitation)
 - :warning: **Must:** be 18+ or supervised by a parent/guardian, comply with export laws
+- :two: **Pro plan:** max 2 licenses per account (1 license = 1 machine); Enterprise for more
 - Read more [here](./terms-of-sale-and-service.md)
 
 ## End User License Agreement 
@@ -21,11 +22,11 @@ The license agreement that governs the use of our software components, including
 - Read more [here](./eula.md)
 
 ## Software License
-Gverns the use of our open-source components, including the transition from GPL3, and restrictions regarding commercial use or exploitation.
+Governs the use of our open-source components, including the transition from GPL3, and restrictions regarding commercial use or exploitation.
 
-- :unlock: **Community use:** personal, educational, non-commercial only
-- :moneybag: **Commercial use:** requires paid Pro/Enterprise subscription
-- :two: **Pro plan limit:** max 2 active licenses per user
+- :white_check_mark: **Community use:** personal, educational, non-commercial only
+- :warning: **Commercial use:** allowed with Pro/Enterprise subscription for your own business operations (e.g., pentesting, bug bounty, auditing, red teaming, internal training, etc.)
+- :x: **Commercial exploitation:** strictly prohibited without separate written agreement (reselling, managed services, repackaging)
 - Read more [here](./software-license.md)
 
 ## Privacy Policy

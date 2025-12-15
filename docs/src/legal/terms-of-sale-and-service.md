@@ -27,7 +27,7 @@ Execorp offers the Exegol Suite through several plans:
 
 Commercial use (i.e., using Exegol as part of your professional activities, in a business or enterprise environment, for internal training or documentation, or as part of your security operations) is allowed for Pro and Enterprise subscription holders. 
 
-Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp. Commercial exploitation is defined in the Exegol Software License (ESL) Section 3.2.2 (https://docs.exegol.com/legal/software-license)
+Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp. Commercial exploitation is defined in the Exegol Software License (ESL) Section 3.2.2 (https://docs.exegol.com/legal/software-license#_3-2-2-prohibited-commercial-exploitation)
 
 ### 2.1 Community plan
 
