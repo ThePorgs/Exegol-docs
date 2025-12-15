@@ -24,9 +24,52 @@ These Terms of Sale and Service take precedence over all other legal documents, 
 ## 2. Services offered
 
 Execorp offers the Exegol Suite through several plans:
-- **Community plan**: For non-commercial personal use only
-- **Pro plan**: Paid, for commercial use by individuals, limited to two active licenses
-- **Enterprise plan**: Paid, designed for businesses with floating licenses, team management, and custom options
+
+Commercial use (i.e., using Exegol as part of your professional activities, in a business or enterprise environment, for internal training or documentation, or as part of your security operations) is allowed for Pro and Enterprise subscription holders. 
+
+Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp. Commercial exploitation is defined in the Exegol Software License (ESL) Section 3.2.2 (https://docs.exegol.com/legal/software-license)
+
+### 2.1 Community plan
+
+The Community plan is free and intended for non-commercial personal use only. Use of the Community plan is strictly limited to:
+- Academic research
+- Individual learning
+- Participation in cybersecurity competitions (CTF, hackathons)
+- Other strictly non-commercial purposes
+
+Commercial use is not permitted under the Community plan.
+
+### 2.2 Pro plan
+
+The Pro plan is a paid subscription designed for individuals who need to use Exegol in a commercial context.
+
+**License limitations:**
+- A single Pro subscription allows for one or two licenses (i.e., seats)
+- Each license permits activation on a single machine
+- The number of licenses is defined at the time of purchase and can be modified through the dashboard (dashboard.exegol.com)
+- Each account may hold only one Pro subscription, with a maximum of two licenses per account
+- To activate Exegol on more than two machines under one account, an Enterprise subscription is required
+
+**Permitted use:**
+With a valid Pro subscription, you are permitted to use Exegol in a commercial context, such as:
+- Using Exegol as part of your professional activities
+- Using Exegol in your business or enterprise environment
+- Using Exegol for internal training or documentation
+- Using Exegol as part of your security operations
+
+### 2.3 Enterprise plan
+
+The Enterprise plan is a paid subscription designed for businesses and organizations that require:
+- More than two licenses per account
+- Licenses easily assigned to users from a centralized interface
+- Team management features
+- Additional options and configurations
+- Dedicated support
+
+Enterprise subscriptions may include custom terms and conditions as specified in separate agreements.
+
+**Permitted use:**
+Enterprise subscribers have the same commercial use rights as Pro subscribers, with additional flexibility for team-based deployments and larger-scale operations.
 
 Plan and pricing details are available on the public landing page at https://exegol.com and may evolve over time.
 

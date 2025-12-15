@@ -40,9 +40,10 @@ Execorp grants the user a free, personal, non-exclusive, non-transferable, and r
 - Individual learning
 - Participation in cybersecurity competitions (CTF, hackathons)
 
-### 3.2 Commercial Use and Exploitation
+### 3.2 Commercial use and exploitation
 
 #### 3.2.1 Allowed Commercial Use (with subscription)
+
 With a valid subscription (Pro or Enterprise), you are permitted to use Exegol in a commercial context for your own business operations (e.g., technical assessments, penetration test, bug bounty, research), such as:
 - Using Exegol as part of your professional activities
 - Using Exegol in your business or enterprise environment
@@ -50,6 +51,7 @@ With a valid subscription (Pro or Enterprise), you are permitted to use Exegol i
 - Using Exegol as part of your security operations
 
 #### 3.2.2 Prohibited Commercial Exploitation
+
 The following activities are strictly prohibited, even with a valid subscription, as they constitute commercial exploitation of Exegol. These activities require a specific written agreement with Execorp:
 
 - Providing maintenance, support, or managed services on Exegol products
@@ -63,9 +65,7 @@ In simple terms: You may use Exegol commercially for your own business needs wit
 
 Any violation of these prohibitions may lead to legal action and immediate termination of the license.
 
-### 3.3 Specific limitation for Pro subscription
-
-An individual user holding a Pro subscription is authorized to activate up to two installations (e.g., two personal machines). Beyond this, an Enterprise subscription is mandatory.
+For specific details regarding subscription plans, license counts, and subscription limitations, please refer to the Terms of Service and Sale (https://docs.exegol.com/legal/terms-of-service).
 
 ## 4. Restrictions
 
