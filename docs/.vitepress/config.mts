@@ -184,6 +184,14 @@ function sidebarContribute(): SidebarItemWithBadge[] {
           link: "resources"
         },
         {
+          text: "My-resources",
+          link: "my-resources"
+        },
+        {
+          text: "Exegol history",
+          link: "exegol-history"
+        },
+        {
           text: "Docs",
           link: "docs"
         } 

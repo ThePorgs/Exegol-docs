@@ -1,4 +1,4 @@
-# Contributing to the Documentation
+# Contributing to the documentation
 
 The Exegol documentation is built using VitePress. This guide will help you contribute to the documentation.
 
@@ -12,27 +12,45 @@ The Exegol documentation is built using VitePress. This guide will help you cont
 6. Stage, Commit, and Push your changes
 7. Submit a Pull Request (https://github.com/ThePorgs/Exegol-docs/compare)
 
-## Documentation Structure
+## Documentation structure
 
 The documentation is organized into several sections:
 
-- General
+- **General**
     - About Exegol
-    - Getting started
-    - Frequently Asked Questions
+    - First install
+    - Specific install guides (accessible only through direct links in /first-install)
+        - Arch
+        - Fedora
+        - Gentoo
+        - ...
+    - Frequently asked questions
     - Troubleshooting
     - Tips & tricks
-- Exegol components
+- **Exegol images**
     - Images
-    - Wrapper
-    - Resources
-    - Dashboard
-- Contributing notes
-- Legal documents
+    - Tools list
+    - My resources
+    - Exegol history
+    - Credentials
+    - Services
+- **Exegol wrapper**
+    - Features
+    - Command-line actions (info, start, exec, ...)
+    - Advanced configuration
+- **Exegol resources**
+    - Resources list
+- **Dashboard**
+- **Blog** (accessible from navigation menu)
+- **Contributing** (accessible from navigation menu)
+    - About contributions
+    - Components (Images, Wrapper, Resources, My-resources, Exegol history, Docs)
+    - Miscellaneous (Source install, Signing commits, Maintainers notes)
+- **Legal** (accessible from navigation menu)
 
 All documentation files are stored in the `/docs/src` folder.
 
-## Writing Style
+## Writing style
 
 When writing documentation, maintain the following tone & voice:
 
@@ -40,11 +58,11 @@ When writing documentation, maintain the following tone & voice:
 * **Instructional and Informative**: Writing should aim to educate the reader, with clear instructions and explanations.
 * **Impersonal and Objective**: Avoid directly addressing the reader or using personal pronouns. Use passive constructions or neutral phrasing.
 
-## Markdown Features
+## Markdown features
 
 The documentation supports several markdown features:
 
-### Code Blocks
+### Code blocks
 
 Use triple backticks to delimit code blocks, specifying the language after the first set of backticks:
 
@@ -97,7 +115,7 @@ The documentation uses GitHub-flavored alerts for callouts:
 > Content
 ```
 
-### Images and Links
+### Images and links
 
 - Links: `[title](link)`
 - Images: `![](path/to/image)`
@@ -108,7 +126,7 @@ The documentation uses GitHub-flavored alerts for callouts:
 Some caption{.caption}
 ```
 
-### Theme-specific Images
+### Theme-specific images
 
 You can specify different images for light and dark themes using the `data-theme` attribute:
 
@@ -126,7 +144,7 @@ You can specify different images for light and dark themes using the `data-theme
 > [!TIP]
 > If there are spaces in the image path, either spaces need to be URL-encded (`%20`), or the following structure can be used (recommended): `![](<path/to/some image>)`
 
-### YouTube Videos
+### YouTube videos
 
 To embed a YouTube video:
 

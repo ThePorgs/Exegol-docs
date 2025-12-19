@@ -13,7 +13,7 @@ The Docker images are the heart of the Exegol project. They contain a carefully 
 7. Stage, Commit, and Push your changes
 8. Submit a Pull Request (https://github.com/ThePorgs/Exegol-images/compare)
 
-## Tools
+## Making changes
 
 When adding a new tool to an image (or modifying a tool install function), follow these steps:
 
@@ -32,7 +32,9 @@ function install_yourtool() {
 }
 ```
 
-### Required Components
+Tools directories need to be installed in `/opt/tools`. Binaries can be installed in `/opt/tools/bin` directly.
+
+### Required components
 
 Your installation function should include:
 
@@ -60,16 +62,7 @@ If your tool doesn't need aliases or history commands, add a whitelist comment a
 # CODE-CHECK-WHITELIST=add-aliases,add-history
 ```
 
-### Installation Standards
-
-Follow these standards when installing tools:
-
-- Use virtual environments for Python tools with access to system site-packages with `--system-site-packages`
-- Install tools in `/opt/tools/` or place binaries in `/opt/tools/bin/`
-- Use `--depth 1` with git clone to save space
-- Use `asdf` for managing tool versions (currently only for Go)
-
-### Installation Methods
+### Installation methods
 
 ::: tabs
 
@@ -81,6 +74,9 @@ pipx install --system-site-packages git+https://github.com/AUTHOR/REPO
 # From local sources
 git -C /opt/tools/ clone --depth 1 https://github.com/AUTHOR/REPO
 pipx install --system-site-packages /opt/tools/yourtool/
+
+# if a requirement needs to be added in the tool's venv
+pipx inject yourtool therequirement
 ```
 
 == Python (venv)
@@ -94,6 +90,13 @@ deactivate
 add-aliases yourtool
 ```
 
+In order for the venv to be transparent for the user, the following alias can then be set (cf. the `add-aliases` line in the install function)
+```bash
+alias yourtool.py="/opt/tools/yourtool/venv/bin/python3 /opt/tools/yourtool/yourtool.py"
+# or a direct call to the binary if any (and it has the right executable permissions)
+alias yourtool.py="/opt/tools/yourtool/venv/bin/yourtool.py"
+```
+
 == APT
 Add the package to the appropriate `install_*_apt_tools()` function in the package file.
 
@@ -101,6 +104,26 @@ Add the package to the appropriate `install_*_apt_tools()` function in the packa
 ```bash
 go install -v github.com/AUTHOR/REPO@latest
 asdf reshim golang
+```
+
+The `go install` command will work with the default version of golang (managed via `asdf`), currently being 1.22.2, set in `package_base`, in the `install_go()` function, with `asdf set --home golang 1.22.2`.
+
+If another version is needed, when a tool requires go >= 1.22.2, the following template can be used:
+
+```bash
+mkdir /opt/tools/TOOL_NAME
+cd /opt/tools/TOOL_NAME
+asdf set golang 1.24.4
+mkdir -p .go/bin
+GOBIN=/opt/tools/TOOL_NAME/.go/bin go install -v github.com/REPO_NAME/TOOL_NAME@latest
+asdf reshim golang
+add-aliases TOOL_NAME
+```
+
+And then the alias being like:
+
+```bash
+alias TOOL_NAME="/opt/tools/TOOL_NAME/.go/bin/TOOL_NAME"
 ```
 
 == Ruby
@@ -117,7 +140,7 @@ function install_yourtool() {
 }
 ```
 
-== Compile Sources
+== Compile
 ```bash
 function install_yourtool() {
     colorecho "Installing yourtool"
@@ -132,26 +155,47 @@ function install_yourtool() {
 }
 ```
 
-== Download Binary
+> [!TIP]
+> It's usually preferred to compile the binary and then remove sources to cut some weight. in this case, standalone binary should be installed in `/opt/tools/bin` directly instead of having a subdir in `/opt/tools/` with a single executable file in it. 
+
 ```bash
 function install_yourtool() {
     colorecho "Installing yourtool"
-    local URL
-    URL=$(curl --location --silent "https://api.github.com/repos/AUTHOR/REPO/releases/latest" | grep 'browser_download_url.*somestring.*tar.xz"' | grep -o 'https://[^"]*')
-    curl --location -o /tmp/tool.tar.xz "$URL"
-    tar -xf /tmp/yourtool.tar.xz --directory /tmp
-    rm /tmp/yourtool.tar.xz
-    mv /tmp/yourtool* /opt/tools/yourtool
-    ln -s "/opt/tools/yourtool/bin/yourtool" "/opt/tools/bin/yourtool"
+    git -C /tmp/ clone --depth 1 https://github.com/AUTHOR/REPO
+    cd /tmp/yourtool
+    ./configure
+    make
+    mv ./bin/yourtool /opt/tools/bin/yourtool
+    cd /
+    rm -rf /tmp/yourtool
     add-history yourtool
     add-test-command "yourtool --help"
     add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
 }
 ```
 
+== Download release
+```bash
+function install_yourtool() {
+    colorecho "Installing yourtool"
+    local URL
+    URL=$(curl --location --silent "https://api.github.com/repos/AUTHOR/REPO/releases/latest" | grep 'browser_download_url.*somestring.*tar.xz"' | grep -o 'https://[^"]*')
+    curl --location -o /tmp/yourtool.tar.xz "$URL"
+    tar -xf /tmp/yourtool.tar.xz --directory /tmp
+    rm /tmp/yourtool.tar.xz
+    mv /tmp/yourtool/yourtool /opt/tools/bin/yourtool
+    add-history yourtool
+    add-test-command "yourtool --help"
+    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+}
+```
+
+> [!NOTE]
+> Install tools in `/opt/tools/` or place binaries in `/opt/tools/bin/`.
+
 :::
 
-### Temporary Fixes (tempfix)
+### Temporary fixes (tempfix)
 
 Sometimes tools have issues that need temporary fixes. Here are two approaches:
 
@@ -189,7 +233,7 @@ function install_TOOL() {
 
 :::
 
-### Multi-architecture Support
+### Multi-architecture support
 
 Exegol images are built for both AMD64 and ARM64 systems. When possible, ensure your tool installation works on both architectures:
 
@@ -205,13 +249,13 @@ else
 fi
 ```
 
-### Testing Your Changes
+### Testing your changes
 
-Before submitting a pull request, test your installation locally:
+Before submitting a pull request, test your installation locally with a locally built exegol image (see [wrapper/cli/build](wrapper/build)):
 
 ```bash
 # Build the local image
-exegol install "testimage" "full" --build-log "/tmp/testimage.log"
+exegol build "testimage" "full" --build-log "/tmp/exegol_testimage.log"
 
 # Create and start a container for the tests
 exegol start "testcontainer" "testimage"
@@ -220,6 +264,9 @@ exegol start "testcontainer" "testimage"
 cat /.exegol/build_pipeline_tests/all_commands.txt | grep -vE "^\s*$" | sort -u > /.exegol/build_pipeline_tests/all_commands.sorted.txt
 python3 /.exegol/build_pipeline_tests/run_tests.py
 cat /.exegol/build_pipeline_tests/failed_commands.log
+
+# Test your additions manually
+...
 ```
 > [!TIP] Recover disk space after failed custom image builds
 >  
@@ -232,70 +279,7 @@ cat /.exegol/build_pipeline_tests/failed_commands.log
 > ```
 > 
 
-## My-resources
-
-The my-resources feature allows users to customize their Exegol environment with personal configurations, tools, and scripts. When contributing to my-resources, follow these guidelines:
-
-### Documentation
-
-Any new feature or service added to my-resources must be documented in the following places:
-
-1. Add a description in the [my-resources documentation](/images/my-resources)
-2. Include examples and usage instructions
-3. Document any dependencies or prerequisites
-4. Add any relevant configuration options
-
-### Code
-
-The my-resources functionality is primarily managed through the `load_supported_setup.sh` script. When contributing code:
-
-1. Follow the existing logging pattern:
-   ```bash
-   wrapper_verbose "Your message"  # For user-visible messages
-   logger_verbose "Your message"   # For log file only
-   ```
-
-2. Use the appropriate logging levels:
-   - `wrapper_info` / `logger_info` - General information
-   - `wrapper_verbose` / `logger_verbose` - Detailed information
-   - `wrapper_warning` / `logger_warning` - Warning messages
-   - `wrapper_error` / `logger_error` - Error messages
-   - `wrapper_success` / `logger_success` - Success messages
-
-3. Structure your code following these patterns:
-   ```bash
-   function deploy_your_feature() {
-       wrapper_verbose "Deploying your feature"
-       
-       # Check if feature directory exists
-       if [[ -d "$MY_SETUP_PATH/your_feature" ]]; then
-           # Handle existing setup
-           logger_verbose "Processing existing setup"
-           # Your code here
-       else
-           # Create new setup
-           logger_verbose "Creating new setup"
-           mkdir -p "$MY_SETUP_PATH/your_feature"
-           # Your code here
-       fi
-   }
-   ```
-
-4. Use the standard paths:
-   - `$MY_ROOT_PATH` - Root my-resources directory (`/opt/my-resources`)
-   - `$MY_SETUP_PATH` - Setup directory for user customization (`/opt/my-resources/setup`)
-
-5. Handle errors gracefully:
-   ```bash
-   if ! your_command; then
-       wrapper_error "Failed to execute your_command"
-       return 1
-   fi
-   ```
-
-6. Add your new function to the main execution flow in `load_supported_setup.sh`
-
-## Additional Resources
+## Additional resources
 
 - [Credentials](/images/credentials) - For tools requiring credentials
 - [Ports & Services](/images/services) - For tools that open ports or run services 
