@@ -251,7 +251,7 @@ fi
 
 ### Testing your changes
 
-Before submitting a pull request, test your installation locally with a locally built exegol image (see [wrapper/cli/build](wrapper/cli/build)):
+Before submitting a pull request, test your installation locally with a locally built exegol image (see [wrapper/cli/build](/wrapper/cli/build)):
 
 ```bash
 # Build the local image
