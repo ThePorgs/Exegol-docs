@@ -21,13 +21,13 @@ The functionality is primarily managed through the `load_supported_setup.sh` scr
 1. Fork the [Exegol-images](https://github.com/ThePorgs/Exegol-images) repository
 2. Follow the [Installation Guide](/contribute/install) to set up your development environment
 3. Checkout the `dev` branch
-4. (optional) create a new branch in your fork, if you plan on working on different topics
+4. (optional) create a new branch in your fork, if you plan on working on different topics (`git checkout -b feat/your_feature`)
 5. Create your content using this guide
 6. Make sure your changes work locally
 7. Stage, Commit, and Push your changes
 8. Submit a Pull Request (https://github.com/ThePorgs/Exegol-images/compare)
 
-Then, apply the following standards.
+Now back onto step 5, below are the standards you may follow when bringing your changes.
 
 ### Logging patterns
 
@@ -82,7 +82,7 @@ if ! your_command; then
 fi
 ```
 
-6. Add your new function to the main execution flow in `load_supported_setup.sh`
+Add your new function to the main execution flow in `load_supported_setup.sh`
 
 ## Testing your changes
 
@@ -97,7 +97,7 @@ Set your changes, on your host, at `~/.exegol/my-resources/setup/YOUR_FEATURE`
 
 ```bash
 # Create and start a container for the tests (my-resources is enabled by default) and increase the verbosity level to print my-resources
-exegol start -vvv "testcontainer" "testimage"
+exegol start -v "testcontainer" "testimage"
 ```
 
 Once inside the container, verify your my-resources setup:
@@ -108,7 +108,10 @@ Once inside the container, verify your my-resources setup:
 ls -la /opt/my-resources/setup/YOUR_FEATURE/
 
 # Check the setup logs for any errors or warnings
-cat /var/log/exegol/load_setups.log.gz
+cat /var/log/exegol/load_setups.log
+
+# If the file extension is .log.gz, use zcat
+zcat /var/log/exegol/load_setups.log.gz
 
 # Test that your feature works as expected
 ```

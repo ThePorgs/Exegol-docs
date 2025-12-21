@@ -179,7 +179,7 @@ function install_yourtool() {
 function install_yourtool() {
     colorecho "Installing yourtool"
     local URL
-    URL=$(curl --location --silent "https://api.github.com/repos/AUTHOR/REPO/releases/latest" | grep 'browser_download_url.*somestring.*tar.xz"' | grep -o 'https://[^"]*')
+    URL=$(curl --location --silent "https://api.github.com/repos/AUTHOR/REPO/releases/latest" | | grep 'browser_download_url' | grep -o 'https://[^"]*' | grep 'linux' | grep "$arch")
     curl --location -o /tmp/yourtool.tar.xz "$URL"
     tar -xf /tmp/yourtool.tar.xz --directory /tmp
     rm /tmp/yourtool.tar.xz
