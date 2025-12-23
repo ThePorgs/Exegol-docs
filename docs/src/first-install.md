@@ -132,7 +132,7 @@ The following command shows how to do that with bash, but it can be adapted to a
 ::: tabs
 === Linux (bash)
 ```bash
-echo "alias exego='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
+echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
 === Linux (zsh)
 ```zsh

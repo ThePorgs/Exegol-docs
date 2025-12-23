@@ -27,7 +27,7 @@ The MCP server requires sufficient privileges to interact with Docker. You must 
 ::: tabs
 === Linux (bash)
 ```bash
-echo "alias exego-mcp='sudo -E $(echo ~/.local/bin/exegol-mcp)'" >> ~/.bash_aliases && source ~/.bash_aliases
+echo "alias exegol-mcp='sudo -E $(echo ~/.local/bin/exegol-mcp)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
 === Linux (zsh)
 ```zsh
