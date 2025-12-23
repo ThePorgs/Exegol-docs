@@ -23,7 +23,7 @@ The functionality is primarily managed through the `load_supported_setup.sh` scr
 3. Checkout the `dev` branch
 4. (optional) create a new branch in your fork, if you plan on working on different topics (`git checkout -b feat/your_feature`)
 5. Create your content using this guide
-6. Make sure your changes work locally
+6. Make sure your changes work locally by building an image locally
 7. Stage, Commit, and Push your changes
 8. Submit a Pull Request (https://github.com/ThePorgs/Exegol-images/compare)
 
