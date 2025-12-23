@@ -78,7 +78,7 @@ default. If set to true, services will be exposed on `localhost`
 can be overwritten with [--desktop-config](/wrapper/cli/start).
 (Default: `True`)
 
-#### Network <Badge type="new"/>
+#### Network
 
 Configure the network behavior of Exegol containers.
 
@@ -102,7 +102,7 @@ Configure the network behavior of Exegol containers.
 For more details about network modes and their use cases, see the [Network Modes section](/wrapper/cli/start#network-modes) in the start command documentation.
 
 
-#### Custom images <Badge type="new"/><Badge type="enterprise"/>
+#### Custom images <Badge type="enterprise"/>
 
 Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to identify and work with Exegol images that have different names than the official ones.
 

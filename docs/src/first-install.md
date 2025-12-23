@@ -130,18 +130,16 @@ To interact with docker, the wrapper needs proper permissions. You must either r
 The following command shows how to do that with bash, but it can be adapted to any shell. Once the alias is set, you can apply it your current session.
 
 ::: tabs
-=== Linux Bash
+=== Linux (bash)
 ```bash
 echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
-=== Linux Zsh
+=== Linux (zsh)
 ```zsh
 echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.zshrc && source ~/.zshrc
 ```
-=== Windows PowerShell / WSL
-When using Docker Desktop, you **don't** need to use ``sudo``. You can skip this step and follow the next one.
-=== macOS
-When using Docker Desktop, you **don't** need to use ``sudo``. You can skip this step and follow the next one.
+=== macOS & Windows
+When using Docker Desktop, you **don't** need to use `sudo`. You can skip this step and follow the next one.
 :::
 
 ## 3. Activation <Badge type="pro"/><Badge type="enterprise"/>

@@ -317,13 +317,11 @@ function sidebarMain(): SidebarItemWithBadge[] {
           items: [
             {
               text: "activate",
-              link: "wrapper/cli/activate.md",
-              badge: "pro"
+              link: "wrapper/cli/activate.md"
             },
             {
               text: "build",
-              link: "wrapper/cli/build.md",
-              badge: "new"
+              link: "wrapper/cli/build.md"
             },
             {
               text: "exec",
@@ -363,8 +361,7 @@ function sidebarMain(): SidebarItemWithBadge[] {
             },
             {
               text: "upgrade",
-              link: "wrapper/cli/upgrade.md",
-              badge: "pro"
+              link: "wrapper/cli/upgrade.md"
             },
             {
               text: "version",
@@ -375,6 +372,21 @@ function sidebarMain(): SidebarItemWithBadge[] {
         {
           text: "Advanced configuration",
           link: "wrapper/configuration.md"
+        }
+      ]
+    },
+    {
+      text: "Exegol MCP",
+      collapsed: false,
+      badge: "new",
+      items: [
+        {
+          text: "Features",
+          link: "mcp/features.md"
+        },
+        {
+          text: "Getting started",
+          link: "mcp/getting-started.md"
         }
       ]
     },
@@ -390,7 +402,6 @@ function sidebarMain(): SidebarItemWithBadge[] {
     },
     {
       text: "Dashboard",
-      badge: "new",
       collapsed: true,
       items: [
         {
@@ -412,8 +423,7 @@ function sidebarMain(): SidebarItemWithBadge[] {
         },
         {
           text: "Learn",
-          link: "dashboard/learn.md",
-          badge: "new"
+          link: "dashboard/learn.md"
         },
         {
           text: "Referral",

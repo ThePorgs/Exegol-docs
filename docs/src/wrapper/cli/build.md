@@ -1,4 +1,4 @@
-# `build` action <Badge type="new"/>
+# `build` action
 
 The `build` action allows you to build an Exegol image locally from source. This is useful when you want to customize the image or when you need to build for a specific architecture.
 

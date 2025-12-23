@@ -1,4 +1,4 @@
-# Learning Center <Badge type="new" />
+# Learning Center
 
 The Learning Center provides educational videos to help you learn about Exegol installation and usage.
 
