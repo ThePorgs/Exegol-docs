@@ -205,10 +205,12 @@ Sometimes tools have issues that need temporary fixes. Here are two approaches:
 ```bash
 function install_TOOL() {
     [...]
-    # git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
+    git -C /opt/tools/ clone --depth 1 https://github.com/REPO/TOOL.git
     local temp_fix_limit="YYYY-MM-DD"
     if check_temp_fix_expiry "$temp_fix_limit"; then
-      git -C /opt/tools/ clone https://github.com/REPO/TOOL.git
+      git -C /opt/tools/TOOL fetch --unshallow
+      # checkout on the commit ID before the bug was introduced
+      # link to the issue: https://github.com/REPO/TOOL/issues/1337
       git -C /opt/tools/TOOL checkout 774f1c33efaaccf633ede6e704800345eb313878
     fi
     [...]
