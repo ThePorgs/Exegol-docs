@@ -9,7 +9,7 @@ And for <Badge type="pro" /> and <Badge type="enterprise" /> :
 - `nightly`: Development image with latest updates and feats.
 - Tagged releases (`full`, `ad`, `osint`, `web`, `light`): Stable versions with specific tool sets. 
 
-## Free image <Badge type="new" />
+## Free image
 
 <markdownTable file="/installed_tools/free.csv" />
 

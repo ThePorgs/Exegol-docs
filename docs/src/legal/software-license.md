@@ -1,4 +1,4 @@
-# Exegol Software License (ESL) - Version 1.0
+# Exegol Software License (ESL)
 
 ## Preamble
 

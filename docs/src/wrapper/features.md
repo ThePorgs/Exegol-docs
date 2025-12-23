@@ -572,7 +572,7 @@ See the [build action](/wrapper/cli/build) for detailed usage and options.
 To save time, pre-built images are available for download. These images can be downloaded and installed / updated from
 the exegol wrapper with the [install](/wrapper/cli/install) and [update](/wrapper/cli/update) actions.
 
-### Custom images <Badge type="new"/><Badge type="enterprise"/>
+### Custom images <Badge type="enterprise"/>
 
 Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to
 identify and work with Exegol images that have different names than the official ones. Useful for sharing customized
@@ -582,7 +582,7 @@ To configure custom images, add them to your [Exegol configuration file](/wrappe
 
 Note that images must be pulled manually as they may be in private registries requiring specific authentication.
 
-### Custom registry <Badge type="new"/><Badge type="enterprise"/>
+### Custom registry <Badge type="enterprise"/>
 
 For organizations requiring a complete private registry solution, we offer a managed Exegol private registry service.
 This enterprise solution includes:

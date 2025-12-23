@@ -83,7 +83,7 @@ When a new container is created, it is possible to:
 When the container already exists, you cannot change the default privileges mode, capabilities or share new devices.
 However, it is possible to spawn a **single** shell session with **all capabilities** with `--cap ALL`. The capabilities won't be added to the container itself and will only be valid for the specific shell the flag was enabled for.
 
-### Network modes <Badge type="new"/>
+### Network modes
 
 Exegol supports different network modes to suit various use cases:
 

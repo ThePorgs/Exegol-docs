@@ -9,7 +9,7 @@ this default behavior is changed in the
 [exegol configuration file](/wrapper/features#exegol-configuration), which is not advised
 since disk space is not limited and Exegol images can take up to 30GB).
 
-> [!NOTE] Upgrade backups <Badge type="new"/>
+> [!NOTE] Upgrade backups
 If your container still has backup containers (created during an upgrade), they need to be removed as well when removing the upgraded container. 
 
 When deleting the container, the wrapper will check if the content of
