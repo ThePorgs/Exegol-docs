@@ -68,6 +68,7 @@ crackhound,https://github.com/trustedsec/crackhound,A fast WPA/WPA2/WPA3 WiFi Ha
 creds,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
 crunch,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
 cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
+curlie,https://github.com/rs/curlie,Curlie is a frontend to curl that adds the ease of use of httpie without compromising on features and performance
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 cyperoth,https://github.com/seajaysec/cypheroth,Automated extensible toolset that runs cypher queries against Bloodhound's Neo4j backend and saves output to spreadsheets.
 daclsearch,https://github.com/uknowsec/daclsearch,Exhaustive search and flexible filtering of Active Directory ACEs
@@ -107,7 +108,9 @@ fierce,https://github.com/mschwager/fierce,A DNS reconnaissance tool for locatin
 finalrecon,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
 firefox,https://www.mozilla.org,A web browser
+firefox_decrypt,https://github.com/unode/firefox_decrypt,Decrypt Firefox saved passwords.
 foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for recovering files based on their headers / footers / and internal data structures.
+fping,https://github.com/schweikert/fping,fping is a program to send ICMP echo probes to network hosts, similar to ping but much better performing when pinging multiple hosts.
 freeipscanner,https://github.com/scrt/freeipscanner,A simple bash script to enumerate stale ADIDNS entries
 freerdp2-x11,https://github.com/FreeRDP/FreeRDP,FreeRDP is a free implementation of the Remote Desktop Protocol (RDP) released under the Apache license.
 frida,https://github.com/frida/frida,Dynamic instrumentation toolkit
@@ -161,6 +164,7 @@ httpx,https://github.com/projectdiscovery/httpx,A tool for identifying web techn
 hydra,https://github.com/vanhauser-thc/thc-hydra,Hydra is a parallelized login cracker which supports numerous protocols to attack.
 ignorant,https://github.com/megadose/ignorant,holehe but for phone numbers.
 imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose / or convert bitmap images.
+impacket,https://github.com/fortra/impacket,Set of tools for working with network protocols (original version).
 impacket,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
 Instaloader,https://github.com/instaloader/instaloader,Download content/captions/metadata from Instagram
 ipinfo,https://github.com/ipinfo/cli,Get information about an IP address or hostname.
@@ -179,6 +183,7 @@ katana,https://github.com/projectdiscovery/katana,A next-generation crawling and
 keepassxc,https://github.com/keepassxreboot/keepassxc,Cross-platform password manager
 KeePwn,https://github.com/Orange-Cyberdefense/KeePwn,KeePwn is a tool that extracts passwords from KeePass 1.x and 2.x databases.
 kerbrute,https://github.com/ropnop/kerbrute,A tool to perform Kerberos pre-auth bruteforcing
+keytabextract,https://github.com/sosdave/KeyTabExtract,KeyTabExtract is a tool to extract valuable information from keytab files.
 kiterunner,https://github.com/assetnote/kiterunner,Tool for operating Active Directory environments.
 Kraken,https://github.com/kraken-ng/Kraken,Kraken is a modular multi-language webshell focused on web post-exploitation and defense evasion. It supports three technologies (PHP / JSP and ASPX) and is core is developed in Python.
 krbjack,https://github.com/almandin/krbjack,A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
@@ -391,6 +396,7 @@ username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for g
 Villain,https://github.com/t3l3machus/Villain,Command & Control Framework
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
 volatility3,https://github.com/volatilityfoundation/volatility3,Advanced memory forensics framework
+vt,https://github.com/VirusTotal/vt-cli,A command-line interface for VirusTotal.
 wafw00f,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to identify and fingerprint web application firewall (WAF) products.
 waybackurls,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
 webclientservicescanner,https://github.com/Hackndo/webclientservicescanner,Scans for web service endpoints
