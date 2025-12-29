@@ -110,7 +110,7 @@ findomain,https://github.com/findomain/findomain,The fastest and cross-platform 
 firefox,https://www.mozilla.org,A web browser
 firefox_decrypt,https://github.com/unode/firefox_decrypt,Decrypt Firefox saved passwords.
 foremost,https://doc.ubuntu-fr.org/foremost,Foremost is a forensic tool for recovering files based on their headers / footers / and internal data structures.
-fping,https://github.com/schweikert/fping,fping is a program to send ICMP echo probes to network hosts, similar to ping but much better performing when pinging multiple hosts.
+fping,https://github.com/schweikert/fping,fping is a program to send ICMP echo probes to network hosts similar to ping but much better performing when pinging multiple hosts.
 freeipscanner,https://github.com/scrt/freeipscanner,A simple bash script to enumerate stale ADIDNS entries
 freerdp2-x11,https://github.com/FreeRDP/FreeRDP,FreeRDP is a free implementation of the Remote Desktop Protocol (RDP) released under the Apache license.
 frida,https://github.com/frida/frida,Dynamic instrumentation toolkit
