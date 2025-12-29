@@ -74,7 +74,7 @@ commands in the history, without changing the values every time.
 - `shellerator` can be used to generate a reverse-shell command dynamically.
 - On the attacker's side, a reverse shell obtained through a `netcat` tunnel can be improved (see [ropnop.com](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/) or [0xffsec.com](https://0xffsec.com/handbook/shells/full-tty/)).
 - A simple alternative to upgrading a netcat reverse shell is to use `rlwrap <netcat listener command>`.
-- Instead of using `netcat` and "upgrading" the shell manually, `pwncat-cs` ([calebstewart/pwncat](https://github.com/calebstewart/pwncat)) can be used to obtain an even better reverse-shell experience, especially with UNIX-like targets.
+- Instead of using `netcat` and "upgrading" the shell manually, `pwncat-vl` ([Chocapikk/pwncat-vl](https://github.com/Chocapikk/pwncat-vl)) can be used to obtain an even better reverse-shell experience, especially with UNIX-like targets.
 
 ## Keyboard shortcuts
 
