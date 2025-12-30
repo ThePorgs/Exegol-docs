@@ -219,10 +219,6 @@ function install_yourtool() {
     add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
 }
 ```
-
-> [!NOTE]
-> Install tools in `/opt/tools/` or place binaries in `/opt/tools/bin/`.
-
 :::
 
 ### Temporary fixes (tempfix)
