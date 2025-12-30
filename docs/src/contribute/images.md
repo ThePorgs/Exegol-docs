@@ -177,11 +177,17 @@ function install_yourtool() {
 == Download release
 ```bash
 function install_yourtool() {
+    # CODE-CHECK-WHITELIST=add-aliases
     colorecho "Installing yourtool"
     local URL
-    URL=$(curl --location --silent "https://api.github.com/repos/AUTHOR/REPO/releases/latest" | grep 'browser_download_url' | grep -o 'https://[^"]*' | grep 'linux' | grep "$arch")
+    curl --location --silent --output /tmp/meta.json "https://api.github.com/repos/AUTHOR/REPO/releases/latest"
+    URL=$(cat /tmp/meta.json | grep 'browser_download_url' | grep -o 'https://[^"]*' | grep 'linux' | grep "$arch")
+    if [[ -z "$URL" ]]; then
+        cat /tmp/meta.json
+    fi
+    rm /tmp/meta.json
     curl --location -o /tmp/yourtool.tar.xz "$URL"
-    tar -xf /tmp/yourtool.tar.xz --directory /tmp
+    tar -xzf /tmp/yourtool.tar.xz --directory /tmp
     rm /tmp/yourtool.tar.xz
     mv /tmp/yourtool/yourtool /opt/tools/bin/yourtool
     add-history yourtool
@@ -190,9 +196,29 @@ function install_yourtool() {
 }
 ```
 
-> [!NOTE]
-> Install tools in `/opt/tools/` or place binaries in `/opt/tools/bin/`.
+== Via install script
 
+Installing tools via external install scripts is to be avoided for the following reasons:
+
+- **Trust and security:** running code from the Internet, which could be modified at any time without your knowledge.
+- **Lack of transparency:** can't easily audit what the script will do in advance.
+- **Reproducibility:** scripts may change or disappear, breaking reproducibility.
+- **Silent failures:** install scripts may change system settings, fail quietly, or have unexpected side effects not tracked by package managers.
+
+Prefer using distribution packages, versioned binaries, or building from source for safer and more maintainable installs.
+
+```bash
+function install_yourtool() {
+    colorecho "Installing yourtool"
+    curl --location --silent --output /tmp/install_thetool.json "https://sometool.com/install"
+    bash /tmp/install_thetool.json
+    rm /tmp/install_thetool.json
+    add-history yourtool
+    add-history yourtool
+    add-test-command "yourtool --help"
+    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+}
+```
 :::
 
 ### Temporary fixes (tempfix)

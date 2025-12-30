@@ -267,7 +267,7 @@ or you can add a new folder:
 
 > [!WARNING]
 > This covers the previous method for personalizing Firefox; the current
-> approach utilizes `` policy <`firefox `` (policy)\>\`.
+> approach uses [firefox policy](#firefox-policy).
 
 > [!INFO]
 > Available from version `3.0.2` to `3.1.5` of any exegol image.
