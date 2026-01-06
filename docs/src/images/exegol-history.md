@@ -45,4 +45,4 @@ exh import creds --file creds.csv --format CSV
 
 ## Advanced variables
 
-If you have other custom variables to configure, you can manually update the file `/opt/tools/Exegol-history/profile.sh` and reload your current shell with the commnad `exec $SHELL`.
+If you have other custom variables to configure, you can manually update the file `/opt/tools/Exegol-history/profile.sh` and reload your current shell with the command `exec $SHELL`.
