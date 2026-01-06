@@ -173,7 +173,7 @@ exegol start
 
 ## :zap: Auto-completion setup
 
-This step is optionnal.
+This step is optional.
 
 Exegol supports command auto-completion for easier usage. Here's how to set it up for your shell:
 
@@ -244,7 +244,7 @@ Add-Content -Path $PROFILE -Value 'Set-PSReadlineKeyHandler -Key Tab -Function M
 
 ## :sunrise: Graphical applications support
 
-This step is optionnal. Graphical apps are already usable through the graphical desktop environment already available.
+This step is optional. Graphical apps are already usable through the graphical desktop environment already available.
 This step allows more advanced users to set up X11 socket sharing to open GUI apps from the CLI directly.
 
 ::: tabs
