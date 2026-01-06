@@ -23,7 +23,7 @@ up to date:
 
 > [!TIP]
 > When running `exegol update -v`, the user will be able to choose from
-> what branch them module should be synchronized with, allowing to
+> what branch the module should be synchronized with, allowing to
 > switch easily between release and dev versions.
 
 ### Images updates
