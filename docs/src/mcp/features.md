@@ -1,4 +1,4 @@
-# What Exegol MCP can do
+# What Exegol MCP can do <Badge type="new"/>
 
 Exegol MCP provides AI assistants with powerful capabilities to interact with Exegol containers and perform offensive security tasks.
 
