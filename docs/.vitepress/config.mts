@@ -172,6 +172,10 @@ function sidebarContribute(): SidebarItemWithBadge[] {
       text: "Components",
       items: [
         {
+          text: "Docs",
+          link: "docs"
+        },
+        {
           text: "Images",
           link: "images"
         },
@@ -192,9 +196,9 @@ function sidebarContribute(): SidebarItemWithBadge[] {
           link: "exegol-history"
         },
         {
-          text: "Docs",
-          link: "docs"
-        } 
+          text: "Exegol MCP",
+          link: "exegol-mcp"
+        }
       ]
     },
     {

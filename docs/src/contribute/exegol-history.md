@@ -1,6 +1,8 @@
 # Contributing to Exegol-history
 
-`Exegol-history` is a tool to quickly store and retrieve compromised credentials and hosts during penetration testing engagements or CTFs. For more information about using the tool, see the [Exegol-history documentation](/images/exegol-history).
+Exegol-history is a tool to quickly store and retrieve compromised credentials and hosts during penetration testing engagements or CTFs. 
+
+For more information about using the tool, see the [Exegol-history documentation](/images/exegol-history).
 
 > [!NOTE]
 > This subproject is still in early development and may change significantly. Stable documentation and contribution guidelines will be added as the project matures.
