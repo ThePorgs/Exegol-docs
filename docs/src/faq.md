@@ -16,7 +16,7 @@ Apple Silicon M1/M2 (ARM64).
 > [!SUCCESS] Tip 
 > We strongly advised macOS users to replace Docker Desktop with
 > [OrbStack](https://orbstack.dev/), allowing host network mode to work
-> for instance, this it's not supported by Docker Desktop for Mac.
+> for instance, as it's not supported by Docker Desktop for Mac.
 
 ## Can I use a VPN with Exegol?
 
@@ -60,7 +60,7 @@ build the image locally. See the `install` documentation:
 
 ## How to install Exegol on an external drive?
 
-Exegol's wrapper is lightweight, but it's Docker images can take up some
+Exegol's wrapper is lightweight, but its Docker images can take up some
 space, and users may not have enough room in their internal HDD/SSD,
 hence the question. This usually comes down to "how can I install Docker
 on an external drive?", and the answer depends on the host.
@@ -91,7 +91,7 @@ If you want to add a tool:
   build the image locally with the wrapper and enjoy your custom local
   image.
 - **in a live container**: that's your container, you can do whatever
-  you whish in it ;)
+  you wish in it ;)
 - **automatically in all containers at their creation**: refer to the
   ["my-resources" documentation](/images/my-resources).
 
