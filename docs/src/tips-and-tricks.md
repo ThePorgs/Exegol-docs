@@ -15,7 +15,7 @@ useful when working with Kerberos targets that are out of sync.
 
 Faketime manipulates the system time for a given child command. For
 example with `zsh`, a new shell is opened with a spoofed time that will
-only be spoofed for this extact shell session and commands executed in
+only be spoofed for this exact shell session and commands executed in
 it.
 
 ``` bash
