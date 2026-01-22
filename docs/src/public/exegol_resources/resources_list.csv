@@ -6,6 +6,7 @@ linux-smart-enumeration (lse.sh),https://github.com/diego-treitos/linux-smart-en
 LinEnum,https://github.com/rebootuser/LinEnum,Scripted Local Linux Enumeration & Privilege Escalation Checks
 Linux Exploit Suggester,https://github.com/The-Z-Labs/linux-exploit-suggester,Linux privilege escalation auditing tool
 Mimikatz,https://github.com/gentilkiwi/mimikatz,A little tool to play with Windows security
+linikatz,https://github.com/CiscoCXSecurity/linikatz,Lightweight katz for Linux
 SharpHound.exe,https://github.com/BloodHoundAD/BloodHound,C# ingestor for BloodHound
 JuicyPotato.exe,https://github.com/ohpe/juicy-potato,https://github.com/ohpe/juicy-potato
 PrintSpoofer,https://github.com/itm4n/PrintSpoofer,Abusing SeImpersonatePrivilege from LOCAL/NETWORK SERVICE
