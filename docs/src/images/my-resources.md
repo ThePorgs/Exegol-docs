@@ -29,7 +29,7 @@ extend Exegol beyond what is initially included ([tools](/images/tools),
   standalone tools, binaries and scripts in the "my-resources" volume on the host.
 - [Supported setup](/images/my-resources#supported-setups): a pre-set list of "templated" configurations. The
   most user-friendly approach to customizing Exegol.
-- [User setup](/images/my-resources#user-setup): a shell script can be populated with every command a user wishes its containers to run at their creation.
+- [User setup](/images/my-resources#user-setup): a shell script can be populated with every command a user wishes their containers to run at creation.
 
 ## Custom tools
 
