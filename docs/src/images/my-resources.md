@@ -115,9 +115,9 @@ container.
 
 You can create your own Firefox policy file and copy it to the location `~/.exegol/my-resources/setup/firefox/policies.json` 
 to apply it in the next container deployment 
-(https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson).
+(<https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson>).
 All available directives can be found here:
-https://mozilla.github.io/policy-templates/.
+<https://mozilla.github.io/policy-templates/>.
 
 > [!IMPORTANT]
 > Your custom policy will overwrite the default policy created by Exegol.
