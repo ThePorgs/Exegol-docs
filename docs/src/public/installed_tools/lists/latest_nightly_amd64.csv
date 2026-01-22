@@ -4,6 +4,7 @@ aclpwn,https://github.com/aas-n/aclpwn.py,Tool for testing the security of Activ
 AD-miner,https://github.com/Mazars-Tech/AD_Miner,Active Directory audit tool that leverages cypher queries.
 adidnsdump,https://github.com/dirkjanm/adidnsdump,Active Directory Integrated DNS dump utility
 aircrack-ng,https://www.aircrack-ng.org,A suite of tools for wireless penetration testing
+aliasr,https://github.com/Mojo8898/aliasr,Aliasr is a modern and feature-rich TUI launcher for penetration testing commands inspired by Arsenal but with significantly improved functionality.
 alterx,https://github.com/projectdiscovery/alterx,A tool for fast and customizable subdomain wordlist generator using DSL from ProjectDiscovery.
 amass,https://github.com/OWASP/Amass,A DNS enumeration / attack surface mapping & external assets discovery tool
 amber,https://github.com/EgeBalci/amber,Forensic tool to recover browser history / cookies and credentials
@@ -14,7 +15,6 @@ angr,https://github.com/angr/angr,a platform-agnostic binary analysis framework
 apksigner,https://source.android.com/security/apksigning,arguably the most important step to optimize your APK file
 apktool,https://github.com/iBotPeaches/Apktool,It is a tool for reverse engineering 3rd party / closed / binary Android apps.
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
-arsenal,https://github.com/Orange-Cyberdefense/arsenal,Powerful weapons for penetration testing.
 asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 asrepcatcher,https://github.com/Yaxxine7/ASRepCatcher,Make your VLAN ASREProastable.
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
