@@ -59,7 +59,7 @@ http server: `updog`, `goshs`, `http-server`, `http-put-server`,
 `ftp-server`, `smbserver.py`.
 
 In order to **shares notes** during an engagement, `trilium`
-(<https://github.com/zadam/trilium>) can be used.
+(<https://github.com/TriliumNext/Trilium>) can be used.
 
 ## Dynamic history commands
 

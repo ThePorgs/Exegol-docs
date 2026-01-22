@@ -3,7 +3,16 @@
 "My-resources" allows users to make Exegol their own and customize it even further. This feature relies on a simple volume shared between the host and all exegol containers, and an advanced integration in the Exegol images directly.
 It allows users to enjoy their own tools that are not available in Exegol but also to customize their Exegol setup
 
-The volume is accessible from the host at `~/.exegol/my-resources/` and from the containers (if the feature was left enabled at the container creation) at `/opt/my-resources`.
+## Preparing customizations on the host
+
+All customizations must be prepared on the **host** in the my-resources directory. The path to this directory is configured in the `~/.exegol/config.yml` file (see the [wrapper's config docs](/wrapper/configuration#volumes)) under the `my_resources_path` key. 
+
+By default, this path is `~/.exegol/my-resources/`.
+
+> [!NOTE]
+> Throughout this documentation, the default path `~/.exegol/my-resources/` will be used in examples. If you have changed the `my_resources_path` setting in your configuration file, use your custom path instead.
+
+In Exegol containers, the volume is accessible at `/opt/my-resources`.
 
 > [!WARNING]
 > The "my-resources" feature will do what it's told to do. If users
@@ -17,93 +26,60 @@ extend Exegol beyond what is initially included ([tools](/images/tools),
 [resources](/resources/list)).
 
 - [Custom tools](/images/my-resources#custom-tools): users can place their own custom
-  standalone tools, binaries and scripts in the "my-resources" volume.
-  This volume is accessible from all containers at `/opt/my-resources`.
-- [Supported setup](/images/my-resources#supported-setups): users can customize their
-  exegol environments automatically and transparently without having to
-  manually setting things up for each and every new Exegol container
-  they create. In this functionality, a pre-set list of supported custom
-  configuration is set, and will improve with time. It's the easier and
-  most user-friendly approach to customizing a few configurations.
-- [User setup](/images/my-resources#user-setup): In this functionality, a shell script can
-  be populated with every command a user wishes its containers to run at
-  their creation.
+  standalone tools, binaries and scripts in the "my-resources" volume on the host.
+- [Supported setup](/images/my-resources#supported-setups): a pre-set list of "templated" configurations. The
+  most user-friendly approach to customizing Exegol.
+- [User setup](/images/my-resources#user-setup): a shell script can be populated with every command a user wishes their containers to run at creation.
 
 ## Custom tools
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
-In the container, the `/opt/my-resources/bin/` folder
-(`~/.exegol/my-resources/bin/` on the host) is automatically added to
-the `PATH` of the zsh shell. The user can then add tools in that folder
-in order to use them from the container.
+You can add executable files in the `~/.exegol/my-resources/bin/` folder. The equivalent container path is added to the `PATH` environment variable so that your binaries can be called easily from anywhere in the container.
 
-
-> [!TIP]
->The most simple approach would be to add standalone binaries, but users
-> could also add symbolic links that would point to somewhere else in
-> `/opt/my-resources/`.
-> 
-> ``` bash
-> # Example for a standalone binary on your host
-> cp /path/to/tool ~/.exegol/my-resources/bin/
-> # or for a standalone binary on your exegol container
-> cp /path/to/tool /opt/my-resources/bin/
->
-> # Example for a symbolic link from your host
-> git -C ~/.exegol/my-resources/ clone "https://github.com/someauthor/sometool"
-> ln -s ../sometool/script.py ~/.exegol/my-resources/bin/script.py
-> # or from your exegol container
-> git -C /opt/my-resources/ clone "https://github.com/someauthor/sometool"
-> ln -s /opt/my-resources/sometool/script.py /opt/my-resources/bin/script.py
-> ```
 
 
 ## Supported setups
 
-Configuration files stored in the `/opt/my-resources/setup/` directory
-will be deployed on the containers and allow users to customize Exegol
+Configuration files stored in the `~/.exegol/my-resources/setup/` directory
+on the host will be deployed on the containers and allow users to customize Exegol
 even further. By default, the number of officially supported
 configuration files is limited, and it depends on the version of the
 image itself, not the wrapper.
-
-
 
 > [!TIP]
 > In order to see what configuration files are supported in your version,
 > the `/opt/supported_setups.md` documentation file can be read from any
 > container.
 
-
 This documentation will reference in detail all the supported
 customizations available over time, and the corresponding minimum image
 version required for each one.
 
 If a user wants to deploy tools and configurations that are not
-supported, or more advanced, they can opt for the
-[User setup](/images/my-resources#user-setup).
+already prepared here, they can use the [User setup](/images/my-resources#user-setup) instead.
 
 ### `apt` (packages, sources, keys)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
 A system exists to easily install arbitrary APT packages in any new
 exegol container.
 
 - Custom APT **repositories** can be added in exegol by filling in the
-  `/opt/my-resources/setup/apt/sources.list` file
+  `~/.exegol/my-resources/setup/apt/sources.list` file
 - Importing custom repositories usually requires importing **GPG keys**
   as well, which can be done by entering trusted GPG keys download URLs
-  in the `/opt/my-resources/setup/apt/keys.list` file
+  in the `~/.exegol/my-resources/setup/apt/keys.list` file
 - To install **APT packages** automatically (after updating the
   repository including the custom ones), just enter a list of package
-  names in the `/opt/my-resources/setup/apt/packages.list` file
+  names in the `~/.exegol/my-resources/setup/apt/packages.list` file
 
 ### `bloodhound` (customqueries, config)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.1.0` of the `ad` and `full` images.
 
 
@@ -115,13 +91,13 @@ To automatically:
 
 - overwrite the `~/.config/bloodhound/config.json` configuration file,
   simply create the file
-  `/opt/my-resources/setup/bloodhound/config.json`
+  `~/.exegol/my-resources/setup/bloodhound/config.json`
 - replace the default exegol customqueries, place one or several valid
   customqueries files into the folder
-  `/opt/my-resources/setup/bloodhound/customqueries_replacement/`.
+  `~/.exegol/my-resources/setup/bloodhound/customqueries_replacement/`.
 - merge with the default exegol customqueries by placing one or several
   valid customqueries files into the folder
-  `/opt/my-resources/setup/bloodhound/customqueries_merge/`
+  `~/.exegol/my-resources/setup/bloodhound/customqueries_merge/`
 
 > [!TIP]
 > To be considered for replacing or merging, the customqueries files
@@ -131,26 +107,26 @@ To automatically:
 
 ### `firefox` (policy)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.1.6` of any exegol image.
 
 A system exists to easily personalise firefox in any new exegol
 container.
 
-The file `/usr/lib/firefox-esr/distribution/policies.json` can be 
-used as a template in order to create your own Firefox policy. 
-Your policy can then be copied to the location `/opt/my-resources/setup/firefox/policies.json` 
+You can create your own Firefox policy file and copy it to the location `~/.exegol/my-resources/setup/firefox/policies.json` 
 to apply it in the next container deployment 
-(<https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson>),
-all available directives can be found here:
+(<https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson>).
+All available directives can be found here:
 <https://mozilla.github.io/policy-templates/>.
 
 > [!IMPORTANT]
 > Your custom policy will overwrite the default policy created by Exegol.
 
-The default policy applied by Exegol will do the following actions:
+The default policy applied by Exegol will modify the following things:
 
-*Add a few bookmarks*
+::: tabs
+
+== 1. Bookmarks
 
 ```json
 {
@@ -181,7 +157,7 @@ The default policy applied by Exegol will do the following actions:
 }
 ```
 
-*Install a few extensions*
+== 2. Extensions
 
 ```json
 {
@@ -196,7 +172,7 @@ The default policy applied by Exegol will do the following actions:
 }
 ```
 
-*Disable a few Firefox features such as the telemetry*
+== 3. Disable telemetry
 
 ```json
 {
@@ -214,7 +190,7 @@ The default policy applied by Exegol will do the following actions:
 }
 ```
 
-*Apply the CA of Burpsuite*
+== 4. Apply Burp CA
 
 ```json
 {
@@ -224,6 +200,7 @@ The default policy applied by Exegol will do the following actions:
     }
 }
 ```
+:::
 
 In order to install a specific addon, you can go to the Firefox addon
 webpage, and search for the addon GUID in the page HTML source code by
@@ -269,41 +246,41 @@ or you can add a new folder:
 > This covers the previous method for personalizing Firefox; the current
 > approach uses [firefox policy](#firefox-policy).
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.2` to `3.1.5` of any exegol image.
 
 A system exists to easily install arbitrary firefox addons in any new
 exegol container.
 
-The `/opt/my-resources/setup/firefox/addons.txt` file allows the user to
+The `~/.exegol/my-resources/setup/firefox/addons.txt` file allows the user to
 list addons to install from online sources. It must be filled with their
 links in Mozilla's shop (for example
 <https://addons.mozilla.org/fr/firefox/addon/foxyproxy-standard/> ).
 
-The `.xpi` files in `/opt/my-resources/setup/firefox/addons/` folder
+The `.xpi` files in `~/.exegol/my-resources/setup/firefox/addons/` folder
 will be installed as well.
 
-> [!INFO]
+> [!NOTE]
 > Below, available from version `3.2.0` of any exegol image.
 
-The `.der` files in `/opt/my-resources/setup/firefox/CA/` folder will be
-trusted .
+The `.der` files in `~/.exegol/my-resources/setup/firefox/CA/` folder will be
+trusted.
 
 ### `python3` (pip3)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
 A system exists to easily install arbitrary PIP3 packages in any new
 exegol container.
 
-The `/opt/my-resources/setup/python3/requirements.txt` file allows the
+The `~/.exegol/my-resources/setup/python3/requirements.txt` file allows the
 user to list a set of packages to install with constraints just like a
 classic **requirements.txt** file.
 
 ### `tmux` (conf)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
 
@@ -311,7 +288,7 @@ Exegol supports overloading its **tmux** configuration to allow all
 users to use their personal configuration.
 
 - To automatically overwrite the `~/.tmux.conf` configuration file,
-  simply create the file `/opt/my-resources/setup/tmux/tmux.conf`
+  simply create the file `~/.exegol/my-resources/setup/tmux/tmux.conf`
 
 > [!TIP]
 > It is possible to install **plugins** with the APT customization
@@ -319,21 +296,21 @@ users to use their personal configuration.
 
 ### `vim` (vimrc, configs)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
 Exegol supports overwriting its **vim** configuration to allow all users
 to use their personal configuration.
 
 - To automatically overwrite the `~/.vimrc` configuration file, simply
-  create the file `/opt/my-resources/setup/vim/vimrc`
+  create the file `~/.exegol/my-resources/setup/vim/vimrc`
 
 - vim configuration folders are also automatically synchronized:  
-  - `/opt/my-resources/setup/vim/autoload/*` --\> `~/.vim/autoload/`
-  - `/opt/my-resources/setup/vim/backup/*` --\> `~/.vim/backup/`
-  - `/opt/my-resources/setup/vim/colors/*` --\> `~/.vim/colors/`
-  - `/opt/my-resources/setup/vim/plugged/*` --\> `~/.vim/plugged/`
-  - `/opt/my-resources/setup/vim/bundle/*` --\> `~/.vim/bundle/`
+  - `~/.exegol/my-resources/setup/vim/autoload/*` -\> `~/.vim/autoload/`
+  - `~/.exegol/my-resources/setup/vim/backup/*` -\> `~/.vim/backup/`
+  - `~/.exegol/my-resources/setup/vim/colors/*` -\> `~/.vim/colors/`
+  - `~/.exegol/my-resources/setup/vim/plugged/*` -\> `~/.vim/plugged/`
+  - `~/.exegol/my-resources/setup/vim/bundle/*` -\> `~/.vim/bundle/`
 
 > [!TIP]
 > It is possible to install **plugins** with
@@ -341,14 +318,14 @@ to use their personal configuration.
 
 ### `neovim` (.config/nvim)
 
-> [!INFO]
+> [!NOTE]
 > Will be available from version `3.1.2` of any exegol image.
 
 Exegol supports overwriting its **neovim** configuration to allow all
 users to use their personal configuration.
 
 - To automatically overwrite the `~/.config/nvim/` configuration, copy
-  your config in `/opt/my-resources/setup/nvim/`
+  your config in `~/.exegol/my-resources/setup/nvim/`
 
 > [!TIP]
 > It is possible to install **plugins dependencies** with
@@ -356,7 +333,7 @@ users to use their personal configuration.
 
 ### `zsh` (aliases, zshrc, history)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
 To not change the configuration for the proper functioning of exegol but
@@ -365,13 +342,13 @@ configuration files will be automatically loaded by zsh to take into
 account the customization of the user .
 
 - **aliases**: any custom alias can be defined in the
-  `/opt/my-resources/setup/zsh/aliases` file. This file is automatically
+  `~/.exegol/my-resources/setup/zsh/aliases` file. This file is automatically
   loaded by zsh.
 - **zshrc**: it is possible to add commands at the end of the zshrc
-  routine in `/opt/my-resources/setup/zsh/zshrc` file.
+  routine in `~/.exegol/my-resources/setup/zsh/zshrc` file.
 - **history**: it is possible to automatically add history commands at
   the end of `~/.zsh_history` from the file
-  `/opt/my-resources/setup/zsh/history`.
+  `~/.exegol/my-resources/setup/zsh/history`.
 
 > [!TIP]
 > It is possible to install **plugins** with the APT customization
@@ -379,22 +356,22 @@ account the customization of the user .
 
 ### `arsenal` (cheats)
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.1.5` of any exegol image.
 
 Exegol supports adding a custom cheatsheets file (rst or md file) for
 Arsenal (<https://github.com/Orange-Cyberdefense/arsenal>) by moving
-them in the folder `/opt/my-resources/setup/arsenal-cheats/`.
+them in the folder `~/.exegol/my-resources/setup/arsenal-cheats/`.
 
 > [!TIP]
 > You can create a structure with folders if you want some organization
 
 ## User setup
 
-> [!INFO]
+> [!NOTE]
 > Available from version `3.0.0` of any exegol image.
 
-The `/opt/my-resources/setup/load_user_setup.sh` script is executed on
+The `~/.exegol/my-resources/setup/load_user_setup.sh` script is executed on
 the first startup of each new container that has the "my-resources"
 feature enabled. Arbitrary code can be added in this file, in order to
 customize Exegol (dependency installation, configuration file copy,
@@ -410,7 +387,7 @@ etc).
 To facilitate its use, a read/write access system **shared** (between
 the host user and the container root user) has been implemented.
 
-To allow this permissions sharing, the "my-resources" folder (and all subdirectories) must have the Set-GID permission bit set. This is done automatically by the wrapper if the current user has sufficient rights. Otherwise, the wrapper will display a sudo command to be executed manually to update the relevant permissions.
+The wrapper automatically sets up the necessary permissions for the "my-resources" folder. If the current user has sufficient rights, this is done automatically. Otherwise, the wrapper will display a sudo command to be executed manually.
 
 ## Troubleshooting
 

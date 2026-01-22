@@ -9,7 +9,7 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 | [Workspace](#workspace)                       | Persistent and shared workspace with the host                                                                               |
 | [Update-fs](#update-fs)                       | Permission sharing between the container and the host                                                                       |
 | [OpenVPN connection](#openvpn-connection)     | Opening an isolated OpenVPN tunnel dedicated to the Exegol container                                                        |
-| [WireGuard VPN connection](#wireguard-vpn)    | <Badge type="pro" /> <Badge type="enterprise" /> Opening an isolated WireGuard VPN tunnel dedicated to the Exegol container |
+| [WireGuard VPN connection](#wireguard-vpn)    | Opening an isolated WireGuard VPN tunnel dedicated to the Exegol container |
 | [Shell logging](#shell-logging)               | Recording of sessions (input and output) in log files with date and time                                                    |
 | [Network modes](#network-modes)               | Different network configurations for container isolation and connectivity                                                   |
 | [Shared timezones](#shared-timezones)         | Sharing the host's timezone configuration                                                                                   |
