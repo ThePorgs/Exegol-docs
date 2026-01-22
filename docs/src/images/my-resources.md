@@ -58,7 +58,7 @@ customizations available over time, and the corresponding minimum image
 version required for each one.
 
 If a user wants to deploy tools and configurations that are not
-already prepared here they can use the [User setup](/images/my-resources#user-setup) instead.
+already prepared here, they can use the [User setup](/images/my-resources#user-setup) instead.
 
 ### `apt` (packages, sources, keys)
 
