@@ -50,4 +50,5 @@ weevely,https://github.com/epinna/weevely3,a webshell designed for post-exploita
 weevely,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
 wireguard,https://www.wireguard.com,WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
 wpscan,https://github.com/wpscanteam/wpscan,A tool to enumerate WordPress-based websites
+yarn,https://yarnpkg.com/,Yarn is a package manager that doubles down as project manager.
 ysoserial,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
