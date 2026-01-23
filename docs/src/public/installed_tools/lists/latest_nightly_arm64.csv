@@ -420,6 +420,7 @@ xsstrike,https://github.com/s0md3v/XSStrike,a Python tool for detecting and expl
 xtightvncviewer,https://www.commandlinux.com/man-page/man1/xtightvncviewer.1.html,xtightvncviewer is an open source VNC client software.
 XXEinjector,https://github.com/enjoiz/XXEinjector,A tool for XML External Entity (XXE) injection testing
 Yalis,https://github.com/EatonChips/yalis,Yet Another LinkedIn Scraper
+yarn,https://yarnpkg.com/,Yarn is a package manager that doubles down as project manager.
 youtubedl,https://github.com/ytdl-org/youtube-dl,Download videos from YouTube and other sites.
 ysoserial,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
 yt-dlp,https://github.com/yt-dlp/yt-dlp,A youtube-dl fork with additional features and fixes
