@@ -1,4 +1,9 @@
 Image tag,Version,Build date,Tools list
+osint,3.1.13,"2026-01-24T10:17:48Z",[download](</installed_tools/lists/osint_3.1.13_arm64.csv>)
+full,3.1.13,"2026-01-24T01:19:01Z",[download](</installed_tools/lists/full_3.1.13_arm64.csv>)
+ad,3.1.13,"2026-01-23T21:14:18Z",[download](</installed_tools/lists/ad_3.1.13_arm64.csv>)
+web,3.1.13,"2026-01-23T17:49:22Z",[download](</installed_tools/lists/web_3.1.13_arm64.csv>)
+light,3.1.13,"2026-01-23T17:00:16Z",[download](</installed_tools/lists/light_3.1.13_arm64.csv>)
 osint,3.1.12,"2026-01-03T10:20:17Z",[download](</installed_tools/lists/osint_3.1.12_arm64.csv>)
 full,3.1.12,"2026-01-03T04:08:36Z",[download](</installed_tools/lists/full_3.1.12_arm64.csv>)
 ad,3.1.12,"2026-01-03T00:47:44Z",[download](</installed_tools/lists/ad_3.1.12_arm64.csv>)
