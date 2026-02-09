@@ -216,7 +216,7 @@ When preparing your VPN configuration file:
 ``` 
 script-security 2
 up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf"
+down /etc/openvpn/update-resolv-conf
 ```
 
 See the options `--vpn VPN` and `--vpn-auth VPN_AUTH` of the
@@ -368,8 +368,7 @@ See the `--network` option of the [start action](/wrapper/cli/start#network-mode
 > [!WARNING]
 > Full sharing of host network interfaces is only possible on Linux.
 >
-> Adaptations of this mode exist on Windows and Mac with Docker Desktop or Orbstack, but there might be some *
-*limitations**.
+> Adaptations of this mode exist on Windows and Mac with Docker Desktop or Orbstack, but there might be some **limitations**.
 
 ### Shared timezones
 
