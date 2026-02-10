@@ -172,7 +172,7 @@ An additional feature of Exegol is the managed VPN tunnel. Compatible with OpenV
 
 The container will take care of starting the tunnel at each startup.
 
-> [!IMPORTANT] WrireGuard support
+> [!IMPORTANT] WireGuard support
 > WireGuard VPN support is currently in beta and exclusive to <Badge type="pro" /> and <Badge type="enterprise" /> users at this time.
 
 > [!INFO]

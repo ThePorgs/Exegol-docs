@@ -174,7 +174,7 @@ establish a VPN tunnel at container **startup**.
 
 Exegol supports **certificate authentication** but also **user/password
 authentication** through an authentication file (to allow
-non-interactive and transparent authentication) with an additinal
+non-interactive and transparent authentication) with an additional
 parameter.
 
 When preparing your VPN configuration file:

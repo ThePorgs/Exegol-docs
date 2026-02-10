@@ -257,7 +257,7 @@ Linux supports graphical applications natively.
 
 Exegol **already supports** a full desktop environment out of the box, that you can access with a VNC client, or directly in your browser (with the `--desktop` wrapper option). This is better than launching GUI apps from the terminal.
 
-If you really want to launch GUI apps from the terminal on macOS and the full desktop is not enough, you need [XQuartz](https://www.xquartz.org/) installed, with "Allow connections from network clients" enabled, but be avised, this solution is far from smooth. We call this X11 support.
+If you really want to launch GUI apps from the terminal on macOS and the full desktop is not enough, you need [XQuartz](https://www.xquartz.org/) installed, with "Allow connections from network clients" enabled, but be advised, this solution is far from smooth. We call this X11 support.
 
 ![macOS XQuartz configuration requirement](/assets/install/macOS_xquartz_config.png)
 
