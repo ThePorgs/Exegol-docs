@@ -112,7 +112,7 @@ If another version is needed, when a tool requires go >= 1.22.2, the following t
 
 ```bash
 mkdir /opt/tools/TOOL_NAME
-cd /opt/tools/TOOL_NAME
+cd /opt/tools/TOOL_NAME || exit
 asdf set golang 1.24.4
 mkdir -p .go/bin
 GOBIN=/opt/tools/TOOL_NAME/.go/bin go install -v github.com/REPO_NAME/TOOL_NAME@latest
