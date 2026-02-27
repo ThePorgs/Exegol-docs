@@ -71,9 +71,9 @@ The following example uses the `full` image. It all starts on the Internet-facin
 
 1. Activate Exegol with [default](/wrapper/cli/activate#default-activation) or [unattended](/wrapper/cli/activate#unattended-activation) activation.
 
-2. Install the image(s) with `exegol install "full"`
+2. Install the image(s) with `exegol install full`
 
-3. Export the image to a tarball: `docker save "registry.exegol.com/exegol:full" --output "/path/to/image.tar"`
+3. Export the image to a tarball: `docker save registry.exegol.com/exegol:full --output "/path/to/image.tar"`
 
 4. Transfer the file to the offline machine by any secure means.
 

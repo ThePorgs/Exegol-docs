@@ -54,12 +54,13 @@ Once the license key is in place, the offline machine will be considered activat
 
 ## Options
 
-| Option          | Description                                                                 |
-|-----------------|-----------------------------------------------------------------------------|
-| `--accept-eula` | Non-interactively accept the EULA                                           |
-| `--api`         | API key for unattended activation (or set `EXEGOL_API_KEY` env var)         |
-| `--license-id`  | License ID to activate (or set `EXEGOL_LICENSE_ID` env var)                 |
-| `--revoke`      | Revoke your local Exegol license                                            |
+| Option          | Description                                                          |
+|-----------------|----------------------------------------------------------------------|
+| `--accept-eula` | Non-interactively accept the EULA                                    |
+| `--offline`     | Show the activation ID of the current machine for offline activation |
+| `--api`         | API key for unattended activation (or set `EXEGOL_API_KEY` env var)  |
+| `--license-id`  | License ID to activate (or set `EXEGOL_LICENSE_ID` env var)          |
+| `--revoke`      | Revoke your local Exegol license                                     |
 
 ## Command examples
 
