@@ -102,6 +102,19 @@ To log out from all other devices where you're signed in:
 
 :::
 
+## API keys
+
+API keys allow you to authenticate with Exegol services in a non-interactive way. This is available to both Pro and Enterprise users.
+
+You can create, revoke, and remove API keys from their section in Settings. API keys can be used with the Exegol wrapper for [unattended activation](/wrapper/cli/activate#unattended-activation), which may be useful for automation, CI/CD, or scripted setups.
+
+- **One-time display**: The key value is shown only once at creation. Store it securely; it cannot be displayed again.
+- **Lifespan**: You can set a lifespan of up to **2 years** when creating a key.
+- **Scope**: An API key gives the wrapper access to **all licenses** attached to an account.
+
+> [!WARNING]
+> Treat API keys like passwords. Never share them or commit them to version control. Revoke any key that may have been exposed.
+
 ## Account Deletion
 
 Account deletion requests are currently processed manually by our team to ensure proper handling of active subscriptions before account closure. This prevents you from being locked out while subscriptions are still active. This process will be automated as we scale up.

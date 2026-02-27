@@ -61,6 +61,26 @@ http server: `updog`, `goshs`, `http-server`, `http-put-server`,
 In order to **shares notes** during an engagement, `trilium`
 (<https://github.com/TriliumNext/Trilium>) can be used.
 
+## Transferring images to an offline machine
+
+A machine activated with the [offline procedure](/wrapper/cli/activate#offline-option) cannot pull Exegol images from the Internet.
+
+The image needs to be downloaded on an Internet-facing machine first, then transferred onto the offline one.
+
+The following example uses the `full` image. It all starts on the Internet-facing machine.
+
+1. Activate Exegol with [default](/wrapper/cli/activate#default-activation) or [unattended](/wrapper/cli/activate#unattended-activation) activation.
+
+2. Install the image(s) with `exegol install "full"`
+
+3. Export the image to a tarball: `docker save "registry.exegol.com/exegol:full" --output "/path/to/image.tar"`
+
+4. Transfer the file to the offline machine by any secure means.
+
+5. Then, on the offline machine, load the image with: `docker load --input "/path/to/image.tar"`
+   
+6. Verify the import worked and Exegol can see the image: `exegol info`. You should see the loaded image listed. You can then use `exegol start` and other wrapper commands as usual.
+
 ## Dynamic history commands
 
 Many commands in the pre-filled history rely on environment variables
