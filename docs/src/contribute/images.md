@@ -106,24 +106,13 @@ go install -v github.com/AUTHOR/REPO@latest
 asdf reshim golang
 ```
 
-The `go install` command will work with the default version of golang (managed via `asdf`), currently being 1.22.2, set in `package_base`, in the `install_go()` function, with `asdf set --home golang 1.22.2`.
+The `go install` command will work with the default version of golang (managed via `asdf`), currently being `1.22.2`, set in `package_base`, in the `install_go()` function.
 
-If another version is needed, when a tool requires go >= 1.22.2, the following template can be used:
+If another version is needed, the following instruction should be used before the `go install -v ...`:
 
 ```bash
-mkdir /opt/tools/TOOL_NAME
-cd /opt/tools/TOOL_NAME || exit
+# Example with Golang 1.24.4
 asdf set golang 1.24.4
-mkdir -p .go/bin
-GOBIN=/opt/tools/TOOL_NAME/.go/bin go install -v github.com/REPO_NAME/TOOL_NAME@latest
-asdf reshim golang
-add-aliases TOOL_NAME
-```
-
-And then the alias being like:
-
-```bash
-alias TOOL_NAME="/opt/tools/TOOL_NAME/.go/bin/TOOL_NAME"
 ```
 
 == Ruby
