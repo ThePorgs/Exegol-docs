@@ -54,8 +54,8 @@ docker containers.
 
 ### Desktop
 
-<img src="/assets/desktop.png" class="align-center"
-alt="Exegol Desktop Overview" />
+![](/assets/desktop_dark.png){data-theme="dark"}
+![](/assets/desktop_light.png){data-theme="light"}
 
 On some systems, it may be difficult to have or share an X11
 environment. Some users prefer to have a full graphical desktop
