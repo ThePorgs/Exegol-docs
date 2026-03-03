@@ -5,6 +5,7 @@ The Licenses page allows you to manage your **Exegol Pro and Enterprises** licen
 For each license, you can see:
 
 - Type (Pro or Enterprise)
+- Options (e.g. "Offline")
 - Organization behind the Enterprise license (Enterprise only)
 - Team you're in (Enterprise only)
 - Status (active/expired/disabled)

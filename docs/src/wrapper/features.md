@@ -54,8 +54,8 @@ docker containers.
 
 ### Desktop
 
-<img src="/assets/desktop.png" class="align-center"
-alt="Exegol Desktop Overview" />
+![](/assets/desktop_dark.png){data-theme="dark"}
+![](/assets/desktop_light.png){data-theme="light"}
 
 On some systems, it may be difficult to have or share an X11
 environment. Some users prefer to have a full graphical desktop
@@ -216,7 +216,7 @@ When preparing your VPN configuration file:
 ``` 
 script-security 2
 up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf"
+down /etc/openvpn/update-resolv-conf
 ```
 
 See the options `--vpn VPN` and `--vpn-auth VPN_AUTH` of the
@@ -368,8 +368,7 @@ See the `--network` option of the [start action](/wrapper/cli/start#network-mode
 > [!WARNING]
 > Full sharing of host network interfaces is only possible on Linux.
 >
-> Adaptations of this mode exist on Windows and Mac with Docker Desktop or Orbstack, but there might be some *
-*limitations**.
+> Adaptations of this mode exist on Windows and Mac with Docker Desktop or Orbstack, but there might be some **limitations**.
 
 ### Shared timezones
 

@@ -72,6 +72,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'discord', link: 'https://discord.exegol.com' },
       { icon: 'linkedin', link: 'https://linkedin.exegol.com' },
+      { icon: 'reddit', link: 'https://www.reddit.com/r/exegol' },
       { icon: 'x', link: 'https://x.com/exegogol' },
       { icon: 'youtube', link: 'https://www.youtube.com/@exegogol' },
       { icon: 'github', link: 'https://github.com/ThePorgs/Exegol' },

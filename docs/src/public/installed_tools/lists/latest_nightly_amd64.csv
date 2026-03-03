@@ -3,6 +3,7 @@ abuseACL,https://github.com/AetherBlack/abuseACL,A python script to automaticall
 aclpwn,https://github.com/aas-n/aclpwn.py,Tool for testing the security of Active Directory access controls.
 AD-miner,https://github.com/Mazars-Tech/AD_Miner,Active Directory audit tool that leverages cypher queries.
 adidnsdump,https://github.com/dirkjanm/adidnsdump,Active Directory Integrated DNS dump utility
+adwsdomaindump,https://github.com/mverschu/adwsdomaindump,A tool for dumping domain data via ADWS for evasion purposes.
 aircrack-ng,https://www.aircrack-ng.org,A suite of tools for wireless penetration testing
 aliasr,https://github.com/Mojo8898/aliasr,Aliasr is a modern and feature-rich TUI launcher for penetration testing commands inspired by Arsenal but with significantly improved functionality.
 alterx,https://github.com/projectdiscovery/alterx,A tool for fast and customizable subdomain wordlist generator using DSL from ProjectDiscovery.
@@ -299,6 +300,7 @@ PXEThief,https://github.com/blurbdust/PXEThief,PXEThief is a set of tooling that
 pycdc,https://github.com/zrax/pycdc,Python bytecode disassembler and decompiler.
 pyFindUncommonShares,https://github.com/p0dalirius/pyFindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
 pyftpdlib,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
+pygoldengmsa,https://github.com/felixbillieres/pyGoldenGMSA, Cross-platform Python implementation of the GoldenGMSA attack for exploiting Group Managed Service Accounts (gMSA) in Active Directory. 
 pygpoabuse,https://github.com/Hackndo/pyGPOAbuse,A tool for abusing GPO permissions to escalate privileges
 pykek,https://github.com/preempt/pykek,PyKEK (Python Kerberos Exploitation Kit) a python library to manipulate KRB5-related data.
 pylaps,https://github.com/p0dalirius/pylaps,Utility for enumerating and querying LDAP servers.
@@ -332,6 +334,7 @@ ruler,https://github.com/sensepost/ruler,Outlook Rules exploitation framework.
 rusthound,https://github.com/NH-RED-TEAM/RustHound,BloodHound ingestor in Rust.
 rusthound-ce,https://github.com/g0h4n/RustHound-CE,BloodHound-CE ingestor in Rust.
 rustscan,https://github.com/RustScan/RustScan,The Modern Port Scanner
+s3scanner,https://github.com/sa7mon/S3Scanner,a go tool for s3 buckets misconfiguration across S3-compatible APIs
 samdump2,https://github.com/azan121468/SAMdump2,A tool to dump Windows NT/2k/XP/Vista password hashes from SAM files
 sccmhunter,https://github.com/garrettfoster13/sccmhunter,SCCMHunter is a post-ex tool built to streamline identifying profiling and attacking SCCM related assets in an Active Directory domain.
 sccmsecrets,https://github.com/synacktiv/SCCMSecrets,SCCMSecrets.py aims at exploiting SCCM policies distribution for credentials harvesting and initial access and lateral movement.
@@ -371,6 +374,7 @@ stegosuite,https://github.com/osde8info/stegosuite,Stegosuite is a free steganog
 strace,https://github.com/strace/strace,strace is a debugging utility for Linux that allows you to monitor and diagnose system calls made by a process.
 subfinder,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
 sublist3r,https://github.com/aboul3la/Sublist3r,a Python tool designed to enumerate subdomains of websites.
+subzy,https://github.com/PentestPad/subzy,Subdomain takeover tool which checks for various cloud services and identifies if a subdomain is vulnerable.
 swaks,https://github.com/jetmore/swaks,Swaks is a featureful flexible scriptable transaction-oriented SMTP test tool.
 symfony-exploits,https://github.com/ambionics/symfony-exploits,Collection of Symfony exploits and PoCs.
 tailscale,https://github.com/tailscale/tailscale,A secure and easy-to-use VPN alternative that is designed for teams and businesses.
@@ -400,6 +404,7 @@ uncover,https://github.com/projectdiscovery/uncover,A tool to Quickly discover e
 updog,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
 uploader,https://github.com/Frozenka/uploader,Tool for quickly downloading files to a remote machine based on the target operating system
 upx,https://github.com/upx/upx,UPX is an advanced executable packer
+urldedupe,https://github.com/ameenmaali/urldedupe,urldedupe is a c++ tool to quickly pass in a list of URLs and get back a list of deduplicated (unique) URL and query string combination.
 username-anarchy,https://github.com/urbanadventurer/username-anarchy,Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
 Villain,https://github.com/t3l3machus/Villain,Command & Control Framework
 volatility2,https://github.com/volatilityfoundation/volatility,Volatile memory extraction utility framework
