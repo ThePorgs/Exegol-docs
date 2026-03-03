@@ -1,0 +1,54 @@
+Tool,Link,Description
+asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
+autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnaissance tool which performs automated enumeration of services.
+bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
+bloodhound.py,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
+cloudfail,https://github.com/m0rtem/CloudFail,a reconnaissance tool for identifying misconfigured CloudFront domains.
+coercer,https://github.com/p0dalirius/coercer,DFS-R target coercion tool
+CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
+droopescan,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
+drupwn,https://github.com/immunIT/drupwn,Drupal security scanner.
+enum4linux-ng,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
+evilwinrm,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
+exegol-history,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
+eyewitness,https://github.com/FortyNorthSecurity/EyeWitness,a tool to take screenshots of websites / provide some server header info / and identify default credentials if possible.
+fcrackzip,https://github.com/hyc/fcrackzip,Password cracker for zip archives.
+ffuf,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
+firefox,https://www.mozilla.org,A web browser
+fzf,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
+gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
+gittools,https://github.com/internetwache/GitTools,A collection of Git tools including a powerful Dumper for dumping Git repositories.
+hashcat,https://hashcat.net/hashcat,A tool for advanced password recovery
+hydra,https://github.com/vanhauser-thc/thc-hydra,Hydra is a parallelized login cracker which supports numerous protocols to attack.
+impacket,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
+john,https://github.com/openwall/john,John the Ripper password cracker.
+joomscan,https://github.com/rezasp/joomscan,A tool to enumerate Joomla-based websites
+jwt,https://github.com/ticarpi/jwt_tool,a command-line tool for working with JSON Web Tokens (JWTs)
+mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
+metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
+neo4j,https://github.com/neo4j/neo4j,Database.
+neovim,https://neovim.io/,hyperextensible Vim-based text editor
+netexec,https://github.com/Pennyw0rth/NetExec,Network scanner (Crackmapexec updated).
+nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
+nuclei,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
+OpenVPN,https://openvpn.net/,Fast and Easy Zero-Trust VPN Fully in Your Control
+proxychains,https://github.com/rofl0r/proxychains,Proxy chains - redirect connections through proxy servers.
+pyftpdlib,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
+responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
+seclists,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
+simplyemail,https://github.com/SimplySecurity/SimplyEmail,a scriptable command line tool for sending emails
+smbclient,https://github.com/samba-team/samba,SMBclient is a command-line utility that allows you to access Windows shared resources
+smbmap,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and check for null sessions
+sqlmap,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
+sslscan,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
+subfinder,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
+testssl,https://github.com/drwetter/testssl.sh,a tool for testing SSL/TLS encryption on servers
+theharvester,https://github.com/laramies/theHarvester,Tool for gathering e-mail accounts / subdomain names / virtual host / open ports / banners / and employee names from different public sources
+wafw00f,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to identify and fingerprint web application firewall (WAF) products.
+waybackurls,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
+weevely,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
+weevely,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
+wireguard,https://www.wireguard.com,WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
+wpscan,https://github.com/wpscanteam/wpscan,A tool to enumerate WordPress-based websites
+yarn,https://yarnpkg.com/,Yarn is a package manager that doubles down as project manager.
+ysoserial,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
