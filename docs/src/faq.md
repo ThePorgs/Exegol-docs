@@ -84,9 +84,9 @@ different answer. So let's answer most of them.
 If you want to add a tool:
 
 - **in the official Exegol images**: refer to the
-  [contribution guidance](/contribute/resources#adding-new-tools#adding-a-new-tool).
+  [contribution guidance](/contribute/resources#adding-new-tools).
 - **in your own custom local image**: refer to the
-  [contribution guidance](/contribute/resources#adding-new-tools#adding-a-new-tool) as well, but instead of
+  [contribution guidance](/contribute/resources#adding-new-tools) as well, but instead of
   creating a Pull Request at the end to offer your contribution, just
   build the image locally with the wrapper and enjoy your custom local
   image.
@@ -150,7 +150,7 @@ Select the Virtual Hard Disk: <span class="title-ref">select vdisk
 file="C:Users\<USER\>AppDataLocalDockerwsldiskdocker_data.vhdx"</span>.
 A message <span class="title-ref">DiskPart successfully selected the
 virtual disk file.</span> should appear. - Shrink the Virtual Hard Disk:
-<span class="title-ref">compact vdisk</span> - Wait for the proccess to
+<span class="title-ref">compact vdisk</span> - Wait for the process to
 reach 100 completion (might take some time)
 
 ## How do I update Exegol?

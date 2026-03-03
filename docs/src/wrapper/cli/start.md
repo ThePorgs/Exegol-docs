@@ -183,9 +183,8 @@ version `3.1.8`.
 
 The container will take care of starting the tunnel at each startup.
 
-> [!IMPORTANT] WrireGuard support
-> WireGuard VPN support is currently in beta and exclusive to <Badge type="pro" /> and <Badge type="enterprise" /> users
-> at this time.
+> [!IMPORTANT] WireGuard support
+> WireGuard VPN support is currently in beta and exclusive to <Badge type="pro" /> and <Badge type="enterprise" /> users at this time.
 
 > [!INFO]
 > When using the `--vpn` feature, network mode defaults to `docker`, or `nat` if the user has a
