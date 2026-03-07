@@ -11,6 +11,6 @@ Everything is managed by the wrapper and they are shared with every container by
 
 > [!TIP]
 > The list featured here is automatically generated. Exegol features CI/CD pipelines that build the images, update the resources, etc.
-> When a change is made on the Exegol-resources repository, it's reflected here, in the list.
+> When a change is made on the [Exegol-resources repository](https://github.com/ThePorgs/Exegol-resources), it's reflected here, in the list.
 
 <markdownTable file="/exegol_resources/resources_list.csv" />
