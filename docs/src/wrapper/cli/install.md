@@ -8,13 +8,16 @@ Dockerhub registry](https://hub.docker.com/repository/docker/nwodtuhs/exegol).
 A compressed and pre-built image is downloaded in the form of layers, and then uncompressed.
 
 > [!NOTE]
-> Enterprise users can configure custom registries in their Exegol configuration file (`~/.exegol/config.yml`). When custom registries are configured, Exegol will also search for images in those registries. See [Enterprise Features](/wrapper/features#enterprise-features) for more details.
+> Enterprise users can configure custom registries in their Exegol configuration file (`~/.exegol/config.yml`).
+> When custom registries are configured, Exegol will also search for images in those registries.
+> See [Enterprise Features](/wrapper/features#enterprise-features) for more details.
 
 ## Options
 
-| Option | Description |
-|--------|-------------|
-| `IMAGE` | Optional positional argument to indicate the image to install. |
+| Option          | Description                                                                  |
+|-----------------|------------------------------------------------------------------------------|
+| `IMAGE`         | Optional positional argument to indicate the image to install.               |
+| `-F`, `--force` | Install an image and exegol-resources without interactive user confirmation. |
 
 ## Command examples
 

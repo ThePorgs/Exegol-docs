@@ -102,6 +102,25 @@ Global options can still be used, like for any action.
 | `--offline` | Run exegol in offline mode, no request will be made on internet (default: Disable) |
 | `--arch {arm64,amd64}` | Overwrite default image architecture (default: host's arch) |
 
+### Advanced options
+
+The `exegol info <container>` command displays the container's root password as well as the desktop access URL, if enabled.
+By default, even if there is a leak no direct exploitation is possible (the password cannot be used without the desktop service, which is disabled by default; and when the desktop is enabled, it is available only on localhost by default).
+
+However, in certain cases (such as a stream), it may be preferable to hide this information by default.
+To do this, simply set the environment variable `EXEGOL_STREAMER_MODE`.
+
+``` bash
+# Enable streamer mode
+export EXEGOL_STREAMER_MODE=1
+
+# Show the container's info without leaking root password and desktop access URL
+exegol info <container>
+
+# Disable streamer mode
+unset EXEGOL_STREAMER_MODE
+``` 
+
 ## Command examples
 
 ``` bash

@@ -52,6 +52,18 @@ faketime "$(date +'%Y-%m-%d') $(net time -S $DC_IP | awk '{print $4}')"
 > *Note: careful with the timezones. If they differ between the operator
 > and the KDC, the delta needs to be taken into account*
 
+## Rename a container
+
+Renaming a running Docker container can be helpful if the original name is too generic or if you want to better reflect its purpose. Docker provides a simple command for this operation:
+
+```bash
+docker rename "exegol-oldname" "exegol-newname"
+```
+
+> [!WARNING]
+> Make sure to keep `exegol-` as prefix in the name
+
+
 ## Share files or notes with targets and collaborators
 
 The following tools or commands can be used to pop a temporary file or
