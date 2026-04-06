@@ -168,6 +168,16 @@ function install_yourtool() {
 function install_yourtool() {
     # CODE-CHECK-WHITELIST=add-aliases
     colorecho "Installing yourtool"
+    if [[ $(uname -m) = 'x86_64' ]]
+    then
+        local arch="amd64"
+
+    elif [[ $(uname -m) = 'aarch64' ]]
+    then
+        local arch="arm64"
+    else
+        criticalecho-noexit "This installation function doesn't support architecture $(uname -m)" && return
+    fi
     local URL
     curl --location --silent --output /tmp/meta.json "https://api.github.com/repos/AUTHOR/REPO/releases/latest"
     URL=$(cat /tmp/meta.json | grep 'browser_download_url' | grep -o 'https://[^"]*' | grep 'linux' | grep "$arch")
