@@ -16,6 +16,7 @@ angr,https://github.com/angr/angr,a platform-agnostic binary analysis framework
 apksigner,https://source.android.com/security/apksigning,arguably the most important step to optimize your APK file
 apktool,https://github.com/iBotPeaches/Apktool,It is a tool for reverse engineering 3rd party / closed / binary Android apps.
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
+asciinema,https://github.com/asciinema/asciinema,Terminal session recorder
 asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 asrepcatcher,https://github.com/Yaxxine7/ASRepCatcher,Make your VLAN ASREProastable.
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
@@ -29,6 +30,7 @@ BBOT,https://github.com/blacklanternsecurity/bbot,BEE·bot is a multipurpose sca
 bettercap,https://github.com/bettercap/bettercap,The Swiss Army knife for 802.11 / BLE / and Ethernet networks reconnaissance and MITM attacks.
 binwalk,https://github.com/ReFirmLabs/binwalk,Binwalk is a tool for analyzing / reverse engineering / and extracting firmware images.
 Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
+bloodbash,https://github.com/DotNetRussell/BloodBash,BloodBash is a powerful standalone BloodHound / SharpHound + AzureHound JSON analyzer written in Python
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 BloodHound-CE,https://github.com/SpecterOps/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments (Community Edition)
 bloodhound-ce.py,https://github.com/fox-it/BloodHound.py,BloodHound-CE ingestor in Python.
@@ -92,6 +94,7 @@ eaphammer,https://github.com/s0lst1c3/eaphammer,EAPHammer is a toolkit for perfo
 empire,https://github.com/BC-SECURITY/Empire,post-exploitation and adversary emulation framework
 enum4linux-ng,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
 enyx,https://github.com/trickster0/enyx,Framework for building offensive security tools.
+EVENmonitor,https://github.com/NeffIsBack/EVENmonitor,Monitor the Windows Event Log with grep-like features or filtering for specific Event IDs 
 evil-winrm-py,https://github.com/adityatelange/evil-winrm-py,Evil-WinRM. But in python
 evilwinrm,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
 exegol-history,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
