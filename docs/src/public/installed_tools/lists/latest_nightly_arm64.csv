@@ -74,7 +74,7 @@ cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized 
 curlie,https://github.com/rs/curlie,Curlie is a frontend to curl that adds the ease of use of httpie without compromising on features and performance
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 cyperoth,https://github.com/seajaysec/cypheroth,Automated extensible toolset that runs cypher queries against Bloodhound's Neo4j backend and saves output to spreadsheets.
-daclsearch,https://github.com/uknowsec/daclsearch,Exhaustive search and flexible filtering of Active Directory ACEs
+daclsearch,https://github.com/cogiceo/daclsearch,Exhaustive search and flexible filtering of Active Directory ACEs
 darkarmour,https://github.com/bats3c/darkarmour,a tool to detect and evade common antivirus products
 dex2jar,https://github.com/pxb1988/dex2jar,A tool to convert Android's dex files to Java's jar files
 dfscoerce,https://github.com/Wh04m1001/dfscoerce,DFS-R target coercion tool
