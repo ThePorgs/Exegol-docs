@@ -262,6 +262,7 @@ onelistforall,https://github.com/six2dez/OneListForAll,Rockyou for web fuzzing
 OneRuleToRuleThemStill rules,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 onesixtyone,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
 OpenVPN,https://openvpn.net/,Fast and Easy Zero-Trust VPN Fully in Your Control
+pacu,https://github.com/RhinoSecurityLabs/pacu,The AWS exploitation framework for testing the security of Amazon Web Services environments.
 Pantagrule rules,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
 pass,https://github.com/hashcat/hashcat,TODO
 PassTheCert,https://github.com/AlmondOffSec/PassTheCert,PassTheCert is a tool to extract Active Directory user password hashes from a domain controller's local certificate store.
@@ -383,6 +384,7 @@ symfony-exploits,https://github.com/ambionics/symfony-exploits,Collection of Sym
 tailscale,https://github.com/tailscale/tailscale,A secure and easy-to-use VPN alternative that is designed for teams and businesses.
 targetedKerberoast,https://github.com/ShutdownRepo/targetedKerberoast,Kerberoasting against specific accounts
 tcpdump,https://github.com/the-tcpdump-group/tcpdump,a powerful command-line packet analyzer for Unix-like systems
+tdo_dump,https://github.com/AlmondOffSec/tdo_dump,Proof-of-Concept tool to dump trusted domain objects and extract trust credentials for lateral movement across domain boundaries
 TeamsPhisher,https://github.com/Octoberfest7/TeamsPhisher,TeamsPhisher is a Python3 program that facilitates the delivery of phishing messages and attachments to Microsoft Teams users whose organizations allow external communications.
 testdisk,https://github.com/cgsecurity/testdisk,Partition recovery and file undelete utility
 testssl,https://github.com/drwetter/testssl.sh,a tool for testing SSL/TLS encryption on servers
