@@ -294,3 +294,22 @@ mount.nfs: Operation not permitted
 ```
 
 This occurs because the NFS mount operation requires `rpc.statd` for file locking, and the container lacks the necessary privileges and services to support this by default. To resolve this, run Exegol with `--cap SYS_ADMIN`, which grants the container the privilege needed for NFS and `rpc.statd` support.
+
+## Metasploit database not connected
+
+When opening `msfconsole`, the workspace database may appear disconnected:
+
+```
+msfconsole -qx 'db_status; exit'
+[*] postgresql selected, no connection
+```
+
+Or `msfdb status` may report: `Database found, but is not running`.
+
+Metasploit does not use the system PostgreSQL service on port `5432` (that instance is used by tools such as BloodHound CE). Exegol initializes a dedicated MSF database during the image build via `msfdb init`. At runtime, this database must be started separately with `msfdb start`.
+
+```
+msfdb start
+msfconsole -qx 'db_status; exit'
+[*] Connected to msf. Connection type: postgresql.
+```
