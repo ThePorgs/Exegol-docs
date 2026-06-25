@@ -2,8 +2,6 @@
 
 The Support page provides quick links to support channels, to find answers to your questions, and connect with the Exegol community and team.
 
-<YouTubeVideo videoId="dQw4w9WgXcQ" />
-
 ### Documentation first
 
 We recommend starting with our documentation:

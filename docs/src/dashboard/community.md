@@ -4,8 +4,6 @@ The Exegol project is powered by a vibrant community of thousands of cybersecuri
 
 The Community page provides quick access to various Exegol community resources, support channels, and social platforms where you can connect with other users and the Exegol team.
 
-<YouTubeVideo videoId="dQw4w9WgXcQ" />
-
 ### Discord server
 
 Our Discord server is the central hub for the Exegol community, featuring channels in both English and French. Here you'll find:
