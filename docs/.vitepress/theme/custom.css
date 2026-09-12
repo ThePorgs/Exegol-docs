@@ -60,6 +60,8 @@
     --badge-yellow-bg: hsla(48, 96%, 53%, 0.021);
     --badge-blue: hsl(205,86%,70%);
     --badge-blue-bg: hsla(205,86%,70%,0.08);
+    --badge-indigo: hsl(228,86%,68%);
+    --badge-indigo-bg: hsla(228,86%,68%,0.08);
     --badge-violet: hsl(251,97%,76%);
     --badge-violet-bg: hsla(251,97%,76%,0.08);
 
@@ -121,6 +123,8 @@
     --badge-yellow-bg: hsla(48,96%,43%,0.15);
     --badge-blue: hsl(205,86%,60%);
     --badge-blue-bg: hsla(205,86%,60%,0.15);
+    --badge-indigo: hsl(228,86%,62%);
+    --badge-indigo-bg: hsla(228,86%,62%,0.15);
     --badge-violet: hsl(251,97%,76%);
     --badge-violet-bg: hsla(251,97%,76%,0.15);
 }

@@ -20,7 +20,7 @@ Before contributing to Exegol, please be aware of the legal considerations.
 
 - **Intellectual Property**: Exegol is the exclusive property of Execorp; Public availability of source code does not waive intellectual property rights ; All rights not expressly granted are reserved
 - **By contributing, you**: Grant Execorp an irrevocable, worldwide, free, and unlimited right to use your contributions; Accept that certain contributions may require a specific intellectual property rights transfer agreement; Acknowledge that contributions may be subject to technical and legal review
-- **Limited use**: Non-commercial use is free and includes academic research, individual learning, and cybersecurity competition; Commercial use requires a valid subscription (Pro or Enterprise).
+- **Limited use**: Non-commercial use is free and includes academic research, individual learning, and cybersecurity competition; Commercial use requires a valid subscription (Pro, Team or Enterprise).
 
 For more details, please review our [Software License](/legal/software-license) and other [Legal Documents](/legal/summary).
 

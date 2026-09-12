@@ -23,7 +23,7 @@ Exegol is transitioning from the GNU General Public License version 3 (GPL3) to 
 - **Non-commercial use**: use without direct or indirect purpose of generating revenue or providing third-party services
 - **Commercial use**: use of Exegol as a tool within a business context for the user's own operations, such as professional activities, internal training, or security operations
 - **Commercial exploitation**: any activity that uses Exegol as a basis for generating revenue or providing services to third parties, including but not limited to maintenance, support, managed services, repackaging, or reselling
-- **Subscription**: a monthly or yearly renewed purchase (Pro or Enterprise) that permits commercial use of Exegol under the terms of this license
+- **Subscription**: a monthly or yearly renewed purchase (Pro, Team or Enterprise) that permits commercial use of Exegol under the terms of this license
 
 ## 2. Intellectual property
 
@@ -44,7 +44,7 @@ Execorp grants the user a free, personal, non-exclusive, non-transferable, and r
 
 #### 3.2.1 Allowed Commercial Use (with subscription)
 
-With a valid subscription (Pro or Enterprise), you are permitted to use Exegol in a commercial context for your own business operations (e.g., technical assessments, penetration test, bug bounty, research), such as:
+With a valid subscription (Pro, Team or Enterprise), you are permitted to use Exegol in a commercial context for your own business operations (e.g., technical assessments, penetration test, bug bounty, research), such as:
 - Using Exegol as part of your professional activities
 - Using Exegol in your business or enterprise environment
 - Using Exegol for internal training or documentation

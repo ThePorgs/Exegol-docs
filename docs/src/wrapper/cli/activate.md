@@ -1,6 +1,6 @@
-# `activate` action <Badge type="pro"/> <Badge type="enterprise"/>
+# `activate` action <Badge type="pro"/> <Badge type="team"/> <Badge type="enterprise"/>
 
-The `activate` action is used to activate Exegol with a valid Pro/Enterprise license. This action is required to use
+The `activate` action is used to activate Exegol with a valid Pro, Team or Enterprise license. This action is required to use
 Exegol in a professional environment. Without activation, Exegol will run in Community edition mode with limited
 features.
 
@@ -20,7 +20,7 @@ This is the default interactive activation method (online, interactively).
 You can activate Exegol without any interactive prompts (e.g. for automation, CI/CD, or remote setup).
 
 1. Create and save an API key from the Exegol dashboard "[Settings](https://dashboard.exegol.com/settings)" page. See the [API keys docs](/dashboard/settings#api-keys) for more info. **The key is shown only once at creation**.
-2. Retrieve the License ID to activate. On Pro that is [My plan](/dashboard/my_plan); on Enterprise that is [My licenses](/dashboard/licenses). The ID can be copied from the three-dots menu in the Action column.
+2. Retrieve the License ID to activate. On Pro that is [My plan](/dashboard/my_plan); on Team or Enterprise that is [My licenses](/dashboard/licenses). The ID can be copied from the three-dots menu in the Action column.
 
 Use the following command, replacing the placeholders with your API key and license ID:
 

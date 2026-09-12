@@ -27,9 +27,9 @@ Every container can mount [offline resources](/resources/) at `/opt/resources`, 
 - [**Sentinel**](/sentinel/) <Badge type="enterprise"/><Badge type="add-on"/>: a structured record of interactive commands, plus optional artifacts, written on the host for a person or a SIEM to read.
 - [**Dashboard**](/dashboard/): the account side: plan, licenses, organizations, referral, and settings.
 
-## Tiers
+## Tiers <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
-Community, Pro and Enterprise, including what each plan includes, are on [exegol.com/pricing](https://exegol.com/pricing). Enterprise includes everything in Pro. Wherever the Pro badge <Badge type="pro"/> appears in these docs, Enterprise <Badge type="enterprise"/> has the feature as well.
+Community, Pro, Team and Enterprise, including what each plan includes, are on [exegol.com/pricing](https://exegol.com/pricing). Badges on each page mark which tier a feature requires.
 
 Commercial use, seats, and the rest of the legal rules are in the [legal summary](/legal/summary).
 

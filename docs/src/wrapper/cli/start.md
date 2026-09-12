@@ -115,7 +115,7 @@ Exegol supports different network modes to suit various use cases:
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `host` (default) | Container shares the host's network interfaces (IP and MAC addresses of every interface of your host).                                                                                                                                                                   | - When you need to use the host's network interfaces directly<br>- For low-level network operations<br>- When you need to share the host's IP and MAC address                                                                      |
 | `docker`         | Container uses Docker's default bridge network. All containers (not just Exegol) share this network and can communicate with each other.                                                                                                                                 | - When you need basic network isolation<br>- When you want to publish specific ports<br>- For most standard use cases<br>- When you want to allow communication between containers                                                 |
-| `nat`            | <Badge type="pro"/> Creates a dedicated isolated network for the container with its own subnet. Each container gets a unique network namespace with a /28 subnet (16 IP addresses), providing complete isolation from other containers. Requires Pro/Enterprise license. | - When you need complete network isolation<br>- For sensitive operations requiring dedicated network resources<br>- When you need to control all network traffic<br>- When you want automatic network cleanup on container removal |
+| `nat`            | <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/> Creates a dedicated isolated network for the container with its own subnet. Each container gets a unique network namespace with a /28 subnet (16 IP addresses), providing complete isolation from other containers. Requires Pro, Team or Enterprise license. | - When you need complete network isolation<br>- For sensitive operations requiring dedicated network resources<br>- When you need to control all network traffic<br>- When you want automatic network cleanup on container removal |
 | `disable`        | Disables all network connectivity for the container.                                                                                                                                                                                                                     | - When you need maximum isolation<br>- For offline operations<br>- When network access is not required                                                                                                                             |
 
 > [!CAUTION]
@@ -154,7 +154,7 @@ There are some limitations and considerations that users should be aware of:
     - NAT mode allocates dedicated network resources per container
 - **License Requirements**:
     - Docker mode is available in all versions
-    - NAT mode requires Pro/Enterprise license
+    - NAT mode requires Pro, Team or Enterprise license
 
 === General Considerations
 
@@ -200,7 +200,7 @@ The container will take care of starting the tunnel at each startup.
 
 > [!INFO]
 > When using the `--vpn` feature, network mode defaults to `docker`, or `nat` if the user has a
-> valid <Badge type="pro" /> or <Badge type="enterprise" /> subscription. This isolates the container. The VPN
+> valid <Badge type="pro" />, <Badge type="team" /> or <Badge type="enterprise" /> subscription. This isolates the container. The VPN
 > connection is not opened directly on the host's network interface. It protects the host.
 
 | Option                | Description                                                                                                                                                                       |

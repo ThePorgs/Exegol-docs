@@ -1,8 +1,8 @@
-# My plan <Badge type="pro" />
+# My plan <Badge type="pro" /> <Badge type="team" />
 
-My plan is the Pro account screen: the subscription (seats, billing) and the licenses on that subscription (which machines are activated).
+My plan is the Pro and Team account screen: the subscription (seats, billing) and the licenses on that subscription (which machines are activated).
 
-Enterprise seats and billing are on [Organizations](/dashboard/organizations). Enterprise licenses assigned to the logged-in user are on [My licenses](/dashboard/licenses).
+Enterprise seats and billing are on [Organizations](/dashboard/organizations). Team and Enterprise licenses assigned to the logged-in user are on [My licenses](/dashboard/licenses).
 
 > [!TIP]
 > Extra columns can be shown from the View menu. Useful when something fails and a support ticket needs identifiers.
@@ -14,15 +14,15 @@ The price in the table is the list price for that tier, before discounts. The am
 Open the billing portal from the Actions menu on the far right of the table. From there: payment method, seat count, invoices, cancel or renew.
 
 > [!NOTE]
-> Pro is limited to one subscription with up to 2 seats. More seats means [Enterprise](https://exegol.com/pricing).
+> Pro is limited to one subscription with up to 2 seats. More seats means [Team or Enterprise](https://exegol.com/pricing).
 
 ### Adding a subscription
 
 1. Click **Add subscription** in the top-right corner
-2. Choose Pro or Enterprise on the pricing page
+2. Choose Pro, Team or Enterprise on the pricing page
 
 > [!WARNING]
-> A second Pro subscription is refused. Add a seat to the existing Pro plan (up to 2), or move to Enterprise.
+> A second Pro subscription is refused. Add a seat to the existing Pro plan (up to 2), or move to Team or Enterprise.
 
 Plans and what they include are on [exegol.com/pricing](https://exegol.com/pricing).
 

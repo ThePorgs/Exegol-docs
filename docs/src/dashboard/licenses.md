@@ -1,15 +1,15 @@
-# My licenses <Badge type="enterprise" />
+# My licenses <Badge type="team" /> <Badge type="enterprise" />
 
-My licenses lists the Enterprise licenses assigned to the logged-in user, and which machines those licenses are enrolled on.
+My licenses lists the Team and Enterprise licenses assigned to the logged-in user, and which machines those licenses are enrolled on.
 
-Assignment, teams and seats are on [Organizations](/dashboard/organizations). That section is hidden if the account only holds an assigned license and has no org or team role (owner, manager, assigner, viewer). Pro subscriptions and Pro licenses are on [My plan](/dashboard/my_plan).
+Assignment, seats and (Enterprise) subteams are on [Organizations](/dashboard/organizations). That section is hidden if the account only holds an assigned license and has no org or team role (owner, manager, assigner, viewer). Pro subscriptions and Pro licenses are on [My plan](/dashboard/my_plan).
 
 > [!TIP]
 > Extra columns can be shown from the View menu. Useful when something fails and a support ticket needs identifiers.
 
 For each license the table can show:
 
-- Type (Enterprise)
+- Type (Team or Enterprise)
 - Options (for example Offline)
 - Organization
 - Team

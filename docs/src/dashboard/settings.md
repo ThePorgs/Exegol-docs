@@ -102,7 +102,7 @@ To log out from all other devices where you're signed in:
 
 ## API keys
 
-API keys allow you to authenticate with Exegol services in a non-interactive way. This is available to both Pro and Enterprise users.
+API keys allow you to authenticate with Exegol services in a non-interactive way. This is available to Pro, Team and Enterprise users.
 
 You can create, revoke, and remove API keys from their section in Settings. API keys can be used with the Exegol wrapper for [unattended activation](/wrapper/cli/activate#unattended-activation), which may be useful for automation, CI/CD, or scripted setups.
 

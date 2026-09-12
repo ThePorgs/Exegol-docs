@@ -14,7 +14,7 @@ In the context of using our sites and services, Execorp may collect the followin
 - Information related to licenses and subscriptions
 - Activity logs and action history
 - Referral information
-- Information related to roles and teams (for Enterprise subscriptions)
+- Information related to roles and teams (for Enterprise subscriptions); organization and license assignment data (for Team and Enterprise subscriptions)
 
 Payment data is processed directly by our provider Stripe and is not stored by Execorp.
 

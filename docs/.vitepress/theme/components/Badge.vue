@@ -8,13 +8,14 @@
 import { computed } from 'vue'
 
 const props = defineProps<{
-  type: 'pro' | 'enterprise' | 'new' | 'add-on'
+  type: 'pro' | 'team' | 'enterprise' | 'new' | 'add-on'
   text?: string
 }>()
 
 const displayText = computed(() => {
   return props.text ?? {
     'pro': 'Pro',
+    'team': 'Team',
     'enterprise': 'Enterprise',
     'new': 'New!',
     'add-on': 'Add-on'
@@ -75,6 +76,13 @@ const displayText = computed(() => {
   border-color: var(--badge-violet);
   color: var(--badge-violet);
   background-color: var(--badge-violet-bg);
+}
+
+.VPBadge.team {
+  border-color: var(--badge-indigo);
+  color: var(--badge-indigo);
+  background-color: var(--badge-indigo-bg);
+  opacity: 1;
 }
 
 .VPBadge.enterprise {

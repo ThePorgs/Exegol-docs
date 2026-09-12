@@ -35,7 +35,7 @@ The table below is a non-exhaustive list of what it supports. Each row links to 
 | [Local image](#local-image-building)          | Customized local image building                                                                                             |
 | [Remote image](#remote-image-pulling)         | Pre-built image available for download                                                                                      |
 | [Container profiles](#container-profiles)     | <Badge type="pro"/> Named set of container defaults applied at container creation                                           |
-| [Custom images](#custom-images)               | <Badge type="enterprise"/> Using different images names                                                                     |
+| [Custom images](#custom-images)               | <Badge type="team"/><Badge type="enterprise"/> Using different images names                                                                     |
 | [Custom registry](#custom-registry)           | <Badge type="enterprise"/> Pre-built image available for download                                                           |
 | [Command execution](#command-execution)       | Execution of specific command                                                                                               |
 | [Daemon execution](#daemon-execution)         | Support of the command execution in the background                                                                          |
@@ -379,7 +379,7 @@ However, Exegol supports different network modes to suit various use cases:
   access, low-level operations, or sharing host IP/MAC.
 - `docker`: Uses Docker's default bridge network where all containers (not just Exegol) share the same network space and
   can communicate with each other. Use for standard cases requiring basic network isolation and port control.
-- `nat` : <Badge type="pro"/><Badge type="enterprise"/> Creates an isolated network with a dedicated /28 subnet (14 IP
+- `nat` : <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/> Creates an isolated network with a dedicated /28 subnet (14 IP
   addresses available) for each container, providing complete isolation from other containers. Use for sensitive
   operations requiring dedicated network with isolation.
 - `disable`: Blocks all network connectivity. Use for maximum isolation or offline operations.
@@ -601,9 +601,9 @@ commit one and share it. Anything typed on the command line still wins over what
 
 See [Container profiles](/wrapper/profiles/) for the concepts, the precedence rules and the security considerations.
 
-### Custom images <Badge type="enterprise"/>
+### Custom images <Badge type="team"/><Badge type="enterprise"/>
 
-Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to
+Team and Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to
 identify and work with Exegol images that have different names than the official ones. Useful for sharing customized
 images with your team through a private registry.
 

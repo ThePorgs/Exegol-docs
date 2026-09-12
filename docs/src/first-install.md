@@ -144,9 +144,9 @@ Note: on Ubuntu 26 and above, `sudo` has been replaced with `sudo-rs`. For now, 
 When using Docker Desktop, you **don't** need to use `sudo`. You can skip this step and follow the next one.
 :::
 
-## 3. Activation <Badge type="pro"/><Badge type="enterprise"/>
+## 3. Activation <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
-If you have a [Pro or Enterprise subscription](https://exegol.com/pricing), you can activate your license:
+If you have a [Pro, Team or Enterprise subscription](https://exegol.com/pricing), you can activate your license:
 
 ```bash
 exegol activate

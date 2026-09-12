@@ -6,7 +6,7 @@ An Exegol image is a pre-built Docker template: a curated toolkit, already insta
 - **Why that is better:** you do not maintain a distro or reconcile tool versions yourself.
 - **What you get:** a working environment in seconds, the same on every engagement.
 
-[Community](/about#tiers) has the `free` image. Pro and Enterprise have every official image. The [tools list](/images/tools) is generated per image and version.
+[Community](/about#tiers) has the `free` image. Pro, Team and Enterprise have every official image. The [tools list](/images/tools) is generated per image and version.
 
 ## Free image (Community)
 
@@ -18,7 +18,7 @@ An Exegol image is a pre-built Docker template: a curated toolkit, already insta
 
 Local builds with `exegol build` are useful when you need a cut that is not one of the official names below. See the [build command](/wrapper/cli/build).
 
-## Official images <Badge type="pro" text="Pro" /><Badge type="enterprise" text="Enterprise" />
+## Official images <Badge type="pro" text="Pro" /><Badge type="team" text="Team" /><Badge type="enterprise" text="Enterprise" />
 
 `full` is the current complete toolkit. The others are lighter or specialised cuts of the same base.
 

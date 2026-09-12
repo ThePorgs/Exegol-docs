@@ -6,7 +6,7 @@ Exegol MCP is a server that lets an AI client (Cursor, Claude Desktop, and other
 - **Why that is better:** the agent is boxed in Exegol, not granted the host OS. See [Getting started](/mcp/getting-started) for the isolation argument.
 - **What you get:** natural-language control of Exegol and of the tools already in the container, without memorising tool names.
 
-The image set the assistant can download follows the [same tiers](/about#tiers) as the wrapper: Community can pull `free`; Pro and Enterprise can pull the other official images.
+The image set the assistant can download follows the [same tiers](/about#tiers) as the wrapper: Community can pull `free`; Pro, Team and Enterprise can pull the other official images.
 
 Install and configure a client on [Getting started](/mcp/getting-started).
 
@@ -19,7 +19,7 @@ Here are some simple examples of prompts you can use with your AI assistant to l
 - `Start the container named 'pentest'`
 - `What Exegol images do I have installed?`
 - `Download the latest free image`
-- <Badge type="pro"/><Badge type="enterprise"/>`Download the 'web' image in the '3.1.10' version`
+- <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>`Download the 'web' image in the '3.1.10' version`
 
 **In-container execution examples:**
 - `Run nmap to scan 192.168.1.0/24 in my Exegol container`

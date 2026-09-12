@@ -509,12 +509,12 @@ function sidebarMain(): SidebarItemWithBadge[] {
         {
           text: "My licenses",
           link: "dashboard/licenses.md",
-          badge: "enterprise"
+          badge: "team"
         },
         {
           text: "Organizations",
           link: "dashboard/organizations.md",
-          badge: "enterprise"
+          badge: "team"
         },
         {
           text: "Settings",

@@ -91,7 +91,7 @@ Configure the network behavior of Exegol containers.
 - `default_network`: Default network mode for any new container. (Default: `host`)
   - `host`: Container shares host's network interfaces
   - `docker`: Uses shared Docker's bridge network
-  - `nat`: <Badge type="pro"/><Badge type="enterprise"/> Creates a network for each container
+  - `nat`: <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/> Creates a network for each container
   - `disable`: Disables all network connectivity
 
 - `fallback_network`: Network mode to use if the default mode is not available. (Default: `nat`, or `docker` if the use doesn't have the required Subscription level)
@@ -228,9 +228,9 @@ Each rejection message names the configuration section it came from, so a malfor
 For more details about container profiles, with the profile file reference and the related CLI options, see the [Container profiles](/wrapper/profiles/) documentation.
 
 
-#### Custom images <Badge type="enterprise"/>
+#### Custom images <Badge type="team"/><Badge type="enterprise"/>
 
-Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to identify and work with Exegol images that have different names than the official ones.
+Team and Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to identify and work with Exegol images that have different names than the official ones.
 
 - `custom_images`: List of image names/registries that should be recognized as Exegol images. The wrapper will take those into account in commands like `start`, `info`, and `exec`.
   ```yaml
@@ -241,6 +241,6 @@ Enterprise users can configure custom image names to be recognized by Exegol. Th
 
 Note that images must be pulled manually as they may be in private registries requiring specific authentication
 
-> [!SUCCESS] <Badge type="enterprise"/><Badge type="add-on"/>
+> [!INFO] <Badge type="enterprise"/><Badge type="add-on"/>
 > For organizations requiring a managed Exegol private registry, with managed private images, and a full integration with the wrapper, contact us for a quote. Read more at [Custom registry](/wrapper/#custom-registry)
 
