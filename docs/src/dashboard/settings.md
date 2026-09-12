@@ -1,13 +1,11 @@
 # Settings
 
-The Settings page allows you to manage your Exegol account preferences, security options, and connected services.
+Settings covers the account: profile, email, Discord, password and 2FA, dashboard preferences, sessions, and API keys.
 
 ## Profile
 
-In the Profile section, you can update:
-
-- **Display Name**: Your name as it appears throughout the dashboard
-- **Email Address**: Your account's contact email
+- **Display Name**: name shown in the dashboard
+- **Email Address**: contact email for the account
 
 > [!NOTE]
 > If you have a pending email change, you'll see a badge next to your email field. You must verify the new email address by clicking the link sent to both addresses before the change takes effect.

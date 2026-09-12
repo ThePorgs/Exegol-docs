@@ -40,7 +40,6 @@ exegol info -v
 In the verbose mode, the following additional elements are displayed.
 Everything from the lower verbosity level is still displayed.
 
-- Enumerate every user configuration (see details [here](/wrapper/features#exegol-configuration))
 - In the list of available Exegol Images
     - Image ID
     - Build date
@@ -61,12 +60,10 @@ exegol info -vv
 In the advanced mode, the following additional elements are displayed.
 Everything from the lower verbosity levels is still displayed.
 
-- Enumerate the settings from the user configuration at
- `~/.exegol/config.yml` (see details [here](/wrapper/features#exegol-configuration))
-- List the different exegol modules
-    - Modules name
-    - Their update status
-    - Their git branch (if applicable)
+- Full detail on every section the invocation renders, rather than the summary
+  drawn at the lower levels. Which sections render is decided by the section
+  selectors below and never by the verbosity level; the settings reported by the
+  user configuration table are documented [here](/wrapper/configuration).
 
 == Debug
 
@@ -83,14 +80,49 @@ for making sure everything works properly.
 
 ## Options
 
-The info action does not have many parameters, its use is relatively
-simple. This action can either be used to gather general information
-(available images, containers, user configs, etc.), or gather
-information about a specific container and display its configuration.
+The info action can be used to gather general information (available images,
+containers, the user configuration, the project sources, the profiles), to
+display a specific container's configuration in detail, or to do both in one
+invocation. The section selectors below choose which parts are printed.
 
 | Option | Description |
 |----|----|
 | `CONTAINER` | Optional positional argument to indicate the container tag of which to display the configuration. |
+| `-c`, `--config` | Show the **User configurations** table: the wrapper settings currently in effect, and where each one comes from. See [the wrapper configuration](/wrapper/configuration) for what each setting does. |
+| `-s`, `--sources` | Show the **Project sources** table: the git status of the wrapper, image and resource sources currently installed on this host. |
+| `-P [CONTAINER_PROFILE]`, `--profiles [CONTAINER_PROFILE]` | List the available container configuration profiles, or show one by name. With no value it lists every available container profile; with a name it shows that one profile. |
+| `-S [SENTINEL_PROFILE]`, `--sentinel [SENTINEL_PROFILE]` | List the available Sentinel audit profiles, or show one by name. With no value it lists every available Sentinel profile; with a name it shows that one profile. |
+| `-a`, `--all` | Show every section: the user configuration, the project sources, the container profiles, the Sentinel profiles, the images, and every container (or the recap of the one you named). |
+
+The bare `--profiles` form prints one row per discovered profile, with three
+columns: **Source**, **Name** and **Comment**. The Source column names which
+declared source the profile came from, and a profile that declares no comment
+shows a dash rather than an empty cell. The named form prints only the keys that
+profile's file actually declares: a key the file omits does not appear at all,
+and a key the file pins to an explicit null is reported as declared-and-null
+rather than being hidden. See [Container profiles](/wrapper/profiles/) for what
+those keys mean. A container profile is **not** a Docker build profile, the kind
+`exegol build` consumes to describe how an *image* is built, and it is **not** a
+Sentinel audit profile, selected with `--sentinel`, which describes what a
+container's audit logging records.
+
+The sections always render in one fixed order (the user configuration, then the
+project sources, then the container profiles, then the Sentinel profiles, then
+the images and containers) regardless of the order the flags were typed in.
+Naming `--config` and then `--sources` prints the same two tables, in the same
+order, as naming `--sources` and then `--config`: the order is a property of the
+action, not of the command line.
+
+Naming several selectors renders all of them rather than the first one that
+matched: `--config --profiles redteam` prints the user configuration table and
+that one profile, a union of the two requests. Naming any section at all
+replaces the default images-and-containers pair, which is what a bare
+`exegol info` prints and what `--all` puts back alongside the rest. A container
+named as the positional argument composes with a section selector rather than
+being gated by it. The container name goes first, ahead of the selectors:
+`exegol info demo --config` prints the user configuration table and the recap of
+the `demo` container, and `exegol info demo --profiles` prints the container
+profile listing and that same recap.
 
 Global options can still be used, like for any action.
 
@@ -138,4 +170,22 @@ exegol info -vv
 
 # Print debug information:
 exegol info -vvv
+
+# Print the user configuration table:
+exegol info --config
+
+# Print the project sources table, the git status of the installed sources:
+exegol info --sources
+
+# Print every section:
+exegol info --all
+
+# List every available container profile:
+exegol info --profiles
+
+# Show what the "redteam" container profile declares:
+exegol info --profile redteam
+
+# Naming two sections renders both:
+exegol info --config --profile redteam
 ```

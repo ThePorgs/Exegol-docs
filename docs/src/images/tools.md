@@ -1,6 +1,6 @@
 # Tools list
 
-For detailed information about the different types of Exegol images, please refer to the [Images types](/images/types) page.
+For detailed information about the different types of Exegol images, please refer to the [Images overview](/images/) page.
 
 But TL;DR, it goes like this for Community users.
 - `free`: The most comprehensive image. Similar to `full`, but a bit late.

@@ -1,40 +1,36 @@
 # About Exegol
 
-Exegol is a comprehensive cybersecurity environment designed by offensive security experts, for fellow hackers, with its community. It solves the common pain points of traditional security distributions by providing a modular and reliable toolkit that's made for the field.
+Exegol is a cybersecurity environment designed by offensive security experts, for fellow hackers, with its community.
 
 Have you ever:
+
 - Struggled to keep your distro running smoothly after a few months?
 - Wasted hours installing and configuring tools instead of doing actual security work?
 - Felt limited by outdated or lacking tools in traditional security distributions?
 - Been frustrated and limited by the monolithic design of other solutions?
 
-Exegol addresses these challenges. 
+Those are the problems Exegol is built to remove.
 
-## Core components 
+## How the pieces fit
 
-Exegol combines several key components working together:
+The [wrapper](/wrapper/) creates **containers** from [images](/images/). An image is a template; a container is a running environment built from that template at a given time. You talk to the wrapper. The wrapper talks to Docker.
 
-- [**Docker images**](/images/types): pre-configured environments with carefully selected tools
-- [**Python wrapper**](/wrapper/features): a unified interface to manage all Exegol components easily, similarly to how Virtual Machines would be managed, but in a simple command-line interface.
-- [**Offline resources**](/resources/list): curated collection of tools that you may need to use on a target machine (e.g., enumeration and exploitation scripts such as LinPEAS, WinPEAS, LinEnum, PrivescCheck, SysinternalsSuite, etc.). They're updated monthly, managed by the wrapper, and shared with every container (at `/opt/resources`).
-- [**History & credentials**](/images/exegol-history): a utility to manage credentials obtained during an engagement, and a dynamic history of hundreds of commands ready to be used
-- [**MCP server**](/mcp/features): a server component enabling AI assistants and agents to interact with Exegol environments, for orchestration or in-container execution purposes
+Every container can mount [offline resources](/resources/) at `/opt/resources`, include your own customizations ([my-resources](/images/my-resources)), and the [history and credentials](/images/exegol-history) helpers that live in the image. The [MCP server](/mcp/) talks to the wrapper so an AI client can orchestrate containers and run tools inside them, without being given the host OS. [Exegol Sentinel](/sentinel/) is an Enterprise add-on that writes a structured audit record of interactive commands onto the host. The [dashboard](/dashboard/) is the account: plan, licenses, organizations, referral, and settings.
 
+## Components
 
-## Key benefits
-
-- **Time-saving**: deploy ready-to-use environments in seconds
-- **Reliability**: tested and maintained by security professionals
-- **Flexibility**: works on top of your host OS. Supports Linux, macOS, and Windows.
-- **Customization**: adapt environments to your specific needs
-- **Community-driven**: built with and for the security community
+- [**Images**](/images/): pre-built Docker environments with a curated toolkit, specialised by use (`free`, `full`, `ad`, `web`, `light`, `osint`).
+- [**Wrapper**](/wrapper/): the CLI that creates and manages those containers, the way a VM manager manages virtual machines.
+- [**Offline resources**](/resources/): scripts and binaries you would otherwise re-download on every job (LinPEAS, Sysinternals, and the rest), mounted at `/opt/resources` and updated monthly.
+- [**History and credentials**](/images/exegol-history): a dynamic command history and a helper for credentials obtained during an engagement.
+- [**MCP server**](/mcp/): lets an AI assistant orchestrate Exegol and run tools in-container.
+- [**Sentinel**](/sentinel/) <Badge type="enterprise"/><Badge type="add-on"/>: a structured record of interactive commands, plus optional artifacts, written on the host for a person or a SIEM to read.
+- [**Dashboard**](/dashboard/): the account side: plan, licenses, organizations, referral, and settings.
 
 ## Tiers
 
-Exegol has a free Community offer, as well as paid tiers: Pro and Enterprise. Check it out at [exegol.com/pricing](https://exegol.com/pricing).
-Note the Enterprise tier includes everything from the Pro tier, and more. Wherever the Pro badge <Badge type="pro"/> is present, Enterprise users <Badge type="enterprise"/> may enjoy the feature as well.
+Community, Pro and Enterprise, including what each plan includes, are on [exegol.com/pricing](https://exegol.com/pricing). Enterprise includes everything in Pro. Wherever the Pro badge <Badge type="pro"/> appears in these docs, Enterprise <Badge type="enterprise"/> has the feature as well.
 
+Commercial use, seats, and the rest of the legal rules are in the [legal summary](/legal/summary).
 
-
-
-
+[First install](/first-install) is the next page if you are setting up a machine.

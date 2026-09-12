@@ -1,16 +1,13 @@
 # Referral program <Badge type="pro" />
 
-The Referral page allows you to participate in Exegol's **referral program** to save on your subscription costs and help friends discover Exegol (and save as well).
+Referral is a Pro-only screen: share a link, both sides get a discount.
 
-The referral program offers mutual benefits:
+- The referred account gets 10% off monthly Pro, or 1.5 months free on yearly Pro
+- The referrer gets a discount on the next billing cycle for each completed referral. Discounts stack and are uncapped, but the billed amount cannot go below zero. The discount is applied automatically to the next period.
 
-- Your referred friends get a 10% discount on monthly, or 1.5 months free on yearly Pro plan
-- As a referrer, you receive a discount on your next billing cycle for each successful referral. The discounts are cumulative, uncapped, but can't produce a negative billing amount. The discount should be automatically applied to the next billing period.
-
-The referral program is available only to users with an active Pro subscription.
+The screen is available only with an active Pro subscription. Enterprise billing is on [Organizations](/dashboard/organizations).
 
 ## Obtaining a Referral link
-
 
 1. Click the "Refer a friend" button in the referrals table
 2. Enter a name for your referral (for your own tagging purposes only)

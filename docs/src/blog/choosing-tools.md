@@ -4,6 +4,12 @@ date: 2025-09-22
 author: Charlie
 description: How we choose which tools go into Exegol. We focus on what pros actually use, guided by our expertise and fair community input.
 sidebar: false
+tags:
+  - tools
+  - images
+  - community
+  - burp
+  - zap
 ---
 
 # Choosing tools for Exegol: the art of tough decisions

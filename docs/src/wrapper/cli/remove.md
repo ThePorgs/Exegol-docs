@@ -6,7 +6,7 @@ container.
 If the deleted container was using an outdated image, the wrapper will
 (by default) try to delete that outdated image automatically (unless
 this default behavior is changed in the
-[exegol configuration file](/wrapper/features#exegol-configuration), which is not advised
+[exegol configuration file](/wrapper/configuration), which is not advised
 since disk space is not limited and Exegol images can take up to 30GB).
 
 > [!NOTE] Upgrade backups

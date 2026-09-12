@@ -220,9 +220,21 @@
   margin-right: 8px;
 }
 
+.custom-block-title > span {
+  min-width: 0;
+  flex: 1;
+}
+
+.custom-block-title code {
+  font-weight: 600;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+
 /*SUCCESS BLOCK CSS*/
 
 .custom-block.success {
+    --callout-accent: var(--vp-success);
     border: 1px solid hsl(var(--vp-success)/var(--custom-block-border-opacity));
     color: var(--vp-custom-block-text);
     background-color: hsl(var(--vp-success)/var(--custom-block-bg-opacity)) !important;
@@ -351,6 +363,7 @@
 
 /* CAUTION BLOCK CSS */
 .custom-block.caution {
+    --callout-accent: var(--vp-caution);
     border: 1px solid hsl(var(--vp-caution)/var(--custom-block-border-opacity));
     color: var(--vp-custom-block-text);
     background-color: hsl(var(--vp-caution)/var(--custom-block-bg-opacity)) !important;
@@ -367,6 +380,7 @@
 
 /* WARNING BLOCK CSS */
 .custom-block.warning {
+    --callout-accent: var(--vp-warning);
     border: 1px solid hsl(var(--vp-warning)/var(--custom-block-border-opacity));
     color: var(--vp-custom-block-text);
     background-color: hsl(var(--vp-warning)/var(--custom-block-bg-opacity)) !important;
@@ -383,15 +397,11 @@
 
 /* TIP BLOCK CSS */
 .custom-block.tip {
+    --callout-accent: var(--vp-tip);
     border: 1px solid hsl(var(--vp-tip)/var(--custom-block-border-opacity));
     color: var(--vp-custom-block-text);
     background-color: hsl(var(--vp-tip)/var(--custom-block-bg-opacity)) !important;
     border-radius: var(--radius);
-}
-
-.custom-block.tip code {
-  background-color: var(--vp-code-bg);
-  color: var(--vp-code-color);
 }
 
 .tip .alert-icon {
@@ -404,6 +414,7 @@
 
 /* INFO BLOCK CSS */
 .custom-block.info {
+  --callout-accent: var(--vp-info);
   border: 1px solid hsl(var(--vp-info)/var(--custom-block-border-opacity));
   color: var(--vp-custom-block-text);
   background-color: hsl(var(--vp-info)/var(--custom-block-bg-opacity)) !important;
@@ -420,8 +431,9 @@
 
 /* NOTE BLOCK CSS */
 .custom-block.note {
+    --callout-accent: var(--vp-note);
     border: 1px solid hsl(var(--vp-note)/var(--custom-block-border-opacity));
-    color: var(--vp-custom-block-text);
+    color: hsl(var(--vp-note));
     background-color: hsl(var(--vp-note)/var(--custom-block-bg-opacity)) !important;
     border-radius: var(--radius);
 }
@@ -430,13 +442,15 @@
     color: hsl(var(--vp-note));
 }
 
-
-.note.custom-block p {
-    color: var(--vp-custom-block-text);
+.vp-doc .custom-block.note .custom-block-title,
+.vp-doc .custom-block.note p,
+.vp-doc .custom-block.note li {
+    color: hsl(var(--vp-note));
 }
 
 /* IMPORTANT BLOCK CSS */
 .custom-block.important {
+  --callout-accent: var(--vp-important);
   border: 1px solid hsl(var(--vp-important)/var(--custom-block-border-opacity));
   color: var(--vp-custom-block-text);
   background-color: hsl(var(--vp-important)/var(--custom-block-bg-opacity)) !important;
@@ -454,6 +468,7 @@
 
 /* DANGER BLOCK CSS */
 .custom-block.danger {
+  --callout-accent: var(--vp-danger);
   border: 1px solid hsl(var(--vp-danger)/var(--custom-block-border-opacity));
   color: var(--vp-custom-block-text);
   background-color: hsl(var(--vp-danger)/var(--custom-block-bg-opacity)) !important;
@@ -475,6 +490,19 @@
 .vp-doc [class*='language-'] pre, .vp-doc [class*='language-'] code {
     white-space: pre-wrap;
     background-color: var(--vp-code-block-bg);
+}
+
+.vp-doc [class*='language-'].code-scroll {
+    overflow-x: auto;
+}
+
+.vp-doc [class*='language-'].code-scroll pre,
+.vp-doc [class*='language-'].code-scroll code {
+    white-space: pre;
+}
+
+.vp-doc [class*='language-'].code-scroll pre {
+    overflow-x: auto;
 }
 
 /* EXTENDED MEDIUM-ZOOM-IMAGES */
@@ -582,14 +610,16 @@ img.no-zoom {
     background-color: var(--vp-accent);
  }
 
-/* CUSTOM BLOCK CSS */
-.vp-doc .custom-block p code {
-  background-color: var(--vp-code-bg);
+.vp-doc .custom-block :not(pre) > code {
   padding: 4px 8px;
   border-radius: 4px;
-  color: var(--vp-code-color);
   font-family: var(--font-jetbrains-mono), monospace;
   font-size: .875em;
+}
+
+.vp-doc .custom-block:not(.details) :not(pre) > code {
+  color: hsl(var(--callout-accent));
+  background-color: hsl(var(--callout-accent) / 0.15);
 }
 
 /* PLUGIN TABS */
@@ -654,6 +684,8 @@ img.no-zoom {
 /* TABLEAU GLOBAL STYLE */
 .vp-doc table {
   width: 100%;
+  max-width: 100%;
+  table-layout: auto;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 14px;
@@ -670,12 +702,11 @@ img.no-zoom {
 .vp-doc td {
   text-align: left;
   background-color: var(--vp-c-bg);
-  white-space: pre-wrap;
+  white-space: normal;
   border: 0px;
-  word-break: keep-all;
-  vertical-align: middle;
+  overflow-wrap: break-word;
+  vertical-align: top;
   transition: background-color 0.2s ease;
-  height: 100%;
   color: var(--vp-c-text-secondary);
 }
 
@@ -729,12 +760,16 @@ img.no-zoom {
 
 .vp-doc table td:first-child,
 .vp-doc table th:first-child {
+  color: var(--vp-c-text-secondary);
+}
+
+.vp-doc .auto-generated-table td:first-child,
+.vp-doc .auto-generated-table th:first-child {
   width: fit-content;
   min-width: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--vp-c-text-secondary);
 }
 
 .custom-block-body {

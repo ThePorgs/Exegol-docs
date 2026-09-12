@@ -10,7 +10,7 @@ A compressed and pre-built image is downloaded in the form of layers, and then u
 > [!NOTE]
 > Enterprise users can configure custom registries in their Exegol configuration file (`~/.exegol/config.yml`).
 > When custom registries are configured, Exegol will also search for images in those registries.
-> See [Enterprise Features](/wrapper/features#enterprise-features) for more details.
+> See [custom registries](/wrapper/#custom-registry) for more details.
 
 ## Options
 

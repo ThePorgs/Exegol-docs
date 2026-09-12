@@ -3,6 +3,15 @@
 
 # Static redirects
 /legal/terms-of-service   /legal/terms-of-sale-and-service
+/images/types   /images/   301
+/wrapper/features   /wrapper/   301
+/resources/list   /resources/   301
+/mcp/features   /mcp/   301
+/dashboard/overview   /dashboard/   301
+/dashboard/subscriptions   /dashboard/my_plan   301
+/dashboard/learn   /dashboard/   301
+/dashboard/community   /dashboard/   301
+/dashboard/support   /dashboard/   301
 
 # Dynamic redirects
 # /source/*   /destination/:splat
