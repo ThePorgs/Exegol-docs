@@ -23,7 +23,7 @@ In Exegol containers, the volume is accessible at `/opt/my-resources`.
 
 Below are the features offered by "My-resources", allowing users to
 extend Exegol beyond what is initially included ([tools](/images/tools),
-[resources](/resources/list)).
+[resources](/resources/)).
 
 - [Custom tools](/images/my-resources#custom-tools): users can place their own custom
   standalone tools, binaries and scripts in the "my-resources" volume on the host.

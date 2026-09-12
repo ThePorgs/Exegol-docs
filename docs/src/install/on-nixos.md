@@ -31,7 +31,7 @@ environment.systemPackages = with pkgs; [
 ];
 virtualisation.docker = {
   enable = true;
-  # Do NOT enable rootless here — Exegol doesn’t support Docker rootless mode
+  # Do NOT enable rootless here. Exegol doesn't support Docker rootless mode
   rootless.enable = false; # (false is the default)
 };
 ```
@@ -106,7 +106,7 @@ environment.systemPackages = with pkgs; [
 ];
 virtualisation.docker = {
   enable = true;
-  # Do NOT enable rootless here — Exegol doesn’t support Docker rootless mode
+  # Do NOT enable rootless here. Exegol doesn't support Docker rootless mode
   rootless.enable = false; # (false is the default)
 };
 ```

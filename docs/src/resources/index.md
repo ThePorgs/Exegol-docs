@@ -1,6 +1,4 @@
-# Resources
-
-## Exegol Resources
+# Exegol Resources overview
 
 Exegol's "offline resources" are a neat choice of standalone tools and scripts that are often used during penetration tests,
 CTFs and red-teams.

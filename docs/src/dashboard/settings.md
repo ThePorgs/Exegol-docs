@@ -1,13 +1,11 @@
 # Settings
 
-The Settings page allows you to manage your Exegol account preferences, security options, and connected services.
+Settings covers the account: profile, email, Discord, password and 2FA, dashboard preferences, sessions, and API keys.
 
 ## Profile
 
-In the Profile section, you can update:
-
-- **Display Name**: Your name as it appears throughout the dashboard
-- **Email Address**: Your account's contact email
+- **Display Name**: name shown in the dashboard
+- **Email Address**: contact email for the account
 
 > [!NOTE]
 > If you have a pending email change, you'll see a badge next to your email field. You must verify the new email address by clicking the link sent to both addresses before the change takes effect.
@@ -104,7 +102,7 @@ To log out from all other devices where you're signed in:
 
 ## API keys
 
-API keys allow you to authenticate with Exegol services in a non-interactive way. This is available to both Pro and Enterprise users.
+API keys allow you to authenticate with Exegol services in a non-interactive way. This is available to Pro, Team and Enterprise users.
 
 You can create, revoke, and remove API keys from their section in Settings. API keys can be used with the Exegol wrapper for [unattended activation](/wrapper/cli/activate#unattended-activation), which may be useful for automation, CI/CD, or scripted setups.
 

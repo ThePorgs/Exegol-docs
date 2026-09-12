@@ -8,6 +8,38 @@ the overall project.
 The list of tools is dynamically generated for all Exegol images and
 available [here](/images/tools).
 
+## What is the difference between Community, Pro, Team and Enterprise?
+
+The comparison, including images, commercial use, seats and support, is on [exegol.com/pricing](https://exegol.com/pricing). Badges on each page mark which tier a feature requires; not every Pro feature is available on Team or Enterprise (for example, referral is Pro only).
+
+[Exegol Sentinel](/sentinel/) is a paid Enterprise add-on. It is documented here; it is not listed on the pricing page yet. The legal rules (commercial use, seats, exploitation) are in the [legal summary](/legal/summary).
+
+## What is Exegol Sentinel?
+
+[Exegol Sentinel](/sentinel/) is an Enterprise add-on. It records every interactive command typed in an Exegol container as one structured event on the host, and can collect extra artifacts when a profile rule matches. It does not prevent, detect or block anything. See [Getting started](/sentinel/getting-started).
+
+## What is the difference between shell logging and Sentinel?
+
+They are independent features and can be used together.
+
+- [Shell logging](/wrapper/#shell-logging) (`--log`) is a **session recorder**: it captures the terminal stream (stdin, stdout, stderr) into files under `/workspace/logs`.
+- [Exegol Sentinel](/sentinel/) is a structured **audit record per finished command**, written on the host for a person or a SIEM to read. It is an Enterprise add-on.
+
+## What is a container profile?
+
+A [container profile](/wrapper/profiles/) is a named set of container-shape defaults (the image, the shell, the network mode, the mounts, the capabilities and more) stored as a YAML file whose file name is the profile name. It is applied when a container is created, with anything typed on the command line taking precedence over what the profile declares, and it is selected with `exegol start --profile <name>`.
+
+Container profiles require a Professional licence or above; see [the tier comparison](/faq#what-is-the-difference-between-community-pro-and-enterprise). The full documentation is at [Container profiles](/wrapper/profiles/).
+
+## What is the difference between a container profile and a Sentinel profile?
+
+They are independent features and can be used together.
+
+- A [container profile](/wrapper/profiles/) is a **container-shape declaration**: it describes how a container is built (which image it starts from, which shell it opens, how it is attached to the network, what is mounted into it and which privileges it holds). It requires a Professional licence or above.
+- A [Sentinel profile](/sentinel/profiles/concepts) is an **audit-collection rule set**: it describes what a container's command journal records, and which extra evidence is collected when one of its rules matches. It changes nothing about the container's shape.
+
+The two meet in one place: a container profile may itself carry a `sentinel` section, which is where a container created from that profile declares whether audit logging is enabled and which Sentinel profile it uses.
+
 ## Can I run Exegol on a macOS?
 
 Yes. And both CPU architectures are supported (Intel X86_64 (AMD64) and
@@ -43,7 +75,7 @@ Yes, please refer to the
 ["my-resources" documentation](/images/my-resources) that
 explains how to automatically setup your changes to your Exegol
 containers. Also, see the
-["wrapper's advanced-uses" documentation](/wrapper/features#advanced-uses)
+["wrapper configuration" documentation](/wrapper/configuration)
 to see how to edit Exegol's conf among other things. You could also want
 to [make your own Exegol image](/faq#can-i-make-my-own-exegol-image)
 
@@ -84,9 +116,9 @@ different answer. So let's answer most of them.
 If you want to add a tool:
 
 - **in the official Exegol images**: refer to the
-  [contribution guidance](/contribute/resources#adding-new-tools).
-- **in your own custom local image**: refer to the
-  [contribution guidance](/contribute/resources#adding-new-tools) as well, but instead of
+  [image contribution guidance](/contribute/images#making-changes).
+- **in your own custom local image**: follow the same
+  [image contribution guidance](/contribute/images#making-changes), but instead of
   creating a Pull Request at the end to offer your contribution, just
   build the image locally with the wrapper and enjoy your custom local
   image.
@@ -113,45 +145,27 @@ docker.
 
 The container's root password can be obtained with
 `exegol info <container>` (i.e. this is needed when using the
-[desktop](/wrapper/features#desktop) feature)
+[desktop](/wrapper/#desktop) feature)
 
-## WSL 2 consumes massive amounts of RAM, CPU power, and Disk Space. How can I deal with this issue ?
+## WSL 2 consumes massive amounts of RAM, CPU power, and disk space. How can I deal with this issue?
 
-Users might experience excessive memory consumption when using Exegol.
-This is caused by WSL 2 not freeing up RAM even when processes are
-finished, causing large amounts of unused memory to remain allocated.
-This leads to high memory usage on the host system and reduced
-performance. More information about this issue can be found \[at this
-GitHub issue\](<https://github.com/microsoft/WSL/issues/4166>). A simple
-workaround is to create a
-<span class="title-ref">%UserProfile%.wslconfig</span> file in Windows
-and use it to limit memory assigned to WSL 2 VM.
+WSL 2 does not always free RAM when processes finish, so unused memory stays allocated on the host. More detail is in [this GitHub issue](https://github.com/microsoft/WSL/issues/4166). A simple workaround is to create a `%UserProfile%\.wslconfig` file on Windows and limit the WSL 2 VM:
 
-`` ` [wsl2] memory=8GB   # Limits VM memory in WSL 2 up to 3GB processors=2 # Makes the WSL 2 VM use two virtual processors ``\`
+```ini
+[wsl2]
+memory=8GB
+processors=2
+```
 
-When using Docker with the WSL2 backend, resource limits are managed by
-Windows. There might be cases, for example after updating an Exegol
-image, where Docker might take double the disk space the image needs. To
-deal with this problem, users should find the
-<span class="title-ref">Disk image location</span> in Docker Desktop
-(<span class="title-ref">Settings -\> Resources -\> Advanced</span>). It
-will be in the following format
-<span class="title-ref">C:Users\<USER\>AppDataLocalDockerwsl</span>. The
-Virtual Hard Disk can be located in the following path,
-<span class="title-ref">C:Users\<USER\>AppDataLocalDockerwsldisk</span>.
-Users can use the <span class="title-ref">diskpart</span> tool to shrink
-the Virtual Hard Disk using the following instructions based on
-directions
-\[here\](<https://stackoverflow.com/questions/70946140/docker-desktop-wsl-ext4-vhdx-too-large>). -
-Stop Docker Desktop - Start an administrative CMD or PowerShell
-session - Stop WSL2: <span class="title-ref">wsl --shutdown</span> -
-Start the diskpart tool: <span class="title-ref">diskpart</span> -
-Select the Virtual Hard Disk: <span class="title-ref">select vdisk
-file="C:Users\<USER\>AppDataLocalDockerwsldiskdocker_data.vhdx"</span>.
-A message <span class="title-ref">DiskPart successfully selected the
-virtual disk file.</span> should appear. - Shrink the Virtual Hard Disk:
-<span class="title-ref">compact vdisk</span> - Wait for the process to
-reach 100 completion (might take some time)
+When Docker uses the WSL 2 backend, Windows also manages disk. After an Exegol image update, Docker can temporarily take about twice the image size. Find **Disk image location** in Docker Desktop (`Settings > Resources > Advanced`). It is typically under `C:\Users\<USER>\AppData\Local\Docker\wsl\`. The virtual hard disk is `C:\Users\<USER>\AppData\Local\Docker\wsl\disk\docker_data.vhdx`. Shrink it with `diskpart` ([steps](https://stackoverflow.com/questions/70946140/docker-desktop-wsl-ext4-vhdx-too-large)):
+
+1. Stop Docker Desktop.
+2. Open an administrative CMD or PowerShell session.
+3. Stop WSL 2: `wsl --shutdown`
+4. Start diskpart: `diskpart`
+5. Select the disk: `select vdisk file="C:\Users\<USER>\AppData\Local\Docker\wsl\disk\docker_data.vhdx"`
+6. Shrink it: `compact vdisk`
+7. Wait until the process reaches 100%.
 
 ## How do I update Exegol?
 

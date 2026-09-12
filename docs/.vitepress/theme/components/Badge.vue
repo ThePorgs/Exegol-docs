@@ -5,18 +5,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<{
-  type: 'pro' | 'enterprise' | 'new'
+  type: 'pro' | 'team' | 'enterprise' | 'new' | 'add-on'
   text?: string
 }>()
 
 const displayText = computed(() => {
   return props.text ?? {
     'pro': 'Pro',
+    'team': 'Team',
     'enterprise': 'Enterprise',
-    'new': 'New!'
+    'new': 'New!',
+    'add-on': 'Add-on'
   }[props.type]
 })
 </script>
@@ -76,6 +78,13 @@ const displayText = computed(() => {
   background-color: var(--badge-violet-bg);
 }
 
+.VPBadge.team {
+  border-color: var(--badge-indigo);
+  color: var(--badge-indigo);
+  background-color: var(--badge-indigo-bg);
+  opacity: 1;
+}
+
 .VPBadge.enterprise {
   border-color: var(--badge-blue);
   color: var(--badge-blue);
@@ -87,6 +96,13 @@ const displayText = computed(() => {
   border-color: var(--badge-yellow);
   color: var(--badge-yellow);
   background-color: var(--badge-yellow-bg);
+  opacity: 1;
+}
+
+.VPBadge.add-on {
+  border-color: var(--badge-blue);
+  color: var(--badge-blue);
+  background-color: var(--badge-blue-bg);
   opacity: 1;
 }
 

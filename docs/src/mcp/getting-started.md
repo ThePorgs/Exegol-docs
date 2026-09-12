@@ -1,4 +1,4 @@
-# Getting started with Exegol MCP <Badge type="new"/>
+# Getting started with Exegol MCP
 
 The Exegol MCP is a server that enables AI assistants and agents to interact with Exegol. This service allows AI clients (such as Cursor, Claude Desktop, etc.) to use Exegol and work on offensive security tasks such as Capture The Flag, penetration testing, etc.
 
@@ -107,7 +107,7 @@ The JSON configuration can then be added, accordingly to your AI client's docume
 
 ## 4. Hack the planet!
 
-Now that the Exegol MCP server is installed and your favorite AI client is configured properly, you can have your AI assistants and agents use Exegol. See the [features](/mcp/features) page to learn about what Exegol MCP can do and find example prompts you can use.
+Now that the Exegol MCP server is installed and your favorite AI client is configured properly, you can have your AI assistants and agents use Exegol. See the [MCP overview](/mcp/) page to learn about what Exegol MCP can do and find example prompts you can use.
 
 
 ![Example2](/assets/mcp/example2.png)

@@ -4,7 +4,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import VPSidebarItem from './CustomSidebarItem.vue'
 
 defineProps<{
-  items: (DefaultTheme.SidebarItem & { badge?: 'pro' | 'enterprise' | 'new' })[]
+  items: (DefaultTheme.SidebarItem & { badge?: 'pro' | 'team' | 'enterprise' | 'new' })[]
 }>()
 
 const disableTransition = ref(true)
@@ -62,6 +62,7 @@ onBeforeUnmount(() => {
   margin-left: 6px;
 }
 .badge-pro { color: var(--badge-violet); }
+.badge-team { color: var(--badge-indigo); }
 .badge-enterprise { color: var(--badge-blue); }
 .badge-new { color: var(--badge-yellow); }
 .badge-wip { color: var(--badge-orange, orange); }

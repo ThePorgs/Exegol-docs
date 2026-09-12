@@ -4,6 +4,12 @@ date: 2025-12-12
 author: Charlie
 description: Six years after Exegol's birth, we take a hard look at whether we've kept one of our promises, saving offensive cybersecurity professionals time so they can focus on what they do best.
 sidebar: false
+tags:
+  - productivity
+  - time
+  - containers
+  - workspace
+  - community
 ---
 
 # Exegol on $50M a mission
@@ -28,15 +34,15 @@ When you install several tools, their dependencies can end up in conflict. Maybe
 
 ### Learning new tools and environments
 
-Every time you need to use a tool written in a language you're not familiar with, or work with a new environment, there's a learning curve. You have to figure out how Go modules work, understand Ruby's gem system, learn Rust's cargo, or get comfortable with whatever ecosystem the tool uses. This isn't just about installation—it's about understanding the tool's ecosystem well enough to troubleshoot when things go wrong.
+Every time you need to use a tool written in a language you're not familiar with, or work with a new environment, there's a learning curve. You have to figure out how Go modules work, understand Ruby's gem system, learn Rust's cargo, or get comfortable with whatever ecosystem the tool uses. This isn't just about installation. It's about understanding the tool's ecosystem well enough to troubleshoot when things go wrong.
 
 ### Team misalignment and repeating setups
 
-In a team, everyone can end up with different versions installed, which leads to confusion and "it works on my machine" moments. Setting up the same environment on multiple machines means repeating configs, working around hardware differences, and troubleshooting again and again. When you change machines, switch companies, or need to reinstall, you're starting from scratch—recreating all your configurations, reinstalling tools, and rebuilding your workflow. People using virtual machines have to manage and revert snapshots, which takes even more time. If you mess up a snapshot, you might even lose data.
+In a team, everyone can end up with different versions installed, which leads to confusion and "it works on my machine" moments. Setting up the same environment on multiple machines means repeating configs, working around hardware differences, and troubleshooting again and again. When you change machines, switch companies, or need to reinstall, you're starting from scratch: recreating all your configurations, reinstalling tools, and rebuilding your workflow. People using virtual machines have to manage and revert snapshots, which takes even more time. If you mess up a snapshot, you might even lose data.
 
 ### Environments slowly breaking down
 
-Over time, your setup gets messy. You collect unused dependencies, settings change, and things get less stable. On bare metal, you might eventually wipe everything and start over. If you use containers, you have to understand Docker commands and configuration files, which involves its own learning curve. If your distro is missing certain tools or configs, you end up writing your own scripts or playbooks, which adds more work. And when you make a mistake—maybe you accidentally delete something important or break a critical configuration—you're looking at a full reinstall or rollback, which can take hours.
+Over time, your setup gets messy. You collect unused dependencies, settings change, and things get less stable. On bare metal, you might eventually wipe everything and start over. If you use containers, you have to understand Docker commands and configuration files, which involves its own learning curve. If your distro is missing certain tools or configs, you end up writing your own scripts or playbooks, which adds more work. And when you make a mistake (maybe you accidentally delete something important or break a critical configuration), you're looking at a full reinstall or rollback, which can take hours.
 
 ### Managing assets and unexpected breakdowns
 
@@ -48,7 +54,7 @@ Most of us manually log our actions and commands, which is time-consuming and er
 
 ### End-of-mission cleanup
 
-After an engagement, you need to clean up all the data, scripts, and artifacts you've created. This isn't just about deleting files—it's about ensuring nothing sensitive remains, and organizing what needs to be kept. Without proper workspace organization, this becomes a tedious hunt through scattered directories and files.
+After an engagement, you need to clean up all the data, scripts, and artifacts you've created. This isn't just about deleting files. It's about ensuring nothing sensitive remains, and organizing what needs to be kept. Without proper workspace organization, this becomes a tedious hunt through scattered directories and files.
 
 ### Upgrade anxiety and sysadmin chores
 
@@ -60,23 +66,23 @@ After enough breakages, you start worrying that any upgrade might break your set
 
 We've tackled most of these pain points head-on. Here's how:
 
-- **Pre-configured Docker images with ready-to-use and unit-tested tools**, eliminating manual installations, compilation, dependency resolutions, and troubleshooting. Exegol users have outsourced this issue to us, the Exegol maintainers—and we like that deal. Our [images](/images/types) come with hundreds of tools pre-installed, tested and configured, ready to go. No more researching why something doesn't work or applying temporary patches—we handle that.
+- **Pre-configured Docker images with ready-to-use and unit-tested tools**, eliminating manual installations, compilation, dependency resolutions, and troubleshooting. Exegol users have outsourced this issue to us, the Exegol maintainers, and we like that deal. Our [images](/images/) come with hundreds of tools pre-installed, tested and configured, ready to go. No more researching why something doesn't work or applying temporary patches: we handle that.
 
-- **Tools installed in isolated virtual environments by default**, following our [installation standards](/contribute/images#installation-standards) ensuring dependencies remain clean and never conflict. This means you can install, update or use tools without worrying about overwriting something else or breaking your environment—the right version for every tool, automatically and reliably.
+- **Tools installed in isolated virtual environments by default**, following our [installation standards](/contribute/images#installation-standards) ensuring dependencies remain clean and never conflict. This means you can install, update or use tools without worrying about overwriting something else or breaking your environment. The right version for every tool, automatically and reliably.
 
-- **Containers that mean way less overhead than VMs**, with a [wrapper](/wrapper/features) to avoid the complexity of using containers. Easy, fast, and dedicated environments. No more hypervisor headaches or snapshot management nightmares. When you make a mistake or need a new environment, just spin up a fresh container in seconds.
+- **Containers that mean way less overhead than VMs**, with a [wrapper](/wrapper/) to avoid the complexity of using containers. Easy, fast, and dedicated environments. No more hypervisor headaches or snapshot management nightmares. When you make a mistake or need a new environment, just spin up a fresh container in seconds.
 
 - **Customization options** that let users integrate their own tools and configurations right at container creation. Proving useful when switching machines, among other things.
 
 - **Seamless cross-platform compatibility**, ensuring your infosec toolbox fits smoothly with your operating system. Whether it is Linux, macOS, or Windows, Exegol installs on your platform of choice without cluttering your system. Everything stays tidy, and you get the same powerful experience everywhere.
 
-- **Pre-loaded offline resources** like wordlists, dictionaries, and scripts, all centralized in `/opt/resources`. Our [resources system](/resources/list) ensures you have what you need, when you need it, without hunting through GitHub repos or outdated forums. No more wondering where that wordlist went.
+- **Pre-loaded offline resources** like wordlists, dictionaries, and scripts, all centralized in `/opt/resources`. Our [resources system](/resources/) ensures you have what you need, when you need it, without hunting through GitHub repos or outdated forums. No more wondering where that wordlist went.
 
 - **Built-in command history with context**, featuring hundreds of pre-loaded commands with examples. Instead of searching for syntax and parameters every time, you can use Ctrl+R to browse through working examples.
 
 - **Credential management with [Exegol-history](/images/exegol-history)** (aliased as `exh`), avoiding hardcoded credentials in your history commands. Credentials are stored securely and accessed via environment variables, so when you need to share logs or reports, there's no manual find-and-replace needed. This also saves a lot of time, allowing you to run commands without editing the username/password/domain everytime.
 
-- **Workspace-based organization** with persistent, dedicated folders per container. Each engagement gets its own workspace that persists even after container deletion. No more scattered files across your system—everything for a mission is organized in one place, making end-of-mission cleanup straightforward and secure.
+- **Workspace-based organization** with persistent, dedicated folders per container. Each engagement gets its own workspace that persists even after container deletion. No more scattered files across your system. Everything for a mission is organized in one place, making end-of-mission cleanup straightforward and secure.
 
 - **Shell logging** with timestamps and timezone information. Your terminal sessions can be recorded if you enable it, so you know exactly what commands were executed, when they were, and what output they produced.
 

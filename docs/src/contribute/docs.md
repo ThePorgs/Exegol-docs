@@ -16,7 +16,8 @@ The Exegol documentation is built using VitePress. This guide will help you cont
 
 The documentation is organized into several sections:
 
-- **General**
+``` text :scroll
+- General
     - About Exegol
     - First install
     - Specific install guides (accessible only through direct links in /first-install)
@@ -27,26 +28,39 @@ The documentation is organized into several sections:
     - Frequently asked questions
     - Troubleshooting
     - Tips & tricks
-- **Exegol images**
-    - Images
+- Exegol images
+    - Overview
     - Tools list
     - My resources
     - Exegol history
     - Credentials
     - Services
-- **Exegol wrapper**
-    - Features
+- Exegol wrapper
+    - Overview
     - Command-line actions (info, start, exec, ...)
     - Advanced configuration
-- **Exegol resources**
-    - Resources list
-- **Dashboard**
-- **Blog** (accessible from navigation menu)
-- **Contributing** (accessible from navigation menu)
+- Exegol resources
+    - Overview
+- Exegol MCP
+    - Overview
+    - Getting started
+- Exegol Sentinel
+    - Overview
+    - Getting started
+    - Configuration
+    - Profiles (concepts, triggers, actions, sources)
+    - SIEM integration (log schema, field mappings, ingest, artifacts)
+    - Security considerations
+- Dashboard
+    - Overview
+    - My plan, Referral, My licenses, Organizations, Settings
+- Blog (accessible from navigation menu)
+- Contributing (accessible from navigation menu)
     - About contributions
-    - Components (Images, Wrapper, Resources, My-resources, Exegol history, Docs)
+    - Components (Images, Wrapper, Resources, My-resources, Exegol history, Exegol MCP, Docs)
     - Miscellaneous (Source install, Signing commits, Maintainers notes)
-- **Legal** (accessible from navigation menu)
+- Legal (accessible from navigation menu)
+```
 
 All documentation files are stored in the `/docs/src` folder.
 
@@ -69,6 +83,14 @@ Use triple backticks to delimit code blocks, specifying the language after the f
 ```python
 print('hello world')
 ```
+
+Long lines wrap by default. Add `:scroll` after the language to keep them on one line and scroll horizontally:
+
+````markdown
+```text :scroll
+a diagram or command that must not wrap
+```
+````
 
 ### Tabs
 

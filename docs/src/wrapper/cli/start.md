@@ -28,7 +28,22 @@ Many options exist to customize the creation of exegol container.
 
 > [!TIP]
 > The default options of some parameters can be changed in
-> the [exegol configuration file](/wrapper/features#exegol-configuration).
+> the [exegol configuration file](/wrapper/configuration).
+
+Ten of the options below are switches with two spellings, a positive one and a `--no-` one. What you type decides
+one of three things:
+
+| You type   | Result                                                                                                                                                            |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--log`    | Forced **on**, whatever the profile or the config file say.                                                                                                       |
+| `--no-log` | Forced **off**, whatever the profile or the config file say.                                                                                                      |
+| *neither*  | No opinion. The value comes from the profile, then from the [config file](/wrapper/configuration) if that option has a setting there, then from Exegol's default. |
+
+Five of the ten have no configuration-file setting at all: `--gui`, `--my-resources`, `--exegol-resources`,
+`--share-timezone` and `--privileged`. For those the profile is the only tier below the command line, and an option
+you do not type falls straight from the profile to Exegol's default.
+
+That is how one container refuses a setting a shared profile turns on, without editing the profile.
 
 ### Global options
 
@@ -37,16 +52,16 @@ Many options exist to customize the creation of exegol container.
 | `IMAGE`                                           | Tag of the exegol image to use to create a new exegol container                                                                                                                                                                      |
 | `-w WORKSPACE_PATH`, `--workspace WORKSPACE_PATH` | The specified host folder will be linked to the /workspace folder in the container.                                                                                                                                                  |
 | `-cwd`, `--cwd-mount`                             | This option is a shortcut to set the /workspace folder to the user's current working directory (pwd).                                                                                                                                |
-| `-fs`, `--update-fs`                              | Modifies the permissions of folders and sub-folders shared in your workspace to access the files created within the container using your host user account. (default: Disabled)                                                      |
+| `-fs`, `--update-fs`, `--no-update-fs`            | Modifies the permissions of folders and sub-folders shared in your workspace to access the files created within the container using your host user account. (default: Disabled)                                                      |
 | `-V VOLUMES`, `--volume VOLUMES`                  | Share a new volume between host and exegol (format: --volume /path/on/host/:/path/in/container/\[:ro\|rw\]).                                                                                                                         |
 | `-p PORTS`, `--port PORTS`                        | Share a network port between host and exegol (format: `--port [<host_ipv4>:]<host_port>[-<end_host_port>][:<container_port>[-<end_container_port>]][:<protocol>]`. This configuration will disable the shared network with the host. |
 | `--hostname HOSTNAME`                             | Set a custom hostname to the exegol container (default: exegol-\<name\>)                                                                                                                                                             |
 | `--hosts-file HOSTS_FILE`                         | Import custom host entries from a file (format: IP HOSTNAME)                                                                                                                                                                         |
-| `--disable-X11`                                   | Disable X11 sharing to run GUI-based applications. (default: Enabled)                                                                                                                                                                |
-| `--disable-my-resources`                          | Disable the mount of the shared resources (/opt/my-resources) from the host (/home/dramelac/.exegol/my-resources) (default: Enabled)                                                                                                 |
-| `--disable-exegol-resources`                      | Disable the mount of the exegol resources (/opt/resources) from the host (/home/dramelac/Documents/tools/Exegol/exegol-resources) (default: Enabled)                                                                                 |
-| `--network NETWORK`                               | <Badge type="new"/> Configure the container's network mode (default: host). See [Network Modes](#network-modes) for details.                                                                                                         |
-| `--disable-shared-timezones`                      | Disable the sharing of the host's time and timezone configuration with exegol (default: Enabled)                                                                                                                                     |
+| `--gui`, `--no-gui`                               | Share the host GUI (X11 or Wayland) so graphical applications can display (default: Enabled)                                                                                                                                         |
+| `--my-resources`, `--no-my-resources`             | Mount the shared resources (/opt/my-resources) from the host (~/.exegol/my-resources) (default: Enabled)                                                                                                                             |
+| `--exegol-resources`, `--no-exegol-resources`     | Mount the exegol resources (/opt/resources) from the host (~/.exegol/exegol-resources) (default: Enabled)                                                                                                                            |
+| `--network NETWORK`                               | Configure the container's network mode (default: host). See [Network Modes](#network-modes) for details.                                                                                                         |
+| `--share-timezone`, `--no-share-timezone`         | Share the host's time and timezone configuration with exegol (default: Enabled)                                                                                                                                                      |
 | `--comment`                                       | The specified comment will be added to the container info                                                                                                                                                                            |
 
 ### Privileges
@@ -57,11 +72,11 @@ By default, the Exegol container will receive the minimum permissions required b
 > Permissions will be added automatically if required. For example, when the `--vpn` parameter is used,
 > devices and capabilities are automatically added to enable the VPN to operate with the least privileges possible.
 
-| Option                           | Description                                                                                                                                                    |
-|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `-d DEVICES`, `--device DEVICES` | Add host device(s) at the container creation (example: -d /dev/ttyACM0 -d /dev/bus/usb/).                                                                      |
-| `--cap CAPABILITIES`             | **(dangerous)** Capabilities allow to add specific privileges to the container (e.g. need to mount volumes, perform low-level operations on the network, etc). |
-| `--privileged`                   | **(dangerous)** Give extended privileges at the container **creation** (e.g. needed to mount things, to use Wi-Fi or Bluetooth)                                |
+| Option                            | Description                                                                                                                                                                                                                                                                                                              |
+|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-d DEVICES`, `--device DEVICES`  | Add host device(s) at the container creation (example: -d /dev/ttyACM0 -d /dev/bus/usb/).                                                                                                                                                                                                                                |
+| `--cap CAPABILITIES`              | **(dangerous)** Capabilities allow to add specific privileges to the container (e.g. need to mount volumes, perform low-level operations on the network, etc).                                                                                                                                                           |
+| `--privileged`, `--no-privileged` | **(dangerous)** Give extended privileges at the container **creation** (e.g. needed to mount things, to use Wi-Fi or Bluetooth). `--no-privileged` refuses the privilege even when a container profile asks for it, a strict reduction in what a shared profile can impose (default: Disabled)                           |
 
 > [!CAUTION] Avoid using privileged mode unless absolutely necessary
 > This flag grants the container nearly unrestricted access to the host, effectively breaking most security boundaries
@@ -86,7 +101,7 @@ When a new container is created, it is possible to:
 > The privileges configured when creating the container will be given to all processes in that container for the
 > entirety of its lifetime.
 
-#### Existing container <Badge type="new"/>
+#### Existing container
 
 When the container already exists, you cannot change the default privileges mode, capabilities or share new devices.
 However, it is possible to spawn a **single** shell session with **all capabilities** with `--cap ALL`. The capabilities
@@ -100,7 +115,7 @@ Exegol supports different network modes to suit various use cases:
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `host` (default) | Container shares the host's network interfaces (IP and MAC addresses of every interface of your host).                                                                                                                                                                   | - When you need to use the host's network interfaces directly<br>- For low-level network operations<br>- When you need to share the host's IP and MAC address                                                                      |
 | `docker`         | Container uses Docker's default bridge network. All containers (not just Exegol) share this network and can communicate with each other.                                                                                                                                 | - When you need basic network isolation<br>- When you want to publish specific ports<br>- For most standard use cases<br>- When you want to allow communication between containers                                                 |
-| `nat`            | <Badge type="pro"/> Creates a dedicated isolated network for the container with its own subnet. Each container gets a unique network namespace with a /28 subnet (16 IP addresses), providing complete isolation from other containers. Requires Pro/Enterprise license. | - When you need complete network isolation<br>- For sensitive operations requiring dedicated network resources<br>- When you need to control all network traffic<br>- When you want automatic network cleanup on container removal |
+| `nat`            | <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/> Creates a dedicated isolated network for the container with its own subnet. Each container gets a unique network namespace with a /28 subnet (16 IP addresses), providing complete isolation from other containers. Requires Pro, Team or Enterprise license. | - When you need complete network isolation<br>- For sensitive operations requiring dedicated network resources<br>- When you need to control all network traffic<br>- When you want automatic network cleanup on container removal |
 | `disable`        | Disables all network connectivity for the container.                                                                                                                                                                                                                     | - When you need maximum isolation<br>- For offline operations<br>- When network access is not required                                                                                                                             |
 
 > [!CAUTION]
@@ -139,7 +154,7 @@ There are some limitations and considerations that users should be aware of:
     - NAT mode allocates dedicated network resources per container
 - **License Requirements**:
     - Docker mode is available in all versions
-    - NAT mode requires Pro/Enterprise license
+    - NAT mode requires Pro, Team or Enterprise license
 
 === General Considerations
 
@@ -163,14 +178,14 @@ network settings.
 
 ### Graphical desktop
 
-As an alternative to X11 sharing, Exegol provides a complete graphical desktop environment within the container. This
-environment can be accessed through multiple protocols, with a web-based interface being the default method. This gives
-users a full-featured desktop experience directly from their browser.
+As an alternative to sharing the host GUI with `--gui`, Exegol provides a complete graphical desktop environment within
+the container. This environment can be accessed through multiple protocols, with a web-based interface being the
+default method. This gives users a full-featured desktop experience directly from their browser.
 
-| Option             | Description                                                                                                                          |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| `--desktop`        | Enable or disable the Exegol desktop feature (default: Disabled)                                                                     |
-| `--desktop-config` | Configure the desktop protocol (vnc/http) and network settings (format: `protocol[:ip[:port]]`) (default: `http:127.0.0.1:<random>`) |
+| Option                      | Description                                                                                                                          |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `--desktop`, `--no-desktop` | Enable the Exegol desktop feature (default: Disabled)                                                                                |
+| `--desktop-config`          | Configure the desktop protocol (vnc/http) and network settings (format: `protocol[:ip[:port]]`) (default: `http:127.0.0.1:<random>`) |
 
 ### VPN
 
@@ -183,12 +198,9 @@ version `3.1.8`.
 
 The container will take care of starting the tunnel at each startup.
 
-> [!IMPORTANT] WireGuard support
-> WireGuard VPN support is currently in beta and exclusive to <Badge type="pro" /> and <Badge type="enterprise" /> users at this time.
-
 > [!INFO]
 > When using the `--vpn` feature, network mode defaults to `docker`, or `nat` if the user has a
-> valid <Badge type="pro" /> or <Badge type="enterprise" /> subscription. This isolates the container. The VPN
+> valid <Badge type="pro" />, <Badge type="team" /> or <Badge type="enterprise" /> subscription. This isolates the container. The VPN
 > connection is not opened directly on the host's network interface. It protects the host.
 
 | Option                | Description                                                                                                                                                                       |
@@ -207,16 +219,76 @@ The container will take care of starting the tunnel at each startup.
 One of the functions of exegol very useful in a professional context is the shell logging. This feature allows the user
 to record **everything** that happens in the exegol container (commands typed and responses).
 
-| Option           | Description                                                                                           |
-|------------------|-------------------------------------------------------------------------------------------------------|
-| `-l`, `--log`    | Enable shell logging (commands and outputs) on exegol to /workspace/logs/ (default: Disabled)         |
-| `--log-method`   | Select a shell logging method used to record the session (default: `asciinema`)                       |
-| `--log-compress` | Enable or disable the automatic compression of log files at the end of the session (default: Enabled) |
+| Option                                | Description                                                                                   |
+|---------------------------------------|-----------------------------------------------------------------------------------------------|
+| `-l`, `--log`, `--no-log`             | Enable shell logging (commands and outputs) on exegol to /workspace/logs/ (default: Disabled) |
+| `--log-method`                        | Select a shell logging method used to record the session (default: `asciinema`)               |
+| `--log-compress`, `--no-log-compress` | Enable the automatic compression of log files at the end of the session (default: Enabled)    |
 
 > [!TIP]
 > When the `-l`/`--log` option is enabled during the **creation** of a
 > **new** container, all future shells will be **automatically logged**
 > for this container.
+
+> [!NOTE] Shell logging and Exegol Sentinel are two different features
+> `-l`/`--log` is a **session recorder**: it captures the terminal stream of a shell, everything displayed and
+> everything typed, and stores the recording with the container's workspace.
+>
+> [Exegol Sentinel](/sentinel/) is a separate <Badge type="enterprise"/> add-on that writes one structured **audit
+> event per executed command** to the host for SIEM ingestion, and can additionally collect artifacts alongside those
+> events. It journalizes the commands an operator runs interactively, and is not a process audit of the container, see
+> [Command coverage](/sentinel/siem/artifacts-limitations#command-coverage) for the published boundary.
+>
+> The two features are independent, and can be enabled together on the same container.
+
+### Sentinel
+
+Exegol Sentinel is an Enterprise add-on that writes a structured audit record for every command an operator runs
+interactively in the container. Those records are written to a per-container directory on the Docker host, where an
+enterprise log agent can ingest them, which is what makes it worth enabling at the creation of a container used for an
+engagement. See [Getting started](/sentinel/getting-started) to enable Sentinel and locate its output, and
+[Sentinel configuration](/sentinel/configuration) for the configuration file keys behind the three options below.
+
+The three options below are taken into account **only** at the creation of a new container, and are ignored if a
+container with the same name already exists. `-S`/`--sentinel` turns the feature on for the container being created
+and `--no-sentinel` refuses it, in both cases whatever a container profile or the configuration file say. When neither
+is typed, a container profile's `sentinel.enabled` decides if it declares one, and the configuration file's
+`enabled_by_default` key decides otherwise. Naming an audit profile enables the feature by doing so, whatever
+`enabled_by_default` is set to, on both surfaces: `-SP`/`--sentinel-profile` on the command line, and a container
+profile writing `sentinel.profile` with `sentinel.enabled` omitted. The two keys can disagree inside one container
+profile, and there the answer is that `sentinel.enabled: false` beside a `sentinel.profile` is disabled, silently.
+Typed on the command line the answer is the other way round: `-SP` out-ranks a container profile's
+`sentinel.enabled: false` and enables the feature with no warning, and only `--no-sentinel` refuses it, warning when
+both are typed that the audit profile named with `-SP` is not applied.
+
+| Option                                                        | Description                                                                                                                                                                                                                                                                                              |
+|---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-S`, `--sentinel`, `--no-sentinel`                           | Enable Sentinel audit logging on the container being created; `--no-sentinel` refuses it (default: Disabled)                                                                                                                                                                                             |
+| `-SP SENTINEL_PROFILE`, `--sentinel-profile SENTINEL_PROFILE` | Name the Sentinel audit profile to deploy in the container; supplying it also enables Sentinel. When no profile is named, a container profile's `sentinel.profile` supplies one if it declares it, and the configuration file's `default_profile` supplies it otherwise (default: no profile is applied) |
+| `--sentinel-strategy STRATEGY`                                | Set the Sentinel profile update strategy for this container: `on_restart` regenerates the configuration from the host sources at every restart, `disabled` freezes it until a refresh is forced (default: `on_restart`)                                                                                  |
+
+### Container profile
+
+Container profiles are a <Badge type="pro"/> feature and require a **Professional** licence or above. On a session
+without one, `-P` / `--profile` is refused and the command exits rather than creating the container without the
+requested shape.
+
+A container profile is a named set of container-shape defaults (which image the container starts from, how it is
+attached to the network, what is mounted into it, which shell opens, and so on) applied to the container being
+created. Its declared options are applied at creation only, and anything typed on the command line wins over them. A
+container profile is **not** a Docker build profile, the kind `exegol build` consumes to describe how an *image* is
+built, and it is **not** a Sentinel audit profile, selected with `-SP` / `--sentinel-profile` above, which describes
+what a container's audit logging records. See [Container profiles](/wrapper/profiles/) for what a profile can declare
+and where profiles come from.
+
+Profile options are taken into account **only** at the creation of a new container. When a container with the same name
+already exists the profile is ignored **entirely** rather than partially applied, and a warning naming the profile and
+the container states that rule. That warning is not a prompt and it does not block: the session continues into the
+existing container exactly as if the option had never been typed.
+
+| Option                                                | Description                                                                                                                                                                                                         |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-P CONTAINER_PROFILE`, `--profile CONTAINER_PROFILE` | Apply a named container configuration profile to the container being created. At an interactive terminal, an empty or unknown name opens the picker listing the available profiles (default: no profile is applied) |
 
 ### Session specific
 
@@ -265,4 +337,13 @@ exegol start -d "/dev/ttyACM0"
 
 # Share every USB device connected to the host
 exegol start -d "/dev/bus/usb/"
+
+# Create the htb container from the redteam profile
+exegol start htb full --profile redteam
+
+# Create a container from a profile, overriding its shell
+exegol start htb full --profile redteam --shell tmux
+
+# Refuse a setting the profile turns on
+exegol start htb full --profile redteam --no-gui
 ```

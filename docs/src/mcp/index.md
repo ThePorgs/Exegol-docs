@@ -1,6 +1,14 @@
-# What Exegol MCP can do <Badge type="new"/>
+# Exegol MCP overview
 
-Exegol MCP provides AI assistants with powerful capabilities to interact with Exegol containers and perform offensive security tasks.
+Exegol MCP is a server that lets an AI client (Cursor, Claude Desktop, and others) talk to Exegol over the [Model Context Protocol](https://modelcontextprotocol.io/).
+
+- **What it is:** a set of MCP tools in two classes, orchestration (containers and images) and in-container execution (run tools inside Exegol).
+- **Why that is better:** the agent is boxed in Exegol, not granted the host OS. See [Getting started](/mcp/getting-started) for the isolation argument.
+- **What you get:** natural-language control of Exegol and of the tools already in the container, without memorising tool names.
+
+The image set the assistant can download follows the [same tiers](/about#tiers) as the wrapper: Community can pull `free`; Pro, Team and Enterprise can pull the other official images.
+
+Install and configure a client on [Getting started](/mcp/getting-started).
 
 ## Example prompts
 
@@ -11,7 +19,7 @@ Here are some simple examples of prompts you can use with your AI assistant to l
 - `Start the container named 'pentest'`
 - `What Exegol images do I have installed?`
 - `Download the latest free image`
-- <Badge type="pro"/><Badge type="enterprise"/>`Download the 'web' image in the '3.1.10' version`
+- <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>`Download the 'web' image in the '3.1.10' version`
 
 **In-container execution examples:**
 - `Run nmap to scan 192.168.1.0/24 in my Exegol container`
@@ -50,7 +58,7 @@ In-container tools allow AI assistants to execute commands and use security tool
 | `execute_command_in_container`       | Execute commands inside Exegol containers, running pentesting tools, scripts, and any available command |
 | `execute_remote_command`             | Execute commands on remote systems via SSH, WinRM, SMB, MSSQL, WMI, or RDP protocols |
 | `list_installed_tools`               | List all security tools installed in Exegol containers, organized by category |
-| `list_installed_exegol_resources`    | List all available [Exegol resources](/resources/list) for a specific target OS |
+| `list_installed_exegol_resources`    | List all available [Exegol resources](/resources/) for a specific target OS |
 
 Exegol MCP supports "pseudo sessions" for remote command execution with the `execute_remote_command`. Currently, this feature enables inline execution of tools like [NetExec](https://github.com/Pennyw0rth/NetExec) (formerly [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec)) directly within the MCP workflow, allowing AI assistants to interact with remote systems without requiring explicit session management.
 
@@ -60,7 +68,7 @@ Exegol MCP is being developed, and some features are not yet available. The foll
 
 - **Container creation**: create new containers with default or custom configurations
 - **Container/image removal**: remove containers and/or images
-- **OAuth authentication**: OAuth-based authentication is the most MCP-compliant authentication method, but it isn't support yet
+- **OAuth authentication**: OAuth-based authentication is the most MCP-compliant authentication method, but it isn't supported yet
 
 > [!TIP] Feedback and suggestions
 > We're continuously improving Exegol MCP based on user feedback. If you have suggestions for new features, improvements, or encounter limitations that impact your workflow, please share your feedback through our [Discord community](https://discord.exegol.com).

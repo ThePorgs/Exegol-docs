@@ -1,6 +1,6 @@
-# `activate` action <Badge type="pro"/> <Badge type="enterprise"/>
+# `activate` action <Badge type="pro"/> <Badge type="team"/> <Badge type="enterprise"/>
 
-The `activate` action is used to activate Exegol with a valid Pro/Enterprise license. This action is required to use
+The `activate` action is used to activate Exegol with a valid Pro, Team or Enterprise license. This action is required to use
 Exegol in a professional environment. Without activation, Exegol will run in Community edition mode with limited
 features.
 
@@ -20,7 +20,7 @@ This is the default interactive activation method (online, interactively).
 You can activate Exegol without any interactive prompts (e.g. for automation, CI/CD, or remote setup).
 
 1. Create and save an API key from the Exegol dashboard "[Settings](https://dashboard.exegol.com/settings)" page. See the [API keys docs](/dashboard/settings#api-keys) for more info. **The key is shown only once at creation**.
-2. Retrieve the License ID you want to activate, from the Exegol dashboard "[My licenses](https://dashboard.exegol.com/licenses)" page. The ID can be copied from the three-dots menu in the Action column.
+2. Retrieve the License ID to activate. On Pro that is [My plan](/dashboard/my_plan); on Team or Enterprise that is [My licenses](/dashboard/licenses). The ID can be copied from the three-dots menu in the Action column.
 
 Use the following command, replacing the placeholders with your API key and license ID:
 
@@ -34,14 +34,14 @@ Alternatively, if you set the `EXEGOL_API_KEY` and `EXEGOL_LICENSE_ID` environme
 exegol activate --accept-eula
 ```
 
-## Offline option <Badge type="enterprise"/>
+## Offline option <Badge type="enterprise"/><Badge type="add-on"/>
 
 The **offline mode** is a paid option of the **Exegol Enterprise** tier. Licenses with that option are not affected by the usual 7-days offline limit. They can be activated like other standard Licenses with both [Default activation](#default-activation) or [Unattended activation](#unattended-activation) methods described above.
 
 This option can also prove useful for machines that will never be connected to the Internet, as they can be activated using the dedicated offline activation procedure described below.
 
 1. Run `exegol activate --offline` on the offline machine, and retrieve the "Activation ID"
-2. On an Internet-connected machine, open the Exegol dashboard "[My licenses](https://dashboard.exegol.com/licenses)" page, identify the "Offline" license to activate, then click "Offline Enrollment" in the three-dots menu from the Actions column
+2. On an Internet-connected machine, open [My licenses](/dashboard/licenses) in the Exegol dashboard, identify the "Offline" license to activate, then click "Offline Enrollment" in the three-dots menu from the Actions column
 3. Fill in the form with the Activation ID, set an OS and name for the machine
 3. Download the resulting `license.key` file and place it on the offline machine at `~/.exegol/license.key`
 

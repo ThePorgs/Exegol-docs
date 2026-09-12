@@ -313,3 +313,23 @@ msfdb start
 msfconsole -qx 'db_status; exit'
 [*] Connected to msf. Connection type: postgresql.
 ```
+
+## Container profiles
+
+### Profiles from a git source do not appear
+
+A [container profile](/wrapper/profiles/) source is declared with `git` in the configuration file, but none of the profiles it holds are listed by `exegol info --profiles`, none are offered by the interactive picker, and naming one on `exegol start --profile <name>` reports that profile as not found. At an interactive terminal the picker opens instead, and the expected name is missing from the profiles it lists.
+
+To resolve this, run `exegol update`. Reading profiles performs no network access, so a source declared with `git` has no directory on disk (and therefore no profiles) until it has been fetched once, which is what the [modules updates](/wrapper/cli/update#modules-updates) step does. A command that reads profiles and detects this state offers to fetch the missing source on the spot; when that offer is declined, or when it cannot be answered because the invocation is piped, scripted or running in offline mode, the source stays unfetched until an update runs. Fetching git sources requires an Enterprise licence, so below that tier the step does nothing and only sources declared with a filesystem path are loaded.
+
+### A profile is rejected because of an unknown key
+
+Loading a container profile fails with an error naming the file and one key inside it, and that profile is then missing from the listing and cannot be selected by name.
+
+To resolve this, correct the key. Unknown and misspelled keys are rejected when the file is read rather than being quietly ignored, and the same strictness applies to every nested section, so a typo one level down is refused exactly as a typo at the top level is; the key named in the error is the offending one. Only the offending file is skipped. Every other profile in the same source still loads. Check the key against the [profile file reference](/wrapper/profiles/reference), which lists every key a profile file may carry. One related case looks similar but is refused earlier: a key written twice inside the same mapping is a parse error rather than a last-wins merge, because an option silently replaced by a later duplicate is the same failure as an option that was dropped.
+
+### A bare profile name is ambiguous
+
+A profile is named without a source prefix, that same name is defined by more than one loaded source, and the selection is refused instead of being resolved to one of them.
+
+To resolve this, re-run with the source-qualified `source.name` form; the error already lists every qualified alternative that exists. A bare name is accepted whenever it is unique across all loaded sources, so this only arises when several sources are loaded at once, which requires an Enterprise licence. The refusal is deliberate: picking one of two profiles that happen to share a name would create a container different from the one that was asked for. The addressing rules are described under [Container profiles](/wrapper/profiles/).

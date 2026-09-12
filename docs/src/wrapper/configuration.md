@@ -3,7 +3,7 @@
 ## Home directory
 
 The `~/.exegol` folder exists in the user's home folder to centralize
-["exegol resources"](/resources/list),
+["exegol resources"](/resources/),
 ["my-resources"](/images/my-resources), workspaces, and the
 configuration file.
 
@@ -11,7 +11,7 @@ By default, every exegol container has a **workspace volume**. If the
 path of this volume is not specified by the user
 [see start parameters](/wrapper/cli/start), a folder with the
 name of the container will be created in the
-["private workspace"](/wrapper/features#exegol-configuration) folder. By default,
+["private workspace"](#volumes) folder. By default,
 this folder is located at `~/.exegol/workspaces/`.
 
 ## Configuration file
@@ -28,7 +28,7 @@ configuration file exists that allows users to persistently change the
 behavior and operations to be performed by default.
 
 The user configuration currently in place can be viewed with the
-command: `exegol info -v`. More information on the
+command: `exegol info --config`. More information on the
 [info page](/wrapper/cli/info).
 
 Within the `~/.exegol/config.yml` file, several settings can be
@@ -45,9 +45,10 @@ The volume section allows to change the default path for various volumes.
 > original paths they were created with.
 
 - `my_resources_path`: the "my-resources" volume is a storage space
-  dedicated to the user to customize his environment and tools. This volume is, by default, shared across all exegol containers. See [details about it](/wrapper/features#exegol-configuration). Be careful **not** to use a folder with **existing data**, in which case their permissions will be automatically modified to enable access sharing. This change will not be applied to already existing exegol containers.
-- `exegol_resources_path`: exegol-resources are data and static tools downloaded in addition to docker images. These tools are complementary and are accessible directly from the host. See [details](/resources/list).
+  dedicated to the user to customize his environment and tools. This volume is, by default, shared across all exegol containers. See [details about it](/images/my-resources). Be careful **not** to use a folder with **existing data**, in which case their permissions will be automatically modified to enable access sharing. This change will not be applied to already existing exegol containers.
+- `exegol_resources_path`: exegol-resources are data and static tools downloaded in addition to docker images. These tools are complementary and are accessible directly from the host. See [details](/resources/).
 - `private_workspace_path`: when containers do not have an explicitly declared workspace at their creation (i.e. with `--cwd-mount`, or `--workspace`), a dedicated folder will be created at this location to share the workspace with the host but also to save the data after deleting the container.
+- `sentinel_path`: folder on the host where the Sentinel logs from the Exegol containers are stored, one sub-folder per container instance. By default, this folder is a `sentinel` directory inside the Exegol configuration directory (`~/.exegol/sentinel`). Please note that these logs may contain sensitive data. See [Getting started](/sentinel/getting-started) for what lands there.
 
 ### Config
 
@@ -68,9 +69,13 @@ Change the configuration of the shell logging functionality.
 #### Desktop
 
 Change the configuration of the virtual Desktop feature.
-- `enabled_by_default`: Enables or not the desktop mode by default. If
-this attribute is set to True, then using the CLI `--desktop` option
-will be inverted and will **DISABLE** the feature (Default: `False`)
+- `enabled_by_default`: Enables or not the desktop mode by default. When
+this attribute is set to True, the desktop feature starts **enabled** on
+every new container. The CLI `--desktop` option **forces** the desktop
+on for the container being created and `--no-desktop` **refuses** it, in
+both cases whatever this attribute is set to. When neither of them is
+given, a container profile's `display.desktop.enabled` decides if it
+declares one, and this attribute decides otherwise (Default: `False`)
 - `default_protocol`: Default desktop protocol,can be `http`, or `vnc`
 depending on your wrapper / image version. (Default: `http`)
 - `localhost_by_default`: Desktop service is exposed on localhost by
@@ -86,7 +91,7 @@ Configure the network behavior of Exegol containers.
 - `default_network`: Default network mode for any new container. (Default: `host`)
   - `host`: Container shares host's network interfaces
   - `docker`: Uses shared Docker's bridge network
-  - `nat`: <Badge type="pro"/><Badge type="enterprise"/> Creates a network for each container
+  - `nat`: <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/> Creates a network for each container
   - `disable`: Disables all network connectivity
 
 - `fallback_network`: Network mode to use if the default mode is not available. (Default: `nat`, or `docker` if the use doesn't have the required Subscription level)
@@ -103,9 +108,129 @@ Configure the network behavior of Exegol containers.
 For more details about network modes and their use cases, see the [Network Modes section](/wrapper/cli/start#network-modes) in the start command documentation.
 
 
-#### Custom images <Badge type="enterprise"/>
+#### Sentinel <Badge type="new"/><Badge type="enterprise"/><Badge type="add-on"/>
 
-Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to identify and work with Exegol images that have different names than the official ones.
+Change the configuration of the Exegol Sentinel logging feature.
+
+- `enabled_by_default`: Enable Sentinel logging by default on any new container.
+When this attribute is set to True, the Sentinel feature starts
+**enabled** on every new container. The CLI `-S`/`--sentinel` option
+**turns** Sentinel on for the container being created and
+`--no-sentinel` **refuses** it, in both cases whatever a container
+profile or this attribute say. When neither of them is given, a
+container profile's `sentinel.enabled` decides if it declares one, and
+this attribute decides otherwise; typing `-SP`/`--sentinel-profile` is
+the exception to both arms: a name given on the command line out-ranks
+a container profile's `sentinel.enabled: false` and enables Sentinel
+with no warning, and only `--no-sentinel` refuses a `-SP`, warning when
+both are typed that the audit profile named with `-SP` is not applied.
+A container profile writing `sentinel.profile` with
+`sentinel.enabled` omitted also turns Sentinel on, whatever this
+attribute is set to (Default: `False`)
+
+- `log_group_gid`: Share the log files in read-only mode with another group, so that a log-shipping agent (Splunk Universal Forwarder, Elastic lightweight data shipper, Fluentd data collector, etc.) which does not run as your user can read them. Note that these logs may contain sensitive data. Use `-1` to refer to the group of the user running Exegol. Only available on UNIX systems. (Default: `-1`)
+
+- `component_path`: Location on the host where the Sentinel profile sources are stored, a `components/sentinel` directory inside the Exegol configuration directory. (Default: `~/.exegol/components/sentinel`)
+
+- `default_profile`: Sentinel profile applied when the `-SP`/`--sentinel-profile` option is not given and no container profile declares `sentinel.profile`. (Default: empty, no profile is applied)
+
+- `update_strategy`: When a container's already-deployed Sentinel configuration is regenerated from the host's profile sources. This setting never fetches anything: downloading and updating the profile sources themselves is the job of `exegol update`. (Default: `on_restart`)
+  - `on_restart`: The deployed configuration is regenerated from the host sources at every restart of the container
+  - `disabled`: The deployed configuration is frozen until a refresh is forced
+
+- `log_rotation`: Rotation settings for the Sentinel event stream. These values are used only when the active profile does not define its own `log_rotation` block.
+  - `enabled`: Enable the automatic rotation of the Sentinel log file. (Default: `True`)
+  - `max_size`: Rotate the log file once it reaches this size, expressed as a number of bytes or with a unit suffix such as `"512KB"`. Set it to `0` to **never rotate**, the same reading `max_files: 0` already has. Be aware that rotation is the only bound on `logs.json`: at `0` it grows until the disk does. A value that cannot be read still falls back to the default rather than to no bound. (Default: `"100MB"`)
+  - `max_files`: Maximum number of rotated log files to keep, `0` keeps them all. (Default: `0`)
+  - `compress`: Compress the rotated log files with gzip. (Default: `True`)
+
+- `log_output`: Terminal output capture settings for the Sentinel audit events, the `output` field each event carries for its own command. These values are used only when the active profile does not define its own `log_output` block.
+  - `enabled`: Record the cleaned terminal output of every command in its audit event. When this is disabled **and** no profile declares an `output_capture` action, no session recorder is started at all and the shell starts exactly as it does without the feature. (Default: `True`)
+
+    ::: warning What happens when `config.yml` cannot be read
+    Because capture-on is the direction that must never be *guessed*, a `config.yml` the wrapper cannot make sense of turns output capture **off** and says so, rather than falling back to the default above. That applies to a YAML syntax error, a file whose root is not a mapping, a `log_output:` / `sentinel:` / `config:` key holding a scalar instead of a block, a value that is not a recognised boolean spelling (which reads as false), a file that is not valid UTF-8 (one accented character saved by a latin-1 or cp1252 editor is enough), and a partially written file (one that is empty, that stops part-way through the header Exegol generates, or that is a copy of a generated `config.yml` whose last line is unterminated and which does not reach the end of what Exegol writes), which the wrapper refuses rather than treating as a request for the defaults. In every one of these cases the file is left untouched so it can be corrected.
+
+    A complete `config.yml` that has merely lost its **final newline** is *not* one of these: it is read normally. Editors and shell round-trips drop that byte routinely (`files.trimFinalNewlines`, `printf '%s' "$(cat config.yml)"`), and it is not evidence of a truncation on its own. A file counts as complete when it still declares `custom_images` (the last key Exegol writes) **or** when it declares the last key above that one *and writes no other Exegol setting below it*, so editing the end of the file does not change the answer: deleting the block, rewording its comment or writing `custom_images: []` all keep your configuration readable, and so does deleting it *together with* anything else you do not use (the whole `sentinel:` block, a nested block such as `log_rotation:` left empty to mean "defaults for this one", or a key an older Exegol never wrote). The second half of that condition is what makes the first half safe, and it is worth knowing if you like to **reorder** the file: a truncation only ever removes the end, so "the last setting Exegol writes is present" is evidence that the write ran past everything above it, but only while your file still writes those settings in the order Exegol does. If you have moved a block up (`network:` to the top of `config:`, say), Exegol sees a setting written below the one it takes as the end marker, stops trusting the marker, and refuses the file rather than reading a possibly truncated one. The one thing that check cannot catch is a write that stopped inside the comment block directly under that last setting, or inside the setting's own value: those bytes are indistinguishable from a file you trimmed yourself, so they are read rather than refused, and the file is then rewritten with the defaults for everything below the cut. **Keep the final newline on a reordered `config.yml`** and it is read normally, whatever order it is in: the newline settles the question on its own, including that window. What this cannot tell apart from a complete file is an omission that reaches the **end** of the file: a truncation only ever removes the end, so a config that drops the very last setting Exegol writes (`exegol_default_netmask`, or the whole `network:` block it sits in) looks exactly like one that was cut there, and it is refused. Keep the final newline on such a file and it is read normally.
+
+    One truncation cannot be recognised: a write that happens to stop exactly at the end of a line leaves a complete-looking document, and nothing distinguishes it from a `config.yml` written by an older version. It is read normally, and a later version that adds a key will rewrite it with the defaults for everything below the cut. So before **any** upgrade rewrite Exegol copies the file it is about to replace to `config.yml.bak`, and skips the rewrite altogether if that copy cannot be made, which includes the case where a **directory** occupies that name. The copy is written to a temporary file beside the config and renamed over that name, so whatever the name already refers to is never opened for writing: a **symlink** or a **hard link** planted there is not followed, its target is left untouched, and the copy still lands in a real file of its own (the rename replaces the name, not the file behind it). An ordinary `config.yml.bak` that is already there (the copy a previous upgrade left, or one you made yourself) is replaced by it. If your `config.yml` is itself a symlink (a dotfiles checkout, say) the copy is made beside the file the link **resolves to**, not beside the link.
+
+    A `config.yml` that parses but declares **no keys** (every line commented out, or just `---`) is the opposite case: it is a complete and valid way to ask for the defaults, so every setting takes its default value (output capture included) and nothing is reported above `--verbose`. Such a file is also never rewritten, so it will not pick up the commented template for options added in later versions; delete it if you want a fresh template.
+    :::
+  - `max_size`: Keep at most this much cleaned output per command, expressed as a number of bytes or with a unit suffix such as `"64KB"`. Must be **strictly positive**: this is the one limit in Sentinel where `0` does *not* mean unlimited, because this field is embedded in every audit event and is read within its own bound rather than by loading the whole command window; use `enabled` to turn the field off, or an `output_capture` action to keep a whole window as a separate artifact. From `10000` bytes upward the wrapper warns: that is Splunk's default `TRUNCATE`, and an indexer left on it cuts the event mid-JSON rather than shortening it (see [Ingest configuration](/sentinel/siem/ingest-configuration)). (Default: `"4KB"`)
+  - `truncation`: Which end of an oversized output to keep: `head`, `tail`, or `both`, which spends half the budget on each end and names the dropped byte count in between. (Default: `both`)
+
+- `sources`: Name-keyed map of the additional Sentinel profile sources. Each key doubles as a directory name under `component_path` and can only contain letters, digits, `_` and `-`. The key `core` is reserved for the official Exegol source and cannot be redefined. See [Sources and updates](/sentinel/profiles/sources) for the full declaration syntax of a source.
+
+For more details about the Sentinel configuration, with a complete example and the related CLI options, see the [Sentinel configuration section](/sentinel/configuration) in the Exegol Sentinel documentation.
+
+
+#### Container profiles <Badge type="new"/><Badge type="pro"/>
+
+Change the configuration of the container profile feature, the named sets of container-shape defaults applied when a container is created.
+
+- `component_path`: Location on the host where the container profile sources are stored, a `components/profiles` directory inside the Exegol configuration directory. A `<name>.yml` file dropped into the `local` sub-directory defines a profile called `<name>`. (Default: `~/.exegol/components/profiles`)
+
+- `sources`: Name-keyed map of the container profile sources. Each key doubles as a directory name under `component_path` and can only contain letters, digits, `_` and `-`. The key `core` is reserved for an official Exegol source and cannot be redefined, even though no official container profile source is provisioned today. A `local` entry is written into this map the first time the key is generated; once the key exists the declared sources are used verbatim, including an empty block, so removing every entry is not undone by a later configuration upgrade.
+
+The complete declaration syntax of a source is below. The section is nested under `config:`, at the same depth as the Sentinel one, and a `profile:` key written at the top level of the file is not read at all.
+
+```yaml :scroll
+# ~/.exegol/config.yml
+# Only the container profile subtree is shown; the rest of the file is unchanged.
+config:
+    profile:
+        component_path: ~/.exegol/components/profiles
+
+        sources:
+            # The drop-in source, written on first setup. Scanned in place, never fetched.
+            local:
+                path: ~/.exegol/components/profiles/local
+
+            # A team source pinned to a tag. The pin is the supply-chain control:
+            # without `ref`, every fetch takes whatever the default branch says today.
+            team-profiles:
+                git: https://git.example.com/example-org/container-profiles.git
+                ref: v1.0                                        # a branch, a tag or a commit SHA
+
+            # `mode` is accepted on a git source only, and means `pinned` when the key is
+            # absent: a shallow clone at `ref`, replaced wholesale on update. `dev` makes
+            # it a full clone with real history, refreshed with a pull on the current
+            # branch instead of being re-cloned, so local commits survive an update.
+            authoring:
+                git: https://git.example.com/example-org/my-profiles.git
+                mode: dev
+
+        # The key 'core' is reserved and cannot appear here.
+```
+
+A source declaration carries either `git` (with an optional `ref` and an optional `mode`) or `path`, and when both `git` and `path` are present the git form is the one used. Every value is validated as a string when the configuration file is read, so no network access happens while the file is parsed.
+
+Every rule below is checked when `~/.exegol/config.yml` is read. A declaration that breaks one is a fatal configuration error, and the message names the source key and the offending field.
+
+| Rule | Accepted | Notes |
+| ---- | -------- | ----- |
+| The `sources` block | a mapping of source names to entries | A list or a scalar written under `sources:` is rejected as the configuration error it is, rather than failing later |
+| Source-key type | a quoted string | YAML resolves an unquoted `1234`, `on`/`off`, `yes`/`no` or `null` to a number, a boolean or a null rather than to a name. Such a key is rejected rather than coerced, because coercing it would create a directory named after a value that was never typed |
+| The key `core` | nothing: the key cannot be used | Reserved for an official Exegol source. No official container profile source is provisioned today, so the key is reserved but unused |
+| Source-key charset | letters, digits, `_` and `-` | The key doubles as an on-disk directory name under the component path, so this charset is the path-traversal control: `.`, `..` and any key containing a path separator cannot match it |
+| Spec shape | a mapping carrying either `git` (with an optional `ref` and an optional `mode`) or `path` | A scalar, a list, or a mapping carrying neither key is rejected. `git` wins if both are present |
+| Git URL | an `http://`, `https://`, `ssh://`, `git://` or `user@host:path` remote, with no whitespace and not starting with `-` | No transport is restricted, so whether a given transport is acceptable is a deployment decision rather than Exegol's. What is rejected is the small set of values git would not read as a plain remote |
+| `ref` charset | letters, digits, `.`, `_`, `/` and `-`, not starting with `-` | Applies to a branch, a tag or a commit SHA alike. Same argument-injection reasoning as the URL |
+| `mode` | `pinned` or `dev` | Accepted on a `git` source only. Absent means `pinned`, and any other value is rejected |
+| `path` value | a non-empty, resolvable path, absolute or starting with `~` | A relative path is refused outright |
+| `path` target | anything but the filesystem root, and a directory if it already exists | A `path:` source is scanned in place with a recursive glob on every profile load, so a scan rooted at the filesystem root would walk the whole filesystem |
+
+Each rejection message names the configuration section it came from, so a malformed container profile source declaration never sends the reader to the Sentinel section, and vice versa.
+
+> [!NOTE] The container profile sources and the Sentinel sources are declared with the same syntax because one parser reads both
+> A single shared body validates `profile.sources` and `sentinel.sources`, so the source-key charset, the reserved `core` key, the `path:` / `git:` / `ref:` / `mode:` form set, the seeded `local` entry and the seed-once behaviour are identical on both sides. What differs is everything around the parser. No official source is provisioned for container profiles, so `core` is reserved but unused, where the Sentinel `core` source is provisioned by Exegol. The licence tiers differ: container profiles require Professional, while Sentinel is an Enterprise add-on. The seeded `local` entry points at each feature's own component directory rather than a shared one. And the fetch triggers differ: `exegol update` is the only unprompted fetch of container profile sources and the only operation that prunes them, while a container profile surface that finds a declared git source with no directory on disk offers a prompted fetch that clones without pruning anything. The Sentinel side of the comparison is documented at [Sources and updates](/sentinel/profiles/sources).
+
+For more details about container profiles, with the profile file reference and the related CLI options, see the [Container profiles](/wrapper/profiles/) documentation.
+
+
+#### Custom images <Badge type="team"/><Badge type="enterprise"/>
+
+Team and Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to identify and work with Exegol images that have different names than the official ones.
 
 - `custom_images`: List of image names/registries that should be recognized as Exegol images. The wrapper will take those into account in commands like `start`, `info`, and `exec`.
   ```yaml
@@ -116,6 +241,6 @@ Enterprise users can configure custom image names to be recognized by Exegol. Th
 
 Note that images must be pulled manually as they may be in private registries requiring specific authentication
 
-> [!SUCCESS]
-> For organizations requiring a managed Exegol private registry, with managed private images, and a full integration with with the wrapper, contact us for a quote. Read more at [Custom registry](features#custom-registry)
+> [!INFO] <Badge type="enterprise"/><Badge type="add-on"/>
+> For organizations requiring a managed Exegol private registry, with managed private images, and a full integration with the wrapper, contact us for a quote. Read more at [Custom registry](/wrapper/#custom-registry)
 

@@ -12,9 +12,9 @@ For open-source components, please also refer to the Exegol Software License (ES
 
 Subject to Your compliance with this Agreement, Execorp grants You a personal, limited, non-exclusive, non-transferable, revocable license to install and use the Software solely:
 - For lawful purposes
-- In accordance with the permitted usage defined in your subscription plan (Community, Pro, Enterprise)
+- In accordance with the permitted usage defined in your subscription plan (Community, Pro, Team, Enterprise)
 - On a non-commercial basis under the Community plan
-- Or on a commercial basis if You have an active Pro or Enterprise subscription
+- Or on a commercial basis if You have an active Pro, Team or Enterprise subscription
 
 No ownership rights are granted to You. Execorp retains all rights not expressly granted under this Agreement.
 
@@ -33,7 +33,7 @@ This requirement may not apply to certain Enterprise licenses, on a case-by-case
 Except where expressly permitted by the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license), other applicable open-source licenses, or by law, you agree that you will not:
 
 - Copy, distribute, sell, sublicense, lease, or otherwise transfer the Software to any third party
-- Modify, adapt, create derivative works from, or translate the Software, except for personal use or community contribution, provided such modification is not intended to circumvent license verification or other technical restrictions. Any commercial use of modifications is only permitted in accordance with your subscription plan (Pro or Enterprise) and is subject to this Agreement and the [Terms of Service and Sale](https://docs.exegol.com/legal/terms-of-service). Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp.
+- Modify, adapt, create derivative works from, or translate the Software, except for personal use or community contribution, provided such modification is not intended to circumvent license verification or other technical restrictions. Any commercial use of modifications is only permitted in accordance with your subscription plan (Pro, Team or Enterprise) and is subject to this Agreement and the [Terms of Service and Sale](https://docs.exegol.com/legal/terms-of-service). Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp.
 - Reverse engineer, decompile, disassemble, or otherwise attempt to discover the source code of the Software, except as expressly permitted by applicable law and then only after prior written notice to Execorp
 - Remove, obscure, or alter any proprietary notices, labels, or marks on the Software
 - Use the Software for illegal activities
@@ -45,7 +45,7 @@ Commercial use of the Software, including:
 - Using the Software in a professional or revenue-generating environment
 - Providing services to third parties
 
-requires an active Pro or Enterprise subscription purchased from Execorp.
+requires an active Pro, Team or Enterprise subscription purchased from Execorp.
 
 Use of the Community (i.e., free) plan is strictly limited to personal, non-commercial, educational, or research purposes.
 

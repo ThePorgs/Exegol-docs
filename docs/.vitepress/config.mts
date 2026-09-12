@@ -2,6 +2,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 import githubAlertsPlugin from './plugins/githubAlertsPlugin';
 import lineNumberPlugin from './plugins/lineNumbers';
+import codeScrollPlugin from './plugins/codeScroll';
 import detailsPlugin from './plugins/detailsPlugin';
 import { themeImagesPlugin } from './plugins/theme-images'
 import { fileURLToPath, URL } from 'node:url'
@@ -108,6 +109,7 @@ export default defineConfig({
         md.use(tabsMarkdownPlugin);
         md.use(githubAlertsPlugin);
         md.use(lineNumberPlugin);
+        md.use(codeScrollPlugin);
         md.use(detailsPlugin);
         themeImagesPlugin()(md);
     }
@@ -279,12 +281,12 @@ function sidebarMain(): SidebarItemWithBadge[] {
       link: "first-install",
     },
     {
-      text: "Exegol images",
+      text: "Exegol Images",
       collapsed: false,
       items: [
         {
-          text: "Images",
-          link: "images/types.md"
+          text: "Overview",
+          link: "images/index.md"
         },
         {
           text: "Tools list",
@@ -309,12 +311,12 @@ function sidebarMain(): SidebarItemWithBadge[] {
       ]
     },
     {
-      text: "Exegol wrapper",
+      text: "Exegol Wrapper",
       collapsed: false,
       items: [
         {
-          text: "Features",
-          link: "wrapper/features.md"
+          text: "Overview",
+          link: "wrapper/index.md"
         },
         {
           text: "Command-line actions",
@@ -377,17 +379,41 @@ function sidebarMain(): SidebarItemWithBadge[] {
         {
           text: "Advanced configuration",
           link: "wrapper/configuration.md"
+        },
+        {
+          text: "Container profiles",
+          collapsed: true,
+          badge: "new",
+          items: [
+            {
+              text: "Overview",
+              link: "wrapper/profiles/index.md"
+            },
+            {
+              text: "Profile file reference",
+              link: "wrapper/profiles/reference.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      text: "Exegol Resources",
+      collapsed: true,
+      items: [
+        {
+          text: "Overview",
+          link: "resources/index.md"
         }
       ]
     },
     {
       text: "Exegol MCP",
-      collapsed: false,
-      badge: "new",
+      collapsed: true,
       items: [
         {
-          text: "Features",
-          link: "mcp/features.md"
+          text: "Overview",
+          link: "mcp/index.md"
         },
         {
           text: "Getting started",
@@ -396,12 +422,69 @@ function sidebarMain(): SidebarItemWithBadge[] {
       ]
     },
     {
-      text: "Exegol resources",
-      collapsed: false,
+      text: "Exegol Sentinel",
+      collapsed: true,
+      badge: "new",
       items: [
         {
-          text: "Resources list",
-          link: "resources/list.md"
+          text: "Overview",
+          link: "sentinel/index.md"
+        },
+        {
+          text: "Getting started",
+          link: "sentinel/getting-started.md"
+        },
+        {
+          text: "Configuration",
+          link: "sentinel/configuration.md"
+        },
+        {
+          text: "Profiles",
+          collapsed: true,
+          items: [
+            {
+              text: "Concepts",
+              link: "sentinel/profiles/concepts.md"
+            },
+            {
+              text: "Triggers",
+              link: "sentinel/profiles/triggers.md"
+            },
+            {
+              text: "Actions",
+              link: "sentinel/profiles/actions.md"
+            },
+            {
+              text: "Sources and updates",
+              link: "sentinel/profiles/sources.md"
+            }
+          ]
+        },
+        {
+          text: "SIEM integration",
+          collapsed: false,
+          items: [
+            {
+              text: "Log schema reference",
+              link: "sentinel/siem/log-schema.md"
+            },
+            {
+              text: "Field mappings",
+              link: "sentinel/siem/field-mappings.md"
+            },
+            {
+              text: "Ingest configuration",
+              link: "sentinel/siem/ingest-configuration.md"
+            },
+            {
+              text: "Artifacts and limitations",
+              link: "sentinel/siem/artifacts-limitations.md"
+            }
+          ]
+        },
+        {
+          text: "Security considerations",
+          link: "sentinel/security.md"
         }
       ]
     },
@@ -411,24 +494,12 @@ function sidebarMain(): SidebarItemWithBadge[] {
       items: [
         {
           text: "Overview",
-          link: "dashboard/overview.md"
+          link: "dashboard/index.md"
         },
         {
-          text: "Subscriptions",
-          link: "dashboard/subscriptions.md"
-        },
-        {
-          text: "Licenses",
-          link: "dashboard/licenses.md"
-        },
-        {
-          text: "Organizations",
-          link: "dashboard/organizations.md",
-          badge: "enterprise"
-        },
-        {
-          text: "Learn",
-          link: "dashboard/learn.md"
+          text: "My plan",
+          link: "dashboard/my_plan.md",
+          badge: "pro"
         },
         {
           text: "Referral",
@@ -436,12 +507,14 @@ function sidebarMain(): SidebarItemWithBadge[] {
           badge: "pro"
         },
         {
-          text: "Community",
-          link: "dashboard/community.md",
+          text: "My licenses",
+          link: "dashboard/licenses.md",
+          badge: "team"
         },
         {
-          text: "Support",
-          link: "dashboard/support.md"
+          text: "Organizations",
+          link: "dashboard/organizations.md",
+          badge: "team"
         },
         {
           text: "Settings",

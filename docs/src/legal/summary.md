@@ -5,7 +5,7 @@ icon: scale
 # Legal
 
 ## Terms of Sale and Service
-Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings. Includes detailed information about subscription plans (Community, Pro, Enterprise) and their limitations.
+Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings. Includes detailed information about subscription plans (Community, Pro, Team, Enterprise) and their limitations.
 
 - :white_check_mark: **Can:** create account, use Exegol as specified in your plan, cancel anytime
 - :x: **Can't:** use for illegal activities, share account credentials, use Community (i.e., free) plan commercially, can't resell/repackage/etc. without separate agreement (i.e., commercial exploitation)
@@ -16,7 +16,7 @@ Our main legal document that governs both the use of our services and the purcha
 ## End User License Agreement 
 The license agreement that governs the use of our software components, including installation, usage rights, and restrictions.
 
-- :white_check_mark: **Can:** install and use software for personal use, use commercially with Pro/Enterprise plan
+- :white_check_mark: **Can:** install and use software for personal use, use commercially with Pro/Team/Enterprise plan
 - :x: **Can't:** share software with others, modify code, reverse engineer
 - :warning: **Important:** no warranty provided, use at your own risk
 - Read more [here](./eula.md)
@@ -25,7 +25,7 @@ The license agreement that governs the use of our software components, including
 Governs the use of our open-source components, including the transition from GPL3, and restrictions regarding commercial use or exploitation.
 
 - :white_check_mark: **Community use:** personal, educational, non-commercial only
-- :warning: **Commercial use:** allowed with Pro/Enterprise subscription for your own business operations (e.g., pentesting, bug bounty, auditing, red teaming, internal training, etc.)
+- :warning: **Commercial use:** allowed with Pro/Team/Enterprise subscription for your own business operations (e.g., pentesting, bug bounty, auditing, red teaming, internal training, etc.)
 - :x: **Commercial exploitation:** strictly prohibited without separate written agreement (reselling, managed services, repackaging)
 - Read more [here](./software-license.md)
 

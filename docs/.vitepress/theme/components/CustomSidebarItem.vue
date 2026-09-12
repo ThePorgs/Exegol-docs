@@ -3,7 +3,7 @@ import type { DefaultTheme } from 'vitepress/theme'
 import { computed } from 'vue'
 import { useSidebarControl } from 'vitepress/dist/client/theme-default/composables/sidebar'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
-import { Sparkles, Building2, UserCheck } from 'lucide-vue-next'
+import { Sparkles, Building2, UserCheck, Users } from 'lucide-vue-next'
 
 const props = defineProps<{
   item: DefaultTheme.SidebarItem
@@ -95,6 +95,9 @@ function onCaretClick() {
           <span v-if="props.item.badge === 'pro'" class="badge badge-pro" title="Pro feature">
             <UserCheck style="width: 16px; height: 16px;" />
           </span>
+          <span v-else-if="props.item.badge === 'team'" class="badge badge-team" title="Team feature">
+            <Users style="width: 16px; height: 16px;" />
+          </span>
           <span v-else-if="props.item.badge === 'enterprise'" class="badge badge-enterprise" title="Enterprise feature">
             <Building2 style="width: 16px; height: 16px;" />
           </span>
@@ -108,6 +111,9 @@ function onCaretClick() {
         {{ item.text }}
         <span v-if="props.item.badge === 'pro'" class="badge badge-pro" title="Pro feature">
           <UserCheck style="width: 16px; height: 16px;" />
+        </span>
+        <span v-else-if="props.item.badge === 'team'" class="badge badge-team" title="Team feature">
+          <Users style="width: 16px; height: 16px;" />
         </span>
         <span v-else-if="props.item.badge === 'enterprise'" class="badge badge-enterprise" title="Enterprise feature">
           <Building2 style="width: 16px; height: 16px;" />
@@ -295,7 +301,7 @@ function onCaretClick() {
   border-radius: 50px;
 }
 
-.badge-pro, .badge-enterprise .badge-new{
+.badge-pro, .badge-team, .badge-enterprise, .badge-new {
   background: none;
   border: none;
   color: inherit;
@@ -308,6 +314,10 @@ function onCaretClick() {
 
 .badge-pro {
   color: var(--badge-violet);
+}
+
+.badge-team {
+  color: var(--badge-indigo);
 }
 
 .badge-enterprise {

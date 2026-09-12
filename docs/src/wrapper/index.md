@@ -1,6 +1,14 @@
-# Wrapper features
+# Exegol Wrapper overview
 
-Below is a, non-exhaustive, list of what the wrapper supports:
+The wrapper is the command-line interface for Exegol. It creates and manages Docker containers the way a VM manager creates and manages virtual machines: start, stop, update, attach a desktop, a VPN, a workspace.
+
+You talk to the wrapper. The wrapper talks to Docker. You do not write `docker run` flags for the setups Exegol already knows.
+
+- **What it is:** a Python CLI that turns an [image](/images/) into a running container and keeps that container's configuration.
+- **Why that is better:** desktop, VPN, workspace, network modes and resource mounts are options on `exegol start`, not a compose file you maintain.
+- **What you get:** one command to install, start, stop, update and customise the environment.
+
+The table below is a non-exhaustive list of what it supports. Each row links to the section that explains it.
 
 | Feature                                       | Description                                                                                                                 |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -26,7 +34,8 @@ Below is a, non-exhaustive, list of what the wrapper supports:
 | [Multi-architecture](#multi-architecture)     | Support for AMD64 and ARM64 architectures                                                                                   |
 | [Local image](#local-image-building)          | Customized local image building                                                                                             |
 | [Remote image](#remote-image-pulling)         | Pre-built image available for download                                                                                      |
-| [Custom images](#custom-images)               | <Badge type="enterprise"/> Using different images names                                                                     |
+| [Container profiles](#container-profiles)     | <Badge type="pro"/> Named set of container defaults applied at container creation                                           |
+| [Custom images](#custom-images)               | <Badge type="team"/><Badge type="enterprise"/> Using different images names                                                                     |
 | [Custom registry](#custom-registry)           | <Badge type="enterprise"/> Pre-built image available for download                                                           |
 | [Command execution](#command-execution)       | Execution of specific command                                                                                               |
 | [Daemon execution](#daemon-execution)         | Support of the command execution in the background                                                                          |
@@ -74,7 +83,7 @@ This feature can be enabled manually with the option `--desktop` of the
 
 > [!TIP]
 > The default behavior and configuration of the desktop mode can be
-> changed in the [configuration of Exegol](/wrapper/features#exegol-configuration).
+> changed in the [configuration of Exegol](/wrapper/configuration).
 
 Desktop access is protected by **PAM authentication**. To log in, it is
 essential to retrieve the login credentials and the **URL** where the
@@ -115,7 +124,7 @@ For example, if bloodhound is launched in an exegol container, the
 graphical window (GUI) will be displayed in the user's graphic
 environment.
 
-This feature can be disabled manually with the option `--disable-X11` of
+This feature can be disabled manually with the option `--no-gui` of
 the [start action](./cli/start#options).
 
 ### Workspace
@@ -129,7 +138,7 @@ the name of the exegol container.
 
 > [!TIP]
 > The default location of workspace volumes can be changed in the
-> [configuration of Exegol](/wrapper/features#exegol-configuration).
+> [configuration of Exegol](/wrapper/configuration).
 
 The user can also create an Exegol container with an **existing custom
 workspace folder** (with already existing data) regardless of its
@@ -163,9 +172,13 @@ workspace is created.
 > functioning of the functionality (as `chgrp` + `g+rws`).
 
 > [!TIP]
-> When the default configuration of this feature is changed and the
-> update will be **enabled by default**, the option `--update-fs` can
-> still be used to manually **disable** the feature in specific cases.
+> The `--update-fs` option **forces** the permission update on for the
+> container being created, and `--no-update-fs` **refuses** it, in both
+> cases whatever the default configuration says. When neither of them is
+> given, the value comes from a container profile's
+> `volumes.update_fs_perms` if one declares it, and otherwise from the
+> [Exegol configuration file](/wrapper/configuration)
+> with the `auto_update_workspace_fs` setting.
 
 ### OpenVPN connection
 
@@ -232,7 +245,7 @@ See the options `--vpn VPN` and `--vpn-auth VPN_AUTH` of the
 > manually**, you can create your container with the following
 > parameters: `exegol start --vpn ''`
 
-### WireGuard VPN <Badge type="pro" /> <Badge type="enterprise" />
+### WireGuard VPN
 
 Exegol supports WireGuard VPN tunnel configuration to **automatically**
 establish a VPN tunnel at container **startup** (since Exegol images version `3.1.8`).
@@ -258,6 +271,13 @@ displayed (stdout / stderr) but also all entries (stdin).
 
 See the option `--log` of the [start action](./cli/start#options) to enable the feature.
 
+> [!SUCCESS] Shell logging and Exegol Sentinel are two different features
+> Shell logging is a **session recorder**: it captures the terminal
+> stream of your shells. [Exegol Sentinel](/sentinel/) is a separate
+> Enterprise add-on that produces a structured **audit record per
+> executed command**, written on the host for ingestion by a SIEM. The
+> two features are independent and can be used together.
+
 > [!SUCCESS] Hint
 > When the option is enabled upon **creation** of a new container, all
 > shells created for this container **will be automatically logged**.
@@ -273,16 +293,17 @@ The date and time of each command is displayed thanks to the PS1 of
 The logs are automatically saved in the `/workspace/logs` folder. Each
 log file is **automatically compressed** with `gzip` at the end of the
 session to optimize disk space. The automatic compression of log files
-can be **disabled** manually with the [start action](./cli/start#options)
-
-`--log-compress` parameter or change the default behavior in the
-[Exegol configuration file](/wrapper/features#exegol-configuration).
+can be **disabled** for every session by changing the default behavior
+in the [Exegol configuration file](/wrapper/configuration).
 
 > [!SUCCESS] Hint
-> When the default configuration of the log compression is changed from
-> the config file and the feature will be **disabled by default**, the
-> option `--log-compress` can still be used to manually **enable** the
-> feature in specific cases.
+> The `--log-compress` option of the [start action](./cli/start#options)
+> **forces** compression on for the session, and `--no-log-compress`
+> **refuses** it, in both cases whatever the default configuration says.
+> When neither of them is given, the value comes from a container
+> profile's `logging.compress` if one declares it, and otherwise
+> from the [Exegol configuration file](/wrapper/configuration)
+> with the `enable_log_compression` setting.
 
 
 > [!WARNING]
@@ -293,7 +314,7 @@ There are (since exegol images version `3.0.0`) different methods of
 shell logging. The shell logging method can be selected manually with
 the [start action](./cli/start#options)
 `--log-method` parameter or by
-default in the [configuration file of Exegol](/wrapper/features#exegol-configuration).
+default in the [configuration file of Exegol](/wrapper/configuration).
 
 :::tabs ::
 
@@ -358,7 +379,7 @@ However, Exegol supports different network modes to suit various use cases:
   access, low-level operations, or sharing host IP/MAC.
 - `docker`: Uses Docker's default bridge network where all containers (not just Exegol) share the same network space and
   can communicate with each other. Use for standard cases requiring basic network isolation and port control.
-- `nat` : <Badge type="pro"/><Badge type="enterprise"/> Creates an isolated network with a dedicated /28 subnet (14 IP
+- `nat` : <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/> Creates an isolated network with a dedicated /28 subnet (14 IP
   addresses available) for each container, providing complete isolation from other containers. Use for sensitive
   operations requiring dedicated network with isolation.
 - `disable`: Blocks all network connectivity. Use for maximum isolation or offline operations.
@@ -377,12 +398,12 @@ command, exegol allows to share the timezone of the host in the
 container.
 
 This feature is active by default and can be disabled with the option
-`--disable-shared-timezones` of the [start action](./cli/start#options).
+`--no-share-timezone` of the [start action](./cli/start#options).
 
 ### Exegol-resources
 
 To save time and have at hand many tools, scripts and other resources,
-exegol maintains a repository [exegol-resources](/resources/list)
+exegol maintains a repository [exegol-resources](/resources/)
 contains many updated tools that are available to the host and exegol
 containers.
 
@@ -394,7 +415,7 @@ This module is not mandatory and can be downloaded later.
 > it.
 
 This feature is active and shared by default and can be disabled with
-the option `--disable-exegol-resources` of the
+the option `--no-exegol-resources` of the
 [start action](./cli/start#options).
 
 ### My-resources
@@ -404,7 +425,7 @@ with all the containers. This space allows to store configurations and
 to install personal tools.
 
 More details on the functionality of the wrapper
-[here](/wrapper/features#my-resources) and how to take advantage of the customization system [`here`](/images/my-resources).
+[here](#my-resources) and how to take advantage of the customization system [`here`](/images/my-resources).
 
 ### Volume sharing
 
@@ -509,7 +530,7 @@ here](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-
 > `NET_ADMIN`, `NET_BROADCAST`, `SYS_MODULE`, `SYS_PTRACE`, `SYS_RAWIO`,
 > `SYS_ADMIN`, `LINUX_IMMUTABLE`, `MAC_ADMIN`, `SYSLOG`
 >
-> For all other needs, consider the [privileged](/wrapper/features#privileged)
+> For all other needs, consider the [privileged](#privileged)
 > mode.
 
 ### Privileged
@@ -527,7 +548,7 @@ in privileged mode to get **full administrator rights**.
 > Use this option **only** if you know **exactly** what you are doing!!
 >
 > If the need is specifically identified, consider adding
-> [capabilities](/wrapper/features#capabilities) instead!
+> [capabilities](#capabilities) instead!
 
 See the option `--privileged` of the [start action](./cli/start#options) for more details.
 
@@ -571,9 +592,18 @@ See the [build action](/wrapper/cli/build) for detailed usage and options.
 To save time, pre-built images are available for download. These images can be downloaded and installed / updated from
 the exegol wrapper with the [install](/wrapper/cli/install) and [update](/wrapper/cli/update) actions.
 
-### Custom images <Badge type="enterprise"/>
+### Container profiles <Badge type="new"/><Badge type="pro"/>
 
-Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to
+A container profile is a named set of container-shape defaults (the image, the network mode, the mounts, the shell and the
+rest) written once in a YAML file and applied at container creation with `exegol start --profile <name>`. It replaces the
+habit of retyping the same flags at the start of every engagement, and a profile file carries no credentials, so a team can
+commit one and share it. Anything typed on the command line still wins over what the profile declares.
+
+See [Container profiles](/wrapper/profiles/) for the concepts, the precedence rules and the security considerations.
+
+### Custom images <Badge type="team"/><Badge type="enterprise"/>
+
+Team and Enterprise users can configure custom image names to be recognized by Exegol. This configuration allows the wrapper to
 identify and work with Exegol images that have different names than the official ones. Useful for sharing customized
 images with your team through a private registry.
 
@@ -581,7 +611,7 @@ To configure custom images, add them to your [Exegol configuration file](/wrappe
 
 Note that images must be pulled manually as they may be in private registries requiring specific authentication.
 
-### Custom registry <Badge type="enterprise"/>
+### Custom registry <Badge type="enterprise"/><Badge type="add-on"/>
 
 For organizations requiring a complete private registry solution, we offer a managed Exegol private registry service.
 This enterprise solution includes:

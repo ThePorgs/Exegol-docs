@@ -1,4 +1,4 @@
-# `upgrade` action <Badge type="pro"/> <Badge type="enterprise"/>
+# `upgrade` action <Badge type="pro"/> <Badge type="team"/> <Badge type="enterprise"/>
 
 The exegol wrapper has an `upgrade` action dedicated to upgrade 
 one or multiple containers from an outdated image to a more recent one.

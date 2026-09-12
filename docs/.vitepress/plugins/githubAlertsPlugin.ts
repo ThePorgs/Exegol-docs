@@ -87,12 +87,13 @@ const githubAlertsPlugin = (md: MarkdownIt, options?: any) => {
     }
   });
 
-  md.renderer.rules.github_alert_open = function(tokens, idx) {
+  md.renderer.rules.github_alert_open = function(tokens, idx, _options, env) {
     const { title, type, icon } = tokens[idx].meta;
+    const renderedTitle = md.renderInline(title, env);
     return `<div class="${type} custom-block">
       <div class="custom-block-title">
         <${icon} class="alert-icon" />
-        <span>${title}</span>
+        <span>${renderedTitle}</span>
       </div>
       <div class="custom-block-body">\n`;
   };
