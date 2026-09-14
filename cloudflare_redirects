@@ -3,6 +3,7 @@
 
 # Static redirects
 /legal/terms-of-service   /legal/terms-of-sale-and-service
+/legal/summary   /legal/   301
 /images/types   /images/   301
 /wrapper/features   /wrapper/   301
 /resources/list   /resources/   301

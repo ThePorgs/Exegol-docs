@@ -2,7 +2,7 @@
 icon: scale
 ---
 
-# Legal
+# Legal overview
 
 ## Terms of Sale and Service
 Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings. Includes detailed information about subscription plans (Community, Pro, Team, Enterprise) and their limitations.

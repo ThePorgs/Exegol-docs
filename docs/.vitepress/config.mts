@@ -153,8 +153,8 @@ function nav(): NavItemWithBadge[] {
         },
         {
           text: 'Legal',
-          link: '/legal/summary',
-          activeMatch: '/legal/summary'
+          link: '/legal/',
+          activeMatch: '/legal/'
         }
       ]
     },
@@ -230,8 +230,8 @@ function sidebarLegal(): SidebarItemWithBadge[] {
       text: "Legal",
       items: [
         {
-          text: "Summary",
-          link: "summary"
+          text: "Overview",
+          link: "index.md"
         },
         {
           text: "Legal Notice",

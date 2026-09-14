@@ -31,6 +31,6 @@ Every container can mount [offline resources](/resources/) at `/opt/resources`, 
 
 Community, Pro, Team and Enterprise, including what each plan includes, are on [exegol.com/pricing](https://exegol.com/pricing). Badges on each page mark which tier a feature requires.
 
-Commercial use, seats, and the rest of the legal rules are in the [legal summary](/legal/summary).
+Commercial use, seats, and the rest of the legal rules are in the [legal overview](/legal/).
 
 [First install](/first-install) is the next page if you are setting up a machine.

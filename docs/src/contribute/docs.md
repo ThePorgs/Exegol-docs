@@ -60,6 +60,7 @@ The documentation is organized into several sections:
     - Components (Images, Wrapper, Resources, My-resources, Exegol history, Exegol MCP, Docs)
     - Miscellaneous (Source install, Signing commits, Maintainers notes)
 - Legal (accessible from navigation menu)
+    - Overview
 ```
 
 All documentation files are stored in the `/docs/src` folder.

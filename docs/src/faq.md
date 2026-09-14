@@ -12,7 +12,7 @@ available [here](/images/tools).
 
 The comparison, including images, commercial use, seats and support, is on [exegol.com/pricing](https://exegol.com/pricing). Badges on each page mark which tier a feature requires; not every Pro feature is available on Team or Enterprise (for example, referral is Pro only).
 
-[Exegol Sentinel](/sentinel/) is a paid Enterprise add-on. It is documented here; it is not listed on the pricing page yet. The legal rules (commercial use, seats, exploitation) are in the [legal summary](/legal/summary).
+[Exegol Sentinel](/sentinel/) is a paid Enterprise add-on. It is documented here; it is not listed on the pricing page yet. The legal rules (commercial use, seats, exploitation) are in the [legal overview](/legal/).
 
 ## What is Exegol Sentinel?
 
