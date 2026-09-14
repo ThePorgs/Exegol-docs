@@ -1,12 +1,18 @@
 # End user license agreement (EULA)
 
-This End User License Agreement ("Agreement") is entered into between Execorp SAS, headquartered at 122 rue Amelot, 75011 Paris, France ("Execorp"), and the user ("You") who downloads, installs, accesses, or uses any part of the Exegol software, images, scripts, or associated resources ("Software").
+This End User License Agreement ("Agreement") is entered into between Execorp SAS, headquartered at 122 rue Amelot, 75011 Paris, France ("Execorp"), and the user ("You") who downloads, installs, accesses, or uses any part of the Exegol software suite and related offerings ("Software"), including without limitation:
+
+- **Exegol Workstation** and its constituent parts: the command-line wrapper, Docker images, scripts, offline resources, my-resources, credentials and history helpers, container profiles, and any other Workstation module or component;
+- **Exegol Studio**, the IDE extension for Visual Studio Code and compatible editors (including VSCodium, Cursor, and others that install from Open VSX or a VSIX), and related Studio tooling;
+- **Exegol MCP** (Model Context Protocol server) and related MCP tooling that interacts with Exegol;
+- **Exegol Sentinel** (including its host-side logging components, profiles, triggers, actions, and related modules), where made available to You as an add-on or otherwise;
+- websites, dashboards, applications, APIs, and any other component, module, add-on, or product part of the Exegol Suite that Execorp makes available to You under this Agreement.
 
 By downloading, installing, accessing, or using the Software, You agree to be bound by this Agreement.
 
 If You do not agree to the terms of this Agreement, You must not use the Software.
 
-For open-source components, please also refer to the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license).
+For components that Execorp expressly publishes under the Exegol Software License (ESL), please also refer to the ESL (https://docs.exegol.com/legal/software-license). Proprietary components distributed without an ESL declaration, including Exegol Studio, are governed by this Agreement and the [Terms of Sale and Service](https://docs.exegol.com/legal/terms-of-sale-and-service). A short Exegol Studio package license notice is also available at https://docs.exegol.com/legal/exegol-studio-license-notice.
 
 ## 1. License grant
 
@@ -28,12 +34,20 @@ While temporary offline use is allowed and supported (e.g., in isolated environm
 
 This requirement may not apply to certain Enterprise licenses, on a case-by-case basis, where a dedicated wrapper version is distributed by Execorp to the licensed company.
 
+### 1.2 Official distribution and Exegol Studio
+
+Obtaining the Software from the Visual Studio Marketplace, Open VSX, or a VSIX file distributed by Execorp is authorized. That authorization does not grant You any right to redistribute the package or its contents.
+
+Some features of Exegol Studio are gated by your Exegol account entitlements under an active Pro, Team, or Enterprise plan; listings on the Visual Studio Marketplace and Open VSX are free and billing is not through those stores. Use of Exegol Studio remains subject to the [Terms of Sale and Service](https://docs.exegol.com/legal/terms-of-sale-and-service), including Community non-commercial limits and the prohibition on commercial exploitation without a separate written agreement with Execorp.
+
+Exegol Studio’s source code is not published and is not licensed under the ESL. Installing and using the extension as provided is licensed use under this Agreement; You may not copy, fork, modify, create derivative works from, republish, or redistribute the extension or its code, except where applicable law requires otherwise.
+
 ## 2. License restrictions
 
 Except where expressly permitted by the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license), other applicable open-source licenses, or by law, you agree that you will not:
 
 - Copy, distribute, sell, sublicense, lease, or otherwise transfer the Software to any third party
-- Modify, adapt, create derivative works from, or translate the Software, except for personal use or community contribution, provided such modification is not intended to circumvent license verification or other technical restrictions. Any commercial use of modifications is only permitted in accordance with your subscription plan (Pro, Team or Enterprise) and is subject to this Agreement and the [Terms of Service and Sale](https://docs.exegol.com/legal/terms-of-service). Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp.
+- Modify, adapt, create derivative works from, or translate the Software, except for personal use or community contribution, provided such modification is not intended to circumvent license verification or other technical restrictions. Any commercial use of modifications is only permitted in accordance with your subscription plan (Pro, Team or Enterprise) and is subject to this Agreement and the [Terms of Sale and Service](https://docs.exegol.com/legal/terms-of-sale-and-service). Any form of commercial exploitation (such as reselling, providing managed services, or repackaging for third parties) is strictly prohibited without a separate written agreement with Execorp.
 - Reverse engineer, decompile, disassemble, or otherwise attempt to discover the source code of the Software, except as expressly permitted by applicable law and then only after prior written notice to Execorp
 - Remove, obscure, or alter any proprietary notices, labels, or marks on the Software
 - Use the Software for illegal activities
@@ -57,7 +71,7 @@ This Agreement does not grant You any rights to trademarks or service marks of E
 
 ### 4.1 Open-source components
 
-Certain components of the Software may be open-source and subject to additional licensing terms, including the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license) and, where applicable, the GNU General Public License version 3 (GPL3). You must comply with all applicable open-source licenses in addition to this EULA.
+Certain components of the Software may be open-source and subject to additional licensing terms, including the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license) where Execorp has expressly published that component under the ESL, and, where applicable, the GNU General Public License version 3 (GPL3). You must comply with all applicable open-source licenses in addition to this EULA. The ESL does not apply to Exegol Studio or to other proprietary components distributed without an ESL declaration.
 
 For open-source components, the terms of the applicable open-source license take precedence over conflicting terms in this EULA, except for commercial use restrictions which remain subject to our Terms of Sale and Service, and commercial exploitation which is strictly prohibited without a separate written agreement with Execorp.
 

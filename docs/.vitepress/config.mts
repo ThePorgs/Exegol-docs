@@ -262,6 +262,10 @@ function sidebarLegal(): SidebarItemWithBadge[] {
           link: "software-license"
         },
         {
+          text: "Exegol Studio license notice",
+          link: "exegol-studio-license-notice"
+        },
+        {
           text: "Open Source Components",
           link: "open-source-components"
         },
