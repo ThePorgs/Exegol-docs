@@ -114,7 +114,7 @@ order, as naming `--sources` and then `--config`: the order is a property of the
 action, not of the command line.
 
 Naming several selectors renders all of them rather than the first one that
-matched: `--config --profiles redteam` prints the user configuration table and
+matched: `--config --profile redteam` prints the user configuration table and
 that one profile, a union of the two requests. Naming any section at all
 replaces the default images-and-containers pair, which is what a bare
 `exegol info` prints and what `--all` puts back alongside the rest. A container
