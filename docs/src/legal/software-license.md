@@ -27,11 +27,9 @@ Exegol is transitioning from the GNU General Public License version 3 (GPL3) to 
 
 ### 1.1 Scope of this license
 
-This license applies only to Exegol components that Execorp expressly publishes under the Exegol Software License (for example in that component’s LICENSE file or package manifest). Public availability of source does not, by itself, place a component under this license.
+This license applies only to Exegol components that Execorp expressly publishes under the Exegol Software License (for example in that component’s LICENSE file or package manifest). Public availability of source does not, by itself, place a component under this license. Each component’s own license declaration is the source of truth.
 
-Components that typically declare ESL include the Exegol wrapper and images; that list is illustrative and non-exhaustive. Each component’s own license declaration is the source of truth.
-
-This license does **not** apply to proprietary binaries and services that Execorp distributes without a corresponding ESL declaration, including, but not limited to, Exegol Studio or bespoke customer integrations and software, which are governed by the End User License Agreement (https://docs.exegol.com/legal/eula) and the Terms of Sale and Service (https://docs.exegol.com/legal/terms-of-sale-and-service).
+This license does **not** apply to proprietary software, binaries, or services that Execorp distributes without a corresponding ESL declaration. Those are governed by the End User License Agreement (https://docs.exegol.com/legal/eula) and the Terms of Sale and Service (https://docs.exegol.com/legal/terms-of-sale-and-service).
 
 ## 2. Intellectual property
 

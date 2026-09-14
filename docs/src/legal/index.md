@@ -23,7 +23,7 @@ The license agreement that governs use of the Exegol Suite Software, including E
 - Read more [here](./eula.md)
 
 ## Software License
-Governs the use of our open-source components that **declare** the Exegol Software License (ESL), including the transition from GPL3, and restrictions regarding commercial use or exploitation. ESL does **not** apply to Exegol Studio or other proprietary binaries without an ESL declaration.
+Governs the use of our open-source components that **declare** the Exegol Software License (ESL), including the transition from GPL3, and restrictions regarding commercial use or exploitation. ESL does **not** apply to proprietary software distributed without an ESL declaration.
 
 - :white_check_mark: **Community use:** personal, educational, non-commercial only
 - :warning: **Commercial use:** allowed with Pro/Team/Enterprise subscription for your own business operations (e.g., pentesting, bug bounty, auditing, red teaming, internal training, etc.)
