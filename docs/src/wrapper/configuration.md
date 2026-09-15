@@ -1,4 +1,4 @@
-# Configuration
+# User config
 
 ## Home directory
 
@@ -164,7 +164,7 @@ attribute is set to (Default: `False`)
 For more details about the Sentinel configuration, with a complete example and the related CLI options, see the [Sentinel configuration section](/sentinel/configuration) in the Exegol Sentinel documentation.
 
 
-#### Container profiles <Badge type="new"/><Badge type="pro"/>
+#### Container profiles <Badge type="new"/><Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
 Change the configuration of the container profile feature, the named sets of container-shape defaults applied when a container is created.
 

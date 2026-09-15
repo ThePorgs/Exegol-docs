@@ -36,7 +36,7 @@ Container profiles require a Professional licence or above; see [the tier compar
 They are independent features and can be used together.
 
 - A [container profile](/wrapper/profiles/) is a **container-shape declaration**: it describes how a container is built (which image it starts from, which shell it opens, how it is attached to the network, what is mounted into it and which privileges it holds). It requires a Professional licence or above.
-- A [Sentinel profile](/sentinel/profiles/concepts) is an **audit-collection rule set**: it describes what a container's command journal records, and which extra evidence is collected when one of its rules matches. It changes nothing about the container's shape.
+- A [Sentinel profile](/sentinel/profiles/) is an **audit-collection rule set**: it describes what a container's command journal records, and which extra evidence is collected when one of its rules matches. It changes nothing about the container's shape.
 
 The two meet in one place: a container profile may itself carry a `sentinel` section, which is where a container created from that profile declares whether audit logging is enabled and which Sentinel profile it uses.
 

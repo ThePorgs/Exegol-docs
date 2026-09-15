@@ -38,7 +38,7 @@ The documentation is organized into several sections:
 - Exegol wrapper
     - Overview
     - Command-line actions (info, start, exec, ...)
-    - Advanced configuration
+    - User config
 - Exegol resources
     - Overview
 - Exegol MCP

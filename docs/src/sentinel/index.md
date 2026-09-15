@@ -1,6 +1,6 @@
 # Exegol Sentinel overview <Badge type="new"/><Badge type="enterprise"/><Badge type="add-on"/>
 
-Exegol Sentinel records every interactive command an operator types in an Exegol container. Each finished command becomes one structured event on the Docker host. A [profile](/sentinel/profiles/concepts) can also collect extra evidence (environment dumps, packet captures, Kerberos caches, follow-up commands) when a rule matches.
+Exegol Sentinel records every interactive command an operator types in an Exegol container. Each finished command becomes one structured event on the Docker host. A [profile](/sentinel/profiles/) can also collect extra evidence (environment dumps, packet captures, Kerberos caches, follow-up commands) when a rule matches.
 
 It is built for structured teams, purple teaming, and any engagement that needs a defensible record of what was run. Reconstructing that afterwards from memory, notes and terminal scrollback is expensive and incomplete. Sentinel produces the record as a side effect of the operator working normally: no wrapping, no extra logging step, no discipline to maintain under time pressure.
 
@@ -56,7 +56,7 @@ First use and operations:
 
 Profiles decide what is collected beyond the command events themselves:
 
-- [Concepts](/sentinel/profiles/concepts): triggers, actions and rules, how a name resolves to a definition, and the profile-level configuration block.
+- [Overview](/sentinel/profiles/): triggers, actions and rules, how a name resolves to a definition, and the profile-level configuration block.
 - [Triggers](/sentinel/profiles/triggers): every condition a rule can match on.
 - [Actions](/sentinel/profiles/actions): every kind of evidence a rule can collect.
 - [Sources and updates](/sentinel/profiles/sources): where profiles come from, how a source is declared and pinned, and how it is fetched.

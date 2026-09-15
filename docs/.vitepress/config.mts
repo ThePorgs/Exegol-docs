@@ -323,7 +323,7 @@ function sidebarMain(): SidebarItemWithBadge[] {
           link: "wrapper/index.md"
         },
         {
-          text: "Command-line actions",
+          text: "Command-line",
           collapsed: true,
           items: [
             {
@@ -381,7 +381,7 @@ function sidebarMain(): SidebarItemWithBadge[] {
           ]
         },
         {
-          text: "Advanced configuration",
+          text: "User config",
           link: "wrapper/configuration.md"
         },
         {
@@ -447,8 +447,8 @@ function sidebarMain(): SidebarItemWithBadge[] {
           collapsed: true,
           items: [
             {
-              text: "Concepts",
-              link: "sentinel/profiles/concepts.md"
+              text: "Overview",
+              link: "sentinel/profiles/index.md"
             },
             {
               text: "Triggers",

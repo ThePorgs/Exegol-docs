@@ -592,7 +592,7 @@ See the [build action](/wrapper/cli/build) for detailed usage and options.
 To save time, pre-built images are available for download. These images can be downloaded and installed / updated from
 the exegol wrapper with the [install](/wrapper/cli/install) and [update](/wrapper/cli/update) actions.
 
-### Container profiles <Badge type="new"/><Badge type="pro"/>
+### Container profiles <Badge type="new"/><Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
 A container profile is a named set of container-shape defaults (the image, the network mode, the mounts, the shell and the
 rest) written once in a YAML file and applied at container creation with `exegol start --profile <name>`. It replaces the

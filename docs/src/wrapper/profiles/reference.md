@@ -1,6 +1,6 @@
-# Profile file reference <Badge type="new"/><Badge type="pro"/>
+# Profile file reference <Badge type="new"/><Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
-A container profile is a single YAML file holding a named set of container-shape defaults. One file is one whole profile, the file name is the profile name, and the file is read at container creation and never again. See [Container profiles](/wrapper/profiles/) for the concepts, the licence tiers and what trusting a profile source grants; [the container profile configuration keys](/wrapper/configuration#container-profiles) for the `~/.exegol/config.yml` half of the vocabulary, which is where sources and the components directory are declared; and [the container profile options](/wrapper/cli/start#container-profile) for the command line that selects one.
+A container profile is a single YAML file holding a named set of container-shape defaults. One file is one whole profile, the file name is the profile name, and the file is read at container creation and never again. See [Container profiles](/wrapper/profiles/) for the concepts, precedence and [security considerations](/wrapper/profiles/#security-considerations); [the container profile configuration keys](/wrapper/configuration#container-profiles) for the `~/.exegol/config.yml` half of the vocabulary, which is where sources and the components directory are declared; and [the container profile options](/wrapper/cli/start#container-profile) for the command line that selects one.
 
 This page defines every key a profile file can carry. It is the contract a profile author writes against.
 
@@ -238,7 +238,7 @@ What each recording method captures, and how the resulting files are read back, 
 ### `system`
 
 > [!WARNING] Three keys in this section widen what a container may do on the host, and a profile applies them without asking
-> Privileged mode grants the container the full set of administrative privileges, which in practice removes the container boundary. Each Linux capability added here grants one named piece of that same authority. Each host device passed through exposes a piece of the host's hardware directly inside the container. All three are applied exactly as the profile declares them at container creation: there is no confirmation step and no prompt anywhere in that path. A profile that came from a source someone else controls should therefore be read before it is used: `exegol info --profiles <name>` prints exactly what a profile declares and nothing it does not. See [A profile source is a dependency](/wrapper/profiles/#a-profile-source-is-a-dependency) for what declaring a source grants its authors.
+> Privileged mode grants the container the full set of administrative privileges, which in practice removes the container boundary. Each Linux capability added here grants one named piece of that same authority. Each host device passed through exposes a piece of the host's hardware directly inside the container. All three are applied exactly as the profile declares them at container creation: there is no confirmation step and no prompt anywhere in that path. A profile that came from a source someone else controls should therefore be read before it is used: `exegol info --profiles <name>` prints exactly what a profile declares and nothing it does not. See [Security considerations](/wrapper/profiles/#security-considerations) for what declaring a source grants its authors.
 
 Host sharing and container privileges: what the container is allowed to see and to do on the machine it runs on.
 

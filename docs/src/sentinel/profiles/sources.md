@@ -2,7 +2,7 @@
 
 A **source** is a named collection of trigger, action and profile files, and it is what a reference resolves against: `core.demo` is the `demo` profile of the source keyed `core`. A source is either a git repository Exegol clones for you or a directory that already exists on the machine, and every profile Sentinel can load lives in exactly one of them.
 
-This page covers declaration, transports, pinning, fetching and trust. For how a `sourcekey.name` reference resolves once the sources exist, and for the two different bare-name rules, see [Profile concepts](/sentinel/profiles/concepts).
+This page covers declaration, transports, pinning, fetching and trust. For how a `sourcekey.name` reference resolves once the sources exist, and for the two different bare-name rules, see [Sentinel Profiles](/sentinel/profiles/).
 
 Every host name, organisation and path below is **synthetic**, except the official `core` repository URL.
 

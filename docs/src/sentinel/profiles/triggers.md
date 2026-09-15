@@ -1,6 +1,6 @@
 # Triggers <Badge type="new"/><Badge type="enterprise"/><Badge type="add-on"/>
 
-A **trigger** is the condition half of a profile rule: it inspects a command the operator typed and answers one question: does this command match. A rule pairs triggers with actions and runs the actions only when the triggers match, so a trigger never collects anything by itself. See [Actions](/sentinel/profiles/actions) for the collection half, and [Profile concepts](/sentinel/profiles/concepts) for the rule syntax that joins the two and for how a bare name resolves to a definition in a given source.
+A **trigger** is the condition half of a profile rule: it inspects a command the operator typed and answers one question: does this command match. A rule pairs triggers with actions and runs the actions only when the triggers match, so a trigger never collects anything by itself. See [Actions](/sentinel/profiles/actions) for the collection half, and [Sentinel Profiles](/sentinel/profiles/) for the rule syntax that joins the two and for how a bare name resolves to a definition in a given source.
 
 This page defines every trigger type and every option it accepts.
 
@@ -151,7 +151,7 @@ profiles:
 Every trigger option model **forbids unknown keys**. A misspelled option is not ignored and does not fall back to a default. It is a hard validation error at load time.
 
 > [!WARNING] One typo inside a trigger block makes every profile in that source disappear
-> A parse or validation failure is not scoped to the file that contains it: the entire source namespace is dropped, so an unknown key in one trigger takes down every trigger, action and profile that source provides, including ones in files that are perfectly valid. The asymmetry between this and a typo at profile level, which is silently ignored, is explained in full on [Profile concepts](/sentinel/profiles/concepts).
+> A parse or validation failure is not scoped to the file that contains it: the entire source namespace is dropped, so an unknown key in one trigger takes down every trigger, action and profile that source provides, including ones in files that are perfectly valid. The asymmetry between this and a typo at profile level, which is silently ignored, is explained in full on [Sentinel Profiles](/sentinel/profiles/).
 
 ## Where these facts come from
 

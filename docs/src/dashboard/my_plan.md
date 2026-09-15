@@ -1,8 +1,8 @@
-# My plan <Badge type="pro" /> <Badge type="team" />
+# My plan <Badge type="pro" />
 
-My plan is the Pro and Team account screen: the subscription (seats, billing) and the licenses on that subscription (which machines are activated).
+My plan is the Pro account screen: the subscription (seats, billing) and the licenses on that subscription (which machines are activated).
 
-Enterprise seats and billing are on [Organizations](/dashboard/organizations). Team and Enterprise licenses assigned to the logged-in user are on [My licenses](/dashboard/licenses).
+Team and Enterprise seats and billing are on [Organizations](/dashboard/organizations). Team and Enterprise licenses assigned to the logged-in user are on [My licenses](/dashboard/licenses).
 
 > [!TIP]
 > Extra columns can be shown from the View menu. Useful when something fails and a support ticket needs identifiers.
