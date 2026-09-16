@@ -60,9 +60,18 @@ Machines that will never be connected to the Internet can be activated using the
 Once the license key is in place, the offline machine will be considered activated without needing any Internet access.
 
 > [!WARNING]
-> A machine activated with this procedure will never be able to download Exegol images by itself.
->
-> The images must be transferred from another activated, Internet-connected machine, using the procedure described in [Transferring images to an offline machine](/tips-and-tricks#transferring-images-to-an-offline-machine): activate and pull the image on an Internet-connected station, export it with `docker save`, transfer the archive, then load it on the offline machine with `docker load` and run `exegol info` to verify.
+> A machine activated with this procedure will never be able to download Exegol images by itself. Transfer them as described below.
+
+### Transferring images to an offline machine
+
+The following example uses the `full` image. It starts on the Internet-facing machine.
+
+1. Activate Exegol with [default](#default-activation) or [unattended](#unattended-activation) activation.
+2. Install the image(s) with `exegol install full`
+3. Export the image: `docker save registry.exegol.com/exegol:full --output "/path/to/image.tar"`
+4. Transfer the file to the offline machine by any secure means.
+5. On the offline machine: `docker load --input "/path/to/image.tar"`
+6. Check with `exegol info`. The loaded image should be listed; `exegol start` and the rest of the wrapper then work as usual.
 
 ## Options
 

@@ -1,9 +1,14 @@
 # Troubleshooting
 
-Here are the most common problems encountered when installing and using
-Exegol.
+Symptom → fix for **Exegol Workstation**. 
 
-## Unable to connect to Docker
+For “can I…?” questions, see [FAQ](/workstation/faq). 
+
+For in-container shortcuts, see [Tips & tricks](/workstation/tips-and-tricks).
+
+## Cannot talk to Docker
+
+### Unable to connect to Docker
 
 There are multiple checks to do to make sure Docker works properly.
 
@@ -60,38 +65,17 @@ This is an example for [OrbStack](https://orbstack.dev/). The command
 must be adapted to the user's context.
 :::
 
-## X11 on non-Linux hosts
+## Cannot pull or install
 
-X11, or X Window System, is a graphical windowing system that provides a
-framework for creating and managing graphical user interfaces (GUIs) in
-Unix-like operating systems.
+### Docker download errors
 
-X11 sharing between an Exegol container and a host allows a graphical
-application running within the container to display its GUI on the
-host's X11 server. This means you can run graphical applications in
-Exegol containers and have them appear as if they were running directly
-on the host machine. It enables the execution of GUI-based applications
-in isolated containers while interacting with them through the host's
-graphical interface.
-
-For macOS users, XQuartz is needed. It's listed in the [install requirements](/wrapper/cli/install#requirements).
-
-> [!NOTE]
-> Exegol's wrapper automatically starts XQuartz on macOS hosts when
-> needed. But if for some reason it gets manually closed by the users
-> while a container is running, X11 sharing will not work. Restarting
-> the container with `exegol restart <container>` will restart XQuartz
-> automatically if needed.
-
-## Docker download errors
-
-### Rate limiting
+#### Rate limiting
 
 When downloading Docker images, you may encounter rate limiting errors from Docker Hub. This happens when you exceed the anonymous pull rate limit, which is likely to occur if you're on a shared network where people pull lots of images from Docker Hub.
 
 To resolve this, create a Docker Hub account and authenticate (`docker login`), and retry the failing command.
 
-### Time synchronization
+#### Time synchronization
 
 Docker image downloads may be time-sensitive. In the case of dual-boot
 systems, it is common to experience time lags of a few hours.
@@ -99,7 +83,7 @@ systems, it is common to experience time lags of a few hours.
 To correct the problem, check that your computer's date and time are
 correct.
 
-### Disk space
+#### Disk space
 
 `Docker Desktop` is a tool used for running Docker containers on
 `Windows` and `macOS`. However, it uses a `virtual disk` to store Docker
@@ -132,7 +116,9 @@ configuration takes effect.
 > back up any important data or export your Docker images to avoid data
 > loss.
 
-## CRLF errors on Windows
+To put Docker's data on another disk, see [How to install Exegol on an external drive](/workstation/faq#how-to-install-exegol-on-an-external-drive).
+
+### CRLF errors on Windows
 
 If you have cloned the Exegol repository on Windows, you may encounter
 errors when launching your container, for example:
@@ -155,7 +141,7 @@ git rm -rf --cached .
 git reset --hard HEAD
 ```
 
-## Environment externally managed
+### Environment externally managed
 
 When installing exegol with `python3 -m pip install exegol` on modern
 operating systems (Ubuntu 23.04 and higher, Debian 12 and higher, macOS
@@ -232,7 +218,7 @@ python3 -m pip install exegol --break-system-site-packages
 
 :::
 
-## TLS certificate verification issues
+### TLS certificate verification issues
 
 When using Exegol behind an enterprise proxy that performs TLS inspection, you may encounter certificate verification errors. This happens because the proxy's Certificate Authority (CA) is not automatically trusted by the system's truststore. This effectively prevents the wrapper from listing images (`exegol info`), activating a license, etc.
 
@@ -249,7 +235,70 @@ cat custom_ca.crt >> $(~/.local/pipx/venvs/exegol/bin/python -c "import certifi;
 > [!WARNING]
 > Make sure to trust the whole chain, if applicable
 
-## Arsenal TIOCSTI requirement
+## GUI does not appear
+
+### X11 on non-Linux hosts
+
+X11, or X Window System, is a graphical windowing system that provides a
+framework for creating and managing graphical user interfaces (GUIs) in
+Unix-like operating systems.
+
+X11 sharing between an Exegol container and a host allows a graphical
+application running within the container to display its GUI on the
+host's X11 server. This means you can run graphical applications in
+Exegol containers and have them appear as if they were running directly
+on the host machine. It enables the execution of GUI-based applications
+in isolated containers while interacting with them through the host's
+graphical interface.
+
+For macOS users, XQuartz is needed. It's listed in the [install requirements](/wrapper/cli/install#requirements).
+
+> [!NOTE]
+> Exegol's wrapper automatically starts XQuartz on macOS hosts when
+> needed. But if for some reason it gets manually closed by the users
+> while a container is running, X11 sharing will not work. Restarting
+> the container with `exegol restart <container>` will restart XQuartz
+> automatically if needed.
+
+## Host conflicts
+
+### WSL 2 consumes massive amounts of RAM, CPU power, and disk space. How can I deal with this issue?
+
+WSL 2 does not always free RAM when processes finish, so unused memory stays allocated on the host. More detail is in [this GitHub issue](https://github.com/microsoft/WSL/issues/4166). A simple workaround is to create a `%UserProfile%\.wslconfig` file on Windows and limit the WSL 2 VM:
+
+```ini
+[wsl2]
+memory=8GB
+processors=2
+```
+
+When Docker uses the WSL 2 backend, Windows also manages disk. After an Exegol image update, Docker can temporarily take about twice the image size. Find **Disk image location** in Docker Desktop (`Settings > Resources > Advanced`). It is typically under `C:\Users\<USER>\AppData\Local\Docker\wsl\`. The virtual hard disk is `C:\Users\<USER>\AppData\Local\Docker\wsl\disk\docker_data.vhdx`. Shrink it with `diskpart` ([steps](https://stackoverflow.com/questions/70946140/docker-desktop-wsl-ext4-vhdx-too-large)):
+
+1. Stop Docker Desktop.
+2. Open an administrative CMD or PowerShell session.
+3. Stop WSL 2: `wsl --shutdown`
+4. Start diskpart: `diskpart`
+5. Select the disk: `select vdisk file="C:\Users\<USER>\AppData\Local\Docker\wsl\disk\docker_data.vhdx"`
+6. Shrink it: `compact vdisk`
+7. Wait until the process reaches 100%.
+
+### Docker Breaks KVM Internet Access
+
+When docker is installed alongside KVM/libvirt, Docker modifies iptables rules that conflict with libvirt’s virtual bridge (`virbr0`). This causes KVM virtual machines to lose internet connectivity. To restore connectivity in KVM, manually allow forwarding between KVM bridge (`virbr0`) and your physical interface
+
+```bash
+# Enable NAT for KVM VMs (virbr0 network) through your physical interface
+sudo iptables -t nat -C POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
+```
+
+`192.168.80.0/24` is the default subnet of the `virbr0` bridge used by KVM/libvirt and `eth0` is the network interface.
+
+This ensures KVM virtual machines can access the internet even when Exegol is running.
+
+## In the container
+
+### Arsenal TIOCSTI requirement
 
 The arsenal tool needs the `TIOCSTI` functionality enabled. A GitHub
 issue exists to request an evolution:
@@ -269,21 +318,7 @@ echo "dev.tty.legacy_tiocsti=1" >> /etc/sysctl.conf
 
 For more information about installation, see the [installation section](/wrapper/cli/install).
 
-## Docker Breaks KVM Internet Access
-
-When docker is installed alongside KVM/libvirt, Docker modifies iptables rules that conflict with libvirt’s virtual bridge (`virbr0`). This causes KVM virtual machines to lose internet connectivity. To restore connectivity in KVM, manually allow forwarding between KVM bridge (`virbr0`) and your physical interface
-
-```bash
-# Enable NAT for KVM VMs (virbr0 network) through your physical interface
-sudo iptables -t nat -C POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
-sudo iptables -t nat -A POSTROUTING -s 192.168.80.0/24 -o eth0 -j MASQUERADE
-```
-
-`192.168.80.0/24` is the default subnet of the `virbr0` bridge used by KVM/libvirt and `eth0` is the network interface.
-
-This ensures KVM virtual machines can access the internet even when Exegol is running.
-
-## Error When Mounting NFS
+### Error When Mounting NFS
 
 When attempting to mount an NFS share inside Exegol, you may encounter the following error:
 
@@ -295,7 +330,7 @@ mount.nfs: Operation not permitted
 
 This occurs because the NFS mount operation requires `rpc.statd` for file locking, and the container lacks the necessary privileges and services to support this by default. To resolve this, run Exegol with `--cap SYS_ADMIN`, which grants the container the privilege needed for NFS and `rpc.statd` support.
 
-## Metasploit database not connected
+### Metasploit database not connected
 
 When opening `msfconsole`, the workspace database may appear disconnected:
 
@@ -316,20 +351,22 @@ msfconsole -qx 'db_status; exit'
 
 ## Container profiles
 
+See [Container profiles](/wrapper/profiles/) for how sources, names and keys work. The cases below are the ones that look like a missing profile.
+
 ### Profiles from a git source do not appear
 
-A [container profile](/wrapper/profiles/) source is declared with `git` in the configuration file, but none of the profiles it holds are listed by `exegol info --profiles`, none are offered by the interactive picker, and naming one on `exegol start --profile <name>` reports that profile as not found. At an interactive terminal the picker opens instead, and the expected name is missing from the profiles it lists.
+**Symptom:** a git source is declared, but `exegol info --profiles` and the picker omit its profiles, and `--profile <name>` reports not found.
 
-To resolve this, run `exegol update`. Reading profiles performs no network access, so a source declared with `git` has no directory on disk (and therefore no profiles) until it has been fetched once, which is what the [modules updates](/wrapper/cli/update#modules-updates) step does. A command that reads profiles and detects this state offers to fetch the missing source on the spot; when that offer is declined, or when it cannot be answered because the invocation is piped, scripted or running in offline mode, the source stays unfetched until an update runs. Fetching git sources requires an Enterprise licence, so below that tier the step does nothing and only sources declared with a filesystem path are loaded.
+**Fix:** `exegol update`. Reading profiles does no network I/O; a git source has no directory (and no profiles) until it has been fetched. A profile-reading command may offer to fetch on the spot; decline, a non-interactive run, or offline mode leaves it unfetched. Fetching git sources needs an Enterprise licence; below that tier only filesystem `path` sources load. See [Git sources](/wrapper/profiles/#git-sources) and [modules updates](/wrapper/cli/update#modules-updates).
 
 ### A profile is rejected because of an unknown key
 
-Loading a container profile fails with an error naming the file and one key inside it, and that profile is then missing from the listing and cannot be selected by name.
+**Symptom:** load fails naming a file and one key; that profile is missing from the listing.
 
-To resolve this, correct the key. Unknown and misspelled keys are rejected when the file is read rather than being quietly ignored, and the same strictness applies to every nested section, so a typo one level down is refused exactly as a typo at the top level is; the key named in the error is the offending one. Only the offending file is skipped. Every other profile in the same source still loads. Check the key against the [profile file reference](/wrapper/profiles/reference), which lists every key a profile file may carry. One related case looks similar but is refused earlier: a key written twice inside the same mapping is a parse error rather than a last-wins merge, because an option silently replaced by a later duplicate is the same failure as an option that was dropped.
+**Fix:** correct the key. Unknown and misspelled keys are rejected, including nested ones. Only that file is skipped. Check the [profile file reference](/wrapper/profiles/reference). A key written twice in the same mapping is a parse error, not last-wins.
 
 ### A bare profile name is ambiguous
 
-A profile is named without a source prefix, that same name is defined by more than one loaded source, and the selection is refused instead of being resolved to one of them.
+**Symptom:** `--profile redteam` (no source prefix) is refused because more than one loaded source defines `redteam`.
 
-To resolve this, re-run with the source-qualified `source.name` form; the error already lists every qualified alternative that exists. A bare name is accepted whenever it is unique across all loaded sources, so this only arises when several sources are loaded at once, which requires an Enterprise licence. The refusal is deliberate: picking one of two profiles that happen to share a name would create a container different from the one that was asked for. The addressing rules are described under [Container profiles](/wrapper/profiles/).
+**Fix:** use `source.name` (the error lists the qualified names). A bare name works only when it is unique. Several sources at once is a Team/Enterprise feature. See [Multiple sources](/wrapper/profiles/#multiple-sources).

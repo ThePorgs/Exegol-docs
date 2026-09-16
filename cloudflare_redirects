@@ -13,6 +13,9 @@
 /dashboard/learn   /dashboard/   301
 /dashboard/community   /dashboard/   301
 /dashboard/support   /dashboard/   301
+/faq   /workstation/faq   301
+/troubleshooting   /workstation/troubleshooting   301
+/tips-and-tricks   /workstation/tips-and-tricks   301
 
 # Dynamic redirects
 # /source/*   /destination/:splat

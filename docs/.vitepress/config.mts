@@ -128,7 +128,7 @@ function nav(): NavItemWithBadge[] {
     },
     {
       text: 'FAQ',
-      link: 'faq',
+      link: 'workstation/faq',
     },
     {
       text: 'Others',
@@ -285,143 +285,170 @@ function sidebarMain(): SidebarItemWithBadge[] {
       link: "first-install",
     },
     {
-      text: "Exegol Images",
+      text: "Exegol Workstation",
       collapsed: false,
       items: [
         {
           text: "Overview",
-          link: "images/index.md"
+          link: "workstation/index.md"
         },
         {
-          text: "Tools list",
-          link: "images/tools.md",
-        },
-        {
-          text: "My resources",
-          link: "images/my-resources.md"
-        },
-        {
-          text: "Exegol history",
-          link: "images/exegol-history.md"
-        },
-        {
-          text: "Credentials",
-          link: "images/credentials.md"
-        },
-        {
-          text: "Services",
-          link: "images/services.md"
-        }
-      ]
-    },
-    {
-      text: "Exegol Wrapper",
-      collapsed: false,
-      items: [
-        {
-          text: "Overview",
-          link: "wrapper/index.md"
-        },
-        {
-          text: "Command-line",
-          collapsed: true,
-          items: [
-            {
-              text: "activate",
-              link: "wrapper/cli/activate.md"
-            },
-            {
-              text: "build",
-              link: "wrapper/cli/build.md"
-            },
-            {
-              text: "exec",
-              link: "wrapper/cli/exec.md"
-            },
-            {
-              text: "info",
-              link: "wrapper/cli/info.md"
-            },
-            {
-              text: "install",
-              link: "wrapper/cli/install.md"
-            },
-            {
-              text: "remove",
-              link: "wrapper/cli/remove.md"
-            },
-            {
-              text: "restart",
-              link: "wrapper/cli/restart.md"
-            },
-            {
-              text: "start",
-              link: "wrapper/cli/start.md"
-            },
-            {
-              text: "stop",
-              link: "wrapper/cli/stop.md"
-            },
-            {
-              text: "uninstall",
-              link: "wrapper/cli/uninstall.md"
-            },
-            {
-              text: "update",
-              link: "wrapper/cli/update.md"
-            },
-            {
-              text: "upgrade",
-              link: "wrapper/cli/upgrade.md"
-            },
-            {
-              text: "version",
-              link: "wrapper/cli/version.md"
-            }
-          ]
-        },
-        {
-          text: "User config",
-          link: "wrapper/configuration.md"
-        },
-        {
-          text: "Container profiles",
-          collapsed: true,
-          badge: "new",
+          text: "Images",
+          collapsed: false,
           items: [
             {
               text: "Overview",
-              link: "wrapper/profiles/index.md"
+              link: "images/index.md"
             },
             {
-              text: "Profile file reference",
-              link: "wrapper/profiles/reference.md"
+              text: "Tools list",
+              link: "images/tools.md",
+            },
+            {
+              text: "My resources",
+              link: "images/my-resources.md"
+            },
+            {
+              text: "Exegol history",
+              link: "images/exegol-history.md"
+            },
+            {
+              text: "Credentials",
+              link: "images/credentials.md"
+            },
+            {
+              text: "Services",
+              link: "images/services.md"
+            }
+          ]
+        },
+        {
+          text: "Wrapper",
+          collapsed: false,
+          items: [
+            {
+              text: "Overview",
+              link: "wrapper/index.md"
+            },
+            {
+              text: "Command-line",
+              collapsed: true,
+              items: [
+                {
+                  text: "activate",
+                  link: "wrapper/cli/activate.md"
+                },
+                {
+                  text: "build",
+                  link: "wrapper/cli/build.md"
+                },
+                {
+                  text: "exec",
+                  link: "wrapper/cli/exec.md"
+                },
+                {
+                  text: "info",
+                  link: "wrapper/cli/info.md"
+                },
+                {
+                  text: "install",
+                  link: "wrapper/cli/install.md"
+                },
+                {
+                  text: "remove",
+                  link: "wrapper/cli/remove.md"
+                },
+                {
+                  text: "restart",
+                  link: "wrapper/cli/restart.md"
+                },
+                {
+                  text: "start",
+                  link: "wrapper/cli/start.md"
+                },
+                {
+                  text: "stop",
+                  link: "wrapper/cli/stop.md"
+                },
+                {
+                  text: "uninstall",
+                  link: "wrapper/cli/uninstall.md"
+                },
+                {
+                  text: "update",
+                  link: "wrapper/cli/update.md"
+                },
+                {
+                  text: "upgrade",
+                  link: "wrapper/cli/upgrade.md"
+                },
+                {
+                  text: "version",
+                  link: "wrapper/cli/version.md"
+                }
+              ]
+            },
+            {
+              text: "User config",
+              link: "wrapper/configuration.md"
+            },
+            {
+              text: "Container profiles",
+              collapsed: true,
+              badge: "new",
+              items: [
+                {
+                  text: "Overview",
+                  link: "wrapper/profiles/index.md"
+                },
+                {
+                  text: "Profile file reference",
+                  link: "wrapper/profiles/reference.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          text: "Resources",
+          collapsed: true,
+          items: [
+            {
+              text: "Overview",
+              link: "resources/index.md"
+            }
+          ]
+        },
+        // Same Help group can be copied under MCP / Sentinel / Dashboard later:
+        // { text: "Help", collapsed: true, items: [ FAQ, Troubleshooting, … ] }
+        {
+          text: "Help",
+          collapsed: true,
+          items: [
+            {
+              text: "FAQ",
+              link: "workstation/faq.md"
+            },
+            {
+              text: "Troubleshooting",
+              link: "workstation/troubleshooting.md"
+            },
+            {
+              text: "Tips & tricks",
+              link: "workstation/tips-and-tricks.md"
             }
           ]
         }
       ]
     },
     {
-      text: "Exegol Resources",
+      text: "Exegol Studio",
       collapsed: true,
+      badge: "new",
       items: [
         {
           text: "Overview",
-          link: "resources/index.md"
-        }
-      ]
-    },
-    {
-      text: "Exegol MCP",
-      collapsed: true,
-      items: [
-        {
-          text: "Overview",
-          link: "mcp/index.md"
-        },
-        {
-          text: "Getting started",
-          link: "mcp/getting-started.md"
+          link: "studio/index.md"
         }
       ]
     },
@@ -493,6 +520,20 @@ function sidebarMain(): SidebarItemWithBadge[] {
       ]
     },
     {
+      text: "Exegol MCP",
+      collapsed: true,
+      items: [
+        {
+          text: "Overview",
+          link: "mcp/index.md"
+        },
+        {
+          text: "Getting started",
+          link: "mcp/getting-started.md"
+        }
+      ]
+    },
+    {
       text: "Dashboard",
       collapsed: true,
       items: [
@@ -525,18 +566,6 @@ function sidebarMain(): SidebarItemWithBadge[] {
           link: "dashboard/settings.md"
         }
       ]
-    },
-    {
-      text: "Frequently asked questions",
-      link: "faq.md"
-    },
-    {
-      text: "Troubleshooting",
-      link: "troubleshooting.md"
-    },
-    {
-      text: "Tips & tricks",
-      link: "tips-and-tricks.md"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Dashboard overview
 
-The [dashboard](https://dashboard.exegol.com) is the account side of Exegol for <Badge type="pro"/>, <Badge type="team"/> and <Badge type="enterprise"/> subscribers.
+The [dashboard](https://dashboard.exegol.com) is the account product of Exegol for <Badge type="pro"/>, <Badge type="team"/> and <Badge type="enterprise"/> subscribers.
 
 The overview screen there summarises the account. The pages below document each screen.
 
