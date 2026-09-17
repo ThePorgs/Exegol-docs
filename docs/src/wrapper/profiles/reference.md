@@ -89,6 +89,7 @@ network:
 | `network.mode` | string | `--network` | `nat`, `docker`, `disabled`, `host`, or an existing Docker network name. An unrecognised name is treated as a Docker network to attach to (**warning**, not rejection); if it matches nothing, a new host network is created under that name |
 | `network.ports` | list of strings | `-p`, `--port` | Host↔container port mappings, one per entry: `[<host_ipv4>:]<host_port>[-<end_port>][:<container_port>[-<end_port>]][:<proto>]`. Any declared port disables the default host network |
 | `network.hostname` | string | `--hostname` | Default `exegol-<container name>` |
+| `network.hostname_ask_user` | boolean | none | When true, creating a container from this profile asks the operator for the hostname and offers `network.hostname` as the default. A value given with `--hostname` answers the question and no prompt appears. When stdin cannot answer, as in a piped or scripted run, no prompt appears and the value that would otherwise apply is used |
 | `network.hosts_file` | string | `--hosts-file` | Host path to a file in `IP HOSTNAME` format, imported into the container |
 | `network.hosts` | mapping of string to string | none | Inline hostname→address entries. Merged with `hosts_file`; on collision, this mapping wins. A list of `"hostname=address"` strings is also accepted. Hostnames must be non-empty and free of whitespace; values must be IPs |
 | `network.dedicated_range` | string | none | Overrides `config.network.exegol_dedicated_range`. Address range for dedicated container networks |
@@ -264,23 +265,31 @@ sentinel:
 | `sentinel.log_rotation.max_size` | string | none | Overrides `config.sentinel.log_rotation.max_size`. Quoted byte count (`"104857600"`) or unit suffix (`"100MB"`, `"512K"`, …); `K`/`M`/`G`/`T` = powers of 1024. Unquoted integer rejected. Invalid / non-positive → Exegol's `100MB` default (not the user-config value) |
 | `sentinel.log_rotation.max_files` | integer | none | Overrides `config.sentinel.log_rotation.max_files`. **`0` keeps all** |
 | `sentinel.log_rotation.compress` | boolean | none | Overrides `config.sentinel.log_rotation.compress` |
+| `sentinel.log_output.enabled` | boolean | none | Overrides `config.sentinel.log_output.enabled`. Whether every event carries the cleaned terminal output of its command. Setting it to `false` is the only complete way to keep command output out of the event stream |
+| `sentinel.log_output.max_size` | string | none | Overrides `config.sentinel.log_output.max_size`. Byte count or unit suffix (`"4KB"`, `"64KB"`, …); how much cleaned text is embedded per event. Must be **strictly positive** — `0` is rejected rather than meaning "off", which is what `enabled` is for. Invalid / non-positive → Exegol's `4KB` default |
+| `sentinel.log_output.truncation` | string | none | Overrides `config.sentinel.log_output.truncation`. `head`, `tail` or `both`: which end of an oversized output survives. `both` spends half the budget on each end and names the dropped byte count in between |
 
 ### `metadata`
 
+Two fields that read alike and are not: one describes the **profile**, the other annotates the **container** the profile creates.
+
 ```yaml
 metadata:
-  comment: "Red team engagement - isolated network, session logging on"
+  description: "Red team engagement - isolated network, session logging on"
+  comment: "Ticket INC-4471"
 ```
 
 | Field | Type | CLI | Meaning |
 | ----- | ---- | --- | ------- |
-| `metadata.comment` | string | `--comment` | Note on the container (`exegol info`). Also the **Comment** column in `exegol info --profiles` and the interactive picker |
+| `metadata.description` | string | none | What this **profile** is for. Shown as the **Description** column in `exegol info --profiles` and in the interactive picker, which is what makes a profile identifiable there without opening its file. Never applied to the container |
+| `metadata.comment` | string | `--comment` | Note carried onto the **container** the profile creates, shown in that container's `exegol info` recap. Pre-answers `--comment`. Not shown in the profile listing |
+| `metadata.comment_ask_user` | boolean | none | When true, creating a container from this profile asks the operator for the comment and offers `metadata.comment` as the default. A value given with `--comment` answers the question and no prompt appears. When stdin cannot answer, as in a piped or scripted run, no prompt appears and the value that would otherwise apply is used |
 
 ## What a profile may override in the configuration file
 
-Most keys above map to an `exegol start` flag. Two map to nothing outside a profile: `version` (file shape) and `network.hosts` (inline hosts).
+Most keys above map to an `exegol start` flag. Five map to nothing outside a profile: `version` (file shape), `metadata.description` (what the profile is for), `network.hosts` (inline hosts), `network.hostname_ask_user` and `metadata.comment_ask_user` (each selects who supplies the value beside it).
 
-The twelve keys below replace a [user config](/wrapper/configuration) setting only (no CLI flag). Declaring one applies for that container, at creation only. Profile key and config key do not always share a name or section — the pairing is listed explicitly.
+The fifteen keys below replace a [user config](/wrapper/configuration) setting only (no CLI flag). Declaring one applies for that container, at creation only. Profile key and config key do not always share a name or section — the pairing is listed explicitly.
 
 | Profile key | Setting it replaces | Notes |
 | ----------- | ------------------- | ----- |
@@ -296,6 +305,9 @@ The twelve keys below replace a [user config](/wrapper/configuration) setting on
 | `sentinel.log_rotation.max_size` | `config.sentinel.log_rotation.max_size` | See [`sentinel`](#sentinel) |
 | `sentinel.log_rotation.max_files` | `config.sentinel.log_rotation.max_files` | See [`sentinel`](#sentinel) |
 | `sentinel.log_rotation.compress` | `config.sentinel.log_rotation.compress` | See [`sentinel`](#sentinel) |
+| `sentinel.log_output.enabled` | `config.sentinel.log_output.enabled` | See [`sentinel`](#sentinel) |
+| `sentinel.log_output.max_size` | `config.sentinel.log_output.max_size` | See [`sentinel`](#sentinel) |
+| `sentinel.log_output.truncation` | `config.sentinel.log_output.truncation` | See [`sentinel`](#sentinel) |
 
 Host paths in that table use the same [refusals](#volumes) as `volumes`.
 

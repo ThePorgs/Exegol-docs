@@ -118,7 +118,7 @@ config:
 
 A profile may be specified by its bare name (e.g. `redteam`) or by an source-qualified name (e.g. `team-profiles.redteam`). A source-qualified name is always required when two sources define a profile with the same name.
 
-The listing produced by `exegol info --profiles` (see [Info](/wrapper/cli/info)) shows: **Source**, **Name** and **Comment**. The **Source** column is what makes a name that appears twice distinguishable at a glance.
+The listing produced by `exegol info --profiles` (see [Info](/wrapper/cli/info)) shows: **Source**, **Name** and **Description**. The **Source** column is what makes a name that appears twice distinguishable at a glance, and the **Description** column is the `metadata.description` string a profile declares about itself, which is what makes a name identifiable without opening the file.
 
 ### Git sources <Badge type="team"/><Badge type="enterprise"/>
 
