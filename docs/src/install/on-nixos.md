@@ -82,7 +82,7 @@ From most stable to least stable option:
 
 ### Next
 
-Once the wrapper and docker are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
+Once the wrapper and docker are installed, the main installation documentation can be followed, from [step "3. Activation"](/workstation/install#_3-activation).
 
 ## 2. `pipx` alternative
 
@@ -137,4 +137,4 @@ pipx ensurepath && exec $SHELL
 
 ### Next
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "2. Wrapper install"](/first-install#_2-wrapper-install).
+Once the requirements are installed, the main installation documentation can be followed, from [step "2. Wrapper install"](/workstation/install#_2-wrapper-install).

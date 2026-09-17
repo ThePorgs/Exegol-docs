@@ -83,7 +83,7 @@ Update the wrapper with: `pipx upgrade exegol`. If you've installed the wrapper 
 ### Can I customize Exegol?
 
 - In-container customisation at creation: [my-resources](/images/my-resources)
-- Wrapper / Container configs: [user config](/wrapper/configuration) and [container profiles](/wrapper/profiles)
+- Wrapper / Container configs: [user config](/wrapper/configuration) and [container profiles](/wrapper/profiles/)
 - Your own image: [below](#can-i-make-my-own-exegol-image)
 
 ### Can I make my own Exegol image?

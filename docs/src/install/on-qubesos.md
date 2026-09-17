@@ -238,7 +238,7 @@ qvm-prefs exegol-appvm netvm sys-net
 ---
 ## 5. The rest
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
+Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/workstation/install#_3-activation).
 
 
 

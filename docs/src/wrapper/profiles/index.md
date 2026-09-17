@@ -31,7 +31,7 @@ A profile may also override some settings set in the [user config](/wrapper/conf
 
 ## Precedence
 
-An option can be declared in 4 different places. And there's a specific order in which the values are applied ([CLI](/wrapper/cli/start) > [Container profile](/wrapper/profiles) > [User config](/wrapper/configuration) > Built-in default).
+An option can be declared in 4 different places. And there's a specific order in which the values are applied ([CLI](/wrapper/cli/start) > [Container profile](/wrapper/profiles/) > [User config](/wrapper/configuration) > Built-in default).
 
 In order to be taken into account in the profile, an option must be explicitly declared. Left empty, it will be ignored. Explicitly setting to `null` will pin the option to nothing.
 

@@ -63,7 +63,7 @@ echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/
 
 ## 3. The rest
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
+Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/workstation/install#_3-activation).
 
 ## 3.1. Graphical apps
 

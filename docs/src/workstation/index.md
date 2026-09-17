@@ -8,7 +8,7 @@ Exegol Workstation is the offensive lab in Docker: a clean box per engagement, o
 
 Community covers personal use, learning, and CTFs. Commercial or employer-sponsored work needs a paid plan. See [pricing](https://exegol.com/pricing) and the [legal overview](/legal/).
 
-[First install](/first-install) is the next page if you are setting up a machine.
+[Install](/workstation/install) is the next page if you are setting up a machine.
 
 ## Not another distro
 
@@ -20,7 +20,7 @@ Kali, ParrotSec, BlackArch and similar tools are **distributions**: a whole OS p
 | Maintain tools and dependencies yourself | Pull a versioned [image](/images/) |
 | The environment ages with the machine | One [container](#images-and-containers) per engagement, then discard it |
 
-Internal labs, USB, and Wi-Fi work best on Linux. Windows and macOS run through Docker (on Mac, [OrbStack](https://orbstack.dev/) over Docker Desktop). Treat them as fine for web/OSINT and more constrained for full internal labs. See [First install](/first-install).
+Internal labs, USB, and Wi-Fi work best on Linux. Windows and macOS run through Docker (on Mac, [OrbStack](https://orbstack.dev/) over Docker Desktop). Treat them as fine for web/OSINT and more constrained for full internal labs. See [Install](/workstation/install).
 
 ## How the pieces fit
 
@@ -93,7 +93,7 @@ Workstation-specific Q&A and fixes:
 
 Workstation is the hub. The other products sit on the same lab:
 
-- [**Studio**](/studio/) <Badge type="new"/>: the hacker's IDE. Private Enterprise access open; public release coming soon.
+- [**Studio**](/studio/) <Badge type="new"/>: the hacker's IDE. Hacking cockpit for VS Code and compatible forks that drives your Exegol containers.
 - [**Sentinel**](/sentinel/) <Badge type="enterprise"/><Badge type="add-on"/>: structured command audit on the host for a person or a SIEM.
 - [**MCP**](/mcp/): let an LLM use Exegol without living on the host.
 - [**Dashboard**](/dashboard/): account, plan, licenses, organizations.
@@ -104,7 +104,7 @@ Workstation is the hub. The other products sit on the same lab:
 > - **Image:** immutable template. You cannot open a shell in an image.
 > - **Container:** running environment created from an image at a given time. Updating the image does not change existing containers.
 
-Typical flow after [First install](/first-install):
+Typical flow after [Install](/workstation/install):
 
 ```bash
 exegol install full

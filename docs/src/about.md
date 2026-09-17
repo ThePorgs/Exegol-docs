@@ -16,7 +16,7 @@ Those are the problems Exegol is built to remove.
 Exegol is a suite. The [Workstation](/workstation/) is the lab the others plug into.
 
 - [**Exegol Workstation**](/workstation/): the Docker lab. The [wrapper](/wrapper/) creates **containers** from [images](/images/). An image is a template; a container is a running environment built from that template. Offline [resources](/resources/) mount at `/opt/resources`. [History and credentials](/images/exegol-history) live in the image; [my-resources](/images/my-resources) is your own customisation layer.
-- [**Exegol Studio**](/studio/) <Badge type="new"/>: Private access to Enterprise customers open. Public release coming soon.
+- [**Exegol Studio**](/studio/) <Badge type="new"/>: the hacker's IDE. Hacking cockpit for VS Code and compatible forks that drives your Exegol containers.
 - [**Exegol Sentinel**](/sentinel/) <Badge type="enterprise"/><Badge type="add-on"/>: a structured record of interactive commands, plus optional artifacts, written on the host for a person or a SIEM to read.
 - [**Exegol MCP**](/mcp/): a server that lets an AI client orchestrate containers and run tools inside them, without being given the host OS.
 - [**Dashboard**](/dashboard/): the account: plan, licenses, organizations, referral, and settings.
@@ -27,4 +27,4 @@ Community, Pro, Team and Enterprise, including what each plan includes, are on [
 
 Commercial use, seats, and the rest of the legal rules are in the [legal overview](/legal/).
 
-[First install](/first-install) is the next page if you are setting up a machine.
+[Start now](/start-now) is the next page if you are setting up a machine.

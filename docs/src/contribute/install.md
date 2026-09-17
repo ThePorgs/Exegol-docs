@@ -1,10 +1,10 @@
 # Installation for contributors
 
-While we recommend regular users to install Exegol using `pipx` for simplicity and isolation (see [First install](/first-install)), contributors and developers should install from sources. Here's why and how.
+While we recommend regular users to install Exegol using `pipx` for simplicity and isolation (see [Workstation install](/workstation/install)), contributors and developers should install from sources. Here's why and how.
 
 ## Requirements
 
-Before starting, ensure you have all the requirements from the [First install](/first-install) guide (git, python3, docker).
+Before starting, ensure you have all the requirements from the [Workstation install](/workstation/install) guide (git, python3, docker).
 
 ## Why install from sources?
 

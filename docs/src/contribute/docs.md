@@ -19,8 +19,8 @@ The documentation is organized into several sections:
 ``` text :scroll
 - General
     - About Exegol
-    - First install
-    - Specific install guides (accessible only through direct links in /first-install)
+    - Start now (suite intro)
+    - Specific install guides (accessible only through direct links in /workstation/install)
         - Arch
         - Fedora
         - Gentoo
@@ -28,6 +28,14 @@ The documentation is organized into several sections:
     - Frequently asked questions
     - Troubleshooting
     - Tips & tricks
+- Exegol Workstation
+    - Overview
+    - Install
+    - Images, Wrapper, Resources, ...
+- Exegol Studio
+    - Overview
+    - Getting started
+    - ...
 - Exegol images
     - Overview
     - Tools list

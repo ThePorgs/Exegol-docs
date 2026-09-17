@@ -123,8 +123,8 @@ function nav(): NavItemWithBadge[] {
       link: 'about',
     },
     {
-      text: 'First install',
-      link: 'first-install',
+      text: 'Start now',
+      link: 'start-now',
     },
     {
       text: 'FAQ',
@@ -281,8 +281,8 @@ function sidebarMain(): SidebarItemWithBadge[] {
       link: "about"
     },
     {
-      text: "First install",
-      link: "first-install",
+      text: "Start now",
+      link: "start-now",
     },
     {
       text: "Exegol Workstation",
@@ -293,8 +293,12 @@ function sidebarMain(): SidebarItemWithBadge[] {
           link: "workstation/index.md"
         },
         {
+          text: "Install",
+          link: "workstation/install.md"
+        },
+        {
           text: "Images",
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: "Overview",
@@ -324,7 +328,7 @@ function sidebarMain(): SidebarItemWithBadge[] {
         },
         {
           text: "Wrapper",
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: "Overview",
@@ -443,12 +447,106 @@ function sidebarMain(): SidebarItemWithBadge[] {
     },
     {
       text: "Exegol Studio",
-      collapsed: true,
+      collapsed: false,
       badge: "new",
       items: [
         {
           text: "Overview",
           link: "studio/index.md"
+        },
+        {
+          text: "Getting started",
+          link: "studio/getting-started.md"
+        },
+        {
+          text: "Interface",
+          collapsed: true,
+          items: [
+            {
+              text: "Composer",
+              link: "studio/interface/composer.md"
+            },
+            {
+              text: "Editors and tabs",
+              link: "studio/interface/editors.md"
+            },
+            {
+              text: "Layouts",
+              link: "studio/interface/layouts.md"
+            },
+            {
+              text: "Rooms",
+              link: "studio/interface/rooms.md"
+            },
+            {
+              text: "Projects",
+              link: "studio/interface/projects.md"
+            },
+            {
+              text: "Containers",
+              link: "studio/interface/containers.md"
+            }
+          ]
+        },
+        {
+          text: "Providers and models",
+          link: "studio/providers-models.md"
+        },
+        {
+          text: "Knowledge",
+          collapsed: true,
+          items: [
+            {
+              text: "Skills",
+              link: "studio/knowledge/skills.md"
+            },
+            {
+              text: "Agents",
+              link: "studio/knowledge/agents.md"
+            },
+            {
+              text: "Hooks",
+              link: "studio/knowledge/hooks.md"
+            },
+            {
+              text: "Rules",
+              link: "studio/knowledge/rules.md"
+            },
+            {
+              text: "Briefs",
+              link: "studio/knowledge/briefs.md"
+            },
+            {
+              text: "MCPs",
+              link: "studio/knowledge/mcp.md"
+            },
+            {
+              text: "Atlas",
+              link: "studio/knowledge/atlas.md"
+            }
+          ]
+        },
+        {
+          text: "Behavior",
+          collapsed: true,
+          items: [
+            {
+              text: "Modes",
+              link: "studio/behavior/modes.md"
+            },
+            {
+              text: "Personas",
+              link: "studio/behavior/personas.md"
+            },
+            {
+              text: "Approvals",
+              link: "studio/behavior/approvals.md"
+            },
+            {
+              text: "Kill chains",
+              link: "studio/behavior/kill-chains.md"
+            }
+          ]
         }
       ]
     },

@@ -107,7 +107,7 @@ rc-service registry start
 
 ## 2. The rest
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "2. Wrapper install"](/first-install#_2-wrapper-install).
+Once the requirements are installed, the main installation documentation can be followed, from [step "2. Wrapper install"](/workstation/install#_2-wrapper-install).
 
 ## 3.1. Graphical apps
 
