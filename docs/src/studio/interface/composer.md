@@ -2,8 +2,8 @@
 
 The composer is where you write your prompts. Everything about how the next turn behaves sits on its toolbar and in the **Configure** (quick settings) menu.
 
-> [!WARNING] Screenshot to add: `composer_full`
-> Composer with attachment chips, paperclip, model picker, MCP button, context gauge, and quick settings open.
+![](/assets/studio/composer.png)
+
 
 | Control | What it does |
 | ------- | ------------ |
@@ -13,7 +13,7 @@ The composer is where you write your prompts. Everything about how the next turn
 | [Model](#model) | Which model runs the turn |
 | [MCP](#mcp) | Toggle external servers for this run |
 | [Context gauge](#context-gauge) | How full the window is |
-| [Quick settings](#quick-settings) | Layout, mode, Bypass, persona, **speed** |
+| [Quick settings](#quick-settings) | "Configure" menu: Layout, mode, Bypass, persona, **speed** |
 
 The composer border hints before you press Enter: blue is normal, orange means Bypass is on. Colour shows while the composer has focus.
 
@@ -66,7 +66,7 @@ The model picker lists what your configured [providers](/studio/providers-models
 
 ## MCP
 
-The MCP button turns [MCP servers](/studio/knowledge/mcp) on or off for the current run without editing Settings. A **red dot** on the button means one or more servers failed; an **amber** mark means a server is waiting (for example on a container) without failing. Open the menu for per-server status, then fix or retry under Settings → MCP.
+The MCP button turns [MCPs](/studio/knowledge/mcp) on or off for the current run without editing Settings. A **red dot** on the button means one or more servers failed; an **amber** mark means a server is waiting (for example on a container) without failing. Open the menu for per-server status, then fix or retry under Settings → MCP.
 
 ## Context gauge
 

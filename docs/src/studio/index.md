@@ -22,13 +22,11 @@ A generic model knows about as much about chaining unauth recon into an account 
 
 **Wire [MCPs](/studio/knowledge/mcp) into the workflows you already have.** Point servers at the ticketing, notes, scanners, or internal APIs you use today, in the container or on the host as needed. The agent then calls those tools next to its built-in ones, so Studio plugs into your stack instead of replacing it.
 
-[Atlas](/studio/knowledge/atlas) adds searchable reference when the answer is in documentation rather than in a procedure you wrote yourself.
-
 ## Perform with it
 
 Operators who already know the craft will love Studio as an IDE for hacking:
 
-- [Editor](/studio/interface/layouts#the-three-layouts) layout, [Speed](/studio/interface/composer#quick-settings) set to the maximum, [Candid](/studio/behavior/personas#candid) persona. Be faster, better.
+- [Editor](/studio/interface/layouts#the-three-layouts) layout, [Speed](/studio/interface/composer#quick-settings) set to the maximum, [Candid](/studio/behavior/personas#writing-one) persona. Be faster, better.
 - [Rooms](/studio/interface/rooms) for multiple parallel sessions in the same engagement
 - [Kill chain](/studio/behavior/kill-chains) for continuity across the engagement
 - The harness and MCPs you taught it: relevance that survives past the first prompt
@@ -37,7 +35,7 @@ Operators who already know the craft will love Studio as an IDE for hacking:
 
 Studio works on every Exegol plan, including Community. You bring your own model provider; usage is billed by that provider, not by Exegol.
 
-Community has floors (quotas, and custom things) and is only for learning and personal use. See [pricing compare](https://exegol.com/pricing-compare). The Pro plan (and above, i.e. Team and Enterprise) unlocks everything and allows for commerical use (see [EULA](/legal/eula)). 
+Community has floors (quotas, and custom things) and is only for learning and personal use. See [pricing compare](https://exegol.com/pricing-compare). The Pro plan (and above, i.e. Team and Enterprise) unlocks everything and allows for commercial use (see [EULA](/legal/eula)).
 
 ## Bespoke development <Badge type="enterprise"/><Badge type="add-on"/>
 

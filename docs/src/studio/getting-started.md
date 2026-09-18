@@ -43,8 +43,7 @@ Create one from Settings → projects (**New project**), then link a running Exe
 - Learn to use the [Composer](/studio/interface/composer): attachments, MCP button, context gauge, quick settings
 - Choose your layout: [Layouts](/studio/interface/layouts#the-three-layouts) (Monitor, Editor, Chat), [Rooms](/studio/interface/rooms)
 - Use [Rooms](/studio/interface/rooms) to have multiple parallel sessions in the same engagement
-- Adapt the Knowledge: [skills](/studio/knowledge/skills), [rules](/studio/knowledge/rules), [MCPs](/studio/knowledge/mcp), [Atlas](/studio/knowledge/atlas), and the rest of what makes the model relevant to your tasks
-allowing
+- Adapt the Knowledge: [skills](/studio/knowledge/skills), [rules](/studio/knowledge/rules), [agents](/studio/knowledge/agents), [hooks](/studio/knowledge/hooks), [briefs](/studio/knowledge/briefs), [MCPs](/studio/knowledge/mcp), [Atlas](/studio/knowledge/atlas)
 
 > [!DANGER] Before you point this at a client
 > Prompts, file contents, and command output go to your model provider. Confirm retention terms match the engagement, or use a [self-hosted provider](/studio/providers-models#self-hosted-providers)

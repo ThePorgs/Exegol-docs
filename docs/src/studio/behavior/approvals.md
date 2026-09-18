@@ -53,7 +53,7 @@ Common toggles exist (for example auto-approve reads under `/workspace`). Build 
 | Questions only | Answer | off |
 | Large or risky task | Plan | off |
 | Normal engagement | Auto | off, with rules for routine commands |
-| Long lab sweep | Looping mode | on |
+| Long lab sweep | [Custom looping mode](/studio/behavior/modes#custom-modes) | on |
 | Client network | Auto | off |
 
 > [!TIP]

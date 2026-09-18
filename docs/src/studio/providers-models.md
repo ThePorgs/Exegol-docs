@@ -7,9 +7,17 @@ Settings → **Providers** (keys and endpoints) and the model list on each provi
 > [!WARNING] Screenshot to add: `providers_page`
 > Providers page with one provider expanded, models and visibility toggles visible.
 
-- **API key**: add a key from the Providers page. Pick the provider, paste the key.
-- **Subscription login**: where supported, sign in with a consumer plan instead of pasting a key (for example ChatGPT, GitHub Copilot, SuperGrok, OpenRouter, Chutes). Browser or device-code flows store a token beside your keys.
-- **Self-hosted providers** <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>: attaching a local runtime (Ollama, LM Studio, llama.cpp, vLLM, ...) or defining a custom OpenAI-compatible base URL.
+### API key
+
+Add a key from the Providers page. Pick the provider, paste the key.
+
+### Subscription login
+
+Where supported, sign in with a consumer plan instead of pasting a key (for example ChatGPT, GitHub Copilot, SuperGrok, OpenRouter, Chutes). Browser or device-code flows store a token beside your keys.
+
+### Self-hosted providers <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
+
+Attaching a local runtime (Ollama, LM Studio, llama.cpp, vLLM, ...) or defining a custom OpenAI-compatible base URL.
 
 Vertex AI, Amazon Bedrock, and Azure OpenAI use their own auth (ADC, IAM, API keys, Entra). Configure them from the Providers page with the project, region, or resource your organisation requires.
 
