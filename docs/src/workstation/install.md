@@ -132,17 +132,18 @@ The following command shows how to do that with bash, but it can be adapted to a
 ::: tabs
 === Linux (bash)
 ```bash
-echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
+echo "alias exegol='sudo $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
-Note: on Ubuntu 26 and above, `sudo` has been replaced with `sudo-rs`. For now, we suggest using the legacy sudo through the `sudo.ws` command. 
 === Linux (zsh)
 ```zsh
-echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.zshrc && source ~/.zshrc
+echo "alias exegol='sudo $(echo ~/.local/bin/exegol)'" >> ~/.zshrc && source ~/.zshrc
 ```
-Note: on Ubuntu 26 and above, `sudo` has been replaced with `sudo-rs`. For now, we suggest using the legacy sudo through the `sudo.ws` command. 
 === macOS & Windows
 When using Docker Desktop, you **don't** need to use `sudo`. You can skip this step and follow the next one.
 :::
+
+> [!NOTE] No need for `sudo -E`
+> When run through `sudo`, the wrapper reads the variables it needs (display, proxy, Docker connection, license keys) from your own session, so `-E` is not required. This works with every `sudo` implementation, including `sudo-rs`, the default on Ubuntu since 25.10, which does not support `-E`. An existing alias using `sudo -E` keeps working. Values exported in your shell take precedence over a `sudo VAR=value` prefix.
 
 ## 3. Activation <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
