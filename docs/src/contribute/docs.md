@@ -66,7 +66,7 @@ The documentation is organized into several sections:
 - Contributing (accessible from navigation menu)
     - About contributions
     - Components (Images, Wrapper, Resources, My-resources, Exegol history, Exegol MCP, Docs)
-    - Miscellaneous (Source install, Signing commits, Maintainers notes)
+    - Miscellaneous (Source install, Signing commits, Maintainers notes: Wrapper, Images, PRs management)
 - Legal (accessible from navigation menu)
     - Overview
 ```

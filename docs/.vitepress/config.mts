@@ -217,7 +217,22 @@ function sidebarContribute(): SidebarItemWithBadge[] {
         },
         {
           text: "Maintainers notes",
-          link: "maintainers-notes"
+          link: "maintainers-notes/",
+          collapsed: false,
+          items: [
+            {
+              text: "Wrapper",
+              link: "maintainers-notes/wrapper"
+            },
+            {
+              text: "Images",
+              link: "maintainers-notes/images"
+            },
+            {
+              text: "PRs management",
+              link: "maintainers-notes/prs"
+            }
+          ]
         }
       ]
     }
