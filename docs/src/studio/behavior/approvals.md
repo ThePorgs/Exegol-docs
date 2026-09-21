@@ -4,8 +4,7 @@ Two controls decide what runs on your behalf: the **mode** (how far the agent go
 
 Both sit in composer [quick settings](/studio/interface/composer#quick-settings). Bypass is **not** a fourth mode.
 
-> [!WARNING] Screenshot to add: `approvals_bypass`
-> Approval card on a command, and Bypass visible in quick settings.
+![](/assets/studio/composer.png)
 
 ## The approval card
 

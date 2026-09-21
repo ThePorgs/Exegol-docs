@@ -4,9 +4,6 @@ Atlas is searchable reference knowledge inside Studio: documentation indexed as 
 
 Some base bundled Atlas sources are made available out of the box to all.
 
-> [!WARNING] Screenshot to add: `atlas_panel`
-> Atlas graph panel with a node selected and page content beside it.
-
 ## How agents use it
 
 The main agent (and subagents that keep the docs tools) call Atlas on their own when a question looks like it needs reference material (`docs_query`, then read a page). You can also steer them with an explicit ask in the prompt (“check Atlas for ESC8”). That is guidance to the model, not a composer mention.

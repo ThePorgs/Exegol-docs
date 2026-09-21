@@ -6,8 +6,7 @@ Personas live under Settings → **Personas**. Pick one from composer [quick set
 
 Some personas are made available out of the box to all (for example **Neutral** and **Mentor**).
 
-> [!WARNING] Screenshot to add: `personas_menu`
-> Persona section in quick settings with Neutral / Mentor selected.
+![](/assets/studio/composer.png)
 
 ## Writing one <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 

@@ -10,9 +10,6 @@ Besides the chat, Studio opens engagement surfaces as ordinary editor tabs so yo
 - pseudo-terminal of agent commands when in [Monitor](/studio/interface/layouts#the-three-layouts) layout
 - and everything else your standard IDE provides
 
-> [!WARNING] Screenshot to add
-> TODO
-
 ## Container shell
 
 Open an Exegol container shell.

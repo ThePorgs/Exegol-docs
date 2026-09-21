@@ -4,8 +4,7 @@ Studio ships no model of its own. You connect a provider, then pick which model 
 
 Settings → **Providers** (keys and endpoints) and the model list on each provider tile.
 
-> [!WARNING] Screenshot to add: `providers_page`
-> Providers page with one provider expanded, models and visibility toggles visible.
+![](/assets/studio/providers.png)
 
 ### API key
 

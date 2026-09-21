@@ -6,9 +6,6 @@ Community users can create up to **2** projects and **3** sessions per project.
 
 Pro and above are unlimited <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
-> [!WARNING] Screenshot to add: `projects_host-paths`
-> Project settings with host paths / linked folders, and a file being dropped or attached into chat.
-
 | Feature | Description |
 | ------- | ----------- |
 | What a project scopes | Sessions, [kill chains](/studio/behavior/kill-chains), project [rules](/studio/knowledge/rules), [skills](/studio/knowledge/skills), [hooks](/studio/knowledge/hooks), ... |

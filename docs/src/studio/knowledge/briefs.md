@@ -6,8 +6,6 @@ Briefs live under Settings → **Harness**, with the rest of the Studio harness.
 
 Some briefs are made available out of the box to all.
 
-> [!WARNING] Screenshot to add
-
 | | **Briefs** | [Atlas](/studio/knowledge/atlas) |
 | --- | --- | --- |
 | What it is | Full documents you attach | Indexed, graphed documentation |

@@ -5,8 +5,6 @@ If not already, install [Exegol Workstation](/workstation/install) first.
 > [!NOTE] Do I need to change how I use Exegol?
 > No. Studio attaches to the containers you already start with `exegol start`. It installs no tools in the image and changes no wrapper configuration. Uninstall the extension and your containers are unchanged.
 
-<!-- TODO video: 60-90s install to first approved command. <YouTubeVideo videoId="..." /> -->
-
 ## 1. Install the extension
 
 | Editor | How |
@@ -14,17 +12,13 @@ If not already, install [Exegol Workstation](/workstation/install) first.
 | VS Code | Extensions → search **Exegol Studio** → Install |
 | Compatible forks | Same Marketplace listing when available |
 
-> [!WARNING] Screenshot to add: `getting-started_marketplace`
-> VS Code Extensions view with Exegol Studio selected and Install highlighted.
-
 Open the **Exegol Studio** activity bar icon after install. If nothing appears, reload the window (`Developer: Reload Window`).
 
 ## 2. System checks
 
 Open Settings (in the Primary Side Bar on the left, Cog icon) → **System check**. Run it. It probes Docker (CLI and daemon), the Exegol CLI, whether an image and container exist, and whether the project's primary container is running. On Linux it also checks your user can reach the Docker socket (usually the `docker` group). If any checks fail, follow the instructions to fix them (i.e. adding your user to the `docker` group).
 
-> [!WARNING] Screenshot to add: `getting-started_system-check`
-> System check with green and red rows, Fix actions visible.
+![](/assets/studio/systemcheck.png)
 
 ## 3. Connect a model provider
 

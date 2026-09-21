@@ -4,9 +4,6 @@ MCP plugs external tool providers into a run. The agent sees their tools next to
 
 Settings → **MCP**. Community can register **3** servers per machine; Pro and above are unlimited <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>.
 
-> [!WARNING] Screenshot to add: `mcp_where-it-runs`
-> MCP server form with **Where it runs**: In the container, On this machine, or Remote (URL).
-
 ## Where it runs
 
 When you add a server, the first choice is **where the process runs**, not a transport jargon name:

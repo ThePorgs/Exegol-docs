@@ -6,8 +6,6 @@ Skills live under Settings → **Harness**, with the rest of the Studio harness 
 
 Some skills are made available out of the box to all.
 
-> [!WARNING] Screenshot to add
-
 ## Skill vs rule
 
 | | [Rule](/studio/knowledge/rules) | **Skill** |

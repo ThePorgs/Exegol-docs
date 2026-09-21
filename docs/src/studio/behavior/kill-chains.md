@@ -6,9 +6,6 @@ Kill chains live under Settings → **Kill chains**, and open from a kill-chain 
 
 Kill chains are available on every plan. Clean PNG export without a watermark is part of the paid plans.
 
-> [!WARNING] Screenshot to add: `killchain_canvas`
-> Finished lab kill chain: host, credential, and loot nodes, one dashed hypothesis, one red failed node.
-
 ## What is in it
 
 | Node | Meaning |

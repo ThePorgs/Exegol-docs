@@ -2,8 +2,7 @@
 
 Exegol Studio is an Integrated Hacking Environment (IHE): a hacking cockpit for VS Code and compatible forks (Cursor, Windsurf, VSCodium, and others). It runs on top of [Exegol Workstation](/workstation/).
 
-> [!WARNING] Screenshot to add: `overview_hero`
-> Clean mid-run sidebar: thread with one tool card streaming, composer at the bottom.
+![](/assets/studio/overview.png)
 
 ## Learn from it
 

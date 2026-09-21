@@ -8,8 +8,6 @@ Hooks live under Settings → **Harness**, with the rest of the Studio harness (
 
 Some hooks are made available out of the box to all.
 
-> [!WARNING] Screenshot to add
-
 ## Writing one <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
 The paid plans include additional hooks and allow you to write your own.

@@ -21,12 +21,13 @@ Studio uses the regions VS Code (and compatible forks) already have:
 
 === Editor (default)
 
+![](/assets/studio/layout_editor.png)
+
 Default. Conversation in the primary side bar beside your code. Best when you are editing notes or scripts while the agent runs.
 
-> [!WARNING] Screenshot to add: `layouts_editor`
-> Editor layout: conversation in the primary side bar, code in the editor area.
-
 === Chat
+
+![](/assets/studio/layout_chat.png)
 
 This layout is best for long reading, plan review.
 
@@ -34,10 +35,9 @@ Conversation moves into an editor tab. The side bar keeps sessions, launch actio
 
 Toggle between sidebar chat and a full-width agent tab for the same session from Layout in composer quick settings, or the Studio chat controls.
 
-> [!WARNING] Screenshot to add: `layouts_chat`
-> Chat layout: conversation as an editor tab, sessions and launch actions still in the side bar.
-
 === Monitor
+
+![](/assets/studio/layout_monitor.png)
 
 Splits the run:
 
@@ -47,8 +47,5 @@ Splits the run:
 Use Monitor when raw output matters more than the summary, when debugging what ran, or when showing someone what the agent actually executes.
 
 Detail level (compact vs balanced cards) is a separate preference under Settings → **Layout**. Monitor is a place, not a detail level.
-
-> [!WARNING] Screenshot to add: `layouts_monitor`
-> Monitor layout: conversation in the side bar, pseudo-terminal tab with raw command output in the editor.
 
 :::

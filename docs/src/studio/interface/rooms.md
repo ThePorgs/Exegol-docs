@@ -2,10 +2,7 @@
 
 A Room is a grid of live session tiles in one editor tab. Use it when more than a couple of agents are running and clicking each session no longer scales.
 
-> [!WARNING] Video to add
-> Default Room with pinned session tiles; optional second shot of a named custom room.
-> Could be a video showing from where to open the room.
-> Show the different tile sizes
+![](/assets/studio/rooms.png)
 
 ## Default Room
 

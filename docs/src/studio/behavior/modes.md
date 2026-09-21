@@ -4,8 +4,7 @@ The **mode** decides how far the agent goes on a single message before handing c
 
 Three built-in modes ship on every plan.
 
-> [!WARNING] Screenshot to add: `modes_menu`
-> Configure menu: Auto, Plan, Answer, and a custom mode entry if present.
+![](/assets/studio/composer.png)
 
 ## Built-in modes
 
