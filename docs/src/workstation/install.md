@@ -178,63 +178,55 @@ exegol start
 
 This step is optional.
 
-Exegol supports command auto-completion for easier usage. Here's how to set it up for your shell:
+Exegol completes actions, options, container names and image names when you press `<TAB>`.
+The wrapper generates the completion script itself with the
+[`completion`](/wrapper/cli/completion) action, so nothing else needs to be installed.
+
+Pick your shell below, then restart it.
 
 ::: tabs
 
 === Bash
 
-First, install argcomplete:
 ```bash
-pipx install argcomplete
-```
-
-Then, add the following line to your `.bashrc`:
-
-```bash
-eval "$(register-python-argcomplete --no-defaults exegol)"
+mkdir -p ~/.local/share/bash-completion/completions
+exegol completion bash > ~/.local/share/bash-completion/completions/exegol
 ```
 
 === Zsh
 
+The completion directory must be in your `fpath` **before** `compinit` runs.
+
 ```zsh
-# Install argcomplete
-pipx install argcomplete
+mkdir -p ~/.zsh/completions
+exegol completion zsh > ~/.zsh/completions/_exegol
 
-# Enable compinit if not already enabled
-echo "autoload -U compinit && compinit" >> ~/.zshrc
-
-# Add Exegol completion
-echo 'eval "$(register-python-argcomplete --no-defaults exegol)"' >> ~/.zshrc
+# In ~/.zshrc, before compinit:
+fpath=(~/.zsh/completions $fpath)
 ```
 
 === Fish
 
 ```fish
-# Activate in current session
-register-python-argcomplete --no-defaults --shell fish exegol | source
-
-# Or create completion file
-register-python-argcomplete --no-defaults --shell fish exegol > ~/.config/fish/completions/exegol.fish
+exegol completion fish > ~/.config/fish/completions/exegol.fish
 ```
 
 === Tcsh
 
 ```sh
-eval `register-python-argcomplete --no-defaults --shell tcsh exegol`
+eval `exegol completion tcsh`
 ```
+
+Add that line to your `~/.cshrc` to make it permanent.
 
 === PowerShell
 
 ```powershell
-# Install argcomplete
-pipx install argcomplete
-
 # Create directory if needed
 mkdir $HOME\Documents\WindowsPowerShell -ErrorAction SilentlyContinue
 
 # Generate completion file
-register-python-argcomplete --no-defaults --shell powershell exegol > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
+exegol completion powershell > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
 
 # Import in profile
 Add-Content -Path $PROFILE -Value 'Import-Module "$HOME\Documents\WindowsPowerShell\exegol_completion.psm1"'

@@ -11,14 +11,14 @@ the (docker) Exegol images.
 This action make sure the local copies of the following repositories are
 up to date:
 
-- [Exegol](https://github.com/ThePorgs/Exegol) (wrapper code). If the
-  wrapper has been installed with Pip, it will not be able to
-  self-update, updating the package through Pip will be required (e.g.
-  `python3 -m pip install --upgrade exegol`).
+- [Exegol](https://github.com/ThePorgs/Exegol) (wrapper code). A wrapper
+  installed with a package manager has no checkout to pull and cannot
+  self-update: upgrade it the same way it was installed, with
+  `pipx upgrade exegol` or `uv tool upgrade exegol`.
 - [Exegol-images](https://github.com/ThePorgs/Exegol-images) (docker
   building files)
 - [Exegol-resources](https://github.com/ThePorgs/Exegol-resources)
-  (offline resources, `exegol-resources<exegol-resources>`). This module
+  (offline resources, [exegol-resources](/resources)). This module
   is optional, and users can choose to install/update it at any time.
 
 > [!TIP]
@@ -26,7 +26,29 @@ up to date:
 > what branch the module should be synchronized with, allowing to
 > switch easily between release and dev versions.
 
-This action also refreshes the container profile sources declared in
+### Images updates
+
+Once the local code base is updated, the wrapper compares the installed
+Exegol images with those offered on the registry. If no
+parameters have been provided at command-line, an interactive selection
+will be possible to choose the images to update (if updates are
+available).
+
+
+> [!SUCCESS] Hint
+> Older versions of images will be automatically deleted if they are no
+> longer used by any container and if a newer version of the same image is
+> installed. This automatic deletion behavior is a default configuration
+> that can be modified in the [configuration file](/wrapper/configuration)
+> if needed, but it's advised not to change it as disk space is not
+> unlimited and Exegol image can take up to 50GB.
+
+
+### Collaboration sources <Badge type="pro"/> <Badge type="team"/> <Badge type="enterprise"/>
+
+#### Container profile
+
+This action also refreshes the container **profile** sources declared in
 the [configuration file](/wrapper/configuration#container-profiles):
 
 - A source declared with `git` is cloned on its first update, and
@@ -42,9 +64,9 @@ the [configuration file](/wrapper/configuration#container-profiles):
   is recoverable, whereas the only copy of a hand-written profile is
   not.
 
-Reading profiles performs no network access, so a newly declared git
-source needs one `exegol update` run before its profiles appear in
-the listing or in the interactive picker.
+> [!IMPORTANT]
+> A newly declared git source needs one `exegol update` run before its profiles 
+> appear in the listing or in the interactive picker.
 
 Fetching git sources requires an Enterprise licence. Below that tier
 the step is a complete no-op: nothing is fetched and nothing is
@@ -62,24 +84,17 @@ goes stale rather than being deleted.
 For more details about container profiles, see the
 [Container profiles](/wrapper/profiles/) documentation.
 
-### Images updates
+#### Sentinel profile <Badge type="enterprise"/><Badge type="add-on"/>
 
-Once the local code base is updated, the wrapper compares the installed
-Exegol images with those offered on the Dockerhub registry. If no
-parameters have been provided at command-line, an interactive selection
-will be possible to choose the images to update (if updates are
-available).
+This action is also the sole fetch entrypoint for the **Sentinel audit
+profile sources**. Nothing else clones or pulls them: not container
+creation, not a restart, not `exegol start -S`. The step provisions the
+official `core` source, clones or pulls each declared git source to its
+configured ref, and prunes the directories of git sources that are no
+longer declared. It is a no-op when the session is not licensed for the
+Sentinel feature, and it refuses to run in offline mode.
 
-
-> [!SUCCESS] Hint
-> Older versions of images will be automatically deleted if they are no
-> longer used by any container and if a newer version of the same image is
-> installed. This automatic deletion behavior is a default configuration
-> that can be modified in the [configuration file](/wrapper/configuration)
-> if needed, but it's advised not to change it as disk space is not
-> unlimited and Exegol image can take up to 30GB.
-
-
+For more details, see [Sources and updates](/sentinel/profiles/sources).
 
 ## Options
 
@@ -99,8 +114,11 @@ those targets, and naming none updates everything.
 ## Command examples
 
 ``` bash
-# Update interactively an exegol image:
+# Update everything (wrapper, resources, Sentinel sources, profile sources, image):
 exegol update
+
+# Update an exegol image, interactively:
+exegol update -i
 
 # Update the full image:
 exegol update -i full
