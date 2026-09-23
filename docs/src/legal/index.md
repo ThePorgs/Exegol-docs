@@ -2,7 +2,7 @@
 icon: scale
 ---
 
-# Legal
+# Legal overview
 
 ## Terms of Sale and Service
 Our main legal document that governs both the use of our services and the purchase of subscriptions, licenses, and other offerings. Includes detailed information about subscription plans (Community, Pro, Team, Enterprise) and their limitations.
@@ -10,19 +10,20 @@ Our main legal document that governs both the use of our services and the purcha
 - :white_check_mark: **Can:** create account, use Exegol as specified in your plan, cancel anytime
 - :x: **Can't:** use for illegal activities, share account credentials, use Community (i.e., free) plan commercially, can't resell/repackage/etc. without separate agreement (i.e., commercial exploitation)
 - :warning: **Must:** be 18+ or supervised by a parent/guardian, comply with export laws
-- :two: **Pro plan:** max 2 licenses per account (1 license = 1 machine); Enterprise for more
+- :two: **Seats:** Pro max 2 (1 license = 1 machine); Team up to 5 with floating licenses; Enterprise for more (subteams & RBAC)
 - Read more [here](./terms-of-sale-and-service.md)
 
 ## End User License Agreement 
-The license agreement that governs the use of our software components, including installation, usage rights, and restrictions.
+The license agreement that governs use of the Exegol Suite Software, including Exegol Workstation (wrapper, images, resources), Exegol Studio, Exegol MCP, Exegol Sentinel, and related components. Studio: install is free; some features need Pro, Team, or Enterprise; redistribution and forking are not allowed; Studio is not under the ESL.
 
-- :white_check_mark: **Can:** install and use software for personal use, use commercially with Pro/Team/Enterprise plan
-- :x: **Can't:** share software with others, modify code, reverse engineer
-- :warning: **Important:** no warranty provided, use at your own risk
+- :white_check_mark: **Can:** install and use software for personal use, use commercially with Pro/Team/Enterprise plan, install Exegol Studio from the Marketplace, Open VSX, or an official VSIX
+- :x: **Can't:** share software with others, redistribute or fork Exegol Studio, reverse engineer except as required by law
+- :warning: **Important:** no warranty provided, use at your own risk; Studio feature gating follows your Exegol plan, not a store purchase
+- Package [license notice](./exegol-studio-license-notice.md) (not a separate license contract)
 - Read more [here](./eula.md)
 
 ## Software License
-Governs the use of our open-source components, including the transition from GPL3, and restrictions regarding commercial use or exploitation.
+Governs the use of our open-source components that **declare** the Exegol Software License (ESL), including the transition from GPL3, and restrictions regarding commercial use or exploitation. ESL does **not** apply to proprietary software distributed without an ESL declaration.
 
 - :white_check_mark: **Community use:** personal, educational, non-commercial only
 - :warning: **Commercial use:** allowed with Pro/Team/Enterprise subscription for your own business operations (e.g., pentesting, bug bounty, auditing, red teaming, internal training, etc.)

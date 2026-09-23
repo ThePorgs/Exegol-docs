@@ -163,8 +163,8 @@ Exegol's approach is simpler (and more stable). Docker is at its core. It *obvio
 
 - **Let the wrapper drop outdated images.** Leave `auto_remove_image` on. `exegol update` and removing the last container on an old tag are supposed to free that generation.
 - **Use [`exegol upgrade`](/wrapper/cli/upgrade) to move containers to a newer image** (Pro/Enterprise). It recreates the container on the new tag while keeping workspace and key data, so you are not stuck running an old generation while the new image sits beside it on disk. Drop the `-bak` backup when you no longer need it.
-- **Docker Desktop's virtual disk defaults to 64 GB.** One large image on containerd can exceed that while the physical disk is empty. Settings → Resources → Advanced. Do not shrink it later without a backup: Desktop deletes the disk image. [Troubleshooting](/troubleshooting#disk-space).
-- **Put Docker's data on a fast external disk** if the internal one is small. [External drive FAQ](/faq#how-to-install-exegol-on-an-external-drive). A slow drive makes the whole environment feel slow.
+- **Docker Desktop's virtual disk defaults to 64 GB.** One large image on containerd can exceed that while the physical disk is empty. Settings → Resources → Advanced. Do not shrink it later without a backup: Desktop deletes the disk image. [Troubleshooting](/workstation/troubleshooting#disk-space).
+- **Put Docker's data on a fast external disk** if the internal one is small. [External drive FAQ](/workstation/faq#how-to-install-exegol-on-an-external-drive). A slow drive makes the whole environment feel slow.
 - **Failed pulls leave leftovers** on containerd. `docker image prune` / `docker builder prune`. After a failed `exegol build`, same story.
 
 ## TL;DR

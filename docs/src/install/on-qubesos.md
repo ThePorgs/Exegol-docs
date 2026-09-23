@@ -100,7 +100,7 @@ pipx install exegol
 Create a alias to run Exegol with `sudo` while keeping your user environment:
 
 ```bash
-echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
+echo "alias exegol='sudo $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
 
 Install the exegol image:
@@ -165,7 +165,7 @@ pipx install exegol
 Add the following alias to your `~/.bashrc` file (inside exegol-appvm):
 
 ```bash 
-echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
+echo "alias exegol='sudo $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
 
 Download resources:
@@ -238,7 +238,7 @@ qvm-prefs exegol-appvm netvm sys-net
 ---
 ## 5. The rest
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
+Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/workstation/install#_3-activation).
 
 
 

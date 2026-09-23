@@ -25,6 +25,12 @@ Exegol is transitioning from the GNU General Public License version 3 (GPL3) to 
 - **Commercial exploitation**: any activity that uses Exegol as a basis for generating revenue or providing services to third parties, including but not limited to maintenance, support, managed services, repackaging, or reselling
 - **Subscription**: a monthly or yearly renewed purchase (Pro, Team or Enterprise) that permits commercial use of Exegol under the terms of this license
 
+### 1.1 Scope of this license
+
+This license applies only to Exegol components that Execorp expressly publishes under the Exegol Software License (for example in that component’s LICENSE file or package manifest). Public availability of source does not, by itself, place a component under this license. Each component’s own license declaration is the source of truth.
+
+This license does **not** apply to proprietary software, binaries, or services that Execorp distributes without a corresponding ESL declaration. Those are governed by the End User License Agreement (https://docs.exegol.com/legal/eula) and the Terms of Sale and Service (https://docs.exegol.com/legal/terms-of-sale-and-service).
+
 ## 2. Intellectual property
 
 Exegol is and remains the exclusive property of Execorp. All rights not expressly granted by this license are reserved.
@@ -65,7 +71,7 @@ In simple terms: You may use Exegol commercially for your own business needs wit
 
 Any violation of these prohibitions may lead to legal action and immediate termination of the license.
 
-For specific details regarding subscription plans, license counts, and subscription limitations, please refer to the Terms of Service and Sale (https://docs.exegol.com/legal/terms-of-service).
+For specific details regarding subscription plans, license counts, and subscription limitations, please refer to the Terms of Sale and Service (https://docs.exegol.com/legal/terms-of-sale-and-service).
 
 ## 4. Restrictions
 

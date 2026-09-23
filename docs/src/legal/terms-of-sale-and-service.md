@@ -1,6 +1,6 @@
 # Terms of Sale and Service
 
-Execorp SAS – headquartered at 122 rue Amelot, 75011 Paris, France, and registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536, provides services including the Exegol Suite (websites, applications, software) under the following terms.
+Execorp SAS – headquartered at 122 rue Amelot, 75011 Paris, France, and registered in the "Tribunal des Activités Économiques de Paris" under SIREN number 944 256 536, provides services including the Exegol Suite (websites, applications, software, IDE extensions, and related products such as Exegol Workstation, Exegol Studio, Exegol MCP, and Exegol Sentinel) under the following terms.
 
 This document constitutes both our Terms of Service and Terms of Sale, governing the use of our services as well as the purchase of subscriptions, licenses, and other related offerings.
 
@@ -48,7 +48,8 @@ The Pro plan is a paid subscription designed for individuals who need to use Exe
 - Each license permits activation on a single machine
 - The number of licenses is defined at the time of purchase and can be modified through the dashboard (dashboard.exegol.com)
 - Each account may hold only one Pro subscription, with a maximum of two licenses per account
-- To activate Exegol on more than two machines under one account, an Enterprise subscription is required
+- To cover more than two seats under one organization, a Team subscription (up to five seats) or an Enterprise subscription is required
+- Pro is purchased directly through Execorp’s payment provider (Stripe); it is not sold through the Enterprise procurement process
 
 **Permitted use:**
 With a valid Pro subscription, you are permitted to use Exegol in a commercial context, such as:
@@ -57,21 +58,52 @@ With a valid Pro subscription, you are permitted to use Exegol in a commercial c
 - Using Exegol for internal training or documentation
 - Using Exegol as part of your security operations
 
-### 2.3 Enterprise plan
+### 2.3 Team plan
+
+The Team plan is a paid subscription designed for small teams that need commercial use of Exegol with shared seat management.
+
+**License limitations:**
+- A Team subscription includes up to five user seats
+- Licenses are floating: they may be assigned and reassigned to users from a centralized organization dashboard (dashboard.exegol.com), subject to any reassignment rules published in the product documentation
+- Team includes organization-level license assignment and enrollment, but does **not** include Enterprise-only features such as subteams and role-based access control (RBAC)
+- Team is purchased directly through Execorp’s payment provider (Stripe); purchase orders, reseller agreements, and wire transfer are Enterprise procurement options
+- For more than five seats, or for Enterprise-only features and add-ons, an Enterprise subscription is required
+
+**Permitted use:**
+Team subscribers have the same commercial use rights as Pro subscribers, with additional flexibility for small-team deployments and floating seat assignment.
+
+### 2.4 Enterprise plan
 
 The Enterprise plan is a paid subscription designed for businesses and organizations that require:
-- More than two licenses per account
-- Licenses easily assigned to users from a centralized interface
-- Team management features
-- Additional options and configurations
-- Dedicated support
+
+- More than five seats, or other seat counts agreed with Execorp
+- Floating licenses managed from a centralized organization interface
+- Subteams and role-based access control (RBAC)
+- Priority or dedicated support
+- Procurement options (including purchase orders, reseller agreements, and wire transfer where offered)
+- Optional add-ons and configurations (for example Exegol Sentinel, extended offline use, bespoke integrations, or professional services), as agreed with Execorp
 
 Enterprise subscriptions may include custom terms and conditions as specified in separate agreements.
 
 **Permitted use:**
-Enterprise subscribers have the same commercial use rights as Pro subscribers, with additional flexibility for team-based deployments and larger-scale operations.
+Enterprise subscribers have the same commercial use rights as Pro and Team subscribers, with additional flexibility for larger-scale and organization-managed deployments.
 
-Plan and pricing details are available on the public landing page at https://exegol.com and may evolve over time.
+Plan and feature details are described on https://exegol.com/pricing and https://exegol.com/pricing-compare and may evolve over time.
+
+### 2.5 Products of the Exegol Suite
+
+Without limiting the EULA definition of Software, the Exegol Suite includes in particular:
+- **Exegol Workstation** (wrapper, Docker images, scripts, offline resources, and related Workstation components)
+- **Exegol Studio** (IDE extension)
+- **Exegol MCP**
+- **Exegol Sentinel** (Enterprise add-on, where purchased or otherwise made available)
+- websites, dashboards, and related services
+
+Access to specific features of each product depends on your plan and any purchased add-ons. Feature matrices published on the pricing pages are descriptive; entitlements are those associated with your account and subscription.
+
+### 2.6 Exegol Studio
+
+Exegol Studio (publisher / extension ID `exegol.studio`) is an IDE extension that forms part of the Exegol Suite. Installation from the Visual Studio Marketplace, Open VSX, or an official Execorp VSIX is free for everyone, including Community users. Some features require an active Pro, Team, or Enterprise plan and are gated by Exegol account entitlements (not by a Marketplace purchase). Community use remains non-commercial. Seat limits and the prohibition on commercial exploitation without a separate written agreement with Execorp apply unchanged as set out in these Terms. Exegol Studio is governed by the End User License Agreement (EULA) and these Terms; it is not licensed under the Exegol Software License (ESL).
 
 ## 3. Account creation and security
 
@@ -140,7 +172,7 @@ The Exegol software suite is subject to specific licensing terms.
 
 Certain parts of Exegol are open-source and governed by the Exegol Software License (ESL) (https://docs.exegol.com/legal/software-license) and, where applicable, the GNU General Public License version 3 (GPL3). Code released prior to June 5th, 2025 remains under GPL3, while code released since that date may be under either ESL or GPL3.
 
-All non open-source components of Exegol are governed by the End User License Agreement (EULA), which can be found at https://docs.exegol.com/legal/eula.
+All non open-source components of Exegol (including proprietary parts of Exegol Workstation, Exegol Studio, Exegol MCP, Exegol Sentinel, and related services) are governed by the End User License Agreement (EULA), which can be found at https://docs.exegol.com/legal/eula.
 
 You receive a personal, limited, non-exclusive, non-transferable license to use the Services, subject to compliance with these Terms and the applicable software licenses. Exceptions for authorized resellers may apply, as specified in separate reseller terms or agreements attached to quotes, invoices, or other relevant documents.
 

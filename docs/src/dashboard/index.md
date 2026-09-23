@@ -1,12 +1,12 @@
 # Dashboard overview
 
-The [dashboard](https://dashboard.exegol.com) is the account side of Exegol for <Badge type="pro"/>, <Badge type="team"/> and <Badge type="enterprise"/> subscribers.
+The [dashboard](https://dashboard.exegol.com) is the account product of Exegol for <Badge type="pro"/>, <Badge type="team"/> and <Badge type="enterprise"/> subscribers.
 
 The overview screen there summarises the account. The pages below document each screen.
 
 | Page | What it is for |
 | ---- | -------------- |
-| [My plan](/dashboard/my_plan) | <Badge type="pro"/><Badge type="team"/> Subscriptions and licenses |
+| [My plan](/dashboard/my_plan) | <Badge type="pro"/> Subscriptions and licenses |
 | [Referral](/dashboard/referral) | <Badge type="pro"/> Referral links and discounts |
 | [My licenses](/dashboard/licenses) | <Badge type="team"/><Badge type="enterprise"/> The license(s) assigned to the logged-in user |
 | [Organizations](/dashboard/organizations) | <Badge type="team"/><Badge type="enterprise"/> Members, subscriptions, and (Enterprise) subteams and roles |

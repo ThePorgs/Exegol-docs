@@ -19,8 +19,8 @@ The documentation is organized into several sections:
 ``` text :scroll
 - General
     - About Exegol
-    - First install
-    - Specific install guides (accessible only through direct links in /first-install)
+    - Start now (suite intro)
+    - Specific install guides (accessible only through direct links in /workstation/install)
         - Arch
         - Fedora
         - Gentoo
@@ -28,6 +28,14 @@ The documentation is organized into several sections:
     - Frequently asked questions
     - Troubleshooting
     - Tips & tricks
+- Exegol Workstation
+    - Overview
+    - Install
+    - Images, Wrapper, Resources, ...
+- Exegol Studio
+    - Overview
+    - Getting started
+    - ...
 - Exegol images
     - Overview
     - Tools list
@@ -38,7 +46,7 @@ The documentation is organized into several sections:
 - Exegol wrapper
     - Overview
     - Command-line actions (info, start, exec, ...)
-    - Advanced configuration
+    - User config
 - Exegol resources
     - Overview
 - Exegol MCP
@@ -58,8 +66,9 @@ The documentation is organized into several sections:
 - Contributing (accessible from navigation menu)
     - About contributions
     - Components (Images, Wrapper, Resources, My-resources, Exegol history, Exegol MCP, Docs)
-    - Miscellaneous (Source install, Signing commits, Maintainers notes)
+    - Miscellaneous (Source install, Signing commits, Maintainers notes: Wrapper, Images, PRs management)
 - Legal (accessible from navigation menu)
+    - Overview
 ```
 
 All documentation files are stored in the `/docs/src` folder.

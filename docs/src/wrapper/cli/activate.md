@@ -36,21 +36,42 @@ exegol activate --accept-eula
 
 ## Offline option <Badge type="enterprise"/><Badge type="add-on"/>
 
-The **offline mode** is a paid option of the **Exegol Enterprise** tier. Licenses with that option are not affected by the usual 7-days offline limit. They can be activated like other standard Licenses with both [Default activation](#default-activation) or [Unattended activation](#unattended-activation) methods described above.
+The **offline mode** is a paid option of the **Exegol Enterprise** tier. Licenses with that option are not affected by the usual 7-days offline limit.
 
-This option can also prove useful for machines that will never be connected to the Internet, as they can be activated using the dedicated offline activation procedure described below.
+Depending on whether the machine can reach the Internet at least once, two activation scenarios are possible.
+
+### Machine with initial Internet access
+
+If the machine has Internet access at first, activate it like any other license, with either the [Default activation](#default-activation) (`exegol activate` + login with an OTP token) or the [Unattended activation](#unattended-activation) method described above.
+
+While still connected, the machine can download the Exegol images by itself (e.g. `exegol install full`).
+
+The machine can then be disconnected from the Internet: thanks to the offline option, the license will remain active without any time limit.
+
+### Machine never connected to the Internet
+
+Machines that will never be connected to the Internet can be activated using the dedicated offline activation procedure described below.
 
 1. Run `exegol activate --offline` on the offline machine, and retrieve the "Activation ID"
 2. On an Internet-connected machine, open [My licenses](/dashboard/licenses) in the Exegol dashboard, identify the "Offline" license to activate, then click "Offline Enrollment" in the three-dots menu from the Actions column
 3. Fill in the form with the Activation ID, set an OS and name for the machine
-3. Download the resulting `license.key` file and place it on the offline machine at `~/.exegol/license.key`
+4. Download the resulting `license.key` file and place it on the offline machine at `~/.exegol/license.key`
 
-Once the license key is in place, the offline machine will be considered activated without needing any Internet access. 
+Once the license key is in place, the offline machine will be considered activated without needing any Internet access.
 
-> [!INFO]
-> This activation procedure is meant for machines that will never be connected to the Internet. They won't be able to download Exegol images.
->
-> To install Exegol images on a fully offline machine, use the procedure described in [Transferring images to an offline machine](/tips-and-tricks#transferring-images-to-an-offline-machine): activate and pull the image on an Internet-connected station, export it with `docker save`, transfer the archive, then load it on the offline machine with `docker load` and run `exegol info` to verify.
+> [!WARNING]
+> A machine activated with this procedure will never be able to download Exegol images by itself. Transfer them as described below.
+
+### Transferring images to an offline machine
+
+The following example uses the `full` image. It starts on the Internet-facing machine.
+
+1. Activate Exegol with [default](#default-activation) or [unattended](#unattended-activation) activation.
+2. Install the image(s) with `exegol install full`
+3. Export the image: `docker save registry.exegol.com/exegol:full --output "/path/to/image.tar"`
+4. Transfer the file to the offline machine by any secure means.
+5. On the offline machine: `docker load --input "/path/to/image.tar"`
+6. Check with `exegol info`. The loaded image should be listed; `exegol start` and the rest of the wrapper then work as usual.
 
 ## Options
 

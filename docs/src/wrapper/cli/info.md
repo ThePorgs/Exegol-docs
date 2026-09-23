@@ -95,9 +95,11 @@ invocation. The section selectors below choose which parts are printed.
 | `-a`, `--all` | Show every section: the user configuration, the project sources, the container profiles, the Sentinel profiles, the images, and every container (or the recap of the one you named). |
 
 The bare `--profiles` form prints one row per discovered profile, with three
-columns: **Source**, **Name** and **Comment**. The Source column names which
-declared source the profile came from, and a profile that declares no comment
-shows a dash rather than an empty cell. The named form prints only the keys that
+columns: **Source**, **Name** and **Description**. The Source column names which
+declared source the profile came from, the Description column is what the
+profile's own `metadata.description` says it is for, and a profile that declares
+no description shows a dash rather than an empty cell. The named form prints
+only the keys that
 profile's file actually declares: a key the file omits does not appear at all,
 and a key the file pins to an explicit null is reported as declared-and-null
 rather than being hidden. See [Container profiles](/wrapper/profiles/) for what
@@ -114,7 +116,7 @@ order, as naming `--sources` and then `--config`: the order is a property of the
 action, not of the command line.
 
 Naming several selectors renders all of them rather than the first one that
-matched: `--config --profiles redteam` prints the user configuration table and
+matched: `--config --profile redteam` prints the user configuration table and
 that one profile, a union of the two requests. Naming any section at all
 replaces the default images-and-containers pair, which is what a bare
 `exegol info` prints and what `--all` puts back alongside the rest. A container

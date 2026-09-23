@@ -1,4 +1,4 @@
-# Profile concepts <Badge type="new"/><Badge type="enterprise"/><Badge type="add-on"/>
+# Sentinel Profiles <Badge type="new"/><Badge type="enterprise"/><Badge type="add-on"/>
 
 A **profile** is what turns Sentinel from a command recorder into a collector. Three things build it: a **trigger** is a condition evaluated against a command, an **action** is the extra data collected when that condition holds, and a **rule** pairs a set of triggers with a set of actions. A profile is a list of rules plus an optional `config` block, and it is the unit a container is started with: `exegol start demo full --sentinel-profile core.demo`. The field-by-field schema of every trigger and action type lives on [Triggers](/sentinel/profiles/triggers) and [Actions](/sentinel/profiles/actions); this page does not repeat it. If you want a profile source written for your engagement rather than authoring it yourself, that is offered as an [Enterprise service](/sentinel/#profile-authoring-and-ingest-help).
 

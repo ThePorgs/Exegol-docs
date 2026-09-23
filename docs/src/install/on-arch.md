@@ -58,12 +58,12 @@ The following command shows how to do that with bash, but it can be adapted to a
 Add the following alias to your `~/.bashrc` file:
 
 ```bash
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
 ```
 
 ## 3. The rest
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
+Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/workstation/install#_3-activation).
 
 ## 3.1. Graphical apps
 

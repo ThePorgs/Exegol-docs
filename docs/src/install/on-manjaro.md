@@ -65,22 +65,22 @@ Create a shortcut to run Exegol with `sudo` while keeping your user environment:
 ::: tabs
 === Linux Bash
 ```bash
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
 ```
 === Linux Zsh
 ```zsh
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
 ```
 === Linux Fish
 ```shell
-echo "alias exegol 'sudo -E \$HOME/.local/bin/exegol'" >> ~/.config/fish/config.fish && source ~/.config/fish/config.fish
+echo "alias exegol 'sudo \$HOME/.local/bin/exegol'" >> ~/.config/fish/config.fish && source ~/.config/fish/config.fish
 ```
 :::
 
 ---
 ## 3. The rest
 
-Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/first-install#_3-activation).
+Once the requirements are installed, the main installation documentation can be followed, from [step "3. Activation"](/workstation/install#_3-activation).
 
 ---
 ## 🌅 Graphical applications support 

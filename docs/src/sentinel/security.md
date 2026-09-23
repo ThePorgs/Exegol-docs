@@ -48,7 +48,7 @@ Two mechanisms reduce the blast radius, and they are different tools that solve 
 - **`filters` on the action is an allowlist over variable *names*.** It decides which variables are collected at all. Absent or empty, everything is collected.
 - **`env_redact` at profile level is a denylist over variable *names* whose *values* are masked.** A matching variable is still recorded, but its value is replaced by the marker published on the [Log schema reference](/sentinel/siem/log-schema#empty-null-and-placeholder-values) (the angle-bracketed `<REDACTED>` form, never a square-bracketed one) everywhere it would otherwise be logged.
 
-Neither is on by default, and neither is a substitute for the other: an allowlist that admits a variable still logs its value unless the denylist masks it. Decide both per engagement, because which variable names carry secrets is an engagement-specific fact. See [Profile concepts](/sentinel/profiles/concepts) for where each is declared.
+Neither is on by default, and neither is a substitute for the other: an allowlist that admits a variable still logs its value unless the denylist masks it. Decide both per engagement, because which variable names carry secrets is an engagement-specific fact. See [Sentinel Profiles](/sentinel/profiles/) for where each is declared.
 
 ### An artifact can be a usable credential, not merely a record of one
 

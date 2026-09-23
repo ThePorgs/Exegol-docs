@@ -99,6 +99,6 @@ The profile's second rule fires `capture_net` on `responder_or_bettercap`, a net
 ## Where to go next
 
 - [Configuration](/sentinel/configuration): the `sentinel` block in `~/.exegol/config.yml`, and where profile names resolve from.
-- [Profile concepts](/sentinel/profiles/concepts): triggers, actions and rules, and how a profile of your own is put together.
+- [Sentinel Profiles](/sentinel/profiles/): triggers, actions and rules, and how a profile of your own is put together.
 - [Security considerations](/sentinel/security): what a profile source is trusted to do, and what ends up in the logs.
 - [Log schema reference](/sentinel/siem/log-schema): the contract a SIEM parser is written against.

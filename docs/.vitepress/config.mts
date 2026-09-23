@@ -123,12 +123,12 @@ function nav(): NavItemWithBadge[] {
       link: 'about',
     },
     {
-      text: 'First install',
-      link: 'first-install',
+      text: 'Start now',
+      link: 'start-now',
     },
     {
       text: 'FAQ',
-      link: 'faq',
+      link: 'workstation/faq',
     },
     {
       text: 'Others',
@@ -153,8 +153,8 @@ function nav(): NavItemWithBadge[] {
         },
         {
           text: 'Legal',
-          link: '/legal/summary',
-          activeMatch: '/legal/summary'
+          link: '/legal/',
+          activeMatch: '/legal/'
         }
       ]
     },
@@ -217,7 +217,22 @@ function sidebarContribute(): SidebarItemWithBadge[] {
         },
         {
           text: "Maintainers notes",
-          link: "maintainers-notes"
+          link: "maintainers-notes/",
+          collapsed: false,
+          items: [
+            {
+              text: "Wrapper",
+              link: "maintainers-notes/wrapper"
+            },
+            {
+              text: "Images",
+              link: "maintainers-notes/images"
+            },
+            {
+              text: "PRs management",
+              link: "maintainers-notes/prs"
+            }
+          ]
         }
       ]
     }
@@ -230,8 +245,8 @@ function sidebarLegal(): SidebarItemWithBadge[] {
       text: "Legal",
       items: [
         {
-          text: "Summary",
-          link: "summary"
+          text: "Overview",
+          link: "index.md"
         },
         {
           text: "Legal Notice",
@@ -262,6 +277,10 @@ function sidebarLegal(): SidebarItemWithBadge[] {
           link: "software-license"
         },
         {
+          text: "Exegol Studio license notice",
+          link: "exegol-studio-license-notice"
+        },
+        {
           text: "Open Source Components",
           link: "open-source-components"
         },
@@ -277,147 +296,276 @@ function sidebarMain(): SidebarItemWithBadge[] {
       link: "about"
     },
     {
-      text: "First install",
-      link: "first-install",
+      text: "Start now",
+      link: "start-now",
     },
     {
-      text: "Exegol Images",
+      text: "Exegol Workstation",
       collapsed: false,
       items: [
         {
           text: "Overview",
-          link: "images/index.md"
+          link: "workstation/index.md"
         },
         {
-          text: "Tools list",
-          link: "images/tools.md",
+          text: "Install",
+          link: "workstation/install.md"
         },
         {
-          text: "My resources",
-          link: "images/my-resources.md"
-        },
-        {
-          text: "Exegol history",
-          link: "images/exegol-history.md"
-        },
-        {
-          text: "Credentials",
-          link: "images/credentials.md"
-        },
-        {
-          text: "Services",
-          link: "images/services.md"
-        }
-      ]
-    },
-    {
-      text: "Exegol Wrapper",
-      collapsed: false,
-      items: [
-        {
-          text: "Overview",
-          link: "wrapper/index.md"
-        },
-        {
-          text: "Command-line actions",
+          text: "Images",
           collapsed: true,
-          items: [
-            {
-              text: "activate",
-              link: "wrapper/cli/activate.md"
-            },
-            {
-              text: "build",
-              link: "wrapper/cli/build.md"
-            },
-            {
-              text: "exec",
-              link: "wrapper/cli/exec.md"
-            },
-            {
-              text: "info",
-              link: "wrapper/cli/info.md"
-            },
-            {
-              text: "install",
-              link: "wrapper/cli/install.md"
-            },
-            {
-              text: "remove",
-              link: "wrapper/cli/remove.md"
-            },
-            {
-              text: "restart",
-              link: "wrapper/cli/restart.md"
-            },
-            {
-              text: "start",
-              link: "wrapper/cli/start.md"
-            },
-            {
-              text: "stop",
-              link: "wrapper/cli/stop.md"
-            },
-            {
-              text: "uninstall",
-              link: "wrapper/cli/uninstall.md"
-            },
-            {
-              text: "update",
-              link: "wrapper/cli/update.md"
-            },
-            {
-              text: "upgrade",
-              link: "wrapper/cli/upgrade.md"
-            },
-            {
-              text: "version",
-              link: "wrapper/cli/version.md"
-            }
-          ]
-        },
-        {
-          text: "Advanced configuration",
-          link: "wrapper/configuration.md"
-        },
-        {
-          text: "Container profiles",
-          collapsed: true,
-          badge: "new",
           items: [
             {
               text: "Overview",
-              link: "wrapper/profiles/index.md"
+              link: "images/index.md"
             },
             {
-              text: "Profile file reference",
-              link: "wrapper/profiles/reference.md"
+              text: "Tools list",
+              link: "images/tools.md",
+            },
+            {
+              text: "My resources",
+              link: "images/my-resources.md"
+            },
+            {
+              text: "Exegol history",
+              link: "images/exegol-history.md"
+            },
+            {
+              text: "Credentials",
+              link: "images/credentials.md"
+            },
+            {
+              text: "Services",
+              link: "images/services.md"
+            }
+          ]
+        },
+        {
+          text: "Wrapper",
+          collapsed: true,
+          items: [
+            {
+              text: "Overview",
+              link: "wrapper/index.md"
+            },
+            {
+              text: "Command-line",
+              collapsed: true,
+              items: [
+                {
+                  text: "activate",
+                  link: "wrapper/cli/activate.md"
+                },
+                {
+                  text: "build",
+                  link: "wrapper/cli/build.md"
+                },
+                {
+                  text: "completion",
+                  link: "wrapper/cli/completion.md"
+                },
+                {
+                  text: "exec",
+                  link: "wrapper/cli/exec.md"
+                },
+                {
+                  text: "info",
+                  link: "wrapper/cli/info.md"
+                },
+                {
+                  text: "install",
+                  link: "wrapper/cli/install.md"
+                },
+                {
+                  text: "remove",
+                  link: "wrapper/cli/remove.md"
+                },
+                {
+                  text: "restart",
+                  link: "wrapper/cli/restart.md"
+                },
+                {
+                  text: "start",
+                  link: "wrapper/cli/start.md"
+                },
+                {
+                  text: "stop",
+                  link: "wrapper/cli/stop.md"
+                },
+                {
+                  text: "uninstall",
+                  link: "wrapper/cli/uninstall.md"
+                },
+                {
+                  text: "update",
+                  link: "wrapper/cli/update.md"
+                },
+                {
+                  text: "upgrade",
+                  link: "wrapper/cli/upgrade.md"
+                },
+                {
+                  text: "version",
+                  link: "wrapper/cli/version.md"
+                }
+              ]
+            },
+            {
+              text: "User config",
+              link: "wrapper/configuration.md"
+            },
+            {
+              text: "Container profiles",
+              collapsed: true,
+              badge: "new",
+              items: [
+                {
+                  text: "Overview",
+                  link: "wrapper/profiles/index.md"
+                },
+                {
+                  text: "Profile file reference",
+                  link: "wrapper/profiles/reference.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          text: "Resources",
+          collapsed: true,
+          items: [
+            {
+              text: "Overview",
+              link: "resources/index.md"
+            }
+          ]
+        },
+        // Same Help group can be copied under MCP / Sentinel / Dashboard later:
+        // { text: "Help", collapsed: true, items: [ FAQ, Troubleshooting, … ] }
+        {
+          text: "Help",
+          collapsed: true,
+          items: [
+            {
+              text: "FAQ",
+              link: "workstation/faq.md"
+            },
+            {
+              text: "Troubleshooting",
+              link: "workstation/troubleshooting.md"
+            },
+            {
+              text: "Tips & tricks",
+              link: "workstation/tips-and-tricks.md"
             }
           ]
         }
       ]
     },
     {
-      text: "Exegol Resources",
-      collapsed: true,
+      text: "Exegol Studio",
+      collapsed: false,
+      badge: "new",
       items: [
         {
           text: "Overview",
-          link: "resources/index.md"
-        }
-      ]
-    },
-    {
-      text: "Exegol MCP",
-      collapsed: true,
-      items: [
-        {
-          text: "Overview",
-          link: "mcp/index.md"
+          link: "studio/index.md"
         },
         {
           text: "Getting started",
-          link: "mcp/getting-started.md"
+          link: "studio/getting-started.md"
+        },
+        {
+          text: "Interface",
+          collapsed: true,
+          items: [
+            {
+              text: "Composer",
+              link: "studio/interface/composer.md"
+            },
+            {
+              text: "Editors and tabs",
+              link: "studio/interface/editors.md"
+            },
+            {
+              text: "Layouts",
+              link: "studio/interface/layouts.md"
+            },
+            {
+              text: "Rooms",
+              link: "studio/interface/rooms.md"
+            },
+            {
+              text: "Projects",
+              link: "studio/interface/projects.md"
+            },
+            {
+              text: "Containers",
+              link: "studio/interface/containers.md"
+            }
+          ]
+        },
+        {
+          text: "Providers and models",
+          link: "studio/providers-models.md"
+        },
+        {
+          text: "Knowledge",
+          collapsed: true,
+          items: [
+            {
+              text: "Skills",
+              link: "studio/knowledge/skills.md"
+            },
+            {
+              text: "Agents",
+              link: "studio/knowledge/agents.md"
+            },
+            {
+              text: "Hooks",
+              link: "studio/knowledge/hooks.md"
+            },
+            {
+              text: "Rules",
+              link: "studio/knowledge/rules.md"
+            },
+            {
+              text: "Briefs",
+              link: "studio/knowledge/briefs.md"
+            },
+            {
+              text: "MCPs",
+              link: "studio/knowledge/mcp.md"
+            },
+            {
+              text: "Atlas",
+              link: "studio/knowledge/atlas.md"
+            }
+          ]
+        },
+        {
+          text: "Behavior",
+          collapsed: true,
+          items: [
+            {
+              text: "Modes",
+              link: "studio/behavior/modes.md"
+            },
+            {
+              text: "Personas",
+              link: "studio/behavior/personas.md"
+            },
+            {
+              text: "Approvals",
+              link: "studio/behavior/approvals.md"
+            },
+            {
+              text: "Kill chains",
+              link: "studio/behavior/kill-chains.md"
+            }
+          ]
         }
       ]
     },
@@ -443,8 +591,8 @@ function sidebarMain(): SidebarItemWithBadge[] {
           collapsed: true,
           items: [
             {
-              text: "Concepts",
-              link: "sentinel/profiles/concepts.md"
+              text: "Overview",
+              link: "sentinel/profiles/index.md"
             },
             {
               text: "Triggers",
@@ -489,6 +637,20 @@ function sidebarMain(): SidebarItemWithBadge[] {
       ]
     },
     {
+      text: "Exegol MCP",
+      collapsed: true,
+      items: [
+        {
+          text: "Overview",
+          link: "mcp/index.md"
+        },
+        {
+          text: "Getting started",
+          link: "mcp/getting-started.md"
+        }
+      ]
+    },
+    {
       text: "Dashboard",
       collapsed: true,
       items: [
@@ -521,18 +683,6 @@ function sidebarMain(): SidebarItemWithBadge[] {
           link: "dashboard/settings.md"
         }
       ]
-    },
-    {
-      text: "Frequently asked questions",
-      link: "faq.md"
-    },
-    {
-      text: "Troubleshooting",
-      link: "troubleshooting.md"
-    },
-    {
-      text: "Tips & tricks",
-      link: "tips-and-tricks.md"
     }
   ]
 }
