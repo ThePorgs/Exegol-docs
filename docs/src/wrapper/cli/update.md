@@ -18,7 +18,7 @@ up to date:
 - [Exegol-images](https://github.com/ThePorgs/Exegol-images) (docker
   building files)
 - [Exegol-resources](https://github.com/ThePorgs/Exegol-resources)
-  (offline resources, [exegol-resources](/resources)). This module
+  (offline resources, [exegol-resources](/resources/)). This module
   is optional, and users can choose to install/update it at any time.
 
 > [!TIP]
