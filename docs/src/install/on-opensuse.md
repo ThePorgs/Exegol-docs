@@ -58,7 +58,7 @@ The following command shows how to do that with bash, but it can be adapted to a
 Add the following alias to your `~/.bashrc` file:
 
 ```bash
-echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
 ```
 
 ## 3. The rest
