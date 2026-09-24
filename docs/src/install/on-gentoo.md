@@ -53,7 +53,7 @@ pipx install exegol
 Create a shortcut to run Exegol with `sudo` while keeping your user environment:
 
 ```bash
-echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
 ```
 
 ## 1.2. Installing Docker

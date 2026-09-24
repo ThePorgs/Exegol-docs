@@ -132,18 +132,17 @@ The following command shows how to do that with bash, but it can be adapted to a
 ::: tabs
 === Linux (bash)
 ```bash
-echo "alias exegol='sudo $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
+echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
+Note: on Ubuntu 26 and above, `sudo` has been replaced with `sudo-rs`. For now, we suggest using the legacy sudo through the `sudo.ws` command. 
 === Linux (zsh)
 ```zsh
-echo "alias exegol='sudo $(echo ~/.local/bin/exegol)'" >> ~/.zshrc && source ~/.zshrc
+echo "alias exegol='sudo -E $(echo ~/.local/bin/exegol)'" >> ~/.zshrc && source ~/.zshrc
 ```
+Note: on Ubuntu 26 and above, `sudo` has been replaced with `sudo-rs`. For now, we suggest using the legacy sudo through the `sudo.ws` command. 
 === macOS & Windows
 When using Docker Desktop, you **don't** need to use `sudo`. You can skip this step and follow the next one.
 :::
-
-> [!NOTE] No need for `sudo -E`
-> When run through `sudo`, the wrapper reads the variables it needs (display, proxy, Docker connection, license keys) from your own session, so `-E` is not required. This works with every `sudo` implementation, including `sudo-rs`, the default on Ubuntu since 25.10, which does not support `-E`. An existing alias using `sudo -E` keeps working. Values exported in your shell take precedence over a `sudo VAR=value` prefix.
 
 ## 3. Activation <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
@@ -178,55 +177,63 @@ exegol start
 
 This step is optional.
 
-Exegol completes actions, options, container names and image names when you press `<TAB>`.
-The wrapper generates the completion script itself with the
-[`completion`](/wrapper/cli/completion) action, so nothing else needs to be installed.
-
-Pick your shell below, then restart it.
+Exegol supports command auto-completion for easier usage. Here's how to set it up for your shell:
 
 ::: tabs
 
 === Bash
 
+First, install argcomplete:
 ```bash
-mkdir -p ~/.local/share/bash-completion/completions
-exegol completion bash > ~/.local/share/bash-completion/completions/exegol
+pipx install argcomplete
+```
+
+Then, add the following line to your `.bashrc`:
+
+```bash
+eval "$(register-python-argcomplete --no-defaults exegol)"
 ```
 
 === Zsh
 
-The completion directory must be in your `fpath` **before** `compinit` runs.
-
 ```zsh
-mkdir -p ~/.zsh/completions
-exegol completion zsh > ~/.zsh/completions/_exegol
+# Install argcomplete
+pipx install argcomplete
 
-# In ~/.zshrc, before compinit:
-fpath=(~/.zsh/completions $fpath)
+# Enable compinit if not already enabled
+echo "autoload -U compinit && compinit" >> ~/.zshrc
+
+# Add Exegol completion
+echo 'eval "$(register-python-argcomplete --no-defaults exegol)"' >> ~/.zshrc
 ```
 
 === Fish
 
 ```fish
-exegol completion fish > ~/.config/fish/completions/exegol.fish
+# Activate in current session
+register-python-argcomplete --no-defaults --shell fish exegol | source
+
+# Or create completion file
+register-python-argcomplete --no-defaults --shell fish exegol > ~/.config/fish/completions/exegol.fish
 ```
 
 === Tcsh
 
 ```sh
-eval `exegol completion tcsh`
+eval `register-python-argcomplete --no-defaults --shell tcsh exegol`
 ```
-
-Add that line to your `~/.cshrc` to make it permanent.
 
 === PowerShell
 
 ```powershell
+# Install argcomplete
+pipx install argcomplete
+
 # Create directory if needed
 mkdir $HOME\Documents\WindowsPowerShell -ErrorAction SilentlyContinue
 
 # Generate completion file
-exegol completion powershell > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
+register-python-argcomplete --no-defaults --shell powershell exegol > $HOME\Documents\WindowsPowerShell\exegol_completion.psm1
 
 # Import in profile
 Add-Content -Path $PROFILE -Value 'Import-Module "$HOME\Documents\WindowsPowerShell\exegol_completion.psm1"'

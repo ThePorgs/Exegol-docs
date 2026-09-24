@@ -87,7 +87,7 @@ For security reasons on Linux, we recommend running Exegol with `sudo` rather th
 
 ```bash
 # For bash
-echo "alias exegol-dev='sudo $(which exegol-dev)'" >> ~/.bash_aliases
+echo "alias exegol-dev='sudo -E $(which exegol-dev)'" >> ~/.bash_aliases
 source ~/.bashrc
 ```
 

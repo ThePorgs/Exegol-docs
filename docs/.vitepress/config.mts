@@ -74,8 +74,8 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.exegol.com' },
       { icon: 'linkedin', link: 'https://linkedin.exegol.com' },
       { icon: 'reddit', link: 'https://www.reddit.com/r/exegol' },
-      { icon: 'x', link: 'https://x.com/exegogol' },
-      { icon: 'youtube', link: 'https://www.youtube.com/@exegogol' },
+      { icon: 'x', link: 'https://x.com/exegolHQ' },
+      { icon: 'youtube', link: 'https://www.youtube.com/@exegolHQ' },
       { icon: 'github', link: 'https://github.com/ThePorgs/Exegol' },
     ]
   },
@@ -360,10 +360,6 @@ function sidebarMain(): SidebarItemWithBadge[] {
                 {
                   text: "build",
                   link: "wrapper/cli/build.md"
-                },
-                {
-                  text: "completion",
-                  link: "wrapper/cli/completion.md"
                 },
                 {
                   text: "exec",
