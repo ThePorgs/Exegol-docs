@@ -112,6 +112,23 @@ export default defineConfig({
         md.use(codeScrollPlugin);
         md.use(detailsPlugin);
         themeImagesPlugin()(md);
+        // Heading permalinks use the raw inline source, so a <Badge> in the
+        // heading becomes part of the accessible title. Keep the visible badge
+        // and use only the heading text for the label.
+        md.core.ruler.after('anchor', 'clean_permalink_labels', (state) => {
+            for (const token of state.tokens) {
+                if (!token.children) continue
+                for (const child of token.children) {
+                    if (child.type !== 'link_open') continue
+                    const label = child.attrGet('aria-label')
+                    if (!label || !label.includes('<')) continue
+                    const match = label.match(/^Permalink to "(.*)"$/)
+                    if (!match) continue
+                    const title = match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+                    child.attrSet('aria-label', `Permalink to "${title}"`)
+                }
+            }
+        })
     }
   }
 })
