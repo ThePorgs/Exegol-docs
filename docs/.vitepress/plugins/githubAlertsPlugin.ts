@@ -89,10 +89,7 @@ const githubAlertsPlugin = (md: MarkdownIt, options?: any) => {
 
   md.renderer.rules.github_alert_open = function(tokens, idx, _options, env) {
     const { title, type, icon } = tokens[idx].meta;
-    // renderInline re-enters VitePress's title plugin. That plugin sets
-    // env.title from the fragment, and an alert title has no h1, so the
-    // browser tab falls back to the site name. Render against a copy.
-    const renderedTitle = md.renderInline(title, { ...env });
+    const renderedTitle = md.renderInline(title, env);
     return `<div class="${type} custom-block">
       <div class="custom-block-title">
         <${icon} class="alert-icon" />
