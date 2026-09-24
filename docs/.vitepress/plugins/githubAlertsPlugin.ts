@@ -89,7 +89,10 @@ const githubAlertsPlugin = (md: MarkdownIt, options?: any) => {
 
   md.renderer.rules.github_alert_open = function(tokens, idx, _options, env) {
     const { title, type, icon } = tokens[idx].meta;
-    const renderedTitle = md.renderInline(title, env);
+    // renderInline re-enters VitePress's title plugin. The callout title has
+    // no h1, so sharing env clears the page title and the tab falls back to
+    // the site name. Render against a copy.
+    const renderedTitle = md.renderInline(title, { ...env });
     return `<div class="${type} custom-block">
       <div class="custom-block-title">
         <${icon} class="alert-icon" />
