@@ -62,7 +62,7 @@ Check your current shell by running `echo $SHELL`, then apply the commands for t
 Add the following alias to your `~/.bashrc` file by running the following command:
 
 ```bash
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
 ```
 
 === Zsh
@@ -70,7 +70,7 @@ echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/
 Add the following alias to your `~/.zshrc` file by running the following command:
 
 ```bash
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
 ```
 :::
 
