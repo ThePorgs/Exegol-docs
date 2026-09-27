@@ -115,13 +115,13 @@ Create a shortcut to run Exegol with `sudo` while keeping your user environment:
 For Bash:
 
 ```bash
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.bashrc && source ~/.bashrc
 ```
 
 For Zsh:
 
 ```zsh
-echo "alias exegol='sudo -E \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
+echo "alias exegol='sudo \$HOME/.local/bin/exegol'" >> ~/.zshrc && source ~/.zshrc
 ```
 
 

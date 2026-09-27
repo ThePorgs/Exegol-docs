@@ -362,6 +362,10 @@ function sidebarMain(): SidebarItemWithBadge[] {
                   link: "wrapper/cli/build.md"
                 },
                 {
+                  text: "completion",
+                  link: "wrapper/cli/completion.md"
+                },
+                {
                   text: "exec",
                   link: "wrapper/cli/exec.md"
                 },
