@@ -33,9 +33,9 @@ Before installing Exegol, ensure you have:
 
 Linux is the recommended platform for Exegol. No additional requirements necessary.
 
-Install Git and Python if not already installed:
+Install Git, Python3, and cURL:
 ```bash
-sudo apt update && sudo apt install -y git python3 pipx
+sudo apt update && sudo apt install -y git python3 pipx curl
 ```
 
 Ensure pipx is in PATH and reload the shell
