@@ -38,3 +38,16 @@ When a provider retires or renames a model, discovery follows. A missing model u
 Models with a thinking mode can be set to off, low, medium, or high, remembered per model. The control only appears when the model supports it.
 
 Keep in mind that reasoning effort costs tokens. Reasoning tokens are billed and count against the context window. High effort on a long autonomous run is an easy way to a surprising invoice.
+
+## Context
+
+Every turn has to fit in the model's **context window**. The [context gauge](/studio/interface/composer#context-gauge) shows how full it is.
+
+**Exegol System** is Studio's built-in layer: workspace layout, [approvals](/studio/behavior/approvals), follow-up behaviour, false-positive handling, where tools and wordlists live, aliases, and the rest of the cockpit contract. It keeps the model useful and controlled inside Exegol. It is **not** an editable system prompt: opening it would put approvals and tool routing at risk. Exegol keeps trimming it; expect incremental gains, not an empty shell you maintain yourself.
+
+Everything else is yours and spends the same window: your messages, [personas](/studio/behavior/personas), the harness ([skills](/studio/knowledge/skills), [rules](/studio/knowledge/rules), [agents](/studio/knowledge/agents), [hooks](/studio/knowledge/hooks), [briefs](/studio/knowledge/briefs)), [MCPs](/studio/knowledge/mcp) you enable, and attachments or mentions from the [composer](/studio/interface/composer). A light persona and a lean harness leave more room; heavy always-on rules, large briefs, and many MCP schemas spend it faster.
+
+When the gauge climbs, prefer levers on your side, or a larger window, over trying to gut Exegol System: trim persona / harness / MCP weight, pick a model with a larger window ([catalogue](#catalogue-and-discovery)), or compact (auto-compaction or `/compact`; detail is lost).
+
+> [!NOTE] Why Exegol System stays closed
+> Writable system prompts are a common request and a common way to break the product. Put methodology in the harness and tone in personas instead.

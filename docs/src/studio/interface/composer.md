@@ -70,7 +70,16 @@ The MCP button turns [MCPs](/studio/knowledge/mcp) on or off for the current run
 
 ## Context gauge
 
-The ring shows how much of the model window is used. Click it for a breakdown by category. When the window fills, Studio can compact older turns so the run can continue. Compaction costs tokens and loses detail; keep durable findings in `/workspace` files and in the kill chain.
+The ring shows how full the model window is. Hidden until a model is selected. Click to open or close the breakdown.
+
+What fills the window (see [Context](/studio/providers-models#context) for the full story):
+
+- **Exegol System**: Studio's built-in layer (not editable)
+- Your side: conversation, [personas](/studio/behavior/personas), harness ([skills](/studio/knowledge/skills), [rules](/studio/knowledge/rules), [agents](/studio/knowledge/agents), [hooks](/studio/knowledge/hooks), [briefs](/studio/knowledge/briefs)), [MCPs](/studio/knowledge/mcp), attachments and mentions
+- **Kept free for auto-compaction**: headroom held while auto-compaction is on; past it, older turns are summarized
+- **Free space**: room left under that reserve
+
+Compaction loses detail: keep findings in `/workspace` and the [kill chain](/studio/behavior/kill-chains), or run `/compact` from [Commands](#commands).
 
 ## Quick settings
 
