@@ -1,8 +1,8 @@
 ---
-title: A CTF, end to end
+title: Practical HTB session with Exegol Studio
 date: 2026-09-28
 author: Félix Billières
-description: A concrete look at a single CTF session run entirely in Exegol Studio, from creating the container to exporting a kill chain. A snapshot of what the first version of Studio feels like in practice.
+description: A HackTheBox session, solved through Exegol Studio. Take a look at what the first version of Exegol Studio feels like in practice.
 sidebar: false
 tags:
   - studio
@@ -12,7 +12,7 @@ tags:
   - ai
 ---
 
-# A CTF, end to end
+# Practical HTB session with Exegol Studio
 
 This walkthrough follows a CTF session in Exegol Studio, from creating the container to exporting a record of the work. Along the way, you will use the shell and file Explorer, share terminal output with the agent, look up documentation and adjust how the agent explains things.
 
