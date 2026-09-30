@@ -16,7 +16,9 @@ Open the **Exegol Studio** activity bar icon after install. If nothing appears, 
 
 ## 2. System checks
 
-Open Settings (in the Primary Side Bar on the left, Cog icon) → **System check**. Run it. It probes Docker (CLI and daemon), the Exegol CLI, whether an image and container exist, and whether the project's primary container is running. On Linux it also checks your user can reach the Docker socket (usually the `docker` group). If any checks fail, follow the instructions to fix them (i.e. adding your user to the `docker` group).
+Open Settings (Primary Side Bar, Cog icon) → **Support**. The **System check** card is at the top of that page. Run it (or use **Re-check**). It probes Docker (CLI and daemon), the Exegol CLI, whether an image and container exist, and whether the project's primary container is running. On Linux it also checks your user can reach the Docker socket (usually the `docker` group). If any check fails, follow the fix shown next to it.
+
+The same Support page can export a diagnostics report and points at the docs (and a Discord ticket on paid plans) when you need help.
 
 ![](/assets/studio/systemcheck.png)
 
