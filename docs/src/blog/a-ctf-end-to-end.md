@@ -45,7 +45,7 @@ For a new container:
 4. Enable **[desktop (RDP/VNC)](/wrapper/cli/start#graphical-desktop)** if you expect to use graphical tools.
 5. Create the container and follow the wrapper prompts in the terminal.
 
-![The new-container form with the name, VPN configuration and desktop option highlighted.](/assets/studio/handson_container_create.png)
+![The new-container form with the name, VPN configuration and desktop option highlighted.](/assets/blog/studio/handson_container_create.png)
 
 The screenshot uses **Host** networking, which shares the host's network namespace. A separate container keeps the tools and working files together, but this network mode does not isolate its VPN traffic from the host.
 
@@ -55,7 +55,7 @@ The desktop option is optional for this walkthrough. If enabled, it gives you a 
 
 Under Settings → **Projects**, select **New project** and give it a name. Open the project and link the running container. In this session, both are named `HackTheBox`, which makes them easy to recognise in the interface.
 
-![The HackTheBox project with its linked container marked PRIMARY.](/assets/studio/handson_project_primary.png)
+![The HackTheBox project with its linked container marked PRIMARY.](/assets/blog/studio/handson_project_primary.png)
 
 With one container linked, it is the **primary** container. Studio uses it to run tools and store project data. The project also groups your conversations, kill chains and project-specific harness settings.
 
@@ -67,7 +67,7 @@ The [project's workspace](/studio/interface/projects#host-paths-and-files) appea
 
 Open Settings → **Harness** → **Skills**. Expand **Available skills** to see the presets you can add. In the example, the user added **recon** at global scope.
 
-![The available-skills list, with the recon preset and Add to Global button highlighted.](/assets/studio/handson_skill_add.png)
+![The available-skills list, with the recon preset and Add to Global button highlighted.](/assets/blog/studio/handson_skill_add.png)
 
 Choose where the skill belongs:
 
@@ -76,7 +76,7 @@ Choose where the skill belongs:
 
 After adding it, check that it appears in the enabled list. User-invocable skills also appear when you type `/` in the composer. The next screenshot shows the installed skill and its slash command in the example session.
 
-![The recon skill enabled in the harness and referenced as a slash command in the composer.](/assets/studio/handson_skill_command.png)
+![The recon skill enabled in the harness and referenced as a slash command in the composer.](/assets/blog/studio/handson_skill_command.png)
 
 A [skill](/studio/knowledge/skills) supplies a procedure. It does not replace the instructions you give for the session or the project's approval policy. If a skill is missing from the `/` menu, check its **User-invocable** setting.
 
@@ -84,13 +84,13 @@ A [skill](/studio/knowledge/skills) supplies a procedure. It does not replace th
 
 Open **Configure** in the composer and choose **Monitor** under Layout. The menu also gives you access to mode, persona, approval and speed settings.
 
-![The Configure menu with Monitor selected from the layout options.](/assets/studio/handson_layout_menu.png)
+![The Configure menu with Monitor selected from the layout options.](/assets/blog/studio/handson_layout_menu.png)
 
 These controls serve different purposes. The [layout](/studio/interface/layouts#the-three-layouts) determines where the conversation and output appear. The [mode](/studio/behavior/modes) and [approval policy](/studio/behavior/approvals) determine what can run and when the agent hands control back.
 
 In Monitor, the editor area displays commands and their raw output, with the conversation beside it. You can inspect a result as it arrives instead of relying only on the agent's summary.
 
-![Monitor showing the recon commands and their output beside the conversation.](/assets/studio/handson_monitor.png)
+![Monitor showing the recon commands and their output beside the conversation.](/assets/blog/studio/handson_monitor.png)
 
 Monitor is not an interactive shell. It displays the agent's execution; you will open a separate terminal when you want to type commands yourself.
 
@@ -101,7 +101,7 @@ Monitor is not an interactive shell. It displays the agent's execution; you will
 
 In this session, the user stopped after the initial enumeration and reviewed the results in chat. The recap collected the ports, host information and questions that remained open. Network scans and service probes are active enumeration, even when limited to discovery.
 
-![The recon recap with the service table and notes about the host information.](/assets/studio/handson_recap.png)
+![The recon recap with the service table and notes about the host information.](/assets/blog/studio/handson_recap.png)
 
 Ask the agent to distinguish observations from assumptions, especially when a service banner is ambiguous or a command times out. For example:
 
@@ -113,7 +113,7 @@ Keeping the filenames in the recap makes it easier to revisit the original outpu
 
 Open the container tools menu near the top of the Studio sidebar and select **Terminal** under the primary container. The screenshot shows the `HackTheBox` shell opening in an editor tab.
 
-![The container tools menu with Terminal highlighted and the resulting shell open beside it.](/assets/studio/handson_shell.png)
+![The container tools menu with Terminal highlighted and the resulting shell open beside it.](/assets/blog/studio/handson_shell.png)
 
 This [container shell](/studio/interface/editors#container-shell) uses the same filesystem as the agent. Files saved under `/workspace` are available from both the shell and the project workspace. You can review saved output, organise files or take over a task manually without starting a separate environment.
 
@@ -125,7 +125,7 @@ Before changing files the agent is using, let its current operation finish or st
 
 During the example session, an NFS mount failed. The user typed `@` in the [composer](/studio/interface/composer#mentions), selected the terminal tab and asked for help. That supplied the terminal output as context for the next message.
 
-![A terminal tab mentioned in chat so the agent can read the mount error.](/assets/studio/handson_mention.png)
+![A terminal tab mentioned in chat so the agent can read the mount error.](/assets/blog/studio/handson_mention.png)
 
 Include what you expected as well as the error:
 
@@ -141,7 +141,7 @@ Open the VS Code **Explorer** and expand the folder associated with the project'
 
 In the screenshot, the user expands the `loot` folder and opens `marketing.png`. The image preview and directory tree are visible together, making it possible to inspect the downloaded file without leaving Studio.
 
-![The Explorer showing the container workspace, with marketing.png opened from the loot folder.](/assets/studio/handson_filesystem.png)
+![The Explorer showing the container workspace, with marketing.png opened from the loot folder.](/assets/blog/studio/handson_filesystem.png)
 
 The same workflow applies to text output and notes. Keep the original results in the workspace and write down your interpretation separately, so you can return to the evidence if a later step contradicts it. **Editor** layout leaves the conversation beside these files.
 
@@ -149,7 +149,7 @@ The same workflow applies to text output and notes. Keep the original results in
 
 When a terminal contains more output than the question needs, select the relevant lines, right-click and choose **Add Terminal Selection to Chat**. A context chip appears above the composer. Add your question before sending.
 
-![Selected terminal lines added to chat through the context menu, with a context chip visible in the composer.](/assets/studio/handson_terminal_selection.png)
+![Selected terminal lines added to chat through the context menu, with a context chip visible in the composer.](/assets/blog/studio/handson_terminal_selection.png)
 
 In the example, the selection contains a directory listing. A useful request for this kind of input is:
 
@@ -161,7 +161,7 @@ Use **Add Selection to Chat** for a text selection in an editor. To reference an
 
 An unfamiliar share name led to a question about Active Directory Certificate Services during the example session. The agent consulted [Atlas](/studio/knowledge/atlas) while answering.
 
-![The agent consulting Atlas while explaining an unfamiliar share name from the session.](/assets/studio/handson_atlas_lookup.png)
+![The agent consulting Atlas while explaining an unfamiliar share name from the session.](/assets/blog/studio/handson_atlas_lookup.png)
 
 Atlas holds documentation indexed for the agent to search and read. Bundled sources are available without setup. Ask for a lookup in plain language:
 
@@ -171,7 +171,7 @@ There is no `@atlas` mention or `/atlas` command. The agent chooses when to quer
 
 Open Settings → **Atlas** → **Open the constellation** to inspect the indexed documentation yourself. The graph shows pages and their relationships, which helps when you want to see what else a reference connects to.
 
-![The Atlas constellation showing related documentation pages.](/assets/studio/handson_atlas.png)
+![The Atlas constellation showing related documentation pages.](/assets/blog/studio/handson_atlas.png)
 
 Browsing the constellation does not attach its pages to the conversation. Page extracts enter the model's context when the agent reads them. Use [Briefs](/studio/knowledge/briefs) if you want to attach a reference document explicitly.
 
@@ -181,7 +181,7 @@ Paid plans also support importing your own references, such as a tool's document
 
 If the answer assumes knowledge you do not yet have, open Configure → **Persona** and select **Mentor**. In this session, the user made the change while trying to understand certificate services.
 
-![The persona menu with Mentor highlighted.](/assets/studio/handson_persona_menu.png)
+![The persona menu with Mentor highlighted.](/assets/blog/studio/handson_persona_menu.png)
 
 Then tell the agent where you need help:
 
@@ -189,7 +189,7 @@ Then tell the agent where you need help:
 
 The next screenshot shows the explanation after changing persona. Asking about a specific gap makes the response more useful than requesting a general introduction to the whole subject.
 
-![The Mentor response explaining certificate services and relating the concepts to the session.](/assets/studio/handson_mentor.png)
+![The Mentor response explaining certificate services and relating the concepts to the session.](/assets/blog/studio/handson_mentor.png)
 
 The [persona](/studio/behavior/personas) changes working style and depth of explanation. It does not change tool permissions or bypass approvals. For a discussion with no tool use, select **Answer** mode. If the explanation needs a documentation lookup, use a mode that allows those tools; Answer cannot perform the lookup.
 
@@ -199,7 +199,7 @@ You can switch back to a shorter working style when you are ready to continue. T
 
 Use `@killchain` in the composer to ask the agent to reconstruct or update the path from the evidence in the workspace. Include failed attempts and unresolved ideas as well as successful steps. You can do this during the session, then update the graph before finishing.
 
-![The kill-chain request in chat and the graph opened in a Studio tab.](/assets/studio/handson_killchain_build.png)
+![The kill-chain request in chat and the graph opened in a Studio tab.](/assets/blog/studio/handson_killchain_build.png)
 
 The mention asks the agent to work on the chain; it does not open the viewer directly. Open the result from its tool card in chat, or from Settings → **Kill chains**.
 
@@ -213,7 +213,7 @@ Click nodes to inspect their evidence and correct any gaps or mistaken connectio
 
 Arrange the view and use **Export PNG** to save it with your notes or a writeup. The following image is the exported result from this session.
 
-![The exported PNG of the session's kill chain.](/assets/studio/handson_killchain.png)
+![The exported PNG of the session's kill chain.](/assets/blog/studio/handson_killchain.png)
 
 Export is available on every plan; Community exports may include a watermark. Check the visible credentials and flag values before sharing the image.
 
