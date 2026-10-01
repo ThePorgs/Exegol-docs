@@ -26,6 +26,7 @@ autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnais
 avrdude,https://github.com/avrdudes/avrdude,AVRDUDE is a command-line program that allows you to download/upload/manipulate the ROM and EEPROM contents of AVR microcontrollers using the in-system programming technique (ISP).
 awscli,https://aws.amazon.com/cli/,Command-line interface for Amazon Web Services.
 azure-cli,https://github.com/Azure/azure-cli,A great cloud needs great tools; we're excited to introduce Azure CLI our next generation multi-platform command line experience for Azure.
+badsecrets,https://github.com/blacklanternsecurity/badsecrets,A pure python library for identifying the use of known or very weak cryptographic secrets across a variety of platforms.
 BBOT,https://github.com/blacklanternsecurity/bbot,BEE·bot is a multipurpose scanner inspired by Spiderfoot built to automate your Recon and ASM.
 bettercap,https://github.com/bettercap/bettercap,The Swiss Army knife for 802.11 / BLE / and Ethernet networks reconnaissance and MITM attacks.
 binaryninja,https://binary.ninja,An interactive decompiler - disassembler - debugger and binary analysis platform built by reverse engineers for reverse engineers.
@@ -366,6 +367,7 @@ smbmap,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and 
 smtp-user-enum,https://github.com/pentestmonkey/smtp-user-enum,A tool to enumerate email addresses via SMTP
 smuggler,https://github.com/defparam/smuggler,Smuggler is a tool that helps pentesters and red teamers to smuggle data into and out of the network even when there are multiple layers of security in place.
 SoapUI,https://github.com/SmartBear/soapui,SoapUI is the world's leading testing tool for API testing.
+soapy,https://github.com/logangoins/SOAPy,SOAPy is a Proof of Concept (PoC) utility for conducting offensive interaction with Active Directory Web Services (ADWS) through a SOCKS5 proxy.
 spiderfoot,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
 sprayhound,https://github.com/Hackndo/Sprayhound,Active Directory password audit tool.
 sqlmap,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
