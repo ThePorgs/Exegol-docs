@@ -51,7 +51,15 @@ Your installation function should include:
   yourtool.py --mode unauthenticated
   ```
 - `add-test-command "testcommand"` - For CI/CD unit tests. The command must return 0 if successful. If `--help` doesn't work, try using grep: `yourtool.py --help|& grep 'Usage:'`
-- `add-to-list "yourtool,https://link.to/the/tool,description"` - For tools list export. Format is CSV with 3 columns: name, link, description. No comma allowed in description.
+- `add-to-list` - For tools list export. Prepare the version first, then append a CSV line with 4 columns: name, version, link, description. No comma allowed in version or description. Leave the version field empty when unknown.
+
+  ```bash
+  local version
+  version="$(git_version /opt/tools/yourtool)"   # or pipx_version / apt_version / go_version / cargo_version / gem_version / cli_version / ""
+  add-to-list "yourtool,${version},https://link.to/the/tool,description"
+  ```
+
+  Shared helpers live in `sources/install/common.sh` (`normalize_version`, `git_version`, `pipx_version`, `apt_version`, `go_version`, `cargo_version`, `gem_version`, `github_release_version`, `cli_version`).
 
 ### Code Check Whitelisting
 
@@ -140,7 +148,9 @@ function install_yourtool() {
     ln -s "/opt/tools/yourtool/bin/yourtool" "/opt/tools/bin/yourtool"
     add-history yourtool
     add-test-command "yourtool --help"
-    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+    local version
+    version="$(…)"
+    add-to-list "yourtool,${version},https://github.com/AUTHOR/REPO,description"
 }
 ```
 
