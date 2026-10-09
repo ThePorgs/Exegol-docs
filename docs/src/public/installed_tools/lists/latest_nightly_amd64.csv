@@ -323,6 +323,7 @@ reaver,https://github.com/t6x/reaver-wps-fork-t6x,reaver is a tool for brute-for
 recon-ng,https://github.com/lanmaster53/recon-ng,External recon tool.
 recondog,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
 redis-tools,https://github.com/antirez/redis-tools,redis-tools is a collection of Redis client utilities including redis-cli and redis-benchmark.
+RelayInformer,https://github.com/zyn3rgy/RelayInformer,Determine EPA enforcement levels of popular NTLM relay targets from a Linux host.
 remmina,https://github.com/FreeRDP/Remmina,Remote desktop client.
 RemoteMonologue,https://github.com/3lp4tr0n/RemoteMonologue,A tool to coerce NTLM authentications via DCOM
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
@@ -366,6 +367,7 @@ smbclient-ng,https://github.com/p0dalirius/smbclient-ng,smbclient-ng is a fast a
 smbmap,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and check for null sessions
 smtp-user-enum,https://github.com/pentestmonkey/smtp-user-enum,A tool to enumerate email addresses via SMTP
 smuggler,https://github.com/defparam/smuggler,Smuggler is a tool that helps pentesters and red teamers to smuggle data into and out of the network even when there are multiple layers of security in place.
+snaffler-ng,https://github.com/totekuh/snaffler-ng,Python port of Snaffler using Impacket. Finds credentials and sensitive files on SMB shares.
 SoapUI,https://github.com/SmartBear/soapui,SoapUI is the world's leading testing tool for API testing.
 soapy,https://github.com/logangoins/SOAPy,SOAPy is a Proof of Concept (PoC) utility for conducting offensive interaction with Active Directory Web Services (ADWS) through a SOCKS5 proxy.
 spiderfoot,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
