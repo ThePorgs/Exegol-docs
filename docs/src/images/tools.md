@@ -3,33 +3,24 @@
 For detailed information about the different types of Exegol images, please refer to the [Images overview](/images/) page.
 
 But TL;DR, it goes like this for Community users.
-- `free`: The most comprehensive image. Similar to `full`, but a bit late.
+- `free`: the most comprehensive image. The `full` image, a few versions behind.
 
-And for <Badge type="pro" />, <Badge type="team" /> and <Badge type="enterprise" /> :
-- `nightly`: Development image with latest updates and feats.
-- Tagged releases (`full`, `ad`, `osint`, `web`, `light`): Stable versions with specific tool sets. 
+And for Pro and above:
+- `nightly`: development image with latest updates and feats.
+- Tagged releases (`full`, `ad`, `osint`, `web`, `light`): stable versions with specific tool sets. 
 
 ## Free image
 
 <markdownTable file="/installed_tools/free.csv" />
 
-## Nightly image <Badge type="pro" /><Badge type="team" /><Badge type="enterprise" />
+## Pro images <Badge type="pro" /><Badge type="team" /><Badge type="enterprise" />
 
-<markdownTable file="/installed_tools/nightly.csv" />
+The image tools list started in August 2023, starting with image version 3.1.0. Versions of the individual tools were added in October 2026, starting with image version 3.2.0.
 
-## Tagged releases <Badge type="pro" /><Badge type="team" /><Badge type="enterprise" />
-
-:::tabs
-=== AMD64
-<markdownTable file="/installed_tools/releases_amd64.csv" />
-
-=== ARM64
-<markdownTable file="/installed_tools/releases_arm64.csv" />
-
-:::
+<releaseSearch />
 
 ## Latest nightly   <Badge type="pro" /><Badge type="team" /><Badge type="enterprise" />
-<a id="latest_nightly"></a>  
+
 Below is the list of tools featured in the latest nightly (AMD64) image.
 
 <markdownTable file="/installed_tools/lists/latest_nightly_amd64.csv" />

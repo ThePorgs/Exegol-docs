@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import Papa from 'papaparse'
 import { Download } from 'lucide-vue-next'
+import { formatBuildDate } from '../formatBuildDate'
 
 const props = defineProps({
   file: String
@@ -12,6 +13,9 @@ const toolLinks = ref<Map<number, string>>(new Map())
 
 const isDownloadLink = (text: string) =>
   (text.includes('[download]') || text.includes(':download:'))
+
+const isBuildDateColumn = (cellIndex: number) =>
+  tableData.value[0]?.[cellIndex]?.trim().toLowerCase() === 'build date'
 
 const isValidUrl = (text: string) => {
   try {
@@ -116,6 +120,9 @@ onMounted(async () => {
           </template>
           <template v-else-if="cellIndex === 0 && (tableData[0][0].toLowerCase() === 'tool' || tableData[0][0].toLowerCase() === 'resource') && toolLinks.get(rowIndex)">
             <a :href="toolLinks.get(rowIndex)" target="_blank" rel="noopener noreferrer">{{ cell }}</a>
+          </template>
+          <template v-else-if="isBuildDateColumn(cellIndex)">
+            <span :title="cell">{{ formatBuildDate(cell) }}</span>
           </template>
           <template v-else>
             {{ cell }}
