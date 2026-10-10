@@ -8,6 +8,7 @@ import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 import mediumZoom from 'medium-zoom'
 import Asciinema from './components/Asciinema.vue'
 import CSVTable from './components/CSVMarkdown.vue'
+import ReleaseSearch from './components/ReleaseSearch.vue'
 import YouTubeVideo from './components/YouTubeVideo.vue'
 import CustomSidebarItem from './components/CustomSidebarItem.vue'
 import BlogList from './components/BlogList.vue'
@@ -60,6 +61,7 @@ export default {
 
     app.component('Asciinema', Asciinema)
     app.component('markdownTable', CSVTable)
+    app.component('releaseSearch', ReleaseSearch)
     app.component('YouTubeVideo', YouTubeVideo)
 
 
