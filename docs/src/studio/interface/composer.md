@@ -23,7 +23,7 @@ The composer border stays neutral. Risk colour is on the send button only.
 
 ## Show active window
 
-The scan icon (with a colour mark in the middle when the project has more than one container) sits just before the paperclip. Hover label: **Show active window**.
+The scan icon (with a colour mark in the middle when the project has more than one container) sits just before the paperclip. Hover label: **Show active window**. That mark matches the corner swatch on that container's shell, desktop, and tool tabs. See [Editors and tabs](/studio/interface/editors).
 
 It targets the container this session **runs** in (the same one Quick settings can still change before the first message). Clicking it tells the host to bring that container's open Studio windows forward: shells, the desktop tab, and web tool tabs. One reveal per editor group; tabs already in that group stay where they are and come to the front together.
 

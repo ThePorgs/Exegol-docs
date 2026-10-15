@@ -43,4 +43,8 @@ Rows are ordered by how much was said, busiest first. A pin marks the row on thi
 
 Rename, pin, export, or delete from the row. Export builds a recording or a Markdown transcript of that session. Delete removes that session and its history from the container.
 
+Untitled sessions take a short title from the first message you send (a few words, capitalised). You can rename afterwards.
+
 The row shows the same fields as Default. A dimmed control is following the default. Changing it writes that field onto this session only. **Attached container** is shown locked: it was fixed when the session was created.
+
+In the session menus (sidebar, Room, this page), a per-row **container tag** appears only when the project has more than one container and the listed sessions actually run in different ones. When every row shares the same container, the tag stays off.

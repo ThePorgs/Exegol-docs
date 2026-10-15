@@ -22,6 +22,9 @@ When every check is green the card folds to **System checks are green.** **Re-ch
 
 The same Support page can export a diagnostics report and points at the docs (and a Discord ticket on paid plans) when you need help.
 
+> [!NOTE] Windows and WSL
+> Exegol activation lives with the wrapper. If you activated Exegol inside WSL but opened the folder in Windows VS Code, Studio cannot see that license. Use **WSL: Reopen Folder in WSL** and install Exegol Studio in that distribution. A WSL terminal alone is not enough. The license page and Support report say so when this case applies.
+
 ![](/assets/studio/systemcheck.png)
 
 ## 3. Connect a model provider
