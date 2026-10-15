@@ -4,7 +4,7 @@ autorecon,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnais
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 bloodhound.py,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
 cloudfail,https://github.com/m0rtem/CloudFail,a reconnaissance tool for identifying misconfigured CloudFront domains.
-coercer,https://github.com/p0dalirius/coercer,DFS-R target coercion tool
+coercer,https://github.com/p0dalirius/coercer,Coerce Windows servers to authenticate to an attacker through many RPC methods
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 droopescan,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
 drupwn,https://github.com/immunIT/drupwn,Drupal security scanner.
@@ -28,7 +28,7 @@ mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 neo4j,https://github.com/neo4j/neo4j,Database.
 neovim,https://neovim.io/,hyperextensible Vim-based text editor
-netexec,https://github.com/Pennyw0rth/NetExec,Network scanner (Crackmapexec updated).
+netexec,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
 nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
 nuclei,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
 proxychains,https://github.com/rofl0r/proxychains,Proxy chains - redirect connections through proxy servers.

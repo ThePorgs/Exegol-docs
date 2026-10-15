@@ -33,7 +33,7 @@ rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps 
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
 seclists,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
-shellerator,https://github.com/ShutdownRepo/Shellerator,a simple command-line tool for generating shellcode
+shellerator,https://github.com/ShutdownRepo/Shellerator,Generate bind and reverse shell one-liners in several languages
 simplyemail,https://github.com/SimplySecurity/SimplyEmail,a scriptable command line tool for sending emails
 smbclient,https://github.com/samba-team/samba,SMBclient is a command-line utility that allows you to access Windows shared resources
 smbmap,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and check for null sessions

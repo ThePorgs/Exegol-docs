@@ -22,7 +22,7 @@ gf,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common 
 GHunt,https://github.com/mxrch/GHunt,Investigate Google Accounts with emails
 githubemail,https://github.com/paulirish/github-email,a command-line tool to retrieve a user's email from Github.
 glow,https://github.com/charmbracelet/glow,glow is a tool to render Markdown inside the terminal.
-GoMapEnum,https://github.com/nodauf/GoMapEnum,Nothing new but existing techniques are brought together in one tool.
+GoMapEnum,https://github.com/nodauf/GoMapEnum,Enumerate users and spray passwords against Azure ADFS OWA O365 and Teams.
 goshs,https://github.com/patrickhener/goshs,Goshs is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S with either self-signed certificate or user provided certificate and you can use HTTP basic auth.
 gron,https://github.com/tomnomnom/gron,Make JSON greppable!
 h8mail,https://github.com/khast3x/h8mail,Email OSINT and breach hunting.
@@ -33,7 +33,7 @@ Instaloader,https://github.com/instaloader/instaloader,Download content/captions
 ipinfo,https://github.com/ipinfo/cli,Get information about an IP address or hostname.
 keepassxc,https://github.com/keepassxreboot/keepassxc,Cross-platform password manager
 linkedin2username,https://github.com/initstring/linkedin2username,Generate a list of LinkedIn usernames from a company name.
-maigret,https://github.com/soxoj/maigret,Collects information about a target email (or domain) from Google and Bing search results
+maigret,https://github.com/soxoj/maigret,Collect a dossier on a username across thousands of websites
 maltego,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 Metagoofil,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
@@ -42,19 +42,19 @@ neovim,https://neovim.io/,hyperextensible Vim-based text editor
 nfsshell,https://github.com/Supermathie/nfsshell,NFSShell is a tool for interacting with NFS shares without mounting them.
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
 objectwalker,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
-OpenVPN,https://openvpn.net/,Fast and Easy Zero-Trust VPN Fully in Your Control
+OpenVPN,https://openvpn.net/,Open-source VPN that tunnels network traffic over TLS
 phoneinfoga,https://github.com/sundowndev/PhoneInfoga,Information gathering & OSINT framework for phone numbers.
 photon,https://github.com/s0md3v/Photon,a fast web crawler which extracts URLs / files / intel & endpoints from a target.
 pwndb,https://github.com/davidtavarez/pwndb,A command-line tool for searching the pwndb database of compromised credentials.
-pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Check if a password has been leaked in a data breach.
+pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Look up passwords leaked for a compromised email address.
 pyftpdlib,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
-pymeta,https://github.com/m8sec/pymeta,Google and Bing scraping osint tool
+pymeta,https://github.com/m8sec/pymeta,Download public documents and extract metadata such as usernames and software
 recon-ng,https://github.com/lanmaster53/recon-ng,External recon tool.
 recondog,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
-shellerator,https://github.com/ShutdownRepo/Shellerator,a simple command-line tool for generating shellcode
+shellerator,https://github.com/ShutdownRepo/Shellerator,Generate bind and reverse shell one-liners in several languages
 Sherlock,https://github.com/sherlock-project/sherlock,Hunt down social media accounts by username across social networks.
 simplyemail,https://github.com/SimplySecurity/SimplyEmail,a scriptable command line tool for sending emails
 spiderfoot,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources

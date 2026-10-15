@@ -21,7 +21,7 @@ imagemagick,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and
 infoga,https://github.com/m4ll0k/Infoga,Information gathering tool for hacking.
 ipinfo,https://github.com/ipinfo/cli,Get information about an IP address or hostname.
 linkedin2username,https://github.com/initstring/linkedin2username,Generate a list of LinkedIn usernames from a company name.
-maigret,https://github.com/soxoj/maigret,Collects information about a target email (or domain) from Google and Bing search results
+maigret,https://github.com/soxoj/maigret,Collect a dossier on a username across thousands of websites
 maltego,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 ngrok,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
@@ -30,13 +30,13 @@ osrframework,https://github.com/i3visio/osrframework,Include references to a bun
 phoneinfoga,https://github.com/sundowndev/PhoneInfoga,Information gathering & OSINT framework for phone numbers.
 photon,https://github.com/s0md3v/Photon,a fast web crawler which extracts URLs / files / intel & endpoints from a target.
 pwndb,https://github.com/davidtavarez/pwndb,A command-line tool for searching the pwndb database of compromised credentials.
-pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Check if a password has been leaked in a data breach.
+pwnedornot,https://github.com/thewhiteh4t/pwnedOrNot,Look up passwords leaked for a compromised email address.
 recon-ng,https://github.com/lanmaster53/recon-ng,External recon tool.
 recondog,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
 rlwrap,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
 rsync,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
 searchsploit,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
-shellerator,https://github.com/ShutdownRepo/Shellerator,a simple command-line tool for generating shellcode
+shellerator,https://github.com/ShutdownRepo/Shellerator,Generate bind and reverse shell one-liners in several languages
 simplyemail,https://github.com/SimplySecurity/SimplyEmail,a scriptable command line tool for sending emails
 spiderfoot,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
 subfinder,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
