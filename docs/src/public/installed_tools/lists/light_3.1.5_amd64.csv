@@ -23,7 +23,7 @@ jwt,https://github.com/ticarpi/jwt_tool,a command-line tool for working with JSO
 mdcat,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 metasploit,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 neovim,https://neovim.io/,hyperextensible Vim-based text editor
-netexec,https://github.com/Pennyw0rth/NetExec,Network scanner (Crackmapexec updated).
+netexec,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
 nmap,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
 nuclei,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
 responder,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
