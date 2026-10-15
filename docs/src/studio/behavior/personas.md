@@ -2,7 +2,7 @@
 
 A **persona** shapes how the agent works with you: pacing, how much it explains, when it checks in, what register it writes in. It does not change what the agent is allowed to do.
 
-Personas live under Settings → **Personas**. Pick one from composer [quick settings](/studio/interface/composer#quick-settings).
+Personas live under Settings → **Personas**. The one in force belongs to the session: pick it from composer [Quick settings](/studio/interface/composer#quick-settings), or from the session's row under Settings → **Sessions**. The persona a new session starts with is the Default on that page.
 
 Some personas are made available out of the box to all (for example **Neutral** and **Mentor**).
 
@@ -12,12 +12,12 @@ Some personas are made available out of the box to all (for example **Neutral** 
 
 The paid plans include additional personas (for example **Candid**) and allow you to write your own. Editing a built-in creates an override you can reset after a release.
 
-Settings → **Personas**, or the pencil on a persona in quick settings.
+Settings → **Personas**, or the pencil on a persona in Quick settings.
 
 Personas you already saved stay selectable if the plan changes.
 
 > [!TIP] Working styles, not roles
-> Mentor changes how much the agent explains while doing the same work. It is not a “web app specialist”. Put methodology in a [skill](/studio/knowledge/skills), specialised workers in an [agent](/studio/knowledge/agents), constraints in a [rule](/studio/knowledge/rules), hard enforcement in a [hook](/studio/knowledge/hooks), and documents you attach yourself in a [brief](/studio/knowledge/briefs). Keep tone and pace in the persona: you can switch them from composer [quick settings](/studio/interface/composer#quick-settings) on the next message, without editing those harness definitions.
+> Mentor changes how much the agent explains while doing the same work. It is not a “web app specialist”. Put methodology in a [skill](/studio/knowledge/skills), specialised workers in an [agent](/studio/knowledge/agents), constraints in a [rule](/studio/knowledge/rules), hard enforcement in a [hook](/studio/knowledge/hooks), and documents you attach yourself in a [brief](/studio/knowledge/briefs). Keep tone and pace in the persona: you can switch them for this session from composer [Quick settings](/studio/interface/composer#quick-settings) on the next message, without editing those harness definitions.
 
 ## What outranks a persona
 

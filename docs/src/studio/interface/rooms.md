@@ -1,6 +1,6 @@
 # Rooms
 
-A Room is a grid of live session tiles in one editor tab. Use it when more than a couple of agents are running and clicking each session no longer scales.
+A Room is a grid of live session tiles in one editor tab. Use it when more than a couple of agents are running and clicking each session no longer scales. Each tile is its own conversation, with its own [quick settings](/studio/interface/sessions). Steering or queueing a message on one tile does not touch the others.
 
 ![](/assets/studio/rooms.png)
 
@@ -18,6 +18,6 @@ A session shows as a tile in the Room. There are three sizes: S, M, L.
 
 - S: Glance, attention bar jumps you to the cockpit when needed
 - M: Supervise, allow / deny inline, stop the run
-- L: Pilot, full feed plus input to steer without leaving the grid
+- L: Pilot, full feed plus a composer, so you can [steer or queue](/studio/interface/composer#while-the-agent-is-working) without leaving the grid
 
 The header gauge shows running / waiting / error / done. A "needs you" filter scopes the grid to blocked or failed tiles.

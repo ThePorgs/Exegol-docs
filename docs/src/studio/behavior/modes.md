@@ -1,6 +1,6 @@
 # Modes
 
-The **mode** decides how far the agent goes on a single message before handing control back. It is independent of [approvals](/studio/behavior/approvals) (including Bypass). Pick a mode from composer [quick settings](/studio/interface/composer#quick-settings).
+The **mode** decides how far the agent goes on a single message before handing control back. It is independent of [approvals](/studio/behavior/approvals) (including Bypass). The mode belongs to the session: pick it from composer [Quick settings](/studio/interface/composer#quick-settings), or from the session's row under Settings → **Sessions**. The mode a new session starts on is the Default on that page.
 
 Three built-in modes ship on every plan.
 
@@ -38,7 +38,7 @@ The paid plans allow you to build modes of your own.
 
 Under Settings → **Modes**, create a mode with a name, a turn ceiling, optional time and token budgets, and **Keep working without handing back**.
 
-- Switch **on**: the agent keeps going until the task is done, a limit hits, or you stop it. You can still type to steer mid-run.
+- Switch **on**: the agent keeps going until the task is done, a limit hits, or you stop it. You can still type while it works: [steer the current task, or queue the next one](/studio/interface/composer#while-the-agent-is-working).
 - Switch **off**: behaves like Auto, with the ceiling you set.
 
 Modes you already built stay selectable if the plan changes.

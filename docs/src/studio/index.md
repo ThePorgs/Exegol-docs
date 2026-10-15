@@ -15,7 +15,7 @@ Exegol Studio lowers the gap between *"I know what to run"* and actually running
 - [Monitor](/studio/interface/layouts#the-three-layouts) layout: watch each command and its raw output as it runs
 - [Mentor](/studio/behavior/personas) persona: explains the why while it works
 - [Approvals](/studio/behavior/approvals): keep you in the loop until you trust the policy
-- [Speed](/studio/interface/composer#quick-settings) to the minimum: to slow down the paint so a walkthrough stays followable
+- [Trace speed](/studio/interface/composer#quick-settings) set to Step: slow the paint so a walkthrough stays followable
 
 ## Teach it
 
@@ -29,7 +29,7 @@ A generic model knows about as much about chaining unauth recon into an account 
 
 Operators who already know the craft will love Studio as an IDE for hacking:
 
-- [Editor](/studio/interface/layouts#the-three-layouts) layout, [Speed](/studio/interface/composer#quick-settings) set to the maximum, [Candid](/studio/behavior/personas#writing-one) persona. Be faster, better.
+- [Editor](/studio/interface/layouts#the-three-layouts) layout, [trace speed](/studio/interface/composer#quick-settings) set to Machine, [Candid](/studio/behavior/personas#writing-one) persona. Be faster, better.
 - [Rooms](/studio/interface/rooms) for multiple parallel sessions in the same engagement
 - [Kill chain](/studio/behavior/kill-chains) for continuity across the engagement
 - The harness and MCPs you taught it: relevance that survives past the first prompt

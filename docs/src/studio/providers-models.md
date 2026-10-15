@@ -1,8 +1,8 @@
 # Providers and models
 
-Studio ships no model of its own. You connect a provider, then pick which model runs each turn from the [composer](/studio/interface/composer#model).
+Studio ships no model of its own. You connect a provider, then pick which model this session calls from the [composer](/studio/interface/composer#model). The model a new session starts on is the default under [Sessions](/studio/interface/sessions).
 
-Settings → **Providers** (keys and endpoints) and the model list on each provider tile.
+Settings → **Providers** (keys and endpoints) and the model list on each provider tile. Reasoning effort and Fast mode live on Settings → **Model**.
 
 ![](/assets/studio/providers.png)
 
@@ -16,7 +16,7 @@ Where supported, sign in with a consumer plan instead of pasting a key (for exam
 
 ### Self-hosted providers <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
-Attaching a local runtime (Ollama, LM Studio, llama.cpp, vLLM, ...) or defining a custom OpenAI-compatible base URL.
+Attaching a local runtime (Ollama, LM Studio, llama.cpp, LocalAI, vLLM, ...) or defining a custom OpenAI-compatible base URL. A local connection is edited in one place, and the card shows whether the last probe reached it.
 
 Vertex AI, Amazon Bedrock, and Azure OpenAI use their own auth (ADC, IAM, API keys, Entra). Configure them from the Providers page with the project, region, or resource your organisation requires.
 
@@ -33,11 +33,13 @@ The catalogue is the general offer. Your account may differ. Studio asks each co
 
 When a provider retires or renames a model, discovery follows. A missing model usually means it is gone upstream.
 
-## Reasoning effort
+## Effort and fast mode
 
-Models with a thinking mode can be set to off, low, medium, or high, remembered per model. The control only appears when the model supports it.
+Settings → **Model**. The same knobs are on the model in the [composer picker](/studio/interface/composer#model).
 
-Keep in mind that reasoning effort costs tokens. Reasoning tokens are billed and count against the context window. High effort on a long autonomous run is an easy way to a surprising invoice.
+Models with a thinking mode can be set to off, low, medium, or high. Fast mode, where the provider offers a faster tier, spends more of that plan's quota for a faster reply. Each is remembered per model, against a default on the Model page. The page lists the models that override the default, and each override can be reset. A card is omitted when no configured model offers that knob.
+
+Reasoning tokens are billed and count against the context window. High effort on a long autonomous run is an easy way to a surprising invoice. Fast mode is on the same bill: the picker marks a model that has it on.
 
 ## Context
 

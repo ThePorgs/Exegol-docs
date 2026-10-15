@@ -2,7 +2,7 @@
 
 Two controls decide what runs on your behalf: the **mode** (how far the agent goes on one message) and the **approval policy** (what may run without asking). Modes live under [Modes](/studio/behavior/modes). This page is the approval axis, including **Bypass**.
 
-Both sit in composer [quick settings](/studio/interface/composer#quick-settings). Bypass is **not** a fourth mode.
+Both sit in composer [Quick settings](/studio/interface/composer#quick-settings), and they belong to the session on screen. The defaults a new session starts from are on [Sessions](/studio/interface/sessions). Bypass is **not** a fourth mode. The info icon on the Bypass row opens the Bypass note on that Default card.
 
 ![](/assets/studio/composer.png)
 
@@ -39,7 +39,7 @@ Between "allow everything by hand" and Bypass sits the policy:
 | `ask` | Shows the card |
 | `deny` | Blocked even with Bypass |
 
-Last matching rule wins. Rules cover reads, writes, and exec patterns.
+A matching **deny** wins over any allow or ask, including behind a wrapper, a redirection, or a substitution. Between allow and ask, the last matching rule wins. Rules cover reads, writes, and exec patterns.
 
 A multi-segment command (`;`, `&&`, pipes) **auto-runs only if every segment matches an allow rule**. Otherwise the card. Substitutions and unvetted forms always ask.
 
