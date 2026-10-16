@@ -43,6 +43,27 @@ Import multiple credentials from a CSV file
 exh import creds --file creds.csv --format CSV
 ```
 
+## Synchronization
+
+`Exegol-history` can automatically pull credentials and hosts from external tools such as [NetExec](https://github.com/Pennyw0rth/NetExec) and Metasploit, so you don't have to import them by hand.
+
+```sh
+exh sync
+```
+
+> [!TIP] Enabling synchronization
+> Synchronization is **disabled by default**. Before it can be used, the connector(s) you need must be enabled in the configuration file located at `~/.exegol_history/config.toml`:
+> ```toml
+> [sync.netexec]
+> enabled = true
+> workspace_path = "~/.nxc/workspaces/"
+>
+> [sync.metasploit]
+> enabled = true
+> db_config_path = "/var/lib/postgresql/.msf4/database.yml"
+> ```
+> Once enabled, running `exh` imports the credentials and hosts from every enabled source into exh's database, the synchronisation can also be invoked manually by using the `exh sync` command.
+
 ## Advanced variables
 
 If you have other custom variables to configure, you can manually update the file `/opt/tools/Exegol-history/profile.sh` and reload your current shell with the command `exec $SHELL`.
