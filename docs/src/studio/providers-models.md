@@ -1,8 +1,8 @@
 # Providers and models
 
-Studio ships no model of its own. You connect a provider, then pick which model runs each turn from the [composer](/studio/interface/composer#model).
+Studio ships no model of its own. You connect a provider, then pick which model this session calls from the [composer](/studio/interface/composer#model). The model a new session starts on is the default under [Sessions](/studio/interface/sessions).
 
-Settings → **Providers** (keys and endpoints) and the model list on each provider tile.
+Settings → **Providers** (keys and endpoints) and the model list on each provider tile. Reasoning effort and Fast mode live on Settings → **Model**.
 
 ![](/assets/studio/providers.png)
 
@@ -16,7 +16,7 @@ Where supported, sign in with a consumer plan instead of pasting a key (for exam
 
 ### Self-hosted providers <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>
 
-Attaching a local runtime (Ollama, LM Studio, llama.cpp, vLLM, ...) or defining a custom OpenAI-compatible base URL.
+Attaching a local runtime (Ollama, LM Studio, llama.cpp, LocalAI, vLLM, ...) or defining a custom OpenAI-compatible base URL. A local connection is edited in one place, and the card shows whether the last probe reached it.
 
 Vertex AI, Amazon Bedrock, and Azure OpenAI use their own auth (ADC, IAM, API keys, Entra). Configure them from the Providers page with the project, region, or resource your organisation requires.
 
@@ -33,8 +33,23 @@ The catalogue is the general offer. Your account may differ. Studio asks each co
 
 When a provider retires or renames a model, discovery follows. A missing model usually means it is gone upstream.
 
-## Reasoning effort
+## Effort and fast mode
 
-Models with a thinking mode can be set to off, low, medium, or high, remembered per model. The control only appears when the model supports it.
+Settings → **Model**. The same knobs are on the model in the [composer picker](/studio/interface/composer#model).
 
-Keep in mind that reasoning effort costs tokens. Reasoning tokens are billed and count against the context window. High effort on a long autonomous run is an easy way to a surprising invoice.
+Models with a thinking mode can be set to off, low, medium, or high. Fast mode, where the provider offers a faster tier, spends more of that plan's quota for a faster reply. Each is remembered per model, against a default on the Model page. The page lists the models that override the default, and each override can be reset. A card is omitted when no configured model offers that knob.
+
+Reasoning tokens are billed and count against the context window. High effort on a long autonomous run is an easy way to a surprising invoice. Fast mode is on the same bill: the picker marks a model that has it on.
+
+## Context
+
+Every turn has to fit in the model's **context window**. The [context gauge](/studio/interface/composer#context-gauge) shows how full it is.
+
+**Exegol System** is Studio's built-in layer: workspace layout, [approvals](/studio/behavior/approvals), follow-up behaviour, false-positive handling, where tools and wordlists live, aliases, and the rest of the cockpit contract. It keeps the model useful and controlled inside Exegol. It is **not** an editable system prompt: opening it would put approvals and tool routing at risk. Exegol keeps trimming it; expect incremental gains, not an empty shell you maintain yourself.
+
+Everything else is yours and spends the same window: your messages, [personas](/studio/behavior/personas), the harness ([skills](/studio/knowledge/skills), [rules](/studio/knowledge/rules), [agents](/studio/knowledge/agents), [hooks](/studio/knowledge/hooks), [briefs](/studio/knowledge/briefs)), [MCPs](/studio/knowledge/mcp) you enable, and attachments or mentions from the [composer](/studio/interface/composer). A light persona and a lean harness leave more room; heavy always-on rules, large briefs, and many MCP schemas spend it faster.
+
+When the gauge climbs, prefer levers on your side, or a larger window, over trying to gut Exegol System: trim persona / harness / MCP weight, pick a model with a larger window ([catalogue](#catalogue-and-discovery)), or compact (auto-compaction or `/compact`; detail is lost).
+
+> [!NOTE] Why Exegol System stays closed
+> Writable system prompts are a common request and a common way to break the product. Put methodology in the harness and tone in personas instead.
