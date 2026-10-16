@@ -1,8 +1,8 @@
 # Modes
 
-The **mode** decides how far the agent goes on a single message before handing control back. It is independent of [approvals](/studio/behavior/approvals) (including Bypass). Pick a mode from composer [quick settings](/studio/interface/composer#quick-settings).
+The **mode** decides how far the agent goes on a single message before handing control back. It is independent of [approvals](/studio/behavior/approvals) (including Bypass). The mode belongs to the session: pick it from composer [Quick settings](/studio/interface/composer#quick-settings), or from the session's row under Settings → **Sessions**. The mode a new session starts on is the Default on that page.
 
-Three built-in modes ship on every plan.
+Three built-in modes ship on every plan. Each has a colour on the Quick settings chip and on Settings → **Modes**: Auto is quiet grey, Plan is yellow, Answer is blue.
 
 ![](/assets/studio/composer.png)
 
@@ -12,11 +12,11 @@ Three built-in modes ship on every plan.
 
 === Auto
 
-Runs tools step by step and stays in the loop between steps. Default for real work. Respects your approval rules unless Bypass is on.
+Runs tools step by step and stays in the loop between steps. Default for real work. Respects your approval rules unless Bypass is on. Quiet grey on the Quick settings chip.
 
 === Plan
 
-Investigate with **read-only tools** (files, search, optional web/docs), then a written plan card. **No `exec`**, and no write/edit tools: Plan cannot run shell commands.
+Investigate with **read-only tools** (files, search, optional web/docs), then a written plan card. **No `exec`**, and no write/edit tools: Plan cannot run shell commands. Yellow on the Quick settings chip.
 
 On the card:
 
@@ -28,7 +28,7 @@ File reads still follow your read approval rules.
 
 === Answer
 
-Chat only. No tools. Nothing runs in the container. Use for explanations and brainstorming.
+Chat only. No tools. Nothing runs in the container. Use for explanations and brainstorming. Blue on the Quick settings chip.
 
 :::
 
@@ -36,9 +36,9 @@ Chat only. No tools. Nothing runs in the container. Use for explanations and bra
 
 The paid plans allow you to build modes of your own.
 
-Under Settings → **Modes**, create a mode with a name, a turn ceiling, optional time and token budgets, and **Keep working without handing back**.
+Under Settings → **Modes**, create a mode with a name, an icon, a colour (the same palette Auto, Plan, and Answer use on the Quick settings chip), a turn ceiling, optional time and token budgets, and **Keep working without handing back**.
 
-- Switch **on**: the agent keeps going until the task is done, a limit hits, or you stop it. You can still type to steer mid-run.
+- Switch **on**: the agent keeps going until the task is done, a limit hits, or you stop it. You can still type while it works: [steer the current task, or queue the next one](/studio/interface/composer#while-the-agent-is-working).
 - Switch **off**: behaves like Auto, with the ceiling you set.
 
 Modes you already built stay selectable if the plan changes.

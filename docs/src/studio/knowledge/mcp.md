@@ -10,7 +10,7 @@ When you add a server, the first choice is **where the process runs**, not a tra
 
 | Where | What happens |
 | ----- | ------------ |
-| **In the container** | Command runs through `docker exec` in the project's primary container. Tools see the engagement filesystem and network. |
+| **In the container** | Command runs through `docker exec` in the project's **first** container (the one that stores sessions). Tools see that container's filesystem and network. This is not the container a particular session is [attached](/studio/interface/sessions) to. |
 | **On this machine** | stdio process on your **host**, outside the container boundary. |
 | **Remote (URL)** | HTTP / SSE endpoint at a URL you provide. |
 
