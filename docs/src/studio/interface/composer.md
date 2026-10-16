@@ -10,26 +10,17 @@ The composer is where you write your prompts. The toolbar picks the model and th
 | [Model](#model) | Which model this session calls |
 | [MCP](#mcp) | Toggle external servers for this run |
 | [Context gauge](#context-gauge) | How full the window is |
-| [Show active window](#show-active-window) | Bring forward the open GUI windows of the container this session runs in |
 | [Attachments](#attachments) | Paperclip: pick files or images from the **host** |
 | [Quick settings](#quick-settings) | Mode, container (until the first message), Bypass, persona, trace speed |
 | Send | Blue by default. Orange while Bypass is on. The placeholder says which |
 
-On a narrow composer, MCP, Show active window, and the paperclip drop out so the row can wrap. Model, the gauge, Quick settings, and Send stay.
+On a narrow composer, MCP and the paperclip drop out so the row can wrap. Model, the gauge, Quick settings, and Send stay.
 
 The composer border stays neutral. Risk colour is on the send button only.
 
 [Mentions](#mentions) (`@`) and [commands](#commands) (`/`) are typed in the box, not toolbar buttons.
 
-## Show active window
-
-The scan icon (with a colour mark in the middle when the project has more than one container) sits just before the paperclip. Hover label: **Show active window**. That mark matches the corner swatch on that container's shell, desktop, and tool tabs. See [Editors and tabs](/studio/interface/editors).
-
-It targets the container this session **runs** in (the same one Quick settings can still change before the first message). Clicking it tells the host to bring that container's open Studio windows forward: shells, the desktop tab, and web tool tabs. One reveal per editor group; tabs already in that group stay where they are and come to the front together.
-
-The button only appears when that container has at least one such window open. When the last one closes, the button disappears. On a narrow composer it drops out with MCP and the paperclip.
-
-This is a reveal, not a picker. To open a new shell or desktop, or to pick one window from a list, use **Active windows** in the launch menu in the Studio header. See [Terminals](/studio/interface/containers#terminals).
+To bring forward or pick an open shell, desktop, or tool tab, use **Active windows** in the launch menu in the Studio header. See [Terminals](/studio/interface/containers#terminals).
 
 ## Attachments
 
@@ -102,7 +93,7 @@ Compaction loses detail: keep findings in `/workspace` and the [kill chain](/stu
 
 They start from a default, set once under [Sessions](/studio/interface/sessions) → **Default**. A new session copies that default. After that, the copy is the session's. What you pick here changes this conversation. A second session running beside it keeps its own copy, including a different model, mode, or Bypass.
 
-Open the menu from the composer. The button shows the mode that is on. Shift+Tab in the prompt cycles Auto, Plan, and Answer, and the button names the one you landed on for a moment. The menu stays open while you pick, so several switches can be set in one visit. A cog beside a heading opens the Settings page for that switch.
+Open the menu from the composer. The button always shows the mode that is on, and wears that mode's colour on the pill (quiet grey for Auto, yellow for Plan, blue for Answer, or the colour you picked on a mode you built). Shift+Tab in the prompt cycles every mode in that menu, built-in and custom. The menu stays open while you pick, so several switches can be set in one visit. A cog beside a heading opens the Settings page for that switch.
 
 | Setting | Effect |
 | ------- | ------ |

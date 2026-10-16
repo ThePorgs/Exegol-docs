@@ -14,7 +14,7 @@ Besides the chat, Studio opens engagement surfaces as ordinary editor tabs so yo
 
 Open an Exegol container shell from the launch menu in the Studio header, or from the **bottom panel** (VS Code Terminal).
 
-When the [project](/studio/interface/projects) has more than one container, each shell, desktop, and tool tab carries a **corner colour swatch** on its icon. The colour matches that container in the launch menu and on [Show active window](/studio/interface/composer#show-active-window). With a single container, the icon stays plain.
+When the [project](/studio/interface/projects) has more than one container, each shell, desktop, and tool tab carries a **corner colour swatch** on its icon. The colour matches that container in the launch menu. With a single container, the icon stays plain.
 
 ## Monitor
 

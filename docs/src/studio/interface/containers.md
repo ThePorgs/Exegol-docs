@@ -12,6 +12,6 @@ An MCP server set to run in the container uses the project's first container, no
 
 Open an interactive shell in a project container from the launch menu in the Studio header, or from the **bottom panel** terminal. Same filesystem and tunnel as the agent.
 
-When the project has more than one container, shell, desktop, and tool tabs show a **corner colour swatch** on the icon for that container. The same colour appears in the launch menu and as the mark on [Show active window](/studio/interface/composer#show-active-window). With one container, icons stay plain. See [Editors and tabs](/studio/interface/editors).
+When the project has more than one container, shell, desktop, and tool tabs show a **corner colour swatch** on the icon for that container. The same colour appears in the launch menu. With one container, icons stay plain. See [Editors and tabs](/studio/interface/editors).
 
-**Show active window**, on the composer (scan icon before the paperclip), brings forward the open GUI windows of the container the session runs in. It is a reveal, not a picker: the button is hidden until something is open. To open a new shell or desktop, or to pick one window from a list, use **Active windows** in the launch menu. See [Show active window](/studio/interface/composer#show-active-window).
+**Active windows** in the launch menu lists the open shells, desktop, and tool tabs for a container, and brings the one you pick forward. Use it to open a new shell or desktop too.
