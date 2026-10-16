@@ -2,7 +2,7 @@
 
 Layouts decide **where** the conversation and the execution live in the editor. They do not change what the agent runs or what it costs. It's only a visual preference.
 
-Pick **Editor**, **Chat**, or **Monitor** from composer [quick settings](/studio/interface/composer#quick-settings).
+Pick **Editor**, **Chat**, or **Monitor** from the **Layout** button in the Studio header (beside Settings), or under Settings → **Interface** → **Layouts**. Layout follows the tabs open in this window. It is not saved as a setting, and it is not part of [Quick settings](/studio/interface/composer#quick-settings). Quick settings belong to the session. Layout belongs to the workspace.
 
 ## How the editor is structured
 
@@ -14,6 +14,7 @@ Studio uses the regions VS Code (and compatible forks) already have:
 | **Primary side bar** | Chat thread and composer in Editor layout; session list and launch actions in Chat or Monitor |
 | **Editor area** | Your files, terminals, web-tools, rooms, settings; Chat thread in Chat layout; pseudo-shell in Monitor |
 | **Panel** (bottom) | Integrated terminal; you can open an Exegol container shell here too |
+| **Status bar** | Project, model, context, MCP, and the Studio version. See [Status bar](/studio/interface/status-bar) |
 
 ## The three layouts
 
@@ -33,7 +34,7 @@ This layout is best for long reading, plan review.
 
 Conversation moves into an editor tab. The side bar keeps sessions, launch actions, and Settings. Nothing goes fullscreen; nothing closes. Best for long reading and plan review.
 
-Toggle between sidebar chat and a full-width agent tab for the same session from Layout in composer quick settings, or the Studio chat controls.
+Toggle between sidebar chat and a full-width agent tab for the same session from the Layout button, or from Settings → **Interface**.
 
 === Monitor
 
@@ -46,6 +47,6 @@ Splits the run:
 
 Use Monitor when raw output matters more than the summary, when debugging what ran, or when showing someone what the agent actually executes.
 
-Detail level (compact vs balanced cards) is a separate preference under Settings → **Layout**. Monitor is a place, not a detail level.
+Trace detail (compact vs balanced cards) is a separate preference under Settings → **Interface** → **Trace detail**. Monitor is a place, not a detail level. The pace of the paint is [trace speed](/studio/interface/composer#quick-settings), per session.
 
 :::

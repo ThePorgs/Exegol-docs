@@ -16,7 +16,14 @@ Open the **Exegol Studio** activity bar icon after install. If nothing appears, 
 
 ## 2. System checks
 
-Open Settings (in the Primary Side Bar on the left, Cog icon) → **System check**. Run it. It probes Docker (CLI and daemon), the Exegol CLI, whether an image and container exist, and whether the project's primary container is running. On Linux it also checks your user can reach the Docker socket (usually the `docker` group). If any checks fail, follow the instructions to fix them (i.e. adding your user to the `docker` group).
+Open **Settings** from the gear in the Studio header, then **Support**. The **System check** card is at the top of that page. It probes Docker (CLI and daemon), the Exegol CLI, whether an image and container exist, and whether the project's primary container is running. On Linux it also checks your user can reach the Docker socket (usually the `docker` group). If any check fails, follow the fix shown next to it.
+
+When every check is green the card folds to **System checks are green.** **Re-check** stays on the card. Open the card to read each line. A failure or a warning keeps the card open.
+
+The same Support page can export a diagnostics report and points at the docs (and a Discord ticket on paid plans) when you need help.
+
+> [!NOTE] Windows and WSL
+> Exegol activation lives with the wrapper. If you activated Exegol inside WSL but opened the folder in Windows VS Code, Studio cannot see that license. Use **WSL: Reopen Folder in WSL** and install Exegol Studio in that distribution. A WSL terminal alone is not enough. The license page and Support report say so when this case applies.
 
 ![](/assets/studio/systemcheck.png)
 
@@ -30,11 +37,27 @@ You can use a model provider from the cloud, or self-host your own model provide
 
 A [project](/studio/interface/projects) is one engagement. It scopes sessions, the container, and project-local policy.
 
-Create one from Settings → projects (**New project**), then link a running Exegol container, or create one.
+Create one from Settings → **Projects** (**New project**), then link a running Exegol container, or create one from **Workstation**.
+
+## Settings
+
+The gear in the Studio header opens Settings. The nav is grouped:
+
+| Pages | What they cover |
+| ----- | --------------- |
+| **Workstation**, **Projects**, **Sessions**, **Interface** | The machine, the engagement, each conversation's settings, and where the conversation is drawn |
+| **Providers**, **Model** | Who answers, and how |
+| **Harness**, **MCP**, **Atlas** | What the agent is given |
+| **Modes**, **Personas**, **Approvals** | How far the agent goes, how it talks, what it may do without asking |
+| **Kill chains** | The graph of the engagement |
+| **Support** | System check, a diagnostics report, and where to ask for help |
+
+Quick settings start from a default on **Sessions**. Each session then keeps its own copy, so two conversations can run at once with different models, modes, and approvals. See [Sessions](/studio/interface/sessions). While a run is in progress you can [steer it or queue the next message](/studio/interface/composer#while-the-agent-is-working).
 
 ## What next
 
-- Learn to use the [Composer](/studio/interface/composer): attachments, MCP button, context gauge, quick settings
+- Learn to use the [Composer](/studio/interface/composer): attachments, MCP button, context gauge, Quick settings
+- Set defaults and per-session values on [Sessions](/studio/interface/sessions)
 - Choose your layout: [Layouts](/studio/interface/layouts#the-three-layouts) (Monitor, Editor, Chat), [Rooms](/studio/interface/rooms)
 - Use [Rooms](/studio/interface/rooms) to have multiple parallel sessions in the same engagement
 - Adapt the Knowledge: [skills](/studio/knowledge/skills), [rules](/studio/knowledge/rules), [agents](/studio/knowledge/agents), [hooks](/studio/knowledge/hooks), [briefs](/studio/knowledge/briefs), [MCPs](/studio/knowledge/mcp), [Atlas](/studio/knowledge/atlas)

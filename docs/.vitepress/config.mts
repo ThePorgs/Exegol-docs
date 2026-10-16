@@ -482,6 +482,18 @@ function sidebarMain(): SidebarItemWithBadge[] {
           collapsed: true,
           items: [
             {
+              text: "Workstation",
+              link: "studio/interface/containers.md"
+            },
+            {
+              text: "Projects",
+              link: "studio/interface/projects.md"
+            },
+            {
+              text: "Sessions",
+              link: "studio/interface/sessions.md"
+            },
+            {
               text: "Composer",
               link: "studio/interface/composer.md"
             },
@@ -490,20 +502,16 @@ function sidebarMain(): SidebarItemWithBadge[] {
               link: "studio/interface/editors.md"
             },
             {
+              text: "Status bar",
+              link: "studio/interface/status-bar.md"
+            },
+            {
               text: "Layouts",
               link: "studio/interface/layouts.md"
             },
             {
               text: "Rooms",
               link: "studio/interface/rooms.md"
-            },
-            {
-              text: "Projects",
-              link: "studio/interface/projects.md"
-            },
-            {
-              text: "Containers",
-              link: "studio/interface/containers.md"
             }
           ]
         },
@@ -560,12 +568,12 @@ function sidebarMain(): SidebarItemWithBadge[] {
             {
               text: "Approvals",
               link: "studio/behavior/approvals.md"
-            },
-            {
-              text: "Kill chains",
-              link: "studio/behavior/kill-chains.md"
             }
           ]
+        },
+        {
+          text: "Kill chains",
+          link: "studio/behavior/kill-chains.md"
         }
       ]
     },
