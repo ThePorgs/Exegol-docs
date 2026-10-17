@@ -103,7 +103,7 @@ Access to specific features of each product depends on your plan and any purchas
 
 ### 2.6 Exegol Studio
 
-Exegol Studio (publisher / extension ID `exegol.studio`) is an IDE extension that forms part of the Exegol Suite. Installation from the Visual Studio Marketplace, Open VSX, or an official Execorp VSIX is free for everyone, including Community users. Some features require an active Pro, Team, or Enterprise plan and are gated by Exegol account entitlements (not by a Marketplace purchase). Community use remains non-commercial. Seat limits and the prohibition on commercial exploitation without a separate written agreement with Execorp apply unchanged as set out in these Terms. Exegol Studio is governed by the End User License Agreement (EULA) and these Terms; it is not licensed under the Exegol Software License (ESL).
+Exegol Studio (publisher / extension ID `exegol.exegol-studio`) is an IDE extension that forms part of the Exegol Suite. Installation from the Visual Studio Marketplace, Open VSX, or an official Execorp VSIX is free for everyone, including Community users. Some features require an active Pro, Team, or Enterprise plan and are gated by Exegol account entitlements (not by a Marketplace purchase). Community use remains non-commercial. Seat limits and the prohibition on commercial exploitation without a separate written agreement with Execorp apply unchanged as set out in these Terms. Exegol Studio is governed by the End User License Agreement (EULA) and these Terms; it is not licensed under the Exegol Software License (ESL).
 
 ## 3. Account creation and security
 
