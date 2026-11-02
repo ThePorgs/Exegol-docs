@@ -13,7 +13,7 @@ dtrx,8.7.1,https://github.com/dtrx-py/dtrx,Do The Right eXtraction - don't remem
 exegol-history,2026-06-24,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
 exifprobe,2.0.1,https://github.com/hfiguiere/exifprobe,Exifprobe is a command-line tool to parse EXIF data from image files.
 exiftool,,https://github.com/exiftool/exiftool,ExifTool is a Perl library and command-line tool for reading / writing and editing meta information in image / audio and video files.
-finalrecon,2026-06-01,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
+finalrecon,2026-10-31,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,10.0.1,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
 firefox,153.6.0esr,https://www.mozilla.org,A web browser
 fzf,2026-10-25,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
@@ -36,7 +36,7 @@ linkedin2username,0.30,https://github.com/initstring/linkedin2username,Generate 
 maigret,,https://github.com/soxoj/maigret,Collect a dossier on a username across thousands of websites
 maltego,4.14.0,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
-Metagoofil,1.4.0,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
+Metagoofil,2026-11-02,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
 MurMurHash,2023-08-30,https://github.com/QU35T-code/MurMurHash,This little tool is to calculate a MurmurHash value of a favicon to hunt phishing websites on the Shodan platform.
 neovim,0.12.6,https://neovim.io/,hyperextensible Vim-based text editor
 nfsshell,2025-06-13,https://github.com/Supermathie/nfsshell,NFSShell is a tool for interacting with NFS shares without mounting them.
