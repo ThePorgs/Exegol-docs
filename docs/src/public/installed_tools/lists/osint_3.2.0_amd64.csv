@@ -6,7 +6,7 @@ assetfinder,0.1.1,https://github.com/tomnomnom/assetfinder,Tool to find subdomai
 Blackbird,2026-10-17,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 carbon14,1.0.0,https://github.com/Lazza/carbon14,OSINT tool for estimating when a web page was written.
 Censys,2.3.0,https://github.com/censys/censys-python,An easy-to-use and lightweight API wrapper for Censys APIs
-constellation,0.008s,https://github.com/constellation-app/Constellation,Graph tool for visualising and exploring OSINT data.
+constellation,0.009s,https://github.com/constellation-app/Constellation,Graph tool for visualising and exploring OSINT data.
 creds,,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
 CyberChef,,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 dnsenum,1.3.2,https://github.com/fwaeytens/dnsenum,dnsenum is a tool for enumerating DNS information about a domain.
@@ -14,7 +14,7 @@ dtrx,8.7.1,https://github.com/dtrx-py/dtrx,Do The Right eXtraction - don't remem
 exegol-history,2026-06-24,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
 exifprobe,2.0.1,https://github.com/hfiguiere/exifprobe,Exifprobe is a command-line tool to parse EXIF data from image files.
 exiftool,,https://github.com/exiftool/exiftool,ExifTool is a Perl library and command-line tool for reading / writing and editing meta information in image / audio and video files.
-finalrecon,2026-06-01,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
+finalrecon,2026-10-31,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,10.0.1,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
 firefox,153.6.0esr,https://www.mozilla.org,A web browser
 fzf,2026-10-25,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
@@ -37,7 +37,7 @@ linkedin2username,0.30,https://github.com/initstring/linkedin2username,Generate 
 maigret,,https://github.com/soxoj/maigret,Collect a dossier on a username across thousands of websites
 maltego,4.14.0,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
-Metagoofil,1.4.0,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
+Metagoofil,2026-11-02,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
 MurMurHash,2023-08-30,https://github.com/QU35T-code/MurMurHash,This little tool is to calculate a MurmurHash value of a favicon to hunt phishing websites on the Shodan platform.
 neovim,0.12.6,https://neovim.io/,hyperextensible Vim-based text editor
 nfsshell,2025-06-13,https://github.com/Supermathie/nfsshell,NFSShell is a tool for interacting with NFS shares without mounting them.
