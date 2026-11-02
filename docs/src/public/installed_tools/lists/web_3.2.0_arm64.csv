@@ -30,7 +30,7 @@ cupp,,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized
 curlie,8.14.1,https://github.com/rs/curlie,Curlie is a frontend to curl that adds the ease of use of httpie without compromising on features and performance
 CyberChef,,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 dirb,2.22,https://github.com/v0re/dirb,Web Content Scanner
-dirsearch,2026-10-18,https://github.com/maurosoria/dirsearch,Tool for searching files and directories on a web site.
+dirsearch,2026-11-01,https://github.com/maurosoria/dirsearch,Tool for searching files and directories on a web site.
 dnsenum,1.3.2,https://github.com/fwaeytens/dnsenum,dnsenum is a tool for enumerating DNS information about a domain.
 droopescan,,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
 drupwn,2020-06-18,https://github.com/immunIT/drupwn,Drupal security scanner.
@@ -42,7 +42,7 @@ eyewitness,2026-01-05,https://github.com/FortyNorthSecurity/EyeWitness,a tool to
 fcrackzip,1.0,https://github.com/hyc/fcrackzip,Password cracker for zip archives.
 feroxbuster,2.13.1,https://github.com/epi052/feroxbuster,Simple / fast and recursive content discovery tool
 ffuf,2.3.0,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
-finalrecon,2026-06-01,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
+finalrecon,2026-10-31,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,10.0.1,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
 firefox,153.6.0esr,https://www.mozilla.org,A web browser
 firefox_decrypt,,https://github.com/unode/firefox_decrypt,Decrypt Firefox saved passwords.
@@ -95,7 +95,7 @@ maigret,,https://github.com/soxoj/maigret,Collect a dossier on a username across
 maltego,4.14.0,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
 mapcidr,1.1.97,https://github.com/projectdiscovery/mapcidr,Utility program to perform multiple operations for a given subnet/CIDR ranges.
 mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
-Metagoofil,1.4.0,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
+Metagoofil,2026-11-02,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
 moodlescan,2022-09-08,https://github.com/inc0d3/moodlescan,Scan Moodle sites for information and vulnerabilities.
 MurMurHash,2023-08-30,https://github.com/QU35T-code/MurMurHash,This little tool is to calculate a MurmurHash value of a favicon to hunt phishing websites on the Shodan platform.
 naabu,2.7.0,https://github.com/projectdiscovery/naabu,A fast and reliable port scanner that can detect open ports and services.
@@ -107,7 +107,7 @@ nosqlmap,2026-02-20,https://github.com/codingo/NoSQLMap,a Python tool for testin
 NSAKEY rules,,https://github.com/NSAKEY/nsa-rules,Password cracking rules and masks for hashcat
 nuclei,3.11.1,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
 objectwalker,2.2.1,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
-oneforall,2026-05-11,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
+oneforall,2026-11-02,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
 onelistforall,,https://github.com/six2dez/OneListForAll,Large combined wordlist for web content fuzzing
 OneRuleToRuleThemStill rules,,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 OpenVPN,2.6.14,https://openvpn.net/,Open-source VPN that tunnels network traffic over TLS
@@ -120,7 +120,7 @@ photon,2026-10-18,https://github.com/s0md3v/Photon,a fast web crawler which extr
 PHP filter chain generator,,https://github.com/synacktiv/php_filter_chain_generator,A CLI to generate PHP filters chain / get your RCE without uploading a file if you control entirely the parameter passed to a require or an include in PHP!
 phpggc,2025-09-29,https://github.com/ambionics/phpggc,Exploit generation tool for the PHP platform.
 pkcrack,2021-10-30,https://github.com/keyunluo/pkcrack,Known-plaintext attack against legacy PKZIP encryption
-postman,12.34.4,https://www.postman.com/,API platform for testing APIs
+postman,12.35.0,https://www.postman.com/,API platform for testing APIs
 pp-finder,2.0.1,https://github.com/yeswehack/pp-finder,Prototype pollution finder tool for javascript. pp-finder lets you find prototype pollution candidates in your code.
 prips,1.2.2,https://manpages.ubuntu.com/manpages/focal/man1/prips.1.html,A utility for quickly generating IP ranges or enumerating hosts within a specified range.
 pwndb,2021-04-27,https://github.com/davidtavarez/pwndb,A command-line tool for searching the pwndb database of compromised credentials.
@@ -140,7 +140,7 @@ Sherlock,0.16.2,https://github.com/sherlock-project/sherlock,Hunt down social me
 smuggler,2021-04-28,https://github.com/defparam/smuggler,Test websites for HTTP request smuggling.
 SoapUI,,https://github.com/SmartBear/soapui,SoapUI is the world's leading testing tool for API testing.
 spiderfoot,2023-11-05,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
-sqlmap,2026-10-30,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
+sqlmap,2026-11-02,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
 sslscan,2026-09-27,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
 ssrfmap,2026-08-10,https://github.com/swisskyrepo/SSRFmap,a tool for testing SSRF vulnerabilities.
 subfinder,2.17.0,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
@@ -153,14 +153,14 @@ theharvester,5.0.0,https://github.com/laramies/theHarvester,Tool for gathering e
 thr,,https://www.thehacker.recipes/,THR (The Hacker Recipes) is aimed at providing technical guides on various hacking topics.
 tig,2.6.1,https://github.com/jonas/tig,Tig is an ncurses-based text-mode interface for git.
 timing,,https://github.com/ffleming/timing_attack,Perform timing attacks against web applications.
-tlsx,1.4.3,https://github.com/projectdiscovery/tlsx,A fast and configurable TLS grabber focused on TLS based data collection and analysis.
+tlsx,1.4.4,https://github.com/projectdiscovery/tlsx,A fast and configurable TLS grabber focused on TLS based data collection and analysis.
 token-exploiter,0.1.0,https://github.com/psyray/token-exploiter,Token Exploiter is a tool designed to analyze GitHub Personal Access Tokens.
 tomcatwardeployer,2022-11-05,https://github.com/mgeeky/tomcatwardeployer,Script to deploy war file in Tomcat.
 tor,0.4.9.15,https://github.com/torproject/tor,Anonymity tool that can help protect your privacy and online identity by routing your traffic through a network of servers.
 toutatis,1.31,https://github.com/megadose/Toutatis,Toutatis is a tool that allows you to extract information from instagrams accounts such as e-mails / phone numbers and more.
 trevorspray,2026-10-26,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
 TriliumNext,0.93.0,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
-trufflehog,3.99.7,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
+trufflehog,3.99.8,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
 uberfile,1.0.0,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 uncover,1.2.1,https://github.com/projectdiscovery/uncover,A tool to Quickly discover exposed hosts on the internet using multiple search engines from ProjectDiscovery.
 updog,2.0.1,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
