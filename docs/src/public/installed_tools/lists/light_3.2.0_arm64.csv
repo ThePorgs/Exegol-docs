@@ -29,7 +29,7 @@ mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
 metasploit,2026-10-30,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 neo4j,4.4.48,https://github.com/neo4j/neo4j,Database.
 neovim,0.12.6,https://neovim.io/,hyperextensible Vim-based text editor
-netexec,2026-10-29,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
+netexec,2026-11-01,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
 nmap,7.95,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
 nuclei,3.11.1,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
 OpenVPN,2.6.14,https://openvpn.net/,Open-source VPN that tunnels network traffic over TLS
@@ -39,7 +39,7 @@ responder,2026-06-10,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MD
 seclists,,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
 smbclient,4.22.11,https://github.com/samba-team/samba,SMBclient is a command-line utility that allows you to access Windows shared resources
 smbmap,1.10.8,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and check for null sessions
-sqlmap,2026-10-30,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
+sqlmap,2026-11-02,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
 sslscan,2026-09-27,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
 subfinder,2.17.0,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
 testssl,2026-10-28,https://github.com/drwetter/testssl.sh,a tool for testing SSL/TLS encryption on servers
