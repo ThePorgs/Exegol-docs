@@ -63,6 +63,18 @@ Your installation function should include:
 
   Shared helpers live in `sources/install/common.sh` (`normalize_version`, `git_version`, `pipx_version`, `apt_version`, `go_version`, `cargo_version`, `gem_version`, `github_release_version`, `cli_version`).
 
+### Replaced commands
+
+When you remove a tool, or you leave a well-known one out because another installed command covers the job, add a row to `sources/assets/shells/missing-commands.csv`. One row per name a user would type.
+
+```csv
+command,suggestion
+yourtool,thetool
+yourtool.py,thetool
+```
+
+The suggestion must be a command Exegol ships. Do not add an alias for the old name. An alias would still answer after the user installs the original tool. The hint only runs when that name is not on `PATH`. In a terminal, the suggested command is shown in green.
+
 ### Code Check Whitelisting
 
 If your tool doesn't need aliases, history commands, or a tools-list row, add a whitelist comment at the beginning of the function:
