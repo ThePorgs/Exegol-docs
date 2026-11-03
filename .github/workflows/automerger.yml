@@ -18,26 +18,33 @@ jobs:
           git config --local user.name "Github Actions"
           git fetch --unshallow
     - name: Merge main back to dev
+      id: dev
       continue-on-error: true
       run: |
           git checkout dev
           git pull
-          git merge main --ff -m "Auto-update dev from main" && git push || (echo "Unable to automatically merge dev" && git merge --abort; exit 1)
+          git merge main --ff-only && git push || (echo "Unable to fast-forward dev" && exit 1)
     - name: Merge main back to dev-wrapper
+      id: dev_wrapper
       continue-on-error: true
       run: |
           git checkout dev-wrapper
           git pull
-          git merge main --ff -m "Auto-update dev-wrapper from main" && git push || (echo "Unable to automatically merge dev-wrapper" && git merge --abort; exit 1)
+          git merge main --ff-only && git push || (echo "Unable to fast-forward dev-wrapper" && exit 1)
     - name: Merge main back to dev-images
+      id: dev_images
       continue-on-error: true
       run: |
           git checkout dev-images
           git pull
-          git merge main --ff -m "Auto-update dev-images from main" && git push || (echo "Unable to automatically merge dev-images" && git merge --abort; exit 1)
+          git merge main --ff-only && git push || (echo "Unable to fast-forward dev-images" && exit 1)
     - name: Merge main back to dev-studio
+      id: dev_studio
       continue-on-error: true
       run: |
           git checkout dev-studio
           git pull
-          git merge main --ff -m "Auto-update dev-studio from main" && git push || (echo "Unable to automatically merge dev-studio" && git merge --abort; exit 1)
+          git merge main --ff-only && git push || (echo "Unable to fast-forward dev-studio" && exit 1)
+    - name: Fail if a branch could not be fast-forwarded
+      if: steps.dev.outcome == 'failure' || steps.dev_wrapper.outcome == 'failure' || steps.dev_images.outcome == 'failure' || steps.dev_studio.outcome == 'failure'
+      run: exit 1
