@@ -1,0 +1,57 @@
+Tool,Version,Link,Description
+asciinema,,https://github.com/asciinema/asciinema,Terminal session recorder
+asdf,0.20.0,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
+autorecon,2.0.36,https://github.com/Tib3rius/AutoRecon,Multi-threaded network reconnaissance tool which performs automated enumeration of services.
+bloodhound,2026-03-02,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
+bloodhound.py,1.9.0,https://github.com/fox-it/BloodHound.py,BloodHound ingestor in Python.
+cloudfail,2023-12-11,https://github.com/m0rtem/CloudFail,a reconnaissance tool for identifying misconfigured CloudFront domains.
+coercer,2.4.3,https://github.com/p0dalirius/coercer,Coerce Windows servers to authenticate to an attacker through many RPC methods
+CyberChef,,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
+droopescan,,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
+drupwn,2020-06-18,https://github.com/immunIT/drupwn,Drupal security scanner.
+enum4linux-ng,1.3.10,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
+evilwinrm,,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
+exegol-history,2026-06-24,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
+eyewitness,2026-01-05,https://github.com/FortyNorthSecurity/EyeWitness,a tool to take screenshots of websites / provide some server header info / and identify default credentials if possible.
+fcrackzip,1.0,https://github.com/hyc/fcrackzip,Password cracker for zip archives.
+ffuf,2.3.0,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
+firefox,153.6.0esr,https://www.mozilla.org,A web browser
+fzf,2026-10-25,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
+gf,2020-06-18,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
+gittools,2026-09-30,https://github.com/internetwache/GitTools,A collection of Git tools including a powerful Dumper for dumping Git repositories.
+hashcat,6.2.6,https://hashcat.net/hashcat,A tool for advanced password recovery
+hydra,9.5,https://github.com/vanhauser-thc/thc-hydra,Hydra is a parallelized login cracker which supports numerous protocols to attack.
+impacket,0.14.0,https://github.com/ThePorgs/impacket,Set of tools for working with network protocols (ThePorgs version).
+john,2026-10-11,https://github.com/openwall/john,John the Ripper password cracker.
+joomscan,2023-11-30,https://github.com/rezasp/joomscan,A tool to enumerate Joomla-based websites
+jwt,2.3.0,https://github.com/ticarpi/jwt_tool,a command-line tool for working with JSON Web Tokens (JWTs)
+mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
+metasploit,2026-10-30,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
+neo4j,4.4.48,https://github.com/neo4j/neo4j,Database.
+neovim,0.12.6,https://neovim.io/,hyperextensible Vim-based text editor
+netexec,2026-11-01,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
+nmap,7.95,https://nmap.org,The Network Mapper - a powerful network discovery and security auditing tool
+nuclei,3.11.1,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
+OpenVPN,2.6.14,https://openvpn.net/,Open-source VPN that tunnels network traffic over TLS
+proxychains,2026-10-06,https://github.com/rofl0r/proxychains,Proxy chains - redirect connections through proxy servers.
+pyftpdlib,,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
+responder,2026-06-10,https://github.com/lgandx/Responder,a LLMNR / NBT-NS and MDNS poisoner.
+seclists,,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
+smbclient,4.22.11,https://github.com/samba-team/samba,SMBclient is a command-line utility that allows you to access Windows shared resources
+smbmap,1.10.8,https://github.com/ShawnDEvans/smbmap,A tool to enumerate SMB shares and check for null sessions
+sqlmap,2026-11-02,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
+sslscan,2026-09-27,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
+subfinder,2.17.0,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
+testssl,2026-10-28,https://github.com/drwetter/testssl.sh,a tool for testing SSL/TLS encryption on servers
+theharvester,5.0.0,https://github.com/laramies/theHarvester,Tool for gathering e-mail accounts / subdomain names / virtual host / open ports / banners / and employee names from different public sources
+wafw00f,2.4.2,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to identify and fingerprint web application firewall (WAF) products.
+waybackurls,0.1.0,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
+weevely,,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
+weevely,,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
+wireguard,2021-09-14,https://www.wireguard.com,WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
+wl-clipboard,,https://github.com/bugaevc/wl-clipboard,Command-line Wayland clipboard utilities (wl-copy / wl-paste)
+wpscan,,https://github.com/wpscanteam/wpscan,A tool to enumerate WordPress-based websites
+xclip,,https://github.com/astrand/xclip,Command-line X11 clipboard interface
+xsel,,https://github.com/kfish/xsel,Command-line X11 selection and clipboard utility
+yarn,4.18.1,https://yarnpkg.com/,Yarn is a package manager that doubles down as project manager.
+ysoserial,,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.

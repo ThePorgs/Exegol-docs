@@ -1,0 +1,198 @@
+Tool,Version,Link,Description
+aliasr,1.1.6,https://github.com/Mojo8898/aliasr,Aliasr is a modern and feature-rich TUI launcher for penetration testing commands inspired by Arsenal but with significantly improved functionality.
+alterx,0.1.0,https://github.com/projectdiscovery/alterx,A tool for fast and customizable subdomain wordlist generator using DSL from ProjectDiscovery.
+amass,,https://github.com/OWASP/Amass,A DNS enumeration / attack surface mapping & external assets discovery tool
+anew,0.1.1,https://github.com/tomnomnom/anew,A simple tool for filtering and manipulating text data / such as log files and other outputs.
+arjun,2.2.7,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
+asciinema,,https://github.com/asciinema/asciinema,Terminal session recorder
+asdf,0.20.0,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
+assetfinder,0.1.1,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
+badsecrets,1.3.0,https://github.com/blacklanternsecurity/badsecrets,A pure python library for identifying the use of known or very weak cryptographic secrets across a variety of platforms.
+BBOT,3.0.2,https://github.com/blacklanternsecurity/bbot,BEE·bot is a multipurpose scanner inspired by Spiderfoot built to automate your Recon and ASM.
+Blackbird,2026-10-17,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
+bolt,2022-02-07,https://github.com/s0md3v/bolt,Scan websites for Cross-Site Request Forgery in HTML forms.
+brakeman,,https://github.com/presidentbeef/brakeman,Static analysis tool for Ruby on Rails applications
+bruteforce-luks,1.4.0,https://github.com/glv2/bruteforce-luks,Recover the password of a LUKS encrypted volume
+burpsuite,2026.10.1,https://portswigger.net/burp,Web application security testing tool.
+byp4xx,2023-03-08,https://github.com/lobuhi/byp4xx,A Swiss Army knife for bypassing web application firewalls and filters.
+caido,,https://docs.caido.io/quickstart/,A lightweight web security auditing toolkit.
+carbon14,1.0.0,https://github.com/Lazza/carbon14,OSINT tool for estimating when a web page was written.
+Censys,2.3.0,https://github.com/censys/censys-python,An easy-to-use and lightweight API wrapper for Censys APIs
+cewl,2026-06-24,https://digi.ninja/projects/cewl.php,Generates custom wordlists by spidering a target's website and parsing the results
+cewler,1.4.1,https://github.com/roys/cewler,CeWL alternative in Python
+chaos,0.5.2,https://github.com/projectdiscovery/alterx,A Go client to communicate with Chaos dataset API from ProjectDiscovery.
+cloudfail,2023-12-11,https://github.com/m0rtem/CloudFail,a reconnaissance tool for identifying misconfigured CloudFront domains.
+cmsmap,,https://github.com/Dionach/CMSmap,Tool for security audit of web content management systems.
+corscanner,2021-11-25,https://github.com/chenjj/CORScanner,a Python script for finding CORS misconfigurations.
+creds,,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
+crunch,3.6,https://github.com/crunchsec/crunch,A wordlist generator where you can specify a standard character set or a character set you specify.
+cupp,,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized password lists based on target information.
+curlie,8.14.1,https://github.com/rs/curlie,Curlie is a frontend to curl that adds the ease of use of httpie without compromising on features and performance
+CyberChef,,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
+dirb,2.22,https://github.com/v0re/dirb,Web Content Scanner
+dirsearch,2026-11-01,https://github.com/maurosoria/dirsearch,Tool for searching files and directories on a web site.
+dnsenum,1.3.2,https://github.com/fwaeytens/dnsenum,dnsenum is a tool for enumerating DNS information about a domain.
+droopescan,,https://github.com/droope/droopescan,Scan Drupal websites for vulnerabilities.
+drupwn,2020-06-18,https://github.com/immunIT/drupwn,Drupal security scanner.
+dtrx,8.7.1,https://github.com/dtrx-py/dtrx,Do The Right eXtraction - don't remember what set of tar flags or where to pipe the output to extract it? no worries!
+exegol-history,2026-06-24,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
+exifprobe,2.0.1,https://github.com/hfiguiere/exifprobe,Exifprobe is a command-line tool to parse EXIF data from image files.
+exiftool,,https://github.com/exiftool/exiftool,ExifTool is a Perl library and command-line tool for reading / writing and editing meta information in image / audio and video files.
+eyewitness,2026-01-05,https://github.com/FortyNorthSecurity/EyeWitness,a tool to take screenshots of websites / provide some server header info / and identify default credentials if possible.
+fcrackzip,1.0,https://github.com/hyc/fcrackzip,Password cracker for zip archives.
+feroxbuster,2.13.1,https://github.com/epi052/feroxbuster,Simple / fast and recursive content discovery tool
+ffuf,2.3.0,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
+finalrecon,2026-10-31,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
+findomain,10.0.1,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
+firefox,153.6.0esr,https://www.mozilla.org,A web browser
+firefox_decrypt,,https://github.com/unode/firefox_decrypt,Decrypt Firefox saved passwords.
+fuxploider,2025-05-08,https://github.com/almandin/fuxploider,a Python tool for finding and exploiting file upload forms/directories.
+fzf,2026-10-25,https://github.com/junegunn/fzf,🌸 A command-line fuzzy finder
+gau,2.2.4,https://github.com/lc/gau,Fast tool for fetching URLs
+genusernames,,https://gitlab.com/-/snippets/2480505/raw/main/bash,GenUsername is a Python tool for generating a list of usernames based on a name or email address.
+GeoPincer,2023-07-09,https://github.com/tloja/GeoPincer,GeoPincer is a script that leverages OpenStreetMap's Overpass API in order to search for locations.
+geowordlists,1.0.1,https://github.com/p0dalirius/GeoWordlists,tool to generate wordlists of passwords containing cities at a defined distance around the client city.
+gf,2020-06-18,https://github.com/tomnomnom/gf,A wrapper around grep to avoid typing common patterns
+GHunt,2.3.4,https://github.com/mxrch/GHunt,Investigate Google Accounts with emails
+git-dumper,1.0.9,https://github.com/arthaud/git-dumper,Small script to dump a Git repository from a website.
+githubemail,,https://github.com/paulirish/github-email,a command-line tool to retrieve a user's email from Github.
+gitleaks,8.30.1,https://github.com/trufflesecurity/gitleaks,Gitleaks scans hardcoded secrets in git repositories and folders.
+gittools,2026-09-30,https://github.com/internetwache/GitTools,A collection of Git tools including a powerful Dumper for dumping Git repositories.
+glow,3.0.0,https://github.com/charmbracelet/glow,glow is a tool to render Markdown inside the terminal.
+gobuster,3.8.2,https://github.com/OJ/gobuster,Tool to discover hidden files and directories.
+GoMapEnum,2025-09-24,https://github.com/nodauf/GoMapEnum,Enumerate users and spray passwords against Azure ADFS OWA O365 and Teams.
+gopherus,2022-07-11,https://github.com/tarunkant/Gopherus,Generate Gopher payloads for SSRF attacks against common services.
+goshs,1.1.4,https://github.com/patrickhener/goshs,Goshs is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S with either self-signed certificate or user provided certificate and you can use HTTP basic auth.
+gowitness,2026-10-11,https://github.com/sensepost/gowitness,A website screenshot utility written in Golang.
+gron,0.7.1,https://github.com/tomnomnom/gron,Make JSON greppable!
+h2csmuggler,2020-09-15,https://github.com/BishopFox/h2csmuggler,HTTP Request Smuggling tool using H2C upgrade
+h8mail,2.5.6,https://github.com/khast3x/h8mail,Email OSINT and breach hunting.
+haiti,,https://github.com/noraj/haiti,haiti is a A CLI tool (and library) to identify hash types (hash type identifier).
+hakrawler,2026-08-05,https://github.com/hakluke/hakrawler,a fast web crawler for gathering URLs and other information from websites
+hakrevdns,2026-08-05,https://github.com/hakluke/hakrevdns,Reverse DNS lookup utility that can help with discovering subdomains and other information.
+hashcat,6.2.6,https://hashcat.net/hashcat,A tool for advanced password recovery
+Hob0Rules rules,,https://github.com/praetorian-inc/Hob0Rules,Password cracking rules for Hashcat based on statistics and industry patterns
+holehe,1.61,https://github.com/megadose/holehe,mail osint tool finding out if it is used on websites.
+httpmethods,1.1.3,https://github.com/ShutdownRepo/httpmethods,Tool for exploiting HTTP methods (e.g. PUT / DELETE / etc.)
+httprobe,0.1.2,https://github.com/tomnomnom/httprobe,A simple utility for enumerating HTTP and HTTPS servers.
+httpx,1.12.0,https://github.com/projectdiscovery/httpx,Probe HTTP servers for status codes titles and technologies.
+ignorant,1.2,https://github.com/megadose/ignorant,holehe but for phone numbers.
+imagemagick,7.1.1.43,https://github.com/ImageMagick/ImageMagick,ImageMagick is a free and open-source image manipulation tool used to create / edit / compose / or convert bitmap images.
+Instaloader,4.16,https://github.com/instaloader/instaloader,Download content/captions/metadata from Instagram
+ipinfo,2026-10-29,https://github.com/ipinfo/cli,Get information about an IP address or hostname.
+jdwp,2017-01-13,https://github.com/IOActive/jdwp-shellifier,This exploitation script is meant to be used by pentesters against active JDWP service / in order to gain Remote Code Execution.
+john,2026-10-11,https://github.com/openwall/john,John the Ripper password cracker.
+joomscan,2023-11-30,https://github.com/rezasp/joomscan,A tool to enumerate Joomla-based websites
+jsluice,2024-01-10,https://github.com/BishopFox/jsluice,Extract URLs / paths / secrets and other interesting data from JavaScript source code.
+jwt,2.3.0,https://github.com/ticarpi/jwt_tool,a command-line tool for working with JSON Web Tokens (JWTs)
+katana,1.8.0,https://github.com/projectdiscovery/katana,A next-generation crawling and spidering framework.
+keepassxc,2.7.10,https://github.com/keepassxreboot/keepassxc,Cross-platform password manager
+kiterunner,2021-05-10,https://github.com/assetnote/kiterunner,Discover hidden API routes and web content.
+Kraken,2024-02-10,https://github.com/kraken-ng/Kraken,Kraken is a modular multi-language webshell focused on web post-exploitation and defense evasion. It supports three technologies (PHP / JSP and ASPX) and is core is developed in Python.
+linkedin2username,0.30,https://github.com/initstring/linkedin2username,Generate a list of LinkedIn usernames from a company name.
+linkfinder,2024-04-13,https://github.com/GerbenJavado/LinkFinder,a Python script that finds endpoints and their parameters in JavaScript files.
+maigret,,https://github.com/soxoj/maigret,Collect a dossier on a username across thousands of websites
+maltego,4.14.0,https://www.paterva.com/web7/downloads.php,A tool used for open-source intelligence and forensics
+mapcidr,1.1.97,https://github.com/projectdiscovery/mapcidr,Utility program to perform multiple operations for a given subnet/CIDR ranges.
+mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
+Metagoofil,2026-11-02,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
+moodlescan,2022-09-08,https://github.com/inc0d3/moodlescan,Scan Moodle sites for information and vulnerabilities.
+MurMurHash,2023-08-30,https://github.com/QU35T-code/MurMurHash,This little tool is to calculate a MurmurHash value of a favicon to hunt phishing websites on the Shodan platform.
+naabu,2.7.0,https://github.com/projectdiscovery/naabu,A fast and reliable port scanner that can detect open ports and services.
+name-that-hash,1.11.0,https://github.com/HashPals/Name-That-Hash,Identify the type of a hash from the command line.
+neovim,0.12.6,https://neovim.io/,hyperextensible Vim-based text editor
+nfsshell,2025-06-13,https://github.com/Supermathie/nfsshell,NFSShell is a tool for interacting with NFS shares without mounting them.
+ngrok,3.39.13,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
+nosqlmap,2026-02-20,https://github.com/codingo/NoSQLMap,a Python tool for testing NoSQL databases for security vulnerabilities.
+NSAKEY rules,,https://github.com/NSAKEY/nsa-rules,Password cracking rules and masks for hashcat
+nuclei,3.11.1,https://github.com/projectdiscovery/nuclei,A fast and customizable vulnerability scanner that can detect a wide range of issues / including XSS / SQL injection / and misconfigured servers.
+objectwalker,2.2.1,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
+oneforall,2026-11-02,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
+onelistforall,,https://github.com/six2dez/OneListForAll,Large combined wordlist for web content fuzzing
+OneRuleToRuleThemStill rules,,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
+OpenVPN,2.6.14,https://openvpn.net/,Open-source VPN that tunnels network traffic over TLS
+Pantagrule rules,,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
+pass-station,,https://github.com/noraj/pass-station,Search default credentials for thousands of products and vendors
+patator,2025-05-20,https://github.com/lanjelot/patator,Multi-protocol brute-forcer for authentication.
+pdfcrack,0.20,https://github.com/robins/pdfcrack,A tool for cracking password-protected PDF files
+phoneinfoga,,https://github.com/sundowndev/PhoneInfoga,Information gathering & OSINT framework for phone numbers.
+photon,2026-10-18,https://github.com/s0md3v/Photon,a fast web crawler which extracts URLs / files / intel & endpoints from a target.
+PHP filter chain generator,,https://github.com/synacktiv/php_filter_chain_generator,A CLI to generate PHP filters chain / get your RCE without uploading a file if you control entirely the parameter passed to a require or an include in PHP!
+phpggc,2025-09-29,https://github.com/ambionics/phpggc,Exploit generation tool for the PHP platform.
+pkcrack,2021-10-30,https://github.com/keyunluo/pkcrack,Known-plaintext attack against legacy PKZIP encryption
+postman,12.35.0,https://www.postman.com/,API platform for testing APIs
+pp-finder,2.0.1,https://github.com/yeswehack/pp-finder,Prototype pollution finder tool for javascript. pp-finder lets you find prototype pollution candidates in your code.
+prips,1.2.2,https://manpages.ubuntu.com/manpages/focal/man1/prips.1.html,A utility for quickly generating IP ranges or enumerating hosts within a specified range.
+pwndb,2021-04-27,https://github.com/davidtavarez/pwndb,A command-line tool for searching the pwndb database of compromised credentials.
+pwnedornot,2026-03-28,https://github.com/thewhiteh4t/pwnedOrNot,Look up passwords leaked for a compromised email address.
+pyftpdlib,,https://github.com/giampaolo/pyftpdlib/,Extremely fast and scalable Python FTP server library
+pymeta,2024-06-19,https://github.com/m8sec/pymeta,Download public documents and extract metadata such as usernames and software
+recon-ng,2026-10-05,https://github.com/lanmaster53/recon-ng,External recon tool.
+recondog,2019-05-05,https://github.com/s0md3v/ReconDog,a reconnaissance tool for performing information gathering on a target.
+rlwrap,0.46.1,https://github.com/hanslub42/rlwrap,rlwrap is a small utility that wraps input and output streams of executables / making it possible to edit and re-run input history
+robotstester,1.0,https://github.com/p0dalirius/robotstester,Utility for testing whether a website's robots.txt file is correctly configured.
+rsync,3.5.0,https://packages.debian.org/sid/rsync,File synchronization tool for efficiently copying and updating data between local or remote locations
+searchsploit,2026-10-27,https://gitlab.com/exploit-database/exploitdb,A command line search tool for Exploit-DB
+seclists,,https://github.com/danielmiessler/SecLists,A collection of multiple types of lists used during security assessments
+semgrep,1.183.0,https://github.com/returntocorp/semgrep/,Static analysis tool that supports multiple languages and can find a variety of vulnerabilities and coding errors.
+shellerator,1.1.0,https://github.com/ShutdownRepo/Shellerator,Generate bind and reverse shell one-liners in several languages
+Sherlock,0.16.2,https://github.com/sherlock-project/sherlock,Hunt down social media accounts by username across social networks.
+smuggler,2021-04-28,https://github.com/defparam/smuggler,Test websites for HTTP request smuggling.
+SoapUI,,https://github.com/SmartBear/soapui,SoapUI is the world's leading testing tool for API testing.
+spiderfoot,2023-11-05,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
+sqlmap,2026-11-02,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
+sslscan,2026-09-27,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
+ssrfmap,2026-08-10,https://github.com/swisskyrepo/SSRFmap,a tool for testing SSRF vulnerabilities.
+subfinder,2.17.0,https://github.com/projectdiscovery/subfinder,Tool to find subdomains associated with a domain.
+sublist3r,1.0,https://github.com/aboul3la/Sublist3r,a Python tool designed to enumerate subdomains of websites.
+subzy,1.2.1,https://github.com/PentestPad/subzy,Subdomain takeover tool which checks for various cloud services and identifies if a subdomain is vulnerable.
+swaks,20240103.0,https://github.com/jetmore/swaks,Swaks is a featureful flexible scriptable transaction-oriented SMTP test tool.
+symfony-exploits,2024-09-19,https://github.com/ambionics/symfony-exploits,Collection of Symfony exploits and PoCs.
+testssl,2026-10-28,https://github.com/drwetter/testssl.sh,a tool for testing SSL/TLS encryption on servers
+theharvester,5.0.0,https://github.com/laramies/theHarvester,Tool for gathering e-mail accounts / subdomain names / virtual host / open ports / banners / and employee names from different public sources
+thr,,https://www.thehacker.recipes/,THR (The Hacker Recipes) is aimed at providing technical guides on various hacking topics.
+tig,2.6.1,https://github.com/jonas/tig,Tig is an ncurses-based text-mode interface for git.
+timing,,https://github.com/ffleming/timing_attack,Perform timing attacks against web applications.
+tlsx,1.4.4,https://github.com/projectdiscovery/tlsx,A fast and configurable TLS grabber focused on TLS based data collection and analysis.
+token-exploiter,0.1.0,https://github.com/psyray/token-exploiter,Token Exploiter is a tool designed to analyze GitHub Personal Access Tokens.
+tomcatwardeployer,2022-11-05,https://github.com/mgeeky/tomcatwardeployer,Script to deploy war file in Tomcat.
+tor,0.4.9.15,https://github.com/torproject/tor,Anonymity tool that can help protect your privacy and online identity by routing your traffic through a network of servers.
+toutatis,1.31,https://github.com/megadose/Toutatis,Toutatis is a tool that allows you to extract information from instagrams accounts such as e-mails / phone numbers and more.
+trevorspray,2026-10-26,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
+TriliumNext,0.93.0,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
+trufflehog,3.99.8,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
+uberfile,1.0.0,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
+uncover,1.2.1,https://github.com/projectdiscovery/uncover,A tool to Quickly discover exposed hosts on the internet using multiple search engines from ProjectDiscovery.
+updog,2.0.1,https://github.com/sc0tfree/updog,Simple replacement for Python's SimpleHTTPServer.
+uploader,2026-02-27,https://github.com/Frozenka/uploader,Tool for quickly downloading files to a remote machine based on the target operating system
+urldedupe,1.0.4,https://github.com/ameenmaali/urldedupe,urldedupe is a c++ tool to quickly pass in a list of URLs and get back a list of deduplicated (unique) URL and query string combination.
+urlfinder,0.0.3,https://github.com/projectdiscovery/urlfinder,URLFinder is a high-speed passive URL discovery tool designed to simplify and accelerate web asset discovery.
+username-anarchy,2024-09-20,https://github.com/urbanadventurer/username-anarchy,Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
+vnc-decrypt,,,Decrypts VNC passwords from config files using the UltraVNC default key or a custom DES key.
+vulnx,2.0.2,https://github.com/projectdiscovery/vulnx,Modern CLI for exploring vulnerability data with powerful search filtering and analysis capabilities.
+wafw00f,2.4.2,https://github.com/EnableSecurity/wafw00f,a Python tool that helps to identify and fingerprint web application firewall (WAF) products.
+waybackurls,0.1.0,https://github.com/tomnomnom/waybackurls,Fetch all the URLs that the Wayback Machine knows about for a domain.
+weevely,,https://github.com/epinna/weevely3,a webshell designed for post-exploitation purposes that can be extended over the network at runtime.
+wesng,1.0.3,https://github.com/bitsadmin/wesng,WES-NG is a tool based on the output of Windows's systeminfo utility which provides the list of vulnerabilities the OS is vulnerable to including any exploits for these vulnerabilities.
+wfuzz,3.1.0,https://github.com/xmendez/wfuzz,WFuzz is a web application vulnerability scanner that allows you to find vulnerabilities using a wide range of attack payloads and fuzzing techniques
+whatportis,0.8.2,https://github.com/ncrocfer/whatportis,Command-line tool to lookup port information
+whatweb,0.6.4,https://github.com/urbanadventurer/WhatWeb,Next generation web scanner that identifies what websites are running.
+whois,5.6.3,https://packages.debian.org/sid/whois,See information about a specific domain name or IP address.
+wireguard,2021-09-14,https://www.wireguard.com,WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
+wl-clipboard,,https://github.com/bugaevc/wl-clipboard,Command-line Wayland clipboard utilities (wl-copy / wl-paste)
+wpprobe,0.12.13,https://github.com/Chocapikk/wpprobe,A fast WordPress plugin enumeration tool.
+wpscan,,https://github.com/wpscanteam/wpscan,A tool to enumerate WordPress-based websites
+wuzz,0.5.0,https://github.com/asciimoo/wuzz,a command-line tool for interacting with HTTP(S) web services
+xclip,,https://github.com/astrand/xclip,Command-line X11 clipboard interface
+xsel,,https://github.com/kfish/xsel,Command-line X11 selection and clipboard utility
+XSpear,,https://github.com/hahwul/XSpear,a powerful XSS scanning and exploitation tool.
+xsrfprobe,3.0.0,https://github.com/0xInfection/XSRFProbe,a tool for detecting and exploiting Cross-Site Request Forgery (CSRF) vulnerabilities
+xsser,2026-09-05,https://github.com/epsylon/xsser,XSS scanner.
+xsstrike,2025-04-26,https://github.com/s0md3v/XSStrike,a Python tool for detecting and exploiting XSS vulnerabilities.
+XXEinjector,,https://github.com/enjoiz/XXEinjector,A tool for XML External Entity (XXE) injection testing
+Yalis,2023-03-09,https://github.com/EatonChips/yalis,Yet Another LinkedIn Scraper
+yarn,4.18.1,https://yarnpkg.com/,Yarn is a package manager that doubles down as project manager.
+youtubedl,2021.12.17,https://github.com/ytdl-org/youtube-dl,Download videos from YouTube and other sites.
+ysoserial,,https://github.com/frohoff/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
+yt-dlp,2026.10.26,https://github.com/yt-dlp/yt-dlp,A youtube-dl fork with additional features and fixes
+Zehef,2024-11-13,https://github.com/N0rz3/Zehef,Zehef is an osint tool to track emails
