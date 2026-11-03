@@ -8,16 +8,16 @@ Linux Exploit Suggester,https://github.com/The-Z-Labs/linux-exploit-suggester,Li
 Mimikatz,https://github.com/gentilkiwi/mimikatz,A little tool to play with Windows security
 linikatz,https://github.com/CiscoCXSecurity/linikatz,Lightweight katz for Linux
 SharpHound.exe,https://github.com/BloodHoundAD/BloodHound,C# ingestor for BloodHound
-JuicyPotato.exe,https://github.com/ohpe/juicy-potato,https://github.com/ohpe/juicy-potato
+JuicyPotato.exe,https://github.com/ohpe/juicy-potato,Abuse SeImpersonatePrivilege to run code as SYSTEM via DCOM
 PrintSpoofer,https://github.com/itm4n/PrintSpoofer,Abusing SeImpersonatePrivilege from LOCAL/NETWORK SERVICE
 GodPotato,https://github.com/BeichenDream/GodPotato,Abusing SeImpersonatePrivilege on recent Windows OS (up to W11 and Server 2022)
 static netcat (linux),https://github.com/andrew-d/static-binaries,Utility to establish TCP or UDP connections
 static netcat (windows),https://gitlab.com/onemask/pentest-tools,Utility to establish TCP or UDP connections
 SpoolSample.exe,https://gitlab.com/onemask/pentest-tools,PoC tool to coerce Windows hosts authenticate to other machines
-DiagHub.exe,https://gitlab.com/onemask/pentest-tools,Diagnostics Hub Standard Collector Service
+DiagHub.exe,https://gitlab.com/onemask/pentest-tools,Abuse SeImpersonatePrivilege to run code as SYSTEM via the Diagnostics Hub service
 LaZagne,https://github.com/AlessandroZ/LaZagne,Credentials recovery project
 Sublinacl.exe,https://gitlab.com/onemask/pentest-tools,Modify Access Control Entries
-plink.exe,https://www.cog-genomics.org/plink/,Network connection tool
+plink.exe,https://www.chiark.greenend.org.uk/~sgtatham/putty/,Command-line SSH client from the PuTTY suite
 deepce,https://github.com/stealthcopter/deepce,Docker Enumeration Escalation of Privileges and Container Escapes
 Some webshells,,PHP and ASPX webshells
 ysoserial,https://github.com/pwntester/ysoserial,A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization
