@@ -81,7 +81,7 @@ darkarmour,2020-04-13,https://github.com/bats3c/darkarmour,Obfuscate Windows pay
 dex2jar,,https://github.com/pxb1988/dex2jar,A tool to convert Android's dex files to Java's jar files
 dfscoerce,2022-06-23,https://github.com/Wh04m1001/dfscoerce,DFS-R target coercion tool
 dirb,2.22,https://github.com/v0re/dirb,Web Content Scanner
-dirsearch,2026-10-18,https://github.com/maurosoria/dirsearch,Tool for searching files and directories on a web site.
+dirsearch,2026-11-01,https://github.com/maurosoria/dirsearch,Tool for searching files and directories on a web site.
 divideandscan,1.0.3,https://github.com/snovvcrash/divideandscan,Split a full port scan into smaller targeted Nmap runs
 dns2tcp,0.5.2,https://github.com/alex-sector/dns2tcp,dns2tcp is a tool for relaying TCP connections over DNS.
 dnschef,2019-03-27,https://github.com/iphelix/dnschef,Tool for DNS MITM attacks
@@ -111,7 +111,7 @@ fdisk,2.41.5,https://github.com/karelzak/util-linux,Create and manipulate disk p
 feroxbuster,2.13.1,https://github.com/epi052/feroxbuster,Simple / fast and recursive content discovery tool
 ffuf,2.3.0,https://github.com/ffuf/ffuf,Fast web fuzzer written in Go.
 fierce,1.6.0,https://github.com/mschwager/fierce,A DNS reconnaissance tool for locating non-contiguous IP space
-finalrecon,2026-06-01,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
+finalrecon,2026-10-31,https://github.com/thewhiteh4t/FinalRecon,A web reconnaissance tool that gathers information about web pages
 findomain,10.0.1,https://github.com/findomain/findomain,The fastest and cross-platform subdomain enumerator.
 firefox,153.6.0esr,https://www.mozilla.org,A web browser
 firefox_decrypt,,https://github.com/unode/firefox_decrypt,Decrypt Firefox saved passwords.
@@ -221,15 +221,15 @@ masky,0.2.1,https://github.com/Z4kSec/Masky,Masky is a python library providing 
 masscan,1.3.2,https://github.com/robertdavidgraham/masscan,Masscan is an Internet-scale port scanner
 massdns,2026-09-27,https://github.com/blechschmidt/massdns,MassDNS is a simple high-performance DNS stub resolver targeting those who seek to resolve a massive amount of domain names in the order of millions or even billions.
 mdcat,,https://github.com/swsnr/mdcat,Fancy cat for Markdown
-Metagoofil,1.4.0,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
-metasploit,2026-10-30,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
+Metagoofil,2026-11-02,https://github.com/opsdisk/metagoofil,Metagoofil is a tool for gathering metadata of a website
+metasploit,2026-11-02,https://github.com/rapid7/metasploit-framework,A popular penetration testing framework that includes many exploits and payloads
 mfcuk,0.3.8,https://github.com/nfc-tools/mfcuk,Darkside attack against Mifare Classic cards
 mfdread,2024-10-15,https://github.com/zhovner/mfdread,Parse Mifare Classic dump files into a readable form
 mfoc,2023-11-15,https://github.com/nfc-tools/mfoc,Implementation of 'offline nested' attack by Nethemba
 minicom,2.10,https://doc.ubuntu-fr.org/minicom,Minicom is a text-based serial communication program for Unix-like operating systems.
 mitm6,0.3.0,https://github.com/fox-it/mitm6,Tool to conduct a man-in-the-middle attack against IPv6 protocols.
 mitmproxy,4.4.19,https://github.com/mitmproxy/mitmproxy,mitmproxy is an interactive SSL/TLS-capable intercepting proxy with a console interface for HTTP/1 HTTP/2 and WebSockets.
-mobsf,2026-10-30,https://github.com/MobSF/Mobile-Security-Framework-MobSF,Automated and all-in-one mobile application (Android/iOS/Windows) pen-testing malware analysis and security assessment framework
+mobsf,2026-11-01,https://github.com/MobSF/Mobile-Security-Framework-MobSF,Automated and all-in-one mobile application (Android/iOS/Windows) pen-testing malware analysis and security assessment framework
 moodlescan,2022-09-08,https://github.com/inc0d3/moodlescan,Scan Moodle sites for information and vulnerabilities.
 msprobe,0.1.4,https://github.com/puzzlepeaches/msprobe,Find on-prem Microsoft services to target for password spraying and enumeration.
 MurMurHash,2023-08-30,https://github.com/QU35T-code/MurMurHash,This little tool is to calculate a MurmurHash value of a favicon to hunt phishing websites on the Shodan platform.
@@ -240,7 +240,7 @@ nbtscan,1.7.2,https://github.com/charlesroelli/nbtscan,NBTscan is a program for 
 neo4j,4.4.48,https://github.com/neo4j/neo4j,Database.
 neovim,0.12.6,https://neovim.io/,hyperextensible Vim-based text editor
 netdiscover,0.11,https://github.com/netdiscover-scanner/netdiscover,netdiscover is an active/passive address reconnaissance tool
-netexec,2026-10-30,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
+netexec,2026-11-01,https://github.com/Pennyw0rth/NetExec,Enumerate and attack network services. Successor to CrackMapExec.
 nfct,1.4.8,https://netfilter.org/projects/libnetfilter_conntrack/index.html,Command-line tool for the netfilter connection tracking system
 nfsshell,2025-06-13,https://github.com/Supermathie/nfsshell,NFSShell is a tool for interacting with NFS shares without mounting them.
 ngrok,3.39.13,https://github.com/inconshreveable/ngrok,Expose a local server behind a NAT or firewall to the internet
@@ -256,7 +256,7 @@ oaburl,,https://gist.githubusercontent.com/snovvcrash/4e76aaf2a8750922f546eed81a
 objection,1.12.5,https://github.com/sensepost/objection,Runtime mobile exploration
 objectwalker,2.2.1,https://github.com/p0dalirius/objectwalker,A python module to explore the object tree to extract paths to interesting objects in memory.
 oletools,0.60.2,https://github.com/decalage2/oletools,python tools to analyze MS OLE2 files and MS Office documents - for malware analysis - forensics and debugging.
-oneforall,2026-05-11,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
+oneforall,2026-11-02,https://github.com/shmilylty/OneForAll,a powerful subdomain collection tool.
 onelistforall,,https://github.com/six2dez/OneListForAll,Large combined wordlist for web content fuzzing
 OneRuleToRuleThemStill rules,,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 onesixtyone,0.3.4,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
@@ -279,7 +279,7 @@ phpggc,2025-09-29,https://github.com/ambionics/phpggc,Exploit generation tool fo
 pkcrack,2021-10-30,https://github.com/keyunluo/pkcrack,Known-plaintext attack against legacy PKZIP encryption
 pkinittools,2025-01-03,https://github.com/dirkjanm/PKINITtools,Pkinit support tools
 polenum,1.7,https://github.com/Wh1t3Fox/polenum,Polenum is a Python script which uses the Impacket library to extract user information through the SMB protocol.
-postman,12.34.4,https://www.postman.com/,API platform for testing APIs
+postman,12.35.0,https://www.postman.com/,API platform for testing APIs
 powershell,7.3.4,https://github.com/PowerShell/PowerShell,a command-line shell and scripting language designed for system administration and automation
 Powerview.py,,https://github.com/aniqfakhrul/powerview.py,PowerView.py is an alternative for the awesome original PowerView.ps1 script.
 pp-finder,2.0.1,https://github.com/yeswehack/pp-finder,Prototype pollution finder tool for javascript. pp-finder lets you find prototype pollution candidates in your code.
@@ -297,7 +297,7 @@ pwndb,2021-04-27,https://github.com/davidtavarez/pwndb,A command-line tool for s
 pwndbg,,https://github.com/pwndbg/pwndbg,a GDB plugin that makes debugging with GDB suck less
 pwnedornot,2026-03-28,https://github.com/thewhiteh4t/pwnedOrNot,Look up passwords leaked for a compromised email address.
 pwninit,3.3.3,https://github.com/io12/pwninit,A tool for automating starting binary exploit challenges
-pwntools,2026-10-30,https://github.com/Gallopsled/pwntools,a CTF framework and exploit development library
+pwntools,2026-11-02,https://github.com/Gallopsled/pwntools,a CTF framework and exploit development library
 PXEThief,2026-02-23,https://github.com/blurbdust/PXEThief,PXEThief is a set of tooling that can extract passwords from the Operating System Deployment functionality in Microsoft Endpoint Configuration Manager
 pycdc,2026-04-06,https://github.com/zrax/pycdc,Python bytecode disassembler and decompiler.
 pyFindUncommonShares,2026-10-01,https://github.com/p0dalirius/pyFindUncommonShares,Script that can help identify shares that are not commonly found on a Windows system.
@@ -312,7 +312,7 @@ pysnaffler,2026-01-06,https://github.com/skelsec/pysnaffler,Snaffler. But in pyt
 pywerview,0.7.6,https://github.com/the-useless-one/pywerview,A (partial) Python rewriting of PowerSploit's PowerView.
 pywhisker,1.0.0,https://github.com/ShutdownRepo/pywhisker,PyWhisker is a Python equivalent of the original Whisker made by Elad Shamir and written in C#. This tool allows users to manipulate the msDS-KeyCredentialLink attribute of a target user/computer to obtain full control over that object. It's based on Impacket and on a Python equivalent of Michael Grafnetter's DSInternals called PyDSInternals made by podalirius.
 pywsus,2026-07-02,https://github.com/GoSecure/pywsus,Offensive WSUS server for pushing updates to Windows clients
-radare2,2026-10-30,https://github.com/radareorg/radare2,A complete framework for reverse-engineering and analyzing binaries
+radare2,2026-11-03,https://github.com/radareorg/radare2,A complete framework for reverse-engineering and analyzing binaries
 rdesktop,4.4.19,https://github.com/rdesktop/rdesktop,rdesktop is a client for Remote Desktop Protocol (RDP) used in a number of Microsoft products including Windows NT Terminal Server / Windows 2000 Server / Windows XP and Windows 2003 Server.
 reaver,1.6.6,https://github.com/t6x/reaver-wps-fork-t6x,reaver is a tool for brute-forcing WPS (Wireless Protected Setup) PINs.
 recon-ng,2026-10-05,https://github.com/lanmaster53/recon-ng,External recon tool.
@@ -366,7 +366,7 @@ SoapUI,,https://github.com/SmartBear/soapui,SoapUI is the world's leading testin
 soapy,0.1.0,https://github.com/logangoins/SOAPy,SOAPy is a Proof of Concept (PoC) utility for conducting offensive interaction with Active Directory Web Services (ADWS) through a SOCKS5 proxy.
 spiderfoot,2023-11-05,https://github.com/smicallef/spiderfoot,A reconnaissance tool that automatically queries over 100 public data sources
 sprayhound,0.0.4,https://github.com/Hackndo/Sprayhound,Active Directory password audit tool.
-sqlmap,2026-10-30,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
+sqlmap,2026-11-02,https://github.com/sqlmapproject/sqlmap,Sqlmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws
 ssh-audit,3.9.1,https://github.com/jtesta/ssh-audit,ssh-audit is a tool to test SSH server configuration for best practices.
 sshuttle,,https://github.com/sshuttle/sshuttle,Transparent proxy server that tunnels traffic through an SSH server
 sslscan,2026-09-27,https://github.com/rbsec/sslscan,a tool for testing SSL/TLS encryption on servers
@@ -380,7 +380,7 @@ sublist3r,1.0,https://github.com/aboul3la/Sublist3r,a Python tool designed to en
 subzy,1.2.1,https://github.com/PentestPad/subzy,Subdomain takeover tool which checks for various cloud services and identifies if a subdomain is vulnerable.
 swaks,20240103.0,https://github.com/jetmore/swaks,Swaks is a featureful flexible scriptable transaction-oriented SMTP test tool.
 symfony-exploits,2024-09-19,https://github.com/ambionics/symfony-exploits,Collection of Symfony exploits and PoCs.
-tailscale,1.104.4,https://github.com/tailscale/tailscale,A secure and easy-to-use VPN alternative that is designed for teams and businesses.
+tailscale,1.104.5,https://github.com/tailscale/tailscale,A secure and easy-to-use VPN alternative that is designed for teams and businesses.
 targetedKerberoast,2024-12-16,https://github.com/ShutdownRepo/targetedKerberoast,Kerberoasting against specific accounts
 tcpdump,4.99.5,https://github.com/the-tcpdump-group/tcpdump,a powerful command-line packet analyzer for Unix-like systems
 tdo_dump,2026-05-14,https://github.com/AlmondOffSec/tdo_dump,Proof-of-Concept tool to dump trusted domain objects and extract trust credentials for lateral movement across domain boundaries
@@ -392,7 +392,7 @@ thr,,https://www.thehacker.recipes/,THR (The Hacker Recipes) is aimed at providi
 tig,2.6.1,https://github.com/jonas/tig,Tig is an ncurses-based text-mode interface for git.
 timing,,https://github.com/ffleming/timing_attack,Perform timing attacks against web applications.
 tls-map,,https://github.com/sec-it/tls-map,CLI and library that maps TLS cipher names across IANA OpenSSL GnuTLS and NSS.
-tlsx,1.4.3,https://github.com/projectdiscovery/tlsx,A fast and configurable TLS grabber focused on TLS based data collection and analysis.
+tlsx,1.4.4,https://github.com/projectdiscovery/tlsx,A fast and configurable TLS grabber focused on TLS based data collection and analysis.
 token-exploiter,0.1.0,https://github.com/psyray/token-exploiter,Token Exploiter is a tool designed to analyze GitHub Personal Access Tokens.
 tomcatwardeployer,2022-11-05,https://github.com/mgeeky/tomcatwardeployer,Script to deploy war file in Tomcat.
 tor,0.4.9.15,https://github.com/torproject/tor,Anonymity tool that can help protect your privacy and online identity by routing your traffic through a network of servers.
@@ -401,7 +401,7 @@ traceroute,2.1.6,https://github.com/iputils/iputils,Traceroute is a command whic
 trevorspray,2026-10-26,https://github.com/blacklanternsecurity/TREVORspray,TREVORspray is a modular password sprayer with threading SSH proxying loot modules / and more
 trid,,https://mark0.net/soft-trid-e.html,File identifier
 TriliumNext,0.93.0,https://github.com/TriliumNext/Notes,Personal knowledge management system (successor to Trilium).
-trufflehog,3.99.7,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
+trufflehog,3.99.8,https://github.com/trufflesecurity/trufflehog,Find verify and analyze hardcoded secrets in git repositories folders buckets and more.
 tshark,4.4.19,https://github.com/wireshark/wireshark,TShark is a terminal version of Wireshark.
 uberfile,1.0.0,https://github.com/ShutdownRepo/Uberfile,Uberfile is a simple command-line tool aimed to help pentesters quickly generate file downloader one-liners in multiple contexts (wget / curl / powershell / certutil...). This project code is based on my other similar project for one-liner reverseshell generation Shellerator.
 udpx,1.0.7,https://github.com/nullt3r/udpx, Fast and lightweight - UDPX is a single-packet UDP scanner written in Go that supports the discovery of over 45 services with the ability to add custom ones.
