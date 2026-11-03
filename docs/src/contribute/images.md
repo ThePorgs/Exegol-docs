@@ -28,7 +28,9 @@ function install_yourtool() {
     add-aliases yourtool
     add-history yourtool
     add-test-command "yourtool.py --help"
-    add-to-list "yourtool,https://link.to/the/tool,description"
+    local version
+    version="$(git_version /opt/tools/yourtool)"
+    add-to-list "yourtool,${version},https://link.to/the/tool,description"
 }
 ```
 
@@ -51,11 +53,11 @@ Your installation function should include:
   yourtool.py --mode unauthenticated
   ```
 - `add-test-command "testcommand"` - For CI/CD unit tests. The command must return 0 if successful. If `--help` doesn't work, try using grep: `yourtool.py --help|& grep 'Usage:'`
-- `add-to-list` - For tools list export. Prepare the version first, then append a CSV line with 4 columns: name, version, link, description. No comma allowed in version or description. Leave the version field empty when unknown.
+- `add-to-list` - For tools list export. Prepare the version first, then append a CSV line with 4 columns: name, version, link, description. No comma allowed in version or description. The version column must be `${version}`, and the link must be set.
 
   ```bash
   local version
-  version="$(git_version /opt/tools/yourtool)"   # or pipx_version / apt_version / go_version / cargo_version / gem_version / cli_version / ""
+  version="$(git_version /opt/tools/yourtool)"   # or pipx_version / apt_version / go_version / cargo_version / gem_version / github_release_version / cli_version
   add-to-list "yourtool,${version},https://link.to/the/tool,description"
   ```
 
@@ -75,11 +77,24 @@ The suggestion must be a command Exegol ships. Do not add an alias for the old n
 
 ### Code Check Whitelisting
 
-If your tool doesn't need aliases or history commands, add a whitelist comment at the beginning of the function:
+If your tool doesn't need aliases, history commands, or a tools-list row, add a whitelist comment at the beginning of the function:
 
 ```bash
 # CODE-CHECK-WHITELIST=add-aliases
 # CODE-CHECK-WHITELIST=add-aliases,add-history
+# CODE-CHECK-WHITELIST=add-to-list
+```
+
+`add-to-list` in that comment skips the whole tools-list check for the function. Use it when there is no upstream version, no link, or the tool should not be listed. Write the blank column as an empty CSV field.
+
+```bash
+# No upstream version, link is known
+# CODE-CHECK-WHITELIST=add-to-list
+add-to-list "yourtool,,https://github.com/AUTHOR/REPO,description"
+
+# No version and no link
+# CODE-CHECK-WHITELIST=add-aliases,add-history,add-to-list
+add-to-list "yourtool,,,description"
 ```
 
 ### Installation methods
@@ -145,7 +160,9 @@ function install_yourtool() {
     add-aliases yourtool
     add-history yourtool
     add-test-command "yourtool --help"
-    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+    local version
+    version="$(gem_version yourtool)"
+    add-to-list "yourtool,${version},https://github.com/AUTHOR/REPO,description"
 }
 ```
 
@@ -181,7 +198,9 @@ function install_yourtool() {
     rm -rf /tmp/yourtool
     add-history yourtool
     add-test-command "yourtool --help"
-    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+    local version
+    version="$(…)"
+    add-to-list "yourtool,${version},https://github.com/AUTHOR/REPO,description"
 }
 ```
 
@@ -213,7 +232,9 @@ function install_yourtool() {
     mv /tmp/yourtool/yourtool /opt/tools/bin/yourtool
     add-history yourtool
     add-test-command "yourtool --help"
-    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+    local version
+    version="$(github_release_version AUTHOR/REPO)"
+    add-to-list "yourtool,${version},https://github.com/AUTHOR/REPO,description"
 }
 ```
 
@@ -237,7 +258,9 @@ function install_yourtool() {
     add-history yourtool
     add-history yourtool
     add-test-command "yourtool --help"
-    add-to-list "yourtool,https://github.com/AUTHOR/REPO,description"
+    local version
+    version="$(…)"
+    add-to-list "yourtool,${version},https://github.com/AUTHOR/REPO,description"
 }
 ```
 :::
