@@ -65,15 +65,13 @@ Your installation function should include:
 
 ### Replaced commands
 
-When you remove a tool, or you leave a well-known one out because another installed command covers the job, add a row to `sources/assets/shells/missing-commands.csv`. One row per name a user would type.
+When you remove a tool, or you leave a well-known one out because another installed command covers the job, say so in that command's install function:
 
-```csv
-command,suggestion
-yourtool,thetool
-yourtool.py,thetool
+```bash
+add-suggestions "yourtool,othertoolA,othertoolB"
 ```
 
-The suggestion must be a command Exegol ships. Do not add an alias for the old name. An alias would still answer after the user installs the original tool. The hint only runs when that name is not on `PATH`. In a terminal, the suggested command is shown in green.
+One quoted CSV record. The first field, `yourtool`, is the command this function installs. `othertoolA` and `othertoolB` are names a user might type. No comma inside a name. The hint is recorded only when this install runs, and it names only the suggestions that are on `PATH`. Typing `othertoolA` says `Try yourtool instead.` Another install can list `othertoolA` too, and both installed commands are shown. Do not add an alias for `othertoolA` or `othertoolB`. An alias would still answer after the user installs the original tool. In a terminal, the missing name is red and `yourtool` is green.
 
 ### Code Check Whitelisting
 
