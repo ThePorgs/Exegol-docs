@@ -7,10 +7,31 @@ If not already, install [Exegol Workstation](/workstation/install) first.
 
 ## 1. Install the extension
 
-| Editor | How |
-| ------ | --- |
-| VS Code | Extensions → search **Exegol Studio** → Install |
-| Compatible forks | Same Marketplace listing when available |
+### 1. Marketplace
+
+> [!WARNING] Microsoft's marketplace (vsce)
+> Microsoft does not let us publish the extension on the Visual Studio Marketplace for some obscure reason. 
+> VS Code installs from that store, so search there will not find Exegol Studio.
+
+> [!INFO] Open VSX
+> Other VS Code forks rely on [Open VSX](https://open-vsx.org/extension/exegol/exegol-studio), where Exegol Studio is listed under the publisher **exegol**. Some forks add their own checks before a release appears, so a new version can take a while to be listed again.
+> The marketplace is still the easiest install. If **Exegol Studio** is listed and the publisher is **exegol**, install it from there.
+
+Open **Extensions**, search **Exegol Studio**, confirm the publisher is **exegol**, then **Install**.
+
+### 2. Without the marketplace
+
+[Download the .vsix](https://open-vsx.org/vscode/gallery/publishers/exegol/vsextensions/exegol-studio/latest/vspackage). The link follows the current release.
+
+Drag-and-drop the file onto the **Extensions** panel.
+
+Or install that same file from a terminal. `code` is the VS Code command. Use your editor's own command in its place (`cursor` in Cursor). The flag stays `--install-extension` on VS Code forks.
+
+```bash
+code --install-extension /path/to/exegol-studio.vsix
+```
+
+This works in VS Code and in VS Code forks (VSCodium, Cursor, Windsurf, Antigravity, Trae).
 
 Open the **Exegol Studio** activity bar icon after install. If nothing appears, reload the window (`Developer: Reload Window`).
 
