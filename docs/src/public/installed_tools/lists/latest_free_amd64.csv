@@ -16,6 +16,7 @@ angr,https://github.com/angr/angr,a platform-agnostic binary analysis framework
 apksigner,https://source.android.com/security/apksigning,Sign Android APKs and verify their signatures
 apktool,https://github.com/iBotPeaches/Apktool,It is a tool for reverse engineering 3rd party / closed / binary Android apps.
 arjun,https://github.com/s0md3v/Arjun,HTTP parameter discovery suite.
+asciinema,https://github.com/asciinema/asciinema,Terminal session recorder
 asdf,https://github.com/asdf-vm/asdf,Extendable version manager with support for ruby python go etc
 asrepcatcher,https://github.com/Yaxxine7/ASRepCatcher,Make your VLAN ASREProastable.
 assetfinder,https://github.com/tomnomnom/assetfinder,Tool to find subdomains and IP addresses associated with a domain.
@@ -30,6 +31,7 @@ bettercap,https://github.com/bettercap/bettercap,The Swiss Army knife for 802.11
 binaryninja,https://binary.ninja,An interactive decompiler - disassembler - debugger and binary analysis platform built by reverse engineers for reverse engineers.
 binwalk,https://github.com/ReFirmLabs/binwalk,Binwalk is a tool for analyzing / reverse engineering / and extracting firmware images.
 Blackbird,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
+bloodbash,https://github.com/DotNetRussell/BloodBash,BloodBash is a powerful standalone BloodHound / SharpHound + AzureHound JSON analyzer written in Python
 bloodhound,https://github.com/BloodHoundAD/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments.
 BloodHound-CE,https://github.com/SpecterOps/BloodHound,Active Directory security tool for reconnaissance and attacking AD environments (Community Edition)
 bloodhound-ce.py,https://github.com/fox-it/BloodHound.py,BloodHound-CE ingestor in Python.
@@ -74,7 +76,7 @@ cupp,https://github.com/Mebus/cupp,Cupp is a tool used to generate personalized 
 curlie,https://github.com/rs/curlie,Curlie is a frontend to curl that adds the ease of use of httpie without compromising on features and performance
 CyberChef,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 cyperoth,https://github.com/seajaysec/cypheroth,Automated extensible toolset that runs cypher queries against Bloodhound's Neo4j backend and saves output to spreadsheets.
-daclsearch,https://github.com/uknowsec/daclsearch,Exhaustive search and flexible filtering of Active Directory ACEs
+daclsearch,https://github.com/cogiceo/daclsearch,Exhaustive search and flexible filtering of Active Directory ACEs
 darkarmour,https://github.com/bats3c/darkarmour,Obfuscate Windows payloads to evade antivirus
 dex2jar,https://github.com/pxb1988/dex2jar,A tool to convert Android's dex files to Java's jar files
 dfscoerce,https://github.com/Wh04m1001/dfscoerce,DFS-R target coercion tool
@@ -94,6 +96,7 @@ eaphammer,https://github.com/s0lst1c3/eaphammer,EAPHammer is a toolkit for perfo
 empire,https://github.com/BC-SECURITY/Empire,post-exploitation and adversary emulation framework
 enum4linux-ng,https://github.com/cddmp/enum4linux-ng,Tool for enumerating information from Windows and Samba systems.
 enyx,https://github.com/trickster0/enyx,Enumerate SNMP services over IPv6.
+EVENmonitor,https://github.com/NeffIsBack/EVENmonitor,Monitor the Windows Event Log with grep-like features or filtering for specific Event IDs 
 evil-winrm-py,https://github.com/adityatelange/evil-winrm-py,Evil-WinRM. But in python
 evilwinrm,https://github.com/Hackplayers/evil-winrm,Tool to connect to a remote Windows system with WinRM.
 exegol-history,https://github.com/ThePorgs/Exegol-history,Credentials management for Exegol
@@ -259,6 +262,7 @@ onelistforall,https://github.com/six2dez/OneListForAll,Large combined wordlist f
 OneRuleToRuleThemStill rules,https://github.com/stealthsploit/OneRuleToRuleThemStill,One rule to crack all passwords. A revamped - optimised and updated version of the original OneRuleToRuleThemAll hashcat rule
 onesixtyone,https://github.com/trailofbits/onesixtyone,onesixtyone is an SNMP scanner which utilizes a sweep technique to achieve very high performance.
 OpenVPN,https://openvpn.net/,Open-source VPN that tunnels network traffic over TLS
+pacu,https://github.com/RhinoSecurityLabs/pacu,The AWS exploitation framework for testing the security of Amazon Web Services environments.
 Pantagrule rules,https://github.com/rarecoil/pantagrule,large hashcat rulesets generated from real-world compromised passwords
 pass-station,https://github.com/noraj/pass-station,Search default credentials for thousands of products and vendors
 PassTheCert,https://github.com/AlmondOffSec/PassTheCert,Authenticate to LDAP and other Windows services with a client certificate.
@@ -380,6 +384,7 @@ symfony-exploits,https://github.com/ambionics/symfony-exploits,Collection of Sym
 tailscale,https://github.com/tailscale/tailscale,A secure and easy-to-use VPN alternative that is designed for teams and businesses.
 targetedKerberoast,https://github.com/ShutdownRepo/targetedKerberoast,Kerberoasting against specific accounts
 tcpdump,https://github.com/the-tcpdump-group/tcpdump,a powerful command-line packet analyzer for Unix-like systems
+tdo_dump,https://github.com/AlmondOffSec/tdo_dump,Proof-of-Concept tool to dump trusted domain objects and extract trust credentials for lateral movement across domain boundaries
 TeamsPhisher,https://github.com/Octoberfest7/TeamsPhisher,TeamsPhisher is a Python3 program that facilitates the delivery of phishing messages and attachments to Microsoft Teams users whose organizations allow external communications.
 testdisk,https://github.com/cgsecurity/testdisk,Partition recovery and file undelete utility
 testssl,https://github.com/drwetter/testssl.sh,a tool for testing SSL/TLS encryption on servers
