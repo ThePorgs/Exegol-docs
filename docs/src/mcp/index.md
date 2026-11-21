@@ -1,74 +1,101 @@
 # Exegol MCP overview
 
-Exegol MCP is a server that lets an AI client (Cursor, Claude Desktop, and others) talk to Exegol over the [Model Context Protocol](https://modelcontextprotocol.io/).
+Exegol MCP is a server that lets an AI client (Claude Code, Cursor, VS Code, Claude Desktop, and others) or a headless agent talk to Exegol over the [Model Context Protocol](https://modelcontextprotocol.io/).
 
-- **What it is:** a set of MCP tools in two classes, orchestration (containers and images) and in-container execution (run tools inside Exegol).
-- **Why that is better:** the agent is boxed in Exegol, not granted the host OS. See [Getting started](/mcp/getting-started) for the isolation argument.
-- **What you get:** natural-language control of Exegol and of the tools already in the container, without memorising tool names.
+- **What it is:** MCP tools and resources for orchestration (containers, their lifecycle, images) and in-container work (commands, background jobs, files, the installed tool catalog), over stdio or HTTP.
+- **Why that is better:** the agent is boxed in Exegol, not granted the host OS. It can create a disposable container, use it and remove it with no human step.
+- **What it gives:** natural-language control of Exegol and of the tools already in the container, without memorising tool names.
 
-The image set the assistant can download follows the [same tiers](/about#tiers) as the wrapper: Community can pull `free`; Pro, Team and Enterprise can pull the other official images.
+The images the assistant can download follow the [same tiers](/about#tiers) as the wrapper: Community can pull `free`; Pro, Team and Enterprise can pull the other official images.
 
-Install and configure a client on [Getting started](/mcp/getting-started).
+Installation and client configuration are described in [Getting started](/mcp/getting-started).
 
 ## Example prompts
 
-Here are some simple examples of prompts you can use with your AI assistant to leverage Exegol MCP:
+Here are some simple examples of prompts that make use of Exegol MCP:
 
 **Orchestration examples:**
 - `List all my Exegol containers`
 - `Start the container named 'pentest'`
+- `Create a disposable container from the free image for this lab`
+- `Remove every container you created during this session`
 - `What Exegol images do I have installed?`
 - `Download the latest free image`
 - <Badge type="pro"/><Badge type="team"/><Badge type="enterprise"/>`Download the 'web' image in the '3.1.10' version`
 
 **In-container execution examples:**
 - `Run nmap to scan 192.168.1.0/24 in my Exegol container`
-- `Help me enumerate this AD domain and find vulnerabilities`
+- `Run a full TCP port scan of 10.10.10.5 in the background, and tell me what it found when it is done`
+- `Read the nmap report saved in the workspace of the 'pentest' container`
 - `What tools are available in my container for web application testing?`
-- `Execute whoami on the remote Windows server via netexec's SSH module`
+- `Help me enumerate this AD domain and find vulnerabilities`
+- `Execute whoami on the remote Windows server over WinRM`
 
-Your AI assistant will automatically select the appropriate tools based on your request, so you can use natural language without needing to know the exact tool names.
+The AI assistant selects the appropriate tools from the request, so natural language works without knowing the exact tool names.
 
-## MCP tools 
+## MCP tools
 
-Depending on your request the AI assistant will use choose what Exegol MCP server's tool to use. Those tools can be split into two main categories: **orchestration** and **in-container execution**.
+The AI assistant chooses which Exegol MCP tool to use from the request. The tools are organised in four groups.
 
 > [!NOTE] Using tools
-> Some AI clients allow users to specify in their prompt exactly what tool to use (i.e., `use /tool_name to ...`). That being said, you don't need to do that and natural language is perfectly fine. The tools list below is informative only and you don't need to mention them to have your AI assistant use them.
+> Some AI clients allow a prompt to name the tool to use (i.e., `use /tool_name to ...`). That is never required, and natural language is perfectly fine. The tool lists below are informative only.
 
-### Orchestration tools
+**Always available:** `server_info` reports the Exegol MCP version, the Exegol library and wrapper versions, the Docker status and whether an update is available.
 
-Orchestration tools empower AI assistants to control Exegol containers and images, providing broad management over the Exegol environment. These tools let assistants check which containers are running and their statuses, start or stop containers, install or update Exegol images, and manage the environment efficiently without manual intervention.
+An operator can hide whole groups from the AI client with `tool_groups.disabled`; see [User config](/mcp/configuration). Hiding a group reduces what an agent is offered, but it is not a security boundary.
 
-| Tool                           | Description                                               |
-| ------------------------------ | --------------------------------------------------------- |
-| `list_exegol_containers`       | List all available Exegol containers with their current status (running, stopped, etc.) |
-| `start_container`              | Start an existing Exegol container or create a new one from an image |
-| `stop_container`               | Stop a running Exegol container without removing it       |
-| `list_installed_images`        | List all Exegol images currently installed on your system |
-| `list_all_images`              | List all available Exegol images (installed and available for download) with update status |
-| `download_image`               | Download and install Exegol images from the registry      |
+### Containers
 
-### In-container execution tools
+| Tool | Description |
+|------|-------------|
+| `list_containers` | List every Exegol container on the host with its status and configuration, and whether Exegol MCP created it |
+| `start_container` | Start an Exegol container that is not running |
+| `stop_container` | Stop a running Exegol container |
+| `create_container` | Create and start a new container from an installed image or an operator-approved container profile, with no prompt |
+| `remove_container` | Stop and remove a container that Exegol MCP created, and report whether its workspace and logs are kept |
+| `cleanup_containers` | Remove the containers Exegol MCP created, during the current server run or during any run |
+| `list_installed_tools` | List the tools installed in a container, one page at a time, with their version, category and description |
+| `list_offline_resources` | List the offline [Exegol resources](/resources/) available in a container for a target OS, one page at a time |
 
-In-container tools allow AI assistants to execute commands and use security tools within Exegol containers.
+### Images
 
-| Tool                                 | Description                                               |
-| ------------------------------------ | --------------------------------------------------------- |
-| `execute_command_in_container`       | Execute commands inside Exegol containers, running pentesting tools, scripts, and any available command |
-| `execute_remote_command`             | Execute commands on remote systems via SSH, WinRM, SMB, MSSQL, WMI, or RDP protocols |
-| `list_installed_tools`               | List all security tools installed in Exegol containers, organized by category |
-| `list_installed_exegol_resources`    | List all available [Exegol resources](/resources/) for a specific target OS |
+| Tool | Description |
+|------|-------------|
+| `list_images` | List the installed Exegol images, or every available image, with their version and update status |
+| `download_image` | Download and install an Exegol image, or update an outdated one, with progress reporting |
 
-Exegol MCP supports "pseudo sessions" for remote command execution with the `execute_remote_command`. Currently, this feature enables inline execution of tools like [NetExec](https://github.com/Pennyw0rth/NetExec) (formerly [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec)) directly within the MCP workflow, allowing AI assistants to interact with remote systems without requiring explicit session management.
+### Execution
 
-## Current limitations
+| Tool | Description |
+|------|-------------|
+| `exec_command` | Run a shell command inside an Exegol container, in the foreground (bounded by a timeout) or as a background job |
+| `get_job` | Poll a background job and read its new output since the last read |
+| `stop_job` | Stop a background job and its whole process group |
+| `list_jobs` | List the background jobs the server is tracking |
+| `get_tool_help` | Get the help text of a tool installed in a container |
+| `exec_remote_command` | Run a command on a remote host over SSH, WinRM, SMB, MSSQL, WMI or RDP, from inside an Exegol container |
 
-Exegol MCP is being developed, and some features are not yet available. The following capabilities are planned but not yet implemented:
+`exec_remote_command` runs one command on a remote host without a persistent session, using the remote-execution tooling installed in the container. [NetExec](https://github.com/Pennyw0rth/NetExec) (formerly [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec)) is the current backend. Like `exec_command`, a long remote command can run as a background job. Credentials passed to it persist outside the server, in the client transcript and inside the container; see [Security considerations](/mcp/security).
 
-- **Container creation**: create new containers with default or custom configurations
-- **Container/image removal**: remove containers and/or images
-- **OAuth authentication**: OAuth-based authentication is the most MCP-compliant authentication method, but it isn't supported yet
+### Files
+
+| Tool | Description |
+|------|-------------|
+| `read_file` | Read a whole file from a container, as UTF-8 text or base64 |
+| `write_file` | Write a file into a container from UTF-8 text or base64, replacing it by default |
+| `list_directory` | List a directory in a container with each entry's type, size, mode, modification time and symlink target |
+
+## MCP resources
+
+Besides tools, Exegol MCP exposes read-only MCP resources that a client reads by URI. `{name}` is the exact container name.
+
+| URI template | Returns | Hidden with the group |
+|--------------|---------|-----------------------|
+| `exegol://containers/{name}/info` | The container's information as JSON: the same fields `list_containers` returns for it | `containers` |
+| `exegol://containers/{name}/tools` | The whole catalog of tools installed in the container as JSON, in a single read | `containers` |
+| `exegol://containers/{name}/workspace/{+path}` | One file under the container's `/workspace`, as text when it is valid UTF-8 and as binary otherwise | `files` |
+
+The server lists an info resource and a tools resource for every container, while workspace files are reached by URI and never listed one by one (`list_directory` finds their names). Reading a resource never starts, stops or changes a container: the tools and workspace resources need a running container.
 
 > [!TIP] Feedback and suggestions
 > We're continuously improving Exegol MCP based on user feedback. If you have suggestions for new features, improvements, or encounter limitations that impact your workflow, please share your feedback through our [Discord community](https://discord.exegol.com).
