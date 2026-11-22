@@ -54,7 +54,7 @@ An operator can hide whole groups from the AI client with `tool_groups.disabled`
 | `create_container` | Create and start a new container from an installed image or an operator-approved container profile, with no prompt |
 | `remove_container` | Stop and remove a container that Exegol MCP created, and report whether its workspace and logs are kept |
 | `cleanup_containers` | Remove the containers Exegol MCP created, during the current server run or during any run |
-| `list_installed_tools` | List the tools installed in a container, one page at a time, with their version, category and description |
+| `list_installed_tools` | List the tools installed in a container, one page at a time, with their version, link and description |
 | `list_offline_resources` | List the offline [Exegol resources](/resources/) available in a container for a target OS, one page at a time |
 
 ### Images
