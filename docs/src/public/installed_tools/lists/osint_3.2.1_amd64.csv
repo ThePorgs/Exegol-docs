@@ -6,7 +6,7 @@ assetfinder,0.1.1,https://github.com/tomnomnom/assetfinder,Tool to find subdomai
 Blackbird,2026-11-03,https://github.com/p1ngul1n0/blackbird,An OSINT tool to search fast for accounts by username across 581 sites.
 carbon14,1.0.0,https://github.com/Lazza/carbon14,OSINT tool for estimating when a web page was written.
 Censys,2.3.0,https://github.com/censys/censys-python,An easy-to-use and lightweight API wrapper for Censys APIs
-constellation,0.009s,https://github.com/constellation-app/Constellation,Graph tool for visualising and exploring OSINT data.
+constellation,0.008s,https://github.com/constellation-app/Constellation,Graph tool for visualising and exploring OSINT data.
 creds,,https://github.com/ihebski/DefaultCreds-cheat-sheet,One place for all the default credentials to assist pentesters during an engagement. This document has several products default login/password gathered from multiple sources.
 CyberChef,,https://github.com/gchq/CyberChef/,The Cyber Swiss Army Knife
 dnsenum,1.3.2,https://github.com/fwaeytens/dnsenum,dnsenum is a tool for enumerating DNS information about a domain.
