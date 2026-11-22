@@ -142,18 +142,20 @@ These top-level keys mirror the command-line flags. A flag given on the command 
 
 - `transport`: `http` or `stdio`. Mirrors `--type`. (Default: `http`)
 - `port`: port of the HTTP server, which always binds `127.0.0.1`. Mirrors `--port`. (Default: `2187`)
-- `auth`: `bearer` or `none`. Mirrors `--auth`, which only accepts `bearer`. `none` takes effect only together with `security.allow_no_auth: true`; otherwise the server falls back to `bearer`. (Default: `bearer`)
+- `auth`: `bearer` or `none`. Mirrors `--auth bearer` on the command line, which is still accepted though `--help` no longer lists it. `none` takes effect only together with `security.allow_no_auth: true`; otherwise the server falls back to `bearer`. (Default: `bearer`)
 - `update_check`: whether the server checks PyPI for a newer exegol-mcp release in the background. `--no-update-check` on the command line always turns it off. (Default: `true`)
 
 ### Command-line options
 
 - `-t`, `--type`: transport, `http` or `stdio`. (Default: `http`)
 - `-p`, `--port`: port of the HTTP server. (Default: `2187`)
-- `--auth`: authentication of the HTTP server. Only `bearer` is accepted: unauthenticated HTTP is set in `config.yml` only. (Default: `bearer`)
-- `-pc`, `--print-config`: print the client configuration entry for the chosen transport, bearer token included, then exit. This is the way to print it again after the first start.
+- `-pc`, `--print-config`: print the client configuration entry for the chosen transport, bearer token included, then exit. The first HTTP start prints that entry once; later starts print a line pointing at this option.
 - `--accept-eula`: accept the Exegol EULA for this run without a prompt, for stdio launches and pipelines, which have no terminal. Nothing is recorded.
 - `--no-update-check`: do not check PyPI for a newer exegol-mcp release, for offline or air-gapped use.
-- `-v`, `-vv`, `-vvv`: verbosity (verbose, advanced, debug).
+- `version`: print the Exegol MCP and Exegol library versions, and the Exegol wrapper's when it differs, then exit. It starts no server, needs neither Docker nor the EULA, and never creates or moves a file. With `-vvv` it always shows both and adds debug information for bug reports (Exegol MCP and Exegol directories, config file state, EULA state, installation, Python, host, Docker, update check), and never prints the bearer token.
+- `-v`, `-vv`, `-vvv`: verbosity (verbose, advanced, debug), with the same meaning as in the Exegol wrapper. A start prints one line with the address by default; `-v` adds the versions, the Docker state, the config directories and the update check. The debug output of the libraries (MCP, HTTP) appears only with `-vvv`.
+
+`--auth bearer`, which earlier client entries may pass, is still accepted and changes nothing. `--auth none` is refused: unauthenticated HTTP is set with `security.allow_no_auth` in `config.yml`.
 
 ## Example
 

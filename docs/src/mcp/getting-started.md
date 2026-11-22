@@ -47,7 +47,7 @@ When using Docker Desktop, `sudo` is **not** needed. This step can be skipped.
 exegol-mcp
 ```
 
-The server listens on `http://127.0.0.1:2187/mcp`. Its first start prints the client entry, bearer token included, used in [3. Client configuration](#_3-client-configuration).
+The server listens on `http://127.0.0.1:2187/mcp`. It prints one line with its address. Its first start also prints the client entry, bearer token included, used in [3. Client configuration](#_3-client-configuration); later starts print a line pointing at `exegol-mcp --print-config`.
 
 === stdio
 
@@ -55,7 +55,7 @@ Skip this step and go to [3. Client configuration](#_3-client-configuration): th
 
 :::
 
-The command-line options and the optional `config.yml` file are described in [User config](/mcp/configuration).
+The command-line options and the optional `config.yml` file are described in [User config](/mcp/configuration). When reporting a problem, include the output of `exegol-mcp version -vvv`, which lists the versions, paths and Docker state and never prints the bearer token.
 
 ## 3. Client configuration
 
@@ -75,7 +75,7 @@ The first start of the server prints the client entry:
 }
 ```
 
-`YOURTOKEN` stands for the bearer token, which the real output contains in clear. `exegol-mcp --print-config` prints the entry again.
+`YOURTOKEN` stands for the bearer token, which the real output contains in clear. Later starts print one line pointing at `exegol-mcp --print-config`, which prints the entry again.
 
 === stdio
 
@@ -104,7 +104,7 @@ Other clients accept the same entry in their own MCP configuration format.
 
 ## 4. Authentication
 
-**HTTP** always uses the bearer token of the client entry. It is shown once, at the first start, and redacted afterwards; `exegol-mcp --print-config` reveals it again. The token is a credential: it does not belong in tickets, chat messages or shared configuration files. Its storage, its rotation and the setting that turns authentication off (not recommended) are covered in [Security considerations](/mcp/security).
+**HTTP** always uses the bearer token of the client entry. It is shown once, at the first start. Later starts only point at `exegol-mcp --print-config`, which prints it again. The token is a credential: it does not belong in tickets, chat messages or shared configuration files. Its storage, its rotation and the setting that turns authentication off (not recommended) are covered in [Security considerations](/mcp/security).
 
 **stdio** needs no token: the AI client starts the server process itself.
 
