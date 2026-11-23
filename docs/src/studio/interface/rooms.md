@@ -18,7 +18,7 @@ A session shows as a tile in the Room. There are three sizes: S, M, L.
 
 - S: Glance, attention bar jumps you to the cockpit when needed
 - M: Supervise, allow / deny inline, stop the run
-- L: Pilot, full feed plus a composer, so you can [steer or queue](/studio/interface/composer#while-the-agent-is-working) without leaving the grid
+- L: Pilot, full feed plus a composer, so you can [steer or queue](/studio/interface/composer#while-the-agent-is-working) without leaving the grid.
 
 Run status on a tile (running, waiting, error, done) uses the same colours as the session list in the sidebar. Room identity dots in the switcher are a separate palette so they never read as status.
 

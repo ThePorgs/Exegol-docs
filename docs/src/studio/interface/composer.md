@@ -11,6 +11,8 @@ The composer is where you write your prompts. The toolbar picks the model and th
 | [MCP](#mcp) | Toggle external servers for this run |
 | [Context gauge](#context-gauge) | How full the window is |
 | [Attachments](#attachments) | Paperclip: pick files or images from the **host** |
+| [Goal](#goals-side-questions-and-tasks) | Flag: show or hide the Goal panel when a goal is set (flag-off while paused) |
+| [Tasks](#goals-side-questions-and-tasks) | Alarm: show or hide scheduled tasks for this conversation |
 | [Quick settings](#quick-settings) | Mode, container (until the first message), Bypass, persona, trace speed |
 | Send | Blue by default. Orange while Bypass is on. The placeholder says which |
 
@@ -63,6 +65,11 @@ Type `/` for a commands menu: builtins plus user-invocable [skills](/studio/know
 | `/clear` | Start a fresh session |
 | `/compact` | Summarize and shrink the context |
 | `/copy` | Copy the last response. `/copy N` copies an earlier one |
+| `/goal …` | Start a goal, or `/goal pause`, `/goal resume`, `/goal clear` |
+| `/btw …` | Ask a side question without changing the main transcript |
+| `/fork` | Fork into a new session from the current transcript (or a selected message) |
+| `/jobs` | List or stop background container jobs for this project |
+| `/schedule` | Create or manage scheduled prompts (also the composer alarm) |
 | `/help` | Short help |
 | `/<skill>` | Run a user-invocable skill by name |
 
@@ -120,6 +127,22 @@ Enter does the one you chose under Settings → **Interface** → **Concurrent m
 Anything you have sent that the agent has not read yet sits in a list above the composer. Each line says what it is waiting for, for example after the current command finishes, or when the agent finishes. Until the agent reads it you can switch that message between Steer and Queue, pull it back into the box to edit, or remove it.
 
 A message with an attachment, or one that starts with `/`, waits until the run finishes. The line says why. **Stop and send** stops the agent and sends everything waiting as a new message.
+
+## Goals
+
+`/goal` and what you want done starts a bounded run toward that objective (round and time budgets). The composer flag shows or hides the panel; it switches to flag-off while the goal is paused, and the button is removed when no goal is set. A reopened session leaves a restored goal paused until you resume it.
+
+## By the way
+
+`/btw` asks a side question against a snapshot of the conversation. It does not run tools and does not write into the main transcript.
+
+## Scheduled tasks
+
+The composer "alarm" button opens the Scheduled Tasks panel for this conversation. Each row shows a relative ETA when the task is scheduled, and a detail line with mode, recurrence and the next run time. Studio and its chat tab must stay open for scheduled runs to fire.
+
+## Long sessions
+
+Opening a long session loads the latest page of history so reopen stays fast. If earlier messages stayed on disk, a short notice above the composer offers **Load earlier** so the model can see them before you continue.
 
 ## Surfaces that share this thread
 
