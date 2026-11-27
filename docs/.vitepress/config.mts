@@ -655,6 +655,14 @@ function sidebarMain(): SidebarItemWithBadge[] {
         {
           text: "Getting started",
           link: "mcp/getting-started.md"
+        },
+        {
+          text: "User config",
+          link: "mcp/configuration.md"
+        },
+        {
+          text: "Security",
+          link: "mcp/security.md"
         }
       ]
     },
